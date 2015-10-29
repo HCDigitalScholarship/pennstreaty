@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+  	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
+    {% include 'top-links.html' %}
+   
+
+    <title>Transcriptions </title>
+
+  </head>
+
+  <body>
+
+   <header>
+         <div class = "overlay-container">
+            <img src="{% static "img/paradise.jpg" %}" alt="Header img" />
+              <div class = "overlay1 show-for-large-up">
+               <!--  <strong>Beyond Penn's Treaty</strong> -->
+              </div>
+        </div>
+   
+    </header>
+
+     <div id = "trans1">
+    	{% include 'nav.html' %}
+    </div>
+
+    <div id = "trans2">
+ <div class = "row">
+      <br /> 
+      <h2> Available Texts and Transcriptions</h2>
+
+      <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      <br />
+     
+  </div> 
+</div> 
+
+<br /> 
+<div class = "row">
+	 <table id="" class="display" cellspacing="0" width="100%">
+	        <thead>
+	                <tr>
+	                        <th>Name of Document</th>
+	                        <th> Creator </th>
+	                        <th> Date </th>
+	                        <th> Type of Document</th>
+	                        <th> Call Number</th>
+	  
+	                </tr>
+	        </thead>
+	        <tbody>
+	        </tbody>
+	</table>
+<br />
+<br />
+</div>
+
+
+	{% include 'footer.html' %}
+   
+  
+{% include 'bottom-links.html' %}
+ <script src="{% static "js/api.js" %}"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script> 
+  </body>
+</html>

@@ -3559,7 +3559,7 @@ button::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   position: absolute;
-  background: #0F6AB3;
+  background: #FFFFFF;
   border: solid 1px #cccccc;
   font-size: 0.875rem;
   height: auto;
@@ -3588,7 +3588,7 @@ button::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   position: absolute;
-  background: #0F6AB3;
+  background: #FFFFFF;
   border: solid 1px #cccccc;
   font-size: 0.875rem;
   height: auto;
@@ -3646,7 +3646,7 @@ button::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   position: absolute;
-  background: #0F6AB3;
+  background: #FFFFFF;
   border: solid 1px #cccccc;
   font-size: 0.875rem;
   height: auto;
@@ -3706,7 +3706,7 @@ button::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   position: absolute;
-  background: #0F6AB3;
+  background: #FFFFFF;
   border: solid 1px #cccccc;
   font-size: 0.875rem;
   height: auto;
@@ -3785,7 +3785,7 @@ button::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   position: absolute;
-  background: #0F6AB3;
+  background: #FFFFFF;
   border: solid 1px #cccccc;
   font-size: 0.875rem;
   height: auto;
@@ -6827,7 +6827,7 @@ meta.foundation-mq-topbar {
 /* line 119, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #0F6AB3;
+  background: #333333;
 }
 /* line 123, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -6863,7 +6863,7 @@ meta.foundation-mq-topbar {
 
 /* line 156, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar {
-  background: #0F6AB3;
+  background: #333333;
   height: 2.8125rem;
   line-height: 2.8125rem;
   margin-bottom: 0;
@@ -6986,7 +6986,7 @@ meta.foundation-mq-topbar {
 }
 /* line 272, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: #0F6AB3;
+  background: #333333;
 }
 /* line 277, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -7027,14 +7027,14 @@ meta.foundation-mq-topbar {
 /* line 323, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
-  border-top: solid 1px #08355a;
+  border-top: solid 1px #1a1a1a;
   clear: both;
   height: 1px;
   width: 100%;
 }
 /* line 331, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li {
-  background: #0F6AB3;
+  background: #333333;
 }
 /* line 334, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a {
@@ -7350,7 +7350,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 1024px) {
   /* line 492, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
-    background: #0F6AB3;
+    background: #333333;
     overflow: visible;
   }
   /* line 239, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -7399,7 +7399,7 @@ meta.foundation-mq-topbar {
   }
   /* line 525, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar.expanded {
-    background: #0F6AB3;
+    background: #333333;
   }
 
   /* line 530, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -7436,7 +7436,7 @@ meta.foundation-mq-topbar {
   }
   /* line 563, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button) {
-    background: #0F6AB3;
+    background: #333333;
     line-height: 2.8125rem;
     padding: 0 2.8125rem;
   }
@@ -7552,7 +7552,7 @@ meta.foundation-mq-topbar {
   /* line 676, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section > ul > .divider,
   .top-bar-section > ul > [role="separator"] {
-    border-right: solid 1px #1280d9;
+    border-right: solid 1px #4e4e4e;
     border-bottom: none;
     border-top: none;
     clear: none;
@@ -7561,7 +7561,7 @@ meta.foundation-mq-topbar {
   }
   /* line 686, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: #0F6AB3;
+    background: #333333;
     height: 2.8125rem;
     padding: 0 2.8125rem;
   }
@@ -9697,141 +9697,244 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 3, ../scss/_custom.scss */
+/* line 5, ../scss/_custom.scss */
 header {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 9, ../scss/_custom.scss */
+/* line 11, ../scss/_custom.scss */
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 16, ../scss/_custom.scss */
+.overlay-container {
+  position: relative;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/* line 22, ../scss/_custom.scss */
+.overlay-container .overlay1 {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  right: 0px;
+  color: white;
+  /* pretty color of blue#7082A6 */
+  font-family: "Alegreya Sans SC";
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/* line 35, ../scss/_custom.scss */
 p {
   font-family: "Open Sans";
   font-weight: 300;
 }
 
-/* line 15, ../scss/_custom.scss */
+/* line 41, ../scss/_custom.scss */
 button, .button {
-  background-color: #0F6AB3;
+  background-color: transparent;
   margin: 0;
   padding: 10px;
   border-style: none;
   font-family: "Alegreya Sans SC";
-  font-weight: 100;
-}
-
-/* line 24, ../scss/_custom.scss */
-button, .button:hover {
-  background-color: #053A78;
-}
-
-/* line 29, ../scss/_custom.scss */
-button, .button:visited {
-  background-color: #0F6AB3;
-}
-
-/* line 33, ../scss/_custom.scss */
-.f-dropdown {
-  background-color: transparent;
-  border: none;
-  font-family: "Alegreya Sans SC";
-  font-weight: 100;
-}
-
-/* line 40, ../scss/_custom.scss */
-.f-dropdown li a {
-  background-color: #0F6AB3;
-  margin: 0;
-}
-
-/* line 45, ../scss/_custom.scss */
-.top-bar-section ul li > a {
-  font-family: "Alegreya Sans SC";
-  font-weight: 100;
+  font-weight: 400;
 }
 
 /* line 50, ../scss/_custom.scss */
-.top-bar-section ul li:hover:not(.has-form) > a {
-  background-color: #0F6AB3;
-  border-style: solid;
-  border-width: 5px;
-  margin: 0;
-  -moz-border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 stretch;
-  -webkit-border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 stretch;
-  -o-border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 stretch;
-  border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 fill stretch;
+button, .button:hover {
+  background-color: transparent;
 }
 
-/* line 63, ../scss/_custom.scss */
-#borderimg1 {
-  border-style: solid;
-  border-width: 10px;
-  -moz-border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 stretch;
-  -webkit-border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 stretch;
-  -o-border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 stretch;
-  border-image: url("http://localhost:8000/static/img/whitebox.png") 50 49 42 33 fill stretch;
+/* line 56, ../scss/_custom.scss */
+button, .button:focus {
+  background-color: transparent;
+}
+
+/* line 61, ../scss/_custom.scss */
+button, .button:visited {
+  background-color: transparent;
+}
+
+/* line 66, ../scss/_custom.scss */
+.f-dropdown {
+  background-color: #fff;
+  border: none;
 }
 
 /* line 72, ../scss/_custom.scss */
+.f-dropdown li a {
+  font-family: "Alegreya Sans SC";
+  font-weight: 100;
+  color: #0F6AB3;
+  background-color: transparent;
+  margin: 0;
+}
+
+/* line 80, ../scss/_custom.scss */
+.top-bar {
+  background-color: transparent;
+}
+
+/* line 84, ../scss/_custom.scss */
+.top-bar-section ul li > a {
+  font-family: "Alegreya Sans SC";
+  font-weight: 400;
+}
+
+/* line 89, ../scss/_custom.scss */
+.top-bar-section ul li {
+  background-color: transparent;
+}
+
+/* line 94, ../scss/_custom.scss */
+.top-bar.expanded .title-area {
+  background-color: transparent;
+}
+
+/* line 98, ../scss/_custom.scss */
+.top-bar-section ul li:hover:not(.has-form) > a {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  margin: 0;
+  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+}
+
+/* line 111, ../scss/_custom.scss */
+#borderimg1 {
+  border-style: solid;
+  border-width: 10px;
+  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+}
+
+/* line 120, ../scss/_custom.scss */
 #borderimg2 {
   border-style: solid;
   padding-left: 25px;
   border-width: 0 0 0 20px;
-  -moz-border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 stretch;
-  -webkit-border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 stretch;
-  -o-border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 stretch;
-  border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 fill stretch;
+  -moz-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  -webkit-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  -o-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch;
 }
 
-/* line 82, ../scss/_custom.scss */
+/* line 130, ../scss/_custom.scss */
 #borderimg3 {
   border-style: solid;
   padding-top: 20px;
   border-width: 17px 0 0 0;
-  -moz-border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 stretch;
-  -webkit-border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 stretch;
-  -o-border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 stretch;
-  border-image: url("http://localhost:8000/static/img/bluebox.png") 53 59 61 47 fill stretch;
+  -moz-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  -webkit-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  -o-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch;
 }
 
-/* line 92, ../scss/_custom.scss */
+/* line 140, ../scss/_custom.scss */
 #row1 {
   background-color: #0F6AB3;
 }
 
-/* line 96, ../scss/_custom.scss */
+/* line 144, ../scss/_custom.scss */
 #row2 {
   background-color: #0F6AB3;
 }
 
-/* line 102, ../scss/_custom.scss */
+/* line 150, ../scss/_custom.scss */
 #row2 h1 {
   font-family: "Alegreya Sans SC";
   font-weight: 400;
   color: white;
   text-align: center;
 }
-/* line 108, ../scss/_custom.scss */
+/* line 156, ../scss/_custom.scss */
 #row2 p {
   color: white;
 }
 
-/* line 116, ../scss/_custom.scss */
+/* line 164, ../scss/_custom.scss */
 #row3 {
   padding-bottom: 30px;
 }
-/* line 119, ../scss/_custom.scss */
+/* line 167, ../scss/_custom.scss */
 #row3 h3 {
   font-family: "Special Elite";
   color: #02326B;
   font-size: 2rem;
 }
-/* line 126, ../scss/_custom.scss */
+/* line 174, ../scss/_custom.scss */
 #row3 button, #row3 .button {
   background-color: #B6B3A7;
 }
 
-/* line 134, ../scss/_custom.scss */
+/* line 182, ../scss/_custom.scss */
+#about1 {
+  background-color: #EFDDC0;
+  padding-bottom: 7px;
+}
+
+/* line 190, ../scss/_custom.scss */
+#about2 h2 {
+  font-family: "Alegreya Sans SC";
+  font-weight: 400;
+  color: #02326B;
+}
+/* line 196, ../scss/_custom.scss */
+#about2 p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #02326B;
+}
+
+/* line 204, ../scss/_custom.scss */
+#about3 {
+  background-color: #0F6AB3;
+}
+/* line 207, ../scss/_custom.scss */
+#about3 h2 {
+  font-family: "Alegreya Sans SC";
+  font-weight: 400;
+  color: #fff;
+}
+/* line 213, ../scss/_custom.scss */
+#about3 p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #fff;
+}
+
+/* line 221, ../scss/_custom.scss */
+#trans1, #trans2 {
+  background-color: #0F6AB3;
+}
+
+/* line 226, ../scss/_custom.scss */
+#trans2 h2 {
+  font-family: "Alegreya Sans SC";
+  font-weight: 400;
+  color: #fff;
+}
+/* line 232, ../scss/_custom.scss */
+#trans2 p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #fff;
+}
+
+/* line 240, ../scss/_custom.scss */
 .footer {
   padding-top: 30px;
   text-align: center;
@@ -9840,11 +9943,11 @@ button, .button:visited {
   color: #fff;
   background-color: #D9D2CA;
 }
-/* line 142, ../scss/_custom.scss */
+/* line 248, ../scss/_custom.scss */
 .footer li a {
   color: #fff;
 }
-/* line 146, ../scss/_custom.scss */
+/* line 252, ../scss/_custom.scss */
 .footer a, .footer p {
   color: #0F6AB3;
   font-family: "Alegreya Sans SC";

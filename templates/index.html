@@ -15,56 +15,7 @@
 <div id = "row1">
 <!--     Navigation Menu Below:  -->
 
-   <div id="borderimg1" class = "show-for-medium-down">
-    <nav class="top-bar show-for-medium-down" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h2><a href="#"><i class="fa fa-home"></i> </a></h2>
-    </li>
-  
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-
-  <section class="top-bar-section">
-   
-    <ul class="full-width">
-      <li class="has-dropdown">
-        <a href="#">About</a>
-            <ul class="dropdown">
-              <li><a href="#">Penn's Treaty</a></li>
-              <li><a href="#">Quakers and Indians</a></li>
-            </ul>
-      </li>
-      <li><a href="#">Transcription</a></li>
-      <li><a href="#">Available Texts</a></li>
-      <li><a href="#">Bibliography &amp; Credits</a></li>
-     
-    </ul>
-    
-    </section>
-    </nav>
-  </div>
-
-
-
-  <ul class = "button-group even-5 show-for-large-up">
-    <li><div id="borderimg1"><a href="#" class="button">Home</a></div></li>
-    
-    <li><div id="borderimg1"><a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">About</a></div></li>
-    <li><div id="borderimg1"><a href="#" class="button">Transcription</a></div></li>
-    <li><div id="borderimg1"><a href="#" class="button">Available Texts</a></div></li>
-    <li><div id="borderimg1"><a href="#" class="button">Bibliography &amp; Credits</a></div></li>
-  </ul>
-
-
-        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-          <div id="borderimg1">
-        <li><a href="#">Penn's Treaty</a></li>
-        <li><a href="#">Quakers and Indians</a></li>
-         </div>
-      </ul>
-   
-
+  {% include 'nav.html' %}
 
 </div>
 
@@ -124,3 +75,6 @@
  {% include 'footer.html' %}
     
  {% include 'bottom-links.html' %}
+
+  </body>
+</html>
