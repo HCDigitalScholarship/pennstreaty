@@ -5,7 +5,7 @@
 // list of the transcriptions the item is connected to: https://ds-omeka.haverford.edu/qi/api/files?item=4919
 
 $(document).ready(function() {
-  console.log('Got here');
+  // console.log('Got here');
 
 // grabs metadata info including pdf
   var metadata_list = {}
@@ -20,7 +20,7 @@ $(document).ready(function() {
   })
 
   function callback_2(data) {
-     console.log(data.data);
+     // console.log(data.data);
   	 for (var i=0; i<data.data.length; i++) {
   	  if (data.data[i].element_texts) {
   		    metadata_list[data.data[i].id] = data.data[i].element_texts;
@@ -28,8 +28,8 @@ $(document).ready(function() {
          
   	  }
   	 }
-      console.log(metadata_list[data.data[0].id]);
-      console.log(trans_list[data.data[1].id]);
+      // console.log(metadata_list[data.data[0].id]);
+      // console.log(trans_list[data.data[1].id]);
 
 
  
@@ -38,14 +38,14 @@ $(document).ready(function() {
   	var script_list = $(".dropdown-menu.all-man")
   	var script_list_holder = $(".handwritten .row")
   	meta_keys = Object.keys(metadata_list);
-  	console.log(metadata_list[meta_keys[0]][12].text);
+  	// console.log(metadata_list[meta_keys[0]][12].text);
   	for (var i=0; i<meta_keys.length; i++) {
   	  my_dict = {}
   	  for (var j=0; j<metadata_list[meta_keys[i]].length; j++) {
   		  var type = metadata_list[meta_keys[i]][j].element.name;
   		  var content = metadata_list[meta_keys[i]][j].text;
         // console.log(content);
-  		  my_dict[type] = content
+  		  my_dict[type] = content;
   	  }
       
 
