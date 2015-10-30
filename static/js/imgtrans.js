@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log('Got here');
+  // console.log('Got here');
 
 // grabs metadata info including pdf
   // var metadata_list = {}
@@ -14,14 +14,14 @@ $(document).ready(function() {
   })
 
   function callback_2(data) {
-    console.log(data.data.files.url);
+    // console.log(data.data.files.url);
      // console.log(data.data.element_texts);
 
       var metadata_list = {}
       var url_thing = {}
       url_thing = data.data.files.url;
       metadata_list[data.data.id] = data.data.element_texts;
-      console.log(metadata_list[data.data.id]);
+      // console.log(metadata_list[data.data.id]);
      
   	 
   	 
@@ -38,8 +38,8 @@ $(document).ready(function() {
 
   	
   	meta_keys = Object.keys(metadata_list);
-    console.log(meta_keys); //id number
-  	console.log(metadata_list[meta_keys[0]][0].text);
+   //  console.log(meta_keys); //id number
+  	// console.log(metadata_list[meta_keys[0]][0].text);
   	for (var i=0; i<meta_keys.length; i++) {
   	  my_dict = {}
   	  for (var j=0; j<metadata_list[meta_keys[i]].length; j++) {
@@ -50,7 +50,7 @@ $(document).ready(function() {
   	  }
         
   	}
- console.log(my_dict["Creator"]);
+ // console.log(my_dict["Creator"]);
   
 
 $.ajax({
@@ -67,13 +67,13 @@ $.ajax({
 }
 
 function get_trans(stuff) {
-  console.log(stuff.data);
+  // console.log(stuff.data);
   var img_list = {}
   var img = {}
   var transcription = {}
   
-  console.log(stuff.data[0].file_urls.original);
-  console.log(stuff.data[0].element_texts);
+  // console.log(stuff.data[0].file_urls.original);
+  // console.log(stuff.data[0].element_texts);
 
   img = stuff.data[0].file_urls.original;
   img_list[stuff.data.id] = stuff.data[0].element_texts;
@@ -91,11 +91,11 @@ function get_trans(stuff) {
         
     }
 
- console.log(my_dict["Transcription"]);
- transcription = my_dict["Transcription"];
- console.log("-----------------------");
- console.log(transcription);
- console.log(img);
+ // console.log(my_dict["Transcription"]);
+ // transcription = my_dict["Transcription"];
+ // console.log("-----------------------");
+ // console.log(transcription);
+ // console.log(img);
 
 
 $('div #transimg').append("<img src = "+img+" />");
