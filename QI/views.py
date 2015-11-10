@@ -9,6 +9,9 @@ def about(request):
 def trans(request):
 	return render(request, 'trans.html')
 
+def cornp1(request):
+	return render(request, 'cornp1.html')
+
 
 class Home(TemplateView):
 	template_name = 'index.html'

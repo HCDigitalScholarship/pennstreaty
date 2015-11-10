@@ -55,9 +55,12 @@ $(document).ready(function() {
   	  }
       my_dict["id"] = data.data[i].id; //each has unique id
 
-    
+    $("table.display").dataTable().fnDestroy();
     $('table.display tbody').append("<tr><td><a href='"+my_dict["id"]+"' class='man-list'>"+my_dict["Title"]+"</a></td><td>"+my_dict["Creator"]+"</td><td>"+my_dict["Date"]+"</td><td>"+my_dict["Material Type"]+"</td><td>"+my_dict["Call Number"]+"</td></tr>");
+      $('table.display').DataTable( {
+          "aLengthMenu": [[25, 50, -1], [25, 50, "All"]]
 
+    } );
 
       }
 
@@ -171,9 +174,6 @@ $(document).ready(function() {
   	
   
 
-$('table.display').DataTable( {
-   "aLengthMenu": [[25, 50, -1], [25, 50, "All"]]
 
-    } );
 
 });

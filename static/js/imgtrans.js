@@ -91,11 +91,11 @@ function get_trans(stuff) {
         
     }
 
- // console.log(my_dict["Transcription"]);
- // transcription = my_dict["Transcription"];
- // console.log("-----------------------");
- // console.log(transcription);
- // console.log(img);
+ console.log(my_dict["Transcription"]);
+ transcription = my_dict["Transcription"];
+ console.log("-----------------------");
+ console.log(transcription);
+ console.log(img);
 
 
 $('div #transimg').append("<img src = "+img+" />");
