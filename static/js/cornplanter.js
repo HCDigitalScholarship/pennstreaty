@@ -5,9 +5,9 @@ $(document).ready(function() {
   $("a").click(function(){
         var href = $(this).attr('href');
         var newhref = href.slice(1, href.length);
-        alert(newhref);
+        // alert(newhref);
         $.ajax({
-            url: '/'+newhref+'',
+            url: '/static/json/'+newhref+'.json',
             type: 'GET',
             dataType: 'json',
             cache: true,
@@ -17,59 +17,56 @@ $(document).ready(function() {
   })
 
         
-});
+
 
   
 
   function callback_2(data) {
       console.log(data.name);
       console.log(data.affiliation);
+      console.log(newhref);
 
-      $('.slider').append("<div><span> Name </span><hr><p> " + data.name + "</p><span> Birth </span> <hr><p>" + data.birth + "</p> <span> Death </span> <hr><p> " + data.death + "</p> <span> Affiliation </span><hr> <p>" + data.affiliation + "</p> <span> Notes </span><hr><p> " + data.notes + "</p> <span> Alternate Spellings </span> <hr><p>" + data.associated_spellings + "</p> <span> Other Documents </span><hr><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span><hr> <p>" + data.library_of_congress_info + "</p></div>");
-
-      $('.slider').animate({"margin-right": '+=200'});
-      $('#transcription').animate({"margin-right": '+=200'});
-
-
- 
-
-
-//       // console.log(data.data[0].element_texts);
-//       console.log(data.data[0].id);
-//   	//  for (var i=0; i<data.data.length; i++) {
-//   	//   if (data.data[i].element_texts) {
-//    //        id_list[data.data[i].id] = data.data[i].id;
-//   	// 	    metadata_list[data.data[i].id] = data.data[i].element_texts;
-//    //        trans_list[data.data[i].id] = data.data[i].files; //url that brings you to all transcriptions for that certain object
-         
-//   	//   }
-//   	//  }
-//    //    console.log(id_list);
-//    //    console.log(metadata_list);
-//    //    // console.log(trans_list[data.data[1].id]);
-
-
- 
-
-//   	// id_keys = Object.keys(id_list);
-//   	// meta_keys = Object.keys(metadata_list);
-//    //  // console.log(id_list[id_keys[2]]);
-//   	// // console.log(metadata_list[meta_keys[2]]);
-//   	// for (var i=0; i<meta_keys.length; i++) {
-//   	//   my_dict = {}
-//    //    my_id = {}
-//   	//   for (var j=0; j<metadata_list[meta_keys[i]].length; j++) {
-//   	// 	  var type = metadata_list[meta_keys[i]][j].element.name;
-//   	// 	  var content = metadata_list[meta_keys[i]][j].text;
-//    //      // console.log(content);
-//   	// 	  my_dict[type] = content;
-       
-//   	//   }
-//    //    my_dict["id"] = data.data[i].id; //each has unique id
-
-   
+      if (($('.off-canvas div').attr('id')) == undefined) {
+        $('.off-canvas').append("<div id = "+newhref+"><span> Name </span><p> " + data.name + "</p><span> Birth </span> <p>" + data.birth + "</p> <span> Death </span> <p> " + data.death + "</p> <span> Affiliation </span> <p>" + data.affiliation + "</p> <span> Notes </span><p> " + data.notes + "</p> <span> Alternate Spellings </span> <p>" + data.associated_spellings + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+        $('.off-canvas').animate({"margin-right": '+=25%'});
+        $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
       }
+      else if (newhref == ($('.off-canvas div').attr('id'))) {
+          $('.off-canvas').animate({"margin-right": '-=25%'});
+          $('i.fa.fa-times').animate({"margin-right": '-=25%'});
+          $('.off-canvas div').remove();
+      }
+       else { //this is the case when you click on another (different) a href right after clicking a first one
+        $('.off-canvas').animate({"margin-right": '-=25%'});
+        $('i.fa.fa-times').animate({"margin-right": '-=25%'});
+        $('.off-canvas div').remove();
+        $('.off-canvas').append("<div id = "+newhref+"><span> Name </span><p> " + data.name + "</p><span> Birth </span> <p>" + data.birth + "</p> <span> Death </span> <p> " + data.death + "</p> <span> Affiliation </span> <p>" + data.affiliation + "</p> <span> Notes </span><p> " + data.notes + "</p> <span> Alternate Spellings </span> <p>" + data.associated_spellings + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+        $('.off-canvas').animate({"margin-right": '+=25%'});
+        $('i.fa.fa-times').animate({"margin-right": '+=25%'});
+      }
+      
+        
+      
+   
+    
+
+
+}
+
+});
+
+
+
+$("i.fa.fa-times").click(function(){
+      $('.off-canvas').animate({"margin-right": '-=25%'});
+      $('i.fa.fa-times').animate({"margin-right": '-=25%'});
+      $('.off-canvas div').remove();
+      
+
+
+
+  });
 
 
      

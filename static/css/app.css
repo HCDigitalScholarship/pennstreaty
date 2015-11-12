@@ -9886,6 +9886,16 @@ button, .button:visited {
   padding-bottom: 7px;
 }
 
+/* line 188, ../scss/_custom.scss */
+#about2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* line 190, ../scss/_custom.scss */
 #about2 h2 {
   font-family: "Alegreya Sans SC";
@@ -9897,6 +9907,43 @@ button, .button:visited {
   font-family: "Open Sans";
   font-weight: 300;
   color: #02326B;
+}
+
+/* line 211, ../scss/_custom.scss */
+.off-canvas {
+  position: absolute;
+  width: 25%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #7EC6FA;
+  border-radius: 5px;
+  box-shadow: -2px 0px 10px 0px #aaaaaa;
+}
+
+i.fa.fa-times {
+    position: absolute;
+    color: white;
+    margin-top: 20px;
+    right:0;
+    top: 0;
+    margin-right: -25%;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 45px;
+    
+}
+
+i.fa.fa-times:hover {
+  color: #416883;
+}
+/* line 225, ../scss/_custom.scss */
+#main-content {
+  width: 60%;
+  
 }
 
 /* line 204, ../scss/_custom.scss */
