@@ -50,7 +50,8 @@ $(document).ready(function() {
   	  }
         
   	}
- // console.log(my_dict["Creator"]);
+  console.log(my_dict["Creator"]);
+  $("#metastuffdata").append("<div><span class='meta-title'> Name of Document </span> <p>" + my_dict["Title"] + "</p> <span class='meta-title'> Creator </span><p> " + my_dict["Creator"] + "</p><span class='meta-title'> Date </span><p> " + my_dict["Date"] + "</p> <span class='meta-title'> Type of Document </span> <p>" + my_dict["Material Type"] + "</p><span class='meta-title'> Call Number </span><p> " + my_dict["Call Number"] + "</p></div>");
   
 
 $.ajax({
