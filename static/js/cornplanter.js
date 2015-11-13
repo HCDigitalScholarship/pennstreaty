@@ -93,7 +93,7 @@ $('.off-canvas-content-img').append("<div><h3>Original Document</h3><img src = "
       console.log(newhref);
 
       if (($('.off-canvas div').attr('id')) == undefined) {
-        $('.off-canvas').append("<div id = "+newhref+"><h3>Person Information</h3><span> Name </span><p> " + data.name + "</p><span> Birth </span> <p>" + data.birth + "</p> <span> Death </span> <p> " + data.death + "</p> <span> Affiliation </span> <p>" + data.affiliation + "</p> <span> Notes </span><p> " + data.notes + "</p> <span> Alternate Spellings </span> <p>" + data.associated_spellings + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+        $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data.name + "</p><span> Birth </span> <p>" + data.birth + "</p> <span> Death </span> <p> " + data.death + "</p> <span> Affiliation </span> <p>" + data.affiliation + "</p> <span> Notes </span><p> " + data.notes + "</p> <span> Alternate Spellings </span> <p>" + data.associated_spellings + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
         $('.off-canvas').animate({"margin-right": '+=25%'});
         $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
@@ -107,7 +107,7 @@ $('.off-canvas-content-img').append("<div><h3>Original Document</h3><img src = "
         $('.off-canvas').animate({"margin-right": '-=25%'});
         $('i.fa.fa-times').animate({"margin-right": '-=25%'});
         $('.off-canvas div').remove();
-        $('.off-canvas').append("<div id = "+newhref+"><h3>Person Information</h3><span> Name </span><p> " + data.name + "</p><span> Birth </span> <p>" + data.birth + "</p> <span> Death </span> <p> " + data.death + "</p> <span> Affiliation </span> <p>" + data.affiliation + "</p> <span> Notes </span><p> " + data.notes + "</p> <span> Alternate Spellings </span> <p>" + data.associated_spellings + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+        $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data.name + "</p><span> Birth </span> <p>" + data.birth + "</p> <span> Death </span> <p> " + data.death + "</p> <span> Affiliation </span> <p>" + data.affiliation + "</p> <span> Notes </span><p> " + data.notes + "</p> <span> Alternate Spellings </span> <p>" + data.associated_spellings + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
         $('.off-canvas').animate({"margin-right": '+=25%'});
         $('i.fa.fa-times').animate({"margin-right": '+=25%'});
       }
