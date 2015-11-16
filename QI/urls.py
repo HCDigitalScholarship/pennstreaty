@@ -25,3 +25,6 @@ urlpatterns = [
     url(r'^$', views.Home.as_view(), name = 'home'),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+admin.site.site_header = 'Beyond Penns Treaty'
+admin.site.index_title = 'Beyond Penns Treaty Administration'
