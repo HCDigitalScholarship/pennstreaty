@@ -2,9 +2,9 @@ from django.db import models
 
 class Person(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
-	uri_lcnaf = models.CharField("URI LCNAF", max_length = 50)
-	last_name = models.CharField("Last Name", max_length=100)
-	first_name = models.CharField("First Name", max_length=100)
+	uri_lcnaf = models.CharField("URI LCNAF", max_length = 50, blank = True)
+	last_name = models.CharField("Last Name", max_length=100, blank = True)
+	first_name = models.CharField("First Name", max_length=100, blank = True)
 	middle_name = models.CharField("Middle Name", blank = True, max_length=100)
 	other_names= models.TextField("Other Names", blank = True)
 	birth_date = models.CharField("Birth Date", max_length=20, blank = True)
@@ -20,15 +20,15 @@ class Person(models.Model):
 	PYM_index = models.TextField("PYM Index", blank = True)
 	
 	def __unicode__(self):
-		return self.id_tei + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation + " " + self.notes + " " + self.PYM_index      
+		return self.id_tei + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation + " " + self.notes + " " + unicode(self.PYM_index)      
 
 
 class Place(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
 	name = models.CharField("Name of Place", max_length = 100, blank = True)
 	state = models.CharField("State", max_length = 20, blank = True)
-	latitude = models.DecimalField("Latitude", max_digits=9, decimal_places=6, blank = True, null = True)
-	longitude = models.DecimalField("Longitude", max_digits=9, decimal_places=6, blank = True, null = True)
+	latitude = models.DecimalField("Latitude", max_digits=15, decimal_places=6, blank = True, null = True)
+	longitude = models.DecimalField("Longitude", max_digits=15, decimal_places=6, blank = True, null = True)
 	notes = models.TextField("Description Field", blank = True)
 	PLACENAME = 'PN'
 	GEOGNAME = 'GN'
