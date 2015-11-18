@@ -27,8 +27,8 @@ class Place(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
 	name = models.CharField("Name of Place", max_length = 100, blank = True)
 	state = models.CharField("State", max_length = 20, blank = True)
-	latitude = models.DecimalField("Latitude", max_digits=15, decimal_places=6, blank = True, null = True)
-	longitude = models.DecimalField("Longitude", max_digits=15, decimal_places=6, blank = True, null = True)
+	latitude = models.CharField("Latitude", max_length = 15, blank = True, null = True)
+	longitude = models.CharField("Longitude", max_length = 15, blank = True, null = True)
 	notes = models.TextField("Description Field", blank = True)
 	PLACENAME = 'PN'
 	GEOGNAME = 'GN'
