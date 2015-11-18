@@ -19,8 +19,9 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
+    url(r'^profiles/$', 'QI.views.profiles', name = "Person Profiles"),
     url(r'^cornp1/$', 'QI.views.cornp1', name = "cornp1"),
-	url(r'^trans/$', 'QI.views.trans', name = "Transcriptions"),
+	url(r'^texts/$', 'QI.views.texts', name = "Available Texts"),
 	url(r'^about/$', 'QI.views.about', name = "About Page"),
     url(r'^$', views.Home.as_view(), name = 'home'),
     url(r'^admin/', include(admin.site.urls)),

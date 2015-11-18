@@ -10061,6 +10061,28 @@ i.fa.fa-times:hover {
   color: #fff;
 }
 
+/* line 267, ../scss/_custom.scss */
+#profiles1 ul.tabs {
+  padding-top: 80px;
+  padding-left: 10%;
+  background-color: #0F6AB3;
+}
+/* line 270, ../scss/_custom.scss */
+#profiles1 ul.tabs li.tab-title.active a {
+  background-color: #fff;
+  color: #000;
+}
+/* line 275, ../scss/_custom.scss */
+#profiles1 ul.tabs li.tab-title a {
+  font-family: "Alegreya Sans SC";
+  font-weight: 400;
+  color: #fff;
+  background-color: #094371;
+  margin-left: 13px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 /* line 240, ../scss/_custom.scss */
 .footer {
   padding-top: 30px;
