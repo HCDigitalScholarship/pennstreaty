@@ -1,0 +1,138 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include 'top-links.html' %}
+
+    <title>Template for StoryMapJS </title>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
+    
+
+  </head>
+
+  <body>
+	<header>
+          <div class = "overlay-container">
+            <img src="{% static "img/PennsTreaty-West.jpg" %}" alt="Header img" />
+              <div class = "overlay1 show-for-large-up">
+               <!--  <strong>Beyond Penn's Treaty</strong> -->
+              </div>
+        </div>
+   
+    </header>
+
+
+   <div id = "row1">
+  <!--     Navigation Menu Below:  -->
+
+    {% include 'nav.html' %}
+
+  </div>
+
+	<div id = "story1" style = "background-color: #0F6AB3;">
+	   <div class = "row">
+	      <br />
+	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: white"> StoryMap of 3 Journal Entries</h2>
+	        <!-- The StoryMap container can go anywhere on the page. Be sure to 
+    specify a width and height.  The width can be absolute (in pixels) or 
+    relative (in percentage), but the height must be an absolute value.  
+    Of course, you can specify width and height with CSS instead -->
+    <div id="mapdiv" style="width: 100%; height: 600px;"></div> 
+
+    <br />
+    <br />
+
+	  </div>  
+	</div>
+
+
+
+
+
+
+
+  	{% include 'footer.html' %}
+    
+ {% include 'bottom-links.html' %}
+  <!-- Your script tags should be placed before the closing body tag. -->
+    <script type="text/javascript" src="https://cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
+     <script>
+  // storymap_data can be an URL or a Javascript object
+      var storymap_data = 
+                      {
+                        
+                        "calculate_zoom": true,
+                        "storymap": {
+                             "call_to_action": true, 
+                             "map_type": 
+                                  "stamen:toner-lite",
+                             "map_as_image": false,
+
+                              "slides": 
+                                  [{"date": "", 
+                                    "media": 
+                                        {"url": "", 
+                                        "caption": "", 
+                                        "credit": ""}, 
+                                    "type": "overview", 
+                                    "location": 
+                                        {"line": true, 
+                                        "icon": "https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png"}, 
+                                    "text": 
+                                        {"headline": "", 
+                                        "text": ""}
+                                                    }, 
+                                    {"date": "", 
+                                    "media": 
+                                        {"url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg", 
+                                        "caption": "First Page of Journal", 
+                                        "credit": ""}, 
+                                    "location": 
+                                        {"lat": 39.9525839, 
+                                        "line": true, 
+                                        "lon": -75.16522150000003, "zoom": 1, 
+                                        "icon": "https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png"}, 
+                                      "text": 
+                                          {"headline": 
+                                          "A Short Account of the Treaty of Easton", "text": "Philadelphia, 8/12/1757"}
+                                              }, 
+                                    {"date": "", 
+                                    "media": 
+                                        {"url": "https://ds-omeka.haverford.edu/qi/files/fullsize/069f6a04fbad5f58e71b04b1be633054.jpg", "caption": "", "credit": ""}, 
+                                    "location": 
+                                        {"lat": 39.9525839, 
+                                        "line": true, 
+                                        "lon": -75.16522150000003, 
+                                        "zoom": 1, 
+                                        "icon": "https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png"}, 
+                                    "text": 
+                                        {"headline": "A true Copy of the Governor's Speech delivered to the Indians in the Eleventh Day of July 1758 at the State House in Philadelphia, taken from and composed with the Original delivered Charles Thompson by Richard Peters the Governors Secretary", "text": "Philadelphia, 7/11/1758"}
+                                            }, 
+                                    {"date": "", 
+                                    "media": 
+                                        {"url": "https://ds-omeka.haverford.edu/qi/files/fullsize/af43b5e0d956b15108f93e670cba3371.jpg", "caption": "Written by Colonel Hugh Mercer to Israel Pemberton", "credit": ""}, 
+                                    "location": 
+                                        {"lat": 40.44062479999999, 
+                                        "line": true, 
+                                        "lon": -79.99588640000002, 
+                                        "zoom": 4, 
+                                        "icon": "https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png"}, 
+                                    "text": 
+                                        {"headline": "Colonel Hugh Mercer's letter to Israel Pemberton", 
+                                        "text": "Pittsburgh, 9/7/1759"}
+                                              }], 
+                              
+                                                      }
+                                                        };
+
+      // certain settings must be passed within a separate options object
+      var storymap_options = {};
+
+      var storymap = new VCO.StoryMap('mapdiv', storymap_data, storymap_options);
+      window.onresize = function(event) {
+          storymap.updateDisplay(); // this isn't automatic
+      }          
+  </script>
+
+  </body>
+</html>

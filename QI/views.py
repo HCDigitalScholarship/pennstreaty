@@ -21,5 +21,10 @@ def profiles(request):
 	org_list = Organization.objects.order_by('organization_name')
 	return render(request, 'profiles.html', {'persons': person_list, 'places': place_list, 'orgs': org_list})
 
+def storymap(request):
+	return render(request, 'storymap.html')
+
 class Home(TemplateView):
 	template_name = 'index.html'
+
+

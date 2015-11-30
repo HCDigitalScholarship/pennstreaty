@@ -19,6 +19,7 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
+    url(r'^storymap/$', 'QI.views.storymap', name = "StoryMapJS"),
     url(r'^profiles/$', 'QI.views.profiles', name = "Person Profiles"),
     url(r'^cornp1/$', 'QI.views.cornp1', name = "cornp1"),
 	url(r'^texts/$', 'QI.views.texts', name = "Available Texts"),
