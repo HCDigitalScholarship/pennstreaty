@@ -12,8 +12,9 @@ The features/visualizations on this site were made using the following libraries
 
 -JQuery (http://jquery.com/)
 -DataTables (https://www.datatables.net/)
+-StoryMapJS (https://storymap.knightlab.com/advanced/)
 
-To learn more about how I got started with Django, Foundation, and creating QMH site, please visit my wiki page on github here: https://github.com/HCDigitalScholarship/FriendsAsylum/wiki/Welcome-and-Introduction-to-QMH-and-Django
+To learn more about how I got started with Django, Foundation, and creating the QMH site, please visit my wiki page on github here: https://github.com/HCDigitalScholarship/FriendsAsylum/wiki/Welcome-and-Introduction-to-QMH-and-Django
 
 Excel Docs for Future Research on QI:
 
