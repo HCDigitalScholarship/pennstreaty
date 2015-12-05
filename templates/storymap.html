@@ -60,8 +60,9 @@
   // storymap_data can be an URL or a Javascript object
       var storymap_data = 
                       {
-                        
-                        "calculate_zoom": true,
+                        //this is the format for the storymap json. 
+                        //you can read more about this here: https://storymap.knightlab.com/advanced/
+                        "calculate_zoom": false,
                         "storymap": {
                              "call_to_action": true, 
                              "map_type": 
@@ -85,12 +86,28 @@
                                     {"date": "", 
                                     "media": 
                                         {"url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg", 
-                                        "caption": "First Page of Journal", 
+                                        "caption": "", 
                                         "credit": ""}, 
                                     "location": 
                                         {"lat": 39.9525839, 
                                         "line": true, 
-                                        "lon": -75.16522150000003, "zoom": 1, 
+                                        "lon": -75.16522150000003, 
+                                        "zoom": 0,  
+                                        "icon": "https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png"}, 
+                                      "text": 
+                                          {"headline": 
+                                          "A Short Account of the Treaty of Easton", "text": "Philadelphia, 8/12/1757"}
+                                              }, 
+                                    {"date": "", 
+                                    "media": 
+                                        {"url": "https://ds-omeka.haverford.edu/qi/files/fullsize/82d94ecb1d2c43307a752102df4e0237.jpg", 
+                                        "caption": "Second Page of Journal", 
+                                        "credit": ""}, 
+                                    "location": 
+                                        {"lat": 39.9525839, 
+                                        "line": true, 
+                                        "lon": -75.16522150000003, 
+                                        "zoom": 0, 
                                         "icon": "https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png"}, 
                                       "text": 
                                           {"headline": 
@@ -133,6 +150,10 @@
           storymap.updateDisplay(); // this isn't automatic
       }          
   </script>
+  
+  <script src="{% static "js/pagination-storymap.js" %}"></script>
+ 
 
   </body>
 </html>
+
