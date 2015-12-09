@@ -55,9 +55,22 @@ function get_img(stuff) {
 
   var img_list = {}
   var img = {}
+  var originals_list = []
+  console.log(stuff.data);
+  img_keys = Object.keys(stuff.data);
+  console.log(img_keys[3]);
+  console.log(stuff.data[2].file_urls.original);
+   
+  for (var i=0; i<img_keys.length; i++) {
 
+     
+     originals_list.push(stuff.data[img_keys[i]].file_urls.original); //this contains a list of all the original image files related to this transcription (from omeka)
+  }
+
+  console.log(originals_list);
   img = stuff.data[0].file_urls.original;
   img_list[stuff.data.id] = stuff.data[0].element_texts;
+  
 
 //from the function above, we can now append the original image of the document to one of the off canvas divs
 $('.off-canvas-content-img').append("<div><h3>Original Document</h3><img src = "+img+" /></div>");
