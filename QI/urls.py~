@@ -25,9 +25,11 @@ urlpatterns = [
 	url(r'^about/$', 'QI.views.about', name = "About Page"),
     url(r'^$', views.Home.as_view(), name = 'home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^cornp1/', 'QI.views.cornp1', name = "Henry Cornplanter"),
-    url(r'^places/', 'QI.views.places', name = "Places page"),
-    url(r'^organizations/', 'QI.views.organizations', name = "Organizations page"),
+    url(r'^cornp1/$', 'QI.views.cornp1', name = "Henry Cornplanter"),
+    url(r'^places/$', 'QI.views.places', name = "Places page"),
+    url(r'^organizations/$', 'QI.views.organizations', name = "Organizations page"),
+    url(r'^404/$', 'QI.views.404', name = "error page"),
+
 
 ]
 
