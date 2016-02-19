@@ -25,8 +25,6 @@ urlpatterns = [
 	url(r'^about/$', 'QI.views.about', name = "About Page"),
     url(r'^$', views.Home.as_view(), name = 'home'),
     url(r'^admin/', include(admin.site.urls)),
-url(r'^cornp1', 'QI.views.cornp1', name = "Henry Cornplanter")
-
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

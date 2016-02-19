@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include 'top-links.html' %}
+
+    <title>Profiles </title>
+
+  </head>
+
+  <body>
+    
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id = "row2">
+  <div class = "row">
+    <br />
+    <h1> Henry Cornplanter</h1>
+    <br />
+  </div>
+
+
+</div>
+
+<div id = "row3">
+  <div class = "row full-width text-center">
+    <br />
+
+    <div class = "large-6 medium-6 small-12 columns">  
+      
+        <h3> Profile</h3>
+        <br>
+        <p class = "text-left"> 
+Birth <br> <br>
+Birth Place <br> <br>
+Death <br> <br>
+Affiliation <br> <br>
+Notes <br> <br>
+Alternate Spelling <br> <br>
+</p>
+
+        <br />
+    <br />
+
+<h3> Related Documents </h3>
+  </div>
+    
+
+ {% include 'footer.html' %}
+    
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>
