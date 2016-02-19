@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include 'top-links.html' %}
+
+    <title>Penn's Treaty | Welcome </title>
+
+  </head>
+
+  <body>
+    
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id = "row2">
+  <div class = "row">
+    <br />
+    <h1> Beyond Penn's Treaty: Quaker and Indian Relations</h1>
+    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+    <br />
+  </div>
+
+
+</div>
+
+<div id = "row3">
+  <div class = "row full-width text-center">
+    <br />
+
+    <div class = "large-6 medium-6 small-12 columns">  
+      
+        <h3> TRANSCRIPTIONS</h3>
+        <br>
+        <p class = "text-left">With the help of X number of students and people, we have been able to digitally transcribe many of the documents we have related to Quaker and Indian affairs in the late 18th to 19th century. But, we still have many more diaries and records to transcribe. Help in the efforts to transcribe and add to the information available on this website. Click on the button below to go to the transcription portion of our website and start transcribing today!</p>
+        <a id= "butt" href="https://ds-omeka.haverford.edu/qi/collections/browse/" class="button medium radius">Start Transcribing!</a>
+        <br />
+    <br />
+  </div>
+    <div class = "large-6 medium-6 small-12 columns">
+      <div id="borderimg2" class = "show-for-medium-up">
+        <h3> FEATURES</h3>
+        <br />
+        <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2">
+          <li><img src="http://placehold.it/200x150" /></li>
+          <li><img src="http://placehold.it/200x150" /></li>
+          <li><img src="http://placehold.it/200x150" /></li>
+          <li><img src="http://placehold.it/200x150" /></li>
+        </ul>
+    </div>
+  </div>
+  <div class = "large-6 medium-6 small-12 columns">
+      <div id="borderimg3" class = "show-for-small-down">
+        <h3> FEATURES</h3>
+        <br />
+        <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2">
+          <li><img src="http://placehold.it/200x150" /></li>
+          <li><img src="http://placehold.it/200x150" /></li>
+          <li><img src="http://placehold.it/200x150" /></li>
+          <li><img src="http://placehold.it/200x150" /></li>
+        </ul>
+    </div>
+  </div>
+    <br />
+
+  </div>
+</div>
+
+ {% include 'footer.html' %}
+    
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>

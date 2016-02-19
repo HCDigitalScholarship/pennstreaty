@@ -4,7 +4,7 @@
   <head>
     {% include 'top-links.html' %}
 
-    <title>Profiles </title>
+    <title>Places </title>
 
   </head>
 
@@ -22,7 +22,7 @@
 <div id = "row2">
   <div class = "row">
     <br />
-    <h1> Henry Cornplanter</h1>
+    <h1>  Aberdeen </h1>
     <br />
   </div>
 
