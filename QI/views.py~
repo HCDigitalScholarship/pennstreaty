@@ -21,8 +21,7 @@ def places(request):
 def organizations(request):
 	return render(request, 'organizations.html')
 
-def 404(request):
-	return render(request, '404.html')
+
 
 def profiles(request):
 	person_list = Person.objects.order_by('last_name')
@@ -32,6 +31,18 @@ def profiles(request):
 
 def storymap(request):
 	return render(request, 'storymap.html')
+
+def handler404(request):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+def handler500(request):
+    response = render_to_response('500.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
 
 class Home(TemplateView):
 	template_name = 'index.html'
