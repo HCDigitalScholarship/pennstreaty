@@ -5,6 +5,7 @@ from django.shortcuts import render, render_to_response
 from models import Person
 from models import Place
 from models import Organization
+from models import Relationship
 
 def about(request):
 	return render(request, 'about.html')
