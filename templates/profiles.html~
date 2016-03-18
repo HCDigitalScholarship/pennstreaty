@@ -1,0 +1,212 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+     <!--   this is the css styling for datatables (it is a foundation library/datatable compatible thing) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
+    {% include 'top-links.html' %}
+    
+    
+ 
+
+    <title>Person Profiles </title>
+
+  </head>
+
+  <body>
+	Ayyyyy
+	<header>
+          <div class = "overlay-container">
+            <img src="{% static "img/qandi.png" %}" alt="Header img" />
+              <div class = "overlay1 show-for-large-up">
+                <strong>Person, Place &amp; Organization Profiles</strong>
+              </div>
+        </div>
+   
+    </header>
+
+    <div id = "about1">
+    	{% include 'nav.html' %}
+    </div>
+
+
+
+
+ 
+     <div id = "profiles1">
+    
+      <ul class="tabs" data-tab>
+        <li class="tab-title active"><a href="#panel1">Persons</a></li>
+        <li class="tab-title"><a href="#panel2">Places </a></li>
+        <li class="tab-title"><a href="#panel3">Organizations</a></li>
+      </ul>
+
+      <div class="tabs-content">
+        <div class="content active" id="panel1">
+         <div class = "row full-width">
+             <!-- there are many ways to make a datatable, but this worked best for django -->
+ <table id="example" class="display" cellspacing="0" width="100%">
+                                        <thead>
+                                                <tr>
+                                                        <th>Name</th>
+                                                        <th>Other Names</th>
+                                                        <th> Affiliation </th>
+                                                        <th> Birth Date</th>
+                                                        <th> Death Date </th>
+                                                        <th>  Notes </th>
+                                                        <th> URI LCNAF  </th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                {% if persons %}
+                                                                {% for person in persons %}
+                                                        <tr>
+
+                                                                <td>
+                                                                    {{person.first_name}}  {{person.last_name}}
+                                                                </td>
+                                                                <td> {{person.other_names}} </td>
+
+                                                                <td>{{person.affiliation}} </td>
+                                                                <td> {{person.birth_date}} </td>
+                                                                <td>{{person.death_date}} </td>
+                                                                <td>{{person.notes}} </td>
+                                                                <td><a href = "{{person.uri_lcnaf}}"> {{person.uri_lcnaf}} </a></td>
+                                                                
+                                                        </tr>
+                                                                {% endfor %}
+                                        </tbody>
+    </table>
+
+      {% else %}
+                                   <strong> There are no persons available at this time in the db. </strong>
+                        {% endif %}
+        </div>
+      </div>
+        <div class="content" id="panel2">
+          <div class = "row full-width">
+          <table id="example" class="display" cellspacing="0" width="100%">
+                                        <thead>
+                                                <tr>
+                                                        <th>Name</th>
+                                                        <th>  Alternate Names </th>
+                                                        <th>State</th>
+                                                        <th> Latitude </th>
+                                                        <th> Longitude</th>
+                                                        <th> Notes </th>
+                                                       
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                {% if places %}
+                                                                {% for place in places %}
+                                                        <tr>
+
+                                                                <td>
+                                                                    {{place.name}}
+                                                                </td>
+                                                                <td> {{place.alternate}} </td>
+                                                                <td>{{place.state}} </td>
+                                                                <td> {{place.latitude}} </td>
+                                                                <td>{{place.longitude}} </td>
+                                                                <td>{{person.notes}} </td>
+                                                                
+                                                                
+                                                        </tr>
+                                                                {% endfor %}
+                                        </tbody>
+    </table>
+
+      {% else %}
+                                   <strong> There are no places available at this time in the db. </strong>
+                        {% endif %}
+        </div>
+      </div>
+        <div class="content" id="panel3">
+          <div class = "row full-width">
+          <table id="example" class="display" cellspacing="0" width="100%">
+                                        <thead>
+                                                <tr>
+                                                        <th>Name</th>
+                                                        <th>Associated Spellings</th>
+                                                        <th> Notes </th>
+                                                        
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                {% if orgs %}
+                                                                {% for org in orgs %}
+                                                        <tr>
+
+                                                                <td>
+                                                                    {{org.organization_name}}  
+                                                                </td>
+                                                                <td> {{org.associated_spellings}} </td>
+                                                                <td>{{org_notes}} </td>
+                                                                
+                                                                
+                                                        </tr>
+                                                                {% endfor %}
+                                        </tbody>
+    </table>
+
+      {% else %}
+                                   <strong> There are no organizations available at this time in the db. </strong>
+                        {% endif %}
+        </div>
+        </div>
+      </div>
+   
+    </div>
+
+
+
+
+
+
+
+
+    {% include 'footer.html' %}
+    
+ {% include 'bottom-links.html' %}
+<!-- this is the script necesssary for datatables.  you also need css styling for the datatable -->
+  <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('table.display').DataTable( {
+        dom: 'Bfrtip',
+               buttons: [
+                {
+                    extend: 'copyHtml5',
+                    exportOptions: {
+                        columns: ':visible'               
+         }
+                },
+                {
+                    extend: 'excelHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'csvHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                }
+            ],
+       "aLengthMenu": [[20, 50, 100, -1], [20, 50, 100]]
+      
+        } );
+    } );
+    
+   </script>
+
+  </body>
+</html>
