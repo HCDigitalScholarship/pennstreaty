@@ -9,6 +9,7 @@
   </head>
 
   <body>
+{% include 'header.html' %}
 	<header>
           <div class = "overlay-container">
             <img src="{% static "img/qandi.png" %}" alt="Header img" />

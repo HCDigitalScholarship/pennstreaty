@@ -16,6 +16,14 @@ def texts(request):
 def cornp1(request):
 	return render(request, 'cornp1.html')
 
+def places(request):
+	return render(request, 'places.html')
+
+def organizations(request):
+	return render(request, 'organizations.html')
+
+
+
 def profiles(request):
 	person_list = Person.objects.order_by('last_name')
 	place_list = Place.objects.order_by('name')

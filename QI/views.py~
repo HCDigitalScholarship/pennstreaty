@@ -5,7 +5,10 @@ from django.shortcuts import render, render_to_response
 from models import Person
 from models import Place
 from models import Organization
+<<<<<<< HEAD
 from models import Relationship
+=======
+>>>>>>> c92e4b0f8e7adaa44effa1f542ebe2dee09679d2
 
 def about(request):
 	return render(request, 'about.html')
@@ -16,11 +19,28 @@ def texts(request):
 def cornp1(request):
 	return render(request, 'cornp1.html')
 
+<<<<<<< HEAD
 def profiles(request):
 	person_list = Person.objects.order_by('last_name')
 	#place_list = Place.objects.order_by('name')
 	org_list = Organization.objects.order_by('organization_name')
 	return render(request, 'profiles.html', {'persons': person_list, 'orgs': org_list})
+=======
+def places(request):
+	return render(request, 'places.html')
+
+def organizations(request):
+	return render(request, 'organizations.html')
+
+def 404(request):
+	return render(request, '404.html')
+
+def profiles(request):
+	person_list = Person.objects.order_by('last_name')
+	place_list = Place.objects.order_by('name')
+	org_list = Organization.objects.order_by('organization_name')
+	return render(request, 'profiles.html', {'persons': person_list, 'places': place_list, 'orgs': org_list})
+>>>>>>> c92e4b0f8e7adaa44effa1f542ebe2dee09679d2
 
 def storymap(request):
 	return render(request, 'storymap.html')

@@ -27,7 +27,7 @@ class BookResource(resources.ModelResource):
 					match=True
 					print "Ooo we match a ticha id, we need to do something"
 			if not match:
-				print "No matching ticha id for:",data[field_name]",:("
+				print "No matching ticha id for:",data[field_name],",:("
 		
 			continue
 		    print obj, "Obj"

@@ -9999,6 +9999,48 @@ button, .button:visited {
   
 }
 
+.original-image-wrapper {
+  position: relative;
+}
+
+.original-image-wrapper:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.original-image-wrapper .forwards-arrow{
+  position: absolute;
+  right: 0; 
+  top: 50%;
+  color: #949494;
+  font-size: 45px;
+}
+
+.original-image-wrapper .forwards-arrow .fa-chevron-right { 
+  position: absolute;
+  right: 3%;
+}
+
+.original-image-wrapper .forwards-arrow .fa-chevron-left {
+  position: absolute;
+  left: 1%;
+}
+
+.original-image-wrapper .forwards-arrow i:hover {
+  color: #2D2D2D;
+}
+
+
+.off-canvas-content-img aside {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  
+}
+
 i.fa.fa-times {
     position: absolute;
     color: white;

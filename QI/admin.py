@@ -43,6 +43,7 @@ class BookResource(resources.ModelResource):
 		'''
 
 	#Aight, this is now working. Fields seemings just does not work the way it is supposed to. But I may have FINALLY FOUND THE SOLUTION TO THE INMPORTING FOREIGN KEYS PROBLEM
+#I don't think this actually worked
 	author = fields.Field(
 	widget=ForeignKeyWidget(Person, 'first_name'))
 	class Meta:
@@ -72,7 +73,7 @@ class PersonAdmin(ImportExportModelAdmin):
 
 ############################## break between classes ##############################
 
-#Changed in g doc to match, may want to change back at some point. orgiinals can be found next to their names in models
+#Changed in g doc to match, may want to change back at some point. originals can be found next to their names in models
 
 class PlaceResource(resources.ModelResource):
 	class Meta:
