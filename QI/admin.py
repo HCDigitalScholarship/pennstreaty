@@ -9,27 +9,39 @@ from QI.models import Person, Place, Organization, RoleType, Relationship, Relat
 from django.forms import *
 from django.db import models
 
+#Nearly done this I think, stil trying to right it more generally, but I could just hard code them all it is not that big of a deal
 class BookResource(resources.ModelResource):
 	def import_obj(self, obj, data, dry_run):
 		print obj, "OBJ"
-		
+		#print field.field.widget.input_type
+		#self.get_fields()[0].db_type()
 		for field in self.get_fields():
 		    print field,"field"
 		    print self.get_field_name(field)
 		    field_name=self.get_field_name(field)
-		    if field_name=='author':
-			print "hey"
+		    if field_name=='author':#Right now this is being hard coded, but I might be able to right something that would check what types of fields there were and do this for the foreign keys
 			new_data=Person.objects.all()
-			print data[field_name]
+			print new_data
+			print data[field_name], "data fieldname"
 			match=False
+			index = 0
 			for i in new_data:
+				#print i.first_name 
+				#print Person.objects.i
+				
+				#if i wanted to do this for a diliniated list, I would just separate out the list, and then check to see if each of them match any of the tei ids 
 				if str(i) == str(data[field_name]):
 					match=True
+					print 
 					print "Ooo we match a ticha id, we need to do something"
+					data[field_name]= i.id
+										
+					print new_data[index], "#####"
+				index = index + 1 	
 			if not match:
 				print "No matching ticha id for:",data[field_name],",:("
 		
-			continue
+			#continue
 		    print obj, "Obj"
 		    print  data, "data"
 		    self.import_field(field, obj, data)
@@ -50,8 +62,9 @@ class BookResource(resources.ModelResource):
 		model = Book
 		fields = ('id','name','author')
 class BookAdmin(ImportExportModelAdmin):
+	fields = ['id','name','author']
 	resource_class=BookResource
-
+	list_display = ('id','name','author')
 
 
 class PersonResource(resources.ModelResource):

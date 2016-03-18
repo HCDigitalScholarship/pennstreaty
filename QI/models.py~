@@ -54,10 +54,10 @@ class Person(models.Model):
 	citations = models.TextField("Citations", blank = True)
 	PYM_index = models.TextField("PYM Index", blank = True)
 	#adding new field to Person that will hopefully make the many to many relationship I have dreamed of
-	affiliations = models.ManyToManyField('Org')
+	affiliations = models.ManyToManyField('Org', blank = True)
 	
 	def __unicode__(self):
-		return self.id_tei # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)      
+		return self.id_tei + " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)      
 
 class Place(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
@@ -149,7 +149,7 @@ class LocType(models.Model):
 	loc_type = models.CharField("Name of Place", max_length = 200, blank = True)
 	def __unicode__(self): 
 		return self.loc_type
-'''
+
 #I think this one is unnecessary
 class Affiliation(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50) 
@@ -157,7 +157,7 @@ class Affiliation(models.Model):
 	org_id =  models.ForeignKey("Org", blank = True, null = True, related_name = "org_id")
 	def __unicode__(self): 
 		return self.id_tei
-'''
+
 
 class Manuscript(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
