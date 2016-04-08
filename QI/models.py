@@ -184,6 +184,7 @@ class Page(models.Model):
 #this one goes with the top 2 that were for testing 
 #was trying yo get things to work for foreign key fields but was struggling
 class Book(models.Model):
+    
     name = models.CharField('Book name', max_length=100)
     author = models.ForeignKey(Person, blank=True, null=True)
     author_email = models.EmailField('Author email', max_length=75, blank=True)
