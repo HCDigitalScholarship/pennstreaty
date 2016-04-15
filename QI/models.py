@@ -58,7 +58,7 @@ class Person(models.Model):
 	
 	def __unicode__(self):
 		return self.id_tei #+ " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)      
-
+#
 class Place(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
 	name = models.CharField("Name of Place", max_length = 200, blank = True)
