@@ -89,6 +89,7 @@ class Organization(models.Model):
 	notes = models.TextField("Note Field", blank = True)
 	associated_spellings = models.TextField("Associated Spellings/Names", blank = True)
 	PYM_index = models.TextField("PYM Index", blank = True)
+	place_id =  models.ForeignKey("Place", blank = True, null = True, related_name = "place_id2")
 	
 	def __unicode__(self):
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index

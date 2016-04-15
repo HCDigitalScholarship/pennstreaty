@@ -179,12 +179,35 @@ class PlaceAdmin(ImportExportModelAdmin):
 
 class OrganizationResource(resources.ModelResource):
 #this class might be dead, I made a new org. Or I need to combine them? To be determined
+
+	def import_obj(self, obj, data, dry_run):
+		newlist=[]
+		for field in self.get_fields():
+		    skip=False
+		    field_name=self.get_field_name(field)
+		    if (field_name=='place_id ' and 'place_id' in data):	
+			
+			new_data=Place.objects.all()
+			match=False
+			index = 0
+			for i in new_data:
+				if str(i.id_tei) == str(data[field_name]):
+					match=True
+					data[field_name]= i.id
+										
+				index = index + 1 	
+			if not match:
+				print "No matching ticha id for:",data[field_name],",:("
+		
+		    self.import_field(field, obj, data)
+
+
 	class Meta:
 		model = Organization
-		fields = ('id', 'id_tei', 'organization_name', 'notes', 'associated_spellings', 'PYM_index')
+		fields = ('id', 'id_tei', 'organization_name', 'notes', 'associated_spellings', 'PYM_index','place_id')
 
 class OrganizationAdmin(ImportExportModelAdmin):
-	fields = ['id_tei', 'organization_name', 'notes', 'associated_spellings', 'PYM_index']
+	fields = ['id_tei', 'organization_name', 'notes', 'associated_spellings', 'PYM_index','place_id']
 	resource_class = OrganizationResource
 	#THIS IS THE SOLUTION TO LISTING THE THINGS
 	list_display = ('organization_name','id_tei')
