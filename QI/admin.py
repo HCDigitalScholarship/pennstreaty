@@ -78,7 +78,6 @@ class PersonResource(resources.ModelResource):
 		    field_name=self.get_field_name(field)
 		    if (field_name=='birth_place' and 'birth_place' in data) or (field_name=='death_place' and 'death_place' in data):
 			
-			
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -92,7 +91,7 @@ class PersonResource(resources.ModelResource):
 				print "No matching ticha id for:",data[field_name],",:("
 		
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
-			new_data=Org.objects.all()
+			new_data=Organization.objects.all()
 			match=False
 			index = 0
 			mylist=[]
@@ -105,7 +104,6 @@ class PersonResource(resources.ModelResource):
 					mystr=""
 			mylist=mylist+[mystr]
 			for i in new_data:
-				print i.id_tei,i.id
 				if str(i.id_tei) in mylist:
 					match=True
 					newlist= newlist + [i.id]					
@@ -121,10 +119,10 @@ class PersonResource(resources.ModelResource):
 		model = Person
 		#birth_place = fields.Field(widget=widgets.ForeignKeyWidget(Place,'name'))	
 		#95% sure this is uneccessary, pretty sure this is just white listing fields, but if we want them all, typing all this was dumb
-		fields =('id', 'id_tei', 'uri_lcnaf', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations')
+		fields =('id', 'id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations')
 		#exclude = ('id')
 class PersonAdmin(ImportExportModelAdmin):
-	fields = ['id_tei', 'uri_lcnaf', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations']
+	fields = ['id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations']
 	resource_class = PersonResource
 	list_display = ('last_name' , 'first_name', 'id_tei')
 	pass
@@ -141,6 +139,7 @@ class PlaceResource(resources.ModelResource):
 		for field in self.get_fields():
 		    skip=False
 		    field_name=self.get_field_name(field)
+
 		    if (field_name=='location_id' and 'location_id' in data):
 			
 			
@@ -166,10 +165,10 @@ class PlaceResource(resources.ModelResource):
 
 	class Meta:
 		model = Place
-		fields = ('id', 'id_tei', 'name', 'county','state', 'latitude', 'longitude', 'notes', 'Type', 'Alternate', 'Date')
+		#fields = ('id', 'id_tei', 'name', 'county','state','Latitude (N)', 'Longitude (W)', 'Notes', 'Type', 'Alternate', 'Date')
 
 class PlaceAdmin(ImportExportModelAdmin):
-	fields = ['id_tei', 'name', 'state', 'latitude', 'longitude', 'notes', 'notes2', 'place_type', 'alternate']
+	fields = ['id_tei', 'name', 'state', 'latitude', 'Longitude (W)', 'notes', 'notes2', 'place_type', 'alternate','date']
 	resource_class = PlaceResource
 	list_display = ('name', 'id_tei')
 	pass

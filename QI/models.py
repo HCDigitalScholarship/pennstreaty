@@ -1,7 +1,6 @@
 from django.db import models
 
-#This one for sure needs to be changed the most
-#It has a lot of unnecessary stuff
+#Note, if you can't import something, and are getting "Column 'id' not found in dataset" django really likes when you have an empty id column first. In fact, it likes it so much, it doesn't work without it.
 
 
 #import a list delimited by semicolons
@@ -32,7 +31,7 @@ class Person(models.Model):
 	
 	review_status = models.CharField("TEI ID", max_length = 50)
 	id_tei = models.CharField("TEI ID", max_length = 50)
-	uri_lcnaf = models.CharField("URI LCNAF", max_length = 50, blank = True)
+	lcnaf_uri = models.CharField("URI LCNAF", max_length = 50, blank = True)
 	last_name = models.CharField("Last Name", max_length=100, blank = True)
 	first_name = models.CharField("First Name", max_length=100, blank = True)
 	middle_name = models.CharField("Middle Name", blank = True, max_length=100)
@@ -53,7 +52,6 @@ class Person(models.Model):
 	data_notes = models.TextField("Data Note Field", blank = True)
 	citations = models.TextField("Citations", blank = True)
 	PYM_index = models.TextField("PYM Index", blank = True)
-	#adding new field to Person that will hopefully make the many to many relationship I have dreamed of
 	affiliations = models.ManyToManyField('Org', blank = True)
 	
 	def __unicode__(self):
@@ -68,8 +66,8 @@ class Place(models.Model):
 	longitude = models.CharField("Longitude", max_length = 15, blank = True, null = True)
 	notes = models.TextField("Description Field", blank = True)
 	notes2 = models.TextField("Description Field", blank = True)
-	PLACENAME = 'PN'
-	GEOGNAME = 'GN'
+	PLACENAME = 'placeName'
+	GEOGNAME = 'geogName'
 	PLACE_TYPE_CHOICES = (
 			(PLACENAME, 'Place Name'),
 			(GEOGNAME, 'Geography Name'),
@@ -79,7 +77,7 @@ class Place(models.Model):
 	
 	#Some of the above will certainly get deleted, but for now, I just add
 	location_id = models.ForeignKey("Location", blank = True, null=True, related_name = 'Location')
-
+	date = models.CharField("Date", max_length = 20, blank = True)
 	def __unicode__(self):
 		return self.id_tei + " " + self.name + " " + self.state + " " + unicode(self.latitude) + " " + unicode(self.longitude) + " " + self.notes + " " + self.notes2 + " "  + unicode(self.place_type) + " " + self.alternate
 
@@ -90,7 +88,20 @@ class Organization(models.Model):
 	associated_spellings = models.TextField("Associated Spellings/Names", blank = True)
 	PYM_index = models.TextField("PYM Index", blank = True)
 	place_id =  models.ForeignKey("Place", blank = True, null = True, related_name = "place_id2")
-	
+	other_names =  models.CharField("Other Names of Organization", max_length = 200, blank = True)
+	date_founded = models.CharField("Date Founded", max_length = 20, blank = True)
+	date_dissolved = models.CharField("Date Founded", max_length = 20, blank = True)
+
+	#####################################################
+	#might need an associated places here
+	#####################################################
+
+	org_type = models.CharField("Oraganization Type", max_length = 70, blank = True)
+	bio_notes = models.TextField("Description Field", blank = True)
+	data_notes = models.CharField("LCNAF URI", max_length = 50, blank = True)
+	notes = models.CharField("Notes", max_length = 50, blank = True)
+	lcnaf_uri = models.CharField("LCNAF URI", max_length = 50, blank = True)
+	citations = models.TextField("Description Field", blank = True)
 	def __unicode__(self):
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
 

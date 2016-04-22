@@ -28,3 +28,9 @@ There is a shared google folder called quakers-and-indians which has the followi
 Please ask Mike and/or Laurie, and I'm sure they will be able to help you find the information/materials you need!
 
 
+Notes on using the importer:
+-All spreadsheets need to have 'id' as there first column and that column should be empty of data
+-For places, categories should be "id,id_tei,name,county,state,latitude,longitude,notes,place_type,alternate,date"
+-Need to do place,organization and then people, that order
+
+
