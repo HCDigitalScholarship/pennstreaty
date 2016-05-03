@@ -214,18 +214,33 @@ class PageAdmin(ImportExportModelAdmin):
 		fields = ['id_tei', 'Manuscript_id', 'img_url', 'fulltext']
 		resource_class = PageResource
 
-admin.site.register(Person,PersonAdmin)
-admin.site.register(Place,PlaceAdmin)
-admin.site.register(Organization,OrganizationAdmin)
-admin.site.register(RoleType,RoleTypeAdmin)
+#admin.site.register(Person,PersonAdmin)
+admin.site.register(Person)
+#admin.site.register(Place,PlaceAdmin)
+admin.site.register(Place)
+#admin.site.register(Organization,OrganizationAdmin)
+admin.site.register(Organization)
+#admin.site.register(RoleType,RoleTypeAdmin)
+admin.site.register(RoleType)
 
-admin.site.register(Relationship,RelationshipAdmin)
-admin.site.register(RelationshipType,RelationshipTypeAdmin)
-admin.site.register(Location,LocationAdmin)
-admin.site.register(LocType,LocTypeAdmin)
-admin.site.register(Org,OrgAdmin)
-admin.site.register(Affiliation,AffiliationAdmin)
-admin.site.register(Manuscript,ManuscriptAdmin)
-admin.site.register(Page,PageAdmin)
-admin.site.register(Book,BookAdmin)
+#admin.site.register(Relationship,RelationshipAdmin)
+admin.site.register(Relationship)
+#admin.site.register(RelationshipType,RelationshipTypeAdmin)
+admin.site.register(RelationshipType)
+#admin.site.register(Location,LocationAdmin)
+admin.site.register(Location) #changed - not sure why but it works
+#admin.site.register(LocType,LocTypeAdmin)
+admin.site.register(LocType)#changed
+
+#admin.site.register(Org,OrgAdmin)
+admin.site.register(Org)
+#admin.site.register(Affiliation,AffiliationAdmin)
+admin.site.register(Affiliation)
+#admin.site.register(Manuscript,ManuscriptAdmin)
+admin.site.register(Manuscript)
+#admin.site.register(Page,PageAdmin)
+admin.site.register(Page)
+#admin.site.register(Book,BookAdmin)
+admin.site.register(Book)
+
 

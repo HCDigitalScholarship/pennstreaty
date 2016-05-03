@@ -1,0 +1,1701 @@
+{
+    "calculate_zoom": false,
+    "storymap": {
+        "call_to_action": true,
+        "map_as_image": false,
+        "map_type": "stamen:toner-lite",
+        "slides": [
+            {
+                "media": {
+                    "caption": "First Page",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "Joseph Moore's Journal ",
+                    "text": "In the fall semester of 2010, Swarthmore students enrolled in English 50A\n                    (\u201cReading Red, White, and In-Between in Early American Literature\u201d) transcribed\n                    a number of journals, both published and in manuscript form, which document the\n                    interaction of Quakers and Native Americans. In 2014 a decision was made to\n                    encode these and other journals as part of a larger project to make the\n                    library\u2019s rich store of Quaker Indian mission writings more accessible. The\n                    project was designed by Christopher Densmore, Curator of Friends Historical\n                    Library."
+                },
+                "type": "overview"
+            },
+            {
+                "location": {
+                    "lat": 45.1,
+                    "lon": -70.1
+                },
+                "media": {
+                    "caption": "Page: 289",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "April 01, 1793",
+                    "text": "\n\n\n                On the 17th of 4th mo. 1793, \n                I set out for Philadel-phia, and attended the meeting for sufferings, where were divers Friends who had\n                    given up to attend the Indian treaty proposed to be held at Sandusky, on the waters of Lake Erie &#8212; having previously obtained\n                    certificates from our several monthly meetings for that purpose. The\n                    commissioners appointed by go-vernment are,general\n                        Lincoln, colonel Pickering,\n                    and Beverly Randolph. Lincoln goes by water to Albany, &amp;c. ; William\n                        Savery, Jacob Lindley, and\n                    William Hartshorne, go with him: and John Par-rish, John\n                        Elliott, and myself, with Timothy\n                        Pick-ering and Beverly\n                        Randolph, go through the coun-try by land. I have some days\n                    past, been very poor-ly with the ague; but am now bravely. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.2,
+                    "lon": -70.19999999999999
+                },
+                "media": {
+                    "caption": "Page: 289",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "April 30, 1793",
+                    "text": "\n\n                30th.\n                In the afternoon set out in company with \n                    \n                    Beverly Randolph,John\n                        Parrish, John Elliott, and\n                    Henry Cornplanter, or Obeal &#8212; got that evening to\n                    Norristown , where colonel Pickering met us. Next day we proceeded to\n                        Reading &#8212; thence to Harris-burgh and over the Broad Mountain, Mackinoy, and\n                    Tuscarora, to Sunbury &#8212; thence crossed the Susque-hanna at Northumberland, a town standing in the point where the\n                    east and west branches come toge-ther. Here, leaving the commissioners\n                    behind, we, in company with Josiah\n                    Haines, proceeded to Wil-liam\n                        Ellis's, and attended Muncy\n                    meeting of Friends. After which, went to Samuel\n                        Wallace's, where we met the commissioners, and were\n                    liberally and friend-ly entertained. \n\n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.300000000000004,
+                    "lon": -70.29999999999998
+                },
+                "media": {
+                    "caption": "Page: 290",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 06, 1793",
+                    "text": "\n                \n                    5th mo. 6th.\n                    \n                 The forepart of this day, we passed a rapid stream, called the Loyalsock &#8212; and in the af-ternoon we crossed\n                    another large stream, called Ly-coming,\n                    seven times &#8212; lodged at James Kyle's.\n                    Next day rode forty-three miles without any entertain-ment on the way,\n                    except what we had with us. &#8212; Where we put up, there was no hay to be had\n                    for our horses, so we fed them with oats, and tied them up for the\n                    night&#8212; went to bed, or rather lay on the floor with our own blankets, in a\n                    very small house; but rested well. In the morning, the weather was\n                    fine and pleasant &#8212; rode to major Samuel\n                        Lindley's, crossed the Tioga twice, and the Cownisky;\n                    then to the Painted Post, crossing the\n                        Cohocton at David Fuller's. On our way here, we swam our horses\n                    over the Tioga, and went ourselves in a canoe.\n                    The country from Northumberlandto this\n                    place, abounds with large streams of water, and abundance of flat land\n                    on their banks, exceedingly rich. We observed in many places, old Indian\n                    fields, with signs of the \n                     old corn hills. On each side of these creeks and flats, are\n                    ridges of mountains. We have now travelled ac-cording to the several\n                    distances from place to place, two hundred, and forty-seven miles. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.400000000000006,
+                    "lon": -70.39999999999998
+                },
+                "media": {
+                    "caption": "Page: 291",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 09, 1797",
+                    "text": "\n                9th.\n                 Rode about thirty miles, and a little be-fore night, got to an old Indian\n                    cabin, with fire inthe middle, where we lodged. We let our horses\n                    browse awhile in the woods, then fed them with oats we had with us, and\n                    tied them up for the night. &#8212; This cabin stands on the bank of the\n                        Cohocton . The roads here are new, and\n                    of course rough, which is trying to the poor horses that are rid hard all\n                    day, and at night tied to a tree. Next day, rode thirty- six miles to\n                        Williamsburgh. Some parts of the\n                    road very rough. We passed over some of the steepest hills I ever saw\n                    travelled. But the country is new &#8212; and I have no doubt in a few years, the\n                    roads will be much improved, as there is abundance of excel-lent land\n                    that is settling fast in some places. Stayed this night at captain\n                        Charles Williamson's, where we were\n                    kindly entertained. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.50000000000001,
+                    "lon": -70.49999999999997
+                },
+                "media": {
+                    "caption": "Page: 291",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 11, 1793",
+                    "text": "\n                11th.\n                 This morning the commissioners despatch-ed a messenger to Canandaigua for an interpreter; so we rested\n                    here and were finely refreshed. Set out again next day, and rode to\n                        Gilbert Berry's, on the bank of the\n                        Genesee river. Here we found about\n                    fifty Indians collected, amongst whom were some of their chiefs; Farmer's Brother, Red\n                        Jacket,\n                    Little Billy, and others, to all of whom a\n                    dinner was given by the commissioners. They expressed their gladness\n                    in seeing us, and we also in seeing them. In the evening we had some\n                    weighty con-versation together, wherein the commissioners im-parted a\n                    little of their business concerning the treaty; \n                     which appeared to give general satisfaction. After which, the\n                    Indians gave our friend John Parrish a\n                    new name, which they in their language call Sutte-kutte, and signifies plain or level. This name\n                    was given by Farmer's Brother, at which\n                    there was a small shout, in their way, and they would have given us a\n                    song on the occasion; but understanding we were a plain people, not\n                    accustomed to singing, it was omitted, and nothing further followed than a\n                    little pleasantry. Near ten o'clock we all retired and  rested\n                    bravely. \n\n                 In the morning the Indians showed no inclination to depart while the\n                    commissioners were here.Red Jacket , at\n                    the close of one of his speeches last even-ing, signified, that when he was\n                    in Philadelphia, the white people had proposed a method for them to\n                    turn buffaloes into cows, deer into sheep, and bears into hogs; he thought\n                    it now a fit time for the com-missioners to show them a piece of their\n                    skill; as they were now on their way to Canandaigua for some clothing, &amp;c, and that a good\n                    buffalo would be very agreeable for provision on the way. The\n                    com-missioners used some endeavours to obtain a fat cow; but as there\n                    was none to be had here, they gave them a quantity of salt beef, pork, and\n                    corn, at which they appeared satisfied. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.60000000000001,
+                    "lon": -70.59999999999997
+                },
+                "media": {
+                    "caption": "Page: 292",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 14, 1793",
+                    "text": "\n                14th.\n                 We prepared to move forward; divers other people fell in company with us\n                    from Schenectady\n                    and other places, who were going into Upper\n                        Cana-da. We swam our horses over the Genesee river with some difficulty, and we, with our\n                    baggage, crossed in a canoe. In the evening we put up in the woods by\n                    the side of Tonnewanta creek, where we\n                    sheltered for the night with a good fire, and tied up \n                     our horses as before. The following day we travel-led hard,\n                    being very desirous to reach some house to lodge in. According to the\n                    account given us, we rode about fifty miles, and truly we thought them\n                    long enough. Arrived at Buffalo Creek about\n                    sun set, and put up at landlord Winney's;\n                    most of us lodged on the floor and slept well; also, had plenty of\n                    grass for the horses. The country we have pass-ed through the last two\n                    days, is Indian lands, and one continued wilderness. Much of the land\n                    ap-pears very good, with a variety of timber, such as oak, hickory,\n                    sugar maple, elm, ash, beech, linn, pine, cherry, butternut, &amp;c. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.70000000000001,
+                    "lon": -70.69999999999996
+                },
+                "media": {
+                    "caption": "Page: 293",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 16, 1793",
+                    "text": "\n                16th. \n                 Rode about three miles to the ferry, nearly opposite Fort Erie, most of the way along the beach of Lake Erie. Here we crossed over the outlet of\n                    the lake, a large and strong current, landed in the\n                    British dominions, and rode down the banks of\n                    the river to Charles Willson's near the\n                        great falls. The whole distance to\n                    this place is four hundred and twenty-seven miles. In the evening, walked\n                    to the brow of the bank to view the mighty cataract. Next morning went\n                    again, descended a very steep hill and walked to the rock over which the\n                    waterfalls, which appears tremendous indeed. There are rapids above\n                    the cataract that fall, it is said, fifty feet (and it looks likely to be\n                    so) within the distance of little more than half a mile. After satisfying\n                    our curiosity here, the commissioners went on to gover-nor Simcoe's, at Navy\n                        Hall, sixteen miles. This is nearly opposite the garrison, which stands on a point of land in\n                    the United States. John Parrish, John Elliott, and myself, went about two miles\n                    to our \n                     friend William Lundy's, where we\n                    were kindly en-tertained, and spent most of the next day. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.80000000000001,
+                    "lon": -70.79999999999995
+                },
+                "media": {
+                    "caption": "Page: 294",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 19, 1793",
+                    "text": "\n                19th. \n                 Being first of the week, and having appoint-ed a meeting to be held here at\n                    the eleventh hour; about the time there attended a pretty large\n                    collection of people, more than the house could contain. We thought it\n                    a favoured opportunity. After dinner we had a solid opportunity with the\n                    family and divers friends who had stayed with us. Then went about six\n                    miles to our friend John Hill's, who, with his\n                    wife, had been at the meeting. Here we were kindly en-tertained and\n                    lodged. In the morning, had a solid opportunity with the family, and set\n                    out for Navy Hall, a messenger having been\n                    sent to invite us to dine with the governor. He appears to be a plain\n                    man, and remarkably easy of access. At table we had the company of the\n                    commissioners, colonel But-ler, majors Little, Hales,\n                    &amp;c. The governor, when we were walking in his garden, said our coming\n                    for-ward at this time, did our society great honour. To-ward evening\n                    we rode up the lake about two miles to landlord\n                        Peacock's, and lodged. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 45.90000000000001,
+                    "lon": -70.89999999999995
+                },
+                "media": {
+                    "caption": "Page: 294",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 21, 1793",
+                    "text": "\n                21st. \n                 We went up the lake twelve miles to Ben-jamin\n                        Paulin's and his brother Jesse's\n                    &#8212; our friend,\n                    John Parrish, having a letter from their\n                    connexions in Philadelphia. Here we were kindly entertained. In the\n                    woods we came through, we observed the great-est quantity of pigeons, I\n                    think I ever saw; they were flying up the lake, being chiefly young\n                    ones, and very fat. The people take abundance of them with clubs,\n                    poles, &amp;c. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.000000000000014,
+                    "lon": -70.99999999999994
+                },
+                "media": {
+                    "caption": "Page: 294",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 22, 1793",
+                    "text": "\n                22d. \n                 The weather has been warm and dry since the time of our arrival in this\n                    country. I continue very poorly, but went three miles to our friend\n                        John \n                         Taylor's, though hardly able to travel. Here\n                    we were kindly treated and lodged. I believe many were made glad in\n                    seeing their friends come amongst them, for whom in their wilderness\n                    situation, we often felt near sympathy. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.100000000000016,
+                    "lon": -71.09999999999994
+                },
+                "media": {
+                    "caption": "Page: 295",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 23, 1793",
+                    "text": "\n                23d. \n                 I felt much better in health, and understand-ing divers Friends live at a\n                    place called the Short Hills, about twelve\n                    miles off, we concluded to go there. On the way we dined at Thomas Rice's, and thence proceeded to\n                        Joshua Gillam's. We passed through\n                    some land where we saw the effects of a hurricane that was on the 1st of\n                    the 7th month last, and truly I may say, I never saw so great\n                    destruc-tion of timber. For about two miles in width, and said to be\n                    many miles in length, there was scarce a single tree left that was not torn\n                    up by the roots, or broken off. This tract, as far as we have passed\n                    over, appears excellent land, with a variety of good tim-ber &#8212; white\n                    and black oak, hickory, chestnut, poplar, white pine, walnut, cherry,\n                    &amp;c. We, finding a few Friends settled in this neighborhood, concluded\n                    to stay amongst them over first-day, and have a meet-ing with them. In\n                    the interval, we visited at James\n                        Crawford's, Enoch Scrigley's,\n                    and John Dorling's, where the meeting is\n                    proposed to be held. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.20000000000002,
+                    "lon": -71.19999999999993
+                },
+                "media": {
+                    "caption": "Page: 295",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 26, 1793",
+                    "text": "\n                26th. \n                 We had a considerable gathering of people that behaved orderly, among whom\n                    we had a satis-factory opportunity. In the afternoon, set out on our\n                    way to Navy Hall , and lodged at Jeremiah Moore's. Having heard of the arrival\n                    of the other Friends that came by the way of Albany, we rose early next morning, and went to our friend\n                        Benja-min Hill's, where we took\n                    breakfast &#8212; then rode to the landing, and thence to \n                        Navy Hall. Spent a little  time at the\n                    governor's, and went back to the landing, where we met with Jacob Lindley, William\n                        Savery, and William\n                        Hartshorne, who had come on by wa-ter. Our stores were\n                    landed here, and we all dined at captain\n                        Smith's, at the mess house. In the after-noon we set up our\n                    tents on the hill, and lodged all together. This seemed very pleasant,\n                    being all in health, and they having had a favourable passage from New\n                    York to this place, and very agreeable compa-ny with general Lincoln, in their covered batteaux\n                    , two of which they propose taking up to Lake\n                        Erie. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.30000000000002,
+                    "lon": -71.29999999999993
+                },
+                "media": {
+                    "caption": "Page: 296",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 28, 1793",
+                    "text": "\n                28th. \n                 Having had a good night's rest in our tents, were in the morning all\n                    bravely. When we shall move forward from this place appears at present\n                    un-certain, as the commissioners sent off an express yes-terday to\n                        Philadelphia on some important\n                    occasion, and expect to wait his return. Young Cornplanter went some days ago to his father's, about one\n                    hun-dred and fifty miles from this place. The Indians, we understand,\n                    are gathering from many parts to the place appointed. Some of the Mohawks are now here. We shortly expect a number\n                    of the Five Na-tions. Jacob Lindley being desirous to see Jeremiah Moore, we two rode there, spent the\n                    afternoon, and lodged. The weather cool and cloudy, with east-erly\n                    winds. The next day was rainy. We are now within about three miles of the\n                    great cataract &#8212; the noise of which is much like the roaring of the sea\n                    in time of storm. The people gave us a particular ac-count of their\n                    distressed situation, about four years ago, for want of bread, and their\n                    loss of cattle and horses; which was truly alarming ; but through the\n                    goodness of kind Providence, they have now plenty  of bread\n                    and other necessaries; and plenty of good sugar which they make from the\n                    maple tree. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.40000000000002,
+                    "lon": -71.39999999999992
+                },
+                "media": {
+                    "caption": "Page: 297",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 30, 1793",
+                    "text": "\n                30th. \n                \n                    John Elliott came up from our camp at the\n                    landing, and we, with Jeremiah Moore and\n                        Benjamin Hill, went to the Falls, where Jacob\n                    had not been, and viewed them in a different direction from what we\n                    had done before. In this as well as many other things, the mighty works of\n                    Providence are emi-nently displayed, being far beyond the power of\n                    hu-man art to form. Some of our company descended the mighty hill, by\n                    the clefts of rocks and the help of Indian ladders, to the water below,\n                    supposed one hundred and ten feet. Here they saw divers curi-osities,\n                    and brought up some memorials of stone, bones, &amp;c. We then returned to\n                    our camp, and I lodged at Benjamin\n                    Canby's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.50000000000002,
+                    "lon": -71.49999999999991
+                },
+                "media": {
+                    "caption": "Page: 297",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "May 31, 1793",
+                    "text": "\n                31st. \n                 We had at our little camp, the company of\n                    captain Hendricks and several other Indians,\n                    that fed on our provisions &#8212; and a white man, lately from\n                    Pittsburg, informed that the Indians from the\n                    south-ward were coming on. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.60000000000002,
+                    "lon": -71.59999999999991
+                },
+                "media": {
+                    "caption": "Page: 297",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 01, 1793",
+                    "text": "\n                6th. mo. 1st.\n                    \n                 The weather wet and little business to be done &#8212; though the article\n                    provision meets with a large consumption &#8212; we being all in pretty good\n                    health, and for the most part a number of Indians and others at our camp.\n                    The commissioners are most of the time at Navy\n                        Hall with governor Simcoe.\n                    We expect to move forward in a day or two, towards\n                     Fort Erie, to take passage in a vessel for\n                        Detriot &#8212; the commissioners not\n                    likely to go from this under a week or ten days. We endeavour to fill up\n                    our time in seeing our friends. This afternoon John\n                        Par-rish and John Elliott,\n                    crossed the river and went to  an Indian settlement of about\n                    eighty families, who received them kindly. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.700000000000024,
+                    "lon": -71.6999999999999
+                },
+                "media": {
+                    "caption": "Page: 298",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 02, 1793",
+                    "text": "\n                2d, \n                 and first of the week, we held a meeting about four miles from the landing,\n                    in a large barn, of which previous notice had been given. The collection\n                    was large, and proved a solid opportunity. I hope it tended to the\n                    advancement of our religious testimo-ny. Divers Friends came many miles to\n                    attend it. After which, William Savery\n                    and  William Harts-horne\n                    returned to our camp, in order to send for-ward our baggage to-morrow to\n                    the upper landing above the Falls. John\n                        Parrish, Jacob\n                        Lindley,John Elliott , and\n                    myself, went to Jeremiah Moore's and\n                    dined &#8212; thence to William Lundy's and lodged.\n                        Es-quire Burch was at meeting, and\n                    kept company with us thus far. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.800000000000026,
+                    "lon": -71.7999999999999
+                },
+                "media": {
+                    "caption": "Page: 298",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 03, 1793",
+                    "text": "\n                3d.\n                 Went on to  esquire Burch 's, where we\n                    dined. Bought three barrels of flour and sent forward to\n                    Chipaway, to be carried on with the rest of\n                    our baggage, to Fort Erie. John Parrish, John\n                        Elliott, and myself, rode up the river about seven miles\n                    and lodged at our friend Richardsun's.\n                    Next morning went to Benjamin Willson's,\n                    whose wife is a near relation of mine. Benjamin went with us six miles to the Fort. Here are the\n                    king's stores, and a har-bour for shipping &#8212; several topsail vessels were\n                    then lying here. We went on board the Dunmore, cap-tain Ford, bound to Detroit. The cabin passengers besides ourselves were\n                         Robert Inne, Newman and servant, Richard Hillery\n                     and servant, Dr. Wil-liam\n                        M'Casky, John Heckevvelder and\n                        William Willson. These, with the\n                    sailors and marines(being a king's ship) and about sixty Indians of\n                    four different tribes bound to the treaty, made our whole\n                     crew about ninety. We left our horses in the care of\n                        Benjamin Willson &#8212; next day set sail and\n                    steered up the lake. We had fine pleasant weather until the 8th, when\n                    being near the islands towards the head of the lake, and dark night coming\n                    on us, we stood off and on till morning &#8212; had several squalls of rain,\n                    and short blasts of high wind, with thunder and lightning &#8212; which was\n                    somewhat alarming, as our ship had on board a large quantity of powder.\n                    But through the goodness of kind Providence we were preserved from\n                    damage. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 46.90000000000003,
+                    "lon": -71.89999999999989
+                },
+                "media": {
+                    "caption": "Page: 299",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 09, 1793",
+                    "text": "\n                9th, \n                 and first of the week; &#8212; fine pleasant morning with light airs of wind. The\n                    islands now appeared in sight. This day we had a small meeting in the\n                    cabin with our fellow passengers and two Indian chiefs. In the evening\n                    entered the mouth of  Detriot river, and\n                    anchored till morning; when we ran up the beautiful river a northerly\n                    course, with a fair wind to Detroit.\n                    This is a small garrison town, with a variety of inhabitants. Here is much\n                    of the sound of drums and trumpets, but not much religion. The people\n                    here, as well as those on board our ship, were very respectful to us &#8212; and\n                    there was great harmony amongst ourselves. Thanks be to kind\n                    Providence for all his unmerited favours. Here we landed our small\n                    baggage, and took lodgings at Matthew\n                        Dol-son's for the present. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.00000000000003,
+                    "lon": -71.99999999999989
+                },
+                "media": {
+                    "caption": "Page: 299",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 11, 1793",
+                    "text": "\n                11th.\n                    \n                 Found our accommodations comfortable and easy. We visited the\n                        commandant,colonel Eng-land, and\n                    showed him our passport from governor \n                        Simcoe, at Niagara, and are\n                    now waiting the com-missioners coming forward, which we hope may be\n                    soon. From the present complexion of things, it looks likely to be some\n                    time before the treaty com-\n                    mences; so that we find patience very necessary to be\n                    exercised. We hear many sentiments expressed, some favourable and some\n                    otherwise. Hope our minds may not be diverted by either from that\n                    hum-ble dependence on the omnipotent Arm of power, under whose banner,\n                    I trust, we have enlisted in the righteous cause of peace-makers. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.10000000000003,
+                    "lon": -72.09999999999988
+                },
+                "media": {
+                    "caption": "Page: 300",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 12, 1793",
+                    "text": "\n                12th. \n                 Took a walk down the bank of the river, about three miles to a fine spring,\n                    of which there are few hereabouts. The inhabitants mostly use the\n                    river water, which is said to be very wholesome. The banks of this river\n                    for many miles above and below the town, are very thickly settled,\n                    mostly with French, who have fine orchards and meadows, and good wheat\n                    growing. Their grain is mostly manufactured by wind-mills, of which there\n                    are many in sight. The inhabitants of the town are as great a mixture,\n                    I think, as I ever knew in any one place. English, Scotch, Irish, Dutch,\n                    French, Ame-ricans from different states, with black and yellow, and\n                    seldom clear of Indians of different tribes in the day time. These are all\n                    turned out by nine o'clock at night, and the gates are shut &#8212; sentries are\n                    placed constantly in various parts round tire town, which is enclosed\n                    with high pickets. There is no place of wor-ship except one Roman Catholic chapel. There are large ships\n                    employed on these waters, some of which are from one hundred to one hundred\n                    and fifty tons burden; they sail up to Michillimackinac, several hundred miles from this place,\n                    and return with abundance of peltry &#8212; the staple commodity of this\n                    country. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.20000000000003,
+                    "lon": -72.19999999999987
+                },
+                "media": {
+                    "caption": "Page: 300",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 13, 1793",
+                    "text": "\n                13th. \n                \n                    John Parrish, John\n                        Elliott, and myself, dined with the commandant, colonel Richard Eng-land,  and a\n                    number of other officers, and were friend-ly and liberally entertained.\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.30000000000003,
+                    "lon": -72.29999999999987
+                },
+                "media": {
+                    "caption": "Page: 301",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 14, 1793",
+                    "text": "\n                14th. \n                 Took passage in a small boat, bound up the river Latrench, on the east side of Lake St.\n                        Clair,\n                     with a fair wind &#8212; passed through the lake, more than twenty miles\n                    over, and went up the river about fif-teen miles, to Isaac Dolson's, where we lodged. &#8212; Next day, with some\n                    Indians in a canoe, proceed-ed up the river about twenty miles, to\n                        Edward Watson's, son of Thomas, of New York, an intimate\n                    acquaintance. The respect I felt for him and his connections induced me to\n                    take this tour to see him, and know how he fared here. He and his wife\n                    re-ceived me kindly. They are connected with the\n                    Moravian brethren, and were very civil to me.\n                        John Heckewelder, Indian interpreter\n                    and Moravian minister, was passenger with me as far as Dolson's, where he took horse and went up the\n                    river to visit his brethren at a settlement of that people. This\n                    appears to be a beautiful new country, just settling; fine wheat, corn,\n                    peas, &amp;c. now growing, and grass in abundance; &#8212; the timber, white and\n                    black oak, cherry, hickory, black and white walnut, ash, linn, poplar,\n                    &amp;c. I am informed it continues in that way for one hundred and fifty\n                    miles up this river &#8212; the the general course of which runs about east from\n                    its mouth, and the farther up, it is said, the better the land. The\n                    inhabitants here appear to want as much cultivation as the lands they live\n                    on. May the Lord's power so reach their hearts, as to bring them into\n                    subjection to his Divine will. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.400000000000034,
+                    "lon": -72.39999999999986
+                },
+                "media": {
+                    "caption": "Page: 301",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 16, 1793",
+                    "text": "\n                16th, \n                 and first of the week, after breakfast took leave of this family in a solid\n                    manner, and returned to Dolson's: on the\n                    way, called at several houses  where divers were collected,\n                    being much accustom-ed to visit each other on first-days, &#8212; among whom\n                    I had several opportunities for religious conversa-tion, and informing them\n                    of our principles. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.500000000000036,
+                    "lon": -72.49999999999986
+                },
+                "media": {
+                    "caption": "Page: 302",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 17, 1793",
+                    "text": "\n                17th.\n                 The boat being ready for sailing, having on board about twenty-five bushels\n                    of wheat, we got under way, and had a pleasant passage to the town,\n                    where we arrived about ten o'clock in the evening. The gates being shut, we\n                    were obliged to lodge with-out the pickets. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.60000000000004,
+                    "lon": -72.59999999999985
+                },
+                "media": {
+                    "caption": "Page: 302",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 18, 1793",
+                    "text": "\n                18th.\n                 Went early into the town &#8212; found all my dear friends well; they gave me an\n                    account of two public meetings held by them; one with the inhabi-tants\n                    of the town and soldiers, and a number of the officers, in the forenoon;\n                    and another in the country in the afternoon, both to pretty good satisfaction.\n                    Jacob Lindley, William\n                        Savery, and William\n                        Harts-horne, dined with the commandant yesterday.With\n                    respect to Indian affairs, things look dull and gloomy &#8212; the commissioners\n                    not yet come forward; so that we are here in suspense with respect to the\n                    time of  the opening of the treaty, and hear many frightful  stories\n                    about the conduct of the Indians; but we en-deavour to keep our minds\n                    quiet, trusting in the arm of divine power for preservation, and\n                    believing we are engaged in the righteous cause of promoting peace on\n                    earth and good will to men. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.70000000000004,
+                    "lon": -72.69999999999985
+                },
+                "media": {
+                    "caption": "Page: 302",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 19, 1793",
+                    "text": "\n                19th. \n                \n                    William Savery not very well &#8212; the rest\n                    of our company, to wit, Friends, went down the river in a small boat, about\n                    four miles, to Frederick Arnold's, where\n                    we dined &#8212; then went on foot about two miles to John\n                        Messemer's, who is of the reli-gious society called Dunker's, &#8212; with whom anddivers of his friends\n                    and neighbours we held a  meeting, which was a solid,\n                    satisfactory opportuni-ty, I believe, to them and us. Here we lodged. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.80000000000004,
+                    "lon": -72.79999999999984
+                },
+                "media": {
+                    "caption": "Page: 303",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 20, 1793",
+                    "text": "\n                20th. \n                 After a solid opportunity with the family, we went on towards our boat &#8212;\n                    dined at Francis Cornwell&#8217;s; the weather\n                    being wet and the wind ahead, William\n                        Hartshorne and I lodged here &#8212; the rest of our company went\n                    to Frederick Arnold's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 47.90000000000004,
+                    "lon": -72.89999999999984
+                },
+                "media": {
+                    "caption": "Page: 303",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 21, 1793",
+                    "text": "\n                21st. \n                 In the afternoon, John Elliott and Jacob Lindley went on foot up the river and\n                    crossed over to the town. The others lodged here &#8212; being very kindly\n                    entertained. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.00000000000004,
+                    "lon": -72.99999999999983
+                },
+                "media": {
+                    "caption": "Page: 303",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 22, 1793",
+                    "text": "\n                22d. \n                 Set out and rowed up to the town &#8212; found\n                    William Savery and the rest of our company\n                    all well. We have frequently been visited by num-bers of the Indian\n                    chiefs that were on their way to\n                    Sandusky, who mostly called us Shemucteman, or long knives, the term\n                    they use to describe the Ame-ricans of the United States; but when informed\n                    what we were, they signified they had heard of our being come, and\n                    were glad. This day, we were visited by several that had just come to town.\n                    We observ-ed the generality of all the tribes had a remarkable thirst\n                    for rum; and when intoxicated, were very troublesome. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.100000000000044,
+                    "lon": -73.09999999999982
+                },
+                "media": {
+                    "caption": "Page: 303",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 23, 1793",
+                    "text": "\n                23d. \n                 First of the week, we held a meeting in a large sail loft in the shipyard;\n                    had a considerable gathering of the town's people, and a few soldiers,\n                    who behaved quietly. The meeting held about two hours and a half, and I\n                    believe, ended well. In the afternoon had some more Indians to visit us, of the\n                     Chipaway nation; one of whom, called a chief,\n                    was pretty clean dressed, which is not general among that nation. \n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.200000000000045,
+                    "lon": -73.19999999999982
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 24, 1793",
+                    "text": "\n                \n                    24th. \n                 Our landlord's boat set out for the river\n                        Rushe, with grain, to the mill. I took passage therein with\n                        William Savery. Matthew Dolson met us at the mill, and Williamreturned with him in the evening; I\n                    stayed all night at Jacob Troxler's, a\n                    Dutchman, who served his time in Jersey. The people were as kind as it was\n                    in their power. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.30000000000005,
+                    "lon": -73.29999999999981
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 25, 1793",
+                    "text": "\n                25th.\n                 The boat with the cargo being ready, we rowed most of the way home, being\n                    about ten miles. This river is called Rushe, which signifies red, and the water appears stained\n                    with something which causes it to appear with remarkable red-ness.\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.40000000000005,
+                    "lon": -73.3999999999998
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 26, 1793",
+                    "text": "\n                26th. \n                \n                    John Heckewelder returned from Latrench  river; with him came a number of the\n                        Moravian Indians, who adhere to the\n                    religion of that family of the brethren. We understand they suffered\n                    much in the time of the late war, and since, &#8212; hav-ing had a number of\n                    their friends killed by the white people, with the loss of most of their\n                    sub-stance, of which they had plenty while in their peaceable\n                    habitations at Muskingum. They were now\n                    in the sixth place of their retreat, in the Bri-tish\n                        government, and on good land. Our commis-eration was excited\n                    by the above account, and we granted some relief to the amount of one\n                    hundred dollars, which they received thankfully. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.50000000000005,
+                    "lon": -73.4999999999998
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 27, 1793",
+                    "text": "\n                27th. \n                 The Indians are every day here, on their way to the treaty. Twenty-eight\n                    are just arrived from Michillimackinac,\n                    some of whom I saw this morning; they were well dressed, curiously\n                    painted, and decorated with wampum, and ear and nose bobs; all young,\n                    and the handsomest I think I have as yet seen. They appeared good humoured\n                    and plea-sant, \n                     having, as I was informed, brought no arms or warlike\n                    instruments with them, except their bows and arrows, with flutes for music,\n                    of their own making, which appeared simple, but pleasing to\n                    themselves. Some of the British officers asked them to play, which they\n                    readily did, by putting the instrument to the mouth, and sometimes to\n                    the nose; as handily to the one as the other.\n\n                 This evening had the company of capt. John\n                        Drake, a coaster between this and Mackinaw, distant one hundred and thirty leagues &#8212; sails\n                    in a sloop of se-venty or eighty tons burthen. He gave us some account\n                    of the north-west fur trade, and the man-ner of its being carried on by the\n                    companies con-cerned, who employ many hundred men, that stay many\n                    years in the country, travelling and trading with the northern Indians for\n                    peltry; an abundance of which, of the richest kind, is brought from\n                    the high northern latitudes, which nets the companies very large\n                    profit. But among what people, or in what part of the world, except the\n                        Canadian French, could persons be found\n                    for their purpose, I know not. They are allowed a very small portion\n                    of provisions from this to the Grand\n                        Portage, at the head of Lake\n                        Superior, which is about eight hun-dred miles; there they\n                    are allowed about one bushel (forty-two quarts French measure) of Indian\n                    corn per man, for a year, and a little fat, which they may use at\n                    their own discretion. The corn is pre-pared in a curious manner at\n                         Detroit, being first boiled in\n                    strong lye, which takes off the outside hull; afterwards it is spread out\n                    and dried, then packed up for use. With this they set out, and re-\n                    turn not until the end of the year, when a fresh \n                     supply of goods is taken up with canoes, &amp;c. by many\n                    hundred men to the Portage, where they\n                    ex-change commodities to a very great amount. Thus goes on the trade\n                    from year to year. The men in the north live principally on fish, and the\n                    flesh of beasts of divers kinds, without bread or salt, and when they\n                    return appear as robust and healthy, and even more so than those who live\n                    on the greatest delicacies. The principal fish in Lake Superior are the white fish and salmon trout, which\n                    are fine and delicate: we have eat of them, brought fresh from the\n                    lake to this place in six days. \n                 We understand one M'Kenzie is now out\n                    with ten men, exploring the  North-west\n                        Territory : he once attempted it before; was out more than\n                    a year, and discovered large frozen waters in the north, but, whether\n                    lakes or ocean, he knew not &#8212; supposed the latter, the water being salt. \n\n                \n                    Captain Drake, by his own account, had been\n                    se-veral voyages to Africa, in the horrid\n                    business of fetching slaves, which he now very much condemns. He told\n                    us many curious tales; &#8212; and is certainly a very temperate man with respect\n                    to drink, taking nothing but water &#8212; a rare instance in a seafaring\n                    man. Happy would it be for many thousands in the world, were his example\n                    followed in that re-spect; families would be preserved from ruin and\n                    distress, morality increase, the poor Indians be saved from many acts of\n                    violence, and the end of our creation be more fully answered by\n                    honouring God, our Creator. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.60000000000005,
+                    "lon": -73.5999999999998
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 28, 1793",
+                    "text": "\n                28th. \n                 We are frequently visited by the officers of this place, both civil and\n                    military, who appear friendly, and treat us with much respect, often \n                     wishing us success in our laudable undertaking; as-suring us,\n                    that nothing should be wanting that lay in their power, to render us happy\n                    and comfortable. The commandant said, that if he apprehended dan-ger\n                    at any time, he should lay his commands on us not to depart the place. But,\n                    although we sought not the protection of military power, we were not\n                    insensible of his great good will towards us, which we were not wanting to\n                    acknowledge. \n\n                 Visits from the Indians are almost every day re-peated, by different tribes\n                    constantly coming in,, this being the thoroughfare for all the northern\n                    In-dians. It would be difficult to describe the various appearances\n                    they make, and languages they speak. It is wonderful to find the vast\n                    expense the British government is at with\n                    this people. Governor Sim-coe said it cost\n                    them thirty thousand pounds per an-num. Here are agents appointed, that are\n                    daily giving out large quantities of provision, &amp;c. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.70000000000005,
+                    "lon": -73.69999999999979
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 29, 1793",
+                    "text": "\n                29th. \n                 This day had a visit from a Wyandot chief,\n                    who appeared to have much concern respecting the approaching treaty, and\n                    mentioned the remem-brance of some long and broad belts that were\n                    given out in former treaties, intended to bind us by the hands and\n                    arms, so that no small accident in future should be able to make a\n                    separation; and, notwith-standing all that had happened, they (the Wyan-dots) felt some of the old affection\n                    to remain, and he hoped we would find it so at the general council;\n                    but could speak for none but themselves. We as-sured him we had the same\n                    love and friendship for them and all others, as our forefathers had, and\n                    that our principles had always restrained us from war; and when we\n                    believed the government was disposed \n                     to make peace with them on principles of justice, we were\n                    made willing to leave our homes and take this long journey to endeavour to\n                    promote it, and to be present at the concluding of so good a work. He\n                    said, he knew long ago, we did not fight, but were for peace, and that, as\n                    we had come a long journey, preserved in health, it was evident the\n                    Great Spirit was pleased with our coming, and he hoped some good would be\n                    done, and that the Great Spirit would bring us home in health and\n                    safety. \n\n                 We had a visit also this morning from Abram,\n                    an Indian chief, Katharine his wife, and\n                    their daugh-ters, richly clad, with plates of silver, &amp;c. \n\n                 The introduction of distilled spirits among the people appears to have been\n                    their ruin. The frauds, in consequence of it, imposed upon them, taking\n                    in the ravages and depredations of war made amongst themselves, with\n                    multiplied murders and thefts, seems to have prevented their being a\n                    wealthy peo-ple. The contrary with many is sorrowfully their \n                    situation, I fear to our condemnation; yet the his-tory of Indian\n                    barbarity, and breach of faith to white people, and to one another, which\n                    we have heard related since we came here, would be shock-ing to\n                    recite, and is almost at times ready to stagger the faith of their best\n                    friends. One of the Moravian missionaries\n                    signified his sense, that if peace should be concluded, it would not last\n                    long, until they were further chastised. John\n                        Parrish asked, by what means? Did he mean the sword? He was\n                    answered, yes. This sentiment, from one of those who make profession\n                    of the peaceable principles of the gospel, was really discouraging. \n\n\n                \n                 We often hear many frightful things suggested; as, that we shall be either\n                    killed, or kept as hostages at the ensuing council. This, with the accounts\n                    of the Indian warriors in time past, frequently passing with numbers\n                    of scalps and their disconsolate prisoners, seemed dreadful; yet we are not\n                    discouraged from pursuing our first prospect; believing he that put us\n                    forth, will go before us, if we are not wanting on our part. \n\n                 It must be said to the honour of British humani-ty, and in commendation of\n                    this government of Up-per Canada, and\n                    its truly respectable and generous officers, that they have interfered to\n                    the relief of great numbers of persons, and obtained their redemp-tion\n                    at a great price; divers of whom that we met with appeared as the outcasts\n                    of Europe ; some of them, as colonel England\" and other officers told us,\n                    hardly had manners or gratitude to acknowledge the kindness, though in some\n                    instances it cost one hundred pounds. But in the case of a real\n                    Ameri-can, they never grudged it. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.800000000000054,
+                    "lon": -73.79999999999978
+                },
+                "media": {
+                    "caption": "Page: 304",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "June 30, 1793",
+                    "text": "\n                30th. \n                 First of the week. This morning we were visited by a principal man of the\n                        Wyandots, called the Blind Chief, with his nephew, grand, and great\n                    grandson; with whom we had some friendly con-versation. He told us eight of\n                    their principal men were gone on to the council. We held meetings fore\n                    and afternoon in the king's sail loft, to a good degree of satisfaction;\n                    being largely attended by the citizens, officers, and soldiers, who behaved\n                    quietly. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 48.900000000000055,
+                    "lon": -73.89999999999978
+                },
+                "media": {
+                    "caption": "Page: 309",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 01, 1793",
+                    "text": "\n                7th mo. 1st. \n                 Took breakfast with  captain Elliot,\n                    Indian commissioner. After which, went to the bu-rial of Isidore Shone at the Roman chapel. He was an old\n                    Indian interpreter, supposed to have shorten-\n\n                \n                     ed his days by the immoderate use of strong drink. On this\n                    occasion there was a good deal of form and ceremony, in their way. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.00000000000006,
+                    "lon": -73.99999999999977
+                },
+                "media": {
+                    "caption": "Page: 310",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 02, 1793",
+                    "text": "\n                2d. \n                 Yesterday arrived the ship Ottoway, captain\n                        Cowan , from Fort Erie. He\n                    brought about eighty Indians &#8212; more than sixty were landed at Mia-mi rapids, with colonel Butler; eighteen of the Onei-das were on board here. It was said Butler was fearful they might be hurt by some\n                    other Indians that were there, on account of some dislike they had to\n                    one of their chiefs, who had given his interest in favour of the Americans,\n                    in such a manner as to cre-ate jealousies amongst them. They,\n                    notwithstand-ing apprehend themselves quite safe in the British lines,\n                    where the tribes of all the nations from east, west, north, and south, are\n                    daily supplied with pro-visions, &amp;c. And we hear nothing but wishes for\n                     peace among the people every where.\n\n                 This day we crossed the river in our landlord's boat, with himself, wife,\n                    &amp;c. to his farm, where we regaled ourselves with fine ripe cherries,\n                    and to-wards evening returned. The weather very warm, and for many\n                    days past it has been very wet &#8212; but through divine favour we are all\n                    preserved in good health. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.10000000000006,
+                    "lon": -74.09999999999977
+                },
+                "media": {
+                    "caption": "Page: 310",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 03, 1793",
+                    "text": "\n                3d. \n                 We had a visit from colonel England, who\n                    is constantly manifesting his regard in a very respect-ful manner. He\n                    invited us to walk with him to his garden, and some of our company went. We\n                    had also the company, at our lodgings, of a young Shaw-neese chief, neatly and richly dressed in Indian\n                    style; he stayed and dined with us, behaving with decency at table. But we\n                    sometimes find great dif-ficulty in conversing with the Indians, in such\n                    man-\n                     tier as we wish, on account of our interpreter's sen-timents\n                    and prospects differing in some respects so widely from ours. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.20000000000006,
+                    "lon": -74.19999999999976
+                },
+                "media": {
+                    "caption": "Page: 311",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 04, 1793",
+                    "text": "\n                4th.\n                    \n                 I was this day very poorly with a fever.&#8212; We were visited by fourteen of\n                    the Indians that came in the Ottoway, with one Shawnee, who find-ing\n                    our doctor M'Caskey had been with St. Clair's army at the time of the defeat,\n                    told him, you're my friend, though you ran away\n                        from me once.\n                \n\n                 The commissioners are not yet arrived &#8212; we are still in suspense, and weary\n                    of our long detention here &#8212; though we are well supplied with\n                    provisions, &amp;c, and decently treated by our respectable land-lord\n                    and landlady, as well as by the inhabitants in general, being often invited\n                    to dine, &amp;c. In the even-ing I felt better and slept pretty well. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.30000000000006,
+                    "lon": -74.29999999999976
+                },
+                "media": {
+                    "caption": "Page: 313",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 05, 1793",
+                    "text": "\n                5th. \n                 We are much confined within the narrow limits of this small garrisoned\n                    town, where, the streets being narrow, there is a want of air. A\n                    fa-vourable opportunity presenting for a small tour on the water, we,\n                    except William Savery and William Hartshorne, went in a boat, provided by\n                    our friend\n                    William Baker, up the river about nine miles, to\n                    Nathan Williams's, where we were kindly\n                    received, and dined. His place is situate at the entrance of Lake St. Clair. While here, Nathan gave us an\n                    ac-count, that in digging a cave for a root house, they found, about\n                    six feet below the surface of the ground, large quantities of human bones,\n                    that must have been for a long time there: and at another place on the\n                    bank of the lake, it being washed away when the lake was high, there were\n                    seen great numbers of the same kind, which they gathered up and\n                    buried. The Indians said they must have been \n                     from people a great while ago that they knew no-thing of.\n                    There is also near this lake, as we are in-formed, the appearance of old\n                    forts, curiously made in ancient time, where pieces of earthenware are\n                    often found, though large trees are now standing in the entrenchments, of\n                    which the present Indians can give no account. We seem pretty generally\n                    led to believe, from various circumstances, that the na-tives of this\n                    land must be the descendants of old Jacob, and are of the scattered tribes,\n                    who probably found their way here through Russia, and crossed over the narrow strait from Kamschatka to the west side of America. Be all\n                    this as it may, we find them here in great numbers, at present a savage,\n                    barbarous people when at war, and more particularly when in-toxicated\n                    with strong drink, which has been intro-duced by the white people that\n                    suppose themselves by far their superiors in religious and natural\n                    under-standing. Happy would it have been for them and us, had we used\n                    those superior talents, in mercy conferred upon us, more to the honour of\n                    God, by following the example of our holy leader, Christ Jesus, who\n                    said he came not to destroy men's lives, but to save\n                        them. May all Christendom more and more labour to experience a\n                    renovation of heart and mind, submitting and conforming to the will of\n                    hea-ven in all our conduct, consistent with the design of our\n                    creation. Then might we have reason to hope for a blessing on our labours,\n                    tending to stop the effusion of human blood, and the establishment of\n                    Christ's kingdom on the mountain of love and holi-ness, where the lion and\n                    the lamb might lie down together, there being nothing to make us\n                    afraid. In the afternoon we re-embarked and returned to \n                     town. Wm. Savery and Wm. Hartshorne in our absence, were visited by a\n                        Shawnese warrior, who announced to\n                    them what had frequently been sug-gested to us before, by divers persons,\n                    that if the commissioners did not immediately agree that all the land\n                    west of the Ohio should be given up by the\n                    United States, or even hinted any thing to the\n                    con-trary, by offering gifts or money as purchase, that not one of\n                    them or their company would go off the ground alive; for their fathers, who\n                    were all gone, had sold lands for knives, rum, &amp;c. till they were\n                    now driven almost to the sun setting, where they were determined to make a\n                    stand. He also pointed out very sensibly, the sad effects strong drink\n                    had on their fathers in general. He then appeared per-fectly sober &#8212;\n                    informing that four days before he left the Miami\n                        Rapids, a deputation of two chiefs from a tribe, embarked\n                    for Niagara to meet the commis-sioners,\n                    and let them know the outlines of their con-clusions; and that if the white\n                    people would settle to the banks of the Ohio on the east side, and agree that the river should be\n                    the line, they would be glad, and take them by the hand and call them\n                    brothers. But we apprehended no such power lay with the commissioners,\n                    nor of its being the design of govern-ment, &#8212; the cloud looked dark and\n                    heavy, and por-tended some dreadful scenes of desolation, except the\n                    Lord should be pleased, in his abundant mercy, to interpose and spare this\n                    wicked generation. \n\n                 The aforesaid Indian, notwithstanding his sensi-bility and calmness, about\n                    two hours after, returned much intoxicated with rum &#8212; behaved very\n                    rudely, and drew a stroke with his tomahawk at one Sylves-ter Ash, an interpreter, who had long resided with \n                     the Shawnese, and now lives at\n                        Fort Pitt. We sup-posed he had a\n                    grudge against him for leaving them; but Ash prevented his doing him mischief. This, with other\n                    insolent behavior to our landlord, caused\n                    captain Munsey, who was there, to send for\n                    some soldiers to turn him out of the garrison. These things look\n                    gloomy, and tend to confirm us that no-thing short of wisdom from above\n                    will do for us to lean to. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.40000000000006,
+                    "lon": -74.39999999999975
+                },
+                "media": {
+                    "caption": "Page: 314",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 06, 1793",
+                    "text": "\n                6th. \n                 The weather is now dry and warm &#8212; the wheat it fast ripening, of which\n                    there is an appear-ance of very fine crops. Vegetables are plenty,\n                    such as new potatoes, peas, beans, &amp;c. The sloop Felicity just arrived\n                    from the Miamies, confirms the account of\n                    the Indian deputation being gone to meet the commissioners at Niagara, accompanied by\n                    colonel Butler and Simon Girty. The schooner Nancy also just arrived from\n                        Michillimackinac, with peltry &#8212; made\n                    her passage to this place in seventeen days &#8212; distance three hundred and\n                    ninety miles. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.500000000000064,
+                    "lon": -74.49999999999974
+                },
+                "media": {
+                    "caption": "Page: 314",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 06, 1793",
+                    "text": "\n                7th. \n                 First of the week. We held a meeting in the forenoon in the old sail loft:\n                    it was to good satis-faction, being large and solid. In the afternoon\n                    we went about five miles to the river\n                        Rushe &#8212; held a meeting with the inhabitants there and\n                    several who went with us from the town. This also we thought was\n                    comfortable and edifying. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.600000000000065,
+                    "lon": -74.59999999999974
+                },
+                "media": {
+                    "caption": "Page: 314",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 08, 1793",
+                    "text": "\n                8th. \n                 The weather hot and sultry &#8212; a heavy thun-der shower. We have no account\n                    from the commis-sioners &#8212; hope they may come on with the Indian\n                    deputies, if any thing is likely to be done. This is truly a trying scene\n                    to us, to be kept in this expen-sive place so long in suspense; yet hope it\n                    may not be altogether in vain. We think we have done the \n                     best we could in our present circumstances. Various reports\n                    are daily coming in, with respect to the In-dians' disposition. We much\n                    desire an opportunity with them in council, if it could be come at\n                    proper-ly, whether the commissioners come or not. The opinion of many\n                    is, there will be no general treaty. We received a letter from colonel M'Kee in answer to one written him some\n                    time ago; &#8212; says he will at-tend to our request, and give us every\n                    intelligence he apprehends necessary; &#8212; and yesterday, one from\n                    captain Hendricks, at the rapids of Miami, request-ing some favours from\n                    us, &#8212; which were granted. And truly we have many requests, that in our\n                    pre-sent circumstances we are not able to comply with to the full.\n                        Hendricks' account is more favourable\n                    than some others we have had. He expresses a hope there will be a peace.\n                    The general cry among the gentlemen and more knowing inhabitants of\n                    this place is, for God's sake, gentlemen, don't\n                        venture yourselves to Sandusky. This we believe is from motives of entire\n                    friendship and good will to us, and makes it at times very trying. And\n                    though we have not felt any slavish fears &#8212; yet hope to move\n                    cautiously, as wisdom, which is profitable to direct, may point out the\n                    way. One of the Indians, a De-laware,\n                    that brought captain Hendricks' letter,\n                    says the western Indians keep their runners constantly out to watch\n                    the motion of general Wayne's army, from\n                    whom they have some fearful apprehensions; which we hope are\n                    groundless.\n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.70000000000007,
+                    "lon": -74.69999999999973
+                },
+                "media": {
+                    "caption": "Page: 315",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 09, 1793",
+                    "text": "\n                9th. \n                 We had a visit from captain Blue Jacket,\n                    a principal warrior among the Shawnese. He\n                    was in command at the defeat of St. Clair's army. He was richly\n                    dressed. His appearance is lofty and mascu-\n                     line.He said he had heard of the Quakers &#8212; that they were a\n                    harmless people that did not fight; and was glad now to see us. We had also\n                    a visit from several others of the same tribe. One of a solid\n                    countenance said, he heartily desired we might succeed in the great work of\n                    peace; and appeared much pleased to see us. We have several capable\n                    interpreters with us; but our sentiments being peace-ful, serious and\n                    religious, are so opposite to theirs, that when they do interpret, it is\n                    with such reluc-tance as puts it out of our power to relieve our minds\n                    so fully as we could wish. This day received a letter from the Moravian Indians and their minis-ter,\n                    expressing their grateful sense of Friends' kind-ness to them. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.80000000000007,
+                    "lon": -74.79999999999973
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 10, 1793",
+                    "text": "\n                10th. \n                 The sloop Detroit, bound to Mackinaw,\n                    ar-rived from Fort Erie in eight days.\n                    We were in hopes of letters, but were disappointed. However we\n                    understand the commissioners, with a number of Indians, are coming in the\n                    Dunmore which was nearly ready to sail, and may be soon expected, if\n                    not met with by the Chipaway, and detained by\n                    the chiefs who were to have a conference with them previous to their\n                    coming forward to the treaty. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 49.90000000000007,
+                    "lon": -74.89999999999972
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 11, 1793",
+                    "text": "\n                11th. \n                 Had the company of several Indians &#8212; one of whom, David Canada, speaks good English, and interprets well. His\n                    father was a white man. He has been in Europe &#8212; appears friendly to the\n                    Ame-rican interest, and says he will go with us to the treaty. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.00000000000007,
+                    "lon": -74.99999999999972
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 12, 1793",
+                    "text": "\n                12th. \n                 We all went over the river to our land-lord's farm, where we dined on\n                    provision we took with us. Spent most of the day there and in\n                    visit-ing some neighbours. Returned in the evening. \n                \n                 The sloop Sagonay is just arrived from Fort\n                        Erie. The Dunmore was waiting for a wind, when the\n                    deputation of Indians arrived &#8212; and the commission-ers returned to\n                        Navy Hall to have a conference. This\n                    is an additional disappointment, and further trial of our faith and\n                    patience. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.10000000000007,
+                    "lon": -75.09999999999971
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 13, 1793",
+                    "text": "\n                13th. \n                 The weather fair and pleasant &#8212; the people very busy in hay-making, and\n                    some beginning their wheat harvest. In the afternoon the sloop\n                    Speed-well arrived from Fort Erie, by\n                    which we had letters from our friends at home, and one from the\n                    commis-sioners, informing of their return to  Navy\n                        Hall; but that they expect to come forward in a few days.\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.200000000000074,
+                    "lon": -75.1999999999997
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 14, 1793",
+                    "text": "\n                14th. \n                 First of the week. For some days I have felt rather dull and heavy &#8212; my\n                    spirits low. I feel the importance of our embassy with much weight. &#8212;\n                    The dark conversation frequently heard respecting war, is truly distressing\n                    and discouraging. I am frequently led to recur back to the first\n                    principles from whence the concern took its rise; and have, as yet, no\n                    cause to doubt of its propriety, although many discouraging prospects are\n                    frequently thrown in our way. We are comfortably preserved in unity\n                    one with another in the main cause we are engaged in, hoping we shall not\n                    be shaken from the right ground by the enemies of peace, &#8212; of which\n                    there are many. \n\n                 This day we had another meeting in the usual place, which was large and\n                    solid. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.300000000000075,
+                    "lon": -75.2999999999997
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 15, 1793",
+                    "text": "\n                15th. \n                 Had an interview with captain Elliot, who\n                    had just returned from the Rapids, where the\n                    Indians are collected; but nothing further has transpired. He appears\n                    somewhat reserved; and our anxious state of suspense still continues. We\n                    are apprehen-\n                     sive the Indian embassy to the commissioners may prevent the\n                    proposed treaty. We wrote a letter to colonel\n                        McKee, and an epistle to the Indians, to be forwarded the\n                    first opportunity. \n\n                 Here we observe a species of Indian slaves called\n                    Pawnees, or Punins, &#8212; who are captives taken\n                    by the Chipaways from the Suse, or Pawnee\n                    nations. It is sorrowful to think that a nation so famed for liberty,\n                    should hold them, and a number of the Afri-can race, in a state of bondage\n                    during life. The go-vernment here, we understand, has made some essay\n                    towards their enlargement, which, it is hoped, will, in time, amount to a\n                    total abolition. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.40000000000008,
+                    "lon": -75.3999999999997
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 16, 1793",
+                    "text": "\n                16th. \n                 Had a solid opportunity with captain\n                        El-liot, deputy agent for Indian affairs, and again\n                    ex-pressed our anxious desires to him, that a solid peace might take\n                    place; we also queried if it would be proper for us, or any of our company,\n                    to visit the In-dians in their present council at the Rapids, where he was now about to return. He\n                    told us, he thought in the present state of things, it would not be\n                    eligi-ble to move that way. He gave us to understand, that the Indians\n                    were generally acquainted with our being here, and our views towards them;\n                    and hoped on the return of the Indian embassy, some way would open for\n                    our relief. For the present, we concluded to forward the letters to and the\n                        M'Kee Indians, by\n                    Elliot, and as our having a personal interview\n                    with the Indians appeared doubtful, we forwarded Friends' Address to\n                    them, to be read by M'Kee in case we\n                    should fail of an opportunity ourselves. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.50000000000008,
+                    "lon": -75.49999999999969
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 17, 1793",
+                    "text": "\n                17th. \n                 The people are very busy in their harvest, having good crops: but in some\n                    places the grain is \n                     injured by a kind of smut, supposed to be occasion-ed by much\n                    wet and rapid growth. \n\n                 We have lately heard of the arrival of a number of Creeks and Cherokee Indians, in\n                    the neighbourhood of the Indian council &#8212; we fear, with views not\n                    friendly to a peaceable accommodation of matters with the Western Indians &#8212;\n                    as we hear hostilities between them and the whites have been renewed\n                    to the southward. These accounts are alarming and discouraging. The\n                    commissioners are not yet come. We wait as patiently as we can, until we\n                    hear fur-ther from them. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.60000000000008,
+                    "lon": -75.59999999999968
+                },
+                "media": {
+                    "caption": "Page: 316",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 18, 1793",
+                    "text": "\n                18th. \n                 This morning had an interview with cap-tain\n                        Wellbank, who came with the detachment of\n                    Cherokee and Creek Indians from the southern ter-ritory, he says, more\n                    than a thousand miles, and that they were ninety days on their journey.\n                    His principal business seemed to be with colonel\n                        Eng-land , who gave immediate orders for the sloop\n                    Feli-city to sail with him on board, to  Fort\n                        Erie, on his way to governor\n                        Simcoe. We suppose they have some matters of importance, as\n                    colonel England a few days ago assured us the Felicity was detained on\n                    purpose to take us to Sandusky, or Fort Erie, as was most eligible, on the\n                    shortest notice, whichlooked kind and friendly to our purpose. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.70000000000008,
+                    "lon": -75.69999999999968
+                },
+                "media": {
+                    "caption": "Page: 319",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 19, 1793",
+                    "text": "\n                19th. \n                 The weather fair and pleasant, and through Divine favour, we are all in\n                    health ; but are still in great suspense, with respect to the event of this\n                    in-tended treaty, which every day looks more and more discouraging.\n                    Yet we think we have been in the line of our duty in coming forward and\n                    labour-ing thus far; and hope our being here may be of some use on\n                    divers accounts. Some of our compa-\n                     ny walked yesterday to the spring about three miles below the\n                    town, where they had a satisfactory op-portunity with some Oneida Indians that were en-camped there. They\n                    seem jointly concerned with us for the accomplishment of peace. This day\n                    we were all together in the arbour in the colonel's gar-den, looking\n                    over some writings on Indian affairs. To this place we frequently resort,\n                    as it is retired and pleasant &#8212; being indulged with this privilege by\n                    invitation from the colonel soon after our arrival here. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.80000000000008,
+                    "lon": -75.79999999999967
+                },
+                "media": {
+                    "caption": "Page: 320",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 20, 1793",
+                    "text": "\n                20th. \n                 The harbour is now clear of shipping. &#8212; We are anxiously waiting the\n                    arrival of the Dun-more, by which we expect the commissioners, or to\n                    hear from them, hoping our detention here will be shortly closed by our\n                    going on to Sandusky, or re-turning to\n                        Fort Erie on our way home: till\n                    which we desire humbly to submit to the wise Disposer of events. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 50.900000000000084,
+                    "lon": -75.89999999999966
+                },
+                "media": {
+                    "caption": "Page: 320",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 21, 1793",
+                    "text": "\n                21st. \n                 First of the week. We held a meeting in the sail loft at the tenth hour,\n                    which was a favour-ed time, it being large and solid. Soon after our\n                    re-turn, we heard of the arrival of the Dunmore at the mouth of the\n                    river, by a passenger who came in her, and that the commissioners are on\n                    board, expecting to go forward soon to Sandusky. In the afternoon we had another comfortable\n                    meeting, crowned as we thought, with the Master's good presence. And\n                    now it looks likely to be a parting one, &#8212; the peo-ple behaved with\n                    remarkable quietness &#8212; manifest-ing much respect to us. I believe there are\n                    a few tender-hearted ones in this place that will remember us, and I\n                    hope we shall not forget them; &#8212; though it is sorrowful to behold the power\n                    and influence that \n                     satan has too generally amongst the inhabitants of these\n                    parts. Captain Gibbons, who came passenger\n                    in the Dunmore, gave us the above intelligence re-specting the\n                    commissioners, and further says, the Indian deputies and they held a very\n                    friendly con-ference together at Navy\n                    Hall, and things appeared in a favourable way respecting the\n                    treaty. This ac-count is more pleasant than any we have had for many\n                    days past. In this fluctuating state of things we find great need to keep\n                    on the right bottom, so that we may not be shaken from that\n                    foundation, and a humble confidence in the Divine power, whichI trust\n                    we felt in our embarkation. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.000000000000085,
+                    "lon": -75.99999999999966
+                },
+                "media": {
+                    "caption": "Page: 321",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 22, 1793",
+                    "text": "\n                22d. \n                \n                    John Parrish, John\n                        Elliott, and myself, paid a visit to the Roman Catholic priest, who appeared to take it\n                    kind. We also had a short interview with the commandant, who has manifested\n                    much respect to us during our long stay here, and now told us, that\n                    nothing should be wanting that lay in his power to make our way easy. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.10000000000009,
+                    "lon": -76.09999999999965
+                },
+                "media": {
+                    "caption": "Page: 321",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 24, 1793",
+                    "text": "\n                23d and 24th. \n                 We now began to prepare for leav-ing Detroit. The commandant visited us at our quar-ters, and\n                    informed us he proposed going with us in the Dunmore to see the\n                    commissioners. It seemed very pleasant to find that respect which it is\n                    hoped may tend to strengthen the unity between them. &#8212; We should have\n                    been glad to see the commissioners here, but understanding neither they nor\n                    any others from a foreign state under military characters, are\n                    admitted within the limits of this garrison, which includes the town that\n                    consists of about one hun-dred houses; under which consideration we think\n                    it cause of thankfulness for the indulgence, remarkable attention, and\n                    kind treatment we have met with \n                     during our six weeks stay in this place. This even-ing, paid\n                    a short visit at commissary Rinold's, who,\n                    with his wife and sensible daughter, appear to have as much solidity,\n                    uprightness, and vital religion, as any in the place. There are a few\n                    others we highly esteem, and towards whom we now feel a near\n                    affec-tion on taking our solemn farewell. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.20000000000009,
+                    "lon": -76.19999999999965
+                },
+                "media": {
+                    "caption": "Page: 322",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 25, 1793",
+                    "text": "\n                25th. \n                 Took leave of most of our acquaintances in town and went on board the\n                    Dunmore, in which were colonel England\n                    and several other officers; fell down to the mouth of the river, about\n                    eighteen miles, and landed at captain\n                        Elliot's, whose house the commissioners had taken, being\n                    large and con-venient for their purpose. We were truly glad to see\n                    them, and they us. Here the vessel is ordered to lay until we are ready to\n                    go forward to Sandus-ky, which depends\n                    on the time the Indians say they are ready. It was pleasant to behold the\n                    friend-ship apparent between the colonel\n                    with the other British officers, and our commissioners. This place is\n                    very agreeable; there being a large farm, with fields well stored with\n                    grain, standing in shock &#8212;supposed to be about one thousand bushels; a\n                    large new barn eighty feet long and about thirty-sixwide; round the\n                    house a beautiful green, on which we encamped with fourteen tents, large\n                    and small, containing our little company and the commission-ers'\n                    train, with some British officers who designed to go with us to the grand\n                    treaty. The commis-sioners gave us the substance of what passed\n                    be-tween them and the Indian deputies at Niagara: all which appeared encouraging, and favourable\n                    towards an accommodation. We dined and supped all toge-ther, and slept\n                    quiet and well in our tents. \n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.30000000000009,
+                    "lon": -76.29999999999964
+                },
+                "media": {
+                    "caption": "Page: 323",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 26, 1793",
+                    "text": "\n                26th. \n                 Spent the day very agreeably together, having one general table. At night\n                    we had a great rain and heavy thunder; our tents not as well\n                    forti-fied as might have been. Towards day some of us got very wet by\n                    the water coming in; but through Divine favour we were preserved. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.40000000000009,
+                    "lon": -76.39999999999964
+                },
+                "media": {
+                    "caption": "Page: 323",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 27, 1793",
+                    "text": "\n                27th. \n                 A fine morning. Having an opportunity to go to Detroit in a small boat with\n                        Gotlieb Sensiman, a Moravian minister from Latrench river, and three Indians of their family, we\n                    embraced it. William Savery and myself\n                    took our passage in order to do some business for the commissioners, and a\n                    little for ourselves. The wind was ahead and we had to row all the\n                    way, Went to our old quarters. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.50000000000009,
+                    "lon": -76.49999999999963
+                },
+                "media": {
+                    "caption": "Page: 323",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 28, 1793",
+                    "text": "\n                28th. \n                 First of the week. I felt weary with yester-day's hard rowing, and almost\n                    ready to give out the prospect of a meeting. But towards evening, at\n                    about an hour's notice, we met at the old sail loft with many of the\n                    inhabitants, who appeared glad of the opportunity, and it was satisfactory\n                    to ourselves. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.600000000000094,
+                    "lon": -76.59999999999962
+                },
+                "media": {
+                    "caption": "Page: 323",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 29, 1793",
+                    "text": "\n                29th. \n                 The colonel's boat going down the river to our camp, with captains Freeman and Broadhead, we were invited to return with them; but our\n                    busi-ness not being completed, I concluded to stay, and take my\n                    passage in the schooner Nancy, bound to\n                    Fort Erie, and William\n                        Savery went with the offi-cers. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.700000000000095,
+                    "lon": -76.69999999999962
+                },
+                "media": {
+                    "caption": "Page: 323",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 30, 1793",
+                    "text": "\n                30th. \n                 I went on board the schooner, and near night landed at our camp, where I\n                    was informed a deputation of Indians from the Rapids had been here, and held a conference with the\n                    commissioners. They appeared uneasy with what had passed at Niagara, asserting that nothing short of\n                        Ohio river being the line, would\n                    satisfy them; they requested the com-missioners&#8217;  answer\n                    to-morrow, on that head, and re-tired over the river. This unexpected\n                    change look-ed again discouraging; believing our worthy com-missioners\n                    had nothing but upright views in their proceedings, consistent with the\n                    trust reposed in them by the government of the United States. Though\n                    what their views are, is yet unknown to us; but we hope, and expect, they\n                    will be generous and liberal, evincing to the world that the present\n                    proceedings and designs of the United States\n                    are founded on reason, equity, and justice. And so far as this may be\n                    the case, we hope the Lord may be on our side, in this our trying\n                    situation. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.8000000000001,
+                    "lon": -76.79999999999961
+                },
+                "media": {
+                    "caption": "Page: 324",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "July 31, 1793",
+                    "text": "\n                31st. \n                 In the afternoon the Indians came over, and being seated on the beautiful\n                    green in the shade of some trees, the commissioners came forth with\n                    their speech in writing, which was interpreted by Tho-mas Jones, from the Genesee, in the Seneca lan-guage. In it was contained many\n                    candid and gen-erous proposals; but not coming up so fully to their\n                    demands as they seemed to wish, they declined to make any reply at present.\n                    But having the paper given to them, said they would consider it\n                    mature-ly, and return an answer tomorrow. On which the council broke\n                    up, and the Indians returned again to\n                    Whitewood Island, opposite to our camp.\n                    Among these were the chiefs often different nations, who ap-peared in\n                    council solid and sober. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 51.9000000000001,
+                    "lon": -76.89999999999961
+                },
+                "media": {
+                    "caption": "Page: 324",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 01, 1793",
+                    "text": "\n                8th mo. 1st. \n                 The Indian deputies returned in the morning early, and being seated, the\n                        Wyandot chief called Carry-all-about, whose name signifies King of\n                    all the western nations up the Lakes, &#8212; made a short speech, importing,\n                        That many treaties had been held at different places\n                        from time to time, wherein \n                         you say lands have been purchased; but would ac-knowledge\n                        no legal and permanent conveyance since the treaty at Fort Stanwix, twenty-five years ago. So\n                        that the lands on this side the  Ohio\n                        are ours, and the lands on the other side are yours. &#8212;  And you\n                        may go home and tell Washington what\n                        we say. We understand all you said to us very well, and we expect you\n                        understand us.\n                    Simon Girty was their interpreter. After\n                    rising up and stepping off a few yards, they found a mistake in\n                    expression, and recalled their words, desiring the commissioners would stay\n                    where they are, till they could go to the council and return with an\n                    answer, which, if favoured with wind and weather, may be accomplished\n                    in about five days. We had some de-sire to go with them to the Rapids, as captain\n                        El-liot, captain Thomas\n                        M&#8217;Kee, and others were go-ing to the council. But this was\n                    not approbated; and as our letters sent by captain\n                        Elliot had not been forwarded by him on account of his\n                    meeting the commissioners here, who thought proper to de-tain them,\n                    concluding we should have an opportu-nity shortly to see them ourselves, &#8212;\n                    after opening and reading them, and adding a short postscript, we were\n                    encouraged to send them forward, though at a late stage.\n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.0000000000001,
+                    "lon": -76.9999999999996
+                },
+                "media": {
+                    "caption": "Page: 325",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 02, 1793",
+                    "text": "\n                2d. \n                 Towards evening, several of us in company with our good old general, took a\n                    walk up the river about a mile, and drank tea at James\n                        Colwell&#8217;s. The result of this great business is cause of\n                    much close exercise at times &#8212; our minds being made sensible that\n                    nothing but supernatural wisdom will do for us to lean to. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.1000000000001,
+                    "lon": -77.0999999999996
+                },
+                "media": {
+                    "caption": "Page: 325",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 03, 1793",
+                    "text": "\n                3d. \n                 The sloop Detroit came to, here, on her way \n                     to Fort Erie, from  Michillimackinac, loaded with peltry, having\n                    on board three hundred and thirty- three packs, the greatest part supposed\n                    to be worth twenty guineas each. So great is the fur trade in this\n                    country, that it is almost beyond description. In the afternoon, John Elliott and myself took a walk to\n                        Simon Girty's, and from thence about\n                    half a mile further down the lake, where we saw some plain traces of\n                    one of the very old forts, among the many that are in divers parts of this\n                    country, of which the present Indians can give no account from\n                    tradition or otherwise. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.2000000000001,
+                    "lon": -77.19999999999959
+                },
+                "media": {
+                    "caption": "Page: 326",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 04, 1793",
+                    "text": "\n                4th. \n                 First of the week. We held a small meet-ing at Simon\n                        Girty's, we hope to profit: &#8212; himself gone to the Indian\n                    council with the deputies that were here from the Rapids. William Savery and myself being comrades in a\n                    small tent, our bedding got a good deal wet with the great rain that fell\n                    to-day, and having no opportunity for drying, we slept on them as they\n                    were. In the morning, felt well, which is an additional cause of\n                    thankfulness for the many favours we have received. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.300000000000104,
+                    "lon": -77.29999999999959
+                },
+                "media": {
+                    "caption": "Page: 326",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 05, 1793",
+                    "text": "\n                5th. \n                 We have frequent visits from the town, &#8212; and this day came James Abbot, William\n                        Bow, and &#8212; Sportsman, in a small sail boat. Our friend\n                    John Parrish, paid a visit to the Wyandot Indian town about four miles from our\n                    camp. This night was the most general complaint of the musketoes I\n                    have yet heard since our encamping here. Most of us got little sleep either\n                    in the house, tents, or on ship board. Towards day the weather grew\n                    colder &#8212; wind N. W. which caused an increase of muske-toes in our\n                    tents. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.400000000000105,
+                    "lon": -77.39999999999958
+                },
+                "media": {
+                    "caption": "Page: 326",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 06, 1793",
+                    "text": "\n                6th. \n                 One of the servants of captain Elliot, called \n                    \n                    Toby, a Pawnee\n                    slave, who has lain near a year in a consumption, died about two o'clock\n                    this afternoon. \n                 I was with him for about an hour before he depart-ed, and speaking with him\n                    about fifteen minutes be-fore he breathed his last, found he was sensible\n                    of death being upon him. He said he understood all I said to him, and\n                    was glad he was noticed in his last moments. I think I never saw before so\n                    hasty a burial. His coffin was made immediately, and his interment\n                    took place about sunset, in a grave near-by on the bank of the river,\n                    attended by about twen-ty people, whites, blacks, and Indians. This\n                    was the end of poor Toby. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.50000000000011,
+                    "lon": -77.49999999999957
+                },
+                "media": {
+                    "caption": "Page: 326",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 07, 1793",
+                    "text": "\n                7th. \n                 I was at captain William Colwell's, and\n                    to-wards evening walked to Simon Girty's.\n                    At night the wind came strong from the south, with much rain.William and I got a little wet again, but are\n                    preserved in health. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.60000000000011,
+                    "lon": -77.59999999999957
+                },
+                "media": {
+                    "caption": "Page: 326",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 08, 1793",
+                    "text": "\n                8th. \n                 Two Indians came from the Rapids, by whom\n                    we received letters from captain Hendricks, a\n                    chief of the Five Nations, announcing his\n                    opinion there will be peace. This was pleasant, indeed, and we sat up\n                    this evening, conversing with the commis-sioners till past eleven o'clock.\n                    Slept well, being clear of musketoes. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.70000000000011,
+                    "lon": -77.69999999999956
+                },
+                "media": {
+                    "caption": "Page: 326",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 09, 1793",
+                    "text": "\n                9th. \n                \n                    William Savery and myself dined on\n                    boardthe ship that rides nearly opposite our camp. This evening came\n                    in several more Indians from the Ra-pids,\n                    whose reports agree in substance with captain\n                        Hendricks' letters. They were treated with a glass a piece,\n                    and encamped near by; but a canoe coming from Detroit with rum, they were made very noisy. This, with\n                    the musketoes, caused little sleep. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.80000000000011,
+                    "lon": -77.79999999999956
+                },
+                "media": {
+                    "caption": "Page: 327",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 10, 1793",
+                    "text": "\n                10th. \n                 Great looking out for the boat's return from\n                     the council, for which we are very anxious. The season\n                    advancing, and the great distance we are from home, together with the\n                    continued uncertainty of succeeding, according to our wishes, in the\n                    great business we are engaged in, accompanied with other unpleasant\n                    circumstances, give us at times some very disagreeable sensations. Yet on\n                    the whole, we are preserved in a good degree of patience, still\n                    believing our coming out was right, be the event as it may. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 52.90000000000011,
+                    "lon": -77.89999999999955
+                },
+                "media": {
+                    "caption": "Page: 328",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 11, 1793",
+                    "text": "\n                11th. \n                 First of the week. No arrival from the Ra-pids\n                     to alleviate our strong desires and anxiety to see the Indians.\n                    With some difficulty we got to Grose\n                        Isle, where we held a meeting with some of its in-habitants\n                    and divers from the main, to a good de-gree of satisfaction. This morning,\n                        Jasper Parrish, who had been express\n                    to Philadelphia, the second time, arrived in the ship Ottoway, from Fort\n                        Erie, by whom we received many letters from home. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.000000000000114,
+                    "lon": -77.99999999999955
+                },
+                "media": {
+                    "caption": "Page: 328",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 12, 1793",
+                    "text": "\n                12th. \n                 Our anxiety and great suspense still con-tinue. William Savery and Jasper Parrish\n                    both poorly. At night our rest was much disturbed by the\n                    musketoes. We have frequent visits from small parties of Indians, who\n                    sometimes find means to get too much rum, and are then troublesome;\n                    otherwise they are quiet and civil. Fresh provisions are plen-ty here;\n                    but rate very high. Sheep from four to six dollars, not large. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.100000000000115,
+                    "lon": -78.09999999999954
+                },
+                "media": {
+                    "caption": "Page: 328",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 13, 1793",
+                    "text": "\n                13th. \n                 No remarkable occurrence. We are still looking earnestly for the boats from\n                    the great In-dian council. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.20000000000012,
+                    "lon": -78.19999999999953
+                },
+                "media": {
+                    "caption": "Page: 328",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 14, 1793",
+                    "text": "\n                14th. \n                 This day we had the company of captain\n                        Wellbank, who returned some days ago from Nia-gara . He gave the commissioners much the same \n                     account we received from him at Detroitthe 18th ultimo. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.30000000000012,
+                    "lon": -78.29999999999953
+                },
+                "media": {
+                    "caption": "Page: 329",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 15, 1793",
+                    "text": "\n                15th. \n                 Felt dull and heavy in body and mind --We have a Wyandot Indian, who stays much with us. He often goes out to\n                    hunt, and brings in plenty of ducks, &amp;c. for which he gets well paid.\n                    He ap-pears to be a sensible man, speaks many languages in the Indian\n                    tongue and some English. Two men came from the other side of the river, and\n                    informed the boats were coming from the council to invite us to the\n                    treaty. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.40000000000012,
+                    "lon": -78.39999999999952
+                },
+                "media": {
+                    "caption": "Page: 330",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 16, 1793",
+                    "text": "\n                16th.\n                 In the afternoon came two young Indian men, (Wyandots) they looked wild and afraid; one of them was\n                    introduced to general Lincoln, and handed\n                    him a message in writing, from the great council, informing, that the\n                    several treaties at Fort M'Intosh,\n                        Miami, Muskingum, &amp;c, where lands had been ceded by two or\n                    three nations only, were not valid, as they had no right to cede lands.\n                    And as for the large sums of money proposed to be given for their\n                    country, they did not want it, and a great many of them did not know the\n                    use of it: therefore desired it might be applied with the proposed\n                    sala-ry, to the indemnification of the settlers north of the\n                        Ohio. And as they supposed they were\n                    mostly poor people, or they would not have settled on dis-puted lands,\n                    they now proposed that government  should give the money to them. It would\n                    be a suf-ficient compensation to those settlers, and might in-duce\n                    them to move quietly somewhere else, out of the Indian country &#8212; and make\n                    the Ohio the bounda-ry: for it was their\n                    land. And signified, as the land to the westward was filled up, they had\n                    no-where to repair to, and were now determined to lay \n                    their bones in that country. As to the concessions the commissioners\n                    proposed making, by giving mo-ney, they did not want it; and running a new\n                    line was but giving them a part of their own land. And as to\n                    disclaiming the right to all their country by virtue of the peace made with\n                    the king, their father, they knew they never were conquered, and the\n                    pre-emption right agreed on by the British and United States,\n                    concerning the purchasing of their country, could not be binding on them;\n                    for they supposed they had a right to sell their lands to whom they\n                    pleased. Upon the whole, it was received as a very contemptible speech, by\n                    our commissioners &#8212; which soon appeared to be the case, as the baggage\n                    was ordered on board, and caused an alarm in our camp. \n                 Some for safety proposed to lodge on board the ship, and divers tents were\n                    struck. Some went on board, and others took to the house for safety. This\n                    pros-pect, all on a sudden, looked gloomy, and Friends got together to\n                    feel if any thing further opened for us to do. We felt much shut up; &#8212; and\n                    as we had  never been called into council with the commission-ers, nor\n                    had any public conference with the Indians, we were obliged to bear our own\n                    burthens, and sub-mit the awful subject to the interposition of the\n                    Di-vine hand, and turn our faces homeward to our dear friends and\n                    connections, in hopes of reaching our Yearly Meeting. \n\n                 This evening, two runners who were despatched three days ago, returned with\n                    a verbal message from the Five Nations, who\n                    expected us to come for-ward, and were moving six miles down the river\n                    to meet us. They having all along appeared very friendly to the\n                        United States, this appeared an art- ful manoeuvre, on one side or the other. It was somewhat\n                    extraordinary to hear general Lincoln\n                    ex-press, that they had received just such an answer as he could have\n                    wished. What his meaning was, is unknown. Friends slept in their tents as\n                    heretofore, I believe with little fear. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.50000000000012,
+                    "lon": -78.49999999999952
+                },
+                "media": {
+                    "caption": "Page: 331",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 17, 1793",
+                    "text": "\n                17th. \n                 We were hurried on board soon after break-fast, with the remainder of \"our\n                    baggage. Two run-ners were dispatched by the commissioners to the\n                    Six Nations, the object unknown to us. About\n                    ele-ven o'clock, we were all on board, and stood down the river into\n                    the lake. My mind felt sorrowful and very heavy, reflecting on the\n                    important subject of our journey; but I could see nothing material\n                    omit-ted on our part, to give uneasiness: so I endeavoured to rest\n                    quiet, leaving the event to Him who judgeth righteously. In this part of\n                    the world, but little mo-rality, law, or religion, appears to govern the\n                    peo-ple, though the climate is blessed with health and there is plenty\n                    of the good things of this life; no-thing being wanting but industry and\n                    thankful hearts. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.60000000000012,
+                    "lon": -78.59999999999951
+                },
+                "media": {
+                    "caption": "Page: 331",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 18, 1793",
+                    "text": "\n                18th. \n                 First of the week. We came to anchor among a cluster of islands in the west\n                    end of the lake; of which there is said to be about thirty, great and\n                    small. Some of them produce abundance of red cedar, much used in ship\n                    building &#8212; there are also raccoons and many other wild animals on them.\n                    We stood out into the open lake with pleasant weather. Had a season of\n                    solid retirement in the cabin, with  a few of our fellow passengers, to a\n                    good degree ofsatisfaction and comfort; though held in much con-tempt\n                    by others, who supposed themselves wise and  good enough already. \n\n\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.700000000000124,
+                    "lon": -78.6999999999995
+                },
+                "media": {
+                    "caption": "Page: 332",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 19, 1793",
+                    "text": "\n                19th.\n                 Light head wind. We have thirty-one pas-sengers on board, besides the\n                    ship's crew and ma-rines. Provisions plenty &#8212; poultry, sheep, hogs &#8212;\n                    and two bears belonging to captain Bunbury.\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.800000000000125,
+                    "lon": -78.7999999999995
+                },
+                "media": {
+                    "caption": "Page: 332",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 19, 1793",
+                    "text": "\n                19th. \n                 We passed the mouth of Cayahoga river, and\n                    in sight of the Looming-hills on the south\n                    shore, land claimed and held by the Delaware\n                        Indians. &#8212;The light and trivial conversation on board,\n                    accom-panied with such a degree of profanity in language and behavior\n                    one to another, at times, was truly distressing, though otherwise we were\n                    as comforta-bly accommodated as the nature of our situation  would\n                    admit. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 53.90000000000013,
+                    "lon": -78.8999999999995
+                },
+                "media": {
+                    "caption": "Page: 332",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 22, 1793",
+                    "text": "\n                22d. \n                 We anchored at Fort Erie. &#8212; 23d. Rainy, no goods or baggage could be\n                    landed, as the lake was rough, which caused a great surf. 24th. Morn-ing fair and calm &#8212; a great stir,\n                    hoisting out casks, trunks, &amp;c. The commissioners preparing to set\n                    forward, some by water, others by land. William\n                        Savery and William Hartshorne,\n                    are to go with ge-neral Lincoln, by\n                        Ontario.Jacob\n                        Lindley is pro-vided with a horse by the commissioners, and\n                    goes by land; so that we are all busily engaged fixing our baggage\n                    each in his own way, clearing off all ex-penses for passage, &amp;c. And\n                    truly we may say, by this time, we became pretty much stript of the\n                    con-tents of our purses, and a great deal of our stock of provisions,\n                    &amp;c. John Elliott and John Parrish went on shore in the afternoon, to\n                    get to some Friend's  house. Jacob\n                        Lindley and myself went in the even-ing to the house of\n                        Benjamin Willson, who had been on\n                    board with us all the afternoon. I felt myself in some measure, like one\n                    let out of prison. Here we were kindly treated and lodged; proposing to\n                    visit a \n                     number of Friends and friendly people, in and about this\n                    neighborhood, before we set out for home; which seemed annexed to my\n                    concern in coming forth to this country, to attend the proposed treaty\n                    with the Indians. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.00000000000013,
+                    "lon": -78.99999999999949
+                },
+                "media": {
+                    "caption": "Page: 333",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 25, 1793",
+                    "text": "\n                25th.\n                 First of the week. We held a public meet-ing, and visited a few families &#8212;\n                    towards evening, got to Asa Schooley's,\n                    where John Parrish came to us. Here we\n                    lodged. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.10000000000013,
+                    "lon": -79.09999999999948
+                },
+                "media": {
+                    "caption": "Page: 333",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 26, 1793",
+                    "text": "\n                26th.\n                \n                    John Elliott came to us this morning &#8212; so\n                    that we are now all together again. We went to John\n                        Herrit's, son-in-law to Asa\n                        Schooley, had a sitting there and returned to Asa's &#8212; there had a solid op-portunity with his\n                    family and the family of John Cutler,\n                    together; &#8212; after which, went to Daniel\n                        Pound 's and lodged. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.20000000000013,
+                    "lon": -79.19999999999948
+                },
+                "media": {
+                    "caption": "Page: 333",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 27, 1793",
+                    "text": "\n                27th. \n                 We held a public meeting at Joseph\n                    Ha-ven's, which was large and favoured; at the close, we\n                    had a select opportunity with such as profess with Friends, a number of\n                    them being members, to whom some interesting matters of advice were\n                    com-municated. Upon the whole, we thought it a very solid and\n                    profitable opportunity, many hearts beingtendered; for whom, in their\n                    lonely situation, we were brought into near sympathy. We parted from\n                    them in much love. John Parrish and myself\n                    went to Ezekiel Dennis's, up the side of\n                        Lake Erie about six miles, to\n                        point Ebino, where we were kind-ly\n                    entertained and lodged. I think when the meet-ing was select as above\n                    mentioned, there was in the whole, young and old, about forty &#8212; many\n                    decent looking young people, with innocent countenances, were present;\n                    on account of whom I felt much con-cern for their religious and school\n                    education. \n\n\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.30000000000013,
+                    "lon": -79.29999999999947
+                },
+                "media": {
+                    "caption": "Page: 334",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 28, 1793",
+                    "text": "\n                28th.\n                    \n                 Set out and rode up the beautiful beach on the lake shore, about ten miles,\n                    to what is called the\n                    Sugar Loaf, a point of land extending out in\n                    the lake, with a remarkable round hill, at a distance re-sembling a\n                    sugar loaf. Here we visited seven fami-lies, and returned in the evening to\n                    our friend Asa Schooley's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.400000000000134,
+                    "lon": -79.39999999999947
+                },
+                "media": {
+                    "caption": "Page: 334",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 29, 1793",
+                    "text": "\n                29th. \n                 With divers other Friends, we went about twelve miles to esquire Powell's, where we had a large public\n                    meeting of Friends and others, to muchsatisfaction to ourselves, and I\n                    believe it was so to the auditory. They behaved quiet, and with\n                    becoming decency. After which many Friends took leave of us in much\n                    love and tenderness, and departed to their several homes. We dined with the\n                    squire, be-ing freely and liberally entertained. Afterwards I rode\n                    about four miles to the fort, and went on board the Dunmore on a small\n                    errand, with our friend Wil-liam Lundy,\n                    who having heard of our being here, came about twenty miles to see us, and\n                    was at the meeting to-day. In the evening went to our friend\n                    Benjamin Willson's &#8212; leaving the other Friends\n                    at Powell's. John Elliott had been very\n                    poorly with the ague and fever &#8212; am fearful he will hardly be able to\n                    ride very soon, which is now a great trial to us, being very desirous to\n                    move towards home -- \n\n                 Having had the two public meetings above mention-ed, and visited most of\n                    the families and Friends in this country, to wit, Asa Schooley,Joseph Havens ,\n                    Obadiah Dennis, Abraham\n                        Webster, John Cutler,\n                    John Hill, Benjamin\n                        Hill, Jeremiah Moore, (Abra-ham Laing, and Benjamin Canby, single men) John\n                        Taylor, Joshua Gillam,\n                        Joseph Marsh, Adam\n                        Bur-well, Daniel Pound,\n                        William Lundy, Thomas Rice, \n                    \n                    James Crawford, Enoch\n                        Scrigley, Samuel Taylor,\n                    Ezekiel Dennis, and several others. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.500000000000135,
+                    "lon": -79.49999999999946
+                },
+                "media": {
+                    "caption": "Page: 335",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 30, 1793",
+                    "text": "\n                30th. \n                 We now began to prepare to leave this part of the country. This morning the\n                    other Friends came to me at Benjamin\n                        Willson's. Jasper Parrish\n                    we hear is very poorly at the landing, not able to return. We felt loth to\n                    leave him, but understand-ing general\n                        Chapin, with whom he has his home, is expected to be here in\n                    about a week, we were the more easy to leave him. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.600000000000136,
+                    "lon": -79.59999999999945
+                },
+                "media": {
+                    "caption": "Page: 335",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "August 31, 1793",
+                    "text": "\n                31st. \n                \n                    John Elliott now bravely, though weak,\n                    seems very willing to move forward. We waited this morning for Abraham Laing, a young man who is going to the\n                    States, and is very desirous of our company. Then went to Powell's, and thence to\n                    Windecker's, the ferryman, where Abraham Laing came to us &#8212; we crossed over and\n                    went three miles to Cornelius Winney's, at\n                        Buffalo creek. Here we stayed, as\n                    there is no house between this and the\n                    Genesee, which is called seventy-five miles.\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.70000000000014,
+                    "lon": -79.69999999999945
+                },
+                "media": {
+                    "caption": "Page: 335",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 01, 1793",
+                    "text": "\n                9th mo. 1st.\n                    \n                 First-day. Set out early for Gene-see &#8212;\n                    rode about forty miles; night came on, and we halted by the side of a small\n                    brook, and began to make preparation for a shelter, but a cloud came\n                    on with heavy thunder and rain. We made out to get a fire kindled,\n                    which was a comfort to us; but we got very wet. The wind being high,\n                    several trees fell near us, which was somewhat alarming. The gust held\n                    about two hours, and then cleared up with bright starlight the remainder of\n                    the night. We all lay before the fire, in the best manner we could,\n                    inour wet situation, got some sleep, but were somewhat afflicted with\n                    the musketoes. On the whole, we thought ourselves much favoured. \n\n\n                \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.80000000000014,
+                    "lon": -79.79999999999944
+                },
+                "media": {
+                    "caption": "Page: 336",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 02, 1793",
+                    "text": "\n                2d. \n                 We were up early, looked out for our horses, put on our kettle, and made a\n                    good dish of choco-late, wherein our friend John\n                        Parrish, was princi-pal director &#8212; then set out and rode\n                    about thirty-five miles to the Genesee\n                        river, which we crossed by fording, and put up at John Gilbert Berry's, where we were comfortably\n                    entertained. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 54.90000000000014,
+                    "lon": -79.89999999999944
+                },
+                "media": {
+                    "caption": "Page: 336",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 03, 1793",
+                    "text": "\n                3d.\n                 After writing letters to general Chapin at\n                    Canandaigua, captain\n                        Bunbury at Niagara, and\n                        cap-tain Hendricks, a chief\n                    among the Five Nations, we rode sixteen\n                    miles to James Miller's, superintendent\n                    of Williamsburgh farm, where we put up for\n                    the night, there being no place for lodging short of for-ty miles\n                    further. Among the many Indians resort-ing about Berry's, we saw a woman, said to be a hundred years old. In\n                    conversation with her, and admiring her grey hair, she assigned as a reason\n                    for her long life, that she was always kind and good, and against all\n                    quarrels; therefore God had spared her to see the sun a long time; pointing\n                    up to it. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.00000000000014,
+                    "lon": -79.99999999999943
+                },
+                "media": {
+                    "caption": "Page: 336",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 04, 1793",
+                    "text": "\n                4th. \n                 This morning we took a wrong road and had to return, by which we lost about\n                    ten miles, so that we were not able to reach Bath, and lodged at the same old Indian cabin we were at\n                    in going up in the spring, eleven miles short of the place we aimed\n                    at. We struck up a fire and slept pretty com-fortably. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.10000000000014,
+                    "lon": -80.09999999999943
+                },
+                "media": {
+                    "caption": "Page: 336",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 03, 1793",
+                    "text": "\n                5th. \n                 We rode to Bath, and late in the evening\n                    got to colonel Lindley's, where we put\n                    up, having rodeabout forty miles. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.200000000000145,
+                    "lon": -80.19999999999942
+                },
+                "media": {
+                    "caption": "Page: 336",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 06, 1793",
+                    "text": "\n                6th. \n                 We were up early, proposing to reach the\n                    Block-house, distant about forty miles, but\n                    having our young friend Abraham Laing&gt; in\n                    company, with a poor little horse that tired on the way, our pro-\n                     gress was retarded, so that we were benighted in very dark\n                    thick woods, and were obliged to alight. There, tying up our horses to the\n                    trees, with much difficulty we kindled a fire, and lay on the ground,\n                    which, with our clothes, were wet with rain. We kept up our fire, got a\n                    little sleep, wishing for day, and were glad when it appeared. We left\n                        Abraham  Laing&gt; with his tired horse\n                    about eight miles back, where there is a small cabin in the woods. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.300000000000146,
+                    "lon": -80.29999999999941
+                },
+                "media": {
+                    "caption": "Page: 337",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 07, 1793",
+                    "text": "\n                7th. \n                 Mounted our horses before sun-rise, and rode two miles to the Block-house, where we took breakfast, and gave\n                    our horses as much oats as we thought would be useful. Being thus\n                    refreshed, we set out, leaving Abraham\n                        Laing to come on as well as he could, in hopes that he may\n                    overtake us at\n                    Muncy. We rode seventeen miles to James Kyle's, and dined &#8212; thence fourteen miles\n                    to our friend\n                    Samuel Harris's, at Loyalsock, where John\n                    Parrish and myself lodged, leaving Jacob\n                    Lindley and John Elliott five miles hack\n                    to get their horses shod. &#8212; Here we heard of great sickness in\n                    Philadelphia. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.40000000000015,
+                    "lon": -80.39999999999941
+                },
+                "media": {
+                    "caption": "Page: 337",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 08, 1793",
+                    "text": "\n                8th. \n                 First of the week. After breakfast, Jacob\n                        Lindley and John Elliott came\n                    up, and we went to\n                    Muncy meeting. Here we met with a number of\n                    our dear friends. This seemed very pleasant, and we had a solid, favoured\n                    time together. After which we went to our friend Samuel Wallace's and dined, then disposed of ourselves in\n                    several places to lodge. I went to Henry\n                        Parker's. We all felt a little of the effects , of lying in\n                    the damp woods in our wet clothes, and hard travelling for two days past,\n                    with rough roads, and crossing many creeks; one called\n                    Trout run, we crossed thirty times, and\n                        Lycoming creek seven times &#8212; with\n                    several large mountains, \n                     one of which was a part of the Alleghany. The sickness in Philadelphia confirmed in every\n                    place. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.50000000000015,
+                    "lon": -80.4999999999994
+                },
+                "media": {
+                    "caption": "Page: 338",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 09, 1793",
+                    "text": "\n                9th. \n                 Not feeling quite clear of this neighbour-hood, we held another meeting at\n                        Muncy meeting house, which was larger\n                    than yesterday, and much favoured. After dinner, went back six miles to\n                        Sa-muel Harris's, over the very large\n                    and rapid creek called Loyalsock. Here we\n                    had a large and satisfac-tory meeting. Most of our company returned, but\n                    I stayed here. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.60000000000015,
+                    "lon": -80.5999999999994
+                },
+                "media": {
+                    "caption": "Page: 338",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 10, 1793",
+                    "text": "\n                10th. \n                 Our friend S. H., an ancient man, has lain poorly for some time, and not\n                    likely to continue long. He seems quiet and calm, and told me this\n                    morning, he felt bravely refreshed, and much satis-fied with the meeting,\n                    and the company of his friends. I took a solemn leave of him and the\n                    family, and pro-ceeded to Wallace's. We\n                    then all set out together, and rode to William\n                        Ellis's, where we settled the running accounts we had among\n                    ourselves. Our friend Jacob Lindley\n                    concluded here to leave us, and proceed home by way of Harrisburgh. We then went on, having\n                        Joseph Carpenter for a guide,\n                    eighteen miles toward Catawissa, and put up at\n                    our friend John Eves's, at Fishing creek, where we were kindly\n                    entertained. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.70000000000015,
+                    "lon": -80.69999999999939
+                },
+                "media": {
+                    "caption": "Page: 338",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 11, 1793",
+                    "text": "\n                11th. \n                 Here we had a meeting with a few Friends and divers of their neighbours, in\n                    a school house, to a good degree of satisfaction and comfort. Set out\n                    in company with Isaac James, brother to\n                        John, in Philadelphia, and rode about\n                    twelve miles to Catta-wissa, crossing the\n                    north-east branch of the Susque-hanna, and\n                    put up at our friend John Lloyd's. Here\n                    is a small town of about thirty buildings. I lodged at James Watson's, John\n                        Parrish at John Lloyd's, \n                     poorly, John Elliott stopped\n                    about eight miles short of this, at John\n                        Willson's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.80000000000015,
+                    "lon": -80.79999999999939
+                },
+                "media": {
+                    "caption": "Page: 339",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 12, 1793",
+                    "text": "\n                12th. \n                \n                    John Elliott came to us this morning. On\n                    his way he called to see an ancient Friend, now in the ninety-seventh year\n                    of her age. We had no public meeting here, but visited most of the\n                    families of Friends in town, wherein our friend John\n                        Par-rish had good service, and was much favoured. In\n                    the afternoon we rode about nine miles to Roaring\n                        creek . This part of the country is hilly and moun-tainous,\n                    &#8212; the valleys interspersed with good farms. Many Friends are settled\n                    hereabouts. Lodged at\n                    Moses Starr's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 55.900000000000155,
+                    "lon": -80.89999999999938
+                },
+                "media": {
+                    "caption": "Page: 339",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 13, 1793",
+                    "text": "\n                13th. \n                 Rode twenty-six miles to Cold Run, and put\n                    up at Samuel Webb's, having crossed the\n                        Little Mountain,  Mahony ,Broad,  Locust, and Tuscarora\n                        mountains. Great part of the way very rough and stony. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.000000000000156,
+                    "lon": -80.99999999999937
+                },
+                "media": {
+                    "caption": "Page: 339",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 14, 1793",
+                    "text": "\n                14th. \n                 Set out and rode seven miles to Richard\n                        Stephens's &#8212; thence to Harkerstown. We here met with our friend Mordecai Lee, who had heard of our coming, and\n                    came to meet us. We went home with him. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.10000000000016,
+                    "lon": -81.09999999999937
+                },
+                "media": {
+                    "caption": "Page: 339",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 15, 1793",
+                    "text": "\n                15th. \n\n                 First of the week. Joseph Wright, living\n                    in one part of the house with his family, has lately been afflicted with\n                    the bloody flux, by which he had lost three children. Divers Friends came\n                    here to see us, viz. John Starr,\n                        Thomas Wright, Levi\n                        Pil-kington, &amp;c. We all attended their sa meeting at\n                        Mai-den creek &#8212; and after dinner\n                    proceeded nine miles to\n                    Reading, where we put up at Samuel Jackson's. &#8212; The sickness, and distress\n                    in consequence thereof, we still hear confirmed, and much talked of, as\n                    still raging to a great degree in \n                        Philadelphia &#8212; which, I \n                     expect will be a trying circumstance to many friends in the\n                    country, in getting to our ensuing Yearly Meeting. May the good hand be\n                    near to help us. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.20000000000016,
+                    "lon": -81.19999999999936
+                },
+                "media": {
+                    "caption": "Page: 340",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 18, 1793",
+                    "text": "\n                18th. \n                \n                    Samuel Wallace, from Muncy, called to see us. He left the city yesterday, and\n                    confirms the accounts of the sickness and mortality to be quite equal\n                    to what we have heard &#8212; and that the principal nurses for the sick, and\n                    buriers of the dead, are the blacks, of whom it is said, very few or none\n                    have yet taken the disorder. After breakfast we set out and rode\n                    twenty-three miles to Joseph Potts's, where\n                    we lodged. Here we again heard much of the distressed situation of\n                         Philadelphia. Our friend\n                    John Elliott left John\n                        Parrish and myself here, pro-posing to ride into town this\n                    evening to his family. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.30000000000016,
+                    "lon": -81.29999999999936
+                },
+                "media": {
+                    "caption": "Page: 340",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 19, 1793",
+                    "text": "\n                19th. \n                 I have been these two days past, poorly with a cold, and very hoarse; but\n                    through favour, this morning, feel some better. John\n                        Parrish was taken in a carriage by a friend, proposing to go\n                    to Darby, where he understands his wife\n                    was gone, intending to go by John Field's,\n                    who with many others are out of town. At the same time I set out with\n                    my friend Joseph Potts, and rode nine miles\n                    to German-town. Called at Henry Drinker's, who with his family were here.\n                    From thence went with Henry to John Pemberton's, who was here also with his\n                    family. Having heard that Beverly\n                        Randolph was at his cousin Edmund\n                        Randolph's, the attorney ge-neral of the United States,\n                    about three miles from this, and being desirous to see him, towards\n                    even-ing, John Pemberton, Henry Drinker and myself went there in\n                        John's carriage. We were glad to see\n                    each other again, and after spending about an hour and a half together in\n                    free conversation, returned to \n                    \n                    Germantown, where I lodged at my friend John Johnson's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.40000000000016,
+                    "lon": -81.39999999999935
+                },
+                "media": {
+                    "caption": "Page: 341",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 20, 1793",
+                    "text": "\n                20th. \n                 The weather dry and warm &#8212; thought to be rather unfavorable to the sick in\n                    the city, where deaths and burials are frequent through the day. &#8212;\n                    Here I met with my friend Sarah Lundy, who\n                    is on her way to the Yearly Meeting, and a proposed visit to the\n                    Southern States. Also, again met with my dear friend, William Savery, who came in last evening, his\n                    wife being here, and having taken lodgings at Caspar\n                        Haines's. We were all together at their preparative meeting, where divers weighty\n                    testimonies were delivered by Sarah Lundy\n                    and others; and solemn supplication by William\n                        Savery.\n                    Wm. Hartshorne returned home from New York, well. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.50000000000016,
+                    "lon": -81.49999999999935
+                },
+                "media": {
+                    "caption": "Page: 341",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 21, 1793",
+                    "text": "\n                21st. \n                 This being the day for opening our select Yearly\n                        Meeting, it was exceedingly trying to many Friends, on\n                    account of the prevailing and mortal disorder raging in the city, where it\n                    is said from a hundred to a hundred and fifty of a day, have been\n                    taken to their graves. I was much exercised in mind on that account, being\n                    yet poorly with my cold, which 1 now apprehend to be what is common-ly\n                    called the influenza; &#8212; however, on the whole, I thought I felt most easy\n                    to go forward, and rode into Philadelphia, attended the meeting at Fourth street, which\n                    was a solid, favoured time, though very small. There were some Friends from\n                    every Quarter, though many of the representatives were absent. I think\n                    from one meeting there was but one answered. The number on the women's\n                    side of the house, in the whole, twenty-four. I dined at\n                    Thomas Wistar's, and towards evening returned\n                    to \n                    \n                    Germantown, feeling myself very poorly with\n                    great debility. While in the city, I had occasion to pass by Friends'\n                    burial ground, the Potter's field-, and\n                    several others. The prospect was awful and alarm-ing, to behold the many\n                    new graves, and others dig-ging, with the hearses standing, and some\n                    coming and going &#8212; most of which were attended by the black people,\n                    whom it is said the disorder has not reached. This is a token of mercy,\n                    mixed with judgment, both to them and the whites, they being the\n                    principal nurses and carriers of the dead. I am hardly able to describe my\n                    feelings on the present occasion, believing it to be all in wisdom, and\n                    hoping it may have a tendency to bring the lofty from their seats, and\n                    beget greater humility than has of latter time appeared in that highly\n                    favoured city. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.600000000000165,
+                    "lon": -81.59999999999934
+                },
+                "media": {
+                    "caption": "Page: 342",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 22, 1793",
+                    "text": "\n                22nd. \n                 First of the week. The weather much the same as many days past. I felt very\n                    weak and poor-ly; did not go out to meeting, but kept in my quar-ters,\n                    where I was very kindly and tenderly treated, wanting for nothing the house\n                    could afford to make me comfortable. John\n                        Johnson and his wife Rachel, appear\n                    to be tender-hearted, sympathizing friends, blessed with a plenty of the\n                    good things of this life, and an open disposition to communicate freely\n                    to those that are in need. May the Lord reward them, as good stewards\n                    of the manifold favours received. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.700000000000166,
+                    "lon": -81.69999999999933
+                },
+                "media": {
+                    "caption": "Page: 342",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 23, 1793",
+                    "text": "\n                23rd. \n                 This day our general Yearly Meeting be-gins,\n                    at ten o'clock in the morning. I much desired to be there; but remaining\n                    poorly, concluded to lay by another day for rest. I think I now feel the\n                    ef-fects of hard riding through the wilderness, and ly-ing on the damp\n                    ground; being stiffened, with sore-ness in my bones. John Elliott, I hear, has been \n                     poorly since his arrival in town. Neither he nor\n                    John Parrish was at meeting on seventh-day.\n                        Jacob Lindley, William Savery and myself were there, and glad to see each\n                    other again in that place; and many friends expressed their gladness at our\n                    safe return. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.80000000000017,
+                    "lon": -81.79999999999933
+                },
+                "media": {
+                    "caption": "Page: 343",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 24, 1793",
+                    "text": "\n                24th. \n                 The weather dry and warm, the roads very dusty. This morning felt better.\n                    Leaving my horse here, I rode into town with my friend John John-son, in a chair -- attended two\n                    sittings of our Yearly Meeting, which was much smaller than usual. Our\n                    friend Nicholas Wain, was again chosen clerk\n                    for the present year; and the business went on in much brotherly love\n                    and concord &#8212; a good degree of so-lemnity and weight attending. I lodged at\n                        Thomas Hough&gt;'s. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 56.90000000000017,
+                    "lon": -81.89999999999932
+                },
+                "media": {
+                    "caption": "Page: 343",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 25, 1793",
+                    "text": "\n                25th. \n                 The weather much the same. I continue tolerable well in health; but weak\n                    and some cough. Attended the meeting as yesterday. Dined at N. Wain's, and lodged at John James's. \n            \n            "
+                }
+            },
+            {
+                "location": {
+                    "lat": 57.00000000000017,
+                    "lon": -81.99999999999932
+                },
+                "media": {
+                    "caption": "Page: 343",
+                    "url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg"
+                },
+                "text": {
+                    "headline": "September 26, 1793",
+                    "text": "\n                26th, and fifth of the week. \n                 The meeting assem-bledagain at nine o'clock, and the business\n                    conclu-ded before twelve, in solemn quiet, and, I believe, to the\n                    satisfaction of all present. After which, I dined with my friend David Bacon, and returned to Germantown with my kind friend, John Johnson, who had also attended all the\n                    sittings of this Yearly Meeting. The sickness in town continues as\n                    here-tofore. Divers friends in the city are paying con-stant attention\n                    to the sick &#8212; providing necessaries, nurses, coffins, and carriers of the\n                    dead. At which I felt glad, and hope they will be rewarded for their\n                    labours in so great and charitable a work. \n\n            \n        "
+                }
+            }
+        ]
+    }
+}
