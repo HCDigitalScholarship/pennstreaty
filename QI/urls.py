@@ -19,7 +19,8 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^storymap/$', 'QI.views.storymap', name = "StoryMapJS"),
+    url(r'^storymap/$', 'QI.views.storymap_dir', name = "StoryMapJS"),
+    url(r'^storymap/', include('QI.inner')),
     url(r'^profiles/$', 'QI.views.profiles', name = "Person Profiles"),
 	url(r'^texts/$', 'QI.views.texts', name = "Available Texts"),
 	url(r'^about/$', 'QI.views.about', name = "About Page"),
@@ -28,9 +29,6 @@ urlpatterns = [
     url(r'^cornp1/$', 'QI.views.cornp1', name = "Henry Cornplanter"),
     url(r'^places/$', 'QI.views.places', name = "Places page"),
     url(r'^organizations/$', 'QI.views.organizations', name = "Organizations page"),
-    
-
-
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'
