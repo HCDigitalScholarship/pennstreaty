@@ -29,6 +29,8 @@ urlpatterns = [
     url(r'^cornp1/$', 'QI.views.cornp1', name = "Henry Cornplanter"),
     url(r'^places/$', 'QI.views.places', name = "Places page"),
     url(r'^organizations/$', 'QI.views.organizations', name = "Organizations page"),
+    url(r'^admin/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
+    url(r'^admin/QI/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

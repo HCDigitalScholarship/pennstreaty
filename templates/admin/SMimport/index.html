@@ -1,0 +1,18 @@
+{% extends "admin/SMimport/base.html" %}
+{% block content %}
+<h1>Import a Story Map</h1>
+{% endblock %}
+{% block myblock %}
+<div id="SMimport">
+	<p>Select the xml file you want to add</p>
+	<form method="POST" enctype="multipart/form-data" action="">
+	{% csrf_token %}
+	<div>
+	<input type="file" name="datafile" size="40">
+	</div>
+	<div class="submit-row">
+	<input type="submit" value="Import!">
+	</div>
+	</form>
+</div>
+{% endblock %}
