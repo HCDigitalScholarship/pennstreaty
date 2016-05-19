@@ -8,25 +8,7 @@ from django.db import models
 #https://django-import-export.readthedocs.org/en/latest/getting_started.html
 
 
-#This is for testing something. I don't think it ever worked out
-##############################################
 
-class Author(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __unicode__(self):
-        return self.name
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __unicode__(self):
-        return self.name
-
-
-
-###############################################
 class Person(models.Model):
 	
 	review_status = models.CharField("TEI ID", max_length = 50)
@@ -55,7 +37,7 @@ class Person(models.Model):
 	affiliations = models.ManyToManyField('Org', blank = True)
 	
 	def __unicode__(self):
-		return self.id_tei #+ " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)      
+		return self.id_tei + " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)      
 #
 class Place(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
@@ -72,7 +54,7 @@ class Place(models.Model):
 			(PLACENAME, 'Place Name'),
 			(GEOGNAME, 'Geography Name'),
 	)
-   	place_type = models.CharField("Place Type", max_length=2, choices=PLACE_TYPE_CHOICES, default=PLACENAME, blank = True)
+   	place_type = models.CharField("Place Type", max_length=30, choices=PLACE_TYPE_CHOICES, default=PLACENAME, blank = True)
 	alternate = models.TextField("Alternate Names", blank = True)
 	
 	#Some of the above will certainly get deleted, but for now, I just add
@@ -80,10 +62,12 @@ class Place(models.Model):
 	date = models.CharField("Date", max_length = 20, blank = True)
 	def __unicode__(self):
 		return self.id_tei + " " + self.name + " " + self.state + " " + unicode(self.latitude) + " " + unicode(self.longitude) + " " + self.notes + " " + self.notes2 + " "  + unicode(self.place_type) + " " + self.alternate
-
+"""
+#RIP Organization, long live org!
 class Organization(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
 	organization_name = models.CharField("Name of Organization", max_length = 100, blank = True)
+	'''
 	notes = models.TextField("Note Field", blank = True)
 	associated_spellings = models.TextField("Associated Spellings/Names", blank = True)
 	PYM_index = models.TextField("PYM Index", blank = True)
@@ -104,16 +88,32 @@ class Organization(models.Model):
 	citations = models.TextField("Description Field", blank = True)
 	def __unicode__(self):
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
-
-
+	'''
+"""
 ## Some dumb-dumb may have accidentally put in Org when Organization already exsisted, but I am not sure what from Organization we want to keep though 
 class Org(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50) #all the others have this but it might be unneccessary
-	name = models.CharField("Name of Organization", max_length = 200, blank = True)
+	organization_name = models.CharField("Name of Organization", max_length = 200, blank = True)
 	place_id =  models.ForeignKey("Place", blank = True, null = True, related_name = "place_id")
+	notes = models.TextField("Note Field", blank = True)
+	associated_spellings = models.TextField("Associated Spellings/Names", blank = True)
+	PYM_index = models.TextField("PYM Index", blank = True)
+	other_names =  models.CharField("Other Names of Organization", max_length = 200, blank = True)
+	date_founded = models.CharField("Date Founded", max_length = 20, blank = True)
+	date_dissolved = models.CharField("Date Founded", max_length = 20, blank = True)
+
+	#####################################################
+	#might need an associated places here
+	#####################################################
+
+	org_type = models.CharField("Oraganization Type", max_length = 70, blank = True)
+	bio_notes = models.TextField("Description Field", blank = True)
+	data_notes = models.CharField("LCNAF URI", max_length = 50, blank = True)
+	notes = models.CharField("Notes", max_length = 50, blank = True)
+	lcnaf_uri = models.CharField("LCNAF URI", max_length = 50, blank = True)
+	citations = models.TextField("Description Field", blank = True)
 	def __unicode__(self):
-		return self.name
-	
+		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
 
 class RoleType(models.Model):
 	role = models.CharField("Role_Type", max_length = 50, blank = True)
@@ -192,21 +192,5 @@ class Page(models.Model):
 #Next time: Organization already existed... Whoops 
 
 
-
-#this one goes with the top 2 that were for testing 
-#was trying yo get things to work for foreign key fields but was struggling
-class Book(models.Model):
-    
-    name = models.CharField('Book name', max_length=100)
-    author = models.ForeignKey(Person, blank=True, null=True)
-    author_email = models.EmailField('Author email', max_length=75, blank=True)
-    imported = models.BooleanField(default=False)
-    published = models.DateField('Published', blank=True, null=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2, null=True,
-            blank=True)
-    categories = models.ManyToManyField(Category, blank=True)
-
-    def __unicode__(self):
-        return self.name
 
 

@@ -8,8 +8,8 @@ import xml.etree.ElementTree as etree
 ###WOrk on this!!
 
 urlpatterns = []
-file = 'static/xml/xml_file_names.xml'
-tree = etree.parse(file)
+filename = 'static/xml/xml_file_names.xml'
+tree = etree.parse(filename)
 root = tree.getroot()
 for child in root:
 	xml_id = child.text

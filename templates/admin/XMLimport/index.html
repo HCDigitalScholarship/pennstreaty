@@ -1,4 +1,4 @@
-{% extends "admin/SMimport/base.html" %}
+{% extends "admin/XMLimport/base.html" %}
 
 {% block content %}
 {% if success %}
@@ -6,7 +6,7 @@
 <h1>Success!</h1>
 </div>
 {% else %}
-<h1>Import a Story Map</h1>
+<h1>Import an XML file and make it HTML</h1>
 	{% if failed %}
 	<h2>There was an error. Make sure you are using a '.xml' file</h2>
 	{% endif %}
@@ -14,12 +14,18 @@
 {% endblock %}
 {% block myblock %}
 	{% if success %}
-	<p>Select another xml file to add</p>
+	<p>Select another xml file to add and convert</p>
 	{% else	%}
-	<p>Select the xml file you want to add</p>
+	<p>Select the xml file you want to add and convert</p>
 	{% endif %}
 	<form method="POST" enctype="multipart/form-data" action="">
 	{% csrf_token %}
+	<div>
+	<select id=whichone name=selected>
+	  <option value="xml">XML</option>
+  	  <option value="page_break">Page break</option>
+	</select>
+	</div>
 	<div>
 	<input type="file" name="datafile" size="40">
 	</div>
