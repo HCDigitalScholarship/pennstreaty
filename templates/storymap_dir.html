@@ -3,8 +3,10 @@
 <html class="no-js" lang="en">
   <head>
     {% include 'top-links.html' %}
-
     <title> Story Map Directory </title>
+    <style>  .large-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: none;
+  } </style>
 
   </head>
 
@@ -25,7 +27,8 @@
     <h1> Story Map Directory</h1>
     <br />
   </div>
-<!-- This list is what the directory should look like, but it should be created automatically -->
+<!-- This list is what the directory should look like, but it should be created automatically
+This is now done - Dylan -->
 {% include 'list_of_storymaps.html' %}
 
 	<script>
@@ -44,7 +47,6 @@
  {% include 'footer.html' %}
     
  {% include 'bottom-links.html' %}
-
 
   </body>
 </html>

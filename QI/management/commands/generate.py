@@ -170,7 +170,9 @@ class Command(BaseCommand): #2
 				#print place
 				
 				dj_place_list = Place.objects.filter(id_tei=place)
-				if dj_place_list==None:				
+				print dj_place_list
+				dj_place="Blue"
+				if dj_place_list==None or dj_place_list==list() or len(dj_place_list)==0: #This stopped working overnight. Just want to know if query was unsuccessful				
 					print place, "not found in database \n"
 					continue
 				else:
@@ -180,6 +182,7 @@ class Command(BaseCommand): #2
 							break
 						else:
 							dj_place = i
+						print "DID THIS"
 				lat = dj_place.latitude
 				lon = dj_place.longitude
 				#filler latitude/longitude
@@ -298,12 +301,14 @@ class Command(BaseCommand): #2
 			list_of_files = []
 			for child in root:
 				list_of_files.append(child.text)
-			new_file = False
+
+			new_file = False #Use this existing code to detirmine if I need to add a new file to storymapdir
 			if xml_file not in list_of_files:
 				x = etree.SubElement(root, 'file')
 				x.text = xml_file
 				tree.write('static/xml/xml_file_names.xml')
 				new_file = True
+			new_file = True #delete this when ready, just for testing
 			if new_file:
 				mynewfile=""
 				with open('templates/list_of_storymaps.html', 'r+') as f:
@@ -312,14 +317,28 @@ class Command(BaseCommand): #2
 					soup = BeautifulSoup(html_as_string, 'html.parser')
 					sml = soup.find(id='storymaplist')
 					links = soup.find_all('a')
-					newtag= soup.new_tag('a', href=xml_file)
-					soup.ul.append(newtag)
-					newtag.string= xml_file
-					newtag.wrap(soup.new_tag('li'))
-					litag=soup.new_tag('li')
-					#soup.ul.append(litag)
+					newtag= soup.new_tag('a', id='SMLink', href=xml_file)
+					atag= soup.new_tag('a', href=xml_file)
+					imgtag= soup.new_tag('img', src='../static/img/'+xml_file+'_001.jpg')
+					litag = soup.new_tag('li', id='SMListitem')
+					divtag = soup.new_tag('div', id="SMtext")
+					divtagimg = soup.new_tag('div', id="SMimgdiv")
+					soup.ul.append(litag)
+					litag.append(atag)
+					atag.append(divtagimg)
+					divtagimg.append(imgtag)
+					atag.append(divtag)
+					divtag.append(newtag)
+					newtag.string = title_fin
+
+
+
+					
 					#soup.ul.append(newtag)
-					print soup
+					#newtag.string= title_fin
+					#newtag.append(imgtag)
+					#newtag.wrap(soup.new_tag('li', id='SMListitem'))
+					#print soup
 					mynewfile = soup.prettify()
 				with open('templates/list_of_storymaps.html', 'w') as f:	
 					f.write(mynewfile)

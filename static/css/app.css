@@ -10144,3 +10144,50 @@ i.fa.fa-times:hover {
   font-family: "Alegreya Sans SC";
   font-weight: 400;
 }
+
+
+#storymapgrid {
+	width : 100%;
+	max-width : 2000px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+#SMListitem {
+	width: 300px;
+	height: 380px;
+	padding: 4px;
+	border: 1px solid #0B5EA1;
+	border-radius: 30px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+	margin-left:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	background-color:#1173C2;
+}
+#SMListitem img {
+	width: 50%;
+	height: auto;
+}
+
+
+#SMLink  {
+	font-family: "Alegreya Sans SC";
+	font-weight: 400;
+	color: #FFF;
+	font-size: 1.5rem;
+}
+
+#storymapgird a {
+	list-style-type: none;
+	text-align: center;
+	
+}
+
+
+
+
+
+
