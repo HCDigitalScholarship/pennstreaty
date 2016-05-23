@@ -5,10 +5,12 @@ from import_export import fields
 from import_export.fields import Field
 from import_export.widgets import ForeignKeyWidget
 from import_export.widgets import ManyToManyWidget
-from QI.models import Person, Place, Organization, RoleType, Relationship, RelationshipType, Location, LocType, Org, Affiliation, Manuscript, Page, Book, Author
+from QI.models import Person, Place, RoleType, Relationship, RelationshipType, Location, LocType, Org, Affiliation, Manuscript, Page
 from django.forms import *
 from django.db import models
 
+#This is an example work thru I made
+'''
 #Nearly done this I think, stil trying to right it more generally, but I could just hard code them all it is not that big of a deal
 class BookResource(resources.ModelResource):
 	def import_obj(self, obj, data, dry_run):
@@ -33,27 +35,28 @@ class BookResource(resources.ModelResource):
 				if str(i) == str(data[field_name]):
 					match=True
 					print 
-					print "Ooo we match a ticha id, we need to do something"
+					print "Ooo we match a TEI id, we need to do something"
 					data[field_name]= i.id
 										
 					print new_data[index], "#####"
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		
 			#continue
 		    print obj, "Obj"
 		    print  data, "data"
 		    self.import_field(field, obj, data)
-		'''
+'''
+'''
 		for field in self.get_fields():
 		    data=Person.objects.all()
 		    for i in data:
 			if obj==i:
 				pass
 		    self.import_field(field, obj, data)
-		'''
-
+'''
+'''
 	#Aight, this is now working. Fields seemings just does not work the way it is supposed to. But I may have FINALLY FOUND THE SOLUTION TO THE INMPORTING FOREIGN KEYS PROBLEM
 #I don't think this actually worked
 	#author = fields.Field(
@@ -65,13 +68,15 @@ class BookAdmin(ImportExportModelAdmin):
 	fields = ['name','author']
 	resource_class=BookResource
 	list_display = ('id','name','author')
-
+'''
 
 class PersonResource(resources.ModelResource):
 	#redefining import obj so that it switches the tei ids for foreign keys and many-to-many cases into ids
 	#there is almost definitely a better (built-in) way to do this...
 	#But this works...
 	def import_obj(self, obj, data, dry_run):
+		global bp_dp_problems
+		global aff_problems
 		newlist=[]
 		for field in self.get_fields():
 		    skip=False
@@ -88,32 +93,46 @@ class PersonResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
-		
+				print "No matching TEI id for:",data[field_name],",:("
+				print "This is related to",field_name,'for person:',data['id_tei'],"\n"
+				continue
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
-			new_data=Organization.objects.all()
+			new_data=Org.objects.all()
 			match=False
 			index = 0
 			mylist=[]
 			mystr=""
+			if data[field_name]=='review' or data[field_name]=='Review':
+				data[field_name]=None
+				continue
 			for item in str(data[field_name]):
 				if item <> ";":
 					mystr=mystr+item
 				else:
-					mylist=mylist+[mystr]
+					mylist=mylist+[mystr.lower()]
 					mystr=""
-			mylist=mylist+[mystr]
+			mylist=mylist+[mystr.lower()]
 			for i in new_data:
 				if str(i.id_tei) in mylist:
 					match=True
-					newlist= newlist + [i.id]					
+					newlist= newlist + [i.id]				
+					del mylist[mylist.index(str(i.id_tei))]	
 				index = index + 1 	
+			if mylist <> list():
+				print 'Did not find a match for some affiliations:',mylist
+				print "This is for", data['id_tei'],"\n"
 			if not match:
-				print "No matching ticha id for:",data[field_name]," in many-to-many import,:("
+				print "NO matching TEI id for:",data[field_name]," in many-to-many import",mylist
+				print 'This item will have NO affiliations'
+				print "This is for", data['id_tei'],'\n\n'
+				
+				data[field_name]=None
+				continue
 		    if field_name<>'affiliations':
 		    	self.import_field(field, obj, data)
 		    else:
 			data['affiliations']=str(newlist)[1:-1]
+
 	
 	class Meta:
 		model = Person
@@ -153,8 +172,8 @@ class PlaceResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
-
+				print "No matching TEI id for:",data[field_name],",:("
+				continue
 
 		    self.import_field(field, obj, data)
 
@@ -168,13 +187,14 @@ class PlaceResource(resources.ModelResource):
 		#fields = ('id', 'id_tei', 'name', 'county','state','Latitude (N)', 'Longitude (W)', 'Notes', 'Type', 'Alternate', 'Date')
 
 class PlaceAdmin(ImportExportModelAdmin):
-	fields = ['id_tei', 'name', 'state', 'latitude', 'Longitude (W)', 'notes', 'notes2', 'place_type', 'alternate','date']
+	fields = ['id_tei', 'name', 'state', 'latitude', 'longitude', 'notes', 'notes2', 'place_type', 'alternate','date']
 	resource_class = PlaceResource
 	list_display = ('name', 'id_tei')
 	pass
 
 ############################## break between classes ##############################
-
+#This one is dead
+'''
 
 class OrganizationResource(resources.ModelResource):
 #this class might be dead, I made a new org. Or I need to combine them? To be determined
@@ -196,7 +216,7 @@ class OrganizationResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		
 		    self.import_field(field, obj, data)
 
@@ -211,7 +231,7 @@ class OrganizationAdmin(ImportExportModelAdmin):
 	#THIS IS THE SOLUTION TO LISTING THE THINGS
 	list_display = ('organization_name','id_tei')
 	pass
-
+'''
 ############################## break between classes ##############################
 
 #This one might be dead as well
@@ -248,7 +268,7 @@ class RelationshipResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		    self.import_field(field, obj, data)
 
 
@@ -293,7 +313,7 @@ class LocationResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		
 
 		    self.import_field(field, obj, data)
@@ -342,17 +362,17 @@ class OrgResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
-		
+				print "No matching TEI id for:",data[field_name],",:("
+				continue
 		    self.import_field(field, obj, data)
 
 	class Meta:
 		model = Org
-		fields = ['id','id_tei','name', 'place_id']
+		fields = ('id', 'id_tei', 'organization_name',  'associated_spellings', 'PYM_index','place_id','other_names','date_founded','date_dissolved','org_type','data_notes','notes','lcnaf_uri','citations')
 class OrgAdmin(ImportExportModelAdmin):
-	fields = ['id_tei','name', 'place_id']
+	fields = ['id_tei', 'organization_name', 'notes', 'associated_spellings', 'PYM_index','place_id','other_names','date_founded','date_dissolved','org_type','data_notes','lcnaf_uri','citations']
 	resource_class = OrgResource
-	list_display=(['id','name','id_tei'])
+	list_display=(['id_tei','organization_name','id','org_type'])
 
 ############################## break between classes ##############################
 
@@ -377,7 +397,7 @@ class AffiliationResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		
 		    self.import_field(field, obj, data)
 
@@ -408,7 +428,7 @@ class ManuscriptResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		    #Leaving this framework in for this one, it could be useful eventually 
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
 			new_data=Org.objects.all()
@@ -420,9 +440,9 @@ class ManuscriptResource(resources.ModelResource):
 				if item <> ";":
 					mystr=mystr+item
 				else:
-					mylist=mylist+[mystr]
+					mylist=mylist+[mystr.lower()]
 					mystr=""
-			mylist=mylist+[mystr]
+			mylist=mylist+[mystr.lower()]
 			for i in new_data:
 				print i.id_tei,i.id
 				if str(i.id_tei) in mylist:
@@ -430,7 +450,7 @@ class ManuscriptResource(resources.ModelResource):
 					newlist= newlist + [i.id]					
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name]," in many-to-many import,:("
+				print "No matching TEI id for:",data[field_name]," in many-to-many import,:("
 		    if field_name<>'affiliations':
 		    	self.import_field(field, obj, data)
 		    else:
@@ -466,7 +486,7 @@ class PageResource(resources.ModelResource):
 										
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name],",:("
+				print "No matching TEI id for:",data[field_name],",:("
 		
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
 			new_data=Org.objects.all()
@@ -478,9 +498,9 @@ class PageResource(resources.ModelResource):
 				if item <> ";":
 					mystr=mystr+item
 				else:
-					mylist=mylist+[mystr]
+					mylist=mylist+[mystr.lower()]
 					mystr=""
-			mylist=mylist+[mystr]
+			mylist=mylist+[mystr.lower()]
 			for i in new_data:
 				print i.id_tei,i.id
 				if str(i.id_tei) in mylist:
@@ -488,7 +508,7 @@ class PageResource(resources.ModelResource):
 					newlist= newlist + [i.id]					
 				index = index + 1 	
 			if not match:
-				print "No matching ticha id for:",data[field_name]," in many-to-many import,:("
+				print "No matching TEI id for:",data[field_name]," in many-to-many import,:("
 		    if field_name<>'affiliations':
 		    	self.import_field(field, obj, data)
 		    else:
@@ -507,8 +527,6 @@ admin.site.register(Person,PersonAdmin)
 #admin.site.register(Person)
 admin.site.register(Place,PlaceAdmin)
 #admin.site.register(Place)
-admin.site.register(Organization,OrganizationAdmin)
-#admin.site.register(Organization)
 admin.site.register(RoleType,RoleTypeAdmin)
 #admin.site.register(RoleType)
 
@@ -529,7 +547,5 @@ admin.site.register(Manuscript,ManuscriptAdmin)
 #admin.site.register(Manuscript)
 admin.site.register(Page,PageAdmin)
 #admin.site.register(Page)
-admin.site.register(Book,BookAdmin)
-#admin.site.register(Book)
 
 

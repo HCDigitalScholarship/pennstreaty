@@ -13,6 +13,8 @@ from xml.etree.ElementTree import Element
 import xml.etree.ElementTree as etree
 import json
 import xlrd
+from QI.models import Place
+from bs4 import BeautifulSoup
 
 
 class Command(BaseCommand): #2
@@ -150,21 +152,59 @@ class Command(BaseCommand): #2
 								place = child.get("key")
 							if child.tag == ns+"date":
 								date = child.get("when")
+				'''
 				teiId = place #LOCATION
+				print place, "Place"
 				found = False#LOCATION
 				row = 0#LOCATION
+
 				while (worksheet.cell(row, 0).value != xlrd.empty_cell.value and found == False):#LOCATION
+					#print worksheet.cell(row, 0).value, "value"
 					if worksheet.cell(row, 0).value == teiId:#LOCATION
 						found = True#LOCATION
 					else:#LOCATION
 						row +=1#LOCATION
 				lat = worksheet.cell(row, 4).value#LOCATION
 				lon = worksheet.cell(row, 5).value#LOCATION
+				'''
+				#print place
+				
+				dj_place_list = Place.objects.filter(id_tei=place)
+				print dj_place_list
+				dj_place="Blue"
+				if dj_place_list==None or dj_place_list==list() or len(dj_place_list)==0: #This stopped working overnight. Just want to know if query was unsuccessful				
+					print place, "not found in database \n"
+					continue
+				else:
+					for i in dj_place_list:
+						if i.latitude <> None:
+							dj_place = i
+							break
+						else:
+							dj_place = i
+						print "DID THIS"
+				lat = dj_place.latitude
+				lon = dj_place.longitude
 				#filler latitude/longitude
-				if lat == "":#LOCATION
+				if lat == '':#LOCATION
+					print "No lat long for",place,"I set this to lat to 42 and lon to 83. \n"
 					lat = 42 #LOCATION
-				if lon == "":#LOCATION
+				if lon == '':#LOCATION
 					lon = 83#LOCATION
+				else:
+					print place, "had lat, lon:",lat,lon,"\n"
+				try:
+					float(lat)
+				except ValueError:
+					print "People are bad at entering data, lat for this is:", lat
+					lat = 42
+					print "set lat to 42"
+				try:
+					float(lon)
+				except ValueError:
+					print "People are bad at entering data, lon for this is:", lon
+					lon = 83
+					print "set lon to 83"					
 				#Important: the spreadsheet is North and West, so you have to make it negative if you dont want to end up in Tajikistan
 				objects[f] = {"location":{"lat" : float(lat), "lon": -float(lon)}, "text":{"headline": date_repr(date), "text" : final_text[f]}, "media":{"url": "https://ds-omeka.haverford.edu/qi/files/fullsize/4e0fe986a9716456496045d5fe4f608f.jpg", "caption" : page_repr(pages_final[f])} }
 			#14
@@ -261,11 +301,48 @@ class Command(BaseCommand): #2
 			list_of_files = []
 			for child in root:
 				list_of_files.append(child.text)
+
+			new_file = False #Use this existing code to detirmine if I need to add a new file to storymapdir
 			if xml_file not in list_of_files:
 				x = etree.SubElement(root, 'file')
 				x.text = xml_file
 				tree.write('static/xml/xml_file_names.xml')
+				new_file = True
+			new_file = True #delete this when ready, just for testing
+			if new_file:
+				mynewfile=""
+				with open('templates/list_of_storymaps.html', 'r+') as f:
+					html_as_string=f.read()
+					print html_as_string
+					soup = BeautifulSoup(html_as_string, 'html.parser')
+					sml = soup.find(id='storymaplist')
+					links = soup.find_all('a')
+					newtag= soup.new_tag('a', id='SMLink', href=xml_file)
+					atag= soup.new_tag('a', href=xml_file)
+					imgtag= soup.new_tag('img', src='../static/img/'+xml_file+'_001.jpg')
+					litag = soup.new_tag('li', id='SMListitem')
+					divtag = soup.new_tag('div', id="SMtext")
+					divtagimg = soup.new_tag('div', id="SMimgdiv")
+					soup.ul.append(litag)
+					litag.append(atag)
+					atag.append(divtagimg)
+					divtagimg.append(imgtag)
+					atag.append(divtag)
+					divtag.append(newtag)
+					newtag.string = title_fin
 
+
+
+					
+					#soup.ul.append(newtag)
+					#newtag.string= title_fin
+					#newtag.append(imgtag)
+					#newtag.wrap(soup.new_tag('li', id='SMListitem'))
+					#print soup
+					mynewfile = soup.prettify()
+				with open('templates/list_of_storymaps.html', 'w') as f:	
+					f.write(mynewfile)
+			
 def pb_start(entries, ns):
 	#determines whether a document has page breaks at the ends of entries or the 
 	#beginning of entries when an entry starts on a new page

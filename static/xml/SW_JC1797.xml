@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model hkey="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model hkey="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-stylesheet type="text/css" hkey="http://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css"?>
+<?xml-stylesheet type="text/css" hkey="http://www.tei-c.org/release/xml/tei/stylesheet/tei.css"?> 
+<?xml-stylesheet type="text/css" hkey="global.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader>
+
+        <fileDesc>
+
+            <titleStmt>
+                <title>Joseph Clark's Account of a Journey to the Indian Country, 1797: Electronic
+                    Version</title>
+
+                <editor>Friends Historical Library</editor>
+                <respStmt>
+                    <resp>Encoded by</resp>
+                    <name>Conor Heins</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <distributor>Friends Historical Library, Swarthmore College</distributor>
+                <address>
+                    <street>500 College Avenue</street>
+                    <addrLine>Swarthmore, Pennsylvania</addrLine>
+                    <postCode>19081</postCode>
+                    <country>United States of America</country>
+                </address>
+                <availability status="free">
+                    <p>This work is the property of the Friends Historical Library of Swarthmore
+                        College. It may be copied freely by individuals for personal use, research,
+                        and teaching (including distribution to classes) as long as this statement
+                        of availability is included in the text. It may be linked to freely in
+                        Internet editions of all kinds, including for—profit works.</p>
+                    <p>Publishers, libraries, and other information providers interested in
+                        providing this text in a commercial or non—profit product or from an
+                        information server must contact Swarthmore College for licensing and cost
+                        information.</p>
+                    <p> Scholars interested in changing or adding to these texts by, for example,
+                        creating a new edition of the text (electronically or in print) with
+                        substantive editorial changes, may do so with the permission of Swarthmore
+                        College. This is the case whether the new publication will be made available
+                        at a cost or free of charge.</p>
+                </availability>
+                <date when="2014">2014</date>
+                <idno type="local">SW_JC1797</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="s" type="project">Native Americans and Quakers: An Electronic
+                    Collection</title>
+            </seriesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+
+                        <title>Joseph Clark's Account of a Journey to the Indian Country</title>
+                    </analytic>
+                    <monogr>
+                        <title level="j">Friends Miscellany</title>
+                        <imprint>
+                            <biblScope unit="volume">1</biblScope>
+                            <biblScope unit="issue">8</biblScope>
+                            <date when="1831">1831:</date>
+                            <biblScope unit="page" from="367" to="380">367-380</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+
+
+
+
+        <encodingDesc>
+            <projectDesc>
+                <p>In the fall semester of 2010, Swarthmore students enrolled in English 50A
+                    (“Reading Red, White, and In-Between in Early American Literature”) transcribed
+                    a number of journals, both published and in manuscript form, which document the
+                    interaction of Quakers and Native Americans. In 2014 a decision was made to
+                    encode these and other journals as part of a larger project to make the
+                    library’s rich store of Quaker Indian mission writings more accessible. The
+                    project was designed by Christopher Densmore, Curator of Friends Historical
+                    Library.</p>
+            </projectDesc>
+
+        </encodingDesc>
+
+
+
+        <profileDesc>
+            <creation>Original written in <date when="1797">1797</date></creation>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="lcsh">
+                    <list>
+                        <item>Quakers</item>
+
+                        <item>Indian reservations</item>
+                        <item>Indians of North America--Missions</item>
+                        <item>New York (State)--Description and travel</item>
+                        <item>Pennsylvania--Description and travel</item>
+
+                        <item>Philadelphia Yearly Meeting of the Religious Society of Friends</item>
+                        <item>Quakers--Pennsylvania--Diaries</item>
+                        <item>Quakers--Political activity</item>
+                        <item>Seneca Indians</item>
+                        <item>Society of Friends--Missions</item>
+                        <item>Voyages and Travels</item>
+
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <change><date/></change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+
+            <div type="preface">
+                <pb n="367" facs="SW_JC1797_Page_01"/>
+
+                <p> In the year 1797, <persName key="jparr1">John Parrish</persName>, a friend and
+                    fa-<lb/> ther in the church, suggested the advantage that<lb/> might arise to
+                    the Indian natives, by bringing a few<lb/> of their young females into this part
+                    of the country,<lb/> in order to instruct them in the useful arts of do-<lb/>
+                    mestic economy, by pitting them in the families<lb/> of suitable Friends, where
+                    they might be carefully educated. </p>
+                <pb n="368" facs="SW_JC1797_Page_02"/>
+                <p> This being a very weighty matter, claimed my<lb/> serious attention, and was
+                    laid before the committee<lb/> appointed by the Yearly Meeting, for promoting
+                    the<lb/> improvement and gradual civilization of the Indian<lb/> natives. The
+                    proposal was acceded to by the com-<lb/>mittee, who furnished me with a
+                    certificate, expres-<lb/>sive of their unity therewith, and addressed to
+                    the<lb/> Indians, as follows: </p>
+            </div>
+        </front>
+
+        <body>
+
+            <div type="letter">
+                <dateline><date when="1797" type="unattested"/><placeName key="phila"
+                        type="unattested"/></dateline>
+                <opener><salute>Brothers,</salute>
+                </opener>
+                <p> We received by our friend, <persName key="hsimm1">Henry Simmons</persName>,<lb/>
+                    a few lines from you. We were glad to hear from<lb/> you, and that your young
+                    men were encouraged to<lb/> walk in the good path, we recommended to you.
+                    It<lb/> did our hearts good, when he told us that you had<lb/> raised corn,
+                    wheat, and other grain, to supply your-<lb/>selves till next crop. We wish you
+                    all to be sober<lb/> and industrious, and learn to be good farmers. </p>
+                <p> Brothers, we understand that you are desirous a<lb/> few of your girls should be
+                    placed in the families of<lb/> some of our friends, and be taught what our
+                    daugh-<lb/>ters are. We rejoice at it, and are willing to take<lb/> three of
+                    them; and our friend, <persName key="jclar1">Joseph Clark</persName>, has<lb/>
+                    agreed to assist in bringing them safe down. They<lb/> (<persName key="hsimm1"
+                        >H. Simmons</persName> and <persName key="jclar1">J. Clark</persName>) will
+                    deliver you this.<lb/>We also have agreed to take two girls from <orgName
+                        key="oneida">Oneida</orgName>, <lb/> and two from the <orgName
+                        key="tuscarora">Tuscaroras</orgName>. </p>
+                <p> Brothers, we expect the girls you send us,<lb/> will remain till they are
+                    eighteen years of age, as our<lb/> daughters are placed by their parents or
+                    friends to<lb/> learn what we want your daughters should know;<lb/> that is,
+                    spinning, weaving, how to make butter, and<lb/>
+                    <pb n="369" facs="SW_JC1797_Page_03"/> such other things as are useful on a
+                    farm. We shall<lb/> place them in such families as will use them kindly,<lb/>
+                    and instruct them in what is needful. </p>
+                <closer><salute> We remain your friends and brothers, </salute>
+                    <signed>
+                        <persName key="jdrin1">JOHN DRINKER</persName></signed>
+                    <signed><persName key="hdrin1">H. DRINKER</persName></signed>
+                    <signed><persName>JOHN PARRISH</persName></signed>
+                    <signed><persName key="tstew1">THOS. STEWARDSON</persName></signed>
+                    <signed><persName key="twist1">THOMAS WISTER</persName></signed>
+                    <signed><persName key="jbidd1">JOHN BIDDLE</persName></signed></closer>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-10"/><placeName key="oneida"></placeName></dateline>
+                <p>Having laid the subject before my family, after<lb/> about two weeks'
+                    consideration and preparation, I<lb/> took an affectionate leave of them on
+                    the<lb/> 16th of the 10th month, 1797, and went to <placeName key="brist"
+                        >Bristol</placeName> in Bucks<lb/> county, where I met with my friend,
+                        <persName key="hsimm1">Henry Sim-<lb/>mons</persName>, jun. who was to be my
+                    companion in the jour-<lb/>ney, which was very satisfactory. But he was
+                    taken<lb/> unwell, after travelling about twenty miles, and con- <lb/> tinued so
+                    during all the journey. </p>
+                <p> When we arrived at New York, a number of ar-<lb/>ticles were purchased for
+                    clothing for the girls, and<lb/> we prosecuted our journey till, in due season,
+                    we<lb/> arrived at <placeName key="oneida">Oneida</placeName>, in the state of
+                    New York, where<lb/> we were received with marks of affection, by the<lb/>
+                    Indians. I was taken to the house of one of the<lb/> Chiefs, his wife having
+                    been informed concerning<lb/> my coming. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-10-29">On the 29th</date>, <placeName>checkPlace</placeName></dateline>
+                <p>
+                    <persName key="ncusi1">Nicholas Cusick</persName>, Chief of the <orgName
+                        key="tuscarora">Tus-<lb/>caroras</orgName>, with his wife, made us a visit.
+                    He is an<lb/> orderly and sensible man. </p>
+                <p> We also had a conference with the <orgName key="stockbridge"
+                        >Stockbridge</orgName> and<lb/>
+                    <orgName key="tuscarora">Tuscarora</orgName> Indians; at which we produced our
+                    certi-<lb/>ficates, and they were read, not only by paragraphs,<lb/> but by
+                    sentences and words. <persName key="haupa1">Hendrick Apaumut</persName><lb/> was
+                    interpreter for the <orgName key="stockbridge">Stockbridge</orgName>, and
+                        <persName key="ncusi1">Nicholas<lb/> Cusick</persName>
+                    <lb/>
+                    <pb n="370" facs="SW_JC1797_Page_04"/> for the <orgName key="tuscarora"
+                        >Tuscaroras</orgName>. Some warriors from<lb/> Niagara, were also present.
+                    At this conference, the<lb/> Indians seemed fully satisfied with the
+                    proposals<lb/> made to them. We informed them that Friends had<lb/> nothing but
+                    love for them and their children; and<lb/> as it was their desire that we should
+                    take their chil-<lb/>dren, we would do it at Friends' expense. On which<lb/>
+                    information, they acknowledged Friends' love for<lb/> them. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-01">11th mo. 1st</date>.<placeName>checkPlace</placeName></dateline>
+                <p> —Had a conference with the prin- <lb/> cipal Chief of the <orgName key="oneida"
+                        >Oneidas</orgName>, about the girls. He re-<lb/>marked, that those of the
+                    young Indians who go out,<lb/> often learn wrong habits; and mentioned some
+                    in-<lb/>stances in the neighbourhood. He further observed,<lb/> that they would
+                    rather the sons of Onas, (meaning of<lb/>
+                    <persName key="wpenn1">William Penn</persName>,) should have their people or
+                    children,<lb/> than any other people; but their judgment was, for<lb/> our women
+                    to come and instruct them; which would<lb/> better preserve their morals, and be
+                    of far greater<lb/> utility amongst the Indians, and which they always<lb/>
+                    understood would be the case, from the first proposal<lb/> made by the
+                    committee. In answer to all this, I re-<lb/>plied, <said who="jclark1">Great
+                        trees grow slow;</said> meaning great<lb/> matters take time to accomplish. </p>
+                <p> He called upon me twice after this, to write a piece<lb/> for their nation. At
+                    first, I declined; but, upon the<lb/> second application, I complied, well
+                    knowing that<lb/> what they requested was the mind of Friends, and<lb/> also of
+                    Government. When it was written, they con-<lb/>ferred together about its
+                    contents; and next day I was<lb/> informed by their Chief that they approved
+                    thereof.<lb/> The purport of it was to warn off some bad tenants,<lb/> who had
+                    settled on their land contrary to law. The<lb/> Chief gave me a name, Onas,
+                    signifying the man who <lb/>
+                    <pb n="371" facs="SW_JC1797_Page_05"/> uses a pen, which I thought no way
+                    suitable for my<lb/> small abilities.</p>
+
+                <p> Being frequently in company with the <orgName key="stockbridge"
+                        >Stockbridge</orgName>
+                    <lb/> Indians, I was induced to believe they are superior,<lb/> especially the
+                    women, to many under our name, who<lb/> make a high profession of religion. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-03">3d</date><placeName>checkPlace</placeName></dateline>
+                <p>Travelling through this settlement, I beheld<lb/> the pleasant situation of the
+                    houses of the natives on<lb/> a rising ground, near a clear, running, stream,
+                    sur-<lb/> rounded with trees which are evergreen;—my mind<lb/> was considerably
+                    humbled on seeing the manner in<lb/> which they lived, and how free they were
+                    from those<lb/> cares and wants, that luxury and pride have intro-<lb/>duced.
+                    Their composure and serenity are remark-<lb/>able. After a long absence of an
+                    Indian, they do not<lb/> show that ecstacy on his return, that we do in
+                    meeting<lb/> a friend in such a case; but, when a suitable time<lb/> offers, he
+                    says, <foreign xml:lang="iro">Satandoxry gawchee!</foreign> that is, <said
+                        who="undetermined">So,<lb/> friend, art thou still in the valley of
+                        tears?</said>
+                </p>
+                <p> About this time, I was informed of an interesting<lb/> circumstance, which
+                    occurred among the <orgName key="wyandot">Wyandot</orgName>
+                    <lb/> nation of Indians, with a deputation from Congress. <lb/> It appears that
+                    in consequence of some encroachments<lb/> of the white people upon the borders
+                    of their land, a<lb/> demur or dissatisfaction arose among the Indians, and<lb/>
+                    the affair demanded the attention of <orgName key="congress">Congress</orgName>,
+                    who<lb/> appointed a certain number of judicious men, of their<lb/> body, to
+                    investigate the grievance. The Indians <lb/> being informed, a council was
+                    called; and at a time<lb/> appointed, the deputies met them, and requested to be
+                    <lb/> furnished with information of the boundaries of their<lb/> territory.
+                    When, to their great surprise, a young<lb/> Indian stepped forth, and on behalf
+                    of the council, in<lb/> a solemn manner, spoke thus: <said who="undetermined">He
+                        who causes the <lb/>
+                        <pb n="372" facs="SW_JC1797_Page_06"/> sun to rise beyond the top of the
+                        eastern hills, and set<lb/> below the brow of the western mountains,—that
+                        hath<lb/> clothed the wilderness with leaves in the spring, and<lb/>
+                        disrobed it again, in the fall.—it is He alone who hath <lb/> set bounds to
+                        our country.</said> This speech so surprised<lb/> the auditory, though men
+                    of great abilities, that they<lb/> knew not what reply or answer to make. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-05">5th</date>. <placeName>checkPlace</placeName></dateline>
+                <p> Favoured with health, though my companion,<lb/>
+                    <persName key="hsimm1">H. Simmons</persName>, jun. labours under the affliction
+                    of the<lb/> ague. <persName key="jtuhi1">John Tuhi</persName> and <persName
+                        key="gcros1">George Crosby</persName> came to see us.<lb/> These men are of
+                        <orgName key="brotherton"> another tribe</orgName>, and appear superior<lb/>
+                    in respect to sobriety and understanding, to many of<lb/> us, who are of a
+                    fairer complexion. Their remarks<lb/> on divers matters were edifying. Speaking
+                    of a<lb/> schoolmaster's qualifications, one of them observed<lb/> that the sort
+                    of master they wanted, or required<lb/> amongst them was, not only one who was
+                    qualified to<lb/> teach children, and keep the school in order, but one<lb/> who
+                    would be an example to their parents. </p>
+                <p> These men offered us their horses to ride to their<lb/>
+                    <orgName key="brotherton">nation</orgName>, and they would go on foot, being
+                    about<lb/> seventeen computed miles, through a country almost<lb/> impassible at
+                    this season: but I could not accede to<lb/> their kind proposal. </p>
+                <p> Had a meeting this morning. A number of Indians<lb/> came to see us,
+                    notwithstanding it was very stormy.<lb/> I thought this a day of refreshment,
+                    both in our little<lb/> sitting, and in some remarks made by the natives. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-06">6th</date>. <placeName>checkPlace</placeName></dateline>
+                <p> A cold morning;—the wind north-east, and<lb/> the waters high in the creeks,
+                    from the thaw of snow<lb/> that had occurred. We intended to set out for
+                        <placeName key="stockbridge">Stock-<lb/> bridge</placeName> on foot, but as
+                        <persName key="hsimm1">my companion</persName> was much re-<lb/> duced by
+                    having the ague, together with some bag-<lb/> gage we had to take, it seemed a
+                    little difficult. But <lb/>
+                    <pb n="373" facs="SW_JC1797_Page_07"/> He who is a present help was near to
+                    provide; for a<lb/>
+                    <orgName key="stockbridge">Stockbridge</orgName> Indian came to the house at the
+                    hour we<lb/> intended to depart, and agreed to carry our burdens.<lb/> From my
+                    feelings, I had cause of thankfulness for<lb/> being here; believing the Lord is
+                    bringing about a<lb/> great work in the earth.</p>
+                <p> A man, called a <orgName key="bapt">Baptist</orgName> minister, was at
+                        <placeName key="stockbridge">Stock-<lb/> bridge</placeName>. The Indians
+                    snowed him our certificate; at<lb/> which he expressed his approbation, and
+                    offered us<lb/> the use of his horse for a few days. </p>
+                <p> Here we were informed that the <orgName key="oneida">Oneida</orgName>'s
+                    conclu-<lb/> sion not to send their girls from their nation, had<lb/> such an
+                    effect upon the <orgName key="tuscarora">Tuscaroras</orgName>, that
+                    notwith-<lb/> standing we had delivered clothing for their children,<lb/> we had
+                    to recommend them to deliver it to those who<lb/> offered voluntarily. We could
+                    have had many more<lb/> of the <orgName key="stockbridge">Stockbridge</orgName>
+                    children, than were specified in <lb/> our certificate; but to keep as near as
+                    possible to<lb/> what was therein contained, was our earnest desire. </p>
+                <p>
+                    <persName key="hsimm1">My companion</persName> was so ill as we travelled
+                    along,<lb/> that he entreated me to permit him to lie down on<lb/> the wet logs;
+                    which I could not suffer; and whether<lb/> he would be able to reach the house
+                    intended was un-<lb/> certain,—the road being so very miry. His illness<lb/> was
+                    a considerable exercise to me, not only at this<lb/> time, but many others. At
+                    length, we arrived at our<lb/> Indian brother's, where we were treated with
+                    great<lb/> kindness, and much hospitality. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-07">7th</date>. <placeName>checkPlace</placeName></dateline>
+                <p> A fine morning. My mind often felt the<lb/> sweet influences of Divine Goodness;
+                    and I could be-<lb/> hold its salutary effects among some of these inhabi-<lb/>
+                    tants of the wilderness. Their penetration and judg-<lb/> ment in religious
+                    matters, are very evident and<lb/> striking, as may appear in the following
+                    narrative. </p>
+
+                <pb n="374" facs="SW_JC1797_Page_08"/>
+                <floatingText type="narrative">
+                    <body>
+                        <ab>It appears that two young men were prepared at<lb/>
+                            <placeName>Princeton college</placeName>, to be sent as missionaries
+                            among<lb/> the Indians. And in order to habituate themselves<lb/> to the
+                            hardships that awaited them, they lodged upon<lb/> boards. When they set
+                            out upon their mission, seve-<lb/> ral persons of respectability
+                            accompanied them to<lb/> the <orgName key="creek">Creek
+                            Nation</orgName>. When arrived, the Chiefs were<lb/> called,—a
+                            conference was held with them, and it was<lb/> proposed to call a
+                            Council; which being met, the<lb/> visitors informed them that they had
+                            brought two<lb/> ministers of the gospel to preach salvation to
+                            them;<lb/> and also a number of books, which would lead them<lb/> the
+                            way to heaven. The Indians received the infor-<lb/> mation, without
+                            apparent emotion; and said they<lb/> would consider the subject; which
+                            should occupy the<lb/> space of fourteen days. Meanwhile the young
+                            minis-<lb/> ters proposed preaching; but the Indians would not<lb/>
+                            suffer them, until their own conclusions were made.<lb/> At the
+                            expiration of the fourteen days, the Indians<lb/> made inquiry, whether
+                            they had any dark-coloured<lb/> people among them, and whether they
+                            preached the<lb/> gospel of salvation to them: whether they gave
+                            them<lb/> those good books, which would show them the way to<lb/>
+                            heaven; or, whether they treated them as slaves, or<lb/> as brothers.
+                            Being answered accordingly, the In-<lb/> dians again spoke, <said
+                                who="undetermined">Go home, and preach the gospel<lb/> of salvation
+                                to them; give them those good books, that<lb/> will learn them the
+                                way to heaven;—treat them as<lb/> brethren, and not as slaves; then
+                                come and preach to<lb/> us.</said> In consequence of this refusal,
+                            the whole mis-<lb/> sionary company returned; and one of them who
+                            was<lb/> in the station of a congress-man, was so effected with<lb/> the
+                            circumstance, that he emancipated all his slaves.</ab>
+                    </body>
+                </floatingText>
+                <p>When I came home, I called upon the person, and <lb/>
+                    <pb n="375" facs="SW_JC1797_Page_09"/> inquired more fully respecting the
+                    matter, when he<lb/> readily, seriously, and fully confirmed the same. </p>
+                <p> I never experienced greater kindness than from the<lb/> Indians. I had not only
+                    their horses to ride, but a<lb/> guide from place to place, The natives would
+                    not<lb/> permit me even to carry my portmanteau, nor scarce-<lb/> ly to go over
+                    a bridge that was dangerous, but offered<lb/> to carry me over in their arms;
+                    though I would not<lb/> suffer them. When I lodged with the Indians, they<lb/>
+                    would build a large fire at bed-time, in the room that<lb/> I occupied, and
+                    always renewed it at midnight;—the<lb/> family being remarkably still, whether
+                    up or a-bed. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-08">8th</date>. <placeName key="broth"/></dateline>
+                <p> A hard frost. This morning, set out for <placeName key="broth"
+                        >Bro-<lb/>thertown</placeName>, having the Chief's horse to ride, with
+                    one<lb/> of their principal men for a guide. We travelled<lb/> through a most
+                    fertile country, over logs, and thro'<lb/> bushes, at the rate of about a mile,
+                    and sometimes<lb/> two, in an hour. Arrived at <placeName key="broth"
+                        >Brothertown</placeName> in the<lb/> evening, and were treated with all the
+                    kindness we<lb/> could ask. Having comfortably lodged here one<lb/> night, the
+                    next day we set out for <placeName key="fschy">Fort Schuyler</placeName>,<lb/>
+                    being still accommodated with horses and a guide.<lb/> The roads were beyond
+                    description, bad; but we<lb/> were favoured to reach <placeName key="fschy">Fort
+                        Schuyler</placeName>, in the even-<lb/> ing,—having previously agreed to
+                    meet our family<lb/> of female Indians at this place. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-10">10th</date>. <placeName>checkPlace</placeName></dateline>
+                <p> This morning our Indian girls came, each<lb/> one accompanied by her parent or
+                    guardian. The<lb/> business of parting was conducted with great serious-<lb/>
+                    ness, for the Indians delivered their children to us<lb/> with the utmost
+                    confidence and quietude: which<lb/> brought over my mind a considerable weight
+                    of con-<lb/> cern and care, that nothing on my part, might ob-<lb/> struct this
+                    great and important work. The girls ma-<lb/>
+                    <pb n="376" facs="SW_JC1797_Page_10"/> nifested much stillness and composure, at
+                    taking<lb/> leave of their parents, to go a long journey, with<lb/> perfect
+                    strangers, to reside in a distant land. So we<lb/> went to the <geogName
+                        key="mohaw">Mohawk river</geogName>, and they stepped into<lb/> the boat,
+                    wrapped their faces in their blankets, and<lb/> I do not remember that they
+                    uttered a word. We<lb/> now had to pass down this river about one hundred<lb/>
+                    miles, but got on very well the first day's voyage. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-11">11th</date>.<placeName>checkPlace</placeName></dateline>
+                <p> Very cold this morning, especially on the<lb/>
+                    <geogName key="mohaw">Mohawk</geogName>. We arrived at the Falls about
+                    breakfast-<lb/> time. These wonderful works of Providence are<lb/> very striking
+                    to every rational beholder. The water-<lb/> fall is fifty-one feet between the
+                    tremendous rocks,<lb/> which form a perfect stone wall for the space of<lb/>
+                    twenty miles along the river. This river receives<lb/> the fewest creeks of any
+                    I know of; consequently it<lb/> keeps nearly the same height, and is not
+                    affected by<lb/> any tide. Travellers often stop, kindle a fire on its<lb/>
+                    banks, and dress their meal. </p>
+                <p>
+                    <persName key="hsimm1">My companion</persName> continues ill, increasingly so,
+                    by<lb/> being much exposed to the cold in an almost open<lb/> boat, while the
+                    hills and fields are covered with snow.<lb/> About four o'clock in the afternoon
+                    we arrived at<lb/>
+                    <placeName key="schen">Schenectady</placeName>, and procured comfortable
+                    lodgings,<lb/> which could not be obtained at every place. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-12">12th</date>.<placeName>checkPlace</placeName></dateline>
+                <p> A rainy morning. I felt well in health,<lb/> through favour, tho' my companion,
+                        <persName key="hsimm1">H. Simmons</persName>,<lb/> was still affected with
+                    the ague. Being first-day,<lb/> early in the morning, we were taken about
+                    fourteen<lb/> miles in a carriage to <placeName key="alban">Albany</placeName>,
+                    where we tarried at<lb/> the house of our kind friend, <persName key="pfiel1"
+                        >Peter Field</persName>, during<lb/> the remainder of this day, which I
+                    spent chiefly in<lb/> reading the Book of Martyrs. There are but three<lb/>
+                    families of Friends in this place, who are not thought <lb/>
+                    <pb n="377" facs="SW_JC1797_Page_11"/> qualified to hold a meeting: therefore,
+                    they and their<lb/> children must suffer great privation and loss, in the<lb/>
+                    most serious and important part; for, being full<lb/> twenty miles from the
+                    nearest meeting, perhaps<lb/> these young people but seldom attend. </p>
+                <p> It would be wisdom for parents carefully to weigh<lb/> every difficulty, in
+                    removing with their tender off-<lb/> spring, to settle far from meeting, and not
+                    let the<lb/> perishing things of this world have too much sway.<lb/> He who is
+                    rich in mercy, can mar abundance, and<lb/> bless a little; for <quote
+                        type="biblical">the earth is the Lord's, and the<lb/> fullness thereof.</quote>
+                </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-13">13th</date>. <placeName>checkPlace</placeName></dateline>
+                <p> A fine mild morning. The wind being fa-<lb/> vourable, we took passage in a
+                    sloop for New York.<lb/> I felt a degree of thankfulness that the Lord had<lb/>
+                    thus far preserved us, and our family of girls. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-14">14th</date>. <placeName>checkPlace</placeName></dateline>
+                <p> A rainy morning, though mild. Our girls<lb/> conduct themselves with so much
+                    propriety, that<lb/> they are remarked by persons of respectability. My<lb/>
+                    mind was frequently exercised, so as not to suffer<lb/> me to sleep; hoping
+                    nothing might befall my tender<lb/> children, that would obstruct this good
+                    work, which<lb/> the Lord is about to carry on from sea to sea, and to<lb/> the
+                    uttermost parts of the earth. </p>
+                <p> We left <placeName key="alban">Albany</placeName> about four o'clock in the
+                    after-<lb/> noon, and came to <placeName key="huds">Hudson</placeName> that
+                    night, about thirty<lb/> miles; notwithstanding we were aground, and laid<lb/>
+                    at anchor till the tide floated us off. Next day we<lb/> had a head wind; but
+                    our family appeared cheerful,<lb/> which is a considerable satisfaction, and
+                    cause of<lb/> thankfulness unto Him who is a present helper in<lb/> every
+                    needful time. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-16">16th</date>. <placeName key="nycit"/></dateline>
+                <p> A clear, cold morning. Run aground by<lb/> means of a strong wind from the
+                    western shore, about <lb/>
+                    <pb n="378" facs="SW_JC1797_Page_12"/> nine miles above New York. When the tide
+                    was in<lb/> favour, we carried out our anchor, but all endeavours<lb/> at this
+                    time, proved in vain; and we were obliged to<lb/> remain in the cold, until the
+                    tide should rise again.<lb/> In the evening, we renewed our efforts, and
+                    were<lb/> favoured to effect our design. We arrived opposite<lb/> New York about
+                    nine o'clock in the evening, but<lb/> the tide run so strong that the captain
+                    said he could<lb/> not bring the vessel to shore. Being desirous of mo-<lb/>
+                    ving forward as fast as practicable, we engaged the<lb/> boat to take us ashore;
+                    which being covered with ice<lb/> on every part, and tossing so much, that it
+                    was with<lb/> difficulty we could get in. At length we arrived<lb/> safely in
+                    New York, and were kindly received by<lb/> our friend <persName key="epryo1"
+                        >Edmund Pryor</persName>; and may truly say, from<lb/> the tenderness that
+                    was shown to us, and to the In-<lb/> dian girls, it was " like a brook by the
+                    way." </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-17">17th</date>.<placeName key="bruns"/></dateline>
+                <p> A snowy morning. Friends manifested<lb/> much kindness towards us, particularly
+                        <persName key="jdela1">Joseph De-<lb/>laplaine</persName>, who accompanied
+                    us to the vessel, and pre-<lb/>sented to each of the girls a piece of silver. We
+                    ar-<lb/> rived safely at <placeName key="bruns">Brunswick</placeName> about
+                    seven o'clock in<lb/> the evening. There was here, at this time, a certain<lb/>
+                    great man from Poland, who had never seen an In-<lb/> dian, and was desirous of
+                    being introduced to the<lb/> girls. They being in a private room at supper,
+                    he<lb/> walked in to take a view of them. When he beheld<lb/> their orderly
+                    deportment, he seemed much surpri-<lb/> sed; and after walking round the table
+                    where they<lb/> were sitting, he said, <said who="#kosci">These are almost
+                        civilized<lb/> already.</said> I informed him that the father of one of<lb/>
+                    them would not drink wine. </p>
+                <p> The same evening, the Poland general and his<lb/> company came into the room,
+                    where <persName key="hsimm1">my companion</persName>
+                    <lb/>
+                    <pb n="379" facs="SW_JC1797_Page_13"/> and I were sitting. In the course of the
+                    conversa-<lb/> tion, the word thou was used, which attracted the<lb/> attention
+                    of a young man, who remarked in French<lb/> to the general, that we, as a
+                    people, had a very un-<lb/> couth way of speaking thou; — he apprehended, as
+                    I<lb/> suppose, that we should not understand what he<lb/> said in that
+                    language. However, I informed him,<lb/> that it was the language of the Almighty
+                    to the first<lb/> man, Adam; therefore bid him not reflect upon the<lb/> people
+                    for using the language, which the Lord had<lb/> taught them. He looked confused;
+                    and the Polander,<lb/> who understood English, appeared to favour the ob-<lb/>
+                    servation. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-18">18th</date>.<placeName key="brist"/></dateline>
+                <p> Set out before day, and reached <placeName>Princeton</placeName><lb/> by
+                    breakfast-time. Through the continuance of Di-<lb/> vine favour, my family
+                    continue well, except <persName key="hsimm1">He-<lb/>nry</persName>, whose ague
+                    remains with him. Passing on, we<lb/> arrived safely at <placeName key="brist"
+                        >Bristol</placeName> in Pennsylvania, where we<lb/> parted. <persName
+                        key="hsimm1">Henry</persName> took charge of the children, and<lb/> went to
+                    his home in that neighbourhood, where it<lb/> was concluded the girls should
+                    remain until I should<lb/> return from <placeName key="phila"
+                        >Philadelphia</placeName>. Accordingly I took pas-<lb/> sage in the stage,
+                    and reached home about nine<lb/> o'clock in the evening; where, through the
+                    favour<lb/> of a kind, preserving Providence, I found my fami-<lb/>ly well, and
+                    we were mutually rejoiced to see each<lb/> other. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-19">19th</date>.<placeName key="phila"/></dateline>
+                <p> A few Friends were called together, in or-<lb/> der to be informed of my
+                    proceedings, and to con-<lb/> sider what necessary step should be taken
+                    next.--<lb/> They expressed their satisfaction with my commu-<lb/> nication, and
+                    concluded that I should return the next <lb/> day to <persName key="hsimm1"
+                        >Henry Simmons</persName>'s, and bring the girls down<lb/> to <placeName
+                        key="phila">Philadelphia</placeName>. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1797-11-20">20th</date>.<placeName>checkPlace</placeName></dateline>
+                <p> Rode to <placeName key="brist">Bristol</placeName>, and next morning to
+                    Hen-<lb/>ry <persName key="hsimm1">Simmons</persName>'s, where the girls,
+                    remained during my<lb/> absence. </p>
+                <pb n="380" facs="SW_JC1797_Page_14"/>
+                <p> Being equipped, we again set out, and ar-<lb/>rived at my house about sun-set.
+                    The girls continu-<lb/>ed with us for three days; during which time, they<lb/>
+                    conducted themselves in an orderly manner; and<lb/> occasionally read the
+                    Scriptures. Many Friends call-<lb/>ed to see them, and gave them a number of
+                    small<lb/> presents. </p>
+                <p> The next concern was, to find suitable places for<lb/> them. We accordingly set
+                    out for <persName key="jemle1">James Emlen</persName>'s,<lb/> in Delaware
+                    county, where we arrived safely, and<lb/> were kindly treated. </p>
+            </div>
+            <div type="entry">
+                <dateline>On first-day, <date when="1797-11-26">the 26th,</date><placeName>checkPlace</placeName></dateline>
+                <p> we had them all taken to<lb/> meeting, where they behaved in a becoming
+                    man-<lb/>ner. In the course of a few days, we had them sta-<lb/>tioned at the
+                    Friends' houses, who were willing to<lb/> take charge of them, and instruct them
+                    in the busi-<lb/>ness of housewifery. Two of the girls were placed<lb/> with
+                        <persName key="ncoop1">Nathan Coope</persName> and son;—one, with a
+                    woman<lb/> Friend, who had a concern to take charge of one of<lb/> the
+                    Indians;—one was placed with the family of<lb/>
+                    <persName key="wjack1">William Jackson</persName>, and the remaining two with
+                        <persName key="ijack1">Isaac<lb/> Jackson</persName>. At my taking leave of
+                    them, they wept<lb/> considerably; and I felt much tenderness toward<lb/> them,
+                    when I reflected upon the confidence which<lb/> their parents had placed in me.
+                    On looking over<lb/> this journey, I may thankfully acknowledge, that<lb/>
+                    through adorable mercy, I have witnessed preserva-<lb/>tion; and may the great
+                    Preserver of men have the<lb/> praise </p>
+            </div>
+        </body>
+    </text>
+</TEI>
