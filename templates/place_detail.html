@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+{% include 'top-links.html' %}
+<title>Place info</title>
+</head>
+
+<body>
+
+    <header>
+            <div class = "overlay-container">
+              <img src="{% static "img/qandi.png" %}" alt="Header img" />
+                <div class = "overlay1 show-for-large-up">
+                  <strong>Person, Place &amp; Organization Profiles</strong>
+                </div>
+          </div>
+
+      </header>
+
+
+    <div id = "about1">
+    	{% include 'nav.html' %}
+    </div>
+
+
+<div id = "about2">
+    <div id = "main-content">
+
+
+        <div type= "letter" class = "panel radius">
+           <h2 class = "text-center">place information</h2>
+           <p><b>Name:</b> {{ place.name }}</p>
+           <p></b>Alternate Names:</b> {{ place.alternate }}</p>
+           <p><b>State:</b> {{ place.state }}</p>
+           <p><b>Location:</b> {{ place.latitude }} N, {{ place.longitude }} W</p>
+           <p><b>Notes:</b> {{ place.notes }}</p>
+
+           <p><i>note: i'm unsure what else to place here, but i'll wait til all the
+           data is in the database to figure that out</i></p>
+
+           <a href="{% url 'Person Profiles' %}"> &rarr; back to list of profiles</a>
+          </div>
+        </div>
+
+</div>
+
+{% include 'footer.html' %}
+
+{% include 'bottom-links.html' %}
+
+
+</body>
+</html>

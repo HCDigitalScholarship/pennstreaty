@@ -1,8 +1,8 @@
 from django.views.generic.base import TemplateView
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.template import RequestContext, loader
 from django.shortcuts import render, render_to_response
-from django.core import management
+from django.core import management, serializers
 from models import Person
 from models import Place
 from models import Organization
@@ -24,6 +24,62 @@ def organizations(request):
 	return render(request, 'organizations.html')
 
 
+#becky is adding this next few as a test to see if a given person/place/org page will work
+def person_detail(request,id):
+	try:
+		person = Person.objects.get(id_tei = id)
+	except Person.DoesNotExist:
+		raise Http404('this person does not exist')
+	return render(request,'person_detail.html',{
+	'person':person
+	})
+
+def place_detail(request,id):
+	try:
+		place = Place.objects.get(id_tei = id)
+	except Place.DoesNotExist:
+		raise Http404('this place does not exist')
+	return render(request,'place_detail.html',{
+	'place':place,
+	})
+
+def org_detail(request,id):
+	try:
+		org = Organization.objects.get(id_tei = id)
+	except Organization.DoesNotExist:
+		raise Http404('this organization does not exist')
+	return render(request,'org_detail.html',{
+	'org':org,
+	})
+
+def beckytest(request):
+	orgs = Organization.objects.all()
+	persons = Person.objects.all()
+	places = Place.objects.all()
+	return render(request, 'test.html', {
+	'orgs':orgs,'persons':persons,'places':places
+	})
+
+def beckytest2(request,id):
+	# data = serializers.serialize("json",Person.objects.get(id_tei=id))
+	try:
+		items = serializers.serialize("json",Person.objects.all())
+	except Person.DoesNotExist:
+		try:
+			items = serializers.serialize("json",Place.objects.get(id_tei=id))
+		except Place.DoesNotExist:
+			try:
+				items = serializers.serialize("json",Organization.objects.get(id_tei=id))
+			except Organization.DoesNotExist:
+				raise Http404('this item does not exist')
+	return render(request, 'samplejson.html', {
+	'items':items
+	})
+
+
+
+
+#this is the end of what becky did
 
 def profiles(request):
 	person_list = Person.objects.order_by('last_name')
@@ -33,7 +89,7 @@ def profiles(request):
 
 def storymap(request, xml_id):
 	return render(request, 'story_maps/' + xml_id + '.html')
-	
+
 def storymap_dir(request):
 	return render(request, 'storymap_dir.html')
 def SMimport(request):
@@ -84,5 +140,3 @@ def SMimport(request):
 
 class Home(TemplateView):
 	template_name = 'index.html'
-
-

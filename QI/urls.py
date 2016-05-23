@@ -31,6 +31,11 @@ urlpatterns = [
     url(r'^organizations/$', 'QI.views.organizations', name = "Organizations page"),
     url(r'^admin/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
     url(r'^admin/QI/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
+    url(r'^person/(?P<id>\S+)/', 'QI.views.person_detail', name = "person_detail"),
+    url(r'^place/(?P<id>\S+)/', 'QI.views.place_detail', name = "place_detail"),
+    url(r'^org/(?P<id>\S+)/', 'QI.views.org_detail', name = "org_detail"),
+    url(r'^alltheinfo', 'QI.views.beckytest', name = "testinfo"),
+    url(r'^something/(?P<id>\S+)/', 'QI.views.beckytest2', name = "testinfo2")
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

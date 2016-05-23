@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include 'top-links.html' %}
+
+    <title>Profiles </title>
+
+  </head>
+
+  <body>
+
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id = "row2">
+  <div class = "row">
+    <br />
+    <h1>{{ person.first_name }} {{ person.last_name }}</h1>
+    <br />
+  </div>
+
+</div>
+
+<div id = "row3">
+  <div class = "row full-width text-center">
+    <br />
+
+    <div class = "large-6 medium-6 small-12 columns">
+
+        <h3> Profile</h3>
+
+
+          <p class="text-left"><b>Other Names:</b> {{ person.other_names }} </p>
+          <p class="text-left"><b>Assumed Gender:</b> {{ person.gender }} </p>
+          <p class="text-left"><b>Birth Date:</b> {{ person.birth_date }} </p>
+          <p class="text-left"><b>Birth Place:</b> {{ person.birth_place}} </p> <!--Add Link Here!!!-->
+
+          <p class="text-left"><b>Death Date:</b> {{ person.death_date }} </p>
+          <p class="text-left"><b>Death Place:</b> {{ person.death_place }} </p> <!--Add Link Here!!!-->
+          <p class="text-left"><b>Affiliations:</b> {{  person.affiliations }} </p> <!--Add Link Here!!!-->
+
+          <p class="text-left"><b>Notes:</b> {{ person.bio_notes }}</p>
+
+          <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>
+
+
+        <br />
+    <br />
+
+<h3> Related Documents </h3>
+  </div>
+    <div class = "large-6 medium-6 small-12 columns">
+      <div id="borderimg2" class = "show-for-medium-up">
+        <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+
+	<!-- image of person -->
+	<li><img src="{% static "img/bluebox.png" %}""/></li>
+
+        </ul>
+    </div>
+  </div>
+  <div class = "large-6 medium-6 small-12 columns">
+      <div id="borderimg3" class = "show-for-small-down">
+        <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+          <li><img src="{% static "img/bluebox.png" %}""/></li>
+
+        </ul>
+    </div>
+  </div>
+    <br />
+
+  </div>
+</div>
+
+ {% include 'footer.html' %}
+
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>
