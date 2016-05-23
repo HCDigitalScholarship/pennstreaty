@@ -10167,6 +10167,10 @@ i.fa.fa-times:hover {
 	margin-right:10px;
 	background-color:#1173C2;
 }
+#SMListitem:hover {
+	border: 3px solid #C4C82C;
+}
+
 #SMListitem img {
 	width: 50%;
 	height: auto;
