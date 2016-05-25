@@ -37,7 +37,7 @@ class Person(models.Model):
 	affiliations = models.ManyToManyField('Org', blank = True)
 
 	def __unicode__(self):
-		return self.id_tei + " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)      
+		return self.id_tei + " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)
 #
 class Place(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
@@ -88,15 +88,8 @@ class Organization(models.Model):
 	citations = models.TextField("Description Field", blank = True)
 	def __unicode__(self):
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
-<<<<<<< HEAD
-
-
-## Some dumb-dumb may have accidentally put in Org when Organization already exsisted, but I am not sure what from Organization we want to keep though
-=======
-	'''
 """
 ## Some dumb-dumb may have accidentally put in Org when Organization already exsisted, but I am not sure what from Organization we want to keep though
->>>>>>> 9a105c873b9611437730c4ec2437be7f196800c0
 class Org(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50) #all the others have this but it might be unneccessary
 	organization_name = models.CharField("Name of Organization", max_length = 200, blank = True)
@@ -119,12 +112,8 @@ class Org(models.Model):
 	lcnaf_uri = models.CharField("LCNAF URI", max_length = 50, blank = True)
 	citations = models.TextField("Description Field", blank = True)
 	def __unicode__(self):
-<<<<<<< HEAD
-		return self.name
-
-=======
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
->>>>>>> 9a105c873b9611437730c4ec2437be7f196800c0
+
 
 class RoleType(models.Model):
 	role = models.CharField("Role_Type", max_length = 50, blank = True)
@@ -204,9 +193,9 @@ class Page(models.Model):
 
 
 
-<<<<<<< HEAD
 #this one goes with the top 2 that were for testing
 #was trying yo get things to work for foreign key fields but was struggling
+"""
 class Book(models.Model):
 
     name = models.CharField('Book name', max_length=100)
@@ -220,6 +209,4 @@ class Book(models.Model):
 
     def __unicode__(self):
         return self.name
-=======
-
->>>>>>> 9a105c873b9611437730c4ec2437be7f196800c0
+"""

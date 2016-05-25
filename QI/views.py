@@ -45,8 +45,8 @@ def place_detail(request,id):
 
 def org_detail(request,id):
 	try:
-		org = Organization.objects.get(id_tei = id)
-	except Organization.DoesNotExist:
+		org = Org.objects.get(id_tei = id)
+	except Org.DoesNotExist:
 		raise Http404('this organization does not exist')
 	return render(request,'org_detail.html',{
 	'org':org,
@@ -63,18 +63,19 @@ def beckytest(request):
 def beckytest2(request,id):
 	# data = serializers.serialize("json",Person.objects.get(id_tei=id))
 	try:
-		items = serializers.serialize("json",Person.objects.all())
+		items = serializers.serialize("json",[Person.objects.get(id_tei=id)])
+		#ok so this above statement works but it is not what i want. i want a list of one person. help
+		# maybe ill just put brackets?? around something?
 	except Person.DoesNotExist:
 		try:
-			items = serializers.serialize("json",Place.objects.get(id_tei=id))
+			items = serializers.serialize("json",[Place.objects.get(id_tei=id)])
 		except Place.DoesNotExist:
 			try:
-				items = serializers.serialize("json",Organization.objects.get(id_tei=id))
-			except Organization.DoesNotExist:
+				items = serializers.serialize("json",[Org.objects.get(id_tei=id)])
+			except Org.DoesNotExist:
 				raise Http404('this item does not exist')
-	return render(request, 'samplejson.html', {
-	'items':items
-	})
+	return HttpResponse(items, content_type='application/json')
+
 
 
 
@@ -174,7 +175,7 @@ def XMLimport(request):
 		print trunc_fileName
 		print fileName
 		print '/static/xml/'+fileName
-		
+
 		#This is pretttty hacky and may have some problems
 		#I am changing the working directory so that python writes it into the spot I want it to
 		#Is there a better way to do this? Probably. Can probably do it where you open the file, but that wasn't working for me
