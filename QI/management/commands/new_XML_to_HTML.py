@@ -372,6 +372,7 @@ def xml_to_html(xml_file):
       except IndexError:
 	print "It looks like the id of the manuscript did not exist"
 	print "this is going to be an error" #Might want to update this. It would be SICK if it would catch it and then throw something up on the page
+	id_manuscript=None
       print id_manuscript, "man id"
       with open('sample.txt', "w") as f:
 	      for html in html_list:

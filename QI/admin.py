@@ -75,8 +75,6 @@ class PersonResource(resources.ModelResource):
 	#there is almost definitely a better (built-in) way to do this...
 	#But this works...
 	def import_obj(self, obj, data, dry_run):
-		global bp_dp_problems
-		global aff_problems
 		newlist=[]
 		for field in self.get_fields():
 		    skip=False
@@ -141,9 +139,21 @@ class PersonResource(resources.ModelResource):
 		fields =('id', 'id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations')
 		#exclude = ('id')
 class PersonAdmin(ImportExportModelAdmin):
-	fields = ['id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations']
+	fields = ['id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender','bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations']
 	resource_class = PersonResource
-	list_display = ('last_name' , 'first_name', 'id_tei')
+	def the_affiliations(self,obj):	
+		print obj.affiliations, "aff"
+		aff_list = obj.affiliations.all()
+		mystring=""
+		for aff in aff_list:
+			mystring = mystring+aff.organization_name+", "
+		#check if 1 otherwise this
+		if mystring==", ":
+			return "(none)"
+		else:
+			return mystring[0:-2]
+	search_fields=(['id_tei','last_name','first_name','affiliations__id_tei','affiliations__organization_name',])
+	list_display = ('last_name' , 'first_name', 'id_tei','the_affiliations')
 	pass
 
 ############################## break between classes ##############################
@@ -189,7 +199,9 @@ class PlaceResource(resources.ModelResource):
 class PlaceAdmin(ImportExportModelAdmin):
 	fields = ['id_tei', 'name', 'state', 'latitude', 'longitude', 'notes', 'notes2', 'place_type', 'alternate','date']
 	resource_class = PlaceResource
-	list_display = ('name', 'id_tei')
+	list_filter = ("state",)
+	search_fields=(['id_tei', 'name', 'state'])
+	list_display = ('id_tei','name','state')
 	pass
 
 ############################## break between classes ##############################
@@ -242,6 +254,7 @@ class RoleTypeResource(resources.ModelResource):
 
 class RoleTypeAdmin(ImportExportModelAdmin):
 	fields = ['role', 'description']
+	search_fields=(['role'])
 	resource_class = RoleTypeResource
 	pass
 
@@ -372,7 +385,9 @@ class OrgResource(resources.ModelResource):
 class OrgAdmin(ImportExportModelAdmin):
 	fields = ['id_tei', 'organization_name', 'notes', 'associated_spellings', 'PYM_index','place_id','other_names','date_founded','date_dissolved','org_type','data_notes','lcnaf_uri','citations']
 	resource_class = OrgResource
-	list_display=(['id_tei','organization_name','id','org_type'])
+	list_filter = ("org_type",)
+	search_fields=(['id_tei', 'organization_name'])
+	list_display=(['id_tei','organization_name','org_type'])
 
 ############################## break between classes ##############################
 
@@ -519,9 +534,11 @@ class PageResource(resources.ModelResource):
 		model = Page
 		fields = ['id', 'id_tei', 'Manuscript_id', 'img_url', 'fulltext']
 class PageAdmin(ImportExportModelAdmin):
-	class Meta:
-		fields = ['id_tei', 'Manuscript_id', 'img_url', 'fulltext']
-		resource_class = PageResource
+	fields = ['id_tei', 'Manuscript_id', 'img_url', 'fulltext']
+	
+	resource_class = PageResource
+	search_fields = (['id_tei','Manuscript_id__title'])
+	list_display = (['id_tei','Manuscript_id'])
 
 admin.site.register(Person,PersonAdmin)
 #admin.site.register(Person)
