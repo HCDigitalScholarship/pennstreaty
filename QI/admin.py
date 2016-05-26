@@ -142,7 +142,6 @@ class PersonAdmin(ImportExportModelAdmin):
 	fields = ['id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender','bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations']
 	resource_class = PersonResource
 	def the_affiliations(self,obj):	
-		print obj.affiliations, "aff"
 		aff_list = obj.affiliations.all()
 		mystring=""
 		for aff in aff_list:
@@ -152,6 +151,7 @@ class PersonAdmin(ImportExportModelAdmin):
 			return "(none)"
 		else:
 			return mystring[0:-2]
+	filter_horizontal = ('affiliations',)
 	search_fields=(['id_tei','last_name','first_name','affiliations__id_tei','affiliations__organization_name',])
 	list_display = ('last_name' , 'first_name', 'id_tei','the_affiliations')
 	pass
