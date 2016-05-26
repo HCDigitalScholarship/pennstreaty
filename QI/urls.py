@@ -35,8 +35,8 @@ urlpatterns = [
     url(r'^person/(?P<id>\S+)/', 'QI.views.person_detail', name = "person_detail"),
     url(r'^place/(?P<id>\S+)/', 'QI.views.place_detail', name = "place_detail"),
     url(r'^org/(?P<id>\S+)/', 'QI.views.org_detail', name = "org_detail"),
-    url(r'^alltheinfo', 'QI.views.beckytest', name = "testinfo"),
-    url(r'^something/(?P<id>\S+)/', 'QI.views.beckytest2', name = "testinfo2")
+    url(r'^alltheinfo', 'QI.views.htmlinfo', name = "testinfo"),
+    url(r'^something/(?P<id>\S+)/', 'QI.views.jsoninfo', name = "testinfo2")
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

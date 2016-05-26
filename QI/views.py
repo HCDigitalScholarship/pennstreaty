@@ -52,7 +52,7 @@ def org_detail(request,id):
 	'org':org,
 	})
 
-def beckytest(request):
+def htmlinfo(request):
 	orgs = Organization.objects.all()
 	persons = Person.objects.all()
 	places = Place.objects.all()
@@ -60,7 +60,7 @@ def beckytest(request):
 	'orgs':orgs,'persons':persons,'places':places
 	})
 
-def beckytest2(request,id):
+def jsoninfo(request,id):
 	# data = serializers.serialize("json",Person.objects.get(id_tei=id))
 	try:
 		items = serializers.serialize("json",[Person.objects.get(id_tei=id)])
@@ -75,9 +75,6 @@ def beckytest2(request,id):
 			except Org.DoesNotExist:
 				raise Http404('this item does not exist')
 	return HttpResponse(items, content_type='application/json')
-
-
-
 
 
 #this is the end of what becky did
