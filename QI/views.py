@@ -52,6 +52,24 @@ def org_detail(request,id):
 	'org':org,
 	})
 
+
+def pageinfo(request,id):
+	try:
+		page = Page.objects.get(id_tei = id)
+		manuscript = Manuscript.objects.get(id_tei = page.Manuscript_id)
+	except Page.DoesNotExist:
+		raise Http404('this page does not exist')
+	return render(request,'page_detail.html', {
+	'page':page,'manuscript':manuscript
+	})
+
+def pagejsoninfo(request,id):
+	try:
+		items = serializers.serialize("json",[Manuscript.objects.get(id_tei=id)])
+	except Manuscript.DoesNotExist:
+		raise Http404('this manuscript does not exist')
+	return HttpResponse(items, content_type='application/json')
+
 def htmlinfo(request):
 	orgs = Organization.objects.all()
 	persons = Person.objects.all()
@@ -75,7 +93,6 @@ def jsoninfo(request,id):
 			except Org.DoesNotExist:
 				raise Http404('this item does not exist')
 	return HttpResponse(items, content_type='application/json')
-
 
 #this is the end of what becky did
 

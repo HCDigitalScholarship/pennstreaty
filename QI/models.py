@@ -180,6 +180,7 @@ class Manuscript(models.Model):
 	call_no =  models.CharField("call_no", max_length=100, blank = True)
 	def __unicode__(self):
 		return self.title
+
 class Page(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
 	Manuscript_id = models.ForeignKey("Manuscript", blank = True, null = True, related_name = "Manuscript_id")
