@@ -112,7 +112,9 @@ def xml_to_html(xml_file):
             new_pb_list.append(ele)
 
       for_csv = ''.join(html_string)
-      
+
+#don't want this
+ '''     
       with open("csv_for_"+os.path.basename(xml_file)+".csv", 'wb') as f:
             writer = csv.writer(f)
             count = 0
@@ -136,7 +138,7 @@ def xml_to_html(xml_file):
             
             writer.writerows(csv_list)
 
-      
+ '''     
       soup = BeautifulSoup(html_string, "html.parser")
 
       has_annoying_problem=False #pb splitting an <a> tag
@@ -372,6 +374,7 @@ def xml_to_html(xml_file):
       except IndexError:
 	print "It looks like the id of the manuscript did not exist"
 	print "this is going to be an error" #Might want to update this. It would be SICK if it would catch it and then throw something up on the page
+	id_manuscript=None
       print id_manuscript, "man id"
       with open('sample.txt', "w") as f:
 	      for html in html_list:

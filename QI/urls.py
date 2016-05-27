@@ -31,14 +31,14 @@ urlpatterns = [
     url(r'^organizations/$', 'QI.views.organizations', name = "Organizations page"),
     url(r'^admin/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
     url(r'^admin/QI/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
-    url(r'^admin/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
     url(r'^person/(?P<id>\S+)/', 'QI.views.person_detail', name = "person_detail"),
     url(r'^place/(?P<id>\S+)/', 'QI.views.place_detail', name = "place_detail"),
     url(r'^org/(?P<id>\S+)/', 'QI.views.org_detail', name = "org_detail"),
     url(r'^alltheinfo', 'QI.views.htmlinfo', name = "testinfo"),
     url(r'^something/(?P<id>\S+)/', 'QI.views.jsoninfo', name = "testinfo2"),
     url(r'^page/(?P<id>\S+)/', 'QI.views.pageinfo', name="pageinfo"),
-    url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo")
+    url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
+    url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'
