@@ -53,6 +53,7 @@
 
             <div type= "letter" class = "panel radius">
 
+            <h2>  <center>{{ manuscript.title }} </center></h2>
 
               {{ page.fulltext|safe|escape }}
 
@@ -67,7 +68,7 @@
   {% include 'bottom-links.html' %}
 
  <script src="{% static "js/cornplanter.js" %}">
-      var Manuscript_id = '{{ page.Manuscript_id|safe }}';
+      var Manuscript_id = {{ page.Manuscript_id }};
       widget.init(Manuscript_id);
  </script>
 
