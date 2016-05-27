@@ -67,9 +67,11 @@
   {% include 'footer.html' %}
   {% include 'bottom-links.html' %}
 
- <script src="{% static "js/cornplanter.js" %}">
-      var Manuscript_id = {{ page.Manuscript_id }};
-      widget.init(Manuscript_id);
+  <script type="text/javascript" >
+        var Manuscript_id = '{{ page.Manuscript_id }}';
+  </script>
+
+<script src="{% static "js/cornplanter.js" %}">
  </script>
 
   </body>

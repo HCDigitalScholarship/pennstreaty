@@ -3,6 +3,9 @@ $(document).ready(function() {
   // this is just to check the script is working
 // now we are going to immediately load the metadata and image
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
+
+console.log(Manuscript_id);
+
 $.ajax({
                   //url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
                   url: '/manuscriptinfo/' + Manuscript_id,
