@@ -40,11 +40,13 @@
           <p class="text-left"><b>Other Names:</b> {{ person.other_names }} </p>
           <p class="text-left"><b>Assumed Gender:</b> {{ person.gender }} </p>
           <p class="text-left"><b>Birth Date:</b> {{ person.birth_date }} </p>
-          <p class="text-left"><b>Birth Place:</b> {{ person.birth_place}} </p> <!--Add Link Here!!!-->
+      <!--    <p class="text-left"><b>Birth Place:</b> <a href='/place/'+{{ birthplace.id_tei }}>  {{ birthplace.name }} </a> </p>  -->
+          <p class="text-left"><b>Birth Place:</b> {{ person.birth_place }} </p> <!-- switch this one with the above 1 -->
 
           <p class="text-left"><b>Death Date:</b> {{ person.death_date }} </p>
-          <p class="text-left"><b>Death Place:</b> {{ person.death_place }} </p> <!--Add Link Here!!!-->
-          <p class="text-left"><b>Affiliations:</b> {{  person.affiliations }} </p> <!--Add Link Here!!!-->
+    <!-- <p class="text-left"><b>Death Place:</b> <a href='/place/'+{{ deathplace.id_tei }}> {{ deathplace.name }} </a> </p> -->
+          <p class="text-left"><b>Death Place:</b> {{ deathplace.name }} </p> <!--switch this one with the above 1-->
+          <p class="text-left"><b>Affiliations:</b> {{  person.affiliations }} </p> 
 
           <p class="text-left"><b>Notes:</b> {{ person.bio_notes }}</p>
 

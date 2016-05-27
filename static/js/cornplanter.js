@@ -44,9 +44,10 @@ function callback_3(data) {
 
 
 // next, we get the actual image of the document from omeka from the variable I created above, called url_thing
+// ignore above comment b/c it was for the old method
 $.ajax({
-    url: url_thing,
-    //url: '{{ page.img_url }}', // this should work? but u should check what form page.img_url is in and whether u need json or jsonp
+    url: 'https:\/\/ds-omeka.haverford.edu\/qi\/api\/files?item=2635',
+    //url: img_url, // this should work? but u should check what form page.img_url is in and whether u need json or jsonp
     type: 'GET',
     dataType: 'jsonp',
     // ?????? is it json or jsonp??? what is this img_url format?
@@ -209,8 +210,6 @@ $("i.fa.fa-times").click(function(){
       $('.off-canvas').animate({"margin-right": '-=25%'});
       $('i.fa.fa-times').animate({"margin-right": '-=25%'});
       $('.off-canvas div').remove();
-
-
 
 
   });

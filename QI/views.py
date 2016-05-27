@@ -31,10 +31,13 @@ def organizations(request):
 def person_detail(request,id):
 	try:
 		person = Person.objects.get(id_tei = id)
+		#birthplace = Place.objects.get(id_tei = person.birth_place)
+		#deathplace = Place.objects.get(id_tei = person.death_place)
 	except Person.DoesNotExist:
 		raise Http404('this person does not exist')
 	return render(request,'person_detail.html',{
-	'person':person
+	'person':person,
+	#'birthplace':birthplace,'deathplace':deathplace
 	})
 
 def place_detail(request,id):
@@ -49,10 +52,12 @@ def place_detail(request,id):
 def org_detail(request,id):
 	try:
 		org = Org.objects.get(id_tei = id)
+		#place = Place.objects.get(id_tei = org.place_id)
 	except Org.DoesNotExist:
 		raise Http404('this organization does not exist')
 	return render(request,'org_detail.html',{
 	'org':org,
+	#'place':place
 	})
 
 
