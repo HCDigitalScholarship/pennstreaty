@@ -2,12 +2,12 @@ $(document).ready(function() {
   console.log('Got here');
   // this is just to check the script is working
 
-
+var idk = {{ page.Manuscript_id }}
 // now we are going to immediately load the metadata and image
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
 $.ajax({
                   //url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
-                  url: '/manuscriptinfo/' + {{ page.Manuscript_id }},
+                  url: '/manuscriptinfo/' + idk,
                   type: 'GET',
                   //dataType: 'jsonp',
                   dataType: 'json',

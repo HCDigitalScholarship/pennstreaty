@@ -7,6 +7,9 @@ from models import Person
 from models import Place
 from models import Org
 from models import Relationship
+from models import Page
+from models import Manuscript
+
 import os
 def about(request):
 	return render(request, 'about.html')
@@ -56,7 +59,7 @@ def org_detail(request,id):
 def pageinfo(request,id):
 	try:
 		page = Page.objects.get(id_tei = id)
-		manuscript = Manuscript.objects.get(id_tei = page.Manuscript_id)
+		manuscript = Manuscript.objects.get(title = page.Manuscript_id)
 	except Page.DoesNotExist:
 		raise Http404('this page does not exist')
 	return render(request,'page_detail.html', {
@@ -65,7 +68,7 @@ def pageinfo(request,id):
 
 def pagejsoninfo(request,id):
 	try:
-		items = serializers.serialize("json",[Manuscript.objects.get(id_tei=id)])
+		items = serializers.serialize("json",[Manuscript.objects.get(title=id)])
 	except Manuscript.DoesNotExist:
 		raise Http404('this manuscript does not exist')
 	return HttpResponse(items, content_type='application/json')
