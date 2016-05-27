@@ -1,23 +1,21 @@
 $(document).ready(function() {
   console.log('Got here');
   // this is just to check the script is working
-
-var idk = {{ page.Manuscript_id }}
 // now we are going to immediately load the metadata and image
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
 $.ajax({
-                  //url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
-                  url: '/manuscriptinfo/' + idk,
+                  url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
+                  //url: '/manuscriptinfo/' + Manuscript_id,
                   type: 'GET',
-                  //dataType: 'jsonp',
-                  dataType: 'json',
+                  dataType: 'jsonp',
+                  //dataType: 'json',
                   cache: true,
                   success: callback_3,  //call a function to get all metadata in order, get information from omeka
                   error: function(data) { console.log("not quite");}
                 })
 
 function callback_3(data) {
-/*  --> this was the old function when using omeka data!!
+ --> this was the old function when using omeka data!!
   var metadata_list = {}
   var url_thing = {}
   url_thing = data.data.files.url; //(this will be important soon)
@@ -36,16 +34,16 @@ function callback_3(data) {
     }
 // now from the function above, we can easily call on the metadata information we need and
 // append it to one of our off canvas divs so it will be there
-*/
 
-//  $(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + my_dict["Title"] + "</p> <span class='meta-title'> Creator </span><p> " + my_dict["Creator"] + "</p><span class='meta-title'> Date </span><p> " + my_dict["Date"] + "</p> <span class='meta-title'> Type of Document </span> <p>" + my_dict["Material Type"] + "</p><span class='meta-title'> Call Number </span><p> " + my_dict["Call Number"] + "</p></div>");
-  $(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + data[0]["fields"].title + "</p> <span class='meta-title'> Creator </span><p> " + data[0]["fields"].person_id + "</p><span class='meta-title'> Date </span><p> " + data[0]["fields"].date + "</p> <span class='meta-title'> Type of Document </span> <p>" + data[0]["fields"].type_of_Manuscript + "</p><span class='meta-title'> Call Number </span><p> " + data[0]["fields"].call_no + "</p></div>");
+
+ $(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + my_dict["Title"] + "</p> <span class='meta-title'> Creator </span><p> " + my_dict["Creator"] + "</p><span class='meta-title'> Date </span><p> " + my_dict["Date"] + "</p> <span class='meta-title'> Type of Document </span> <p>" + my_dict["Material Type"] + "</p><span class='meta-title'> Call Number </span><p> " + my_dict["Call Number"] + "</p></div>");
+//  $(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + data[0]["fields"].title + "</p> <span class='meta-title'> Creator </span><p> " + data[0]["fields"].person_id + "</p><span class='meta-title'> Date </span><p> " + data[0]["fields"].date + "</p> <span class='meta-title'> Type of Document </span> <p>" + data[0]["fields"].type_of_Manuscript + "</p><span class='meta-title'> Call Number </span><p> " + data[0]["fields"].call_no + "</p></div>");
 
 
 // next, we get the actual image of the document from omeka from the variable I created above, called url_thing
 $.ajax({
-    //url: url_thing,
-    url: {{ page.img_url }} // this should work? but u should check what form page.img_url is in and whether u need json or jsonp
+    url: url_thing,
+    //url: '{{ page.img_url }}', // this should work? but u should check what form page.img_url is in and whether u need json or jsonp
     type: 'GET',
     dataType: 'jsonp',
     // ?????? is it json or jsonp??? what is this img_url format?

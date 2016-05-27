@@ -3,7 +3,7 @@
 <html class="no-js" lang="en">
 <head>
 {% include 'top-links.html' %}
-<title>Organization info</title>
+<title>Page Information</title>
 </head>
 
 <body>
@@ -53,7 +53,9 @@
 
             <div type= "letter" class = "panel radius">
 
-              {{ page.fulltext }}
+
+              {{ page.fulltext|safe|escape }}
+
 
             </div>
           </div>
@@ -63,8 +65,11 @@
 
   {% include 'footer.html' %}
   {% include 'bottom-links.html' %}
-  
- <script src="{% static "js/cornplanter.js" %}"></script>
+
+ <script src="{% static "js/cornplanter.js" %}">
+      var Manuscript_id = '{{ page.Manuscript_id|safe }}';
+      widget.init(Manuscript_id);
+ </script>
 
   </body>
   </html>
