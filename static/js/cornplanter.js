@@ -4,7 +4,7 @@ $(document).ready(function() {
 // now we are going to immediately load the metadata and image
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
 
-console.log(Manuscript_id);
+console.log('update');
 
 $.ajax({
                   //url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
@@ -46,7 +46,7 @@ function callback_3(data) {
 // next, we get the actual image of the document from omeka from the variable I created above, called url_thing
 // ignore above comment b/c it was for the old method
 $.ajax({
-    url: 'https:\/\/ds-omeka.haverford.edu\/qi\/api\/files?item=2635',
+    url: 'https:\/\/ds-omeka.haverford.edu\/qi\/api\/files?item='+2640,
     //url: img_url, // this should work? but u should check what form page.img_url is in and whether u need json or jsonp
     type: 'GET',
     dataType: 'jsonp',
