@@ -54,7 +54,7 @@
             <div type= "letter" class = "panel radius">
 
             <h2>  <center>{{ manuscript.title }} </center></h2>
-
+            
               {{ page.fulltext|safe|escape }}
 
 
@@ -68,10 +68,12 @@
   {% include 'bottom-links.html' %}
 
   <script type="text/javascript" >
-        var Manuscript_id = '{{ page.Manuscript_id }}';
+        var Manuscript_id = '{{ manuscript.id_tei }}';
         var img_url = '{{ page.img_url }}';
         var Page_id = '{{ page.id_tei }}';
-  </script>
+        var IsNextPage = '{{ IsNextPage }}';
+        var IsPreviousPage = '{{ IsPreviousPage }}';
+          </script>
 
 <script src="{% static "js/cornplanter.js" %}">
  </script>

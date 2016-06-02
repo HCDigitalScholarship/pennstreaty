@@ -67,13 +67,41 @@ def pageinfo(request,id):
 		manuscript = Manuscript.objects.get(title = page.Manuscript_id)
 	except Page.DoesNotExist:
 		raise Http404('this page does not exist')
+	try:
+		IsNextPage = True #set this true by default; says there is a next page
+		newid = int(id)
+		newid = newid+1 #next page in manuscript
+		#now we need to turn it back into a proper string
+		newstring = str(newid)
+		if len(newstring) == 2:
+			newstring = "0" + newstring
+		elif len(newstring) == 1:
+			newstring = "00" + newstring
+		nextpage = Page.objects.get(id_tei = newstring) #see if next page in manuscript exists
+	except Page.DoesNotExist:
+		IsNextPage = False
+	try:
+		IsPreviousPage = True #set this true by default
+		newid1 = int(id)
+		newid1 = newid1 - 1
+		#now we must turn it into a proper string
+		newstring1 = str(newid1)
+		if len(newstring1) == 2:
+			newstring1 = "0" + newstring1
+		elif len(newstring1) == 1:
+			newstring1 = "00" + newstring1
+		prevpage = Page.objects.get(id_tei = newstring1) # see if previous page in manuscript exists
+	except Page.DoesNotExist:
+		IsPreviousPage = False
 	return render(request,'page_detail.html', {
-	'page':page,'manuscript':manuscript
+	'page':page,'manuscript':manuscript, 'IsNextPage':IsNextPage, 'IsPreviousPage':IsPreviousPage
 	})
+
+	#gotta include info as to whether or not it's the first or last pg in a manuscript!
 
 def pagejsoninfo(request,id):
 	try:
-		items = serializers.serialize("json",[Manuscript.objects.get(title=id)])
+		items = serializers.serialize("json",[Manuscript.objects.get(id_tei=id)])
 	except Manuscript.DoesNotExist:
 		raise Http404('this manuscript does not exist')
 	return HttpResponse(items, content_type='application/json')
