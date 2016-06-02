@@ -2,6 +2,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+
 {% include 'top-links.html' %}
 <title>Page Information</title>
 </head>
@@ -25,7 +26,7 @@
 
 
     <div id = "about2">
-
+<div id="sidestuff">
       <aside class = "canvas-meta">
         <p> Metadata &nbsp; <i class="fa fa-chevron-right"></i>
         </p>
@@ -47,17 +48,18 @@
 
       <aside class="off-canvas" style = "margin-right: -25%;"></aside>
       <i class="fa fa-times"></i>
-
+</div>
         <div id = "main-content">
 
 
             <div type= "letter" class = "panel radius">
+              <div id="main">
 
-            <h2>  <center>{{ manuscript.title }} </center></h2>
-            
-              {{ page.fulltext|safe|escape }}
+        <h2>  <center>{{ manuscript.title }} </center></h2>
 
+        {{ page.fulltext|safe|escape }}
 
+</div>
             </div>
           </div>
 
@@ -66,6 +68,7 @@
 
   {% include 'footer.html' %}
   {% include 'bottom-links.html' %}
+
 
   <script type="text/javascript" >
         var Manuscript_id = '{{ manuscript.id_tei }}';

@@ -286,6 +286,9 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
+    $("#main").load("/page/"+newstring+" #main");
+  //  $("#sidestuff").load("/page/"+newstring+" #sidestuff"); //this makes it closed n not good
+
   //  window.location.replace('/page/'+newstring);
   }
   else {
@@ -313,7 +316,24 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
 
  //controls going backward in the image viewer
 $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
+  if (IsPreviousPage == "True") {
+    console.log('nice!');
+    var newint = Math.floor(Page_id); // turn page number into an int
+    var newint2 = newint-1; // make page number one less
+    var newstring = newint2.toString(); // turn new page number into a string
+    var newImgUrl = Manuscript_id + "_" + newstring; // this is the new image !!
+    $('.original-image-wrapper img').remove();
+    $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
+    $("#main").load("/page/"+newstring+" #main");
+  //  window.location.replace('/page/'+newstring);
+  }
+  else {
+    alert('This is the first page of this manuscript!');
+  }
+
+
+/*
   var originals_list = ["https://ds-omeka.haverford.edu/qi/files/original/7da5b5699946e14a1c9e28da828e267e.jpg", "https://ds-omeka.haverford.edu/qi/files/original/3a36c0779b806e6c2c3bc20cbd6c3911.jpg", "https://ds-omeka.haverford.edu/qi/files/original/03d0d21bb2a58d6c560da2a1312cdac5.jpg", "https://ds-omeka.haverford.edu/qi/files/original/8cda22dcaaa62bd99296ead57077ddad.jpg", "https://ds-omeka.haverford.edu/qi/files/original/ce24c92bdd56f563a2a406ecf6e70543.jpg", "https://ds-omeka.haverford.edu/qi/files/original/00bc1a3fbbbf2681cf174eed18601afd.jpg", "https://ds-omeka.haverford.edu/qi/files/original/206798908ef904604b0c435b86f8c039.jpg", "https://ds-omeka.haverford.edu/qi/files/original/d8259bddc835cf80bc6449543ce7aae8.jpg", "https://ds-omeka.haverford.edu/qi/files/original/5c26b923019dce65c0a71c9f34b91336.jpg", "https://ds-omeka.haverford.edu/qi/files/original/3a836e496b7659b6f0dd7e95570ae50e.jpg", "https://ds-omeka.haverford.edu/qi/files/original/70be5c0234db19646d9bbc6ee000e008.jpg", "https://ds-omeka.haverford.edu/qi/files/original/f1257cbc57b23264cbad8218810142f2.jpg", "https://ds-omeka.haverford.edu/qi/files/original/dce309d808dea3f3c1ce2a404f5bf13b.jpg", "https://ds-omeka.haverford.edu/qi/files/original/fe682de239d9daea3dafeecfdc34cf46.jpg", "https://ds-omeka.haverford.edu/qi/files/original/385f773ba59c0215dee131a759124036.jpg", "https://ds-omeka.haverford.edu/qi/files/original/09f0f6d86f38bc5d258e64f9423152ce.jpg", "https://ds-omeka.haverford.edu/qi/files/original/19401c2840ee3006cfb1f4b6c324c34e.jpg", "https://ds-omeka.haverford.edu/qi/files/original/730e79e465cb9e22d99c4d6ae6f6e797.jpg", "https://ds-omeka.haverford.edu/qi/files/original/882fb40b043a44100dc0df5583a126ff.jpg", "https://ds-omeka.haverford.edu/qi/files/original/4bd2f4a79eb454902e0a8786ab1aa9b7.jpg", "https://ds-omeka.haverford.edu/qi/files/original/28fa2049cdd414ffd3bc5ce8e70b6286.jpg", "https://ds-omeka.haverford.edu/qi/files/original/c61fd238cf5a550ccd9ffe5ef224a736.jpg", "https://ds-omeka.haverford.edu/qi/files/original/12c80f22cacdb858eedadd166e7c6683.jpg", "https://ds-omeka.haverford.edu/qi/files/original/019286f87fa9ca169d32f589a74a615b.jpg", "https://ds-omeka.haverford.edu/qi/files/original/41f31de0b45787c6eb3576585e4bdaac.jpg", "https://ds-omeka.haverford.edu/qi/files/original/67369eeefdf676c5a686b2d935136739.jpg", "https://ds-omeka.haverford.edu/qi/files/original/5a36be70279910ffb32dfb27d2c7b1f9.jpg", "https://ds-omeka.haverford.edu/qi/files/original/a208c6d88807a7e39176b3db1447fdb8.jpg", "https://ds-omeka.haverford.edu/qi/files/original/55103ebb238c37ea913f380a2682bf6d.jpg", "https://ds-omeka.haverford.edu/qi/files/original/f4a90dda3e933913eaf4cd1cd1f0424a.jpg", "https://ds-omeka.haverford.edu/qi/files/original/0ffc586a52c8d90ac75de440fdc1627f.jpg", "https://ds-omeka.haverford.edu/qi/files/original/047c25372934bbe2a5090ca07f22cfac.jpg", "https://ds-omeka.haverford.edu/qi/files/original/d0dc1dbbc9ccb7af4b8058871c3e0212.jpg", "https://ds-omeka.haverford.edu/qi/files/original/0da9ea9bb62d9b3a353c40f2c4d60788.jpg", "https://ds-omeka.haverford.edu/qi/files/original/464803961e6e35f2f889c395f8624fba.jpg", "https://ds-omeka.haverford.edu/qi/files/original/a0030ee53b025d1204fd7a00631b6d53.jpg", "https://ds-omeka.haverford.edu/qi/files/original/c09ab9bf30f33a1e90c627e8ef9214b4.jpg", "https://ds-omeka.haverford.edu/qi/files/original/ea55db5c8c5c4b1ba904ee3ffa2a4173.jpg", "https://ds-omeka.haverford.edu/qi/files/original/011cc31f188d8b146411796fc68731b6.jpg", "https://ds-omeka.haverford.edu/qi/files/original/8de7f0be05d39d370f26e808cc447428.jpg", "https://ds-omeka.haverford.edu/qi/files/original/a49eb6426611668a188b91b79ed107f0.jpg", "https://ds-omeka.haverford.edu/qi/files/original/8c2fe72571586c7b0ba1ba7853598133.jpg", "https://ds-omeka.haverford.edu/qi/files/original/c0e3d3367604ef9876b66afb6881533d.jpg", "https://ds-omeka.haverford.edu/qi/files/original/80a737c9963aa2909145dbad4aa385d2.jpg", "https://ds-omeka.haverford.edu/qi/files/original/a8069e0535cfbef164374174f6b50521.jpg", "https://ds-omeka.haverford.edu/qi/files/original/4fe69705bfb74b381072b60bfd4f61d3.jpg", "https://ds-omeka.haverford.edu/qi/files/original/c2b834ba877aa5f6e745745bd302517c.jpg", "https://ds-omeka.haverford.edu/qi/files/original/a67f76186e299939a6ad0a8ff498191e.jpg", "https://ds-omeka.haverford.edu/qi/files/original/08baa3edad6b2f15b2a1a9b0e3e7f669.jpg", "https://ds-omeka.haverford.edu/qi/files/original/e47d785f8e1fe4cfcb1b52032433ebe3.jpg"]
   //the variable above should be brought in differently--like passed in by a function such as get_img()--but I was running out of time and decided to just hard code it
 
@@ -327,7 +347,7 @@ $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
 
   }
 
-
+*/
 
   });
 
