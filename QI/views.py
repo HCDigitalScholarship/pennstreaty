@@ -67,6 +67,8 @@ def pageinfo(request,id):
 		manuscript = Manuscript.objects.get(title = page.Manuscript_id)
 	except Page.DoesNotExist:
 		raise Http404('this page does not exist')
+	#need to go through manuscript pages and determine which is first and which is last !
+	#mostly just which is last bc i think first is always 001
 	try:
 		IsNextPage = True #set this true by default; says there is a next page
 		newid = int(id)

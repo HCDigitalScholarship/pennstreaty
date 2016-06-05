@@ -4,7 +4,8 @@ $(document).ready(function() {
 // now we are going to immediately load the metadata and image
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
 
-var becky = Math.floor(Manuscript_id);
+window.Page_id = Math.floor(Page_id); // set page_id (as an int) to a global variable to use later
+console.log(window.Page_id);
 console.log(Manuscript_id);
 
 $.ajax({
@@ -277,16 +278,22 @@ $(".canvas-img").click(function(){
 
 //controls going forward in the image viewer
 $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
+  /* var newint = Math.floor(Page_id); // turn page number into an int
+  var newint2 = newint+1; // make page number one less
+  var newstring = newint2.toString(); // turn new page number into a string
+  var newImgUrl = Manuscript_id + "_" + newstring; // this is the new image !!
+  window.location.replace('/page/'+newstring+"/#main"); */
+
   if (IsNextPage == "True") {
     console.log('nice');
-    var newint = Math.floor(Page_id); // turn page number into an int
-    var newint2 = newint+1; // increment page number
-    var newstring = newint2.toString(); // turn new page number into a string
-    var newImgUrl = Manuscript_id + "_" + newstring; // this is the new image !!
+    window.Page_id = window.Page_id + 1 // increment page number
+    var newstring = window.Page_id.toString(); // turn this into string
+    var newImgUrl = Manuscript_id + "_" + newstring;
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
     $("#main").load("/page/"+newstring+" #main");
+    window.history.pushState("Page Information", "Page Information", "/page/"+newstring+"/");
   //  $("#sidestuff").load("/page/"+newstring+" #sidestuff"); //this makes it closed n not good
 
   //  window.location.replace('/page/'+newstring);
@@ -316,16 +323,21 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
 
  //controls going backward in the image viewer
 $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
-  if (IsPreviousPage == "True") {
+/*  var newint = Math.floor(Page_id); // turn page number into an int
+  var newint2 = newint-1; // make page number one less
+  var newstring = newint2.toString(); // turn new page number into a string
+  var newImgUrl = Manuscript_id + "_" + newstring; // this is the new image !!
+  window.location.replace('/page/'+newstring+"/#main"); */
+  if (window.Page_id > 1) {
     console.log('nice!');
-    var newint = Math.floor(Page_id); // turn page number into an int
-    var newint2 = newint-1; // make page number one less
-    var newstring = newint2.toString(); // turn new page number into a string
-    var newImgUrl = Manuscript_id + "_" + newstring; // this is the new image !!
+    window.Page_id = window.Page_id - 1 // increment page number
+    var newstring = window.Page_id.toString(); // turn this into string
+    var newImgUrl = Manuscript_id + "_" + newstring;
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
     $("#main").load("/page/"+newstring+" #main");
+     window.history.pushState("Page Information", "Page Information", "/page/"+newstring+"/");
   //  window.location.replace('/page/'+newstring);
   }
   else {
