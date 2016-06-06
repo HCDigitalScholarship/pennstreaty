@@ -4,11 +4,21 @@ $(document).ready(function() {
 // now we are going to immediately load the metadata and image
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
 
+var newPage_id = Page_id;
 window.Page_id = Math.floor(Page_id); // set page_id (as an int) to a global variable to use later
 //for example, "003" becomes 3
 console.log(window.Page_id);
 console.log(Manuscript_id);
 console.log(lastpage);
+
+
+//$(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + data[0]["fields"].title + "</p> <span class='meta-title'> Creator </span><p> " + data[0]["fields"].person_id + "</p><span class='meta-title'> Date </span><p> " + data[0]["fields"].date + "</p> <span class='meta-title'> Type of Document </span> <p>" + data[0]["fields"].type_of_Manuscript + "</p><span class='meta-title'> Call Number </span><p> " + data[0]["fields"].call_no + "</p></div>");
+
+//var imgurl = Manuscript_id + "_" + newPage_id
+//console.log(Page_id);
+//console.log(imgurl);
+//$('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".png></div>");
+
 
 $.ajax({
                   //url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
@@ -44,12 +54,19 @@ function callback_3(data) {
 */
 
  //$(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + my_dict["Title"] + "</p> <span class='meta-title'> Creator </span><p> " + my_dict["Creator"] + "</p><span class='meta-title'> Date </span><p> " + my_dict["Date"] + "</p> <span class='meta-title'> Type of Document </span> <p>" + my_dict["Material Type"] + "</p><span class='meta-title'> Call Number </span><p> " + my_dict["Call Number"] + "</p></div>");
+
+//////////// IMPORTANT
  $(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + data[0]["fields"].title + "</p> <span class='meta-title'> Creator </span><p> " + data[0]["fields"].person_id + "</p><span class='meta-title'> Date </span><p> " + data[0]["fields"].date + "</p> <span class='meta-title'> Type of Document </span> <p>" + data[0]["fields"].type_of_Manuscript + "</p><span class='meta-title'> Call Number </span><p> " + data[0]["fields"].call_no + "</p></div>");
 
- var imgurl = Manuscript_id + "_" + Page_id
+ var imgurl = Manuscript_id + "_" + newPage_id
+console.log(Page_id);
+ console.log(imgurl);
  $('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".png></div>");
 
+/////////// IMPORTANT
+
 // LINES 51 to 105 CAN MAYBE BE DELETED????????
+
 
 $.ajax({
     url: 'https:\/\/ds-omeka.haverford.edu\/qi\/api\/files?item='+Manuscript_id,
@@ -104,6 +121,7 @@ function get_img(stuff) { //all image related api info coming from omeka
 //$('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".jpg></div>");
 
 }
+
 
 
 //this is the function that will be run through every time a persName, orgName, placeName a href is clicked in the transcription
@@ -305,7 +323,7 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
-    $("#main").load("/page/"+newstring+" #main");
+    $("#main").load("/page/"+newImgUrl+" #main");
     window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
   //  $("#sidestuff").load("/page/"+newstring+" #sidestuff"); //this makes it closed n not good
 
@@ -360,7 +378,7 @@ $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
-    $("#main").load("/page/"+newstring+" #main");
+    $("#main").load("/page/"+newImgUrl+" #main");
      window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
   //  window.location.replace('/page/'+newstring);
   }
