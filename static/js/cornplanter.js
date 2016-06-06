@@ -5,8 +5,10 @@ $(document).ready(function() {
 //information of the transcription we are viewing into the off canvas divs to the left (meta/img)
 
 window.Page_id = Math.floor(Page_id); // set page_id (as an int) to a global variable to use later
+//for example, "003" becomes 3
 console.log(window.Page_id);
 console.log(Manuscript_id);
+console.log(lastpage);
 
 $.ajax({
                   //url: 'https://ds-omeka.haverford.edu/qi/api/items/2635',
@@ -284,16 +286,27 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
   var newImgUrl = Manuscript_id + "_" + newstring; // this is the new image !!
   window.location.replace('/page/'+newstring+"/#main"); */
 
-  if (IsNextPage == "True") {
+// if window.Page_id < lastpage
+
+  if (window.Page_id < lastpage) {
     console.log('nice');
     window.Page_id = window.Page_id + 1 // increment page number
-    var newstring = window.Page_id.toString(); // turn this into string
+    if (window.Page_id < 10) {
+    var newstring = "00" + window.Page_id.toString(); // turn this into string
+  }
+  else if (window.Page_id < 100) {
+    var newstring = "0" + window.Page_id.toString();
+  }
+  else {
+    var newstring = window.Page_id.toString();
+  }
     var newImgUrl = Manuscript_id + "_" + newstring;
+    console.log(newImgUrl);
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
     $("#main").load("/page/"+newstring+" #main");
-    window.history.pushState("Page Information", "Page Information", "/page/"+newstring+"/");
+    window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
   //  $("#sidestuff").load("/page/"+newstring+" #sidestuff"); //this makes it closed n not good
 
   //  window.location.replace('/page/'+newstring);
@@ -331,13 +344,24 @@ $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
   if (window.Page_id > 1) {
     console.log('nice!');
     window.Page_id = window.Page_id - 1 // increment page number
-    var newstring = window.Page_id.toString(); // turn this into string
+
+    if (window.Page_id < 10) {
+    var newstring = "00" + window.Page_id.toString(); // turn this into string
+  }
+  else if (window.Page_id < 100) {
+    var newstring = "0" + window.Page_id.toString();
+  }
+  else {
+    var newstring = window.Page_id.toString();
+  }
+
+
     var newImgUrl = Manuscript_id + "_" + newstring;
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
     $("#main").load("/page/"+newstring+" #main");
-     window.history.pushState("Page Information", "Page Information", "/page/"+newstring+"/");
+     window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
   //  window.location.replace('/page/'+newstring);
   }
   else {

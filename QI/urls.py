@@ -36,7 +36,8 @@ urlpatterns = [
     url(r'^org/(?P<id>\S+)/', 'QI.views.org_detail', name = "org_detail"),
     url(r'^alltheinfo', 'QI.views.htmlinfo', name = "testinfo"),
     url(r'^something/(?P<id>\S+)/', 'QI.views.jsoninfo', name = "testinfo2"),
-    url(r'^page/(?P<id>\S+)/', 'QI.views.pageinfo', name="pageinfo"),
+    #url(r'^page/(?P<id>\S+)/', 'QI.views.pageinfo', name="pageinfo"),
+    url(r'^page/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pageinfo', name="pageinfo"),
     url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
     url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
 ]
