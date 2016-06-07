@@ -326,6 +326,7 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
     console.log('got here!!!');
+
   //  $("body").load("/page/"+newImgUrl); // this lets links work but closes the image tab & just is a problem
  $("#main").load("/page/"+newImgUrl+" #main", function() {
    $.getScript("/static/js/cornplanter2.js");
@@ -386,7 +387,10 @@ $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
 
-    $("#main").load("/page/"+newImgUrl+" #main");
+    $("#main").load("/page/"+newImgUrl+" #main", function() {
+      $.getScript("/static/js/cornplanter2.js");
+    });
+    
      window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
   //  window.location.replace('/page/'+newstring);
   }
