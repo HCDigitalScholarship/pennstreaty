@@ -67,7 +67,7 @@ console.log(Page_id);
 
 // LINES 51 to 105 CAN MAYBE BE DELETED????????
 
-
+/*
 $.ajax({
     url: 'https:\/\/ds-omeka.haverford.edu\/qi\/api\/files?item='+Manuscript_id,
     //url: img_url, // this should work? but u should check what form page.img_url is in and whether u need json or jsonp
@@ -78,10 +78,11 @@ $.ajax({
     success: get_img, //call a function to get image information
     error: function(stuff) { console.log("not quite 2");}
   })
-
+*/
 
 }
 
+/*
 function get_img(stuff) { //all image related api info coming from omeka
 
   var img_list = {}
@@ -121,12 +122,13 @@ function get_img(stuff) { //all image related api info coming from omeka
 //$('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".jpg></div>");
 
 }
-
+*/
 
 
 //this is the function that will be run through every time a persName, orgName, placeName a href is clicked in the transcription
 // this is the original function
     $("a").click(function(){
+      console.log('hi');
         var href = $(this).attr('href');
         var newhref = href.slice(1, href.length);
         // alert(newhref);
@@ -155,6 +157,7 @@ function get_img(stuff) { //all image related api info coming from omeka
 
         //start (#1)
       if (($('.off-canvas div').attr('id')) == undefined) {
+        console.log("its happening");
         $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death </span> <p> " + data[0]["fields"].death_date + "</p> <span> Affiliation </span> <p>" + data[0]["fields"].affiliations + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
         $('.off-canvas').animate({"margin-right": '+=25%'});
         $('i.fa.fa-times').animate({"margin-right": '+=25%'});

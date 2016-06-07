@@ -46,14 +46,17 @@
         </div>
       </aside>
 
-      <aside class="off-canvas" style = "margin-right: -25%;"></aside>
-      <i class="fa fa-times"></i>
+    <!-- <aside class="off-canvas" style = "margin-right: -25%;"></aside>
+      <i class="fa fa-times"></i> -->
 </div>
         <div id = "main-content">
 
-
             <div type= "letter" class = "panel radius">
               <div id="main">
+
+
+                     <aside class="off-canvas" style = "margin-right: -25%;"></aside>
+                      <i class="fa fa-times"></i>
 
         <h2>  <center>{{ manuscript.title }} </center></h2>
 
@@ -73,7 +76,7 @@
   <script type="text/javascript" >
         var Manuscript_id = '{{ manuscript.id_tei }}';
         var img_url = '{{ page.img_url }}';
-        var Page_id = '{{ Page_id }}'; 
+        var Page_id = '{{ Page_id }}';
         var lastpage = '{{ lastpage }}';
           </script>
 
