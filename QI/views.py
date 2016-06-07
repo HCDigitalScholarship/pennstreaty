@@ -35,8 +35,9 @@ def person_detail(request,id):
 		#deathplace = Place.objects.get(id_tei = person.death_place)
 	except Person.DoesNotExist:
 		raise Http404('this person does not exist')
+	allpages = Page.objects.filter(fulltext__contains = id) #list of pages containing this
 	return render(request,'person_detail.html',{
-	'person':person,
+	'person':person, 'allpages':allpages
 	#'birthplace':birthplace,'deathplace':deathplace
 	})
 

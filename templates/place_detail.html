@@ -1,51 +1,81 @@
 {% load staticfiles %}
 <!doctype html>
 <html class="no-js" lang="en">
-<head>
-{% include 'top-links.html' %}
-<title>Place info</title>
-</head>
+  <head>
+    {% include 'top-links.html' %}
 
-<body>
+    <title>Profiles </title>
 
-    <header>
-            <div class = "overlay-container">
-              <img src="{% static "img/qandi.png" %}" alt="Header img" />
-                <div class = "overlay1 show-for-large-up">
-                  <strong>Person, Place &amp; Organization Profiles</strong>
-                </div>
-          </div>
+  </head>
 
-      </header>
+  <body>
 
+    {% include 'header.html' %}
 
-    <div id = "about1">
-    	{% include 'nav.html' %}
-    </div>
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
 
-
-<div id = "about2">
-    <div id = "main-content">
-
-
-        <div type= "letter" class = "panel radius">
-           <h2 class = "text-center">place information</h2>
-           <p><b>Name:</b> {{ place.name }}</p>
-           <p></b>Alternate Names:</b> {{ place.alternate }}</p>
-           <p><b>State:</b> {{ place.state }}</p>
-           <p><b>Location:</b> {{ place.latitude }} N, {{ place.longitude }} W</p>
-           <p><b>Notes:</b> {{ place.notes }}</p>
-
-           <a href="{% url 'Person Profiles' %}"> &rarr; back to list of profiles</a>
-          </div>
-        </div>
+  {% include 'nav.html' %}
 
 </div>
 
-{% include 'footer.html' %}
+<div id = "row2">
+  <div class = "row">
+    <br />
+    <h1>{{ place.name }}</h1>
+    <br />
+  </div>
 
-{% include 'bottom-links.html' %}
+</div>
+
+<div id = "row3">
+  <div class = "row full-width text-center">
+    <br />
+
+    <div class = "large-6 medium-6 small-12 columns">
+
+        <h3>Profile</h3>
+              <p><b>Name:</b> {{ place.name }}</p>
+              <p></b>Alternate Names:</b> {{ place.alternate }}</p>
+              <p><b>State:</b> {{ place.state }}</p>
+              <p><b>Location:</b> {{ place.latitude }} N, {{ place.longitude }} W</p>
+              <p><b>Notes:</b> {{ place.notes }}</p>
 
 
-</body>
+          <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>
+
+  </div>
+    <div class = "large-6 medium-6 small-12 columns">
+      <div id="borderimg2" class = "show-for-medium-up">
+        <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+
+          <h3> Related Documents </h3>
+          <br><br><br>   <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>
+
+        </ul>
+    </div>
+  </div>
+  <div class = "large-6 medium-6 small-12 columns">
+      <div id="borderimg3" class = "show-for-small-down">
+        <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+
+          <li>
+
+             <h3> Related Documents </h3>
+                <br><br><br>   <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>
+</li>
+
+        </ul>
+    </div>
+  </div>
+    <br />
+
+  </div>
+</div>
+
+ {% include 'footer.html' %}
+
+ {% include 'bottom-links.html' %}
+
+  </body>
 </html>
