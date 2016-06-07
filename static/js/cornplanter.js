@@ -147,6 +147,7 @@ function get_img(stuff) { //all image related api info coming from omeka
 //all the conditions for when someone either clicks a name, or the close button, or another name without closing the first slideout
   function callback_2(data) {
       console.log(data[0]);
+      console.log('hi');
       //console.log(data);
       //console.log(data.model);
       //console.log(data.affiliation);
