@@ -57,12 +57,10 @@ function callback_3(data) {
 
 //////////// IMPORTANT
  $(".off-canvas-content-meta").append("<div><h3>Metadata</h3><span class='meta-title'> Name of Document </span> <p>" + data[0]["fields"].title + "</p> <span class='meta-title'> Creator </span><p> " + data[0]["fields"].person_id + "</p><span class='meta-title'> Date </span><p> " + data[0]["fields"].date + "</p> <span class='meta-title'> Type of Document </span> <p>" + data[0]["fields"].type_of_Manuscript + "</p><span class='meta-title'> Call Number </span><p> " + data[0]["fields"].call_no + "</p></div>");
-
  var imgurl = Manuscript_id + "_" + newPage_id
-console.log(Page_id);
+ console.log(Page_id);
  console.log(imgurl);
  $('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".png></div>");
-
 /////////// IMPORTANT
 
 // LINES 51 to 105 CAN MAYBE BE DELETED????????
@@ -128,7 +126,7 @@ function get_img(stuff) { //all image related api info coming from omeka
 //this is the function that will be run through every time a persName, orgName, placeName a href is clicked in the transcription
 // this is the original function
     $("a").click(function(){
-      console.log('hi');
+      console.log('you clicked on something');
         var href = $(this).attr('href');
         var newhref = href.slice(1, href.length);
         // alert(newhref);
@@ -147,7 +145,6 @@ function get_img(stuff) { //all image related api info coming from omeka
 //all the conditions for when someone either clicks a name, or the close button, or another name without closing the first slideout
   function callback_2(data) {
       console.log(data[0]);
-      console.log('hi');
       //console.log(data);
       //console.log(data.model);
       //console.log(data.affiliation);
@@ -311,8 +308,9 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
 // if window.Page_id < lastpage
 
   if (window.Page_id < lastpage) {
-    console.log('nice');
+    console.log('nice job');
     window.Page_id = window.Page_id + 1 // increment page number
+
     if (window.Page_id < 10) {
     var newstring = "00" + window.Page_id.toString(); // turn this into string
   }
@@ -322,13 +320,19 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
   else {
     var newstring = window.Page_id.toString();
   }
+
     var newImgUrl = Manuscript_id + "_" + newstring;
     console.log(newImgUrl);
     $('.original-image-wrapper img').remove();
     $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
-
-    $("#main").load("/page/"+newImgUrl+" #main");
+    console.log('got here!!!');
+  //  $("body").load("/page/"+newImgUrl); // this lets links work but closes the image tab & just is a problem
+ $("#main").load("/page/"+newImgUrl+" #main", function() {
+   $.getScript("/static/js/cornplanter2.js");
+ }); // this gets the info correctly but disables links
+//  $("#main").load("/pageinfo/"+newImgUrl); // does something weird with Image tab but otherwise works
     window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
+
   //  $("#sidestuff").load("/page/"+newstring+" #sidestuff"); //this makes it closed n not good
 
   //  window.location.replace('/page/'+newstring);

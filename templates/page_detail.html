@@ -9,6 +9,8 @@
 
 <body>
 
+<div class='stufftoinclude'>
+
     <header>
             <div class = "overlay-container">
               <img src="{% static "img/qandi.png" %}" alt="Header img" />
@@ -20,10 +22,12 @@
       </header>
 
 
+
     <div id = "about1">
     	{% include 'nav.html' %}
     </div>
 
+</div>
 
     <div id = "about2">
 <div id="sidestuff">
@@ -46,28 +50,35 @@
         </div>
       </aside>
 
-    <!-- <aside class="off-canvas" style = "margin-right: -25%;"></aside>
-      <i class="fa fa-times"></i> -->
+    <aside class="off-canvas" style = "margin-right: -25%;"></aside>
+      <i class="fa fa-times"></i>
 </div>
+
+<div class="stufftoinclude">
         <div id = "main-content">
 
             <div type= "letter" class = "panel radius">
               <div id="main">
 
 
-                     <aside class="off-canvas" style = "margin-right: -25%;"></aside>
-                      <i class="fa fa-times"></i>
-
         <h2>  <center>{{ manuscript.title }} </center></h2>
 
         {{ page.fulltext|safe|escape }}
 
+
+        <script>
+             var url = "/static/js/cornplanter.js";
+             $.getScript(url);
+         </script>
+
 </div>
             </div>
-          </div>
 
-  </div>
+</div>
 
+</div>
+
+</div>
 
   {% include 'footer.html' %}
   {% include 'bottom-links.html' %}
@@ -80,8 +91,9 @@
         var lastpage = '{{ lastpage }}';
           </script>
 
-<script src="{% static "js/cornplanter.js" %}">
- </script>
+<script src="{% static "js/cornplanter.js" %}"> </script>
+
+
 
   </body>
   </html>

@@ -91,6 +91,34 @@ def pageinfo(request,id):
 
 	#gotta include info as to whether or not it's the first or last pg in a manuscript!
 
+def newpageinfo(request,id): #for when cornplanter.js tries to get info of a new page
+		try:
+			page = Page.objects.get(id_tei = id)
+			manuscript = Manuscript.objects.get(title = page.Manuscript_id)
+		except Page.DoesNotExist:
+			raise Http404('this page does not exist')
+		#need to go through manuscript pages and determine which is the last page
+		j=0
+		for i in range(1,1000): # i made this range bc page # is in 000 format so 999 should b highest # page possible
+			# page_id will be manuscript_id + _ + i
+			try:
+				if i < 10:
+					pageid = manuscript.id_tei + "_00" + str(i)
+				elif i < 100:
+					pageid = manuscript.id_tei + "_0" + str(i)
+				else:
+					pageid = manuscript.id_tei + "_" + str(i)
+				testpage = Page.objects.get(id_tei = pageid)
+			except:
+				if j==0:
+					j=j+1 #make sure this only happens the first time that the "except" is reached
+					lastpage = i-1
+	 	#now lastpage should be the page number of the last page in the manuscript!
+		Page_id = id[len(id)-3:] # this should be the page #
+		return render(request,'page_detail_2.html', {
+		'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id
+		})
+
 def pagejsoninfo(request,id):
 	try:
 		items = serializers.serialize("json",[Manuscript.objects.get(id_tei=id)])
