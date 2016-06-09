@@ -5588,14 +5588,26 @@ ul.pagination li {
 }
 
 /* Panels */
+
+.newpanel {
+  border-style: solid;
+ border-width: 1px;
+  border-color: #d8d8d8;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #f2f2f2;
+  color: #333333;
+    border-radius: 3px;
+}
+
 /* line 86, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel {
   border-style: solid;
  border-width: 1px;
   border-color: #d8d8d8;
- margin-bottom: 0rem;
+  margin-bottom: 0rem;
   padding: 0rem;
-  background: #ffffff;
+  background: #f2f2f2;
   color: #333333;
 }
 /* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
@@ -5613,7 +5625,7 @@ ul.pagination li {
 /* line 74, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
   line-height: 1;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0rem;
 }
 /* line 76, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
@@ -8023,7 +8035,7 @@ dl {
 
 /* line 329, ../bower_components/foundation/scss/foundation/components/_type.scss */
 ul {
-  margin-left: 1.1rem;
+  margin-left: 0rem;
 }
 
 /* Unordered Lists */
