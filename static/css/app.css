@@ -5591,11 +5591,11 @@ ul.pagination li {
 /* line 86, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel {
   border-style: solid;
-  border-width: 1px;
+ border-width: 1px;
   border-color: #d8d8d8;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  background: #f2f2f2;
+ margin-bottom: 0rem;
+  padding: 0rem;
+  background: #ffffff;
   color: #333333;
 }
 /* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
@@ -9983,7 +9983,7 @@ button, .button:visited {
   padding: 10px;
   background: #B8EEFA;
   border-radius: 5px;
-  
+
 }
 .off-canvas-content-img {
   position: absolute;
@@ -9996,7 +9996,7 @@ button, .button:visited {
   padding: 10px;
   background: #B8EEFA;
   border-radius: 5px;
-  
+
 }
 
 .original-image-wrapper {
@@ -10013,13 +10013,13 @@ button, .button:visited {
 
 .original-image-wrapper .forwards-arrow{
   position: absolute;
-  right: 0; 
+  right: 0;
   top: 50%;
   color: #949494;
   font-size: 45px;
 }
 
-.original-image-wrapper .forwards-arrow .fa-chevron-right { 
+.original-image-wrapper .forwards-arrow .fa-chevron-right {
   position: absolute;
   right: 3%;
 }
@@ -10038,7 +10038,7 @@ button, .button:visited {
   position: absolute;
   top: 20px;
   left: 20px;
-  
+
 }
 
 i.fa.fa-times {
@@ -10051,7 +10051,7 @@ i.fa.fa-times {
     padding-right: 10px;
     padding-top: 10px;
     font-size: 45px;
-    
+
 }
 
 i.fa.fa-times:hover {
@@ -10187,11 +10187,5 @@ i.fa.fa-times:hover {
 #storymapgird a {
 	list-style-type: none;
 	text-align: center;
-	
+
 }
-
-
-
-
-
-
