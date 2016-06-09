@@ -51,6 +51,12 @@ def place_detail(request,id):
 		place = Place.objects.get(id_tei = id)
 	except Place.DoesNotExist:
 		raise Http404('this place does not exist')
+	allpages = Page.objects.filter(fulltext__contains = id) #list of pages containing this Place
+	manuscripttitles = [] #make a list of all manuscript titles that are relevant
+	for i in range(0,len(allpages)):
+		manuscripttitles = manuscripttitles + [allpages[i].Manuscript_id]
+	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles)
+	#this should collect all relevant manuscripts
 	return render(request,'place_detail.html',{
 	'place':place,
 	})
@@ -61,6 +67,12 @@ def org_detail(request,id):
 		#place = Place.objects.get(id_tei = org.place_id)
 	except Org.DoesNotExist:
 		raise Http404('this organization does not exist')
+	allpages = Page.objects.filter(fulltext__contains = id) #list of pages containing this Org
+	manuscripttitles = [] #make a list of all manuscript titles that are relevant
+	for i in range(0,len(allpages)):
+		manuscripttitles = manuscripttitles + [allpages[i].Manuscript_id]
+	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles)
+	#this should collect all relevant manuscripts
 	return render(request,'org_detail.html',{
 	'org':org,
 	#'place':place

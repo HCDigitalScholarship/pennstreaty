@@ -182,7 +182,7 @@ function get_img(stuff) { //all image related api info coming from omeka
     else if (data[0]["model"] == "QI.place")  {
 
     if (($('.off-canvas div').attr('id')) == undefined) {
-      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Place Information</h3><span> Name </span><p> " + data[0]["fields"].name + "</p><span> County </span> <p>" + data[0]["fields"].county + "</p> <span> State </span> <p> " + data[0]["fields"].state + "</p> <span> Location </span> <p>" + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].alternate + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Place Information</h3><span> Name </span><p> " + data[0]["fields"].name + "</p><span> County </span> <p>" + data[0]["fields"].county + "</p> <span> State </span> <p> " + data[0]["fields"].state + "</p> <span> Location </span> <p>" + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].alternate + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View list of related documents</a></span><p> </div>");
       $('.off-canvas').animate({"margin-right": '+=25%'});
       $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
@@ -197,7 +197,7 @@ function get_img(stuff) { //all image related api info coming from omeka
       $('.off-canvas').animate({"margin-right": '-=25%'});
       $('i.fa.fa-times').animate({"margin-right": '-=25%'});
       $('.off-canvas div').remove();
-      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].name + "</p><span> County </span> <p>" + data[0]["fields"].county + "</p> <span> State </span> <p> " + data[0]["fields"].state + "</p> <span> Location </span> <p>" + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].alternate  + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].name + "</p><span> County </span> <p>" + data[0]["fields"].county + "</p> <span> State </span> <p> " + data[0]["fields"].state + "</p> <span> Location </span> <p>" + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].alternate + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View list of related documents</a></span><p> </div>");
       $('.off-canvas').animate({"margin-right": '+=25%'});
       $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
@@ -209,8 +209,7 @@ function get_img(stuff) { //all image related api info coming from omeka
 
       //start (#1)
     if (($('.off-canvas div').attr('id')) == undefined) {
-      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Organization Information</h3><span> Name </span><p> " + data[0]["fields"].organization_name + "</p><span> Date Founded </span> <p>" + data[0]["fields"].date_founded + "</p> <span> Date Dissolved </span> <p> " + data[0]["fields"].date_dissolved +  "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Associated Spellings </span> <p>" + data[0]["fields"].associated_spellings + "</p> <span> Other Names </span> <p>" + data[0]["fields"].other_names + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
-      $('.off-canvas').animate({"margin-right": '+=25%'});
+      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Organization Information</h3><span> Name </span><p> " + data[0]["fields"].organization_name + "</p><span> Date Founded </span> <p>" + data[0]["fields"].date_founded + "</p> <span> Date Dissolved </span> <p> " + data[0]["fields"].date_dissolved +  "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Associated Spellings </span> <p>" + data[0]["fields"].associated_spellings + "</p> <span> Other Names </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View list of related documents</a></span><p> </div>");
       $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
     }
@@ -224,7 +223,7 @@ function get_img(stuff) { //all image related api info coming from omeka
       $('.off-canvas').animate({"margin-right": '-=25%'});
       $('i.fa.fa-times').animate({"margin-right": '-=25%'});
       $('.off-canvas div').remove();
-      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Organization Information</h3><span> Name </span><p> " + data[0]["fields"].organization_name  + "</p><span> Date Founded </span> <p>" + data[0]["fields"].date_founded + "</p> <span> Date Dissolved </span> <p> " + data[0]["fields"].date_dissolved  + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Associated Spellings </span> <p>" + data[0]["fields"].associated_spellings + "</p> <span> Other Names </span> <p>" + data[0]["fields"].other_names + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Organization Information</h3><span> Name </span><p> " + data[0]["fields"].organization_name  + "</p><span> Date Founded </span> <p>" + data[0]["fields"].date_founded + "</p> <span> Date Dissolved </span> <p> " + data[0]["fields"].date_dissolved  + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Associated Spellings </span> <p>" + data[0]["fields"].associated_spellings + "</p> <span> Other Names </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View list of related documents</a></span><p> </div>");
       $('.off-canvas').animate({"margin-right": '+=25%'});
       $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
