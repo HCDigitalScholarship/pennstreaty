@@ -156,7 +156,7 @@ function get_img(stuff) { //all image related api info coming from omeka
         //start (#1)
       if (($('.off-canvas div').attr('id')) == undefined) {
         console.log("its happening");
-        $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death </span> <p> " + data[0]["fields"].death_date + "</p> <span> Affiliation </span> <p>" + data[0]["fields"].affiliations + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+        $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death </span> <p> " + data[0]["fields"].death_date + "</p> <span> Affiliation </span> <p>" + data[0]["fields"].affiliations + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View list of related documents</a></span><p> </div>");
         $('.off-canvas').animate({"margin-right": '+=25%'});
         $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
@@ -171,7 +171,7 @@ function get_img(stuff) { //all image related api info coming from omeka
         $('.off-canvas').animate({"margin-right": '-=25%'});
         $('i.fa.fa-times').animate({"margin-right": '-=25%'});
         $('.off-canvas div').remove();
-        $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death </span> <p> " + data[0]["fields"].death_date + "</p> <span> Affiliation </span> <p>" + data[0]["fields"].affiliations + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names  + "</p> <span> Other Documents </span><p> " + data.other_docs_assoc + "</p><span> Library of Congress Information </span> <p><a href =" + data.library_of_congress_info + ">"+data.library_of_congress_info+"</a></p></div>");
+        $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death </span> <p> " + data[0]["fields"].death_date + "</p> <span> Affiliation </span> <p>" + data[0]["fields"].affiliations + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View list of related documents</a></span><p> </div>");
         $('.off-canvas').animate({"margin-right": '+=25%'});
         $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
@@ -390,7 +390,7 @@ $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
     $("#main").load("/page/"+newImgUrl+" #main", function() {
       $.getScript("/static/js/cornplanter2.js");
     });
-    
+
      window.history.pushState("Page Information", "Page Information", "/page/"+newImgUrl+"/");
   //  window.location.replace('/page/'+newstring);
   }

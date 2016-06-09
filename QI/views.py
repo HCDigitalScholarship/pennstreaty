@@ -140,7 +140,7 @@ def htmlinfo(request):
 	'orgs':orgs,'persons':persons,'places':places
 	})
 
-def jsoninfo(request,id):
+def jsoninfo(request,id): #this is where the side tab gets its info on the page viewer!
 	# data = serializers.serialize("json",Person.objects.get(id_tei=id))
 	try:
 		items = serializers.serialize("json",[Person.objects.get(id_tei=id)])
