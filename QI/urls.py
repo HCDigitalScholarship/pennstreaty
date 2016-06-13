@@ -41,6 +41,8 @@ urlpatterns = [
     url(r'^pageinfo/(?P<id>\S+_[0-9]{3})/$', 'QI.views.newpageinfo', name="pageinfo"),
     url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
     url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
+    url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'),
+    url(r'^search/', 'QI.views.testsearch2', name='testsearch2'),
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

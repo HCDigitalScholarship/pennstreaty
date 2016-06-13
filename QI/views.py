@@ -28,6 +28,14 @@ def organizations(request):
 
 
 #becky is adding this next few as a test to see if a given person/place/org page will work
+
+
+def testsearch(request):
+	return render(request, 'testsearch.html')
+
+def testsearch2(request):
+	return render(request, 'testsearch2.html')
+
 def person_detail(request,id):
 	try:
 		person = Person.objects.get(id_tei = id)
