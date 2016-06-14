@@ -28,21 +28,21 @@ class BookResource(resources.ModelResource):
 			match=False
 			index = 0
 			for i in new_data:
-				#print i.first_name 
+				#print i.first_name
 				#print Person.objects.i
-				
-				#if i wanted to do this for a diliniated list, I would just separate out the list, and then check to see if each of them match any of the tei ids 
+
+				#if i wanted to do this for a diliniated list, I would just separate out the list, and then check to see if each of them match any of the tei ids
 				if str(i) == str(data[field_name]):
 					match=True
-					print 
+					print
 					print "Ooo we match a TEI id, we need to do something"
 					data[field_name]= i.id
-										
+
 					print new_data[index], "#####"
-				index = index + 1 	
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
-		
+
 			#continue
 		    print obj, "Obj"
 		    print  data, "data"
@@ -80,7 +80,7 @@ class PersonResource(resources.ModelResource):
 		    skip=False
 		    field_name=self.get_field_name(field)
 		    if (field_name=='birth_place' and 'birth_place' in data) or (field_name=='death_place' and 'death_place' in data):
-			
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -88,8 +88,8 @@ class PersonResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
 				print "This is related to",field_name,'for person:',data['id_tei'],"\n"
@@ -113,9 +113,9 @@ class PersonResource(resources.ModelResource):
 			for i in new_data:
 				if str(i.id_tei) in mylist:
 					match=True
-					newlist= newlist + [i.id]				
-					del mylist[mylist.index(str(i.id_tei))]	
-				index = index + 1 	
+					newlist= newlist + [i.id]
+					del mylist[mylist.index(str(i.id_tei))]
+				index = index + 1
 			if mylist <> list():
 				print 'Did not find a match for some affiliations:',mylist
 				print "This is for", data['id_tei'],"\n"
@@ -123,7 +123,7 @@ class PersonResource(resources.ModelResource):
 				print "NO matching TEI id for:",data[field_name]," in many-to-many import",mylist
 				print 'This item will have NO affiliations'
 				print "This is for", data['id_tei'],'\n\n'
-				
+
 				data[field_name]=None
 				continue
 		    if field_name<>'affiliations':
@@ -131,17 +131,17 @@ class PersonResource(resources.ModelResource):
 		    else:
 			data['affiliations']=str(newlist)[1:-1]
 
-	
+
 	class Meta:
 		model = Person
-		#birth_place = fields.Field(widget=widgets.ForeignKeyWidget(Place,'name'))	
+		#birth_place = fields.Field(widget=widgets.ForeignKeyWidget(Place,'name'))
 		#95% sure this is uneccessary, pretty sure this is just white listing fields, but if we want them all, typing all this was dumb
 		fields =('id', 'id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender', 'affiliation1', 'affiliation2', 'bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations')
 		#exclude = ('id')
 class PersonAdmin(ImportExportModelAdmin):
 	fields = ['id_tei', 'lcnaf_uri', 'last_name', 'first_name', 'middle_name','display_name', 'other_names', 'birth_date', 'death_date', 'birth_place', 'death_place', 'gender','bio_notes', 'data_notes','citations', 'notes', 'PYM_index','affiliations']
 	resource_class = PersonResource
-	def the_affiliations(self,obj):	
+	def the_affiliations(self,obj):
 		aff_list = obj.affiliations.all()
 		mystring=""
 		for aff in aff_list:
@@ -162,7 +162,7 @@ class PersonAdmin(ImportExportModelAdmin):
 
 class PlaceResource(resources.ModelResource):
 
-		
+
 	def import_obj(self, obj, data, dry_run):
 		newlist=[]
 		for field in self.get_fields():
@@ -170,8 +170,8 @@ class PlaceResource(resources.ModelResource):
 		    field_name=self.get_field_name(field)
 
 		    if (field_name=='location_id' and 'location_id' in data):
-			
-			
+
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -179,8 +179,8 @@ class PlaceResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
 				continue
@@ -216,8 +216,8 @@ class OrganizationResource(resources.ModelResource):
 		for field in self.get_fields():
 		    skip=False
 		    field_name=self.get_field_name(field)
-		    if (field_name=='place_id ' and 'place_id' in data):	
-			
+		    if (field_name=='place_id ' and 'place_id' in data):
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -225,11 +225,11 @@ class OrganizationResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
-		
+
 		    self.import_field(field, obj, data)
 
 
@@ -269,8 +269,8 @@ class RelationshipResource(resources.ModelResource):
 		    skip=False
 		    field_name=self.get_field_name(field)
 		    if (field_name=='subject_id' and 'subject_id' in data) or (field_name=='relationship_type_id' and 'relationship_type_id' in data) or (field_name=='object_id' and 'object_id' in data):
-			
-			
+
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -278,8 +278,8 @@ class RelationshipResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
 		    self.import_field(field, obj, data)
@@ -315,7 +315,7 @@ class LocationResource(resources.ModelResource):
 		    skip=False
 		    field_name=self.get_field_name(field)
 		    if (field_name=='loc_type_id' and 'loc_type_id' in data):
-					
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -323,11 +323,11 @@ class LocationResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
-		
+
 
 		    self.import_field(field, obj, data)
 
@@ -347,7 +347,7 @@ class LocationAdmin(ImportExportModelAdmin):
 class LocTypeResource(resources.ModelResource):
 	class Meta:
 		model = LocType
-		fields = ['id','id_tei','loc_type'] 
+		fields = ['id','id_tei','loc_type']
 class LocTypeAdmin(ImportExportModelAdmin):
 	fields = ['id_tei','loc_type']
 	resource_class = LocTypeResource
@@ -363,8 +363,8 @@ class OrgResource(resources.ModelResource):
 		for field in self.get_fields():
 		    skip=False
 		    field_name=self.get_field_name(field)
-		    if (field_name=='place_id ' and 'place_id' in data):	
-			
+		    if (field_name=='place_id ' and 'place_id' in data):
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -372,8 +372,8 @@ class OrgResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
 				continue
@@ -400,8 +400,8 @@ class AffiliationResource(resources.ModelResource):
 		    skip=False
 		    field_name=self.get_field_name(field)
 		    if (field_name=='person_id' and 'person_id' in data) or (field_name=='org_id' and 'org_id' in data):
-			
-			
+
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -409,11 +409,11 @@ class AffiliationResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
-		
+
 		    self.import_field(field, obj, data)
 
 	class Meta:
@@ -440,11 +440,11 @@ class ManuscriptResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
-		    #Leaving this framework in for this one, it could be useful eventually 
+		    #Leaving this framework in for this one, it could be useful eventually
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
 			new_data=Org.objects.all()
 			match=False
@@ -462,8 +462,8 @@ class ManuscriptResource(resources.ModelResource):
 				print i.id_tei,i.id
 				if str(i.id_tei) in mylist:
 					match=True
-					newlist= newlist + [i.id]					
-				index = index + 1 	
+					newlist= newlist + [i.id]
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name]," in many-to-many import,:("
 		    if field_name<>'affiliations':
@@ -490,7 +490,7 @@ class PageResource(resources.ModelResource):
 		    skip=False
 		    field_name=self.get_field_name(field)
 		    if (field_name=='Manuscript_id' and 'Manuscript_id' in data):
-	
+
 			new_data=Place.objects.all()
 			match=False
 			index = 0
@@ -498,11 +498,11 @@ class PageResource(resources.ModelResource):
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-										
-				index = index + 1 	
+
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
-		
+
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
 			new_data=Org.objects.all()
 			match=False
@@ -520,8 +520,8 @@ class PageResource(resources.ModelResource):
 				print i.id_tei,i.id
 				if str(i.id_tei) in mylist:
 					match=True
-					newlist= newlist + [i.id]					
-				index = index + 1 	
+					newlist= newlist + [i.id]
+				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name]," in many-to-many import,:("
 		    if field_name<>'affiliations':
@@ -535,7 +535,7 @@ class PageResource(resources.ModelResource):
 		fields = ['id', 'id_tei', 'Manuscript_id', 'img_url', 'fulltext']
 class PageAdmin(ImportExportModelAdmin):
 	fields = ['id_tei', 'Manuscript_id', 'img_url', 'fulltext']
-	
+
 	resource_class = PageResource
 	search_fields = (['id_tei','Manuscript_id__title'])
 	list_display = (['id_tei','Manuscript_id'])
@@ -564,5 +564,3 @@ admin.site.register(Manuscript,ManuscriptAdmin)
 #admin.site.register(Manuscript)
 admin.site.register(Page,PageAdmin)
 #admin.site.register(Page)
-
-

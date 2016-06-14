@@ -34,15 +34,15 @@ urlpatterns = [
     url(r'^person/(?P<id>\S+)/', 'QI.views.person_detail', name = "person_detail"),
     url(r'^place/(?P<id>\S+)/', 'QI.views.place_detail', name = "place_detail"),
     url(r'^org/(?P<id>\S+)/', 'QI.views.org_detail', name = "org_detail"),
-    url(r'^alltheinfo', 'QI.views.htmlinfo', name = "testinfo"),
+    url(r'^alltheinfo', 'QI.views.htmlinfo', name = "testinfo"), #maybe irrelevant
     url(r'^something/(?P<id>\S+)/', 'QI.views.jsoninfo', name = "testinfo2"),
     #url(r'^page/(?P<id>\S+)/', 'QI.views.pageinfo', name="pageinfo"),
     url(r'^page/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pageinfo', name="page"),
     url(r'^pageinfo/(?P<id>\S+_[0-9]{3})/$', 'QI.views.newpageinfo', name="pageinfo"),
     url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
     url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
-    url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'),
-    url(r'^search/', 'QI.views.testsearch2', name='testsearch2'),
+    url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'), #maybe irrelevant
+    url(r'^search/', include('haystack.urls')),
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

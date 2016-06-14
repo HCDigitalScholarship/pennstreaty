@@ -1,0 +1,3 @@
+{{ object.id_tei }}
+{{ object.first_name }}
+{{ object.last_name }}

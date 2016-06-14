@@ -36,6 +36,9 @@ def testsearch(request):
 def testsearch2(request):
 	return render(request, 'testsearch2.html')
 
+def search(request):
+	return render(request, 'search/search.html')
+
 def person_detail(request,id):
 	try:
 		person = Person.objects.get(id_tei = id)
