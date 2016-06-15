@@ -34,19 +34,37 @@
 
 <br />
 <div class=container>
+<div id="row3">
+
+  <div class="well">  <form method="get" action=".">
+      <!--  <table>-->
+
+        <!--    {{ form.as_p }}-->
 
 
-    <form method="get" action=".">
-        <table>
-            {{ form.as_p }}
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <input type="submit" value="Search">
-                </td>
-            </tr>
-        </table>
+                        <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search"></p>
+            <p><label for="id_models_0">Narrow Your Search:</label> </p>
 
+
+        <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label>
+            <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label>
+              <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Organizations</label>
+              <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label>
+                <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label>
+
+
+            <p></p>
+
+
+            <!--<tr>-->
+
+
+              <p>
+                  <input type="submit" class="button" value="Search">
+        </p>
+          <!--  </tr>-->
+      <!--  </table>-->
+</div>
         {% if query %}
             <h3>Results</h3>
 
@@ -90,8 +108,11 @@
         {% else %}
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
+
     </form>
+  </div>
 </div>
+<br />
     {% include 'footer.html' %}
 
     {% include 'bottom-links.html' %}
