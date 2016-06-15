@@ -42,7 +42,7 @@
         <!--    {{ form.as_p }}-->
 
 
-              <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search"></p>
+              <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search" value="{{ request.get_full_path|cut:'/search/?q='|cut:'+' }}"></p>
 
 
   <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
