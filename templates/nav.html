@@ -18,18 +18,35 @@
     <ul class="full-width">
 
       <li class="has-dropdown">
-        <a href="/about">About</a>
+        <a href="/">Journeys</a>
             <ul class="dropdown">
-              <li><a href="/about">Penn's Treaty</a></li>
-              <li><a href="/profiles">Quakers and Indians</a></li>
+              <li><a href="/storymap">Travel Routes</a></li>
+              <li><a href="/">Digitized Maps</a></li>
+              <li><a href="/">Claire's Maps</a></li>
             </ul>
       </li>
 
-      <li><a href="https://ds-omeka.haverford.edu/qi/collections/browse/">Transcription</a></li>
+      <li class="has-dropdown">
+        <a href="/">Explore</a>
+            <ul class="dropdown">
+              <li><a href="/texts">Manuscripts</a></li>
+              <li><a href="/profiles">People, Places, and Groups</a></li>
+            </ul>
+      </li>
 
-      <li><a href="/texts">Available Texts</a></li>
+      <li><a href="https://ds-omeka.haverford.edu/qi/collections/browse/">Transcribe</a></li>
 
-      <li><a href="#">Bibliography &amp; Credits</a></li>
+      <li class="has-dropdown">
+        <a href="/">About</a>
+            <ul class="dropdown">
+              <li><a href="/">The Projects</a></li>
+              <li><a href="/">Historical Background</a></li>
+              <li><a href="/">Using This Site</a></li>
+              <li><a href="/">Bibliography</a></li>
+              <li><a href="/">Credits</a></li>
+            </ul>
+      </li>
+
 
     </ul>
 
@@ -44,18 +61,40 @@
   <ul class = "button-group even-5 show-for-large-up">
     <li><div id="borderimg1"><a href="/" class="button">Home</a></div></li>
 
-    <li><div id="borderimg1"><a href="/about" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">About</a></div></li>
-    <li><div id="borderimg1"><a href="https://ds-omeka.haverford.edu/qi/collections/browse/" class="button">Transcription</a></div></li>
-    <li><div id="borderimg1"><a href="/texts" class="button">Available Texts</a></div></li>
-    <li><div id="borderimg1"><a href="#" class="button">Bibliography &amp; Credits</a></div></li>
+    <li><div id="borderimg1"><a href="/" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="button dropdown">Journeys</a></div></li>
+
+    <li><div id="borderimg1"><a href="/" data-dropdown="drop3" aria-controls="drop3" aria-expanded="false" class="button dropdown">Explore</a></div></li>
+
+    <li><div id="borderimg1"><a href="https://ds-omeka.haverford.edu/qi/collections/browse/" class="button">Transcribe</a></div></li>
+
+    <li><div id="borderimg1"><a href="/" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">About</a></div></li>
+
   </ul>
 
 
 <!-- this is where the img HTML & links goes for dropdown menus -->
 
-        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+        <ul id="drop2" data-dropdown-content class="f-dropdown" aria-hidden="true">
           <div id="borderimg1">
-        <li><a href="/about">Penn's Treaty</a></li>
-        <li><a href="/profiles">Quakers and Indians</a></li>
+        <li><a href="/storymap">Travel Routes</a></li>
+        <li><a href="/">Digitized Maps</a></li>
+        <li><a href="/">Claire's Maps</a></li>
          </div>
       </ul>
+
+      <ul id="drop3" data-dropdown-content class="f-dropdown" aria-hidden="true">
+        <div id="borderimg1">
+      <li><a href="/texts">Manuscripts</a></li>
+      <li><a href="/profiles">People, Places, and Groups</a></li> <!--Fix these links-->
+       </div>
+    </ul>
+
+    <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+      <div id="borderimg1">
+    <li><a href="/">The Project</a></li>
+    <li><a href="/">Historical Background</a></li>
+    <li><a href="/">Using This Site</a></li>
+    <li><a href="/">Bibliography</a></li>
+    <li><a href="/">Credits</a></li>
+     </div>
+  </ul>
