@@ -1,6 +1,40 @@
 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <h2>Search</h2>
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  {% include 'top-links.html' %}
+  <title>Penn's Treaty | Search </title>
+</head>
+
+
+<body>
+
+      {% include 'header.html' %}
+
+      <div id = "row1">
+      <!--     Navigation Menu Below:  -->
+
+        {% include 'nav.html' %}
+
+      </div>
+
+      <div id ="row2">
+        <div class="row">
+          <br />
+        <h1>Search</h1>
+        <br />
+      </div>
+      </div>
+
+<br />
+<div class=container>
+
 
     <form method="get" action=".">
         <table>
@@ -57,3 +91,9 @@
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
     </form>
+</div>
+    {% include 'footer.html' %}
+
+    {% include 'bottom-links.html' %}
+</body>
+</html>
