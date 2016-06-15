@@ -4,7 +4,7 @@
 
     <form method="get" action=".">
         <table>
-            {{ form.as_table }}
+            {{ form.as_p }}
             <tr>
                 <td>&nbsp;</td>
                 <td>
@@ -18,7 +18,7 @@
 
             {% for result in page.object_list %}
                 <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.id_tei }}</a>
+                    <a href="/person/{{ result.object.id_tei }}">{{ result.object.id_tei }}</a>
                 </p>
             {% empty %}
                 <p>No results found.</p>

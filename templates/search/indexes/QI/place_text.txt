@@ -1,0 +1,7 @@
+{{ object.id_tei }}
+{{ object.name }}
+{{ object.state }}
+{{ object.county }}
+{{ object.latitude }}
+{{ object.longitude }}
+{{ object.notes }}
