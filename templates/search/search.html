@@ -42,29 +42,25 @@
         <!--    {{ form.as_p }}-->
 
 
-                        <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search"></p>
-            <p><label for="id_models_0">Narrow Your Search:</label> </p>
+              <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search"></p>
 
 
-        <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label>
-            <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label>
-              <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Organizations</label>
-              <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label>
-                <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label>
-
-
-            <p></p>
+  <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
+    <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label> </div>
+    <div class="col-sm-2">    <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label> </div>
+    <div class="col-sm-2">      <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Organizations</label> </div>
+    <div class="col-sm-2">          <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label> </div>
+    <div class="col-sm-2">             <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label> </div>
 
 
             <!--<tr>-->
+<br />
+<input type="submit" class="button" value="Search">
 
-
-              <p>
-                  <input type="submit" class="button" value="Search">
-        </p>
           <!--  </tr>-->
       <!--  </table>-->
 </div>
+
         {% if query %}
             <h3>Results</h3>
 

@@ -31,6 +31,8 @@
 </div>
 
 <div id = "row2">
+
+
   <div class = "row">
     <br />
     <h1>{{ person.first_name }} {{ person.last_name }}</h1>
@@ -157,6 +159,20 @@
 
   </div>
 </div>
+
+<div class=container-fluid>
+<div class="col-sm-3">
+  <form action="/search" method='get'>
+
+    search:<br>
+
+    <input type="text" name="q" value="hi">
+    <input type="submit" value="Search">
+
+  </form>
+</div>
+</div>
+
 
  {% include 'footer.html' %}
 
