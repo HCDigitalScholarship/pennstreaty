@@ -35,7 +35,8 @@ class Person(models.Model):
 	citations = models.TextField("Citations", blank = True)
 	PYM_index = models.TextField("PYM Index", blank = True)
 	affiliations = models.ManyToManyField('Org', blank = True)
-
+	def get_type(self):
+		return 'Person'
 	def __unicode__(self):
 		return self.id_tei + " " + self.first_name+ " " + self.last_name # + " " + self.uri_lcnaf + " " + self.last_name + " " + self.first_name  + " " + self.middle_name + " " + self.display_name + " " + self.other_names + " " + unicode(self.birth_date) +  " " + unicode(self.death_date) + " " + unicode(self.birth_place.name) + " " + unicode(self.death_place) + " " + self.gender + " " + unicode(self.role) + " " + unicode(self.role2) + " " + unicode(self.role3) + " " + self.affiliation1 + " " + self.affiliation2 + " " + self.notes + " " + self.bio_notes + " " + self.data_notes + " " + self.citations + " "  + unicode(self.PYM_index)
 #
@@ -60,6 +61,8 @@ class Place(models.Model):
 	#Some of the above will certainly get deleted, but for now, I just add
 	location_id = models.ForeignKey("Location", blank = True, null=True, related_name = 'Location')
 	date = models.CharField("Date", max_length = 20, blank = True)
+	def get_type(self):
+		return 'Place'
 	def __unicode__(self):
 		return self.id_tei + " " + self.name + " " + self.state + " " + unicode(self.latitude) + " " + unicode(self.longitude) + " " + self.notes + " " + self.notes2 + " "  + unicode(self.place_type) + " " + self.alternate
 """
@@ -113,7 +116,8 @@ class Org(models.Model):
 	citations = models.TextField("Description Field", blank = True)
 	def __unicode__(self):
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
-
+	def get_type(self):
+		return 'Org'
 
 class RoleType(models.Model):
 	role = models.CharField("Role_Type", max_length = 50, blank = True)
@@ -180,6 +184,8 @@ class Manuscript(models.Model):
 	call_no =  models.CharField("call_no", max_length=100, blank = True)
 	def __unicode__(self):
 		return self.title
+	def get_type(self):
+		return 'Manuscript'
 
 class Page(models.Model):
 	id_tei = models.CharField("TEI ID", max_length = 50)
@@ -188,7 +194,8 @@ class Page(models.Model):
 	fulltext = models.TextField("Full Text", blank = True) #This might fail
 	def __unicode__(self):
 		return self.id_tei
-
+	def get_type(self):
+		return 'Page'
 
 #Next time: Organization already existed... Whoops
 
