@@ -113,8 +113,8 @@ def xml_to_html(xml_file):
 
       for_csv = ''.join(html_string)
 
-#don't want this
- '''     
+      #don't want this
+      '''     
       with open("csv_for_"+os.path.basename(xml_file)+".csv", 'wb') as f:
             writer = csv.writer(f)
             count = 0
@@ -138,7 +138,7 @@ def xml_to_html(xml_file):
             
             writer.writerows(csv_list)
 
- '''     
+      '''     
       soup = BeautifulSoup(html_string, "html.parser")
 
       has_annoying_problem=False #pb splitting an <a> tag

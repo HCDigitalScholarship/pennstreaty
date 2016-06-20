@@ -1,6 +1,13 @@
+beautifulsoup4==4.4.1
+bs4==0.0.1
 diff-match-patch==20121119
 Django==1.8.5
+django-import-export==0.4.2
+html5lib==0.9999999
+lxml==3.6.0
+six==1.10.0
+tablib==0.11.1
+xlrd==0.9.4
 django-haystack==2.4.1
-django-import-export==0.4.0
-tablib==0.10.0
 Whoosh==2.7.4
+
