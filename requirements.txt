@@ -9,7 +9,5 @@ six==1.10.0
 tablib==0.11.1
 xlrd==0.9.4
 django-haystack==2.4.1
-django-import-export==0.4.0
-tablib==0.10.0
 Whoosh==2.7.4
 
