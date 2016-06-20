@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>all item info for the sake of transcribed pages</title>
+  </head>
+<body>
+
+<p> Honestly i think that this would maybe work best if added to the end of every page??? otherwise this
+  html file would have to be linked to in views.py and i'd have to set
+    person = Person.objects.get(id_tei=id) or something, along with place and org .. and idk </p>
+
+<!--anyway here goes some sample code that could work?-->
+
+    {% for person in persons %}
+      <div id = "{{ person.id_tei }}">
+      Name of Person: {{ person.first_name }} {{ person.last_name }}
+    </div>
+    {% endfor %}
+
+    {% for place in places %}
+      <div id = "{{ place.id_tei }}">
+       Name of Place: {{ place.name }}
+     </div>
+    {% endfor %}
+
+    {% for org in orgs %}
+      <div id = "{{ org.id_tei }}">
+      Name of Organization:  {{ org.organization_name }}
+    </div>
+    {% endfor %}
+
+
+</body>
+  </html>

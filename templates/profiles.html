@@ -5,9 +5,9 @@
      <!--   this is the css styling for datatables (it is a foundation library/datatable compatible thing) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
     {% include 'top-links.html' %}
-    
-    
- 
+
+
+
 
     <title>Person Profiles </title>
 
@@ -17,11 +17,14 @@
 	<header>
           <div class = "overlay-container">
             <img src="{% static "img/qandi.png" %}" alt="Header img" />
-              <div class = "overlay1 show-for-large-up">
+              <div  class = "overlay1 show-for-large-up">
+
+
+
                 <strong>Person, Place &amp; Organization Profiles</strong>
               </div>
         </div>
-   
+
     </header>
 
     <div id = "about1">
@@ -31,9 +34,9 @@
 
 
 
- 
+
      <div id = "profiles1">
-    
+
       <ul class="tabs" data-tab>
         <li class="tab-title active"><a href="#panel1">Persons</a></li>
         <li class="tab-title"><a href="#panel2">Places </a></li>
@@ -62,7 +65,7 @@
                                                         <tr>
 
                                                                 <td>
-                                                                    {{person.first_name}}  {{person.last_name}}
+                                                                  <a href="/person/{{person.id_tei}}">  {{person.first_name}}  {{person.last_name}} </a>
                                                                 </td>
                                                                 <td> {{person.other_names}} </td>
 
@@ -71,7 +74,7 @@
                                                                 <td>{{person.death_date}} </td>
                                                                 <td>{{person.notes}} </td>
                                                                 <td><a href = "{{person.uri_lcnaf}}"> {{person.uri_lcnaf}} </a></td>
-                                                                
+
                                                         </tr>
                                                                 {% endfor %}
                                         </tbody>
@@ -93,7 +96,7 @@
                                                         <th> Latitude </th>
                                                         <th> Longitude</th>
                                                         <th> Notes </th>
-                                                       
+
                                                 </tr>
                                         </thead>
                                         <tbody>
@@ -102,15 +105,15 @@
                                                         <tr>
 
                                                                 <td>
-                                                                    {{place.name}}
+                                                                  <a href="/place/{{place.id_tei}}">   {{place.name}} </a>
                                                                 </td>
                                                                 <td> {{place.alternate}} </td>
-                                                                <td>{{place.state}} </td>
+                                                                <td>{{place.state}}   </td>
                                                                 <td> {{place.latitude}} </td>
                                                                 <td>{{place.longitude}} </td>
                                                                 <td>{{person.notes}} </td>
-                                                                
-                                                                
+
+
                                                         </tr>
                                                                 {% endfor %}
                                         </tbody>
@@ -129,7 +132,7 @@
                                                         <th>Name</th>
                                                         <th>Associated Spellings</th>
                                                         <th> Notes </th>
-                                                        
+
                                                 </tr>
                                         </thead>
                                         <tbody>
@@ -138,12 +141,12 @@
                                                         <tr>
 
                                                                 <td>
-                                                                    {{org.organization_name}}  
+                                                                <a href="/org/{{org.id_tei}}">    {{org.organization_name}} </a>
                                                                 </td>
                                                                 <td> {{org.associated_spellings}} </td>
                                                                 <td>{{org_notes}} </td>
-                                                                
-                                                                
+
+
                                                         </tr>
                                                                 {% endfor %}
                                         </tbody>
@@ -155,7 +158,7 @@
         </div>
         </div>
       </div>
-   
+
     </div>
 
 
@@ -166,7 +169,7 @@
 
 
     {% include 'footer.html' %}
-    
+
  {% include 'bottom-links.html' %}
 <!-- this is the script necesssary for datatables.  you also need css styling for the datatable -->
   <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
@@ -178,7 +181,7 @@
                 {
                     extend: 'copyHtml5',
                     exportOptions: {
-                        columns: ':visible'               
+                        columns: ':visible'
          }
                 },
                 {
@@ -201,10 +204,10 @@
                 }
             ],
        "aLengthMenu": [[20, 50, 100, -1], [20, 50, 100]]
-      
+
         } );
     } );
-    
+
    </script>
 
   </body>
