@@ -50,7 +50,7 @@ class OrgIndex(indexes.SearchIndex, indexes.Indexable):
 class PageIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     uniqueID = indexes.CharField(model_attr='id_tei')
-    manuscript = indexes.CharField(model_attr='Manuscript_id')
+    #manuscript = indexes.CharField(model_attr='Manuscript_id')  #this isn't in the database...??
     fulltext = indexes.CharField(model_attr='fulltext')
     # add more attributes here! (comment them out if data not in database yet)
     def get_model(self):
