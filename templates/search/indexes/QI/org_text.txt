@@ -1,2 +1,10 @@
 {{ object.id_tei }}
 {{ object.organization_name }}
+{{ object.place_id }}
+{{ object.notes }}
+{{ object.associated_spellings }}
+{{ object.other_names }}
+{{ object.date_founded }}
+{{ object.date_dissolved }}
+{{ object.org_type }}
+{{ object.bio_notes }}

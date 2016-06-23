@@ -40,13 +40,13 @@
 
         <h3>Profile</h3>
                   <!-- <p><b>Name:</b> {{ org.organization_name }}</p> -->
-                  <p><b>Associated Spellings:</b> {{ org.associated_spellings }}</p>
-                  <p><b>Other Names:</b> {{ org.other_names }}</p>
-                  <p><b>Date Founded:</b> {{ org.date_founded }}</p>
-                  <p><b>Date Dissolved:</b> {{ org.date_dissolved }}</p>
+                  <p class="text-left"><b>Associated Spellings:</b> {{ org.associated_spellings }}</p>
+                  <p class="text-left"><b>Other Names:</b> {{ org.other_names }}</p>
+                  <p class="text-left"><b>Date Founded:</b> {{ org.date_founded }}</p>
+                  <p class="text-left"><b>Date Dissolved:</b> {{ org.date_dissolved }}</p>
          <!--     <p><b>Place ID:</b> <a href='/place/'+{{ place.id_tei }}> {{ place.name }}  </a> </p> -->
-                  <p><b>Place ID:</b> {{ org.place_id }}</p>  <!-- replace with the above one!! -->
-                  <p><b>Notes:</b> {{ org.notes }}</p>
+                  <p class="text-left"><b>Place ID:</b> {{ org.place_id }}</p>  <!-- replace with the above one!! -->
+                  <p class="text-left"><b>Notes:</b> {{ org.notes }}</p>
 
 
           <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>

@@ -4,6 +4,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 {% load staticfiles %}
+{% load more_like_this %}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -34,35 +35,45 @@
 
 <br />
 <div class=container>
+
+
 <div id="row3">
 
-  <div class="well">  <form method="get" action=".">
-      <!--  <table>-->
 
-        <!--    {{ form.as_p }}-->
+    <div class="well">  <form method="get" action=".">
+        <!--  <table>-->
 
-
-              <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search" placeholder="{{ request.get_full_path|cut:'/search/?q='|cut:'+'|cut:'/' }}"></p>
+          <!--    {{ form.as_p }}-->
 
 
-  <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
-    <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label> </div>
-    <div class="col-sm-2">    <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label> </div>
-    <div class="col-sm-2">      <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Organizations</label> </div>
-    <div class="col-sm-2">          <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label> </div>
-    <div class="col-sm-2">             <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label> </div>
+      <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search" placeholder="search"></p>
 
 
-            <!--<tr>-->
-<br />
-<input type="submit" class="button" value="Search">
+      <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
+      <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label> </div>
+      <div class="col-sm-2">  <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label> </div>
+      <div class="col-sm-2">  <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Organizations</label> </div>
+      <div class="col-sm-2">  <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label> </div>
+      <div class="col-sm-2">  <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label> </div>
 
-          <!--  </tr>-->
-      <!--  </table>-->
-</div>
+
+              <!--<tr>-->
+  <br />
+  <input type="submit" class="button" value="Search">
+
+            <!--  </tr>-->
+        <!--  </table>-->
+
+  </div>
+
 
         {% if query %}
+
+        {% more_like_this person as related_persons limit 5 %}
+{{ related_persons }}
+
             <h3>Results</h3>
+
 
             {% for result in page.object_list %}
                 <p>
@@ -94,15 +105,17 @@
                 <p>No results found.</p>
             {% endfor %}
 
-            {% if page.has_previous or page.has_next %}
+        {% if page.has_previous or page.has_next %}
                 <div>
                     {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
                     |
                     {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
                 </div>
             {% endif %}
+
         {% else %}
-            {# Show some example queries to run, maybe query syntax, something else? #}
+
+
         {% endif %}
 
     </form>

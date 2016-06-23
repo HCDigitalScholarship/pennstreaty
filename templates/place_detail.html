@@ -40,11 +40,11 @@
     <div class = "large-6 medium-6 small-12 columns">
 
         <h3>Profile</h3>
-              <p><b>Name:</b> {{ place.name }}</p>
-              <p></b>Alternate Names:</b> {{ place.alternate }}</p>
-              <p><b>State:</b> {{ place.state }}</p>
-              <p><b>Location:</b> {{ place.latitude }} N, {{ place.longitude }} W</p>
-              <p><b>Notes:</b> {{ place.notes }}</p>
+            <p class="text-left"><b>Name:</b> {{ place.name }}</p>
+              <p class="text-left"><b>Alternate Names:</b> {{ place.alternate }}</p>
+              <p class="text-left"><b>State:</b> {{ place.state }}</p>
+              <p class="text-left"><b>Location:</b> {{ place.latitude }} N, {{ place.longitude }} W</p>
+              <p class="text-left"><b>Notes:</b> {{ place.notes }}</p>
 
 
           <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>

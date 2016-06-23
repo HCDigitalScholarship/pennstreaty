@@ -47,14 +47,13 @@ def person_detail(request,id):
 	except Person.DoesNotExist:
 		raise Http404('this person does not exist')
 	allpages = Page.objects.filter(fulltext__contains = id) #list of pages containing this person
-	manuscripttitles = [] #make a list of all manuscript titles that are relevant
+	manuscripttitles = [] #make a list of all manuscript titles that are relevant (in for loop)
 	for i in range(0,len(allpages)):
 		manuscripttitles = manuscripttitles + [allpages[i].Manuscript_id]
-	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles)
+	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles) #get list of these manuscripts from the title list
 	#this should collect all relevant manuscripts
 	return render(request,'person_detail.html',{
-	'person':person, 'allpages':allpages, 'allmanuscripts':allmanuscripts
-	#'birthplace':birthplace,'deathplace':deathplace
+	'person':person, 'allpages':allpages, 'allmanuscripts':allmanuscripts, #'birthplace':birthplace,'deathplace':deathplace
 	})
 
 def place_detail(request,id):
