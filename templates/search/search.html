@@ -69,10 +69,45 @@
 
         {% if query %}
 
-        {% more_like_this person as related_persons limit 5 %}
-{{ related_persons }}
-
             <h3>Results</h3>
+
+
+            {% with page.object_list as results %}
+           {% regroup results|dictsort:"modeltype" by modeltype as grouped_objects %}
+           {% for ct in grouped_objects %}
+               <h4> {{ ct.grouper }} </h4> <!--This is the name of the category-->
+               {% for result in ct.list %}
+                   <p>
+                       {% if result.object.get_type == 'Person' %}
+
+                       <a href="/person/{{ result.object.id_tei }}">{{ result.object.first_name }} {{ result.object.last_name}}</a>
+
+                       {% elif result.object.get_type == 'Place' %}
+
+                       <a href="/place/{{ result.object.id_tei }}">{{ result.object.name }}</a>
+
+                       {% elif result.object.get_type == 'Group' %}
+
+                       <a href="/org/{{ result.object.id_tei }}">{{ result.object.organization_name }}</a>
+
+                       {% elif result.object.get_type == 'Page' %}
+
+                       <a href="/page/{{ result.object.id_tei }}">{{ result.object.id_tei }}</a>
+
+                       {% else %}
+
+                       <a href="/page/{{ result.object.id_tei }}_001">{{ result.object.title }}</a>
+
+                       {% endif %}
+                   </p>
+               {% endfor %}
+           {% empty %}
+               <p>No results found.</p>
+           {% endfor %}
+       {% endwith %}
+
+
+       <!--
 
 
             {% for result in page.object_list %}
@@ -80,7 +115,7 @@
 
                     {% if result.object.get_type == 'Person' %}
 
-                    <a href="/person/{{ result.object.id_tei }}">{{ result.object.first_name}} {{ result.object.last_name}}</a>
+                    <a href="/person/{{ result.object.id_tei }}">{{ result.object.first_name }} {{ result.object.last_name}}</a>
 
                     {% elif result.object.get_type == 'Place' %}
 
@@ -101,9 +136,13 @@
                     {% endif %}
 
                 </p>
+
             {% empty %}
                 <p>No results found.</p>
             {% endfor %}
+
+-->
+
 
         {% if page.has_previous or page.has_next %}
                 <div>

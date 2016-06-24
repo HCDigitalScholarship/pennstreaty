@@ -117,7 +117,7 @@ class Org(models.Model):
 	def __unicode__(self):
 		return self.id_tei + " " + self.organization_name + " " + self.notes + " " + self.associated_spellings + " " + self.PYM_index
 	def get_type(self):
-		return 'Org'
+		return 'Group'
 
 class RoleType(models.Model):
 	role = models.CharField("Role_Type", max_length = 50, blank = True)
