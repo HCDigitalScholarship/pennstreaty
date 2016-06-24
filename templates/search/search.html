@@ -72,35 +72,57 @@
             <h3>Results</h3>
 
 
+
+
             {% with page.object_list as results %}
            {% regroup results|dictsort:"modeltype" by modeltype as grouped_objects %}
            {% for ct in grouped_objects %}
-               <h4> {{ ct.grouper }} </h4> <!--This is the name of the category-->
+          <!--     <h4> <b>{{ ct.grouper }}</b> ({{ ct.list|length }}) </h4> --> <!--This is the name of the category-->
+
+          <div class="panel-group">
+              <div class="panel panel-default">
+               <div class="panel-heading">
+                 <h4 class="panel-title">
+
+                   <a data-toggle="collapse" href="#collapse{{ ct.grouper }}"> <font color =#008CBA face='Open Sans'><h4><b>{{ ct.grouper }}</b> ({{ ct.list|length }})</h4></font> </a>
+
+                 </h4>
+               </div>
+
+               <div id="collapse{{ ct.grouper }}" class="panel-collapse collapse">
+
+                 <ul class="list-group">  <!--setting up list group per CT-->
+
                {% for result in ct.list %}
-                   <p>
-                       {% if result.object.get_type == 'Person' %}
 
-                       <a href="/person/{{ result.object.id_tei }}">{{ result.object.first_name }} {{ result.object.last_name}}</a>
+                       {% if result.object.get_type == 'People' %}
 
-                       {% elif result.object.get_type == 'Place' %}
+                    <li class = "list-group-item">   <a href="/person/{{ result.object.id_tei }}">{{ result.object.first_name }} {{ result.object.last_name}}</a> </li>
 
-                       <a href="/place/{{ result.object.id_tei }}">{{ result.object.name }}</a>
+                       {% elif result.object.get_type == 'Places' %}
 
-                       {% elif result.object.get_type == 'Group' %}
+                    <li class = "list-group-item">   <a href="/place/{{ result.object.id_tei }}">{{ result.object.name }}</a> </li>
 
-                       <a href="/org/{{ result.object.id_tei }}">{{ result.object.organization_name }}</a>
+                       {% elif result.object.get_type == 'Groups' %}
 
-                       {% elif result.object.get_type == 'Page' %}
+                    <li class = "list-group-item">   <a href="/org/{{ result.object.id_tei }}">{{ result.object.organization_name }}</a> </li>
 
-                       <a href="/page/{{ result.object.id_tei }}">{{ result.object.id_tei }}</a>
+                       {% elif result.object.get_type == 'Pages' %}
+
+                    <li class = "list-group-item">   <a href="/page/{{ result.object.id_tei }}">{{ result.object.id_tei }}</a> </li>
 
                        {% else %}
 
-                       <a href="/page/{{ result.object.id_tei }}_001">{{ result.object.title }}</a>
+                    <li class = "list-group-item">   <a href="/page/{{ result.object.id_tei }}_001">{{ result.object.title }}</a> </li>
 
                        {% endif %}
-                   </p>
+                
                {% endfor %}
+
+             </ul>
+           </div>
+             </div>
+           </div>
            {% empty %}
                <p>No results found.</p>
            {% endfor %}
