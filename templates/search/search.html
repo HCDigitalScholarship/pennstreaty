@@ -46,13 +46,15 @@
           <!--    {{ form.as_p }}-->
 
 
-      <p><label for="id_q">Search:</label> <input id="id_q" name="q" type="search" placeholder="search"></p>
+      <p><label for="id_q">Search:</label>
+        <input id="id_q" name="q" type="search" placeholder="search"></p>
+
 
 
       <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
       <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label> </div>
       <div class="col-sm-2">  <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label> </div>
-      <div class="col-sm-2">  <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Organizations</label> </div>
+      <div class="col-sm-2">  <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Groups</label> </div>
       <div class="col-sm-2">  <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label> </div>
       <div class="col-sm-2">  <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label> </div>
 
@@ -116,7 +118,7 @@
                     <li class = "list-group-item">   <a href="/page/{{ result.object.id_tei }}_001">{{ result.object.title }}</a> </li>
 
                        {% endif %}
-                
+
                {% endfor %}
 
              </ul>
