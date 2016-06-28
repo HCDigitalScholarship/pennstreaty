@@ -71,6 +71,27 @@
 
         {% if query %}
 
+        <!-- Begin faceting.
+<div>
+   <dl>
+
+
+       {% if facets.fields.wish_text %}
+          {% for firstname in facets.fields.firstname  %}
+               <dd><a href="{{ request.get_full_path }}&amp;selected_facets=author_exact:{{ author.0|urlencode }}">{{ author.0 }}</a> ({{ author.1 }})</dd>
+           {% endfor %}
+       {% else %}
+           <p>No author facets.</p>
+       {% endif %}
+   </dl>
+
+</div>
+
+End faceting -->
+
+
+
+
             <h3>Results</h3>
 
 
