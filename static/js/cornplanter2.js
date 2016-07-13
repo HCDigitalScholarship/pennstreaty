@@ -81,6 +81,10 @@ function callback_2(data) {
     if (data[0]["fields"].latitude == "") {
       data[0]["fields"].latitude = 'Unknown';
     }
+    else {
+      data[0]["fields"].latitude = data[0]["fields"].latitude + " N"
+      data[0]["fields"].longitude = data[0]["fields"].longitude + " W"
+    }
 
     if (data[0]["fields"].notes == "") {
       data[0]["fields"].notes = 'None';

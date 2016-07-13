@@ -114,7 +114,7 @@ def place_detail(request,id):
 	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles)
 	#this should collect all relevant manuscripts
 	return render(request,'place_detail.html',{
-	'place':place,
+	'place':place, 'allpages':allpages, 'allmanuscripts':allmanuscripts
 	})
 
 def org_detail(request,id):
@@ -130,7 +130,7 @@ def org_detail(request,id):
 	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles)
 	#this should collect all relevant manuscripts
 	return render(request,'org_detail.html',{
-	'org':org,
+	'org':org, 'allpages':allpages, 'allmanuscripts':allmanuscripts,
 	#'place':place
 	})
 
