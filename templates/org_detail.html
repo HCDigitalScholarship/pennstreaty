@@ -40,13 +40,42 @@
 
         <h3>Profile</h3>
                   <!-- <p><b>Name:</b> {{ org.organization_name }}</p> -->
+
+                  {% if org.org_type and org.org_type.strip %}
+                  <p class="text-left"><b>Type:</b> {{ org.org_type }}</p>
+                  {% else %}
+                  <p class="text-left"><b>Type:</b> Unknown</p>
+                  {% endif %}
+
+                  {% if org.associated_spellings and org.associated_spellings.strip %}
                   <p class="text-left"><b>Associated Spellings:</b> {{ org.associated_spellings }}</p>
+                  {% else %}
+                  <p class="text-left"><b>Associated Spellings:</b> None</p>
+                  {% endif %}
+
+                  {% if org.other_names and org.other_names.strip%}
                   <p class="text-left"><b>Other Names:</b> {{ org.other_names }}</p>
+                  {% else %}
+                  <p class="text-left"><b>Other Names:</b> None</p>
+                  {% endif %}
+
+                  {% if org.date_founded and org.date_founded.strip %}
                   <p class="text-left"><b>Date Founded:</b> {{ org.date_founded }}</p>
+                  {% else %}
+                  <p class="text-left"><b>Date Founded:</b> Unknown</p>
+                  {% endif %}
+
+                  {% if org.date_dissolved and org.date_dissolved.strip %}
                   <p class="text-left"><b>Date Dissolved:</b> {{ org.date_dissolved }}</p>
-         <!--     <p><b>Place ID:</b> <a href='/place/'+{{ place.id_tei }}> {{ place.name }}  </a> </p> -->
-                  <p class="text-left"><b>Place ID:</b> {{ org.place_id }}</p>  <!-- replace with the above one!! -->
+                  {% else %}
+                  <p class="text-left"><b>Date Dissolved:</b> Unknown</p>
+                  {% endif %}
+
+                <!--  <p class="text-left"><b>Place ID:</b> {{ org.place_id }}</p> -->
+
+                  {% if org.notes and org.notes.strip %}
                   <p class="text-left"><b>Notes:</b> {{ org.notes }}</p>
+                  {% endif %}
 
 
           <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>

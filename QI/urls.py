@@ -43,6 +43,7 @@ urlpatterns = [
     url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
     url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'), #maybe irrelevant
     url(r'^search/', include('haystack.urls')),
+    url(r'^manuscript/(?P<id>\S+)/', 'QI.views.manu_detail', name = "manu_detail"),
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

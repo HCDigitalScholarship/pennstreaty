@@ -47,21 +47,92 @@
 
     <div class = "large-6 medium-6 small-12 columns">
 
-        <h3> Profile</h3>
+        <h3> Profile</h3> <!-- deal with missing vals here -->
 
+          <!-- OTHER NAMES -->
+          {% if person.other_names and person.other_names.strip %}
           <p class="text-left"><b>Other Names:</b> {{ person.other_names }} </p>
+          {% else %}
+          <p class="text-left"><b>Other Names:</b> None </p>
+          {% endif %}
+
+          <!-- GENDER -->
+          {% if person.gender and person.gender.strip %}
           <p class="text-left"><b>Assumed Gender:</b>
-          {{ person.gender }}
-           </p>
+          {% if person.gender == 'm'%}
+          Male
+          {% else %}
+          Female
+          {% endif %}
+          </p>
+          {% else %}
+            <p class="text-left"><b>Assumed Gender:</b> Unknown </p>
+          {% endif %}
+
+          <!-- BIRTH DATE -->
+          {% if person.birth_date and person.birth_date.strip %}
           <p class="text-left"><b>Birth Date:</b> {{ person.birth_date }} </p>
+          {% else %}
+          <p class="text-left"><b>Birth Date:</b> Unknown </p>
+          {% endif %}
+
       <!--    <p class="text-left"><b>Birth Place:</b> <a href='/place/{{ birthplace.id_tei }}'>  {{ birthplace.name }} </a> </p> -->
-        <p class="text-left"><b>Birth Place:</b> {{ person.birth_place }} </p>  <!-- switch this one with the above 1 -->
 
+      <!--test-->
+
+      <!-- BIRTH PLACE -->
+        {% if person.birth_place %}
+
+        {% if MC == 'True' %}
+        <p class="text-left"><b>Birth Place:</b> Mud Creek, New York</p>  <!-- switch this one with the above 1 -->
+        {% else %}
+        <p class="text-left"><b>Birth Place:</b> <a href="/place/{{ birthplace.id_tei}}">{{ birthplace.name }} </a></p>
+        {% endif %}
+
+        {% else %}
+        <p class="text-left"><b>Birth Place:</b> Unknown</p>
+
+        {% endif %}
+
+
+
+        <!-- DEATH DATE -->
+        {% if person.death_date and person.death_date.strip %}
           <p class="text-left"><b>Death Date:</b> {{ person.death_date }} </p>
+          {% else %}
+          <p class="text-left"><b>Death Date:</b> Unknown </p>
+          {% endif %}
     <!-- <p class="text-left"><b>Death Place:</b> <a href='/place/'+{{ deathplace.id_tei }}> {{ deathplace.name }} </a> </p> -->
-          <p class="text-left"><b>Death Place:</b> {{ person.death_place }} </p> <!--switch this one with the above 1-->
-          <p class="text-left"><b>Affiliations:</b> {{  person.affiliations }} </p>
 
+
+      <!-- DEATH PLACE -->
+      {% if person.death_place %}
+
+        {% if MC1 == 'True' %}
+          <p class="text-left"><b>Death Place:</b> Mud Creek, New York </p>
+          {% else %}
+          <p class="text-left"><b>Death Place:</b> <a href="/place/{{ deathplace.id_tei}}"> {{ deathplace.name }} </a></p> <!--switch this one with the above 1-->
+            {% endif %}
+      {% else %}
+          <p class="text-left"><b>Death Place:</b> Unknown</p>
+      {% endif %}
+
+
+          <!-- AFFILIATIONS -->
+          <p class="text-left"><b>Affiliations:</b>
+          {% if newAffiliations|length > 0 %}
+            {% for aff in newAffiliations %}
+            {% if forloop.counter > 1 %} ,
+            {% endif %}
+            <a href=/org/{{aff.id_tei}}>{{ aff.organization_name }}</a>
+            {% endfor %}
+          {% else %}
+          Unknown
+          {% endif %}
+          </p>
+
+
+          <!-- BIO NOTES -->
           <p class="text-left"><b>Notes:</b> {{ person.bio_notes }}</p>
 
           <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>

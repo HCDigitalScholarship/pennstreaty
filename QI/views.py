@@ -15,7 +15,15 @@ def about(request):
 	return render(request, 'about.html')
 
 def texts(request):
-	return render(request, 'texts.html')
+	textlist = Manuscript.objects.order_by('title')
+	pagelist = Page.objects.order_by('Manuscript_id')
+	return render(request, 'texts.html', {'textlist':textlist,'pagelist':pagelist})
+
+def profiles(request):
+	person_list = Person.objects.order_by('last_name')
+	place_list = Place.objects.order_by('name')
+	org_list = Org.objects.order_by('organization_name')
+	return render(request, 'profiles.html', {'persons': person_list, 'places': place_list, 'orgs': org_list})
 
 def cornp1(request):
 	return render(request, 'cornp1.html')
@@ -26,10 +34,6 @@ def places(request):
 def organizations(request):
 	return render(request, 'organizations.html')
 
-
-#becky is adding this next few as a test to see if a given person/place/org page will work
-
-
 def testsearch(request):
 	return render(request, 'testsearch.html')
 
@@ -39,11 +43,18 @@ def testsearch2(request):
 def search(request):
 	return render(request, 'search/search.html')
 
+def manu_detail(request,id):
+	try:
+		manu = Manuscript.objects.get(id_tei = id) #get this manuscript!
+	except Manuscript.DoesNotExist:
+		raise Http404('this manuscript does not exist')
+	#allpages = Page.objects.filter(Manuscript_id = Manuscript.objects.get(id_tei=id).title) #get all pages from this manuscript!
+	return render(request,'manu_detail.html', {'manu':manu,#'allpages':allpages,
+	})
+
 def person_detail(request,id):
 	try:
 		person = Person.objects.get(id_tei = id)
-		#birthplace = Place.objects.get(id_tei = person.birth_place)
-		#deathplace = Place.objects.get(id_tei = person.death_place)
 	except Person.DoesNotExist:
 		raise Http404('this person does not exist')
 	allpages = Page.objects.filter(fulltext__contains = id) #list of pages containing this person
@@ -51,9 +62,44 @@ def person_detail(request,id):
 	for i in range(0,len(allpages)):
 		manuscripttitles = manuscripttitles + [allpages[i].Manuscript_id]
 	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles) #get list of these manuscripts from the title list
-	#this should collect all relevant manuscripts
+	# ^ this should collect all relevant manuscripts
+	""" the following lines are about finding the correct birth place & death place """
+	#checking if the birth place is mud creek because right now mud creek doesn't have an ID_TEI
+	newBP = str(person.birth_place)
+	if 'Mud Creek' in newBP:
+		MC = 'True'
+	else:
+		MC = 'False'
+	#checking if the death place is mud creek because right now mud creek doesn't have an ID_TEI
+	newDP = str(person.death_place)
+	if 'Mud Creek' in newDP:
+		MC1 = 'True'
+	else:
+		MC1 = 'False'
+	#now, if birth place & death place aren't mud creek, let's get their id's!
+	if MC == 'False':
+		FirstSpace = newBP.index(' ') #find first space in birth place
+		newbirthplace = newBP[0:FirstSpace] #get the id_tei of the birth place
+		birthplace = Place.objects.get(id_tei = newbirthplace) #get the real birth place! (via model)
+	else:
+		birthplace = "Mud Creek"
+	#/////////////
+	if MC1 == 'False':
+		FirstSpace1 = newDP.index(' ')
+		newdeathplace = newDP[0:FirstSpace1] #get id_tei of death place
+		deathplace = Place.objects.get(id_tei = newdeathplace) #get real death place (via model)
+	else:
+		deathplace = "Mud Creek"
+	""" Done finding death place & birth place """
+	#Now, find proper names of all the affiliations!
+	newAffiliations = []
+	for i in range(0,len(person.affiliations.all())):
+		FS = str(person.affiliations.all()[i]).index(' ') #locate first space
+		newAff = str(person.affiliations.all()[i])[0:FS] #find id_tei of affiliation (aka group)
+		newAff1 = Org.objects.get(id_tei = newAff) #find instance of group model!
+		newAffiliations = newAffiliations + [newAff1] #add to list of Affiliations!
 	return render(request,'person_detail.html',{
-	'person':person, 'allpages':allpages, 'allmanuscripts':allmanuscripts, #'birthplace':birthplace,'deathplace':deathplace
+	'person':person, 'allpages':allpages, 'allmanuscripts':allmanuscripts, 'MC':MC,'MC1':MC1,'birthplace':birthplace,'deathplace':deathplace, 'newAffiliations':newAffiliations
 	})
 
 def place_detail(request,id):
@@ -117,7 +163,7 @@ def pageinfo(request,id):
 	'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id
 	})
 
-	#got to include info as to whether or not it's the first or last pg in a manuscript!
+	#gotta include info as to whether or not it's the first or last pg in a manuscript!
 
 def newpageinfo(request,id): #for when cornplanter.js tries to get info of a new page
 		try:
@@ -178,13 +224,6 @@ def jsoninfo(request,id): #this is where the side tab gets its info on the page 
 				raise Http404('this item does not exist')
 	return HttpResponse(items, content_type='application/json')
 
-#this is the end of what becky did
-
-def profiles(request):
-	person_list = Person.objects.order_by('last_name')
-	place_list = Place.objects.order_by('name')
-	org_list = Org.objects.order_by('organization_name')
-	return render(request, 'profiles.html', {'persons': person_list, 'places': place_list, 'orgs': org_list})
 
 def storymap(request, xml_id):
 	return render(request, 'story_maps/' + xml_id + '.html')

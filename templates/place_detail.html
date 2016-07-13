@@ -40,11 +40,30 @@
     <div class = "large-6 medium-6 small-12 columns">
 
         <h3>Profile</h3>
+
             <p class="text-left"><b>Name:</b> {{ place.name }}</p>
+
+              {% if place.alternate and place.alternate.strip %}
               <p class="text-left"><b>Alternate Names:</b> {{ place.alternate }}</p>
+              {% else %}
+              <p class="text-left"><b>Alternate Names:</b> None</p>
+              {% endif %}
+
+              {% if place.state and place.state.strip %}
               <p class="text-left"><b>State:</b> {{ place.state }}</p>
+              {% else %}
+              <p class="text-left"><b>State:</b> Unknown</p>
+              {% endif %}
+
+              {% if place.latitude and place.latitude.strip and place.longitude and place.longitude.strip %}
               <p class="text-left"><b>Location:</b> {{ place.latitude }} N, {{ place.longitude }} W</p>
+              {% else %}
+              <p class="text-left"><b>Location:</b> Unknown</p>
+              {% endif %}
+
+              {% if place.notes and place.notes.strip %}
               <p class="text-left"><b>Notes:</b> {{ place.notes }}</p>
+              {% endif %}
 
 
           <p class="text-left"><a href="{% url 'Person Profiles' %}"> &rarr; go back to list of profiles</a></p>
