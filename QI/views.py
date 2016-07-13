@@ -117,7 +117,7 @@ def pageinfo(request,id):
 	'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id
 	})
 
-	#gotta include info as to whether or not it's the first or last pg in a manuscript!
+	#got to include info as to whether or not it's the first or last pg in a manuscript!
 
 def newpageinfo(request,id): #for when cornplanter.js tries to get info of a new page
 		try:
