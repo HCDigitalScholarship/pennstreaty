@@ -48,8 +48,11 @@ def manu_detail(request,id):
 		manu = Manuscript.objects.get(id_tei = id) #get this manuscript!
 	except Manuscript.DoesNotExist:
 		raise Http404('this manuscript does not exist')
-	#allpages = Page.objects.filter(Manuscript_id = Manuscript.objects.get(id_tei=id).title) #get all pages from this manuscript!
-	return render(request,'manu_detail.html', {'manu':manu,#'allpages':allpages,
+	allpages = Page.objects.filter(id_tei__contains = manu.id_tei) #get all pages from this manuscript!
+	Space = str(manu.person_id).index(" ")
+	TrueAuthor = str(manu.person_id)[0:Space] #find the author ID of this person
+	Author = Person.objects.get(id_tei=TrueAuthor) #get the actual person
+	return render(request,'manu_detail.html', {'manu':manu,'allpages':allpages, 'Author':Author
 	})
 
 def person_detail(request,id):
