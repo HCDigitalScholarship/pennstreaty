@@ -44,22 +44,54 @@
 <div id = "row3">
 <div class="content container">
 <br>
-<div class=well>
-
-<!--<div class=col-sm-6>-->
-<img style="width:500px" src="/static/img/{{manu.id_tei}}_001.png">
-<!--</div>-->
-
-
 <div class=col-sm-6>
-<p><b>Title:</b> {{manu.title}}</p>
+<div class=well>
+<img style="width:500px" src="/static/img/{{manu.id_tei}}_001.png">
+</div>
+
+</div>
+<div class=col-sm-6>
+  <div class=well>
+<p><b style>Title:</b> {{manu.title}}</p>
 <p><b>Author:</b><a href="/person/{{Author.id_tei}}"> {{Author.first_name}} {{Author.last_name}}</a></p>
 <p><b>Date:</b> {{manu.date}}</p>
 <p style="text-transform:capitalize"><b>Type of Manuscript:</b> {{manu.type_of_Manuscript}} </p>
 <p><b>Call Number:</b> {{manu.call_no}}</p>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading" style="background-color:#E8EDF6">
+      <h4 class="panel-title">
+
+        <a data-toggle="collapse" href="#collapse{{manu.id_tei}}"> <b><font color =#008CBA face='Open Sans'>Explore this manuscript</font></b></a>
+
+      </h4>
+    </div>
+
+
+    <div id="collapse{{ manu.id_tei }}" class="panel-collapse collapse">
+      <ul class="list-group">
+
+    {% for page in allpages %}
+
+<li class = "list-group-item">
+              <a href ='/page/{{ page.id_tei }}'> Page {{forloop.counter}} </a>
+</li>
+
+
+
+    {% endfor %}
+
+  </ul>
 </div>
 
 </div>
+</div>
+
+</div>
+
+</div>
+
 
 </div>
 </div>
