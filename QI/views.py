@@ -43,6 +43,9 @@ def testsearch2(request):
 def search(request):
 	return render(request, 'search/search.html')
 
+def overviewmap(request):
+	return render(request, 'overviewmap.html')
+
 def manu_detail(request,id):
 	try:
 		manu = Manuscript.objects.get(id_tei = id) #get this manuscript!

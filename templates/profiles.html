@@ -3,7 +3,7 @@
 <html class="no-js" lang="en">
   <head>
      <!--   this is the css styling for datatables (it is a foundation library/datatable compatible thing) -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
     {% include 'top-links.html' %}
 
 
@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <!--
 	<header>
           <div class = "overlay-container">
             <img src="{% static "img/qandi.png" %}" alt="Header img" />
@@ -25,14 +26,13 @@
               </div>
         </div>
 
-    </header>
+    </header>-->
 
-    <div id = "about1">
+        {% include 'header.html' %}
+
+    <div id = "row1">
     	{% include 'nav.html' %}
     </div>
-
-
-
 
 
      <div id = "profiles1">
