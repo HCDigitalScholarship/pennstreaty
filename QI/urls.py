@@ -44,7 +44,8 @@ urlpatterns = [
     url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'), #maybe irrelevant
     url(r'^search/', include('haystack.urls')),
     url(r'^manuscript/(?P<id>\S+)/', 'QI.views.manu_detail', name = "manu_detail"),
-    url(r'^map/$', 'QI.views.overviewmap', name= 'overviewmap')
+    url(r'^map/$', 'QI.views.overviewmap', name= 'overviewmap'),
+    url(r'^outputPagePDF/(?P<id>\S+)/', 'QI.views.outputPagePDF', name = "outputPagePDF")
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

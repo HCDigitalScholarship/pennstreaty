@@ -11,7 +11,7 @@
 
 <div class='stufftoinclude'>
 
-    <header>
+    <!--<header>
             <div class = "overlay-container">
               <img src="{% static "img/qandi.png" %}" alt="Header img" />
               <div class = "overlay1 show-for-large-up">
@@ -19,15 +19,23 @@
               </div>
           </div>
 
-      </header>
+      </header>-->
+
+    {% include 'header.html' %}
 
 
 
-    <div id = "about1">
+    <div id = "row1">
     	{% include 'nav.html' %}
     </div>
 
 </div>
+
+<div id="row2">
+<br>
+</div>
+
+
 
     <div id = "about2">
 <div id="sidestuff">
@@ -64,6 +72,9 @@
         <h2>  <center>{{ manuscript.title }} </center></h2>
 
         {{ page.fulltext|safe|escape }}
+
+<br>
+<p><a href=/outputPagePDF/{{page.id_tei}}>Click here to download PDF of this page</a> </p>
 
 
         <script>

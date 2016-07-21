@@ -3,6 +3,8 @@ from django.http import HttpResponse, Http404
 from django.template import RequestContext, loader
 from django.shortcuts import render, render_to_response
 from django.core import management, serializers
+from reportlab.pdfgen import canvas
+from io import BytesIO
 from models import Person
 from models import Place
 from models import Org
@@ -45,6 +47,27 @@ def search(request):
 
 def overviewmap(request):
 	return render(request, 'overviewmap.html')
+
+def outputPagePDF(request,id):
+	PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
+	FullText = PageToOutput.fulltext #get the text that you want to put in the PDF
+    # Create the HttpResponse object with the appropriate PDF headers.
+	response = HttpResponse(content_type='application/pdf')
+	response['Content-Disposition'] = 'attachment; filename="somefilename.pdf"'
+	buffer = BytesIO()
+    # Create the PDF object, using the BytesIO object as its "file."
+	p = canvas.Canvas(buffer)
+    # Draw things on the PDF. Here's where the PDF generation happens.
+    # See the ReportLab documentation for the full list of functionality.
+	p.drawString(100, 100, "Hello world.")
+    # Close the PDF object cleanly.
+	p.showPage()
+	p.save()
+    # Get the value of the BytesIO buffer and write it to the response.
+	pdf = buffer.getvalue()
+	buffer.close()
+	response.write(pdf)
+	return response
 
 def manu_detail(request,id):
 	try:

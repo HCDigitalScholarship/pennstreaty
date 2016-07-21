@@ -39,8 +39,6 @@ class PlaceIndex(indexes.SearchIndex, indexes.Indexable):
     def get_type(self):
         return 'Place'
 
-
-
 class OrgIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     uniqueID = indexes.CharField(model_attr='id_tei')
