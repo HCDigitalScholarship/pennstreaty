@@ -45,7 +45,11 @@ urlpatterns = [
     url(r'^search/', include('haystack.urls')),
     url(r'^manuscript/(?P<id>\S+)/', 'QI.views.manu_detail', name = "manu_detail"),
     url(r'^map/$', 'QI.views.overviewmap', name= 'overviewmap'),
-    url(r'^outputPagePDF/(?P<id>\S+)/', 'QI.views.outputPagePDF', name = "outputPagePDF")
+    url(r'^outputPagePDF/(?P<id>\S+)/', 'QI.views.outputPagePDF', name = "outputPagePDF"),
+    url(r'^outputPagePT/(?P<id>\S+)/', 'QI.views.outputPagePT', name = "outputPagePT"),
+    url(r'^outputManuPT/(?P<id>\S+)/', 'QI.views.outputManuPT', name = "outputManuPT"),
+    url(r'^outputAll/', 'QI.views.outputAll', name = "outputAll"),
+    url(r'^historicalcontext/', 'QI.views.history', name = "history")
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

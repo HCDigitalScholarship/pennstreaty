@@ -74,7 +74,6 @@
         {{ page.fulltext|safe|escape }}
 
 <br>
-<p><a href=/outputPagePDF/{{page.id_tei}}>Click here to download PDF of this page</a> </p>
 
 
         <script>
@@ -91,6 +90,9 @@
 
 </div>
 
+<div class='container'>
+<a href=/outputPagePT/{{page.id_tei}}>→ Download raw text of this page</a>
+</div>
 <!--end stuff-->
   {% include 'footer.html' %}
   {% include 'bottom-links.html' %}

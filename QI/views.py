@@ -11,10 +11,17 @@ from models import Org
 from models import Relationship
 from models import Page
 from models import Manuscript
+from HTMLParser import HTMLParser
+import zipfile as z
+import StringIO as cs
+from tempfile import *
 
 import os
 def about(request):
 	return render(request, 'about.html')
+
+def history(request):
+	return render(request, 'historicalcontext.html')
 
 def texts(request):
 	textlist = Manuscript.objects.order_by('title')
@@ -67,6 +74,60 @@ def outputPagePDF(request,id):
 	pdf = buffer.getvalue()
 	buffer.close()
 	response.write(pdf)
+	return response
+
+class MLStripper(HTMLParser): #This Class is used in the following view, outputPagePT, to get txt file of a page
+    def __init__(self):
+        self.reset()
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
+
+def outputPagePT(request,id):
+	PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
+	FullText = PageToOutput.fulltext #get the text that you want to put in the PDF
+	s = MLStripper()
+	s.feed(FullText)
+	newtext = s.get_data()
+	response = HttpResponse(newtext, content_type='text/plain')
+	response['Content-Disposition'] = 'attachment; filename="%s.txt"' % PageToOutput.id_tei
+	return response
+
+def outputManuPT(request,id):
+	ManuToOutput = Manuscript.objects.get(id_tei = id) #get the manuscript that you want to output
+	FullText = "" #set fulltext as empty string
+	AllPages = Page.objects.filter(id_tei__contains = id) #get all pages that are in the manuscript
+	for i in range(0,len(AllPages)):
+		FullText = FullText + AllPages[i].fulltext + " "#add all text to FullText
+	s = MLStripper()
+	s.feed(FullText)
+	newtext = s.get_data() #remove all HTML from text
+	response = HttpResponse(newtext, content_type='text/plain')
+	response['Content-Disposition'] = 'attachment; filename="%s.txt"' % ManuToOutput.id_tei
+	return response
+
+def outputAll(request):
+	#use for loops to get info of each manuscript
+	f = cs.StringIO() # or a file on disk in write-mode
+	zf = z.ZipFile(f, 'w', z.ZIP_DEFLATED)
+	Manuscripts = Manuscript.objects.all()
+	ListOfManuscripts = []
+	for i in range (0,len(Manuscripts)):
+		Pages = Page.objects.filter(id_tei__contains = Manuscripts[i].id_tei)
+		FullText = ""
+		for j in range(0,len(Pages)):
+			FullText = FullText + Pages[j].fulltext + " "
+		s = MLStripper()
+		s.feed(FullText)
+		newtext = s.get_data() #remove all HTML from text
+		ListOfManuscripts = ListOfManuscripts + [[newtext,Manuscripts[i].id_tei]] #Add full text to list of full texts
+	for k in range(0,len(ListOfManuscripts)):
+		response= HttpResponse(ListOfManuscripts[k][0],content_type='text/plain')
+		response['Content-Disposition'] = 'attachment; filename="%s.txt"' % ListOfManuscripts[k][1]
+		#zf.write('sample.txt)
+	#zf.close()
 	return response
 
 def manu_detail(request,id):
