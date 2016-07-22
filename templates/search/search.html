@@ -52,11 +52,11 @@
 
 
       <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
-      <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.person"> People</label> </div>
-      <div class="col-sm-2">  <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.place"> Places</label> </div>
-      <div class="col-sm-2">  <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.org"> Groups</label> </div>
-      <div class="col-sm-2">  <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.manuscript"> Manuscripts</label> </div>
-      <div class="col-sm-2">  <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.page"> Pages of Manuscripts</label> </div>
+      <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.People"> People</label> </div>
+      <div class="col-sm-2">  <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.Places"> Places</label> </div>
+      <div class="col-sm-2">  <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.Groups"> Groups</label> </div>
+      <div class="col-sm-2">  <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.Manuscripts"> Manuscripts</label> </div>
+      <div class="col-sm-2">  <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.Pages"> Pages of Manuscripts</label> </div>
 
 
               <!--<tr>-->
@@ -94,6 +94,8 @@ the categories are also hard-coded in but i think that's just how it has to be w
 <!-- only show person tab if other types of facets aren't in the URL-->
 <!-- this next statement is very long bc i'm covering all the possibilities -->
 {% if not 'selected_facets=county_exact' in request.get_full_path and not 'selected_facets=state_exact' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
+
+{% if not 'models=' in request.get_full_path or 'models=QI.People' in request.get_full_path  %}
 
 <!--BEGIN PERSON TAB-->
   <div class="panel panel-default">
@@ -183,12 +185,13 @@ the categories are also hard-coded in but i think that's just how it has to be w
   </div>
 
   <!--END PERSON TAB-->
+  {% endif %}
 {% endif %}
 
 
 
 {% if not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
-
+{% if not 'models=' in request.get_full_path or 'models=QI.Places' in request.get_full_path  %}
   <!--BEGIN PLACE TAB-->
 
   <div class="panel panel-default">
@@ -243,11 +246,14 @@ the categories are also hard-coded in but i think that's just how it has to be w
     </div>
   </div>
   <!--END PLACE TAB-->
+  {% endif %}
 {% endif %}
 
 
 
 {% if not 'state' in request.get_full_path and not 'county' in request.get_full_path and not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
+{% if not 'models=' in request.get_full_path or 'models=QI.Groups' in request.get_full_path  %}
+
   <!--BEGIN GROUP TAB-->
 
   <div class="panel panel-default">
@@ -317,10 +323,13 @@ the categories are also hard-coded in but i think that's just how it has to be w
     </div>
   </div>
   <!--END GROUP TAB-->
+  {% endif %}
 {% endif %}
 
 
 {% if not 'state' in request.get_full_path and not 'county' in request.get_full_path and not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path %}
+{% if not 'models=' in request.get_full_path or 'models=QI.Pages' in request.get_full_path  %}
+
   <!--BEGIN PAGE TAB-->
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -354,10 +363,13 @@ the categories are also hard-coded in but i think that's just how it has to be w
     </div>
   </div>
   <!--END PAGE TAB-->
+  {% endif %}
 {% endif %}
 
 
 {% if not 'state' in request.get_full_path and not 'county' in request.get_full_path and not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
+{% if not 'models=' in request.get_full_path or 'models=QI.Manuscripts' in request.get_full_path  %}
+
   <!--BEGIN MANUSCRIPT TAB-->
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -423,6 +435,7 @@ the categories are also hard-coded in but i think that's just how it has to be w
     </div>
   </div>
   <!--END MANUSCRIPT TAB-->
+  {% endif %}
 {% endif %}
 </div>
 
@@ -436,8 +449,15 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
             {% with page.object_list as results %}
            {% regroup results|dictsort:"modeltype" by modeltype as grouped_objects %}
+
+
+           <!--if not 'models=' in request.get_full_path or 'models=QI.manuscript' in request.get_full_path-->
+
            {% for ct in grouped_objects %}
+
           <!--     <h4> <b>{{ ct.grouper }}</b> ({{ ct.list|length }}) </h4> --> <!--This is the name of the category-->
+
+            {% if ct.grouper in request.get_full_path or not 'models=' in request.get_full_path %}
 
           <div class="panel-group">
               <div class="panel panel-default">
@@ -483,9 +503,16 @@ the categories are also hard-coded in but i think that's just how it has to be w
            </div>
              </div>
            </div>
+
+
+
+            {% endif %}
+
            {% empty %}
                <p>No results found.</p>
+
            {% endfor %}
+
        {% endwith %}
 
 
