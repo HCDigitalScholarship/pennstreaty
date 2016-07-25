@@ -2782,7 +2782,6 @@ button::-moz-focus-inner {
 /* line 152, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
 .button-group.even-5 li button, .button-group.even-5 li .button {
   width: 100%;
-  color: black;
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
 .button-group.even-6 li {
@@ -3862,7 +3861,7 @@ button::-moz-focus-inner {
 }
 /* line 117, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button::after, button.dropdown::after {
-  border-color: #000000 transparent transparent transparent;
+  border-color: #FFFFFF transparent transparent transparent;
 }
 /* line 124, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.tiny, button.dropdown.tiny {
@@ -6970,7 +6969,7 @@ meta.foundation-mq-topbar {
 }
 /* line 252, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar.menu-icon a {
-  color: #000000;
+  color: #FFFFFF;
   height: 34px;
   line-height: 33px;
   padding: 0 4.375rem 0 2.8125rem;
@@ -7003,7 +7002,7 @@ meta.foundation-mq-topbar {
 }
 /* line 277, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
-  color: #000000;
+  color: #fff;
 }
 /* line 280, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a span::after {
@@ -7051,7 +7050,7 @@ meta.foundation-mq-topbar {
 }
 /* line 334, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a {
-  color: #000000;
+  color: #FFFFFF;
   display: block;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.8125rem;
@@ -9209,7 +9208,6 @@ ul.off-canvas-list li a:active {
   }
 }
 /* medium displays */
-
 @media only screen and (min-width: 40.0625em) {
   /* line 244, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
@@ -9762,8 +9760,6 @@ button, .button {
   font-weight: 400;
 }
 
-
-
 /* line 50, ../scss/_custom.scss */
 button, .button:hover {
   background-color: transparent;
@@ -9788,8 +9784,8 @@ button, .button:visited {
 /* line 72, ../scss/_custom.scss */
 .f-dropdown li a {
   font-family: "Alegreya Sans SC";
-  font-weight: 400;
-  color: #6B737D;
+  font-weight: 100;
+  color: #0F6AB3;
   background-color: transparent;
   margin: 0;
 }
@@ -9861,24 +9857,24 @@ button, .button:visited {
 
 /* line 140, ../scss/_custom.scss */
 #row1 {
-  background-color: #99a5b3;
+  background-color: #0F6AB3;
 }
 
 /* line 144, ../scss/_custom.scss */
 #row2 {
-  background-color: #99a5b3;
+  background-color: #0F6AB3;
 }
 
 /* line 150, ../scss/_custom.scss */
 #row2 h1 {
   font-family: "Alegreya Sans SC";
   font-weight: 400;
-  color: black;
+  color: white;
   text-align: center;
 }
 /* line 156, ../scss/_custom.scss */
 #row2 p {
-  color: black;
+  color: white;
 }
 
 /* line 164, ../scss/_custom.scss */
@@ -9888,12 +9884,12 @@ button, .button:visited {
 /* line 167, ../scss/_custom.scss */
 #row3 h3 {
   font-family: "Special Elite";
-  color: #6B737D;
+  color: #02326B;
   font-size: 2rem;
 }
 /* line 174, ../scss/_custom.scss */
 #row3 button, #row3 .button {
-  background-color: #6B737D;
+  background-color: #B6B3A7;
 }
 
 /* line 182, ../scss/_custom.scss */
@@ -10086,7 +10082,7 @@ i.fa.fa-times:hover {
 
 /* line 204, ../scss/_custom.scss */
 #about3 {
-  background-color: #99a5b3;
+  background-color: #0F6AB3;
 }
 /* line 207, ../scss/_custom.scss */
 #about3 h2 {
@@ -10103,27 +10099,27 @@ i.fa.fa-times:hover {
 
 /* line 221, ../scss/_custom.scss */
 #trans1, #trans2 {
-  background-color: #99a5b3;
+  background-color: #0F6AB3;
 }
 
 /* line 226, ../scss/_custom.scss */
 #trans2 h2 {
   font-family: "Alegreya Sans SC";
   font-weight: 400;
-  color: #000;
+  color: #fff;
 }
 /* line 232, ../scss/_custom.scss */
 #trans2 p {
   font-family: "Open Sans";
   font-weight: 300;
-  color: #000;
+  color: #fff;
 }
 
 /* line 267, ../scss/_custom.scss */
 #profiles1 ul.tabs {
   padding-top: 80px;
   padding-left: 10%;
-  background-color: #99a5b3;
+  background-color: #0F6AB3;
 }
 /* line 270, ../scss/_custom.scss */
 #profiles1 ul.tabs li.tab-title.active a {
@@ -10135,7 +10131,7 @@ i.fa.fa-times:hover {
   font-family: "Alegreya Sans SC";
   font-weight: 400;
   color: #fff;
-  background-color: #6B737D;
+  background-color: #094371;
   margin-left: 13px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -10156,7 +10152,7 @@ i.fa.fa-times:hover {
 }
 /* line 252, ../scss/_custom.scss */
 .footer a, .footer p {
-  color: #99a5b3;
+  color: #0F6AB3;
   font-family: "Alegreya Sans SC";
   font-weight: 400;
 }
