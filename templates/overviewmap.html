@@ -2,6 +2,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<style>
+     html, body, #map {
+       height: 100%;
+       padding: 0;
+       margin: 0;
+     }
+   </style>
+
+
 {% load staticfiles %}
 
 <!doctype html>
@@ -16,7 +25,8 @@
 
     <title>Maps</title>
 
-
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
   </head>
 
   <body>
@@ -45,7 +55,46 @@
      <div class="content active" id="panel1">
       <div class = "row full-width">
 
-<!-- CONTENT! -->
+        <div id="map"></div>
+        <div id="slider"></div>
+        <div id="legend"></div>
+
+        <!-- include cartodb.js library -->
+        <script>
+        // get the viz.json url from the CARTO Editor
+        // - click on visualize
+        // - create new visualization
+        // - make visualization public
+        // - click on publish
+        // - go to API tab
+
+        cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/11857260-4451-11e6-979a-0ee66e2c9693/viz.json',{
+          //API methods
+          title:true,
+          time_slider: true,
+          layer_selector:true, //Maybe necessary based on the maps
+          legends:true,
+          fullscreen:true,
+          mobile_layout:true,
+        }).done(function(vis, layers) {
+            // layer 0 is the base layer, layer 1 is cartodb layer
+            // when setInteraction is disabled featureOver is triggered
+            layers[1].setInteraction(true);
+            layers[1].on('featureOver', function(e, latlng, pos, data, layerNumber) {
+              console.log(e, latlng, pos, data, layerNumber);
+            });
+
+            // you can get the native map to work with it
+            var map = vis.getNativeMap();
+
+            // now, perform any operations you need, e.g. assuming map is a L.Map object:
+            // map.setZoom(3);
+            // map.panTo([50.5, 30.5]);
+          });
+
+        </script>
+
+
 
      </div>
    </div>
@@ -53,6 +102,7 @@
        <div class = "row full-width">
 
 <!-- CONTENT! -->
+
 
      </div>
    </div>
