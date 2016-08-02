@@ -44,7 +44,10 @@ urlpatterns = [
     url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'), #maybe irrelevant
     url(r'^search/', include('haystack.urls')),
     url(r'^manuscript/(?P<id>\S+)/', 'QI.views.manu_detail', name = "manu_detail"),
-    url(r'^map/$', 'QI.views.overviewmap', name= 'overviewmap'),
+    url(r'^map/1$', 'QI.views.map1', name= 'map1'),
+    url(r'^map/2$', 'QI.views.map2', name= 'map2'),
+    url(r'^map/3$', 'QI.views.map3', name= 'map3'),
+    url(r'^map/4$', 'QI.views.map4', name= 'map4'),
     url(r'^outputPagePDF/(?P<id>\S+)/', 'QI.views.outputPagePDF', name = "outputPagePDF"),
     url(r'^outputPagePT/(?P<id>\S+)/', 'QI.views.outputPagePT', name = "outputPagePT"),
     url(r'^outputManuPT/(?P<id>\S+)/', 'QI.views.outputManuPT', name = "outputManuPT"),

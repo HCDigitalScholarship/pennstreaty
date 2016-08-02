@@ -52,8 +52,17 @@ def testsearch2(request):
 def search(request):
 	return render(request, 'search/search.html')
 
-def overviewmap(request):
-	return render(request, 'overviewmap.html')
+def map1(request):
+	return render(request, 'map1.html')
+
+def map2(request):
+	return render(request, 'map2.html')
+
+def map3(request):
+	return render(request, 'map3.html')
+
+def map4(request):
+	return render(request, 'map4.html')
 
 def outputPagePDF(request,id):
 	PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!

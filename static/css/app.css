@@ -3566,7 +3566,7 @@ button::-moz-focus-inner {
   height: auto;
   max-height: none;
   width: 100%;
-  z-index: 89;
+  z-index: 10000;
   margin-top: 2px;
   max-width: 200px;
 }
