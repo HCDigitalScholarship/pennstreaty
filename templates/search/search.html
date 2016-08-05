@@ -489,7 +489,8 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
                        {% elif result.object.get_type == 'Pages' %}
 
-                    <li class = "list-group-item">   <a href="/page/{{ result.object.id_tei }}">{{ result.object.Manuscript_id }}: {{ result.object.id_tei }}</a> </li>
+                    <li class = "list-group-item">   <a href="/page/{{ result.object.id_tei }}">{{ result.object.Manuscript_id }}:
+                       Page {{ result.object.id_tei|slice:"-3:" }}</a> </li>
 
                        {% else %}
 
