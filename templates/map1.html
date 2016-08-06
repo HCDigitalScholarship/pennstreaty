@@ -61,7 +61,7 @@
     <div class=container>
   <p style="font-size:25px; font-family:Alegreya Sans SC"><b>View Map Organized By: </b>
   <i>
-  <a href="/map/1"  style="color:#4c5259"><b>Author</b></a>
+  <a href="/map/1"  style="color:#4c5259"><b>Traveler</b></a>
   <b>/</b>
   <a href="/map/2" style="color:#2d3135">Date</a>
   <b>/</b>
@@ -69,18 +69,31 @@
     <b>/</b>
   <a href="/map/4" style="color:#2d3135">Popular Locations</a>
 </i> </p>
-    <br>
+<br>
+
   </div>
 </div>
 
 
 <div id = "row3" style="padding-bottom: 0px">
 
+  <div class=container>
+    <br>
+    <div class=well>
+      <h3>Description:</h3>
+    <p>This map is a collection of the places that the Quaker travelers either stayed at or passed through.
+    Many places were visited by multiple people, especially since many took the same route.
+    Each color marks the path of a specific traveler. If you click a point the name of the place,
+    as well as the name of the document shows up.</p>
+</div>
 
         <div id="map"></div>
+        <div id="slider"></div>
+        <div id="legend"></div>
 
         <!-- include cartodb.js library  -->
         <script>
+
         // get the viz.json url from the CARTO Editor
         // - click on visualize
         // - create new visualization
@@ -113,10 +126,48 @@
             // map.panTo([50.5, 30.5]);
           }); */
 
+          /*
+          function changeLegend(start, end) {
+            $('#legend').html(new Date(start).getFullYear() + " - " + new Date(end).getFullYear())
+          }
+
+          function addTimeSlider(sublayer) {
+            var sql = cartodb.SQL({ user: 'Haverfordds' })
+            // fetch time range
+            sql.execute('select max(date), min(date) from claire_s_map', function(data) {
+              console.log(range.max);
+              console.log('for debugging');
+              var range = data.rows[0];
+              var max = new Date(range.max).getTime()
+              var min = new Date(range.min).getTime()
+              // update slider with range
+            $("#slider").slider({
+              range: true,
+              min: min,
+              max: max,
+              values: [ min , (min + max)/2 ],
+              slide: function(event, ui) {
+                // give feedback to the user on slide change
+                changeLegend(ui.values[0], ui.values[1]);
+              },
+              stop: function( event, ui ) {
+                // when user selects the dates, update the layer with the range
+                var start = new Date(ui.values[0]).toISOString()
+                var end = new Date(ui.values[1]).toISOString();
+                // build sql
+                sublayer.setSQL("select * from claire_s_map where date.slice(0,4) >= '" + start + "' and date.slice(0,4) <= '" + end + "'");
+              }
+            });
+            changeLegend(min, (min + max)/ 2);
+          });
+        }
+          */
+
+
           function main() {
             cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/66b3317e-5788-11e6-a88e-0ee66e2c9693/viz.json', {
               shareable: true,
-              title: true,
+              title: false,
               description: true,
               search: true,
               tiles_loader: true,
@@ -137,6 +188,7 @@
               // now, perform any operations you need
               // map.setZoom(3);
               // map.panTo([50.5, 30.5]);
+              // addTimeSlider(layers[1]);
             })
             .error(function(err) {
               console.log(err);
@@ -147,10 +199,8 @@
 
         </script>
 
-
-
-
-
+  </div>
+  <br>
 </div>
 
 

@@ -61,7 +61,7 @@
     <div class=container>
   <p style="font-size:25px; font-family:Alegreya Sans SC"><b>View Map Organized By: </b>
   <i>
-  <a href="/map/1"  style="color:#2d3135">Author</a>
+  <a href="/map/1"  style="color:#2d3135">Traveler</a>
   <b>/</b>
   <a href="/map/2" style="color:#4c5259"><b>Date</b></a>
   <b>/</b>
@@ -75,6 +75,14 @@
 
 
 <div id = "row3" style="padding-bottom: 0px">
+<div class=container>
+  <br>
+  <div class=well>
+    <h3>Description:</h3>
+  <p>  This map shows the routes the Quakers traveled over time.
+    The date slider can be adjusted to see where travelers were on a specific date in time.
+     It is clear to see the routes the Quakers took.</p>
+  </div>
 
 
         <div id="map"></div>
@@ -116,7 +124,7 @@
           function main() {
             cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/92a65124-578f-11e6-99e5-0e3ebc282e83/viz.json', {
               shareable: true,
-              title: true,
+              title: false,
               description: true,
               search: true,
               tiles_loader: true,
@@ -149,8 +157,8 @@
 
 
 
-
-
+</div>
+<br>
 </div>
 
 
