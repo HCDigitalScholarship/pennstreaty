@@ -64,6 +64,15 @@ def map3(request):
 def map4(request):
 	return render(request, 'map4.html')
 
+def usingthesite(request):
+	return render(request, 'usingthissite.html')
+
+def bibliography(request):
+	return render(request, 'bibliography.html')
+
+def credits(request):
+	return render(request, 'credits.html')
+	
 def outputPagePDF(request,id):
 	PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
 	FullText = PageToOutput.fulltext #get the text that you want to put in the PDF

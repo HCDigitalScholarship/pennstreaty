@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+{% load staticfiles %}
+
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+
+  <head>
+
+
+  {% include 'top-links.html' %}
+
+    <title>Using This Site</title>
+
+
+  </head>
+
+  <body>
+
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id='row2'>
+  <div class = "row">
+    <br />
+    <h1>Using This Site</h1>
+    <br />
+  </div>
+</div>
+
+<div id = "row3">
+<br>
+<div class='row'>
+
+
+<div class=well>
+
+    <h3>Journeys</h3>
+
+</div>
+
+<div class=well>
+
+    <h3>Explore</h3>
+
+  <p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+    Look through a <a href=/texts>variety of transcribed texts</a> detailing the journeys of
+    Quakers and their interactions with Native Americans during the eighteenth century.  These
+  texts include diaries of Quakers traveling to Native American villages, letters from various
+  Quaker families, and the papers of Philadelphia Yearly Meeting's Friendly Association for
+  Regaining and Preserving Peace with the Indians by Pacific Measures.</p>
+
+  <p> <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+    View manuscript metadata, the scanned image of a document, and instant information any mentioned person, place,
+    or group when looking at a page of a manuscript.
+  </p>
+
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+View profiles of all <a href=/profiles>people, places, and groups</a> mentioned in these texts and receive
+information about all documents
+that they appear in.
+</p>
+
+
+</div>
+
+<div class=well>
+
+    <h3>Transcribe</h3>
+
+</div>
+
+<div class=well>
+
+    <h3>Search</h3>
+
+</div>
+
+</div>
+</div>
+
+ {% include 'footer.html' %}
+
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>
