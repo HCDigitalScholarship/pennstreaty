@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h2> <center>{{ manuscript.title }} </center></h2>
+
+  {{ page.fulltext|safe|escape }}
+
+  <script type="text/javascript" >
+        var Manuscript_id = '{{ manuscript.id_tei }}';
+        var img_url = '{{ page.img_url }}';
+        var Page_id = '{{ Page_id }}';
+        var lastpage = '{{ lastpage }}';
+          </script>
+
+<script src="{% static "js/cornplanter.js" %}"></script>
+
+</body>
+
+</html>

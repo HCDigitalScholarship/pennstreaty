@@ -14,6 +14,10 @@
   </head>
 
   <body>
+<<<<<<< HEAD
+	Ayyyyy
+=======
+>>>>>>> c92e4b0f8e7adaa44effa1f542ebe2dee09679d2
 	<header>
           <div class = "overlay-container">
             <img src="{% static "img/qandi.png" %}" alt="Header img" />
@@ -65,6 +69,10 @@
                                                                     {{person.first_name}}  {{person.last_name}}
                                                                 </td>
                                                                 <td> {{person.other_names}} </td>
+<<<<<<< HEAD
+
+=======
+>>>>>>> c92e4b0f8e7adaa44effa1f542ebe2dee09679d2
                                                                 <td>{{person.affiliation}} </td>
                                                                 <td> {{person.birth_date}} </td>
                                                                 <td>{{person.death_date}} </td>
@@ -207,4 +215,8 @@
    </script>
 
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> c92e4b0f8e7adaa44effa1f542ebe2dee09679d2

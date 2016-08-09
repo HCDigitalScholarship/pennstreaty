@@ -1,0 +1,174 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<style>
+     html, body, #map {
+       height: 100%;
+       padding: 0;
+       margin: 0;
+     }
+
+     #slider {
+     position: absolute;
+     bottom: 40px;
+     right: 40px;
+     left:40px;
+   }
+   #legend {
+     font-family: serif;
+     font-size: 27px;
+     position: absolute;
+     bottom: 80px;
+     left: 40px;
+   }
+   </style>
+
+
+{% load staticfiles %}
+
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+
+  <head>
+
+
+  {% include 'top-links.html' %}
+
+    <title>Maps</title>
+
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+  </head>
+
+  <body>
+
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+
+
+  <div id=row2>
+    <br>
+    <div class=container>
+  <p style="font-size:25px; font-family:Alegreya Sans SC"><b>View Map Organized By: </b>
+  <i>
+  <a href="/map/1"  style="color:#2d3135">Traveler</a>
+  <b>/</b>
+  <a href="/map/2" style="color:#2d3135">Date</a>
+  <b>/</b>
+   <a href="/map/3" style="color:#4c5259"><b>Residence</b></a>
+    <b>/</b>
+  <a href="/map/4" style="color:#2d3135">Popular Locations</a>
+</i> </p>
+    <br>
+  </div>
+</div>
+
+
+<div id = "row3" style="padding-bottom: 0px">
+
+  <div class=container>
+    <br>
+    <div class=well>
+      <h3>Description:</h3>
+      <p>
+        This map shows where Native Americans and Quakers resided.
+        Some of the locations are Quaker towns or Native American villages,
+        for example, while others are places where only one or two families lived.
+      </p>
+    </div>
+
+        <div id="map"></div>
+
+        <!-- include cartodb.js library  -->
+        <script>
+        // get the viz.json url from the CARTO Editor
+        // - click on visualize
+        // - create new visualization
+        // - make visualization public
+        // - click on publish
+        // - go to API tab
+
+/*
+        cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/11857260-4451-11e6-979a-0ee66e2c9693/viz.json',{
+          //API methods
+          title:true,
+          time_slider: true,
+          layer_selector:true, //Maybe necessary based on the maps
+          legends:true,
+          fullscreen:true,
+          mobile_layout:true,
+        }).done(function(vis, layers) {
+            // layer 0 is the base layer, layer 1 is cartodb layer
+            // when setInteraction is disabled featureOver is triggered
+            layers[1].setInteraction(true);
+            layers[1].on('featureOver', function(e, latlng, pos, data, layerNumber) {
+              console.log(e, latlng, pos, data, layerNumber);
+            });
+
+            // you can get the native map to work with it
+            var map = vis.getNativeMap();
+
+            // now, perform any operations you need, e.g. assuming map is a L.Map object:
+            // map.setZoom(3);
+            // map.panTo([50.5, 30.5]);
+          }); */
+
+          function main() {
+            cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/227c725a-5791-11e6-b4c5-0e05a8b3e3d7/viz.json', {
+              shareable: true,
+              title: false,
+              description: true,
+              search: true,
+              tiles_loader: true,
+              center_lat: 45,
+              center_lon: -70,
+              zoom: 5,
+            })
+            .done(function(vis, layers) {
+              // layer 0 is the base layer, layer 1 is cartodb layer
+              // setInteraction is disabled by default
+              layers[1].setInteraction(true);
+              layers[1].on('featureOver', function(e, latlng, pos, data) {
+                cartodb.log.log(e, latlng, pos, data);
+              });
+              // you can get the native map to work with it
+              var map = vis.getNativeMap();
+
+              // now, perform any operations you need
+              // map.setZoom(3);
+              // map.panTo([50.5, 30.5]);
+            })
+            .error(function(err) {
+              console.log(err);
+            });
+          }
+
+          window.onload = main;
+
+        </script>
+
+
+
+
+</div>
+<br>
+</div>
+
+
+
+ {% include 'footer.html' %}
+
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>

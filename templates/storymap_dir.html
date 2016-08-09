@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include 'top-links.html' %}
+    <title> Story Map Directory </title>
+    <style>  .large-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: none;
+  } </style>
+
+  </head>
+
+  <body>
+    
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id = "row2">
+  <div class = "row">
+    <br />
+    <h1> Story Map Directory</h1>
+    <br />
+  </div>
+<!-- This list is what the directory should look like, but it should be created automatically
+This is now done - Dylan -->
+{% include 'list_of_storymaps.html' %}
+
+	<script>
+		//Attempt at accessing the file names in xml_file_names.xml 
+		//so that there would be a list element every time a story map is created. 
+		//So far does nothing
+  		var file_names = "{% static "xml/xml_file_names.xml" %}"; 
+  		var x = file_names.getElementsByTagName("file");
+  		
+		for (i = 0; i < x.length; i++) {
+  			document.write("<li><a href = " + x[i] + ">" + x[i] + "</a></li>");
+  		} 
+  	</script>
+
+
+ {% include 'footer.html' %}
+    
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>

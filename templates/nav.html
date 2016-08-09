@@ -6,45 +6,95 @@
     <li class="name">
       <h2><a href="/"><i class="fa fa-home"></i> </a></h2>
     </li>
-  
+
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
+
+<!-- This is where the links go for the nav if small window-->
+
   <section class="top-bar-section">
-   
+
     <ul class="full-width">
+
       <li class="has-dropdown">
-        <a href="/about">About</a>
+        <a href="/">Journeys</a>
             <ul class="dropdown">
-              <li><a href="/about">Penn's Treaty</a></li>
-              <li><a href="/profiles">Quakers and Indians</a></li>
+              <li><a href="/storymap">Travel Routes</a></li>
+              <li><a href="/">Digitized Maps</a></li>
+              <li><a href="/map/1">Overview Maps</a></li>
             </ul>
       </li>
-      <li><a href="https://ds-omeka.haverford.edu/qi/collections/browse/">Transcription</a></li>
-      <li><a href="/texts">Available Texts</a></li>
-      <li><a href="#">Bibliography &amp; Credits</a></li>
-     
+
+      <li class="has-dropdown">
+        <a href="/">Explore</a>
+            <ul class="dropdown">
+              <li><a href="/texts">Manuscripts</a></li>
+              <li><a href="/profiles">People, Places, and Groups</a></li>
+            </ul>
+      </li>
+
+      <li><a href="https://ds-omeka.haverford.edu/qi/collections/browse/">Transcribe</a></li>
+
+      <li class="has-dropdown">
+        <a href="/">About</a>
+            <ul class="dropdown">
+              <li><a href="/">The Projects</a></li>
+              <li><a href="/historicalcontext">Historical Background</a></li>
+              <li><a href="/usingthesite">Using This Site</a></li>
+              <li><a href="/bibliography">Bibliography</a></li>
+              <li><a href="/credits">Credits</a></li>
+            </ul>
+      </li>
+
+
     </ul>
-    
+
     </section>
+
     </nav>
   </div>
 
 
+<!-- this is where the img HTML & links goes for nav titles w/ big window -->
 
   <ul class = "button-group even-5 show-for-large-up">
     <li><div id="borderimg1"><a href="/" class="button">Home</a></div></li>
-    
-    <li><div id="borderimg1"><a href="/about" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">About</a></div></li>
-    <li><div id="borderimg1"><a href="https://ds-omeka.haverford.edu/qi/collections/browse/" class="button">Transcription</a></div></li>
-    <li><div id="borderimg1"><a href="/texts" class="button">Available Texts</a></div></li>
-    <li><div id="borderimg1"><a href="#" class="button">Bibliography &amp; Credits</a></div></li>
+
+    <li><div id="borderimg1"><a href="/" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="button dropdown">Journeys</a></div></li>
+
+    <li><div id="borderimg1"><a href="/" data-dropdown="drop3" aria-controls="drop3" aria-expanded="false" class="button dropdown">Explore</a></div></li>
+
+    <li><div id="borderimg1"><a href="https://ds-omeka.haverford.edu/qi/collections/browse/" class="button">Transcribe</a></div></li>
+
+    <li><div id="borderimg1"><a href="/" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">About</a></div></li>
+
   </ul>
 
 
-        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+<!-- this is where the img HTML & links goes for dropdown menus -->
+
+        <ul id="drop2" data-dropdown-content class="f-dropdown" aria-hidden="true">
           <div id="borderimg1">
-        <li><a href="/about">Penn's Treaty</a></li>
-        <li><a href="/profiles">Quakers and Indians</a></li>
+        <li><a href="/storymap">Travel Routes</a></li>
+        <li><a href="/">Digitized Maps</a></li>
+        <li><a href="/map/1">Overview Maps</a></li>
          </div>
       </ul>
+
+      <ul id="drop3" data-dropdown-content class="f-dropdown" aria-hidden="true">
+        <div id="borderimg1">
+      <li><a href="/texts">Manuscripts</a></li>
+      <li><a href="/profiles">People, Places, and Groups</a></li> <!--Fix these links-->
+       </div>
+    </ul>
+
+    <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+      <div id="borderimg1">
+    <li><a href="/">The Project</a></li>
+    <li><a href="/historicalcontext">Historical Background</a></li>
+    <li><a href="/usingthesite">Using This Site</a></li>
+    <li><a href="/bibliography">Bibliography</a></li>
+    <li><a href="/credits">Credits</a></li>
+     </div>
+  </ul>

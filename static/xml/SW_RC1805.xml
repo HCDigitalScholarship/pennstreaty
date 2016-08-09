@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css"?>
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei.css"?>
+<?xml-stylesheet type="text/css" href="global.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader>
+
+        <fileDesc>
+
+            <titleStmt>
+                <title>Some Account of Rachel Coope [edited by Joshua Sharpless]: Electronic
+                    Version</title>
+                <editor>Friends Historical Library of Swarthmore College</editor>
+                <respStmt>
+                    <resp>TEI Markup done by</resp>
+                    <name>Emma Remsberg</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Journal transcribed by</resp>
+                    <name>Miriam Lise Hauser</name>
+
+                </respStmt>
+                <sponsor>Tri-Co Digital Humanities Initiative</sponsor>
+                <funder>Andrew W. Mellon Foundation</funder>
+            </titleStmt>
+            <extent>ca. 102 KB</extent>
+            <publicationStmt>
+                <publisher>Friends Historical Library of Swarthmore College</publisher>
+                <address>
+                    <street>500 College Avenue</street>
+                    <addrLine>Swarthmore, Pennsylvania</addrLine>
+                    <postCode>19081</postCode>
+                    <country>United States of America</country>
+                </address>
+                <availability status="free">
+                    <p>This work is the property of the Friends Historical Library of Swarthmore
+                        College. It may be copied freely by individuals for personal use, research,
+                        and teaching (including distribution to classes) as long as this statement
+                        of availability is included in the text. It may be linked to freely in
+                        Internet editions of all kinds, including for—profit works.</p>
+                    <p>Publishers, libraries, and other information providers interested in
+                        providing this text in a commercial or non—profit product or from an
+                        information server must contact Swarthmore College for licensing and cost
+                        information.</p>
+                    <p> Scholars interested in changing or adding to these texts by, for example,
+                        creating a new edition of the text (electronically or in print) with
+                        substantive editorial changes, may do so with the permission of Swarthmore
+                        College. This is the case whether the new publication will be made available
+                        at a cost or free of charge.</p>
+                </availability>
+                <date when="2014">2014</date>
+                <idno type="local">SW_RC1805</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="s" type="project">Native Americans and Quakers: An Electronic
+                    Collection</title>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <institution>Friends Historical Library of Swarthmore College</institution>
+                        <collection>Foster-Meyers Family Papers</collection>
+                        <idno>RG5/221</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <p>65 pp. (1 volume)</p>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>This Rachel Coope manuscript is housed at Friends Historical Library, on the
+                    campus of Swarthmore College. In the fall semester of 2010, Swarthmore students
+                    enrolled in English 50A (“Reading Red, White, and In-Between in Early American
+                    Literature”) transcribed this manuscript as part of a larger project to make the
+                    library’s rich store of Quaker Indian mission writings more accessible. The
+                    project was designed by Christopher Densmore, Curator of Friends Historical
+                    Library, and Keat Murray, Visiting Assistant Professor of English. Student
+                    transcribers included: Miriam Lise Hauser. Transcriptions were compiled and
+                    edited in the present form by Professor Murray. </p>
+            </projectDesc>
+            <editorialDecl>
+                <p> The transcribers and editor attempted to render the author’s orthography and
+                    grammar as they appear on the page of his journal, even when the author’s own
+                    spelling and usage are inconsistent. Additionally, many questions remain about
+                    spelling the names of his Quaker acquaintances, individual Native Americans who
+                    populate his journal, and Indian villages and towns. The transcribers and editor
+                    attempted to remain faithful to the author’s Anglicized spellings in all cases. </p>
+                <p>This volume is actually a compilation by Rachel Coope's father, Joshua Sharpless,
+                    taken after her death from her original journal and correspondence. Journals "a"
+                    and "b," also in the collections of Friends Historical Library, represent
+                    transcriptions of Rachel Coope’s actual diaries. Journal "a" her “esteemed
+                    parents”; however, her mother died before the letter was written, and so it may
+                    have been meant for her parents­in­law, to whom she was deeply attached) copied
+                    over twice. No version of this letter is included in journal four. Except for
+                    this, the differences were small, such as variance in phrasing and spelling, and
+                    not in content. It seems as though journal "a" preceded journal "b"; it is less
+                    polished. The handwriting seems more rushed and the paper size varies, while in
+                    journal "b", the handwriting is neater, and the paper used is consistent. It is
+                    possible that these, especially journal three, could have been handwritten by
+                    Coope.</p>
+                <p>The author of the original journal does not include page numbers on his
+                    manuscript; the page numbers have been interpolated by the transcribers to
+                    correspond with the manuscript sheets.</p>
+            </editorialDecl>
+
+        </encodingDesc>
+        <profileDesc>
+            <creation>Original written in <date when="1807">1807</date></creation>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="#lcsh">
+                    <list>
+                        <item>Society of Friends -- Missions</item>
+                        <item>Indians of North America -- Missions</item>
+                        <item>Quakers -- Pennsylvania -- Diaries</item>
+                        <item>Seneca Indians</item>
+                        <item>Philadelphia Yearly Meeting of the Relgious Society of Friends</item>
+                        <item>Voyages and Travels</item>
+                    </list>
+                </keywords>
+            </textClass>
+
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="preface">
+                <pb n="5" facs="SW_RC1805_Page_05"/>
+                <lb/>
+                <head>Some account of <persName ref="rcoop1">Rachel Coope</persName><lb/> taken from
+                    notes that she preserv’d, from<lb/> her letters and from personal
+                    knowledge.</head>
+
+                <p> She was the daughter of <persName ref="jshar1">Joshua</persName> and<lb/>
+                    <persName ref="eshar1">Edith Sharpless</persName> and was born the 3rd of
+                    the<lb/> 5 mo 1771. About the 15th year of her age<lb/> her mother was taken
+                    from her by death,<lb/> and the charge of her father’s family as<lb/>
+                    housekeeper, very much devolv’d upon<lb/> her; the trial in both respects she
+                    very<lb/> sensibly felt, yet was enabled to con-<lb/> duct her charge with
+                    stability and pru-<lb/> dence, and bear the loss of her dear mo<lb/> ther, with
+                    a becoming fortitude. For<lb/> several years the charge of the family<lb/>
+                    rested upon her to which she attended<lb/> like one of riper age. She was
+                    cheerful in<lb/> her disposition, and of a lively active turn<lb/> of mind,
+                    which being seasoned with the<lb/> baptizing power of Truth, rendered her<lb/>
+                    company agreeable and instructive.</p>
+
+                <pb n="6" facs="SW_RC1805_Page_06"/>
+
+                <p> About the 21st year of her age she was<lb/> married to <persName ref="bcoop1"
+                        >Benjamin Coope</persName>, and settled<lb/> in the verge of
+                        <orgName>Bradford meeting</orgName>, of<lb/> which she was a diligent
+                    attender, and<lb/> increas’d in usefulness among them,<lb/> labouring with
+                    friends in supporting<lb/> Church discipline, and visiting those who<lb/> miss'd
+                    their way. She several years acted<lb/> as clerk to their mo. Meeting.</p>
+                <p> In the year <date when="1804">1804</date> information was<lb/> sent down from
+                    the yearly meeting to the<lb/> quarterly and monthly meetings that the<lb/>
+                    settlement made by friends among the na-<lb/> tives on the <geogName ref="alleg"
+                        >Allegany river</geogName> was now so advanced<lb/> as to need the
+                    assistance of females <del><unclear/></del><lb/>
+                    <del><unclear/></del> in instructing and exampleling<lb/> their sex in domesting
+                    concerns. request-<lb/> ing that if a suitably qualifyed friend &amp;<lb/> his
+                    companion should feel their minds<lb/> engaged in the concern to come forward as
+                    vo-<lb/> lunteers. When <del>it</del> information was spread in the monthly<lb/>
+                    and quarterly meetings of which she was a<lb/> member her and her husband’s
+                    minds became <lb/>
+                    <pb n="7" facs="SW_RC1805_Page_07"/> so impress’d with it as to cause them
+                    to<lb/> believe it right to give it place. And on<lb/> closely <add
+                        place="above">tending</add> to the concern it so ripened, as to<lb/> make
+                    them willing to lay their prospect<lb/> before the friends of their monthly
+                    meeting,<lb/> for their sympathy and advise. Tho’ a<lb/> close trial to their
+                    friends to part with<lb/> them yet upon weighty deliberation they<lb/> judged it
+                    best to leave them at liberty,<lb/> to persue their religious prospects, as
+                    way<lb/> might open: which on closely attending<lb/> too they believed it right
+                    to prepare for<lb/> the journey, and <del>was</del> were enabled to give up<lb/>
+                    a good and comfortable home, the society<lb/> of their friends and near
+                    relations to be<lb/> found in the way of their duty. From<lb/> the notes she
+                    kept of her journey the follow-<lb/> ing <del>is</del> are extracted.</p>
+            </div>
+        </front>
+        <body>
+
+
+            <div type="entry">
+                <dateline><date when="1805-05-20">1805. 5 Month 20th</date><placeName key="bradf"
+                    /></dateline>
+                <p>
+                    <q>After a time of comfortable<lb/> quiet wherein we were favoured to feel
+                        the<lb/> overshadowings of Divine regard a number<lb/> of our friends and
+                        near relations being pre-<lb/> sent we took leave of them in the feeling <lb/>
+                        <pb n="8" facs="SW_RC1805_Page_08"/> embraces of endearing love: <persName
+                            ref="ncoop2">Father Coope</persName> bear-<lb/> ing us company to
+                            <persName ref="jembr1">James Embree’s</persName>. -- On<lb/> parting
+                        with him tears flow’d in an abun-<lb/> dance, under a feeling sympathy
+                        with<lb/> him and ardent desires were raised in my<lb/> heart, that he might
+                        be enriched with that<lb/> peace, now in his lonesome and advanc’d<lb/>
+                        stage of life, that is the precious enjoy-<lb/> ment of the righteous: - We
+                        lodged at <persName ref="wtrue1">Wilson<lb/> Truemans</persName> where on my
+                        going to bed I<lb/> quietly fell asleep. but waking before three<lb/>
+                        Oclock, the remembrance of the parting scene<lb/> so forcibly revived, that
+                        tears could not be<lb/> suppress'd, and sleep departed. Thou O my<lb/> God
+                            has<add>t</add> at seasons, in thy unmerrited<lb/> goodness, been
+                        pleased to make bare thy<lb/> arm, and in times of trial, as patience<lb/>
+                        was abode in, offerd sweet consolation; un-<lb/> der a humbling sense
+                        thereof, may I a<lb/> little intercede for the renew’d continuence<lb/> of
+                        thy love.</q> ---- On the evening of their<lb/> second days journey she
+                    remarks.-- My<lb/> attention has been so taken up with viewing <lb/>
+                    <pb n="9" facs="SW_RC1805_Page_09"/> the roads &amp; the country, that I have
+                    had<lb/> but little serious reflections yet have not<lb/> had unpleasant
+                    sensations or enjoyed so<lb/> large a portion of that precious conso-<lb/>
+                    lation, which my soul, above all things,<lb/> desires. - O that I may abide in a
+                    watch-<lb/> ful state with my eye single to Him<lb/> whose fatherly protection
+                    is as a wall<lb/> round about all those who are <unclear>severely</unclear><lb/>
+                    devoted to serve him where ever their lots<lb/> may be cast.</p>
+            </div>
+            <div type="entry">
+                <dateline> On the <del><unclear/></del>th <date when="1805-05-28"> 8th day</date>
+                    after they set off at the<lb/>
+                    <placeName key="bimea">Big Meadows</placeName> on the third fork of <geogName
+                        ref="checkPlace">Pine creek</geogName></dateline>
+                <p> the country became such a wilderness, the<lb/> road thro' so little improved,
+                    being often<lb/> intersected by the fallen timber, as to ren-<lb/> der geting
+                    their waggon thro’ at that time<lb/> impracticable, consequently they were
+                    oblidgd<lb/> to leave it part of ther bedding, cloathing &amp;c<lb/> and persue
+                    their journey mostly on foot their horses<lb/> being loaded with the necessaries
+                    of what<lb/> they could take - they were four in number<lb/> a young man who
+                    went to assist them <lb/>
+                    <pb n="10" facs="SW_RC1805_Page_10"/> in going out, and a valuable female
+                    friend<lb/> who was a fellow labourer in the work - going<lb/> to reside with
+                    them. and they had but 3 horses<lb/> On the 3rd day about noon they arrived at
+                        <persName ref="jbell1">John<lb/> Bells</persName> in <placeName ref="ceres"
+                        >Kings settlement</placeName>.-- She says, <q>John’s<lb/> wife seeing us,
+                        (tho' we were strangers to each<lb/> other) yet she came running to meet us
+                        with her<lb/> cheeks bedew'd with tears. - The joy was mu-<lb/> -tual. --
+                        How consolating the sight of a friend<lb/> after so fatigueing a journey;
+                        having been<lb/> more than two days and nights in the wil-<lb/> derness,
+                        since we left the last house. -- Altho<lb/> the journey has been trying yet
+                        I felt some-<lb/> thing so animating and encouraging to<lb/> revive, and my
+                        heart was fill’d with so<lb/> precious a sweetness, that it was a full
+                        com-<lb/> pensation for our most trying seasons.<lb/> Ah may I abide in the
+                        patience, with<lb/> my eye single to Him, who knows what<lb/> is best for
+                        us.</q> -- On the <date when="1805-06-07">eighteenth day</date><lb/> after
+                    leaving home they arived safe and<lb/> in good health at <placeName ref="tunes"
+                        >Tunesassah</placeName>, the place<lb/> of their destination. ---- The next
+                    day <lb/>
+                    <pb n="11" facs="SW_RC1805_Page_11"/> she says- <q>A great many of the natives
+                        came to<lb/> see us, thro’ the course of this day; among them<lb/> was
+                            <persName ref="cornp2">Cornplanter</persName>’s sister who said; “she
+                        was<lb/> glad the Good Spirit had brought us safe thro’<lb/> our long
+                        journey.”—which raised sensations so comforta-<lb/> ble and endearing that
+                        my heart was<lb/> fill’d with gratitude, and this language,<lb/> in the
+                        secret of my spirit, was breathed,<lb/> “Great and marvlous are thy works
+                        Lord<lb/> God Almighty.</q></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1805-06-14">6 Month 14th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> They met the Indians in coun-<lb/> cil, which was opened by one of their
+                    chiefs<lb/> expressing thanks to the great Spirit, who<lb/> had brought them
+                    safely thro’ so long and<lb/> perilous a journey: - she then says <q>the<lb/>
+                        address from the committee relative to<lb/>
+                        <hi rend="underline">us</hi> was first read, then part of an epistle<lb/> to
+                        their women. -- They were also inform’d<lb/> that, notwithstanding our
+                        journey had been<lb/> long and trying, yet we felt peace of mind<lb/> in
+                        being with them, and hoped our sis-<lb/> ters the Indian women would be
+                        wil-<lb/> ling, when we became more acquainted <lb/>
+                        <pb n="12" facs="SW_RC1805_Page_12"/> to be instructed in the ways of the
+                        white<lb/> people-- After a considerable time of con-<lb/> ference among
+                        themselves they inform’d<lb/> us- We return thanks to the great Spirit<lb/>
+                        to see you all well, and that he has preserv’d<lb/> your women thro’ so long
+                        a journey, and<lb/> that they have ariv’d safe in our country,-<lb/> and we
+                        are much pleas’d they are going to<lb/> stay among us, to instruct our
+                        women.<lb/> We return thanks to the great Spirit, that<lb/> he has put this
+                        into your hearts, and we<lb/> wish you to make your minds easy.</q></p>
+            </div>
+            <div type="letter">
+                <dateline>
+                    <date when="1805-08-03">8 Month 3rd</date>
+                    <placeName key="tunes"/></dateline>
+                <p> In a letter to her father <persName ref="ncoop2">Coope</persName><lb/> she
+                    writes- <q>Altho this is the first time I<lb/> have attempted to address thee in
+                        this<lb/> way since we parted (exceping a few lines<lb/> from <placeName
+                            ref="middl">Middletown</placeName>) yet it has not been for<lb/> want of
+                        affection, nay verily, the taking<lb/> hold of thy hand when we parted,
+                        was<lb/> by far the closest trial I met with among all<lb/> my near
+                        relations, and for many miles<lb/> I could not suppress the tears from
+                        flow-<lb/> ing -- Our moving here was from a sense <lb/>
+                        <pb n="13" facs="SW_RC1805_Page_13"/> of duty.- The impressions were so
+                        strong and<lb/> at time would revive with such weight<lb/> that I believ’d
+                        it right for me to submit<lb/> our going to our friends; had they
+                        discoura-<lb/> ged it I think I should have felt re-<lb/> leased.-- My
+                        sincere desire from the first<lb/> was, that we might be guided by that<lb/>
+                        hand, that will lead all those rightly<lb/> who rely thereon; and I thought
+                        there<lb/> was a comfortable degree of peace experien-<lb/> ced in being
+                        resigned: but the near sym-<lb/> pathy I felt for thee, together with
+                        the<lb/> many trials I had to meet with, reduced<lb/> me so low that, had my
+                        request at a<lb/> weak time been granted, I should not<lb/> now be in a
+                        state of mutibility.--<lb/> I am very sensible, that thro’ unwatch-<lb/>
+                        fulness I have often err’d from the right<lb/> way; yet have been made truly
+                        thank-<lb/> ful, that conviction followed; and at sea-<lb/> sons been
+                        enabled to renew covenant--<lb/> but O the natural will, how strong,
+                        how<lb/> hard to be kept in its proper subjection, <lb/>
+                        <pb n="14" facs="SW_RC1805_Page_14"/> that I have been ready at times to
+                        cry<lb/> out, must I always remain in a state<lb/> of bondage.-- Oh may I
+                        double my<lb/> warfare and press forward with the hope,<lb/> that, by the
+                        aid of my heavenly Father, I<lb/> shall be enabled to become a
+                        conquerer;<lb/> remembring <quote type="bible">that in due time ye
+                            shall<lb/> reap if ye faint not.</quote>
+                        <space/> Being at <placeName ref="phila">Philad a.</placeName><lb/> on
+                        business a week before we set off – at a<lb/> friends house we very
+                        unexpectedly met<lb/> with <persName>WC</persName>-- who had something
+                        peculiarly<lb/> encourag<del>e</del>ing to say to us; signifying that<lb/>
+                        he felt so much sympathy and love to<lb/> flow towards us when at dinner
+                        that he<lb/> could not go up stairs without expressing<lb/> it tho’ he
+                        several times attempted it--<lb/> he address’d my husband with the
+                        appela-<lb/> tion of <quote type="bible">beloved brother be not to
+                            diffident,<lb/> for thou wilt be an instrument of good<lb/> to that
+                            people.</quote> several times repeating<lb/> the words <quote
+                            type="bible">go my dear friends and the<lb/> Lord go with you.</quote>
+                        -- I thought it very <lb/>
+                        <pb n="15" facs="SW_RC1805_Page_15"/> extraordinary after such a season of
+                        con-<lb/> flict we had had to pass thro’ that we<lb/> should meet with such
+                        encouragement,-<lb/> Tho’ I know dear father <hi rend="underline">that</hi>
+                        is not suf-<lb/> ficient to rely upon, yet I have witness’d<lb/> some
+                        refreshing seasons since parting<lb/> with thee, particularly in our
+                        religious<lb/> opportunities</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1805-10-31">10 Month 31st</date>
+                    <placeName key="tunes"/></dateline>
+                <p> In a letter to me she says <q>Last<lb/> spring several acres of Oats with
+                        Timothy<lb/> and Cloverseed with it were sow’d-- ½ a bushel of<lb/>
+                        Buckwheat- and some potatoes and corn<lb/> planted- all grew amazingly-- It
+                        has<lb/> been a busy summer with us both men<lb/> and women; the forepart of
+                        it we had at<lb/> work a carpenter and mill right and a<lb/> number of
+                        Indians diging at the race.<lb/> It is very heavy work to clear land here,
+                        &amp;<lb/> it is surprizing to see the quantity of saw<lb/> logs a few acres
+                        produces-- About 13 <unclear>acres</unclear><lb/> is put in with wheat. --
+                        Potatoes, pump-<lb/> kins and turnips we have in a bundance <lb/>
+                        <pb n="16" facs="SW_RC1805_Page_16"/> they will be helpful in the way of
+                        fod-<lb/> der. the oats likewise was mow'd for foddering.-<lb/> It has not
+                        been in our power to render the<lb/> natives much assistance this summer;
+                        yet<lb/> I have no doubt our being here, has been<lb/> useful.- We have spun
+                        some stocking wool<lb/> for our own use: to se the wool converted in-<lb/>
+                        to stocking has excited their astonishment.<lb/> We have three little wheels
+                        ready to run when<lb/> we get flax.-- We purpose this winter puting<lb/> up
+                        a house near us for those Indians who<lb/> wish to learn, to spin &amp;c
+                        in.- They appear<lb/> desirous to get more comfortable houses to<lb/> live
+                        in- and for that purpose have bought<lb/> many 100 ft. of boards.- When the
+                        young<lb/> men first came here, the cattle were all the<lb/> Indians had on
+                        their river.- They will<lb/> now amount to several 100, a number of<lb/>
+                        which are fine oxen which they have <unclear>broke</unclear>.<lb/> I have
+                        endeavored to discribe the man-<lb/> ner of our geting along, and what we
+                        have<lb/> done. I will intimate a little to thee now <lb/>
+                        <pb n="17" facs="SW_RC1805_Page_17"/> how I have fared.- Thou knew it
+                        was<lb/> a close tryal to me, to give up to be thus<lb/> separated from you;
+                        and I have often been<lb/> made thankful that I <hi rend="underline"
+                            >was</hi> favoured to<lb/> get into a state of resignation. I think<lb/>
+                        I never enjoy'd a more comfortable state of<lb/> mind, than since residing
+                        here.-- One first<lb/> day eve afternoon when they were long I feeling
+                        the<lb/> want of society to introduce a new train<lb/> of ideas for the mind
+                        to dwell on - a little<lb/> before the sun withdrew from us his rays.<lb/> I
+                        walked out alone, seeking for some new<lb/> objects to amuse me and persued
+                        the new<lb/> road about ¾ of a mile to the river. as I<lb/> walk'd along my
+                        mind unintentionally<lb/> was engaged, in ruminating on my native<lb/> home,
+                        my dear relations and friends, and<lb/> why I should be thus seperated
+                        from<lb/> them.-- I was satisfy'd that it did not<lb/> proceed from any will
+                        of my own but<lb/> much in the cross, and in submission<lb/> to inward
+                        impressions.- As I was thus <lb/>
+                        <pb n="18" facs="SW_RC1805_Page_18"/> musing my heart was fill'd with a
+                        preci-<lb/> ous illumination, and self so reduced, that<lb/> I felt willing
+                        to make a full surrender of<lb/> my all, to the great and wise disposer of
+                        events<lb/> but alass, this produced awful sensations;<lb/> and I was ready
+                        to shudder at the prospect;<lb/> when unexpectedly and unsought for a<lb/>
+                        language reviv'd, “Fear thou not neither be<lb/> dismay'd. I will strengthen
+                        thee, yea I will<lb/> help thee, my grace is sufficient for thee.”<lb/> O
+                        the Divine consolation that fill’d my<lb/> breast.- Tho’ as to the outward
+                        it might<lb/> look lonesome; being in the wilderness-<lb/> far from society-
+                        some distance from the<lb/> house and nearly dark: yet had I been<lb/> in
+                        the midst of my friends no outward<lb/> enjoyment could have been equal to
+                        the<lb/> precious sweetness I then experienced--<lb/> my heart overflow'd
+                        with gratitude-- any<lb/> subtle petitions asconded for the continu-<lb/>
+                        ations of his love, Tho’ felt unworthy of<lb/> the least of the multiplied
+                        favours I am <lb/>
+                        <pb n="19" facs="SW_RC1805_Page_19"/> receiving: may humility and reverence
+                        be<lb/> ascribed to him alone who is forever worthy,<lb/> Amen -- I have my
+                        bitters as well as<lb/> my sweets, and tryals are necessary for my<lb/>
+                        further refinement, and Oh that their may<lb/> be a willingness to be
+                        searched and tried,<lb/> untill every thing that is contrary to the<lb/>
+                        pure truth, is done away--</q></p>
+                <p> To some near connections <q>Dear Chil-<lb/> dren, we that have been brought up
+                        in the<lb/> plentiful enjoyment of this worlds pro-<lb/> duce, and many
+                        other advantages, have<lb/> abundant cause to be thankful. Oh how<lb/> I
+                        have felt for many poor children that<lb/> I have seen since I left home;
+                        particularly<lb/> thro’ the course of our journey, but we<lb/> must leave
+                        them to Providence who is<lb/> the great superintendent of the
+                        Universe.<lb/> We have mostly since being here enjoy'd<lb/> good health, and
+                        live comfortably tho’<lb/> much retired.-- have not got much engag'd<lb/> in
+                        instructing the Indians; it will require <lb/>
+                        <pb n="20" facs="SW_RC1805_Page_20"/> some time to learn their language
+                        and<lb/> to procure materials for spinning</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1805-11-01">11 Month 1st</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To a friend - <q>Thy letter of <date when="1805-07">7 mo</date> last<lb/> came
+                        safe to hand. The wholesome counsel<lb/> together with the interesting
+                        information,<lb/> was truly acceptable; for it reached me at<lb/> a time
+                        when I was very desirous of hearing<lb/> from my native home; being of the
+                        latest<lb/> date of any I had received -- I was pleas'd<lb/> to find thou
+                        hadst been to see my dear<lb/>
+                        <persName ref="ncoop2">father Coope</persName> for whose situation I have
+                        near-<lb/> by felt; knowing it was a close trial both<lb/> to him and us, to
+                        be thus separated,<lb/> now in his advanced stage of life.<lb/> Indeed when
+                        I view'd the prospect not<lb/> only of leaving <hi rend="underline">him</hi>
+                        but society in gen-<lb/> eral, with my dear friends and relations,<lb/> to
+                        many of whom I have of late felt<lb/> an increasing nearness, with desires
+                        for the<lb/> advancement of our Zion, and to live so<lb/> retired in an
+                        uncultivated part of the coun-<lb/> try, was so in the cross, that at times
+                        I <lb/>
+                        <pb n="21" facs="SW_RC1805_Page_21"/> was almost ready to run counter to
+                        se-<lb/> cret impressions; but knowing my peace<lb/> consisted in obedience;
+                        and remembring<lb/> how it was with good old Jacob: when<lb/> he left his
+                        father’s house to go into a<lb/> strange country, that in the course of<lb/>
+                        his journey, when alone, he had to ac-<lb/> knowledge, “surely the Lord is
+                        in this<lb/> place and I knew it not.”- and how<lb/> he was preserv'd and
+                        bless'd, so that on<lb/> his returning, he said, "I am not worthy of
+                        the<lb/> least of thy mercies, for with my staff<lb/> I passed over this
+                        Jordon, and now I<lb/> am become two bands.”-- As these con-<lb/>
+                        siderations reviv'd with renew'd faith,<lb/> that the Divine presence, is
+                        still the<lb/> same that ever it was, to those who<lb/> are truly devoted to
+                        serve the Most<lb/> High. - my faith was a little<lb/> strengthened, the
+                        mountains gradually<lb/> disappear'd and a belief increas'd, that<lb/> if it
+                        was the Lords will for us to go, <lb/>
+                        <pb n="22" facs="SW_RC1805_Page_22"/> he would support us if our eye
+                        were<lb/> fixed upon him. -- Thus as I endea-<lb/> voured to become
+                        resigned. I felt at sea-<lb/> sons a comfortable consolation, and have<lb/>
+                        experienced, even in this remote part of<lb/> the country, a brook by the
+                        way, that<lb/> will refresh the weary traveler.-- Our re-<lb/> ligious
+                        opportunities are mostly attended<lb/> with a lively savour. It is
+                        encouraging<lb/> to hear that the petitions of those who<lb/> have been <add
+                            place="above">&amp; still are</add> as valiants in our Israel are<lb/>
+                        ascending on our behalf.- Surely it calls<lb/> for grateful returns of
+                        thankfulness to<lb/> the Author of all good.-</q></p>
+                <p>
+                    <q>The natives appear friendly disposed<lb/> and are gradually increasing in the
+                        ideas<lb/> of civilized life.-- Some of them are much<lb/> spirited in
+                        cultivating their farms and<lb/> in geting more comfortable
+                    houses.--</q></p>
+                <p>
+                    <q>The concern feels weighty and impor-<lb/> tant, and I have no doubt but that
+                        it<lb/> was rightly founded; and if those engag'd <lb/>
+                        <pb n="23" facs="SW_RC1805_Page_23"/> therein are careful to dwell near the
+                        Divine<lb/> direction they will be preserved; and may<lb/> at a future day
+                        have to view their labours<lb/> with satisfaction.</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1805-11-30">11 Month 30th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> In answer to her brother <persName ref="jshar2">JS</persName> who<lb/> desired
+                    to be informed of the customs &amp; man-<lb/> -ners of the natives-- says
+                        <q>Since the young<lb/> men resided here, the natives had a great<lb/> image
+                        cut out of a Pine tree and made<lb/> after the figure of a man, and
+                        painted,<lb/> so as to look frightful, which they call'd<lb/> the Great
+                        Spirit. They had set times of<lb/> worshiping and dancing before it.
+                        But<lb/> as their minds became more enlighten'd<lb/> some of them grew
+                        uneasy with<lb/> this image, and they had many confer-<lb/> ences what
+                        should be done with it; but<lb/> they were fearful of destroying it,
+                        lest<lb/> some evil should befall them.- At<lb/> length one of their chiefs
+                        proposed taking<lb/> it into the woods and puting some beans<lb/> and corn
+                        by it, to shew their good will <lb/>
+                        <pb n="24" facs="SW_RC1805_Page_24"/> for it. Hence after much debate
+                            <persName ref="habee1">Henry Obail</persName><lb/> son of <persName
+                            ref="cornp2">Cornplanter</persName> being permited to speak<lb/> said,
+                        why this image you worship was once<lb/> a little sprout that grew out of
+                        the ground<lb/> it could neither hear nor speak - well it was<lb/> made like
+                        a man and we worship it still<lb/> it can neither hear nor speak- is this
+                        the<lb/> sort of Great Spirit we worship, cant hear can’t<lb/> speak - give
+                            <hi rend="underline">me</hi> leave and I will make way<lb/> with it.- At
+                        length it was given up to<lb/> him, and he tumbled it into the river &amp;<lb/>
+                        <add>it</add> floated away -- but they watched him<lb/> thinking some evil
+                        would happen him<lb/> for so doing -- Notwithstanding their image<lb/> is
+                        gone they still continue regularly twice<lb/> a year their dances, offering
+                        sacrafices, some-<lb/> times burning tobacco &amp;c</q></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1805-12-23">12mo 23</date>
+                    <placeName key="tunes"/></dateline>
+                <p> From her diary. <q>It has been snow-<lb/> ing more or less these two days
+                    --</q></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1805-12-25">25th</date>
+                    <placeName key="tunes"/></dateline>
+                <p>
+                    <q>Various reflections pass'd thro’ my<lb/> mind to day as I sat knitting, of
+                        which<lb/> the following is a part-- At this lone- <lb/>
+                        <pb n="25" facs="SW_RC1805_Page_25"/> some hour when the watery clouds
+                        are<lb/> discharging their whitened substance<lb/> and the trees of the
+                        forrest are clad with<lb/> the icy snow- while my mind is un-<lb/> molested
+                        with the cares of this life - and<lb/> my thoughts absorbed in awful
+                        medita-<lb/> tion- may I view all temporary scenes<lb/> as fading toys, and
+                        revere that hand<lb/> from whom all good comes- Now at<lb/> this solemn
+                        period attend O my soul<lb/> in humility wait to be learn'd by this<lb/>
+                        inward teacher -- O my faultering<lb/> mind, how long wilt thou be
+                        blundering<lb/> along in thy journey Heavenward. thou<lb/> hast often seen
+                        this insufficience of hu-<lb/> man frailty therefore in full confi-<lb/>
+                        dence, rely on that Power which at sea-<lb/> sons, thou hast felt to be
+                        precious.--<lb/> And now O Lord permit me to intercede<lb/> for a renewal of
+                        thy holy aid, that<lb/> when thou in thy wisdom may see<lb/> mete to hide,
+                        as it were, thy face from <lb/>
+                        <pb n="26" facs="SW_RC1805_Page_26"/> me I may be enabled, in patience<lb/>
+                        and humility to wait for thy coming;<lb/> and when thou art pleased to be
+                        near<lb/> and feed me I may not slide from<lb/> the true path; for in thee
+                        and thee<lb/> alone is safety.</q>-</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1806-01-07">1806 1 Month 7th</date><placeName key="tunes"
+                    /></dateline>
+                <p>
+                    <q>All things as to the out-<lb/> ward glide comfortably along but I<lb/> have
+                        often to pass thro’ seasons of deep<lb/> humiliation. -- Thou <add
+                            place="above">only</add> Lord knows the<lb/> anguish of my spirit and
+                        sincerity of<lb/> my heart, that I desire above all things<lb/> to serve
+                        thee but, the cross and the assault<lb/> of the enemy. - Will I never be
+                        able to<lb/> overcome the many hindering things!<lb/> Thou hast at seasons O
+                        Father clearly man-<lb/> ifested to me thy will-- and sweet peace<lb/> has
+                        accompanied faithfulness thereto<lb/> Then Oh my soul why dost thou
+                        doubt.<lb/> dwell low; in humility wait. let not<lb/> thy faith fail, that
+                        so in the littleness thou<lb/> mayest be enabled to do the Lords
+                    will.</q></p>
+            </div>
+            <div type="entry">
+                <pb n="27" facs="SW_RC1805_Page_27"/>
+                <dateline><date when="1806-01-23">23rd</date> and first of the week-- <placeName
+                        key="tunes"/></dateline>
+
+
+
+                <p>
+                    <q>My mind<lb/> when favour'd to get into the quiet has<lb/> enjoy'd a
+                        comfortable state of tranquility;<lb/> but thro’ sundry requests of the
+                        natives<lb/> also as the white people in passing up &amp;<lb/> down this
+                            <geogName ref="alleg">river</geogName> make this house a stoping<lb/>
+                        place -and many travelers latterly calling<lb/> some being detain'd- has
+                        occaisoned us<lb/> some difficulty in sitting quietly down<lb/> in our
+                        religious opportunities. Oh that<lb/> we may be enabled thro’ all
+                        difficulties to<lb/> dwell near that fountain, from whence<lb/> preservation
+                        and heavenly instruction<lb/> flows</q></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1806-01-29">1 mo 29</date><placeName key="tunes"/></dateline>
+                <p> - From her Diary –- forward 9 leaves:</p>
+
+                <p>
+                    <date when="1806-02-22">2 Month 22nd</date> To her sister <persName ref="mshar1"
+                        >MS</persName>. <q>When I wrote<lb/> to <persName ref="jshar1"
+                            >father</persName> I mentioned that we expected<lb/> to build a house
+                        neart this, for a school<lb/> house which is now accomplished, and<lb/>
+                        altho’ the weather much of the time since<lb/> has been stormy and the
+                            <geogName ref="alleg">river</geogName> difficult<lb/> to cross, yet we
+                        have not been unimploy'd.</q></p>
+                <p>
+                    <q>As soap making is a novel to most <lb/>
+                        <pb n="28" facs="SW_RC1805_Page_28"/> of the Indians nay many of them<lb/>
+                        seldom or never wash their clothes or even<lb/> their hands or face- To
+                        impress their<lb/> minds with <space/> habits of cleanliness appear'd<lb/>
+                        to us the first necessary and important<lb/> step- accordingly in the fall
+                        we proposed<lb/> to them, to save their ashes and fat, and when<lb/> our
+                        house was ready we would teach them<lb/> to make soap – for when they bring
+                        their grists<lb/> to mill in their canoes the materials could<lb/> easily be
+                        brought with in them – for they<lb/>
+                        <del>generally</del> live 10 or 12 m each way generally on the<lb/> oppesite
+                        side of the <geogName ref="alleg">river</geogName>. tho’ their
+                        principal<lb/> town is within 3 m.- There has been several<lb/> girls out of
+                        6 or 8 families who have at<lb/> different times attended, and who
+                        appear'd<lb/> anxious to learn- they were much pleas'd<lb/> with having a
+                        considerable quantity of<lb/> good soap to take home with them.<lb/> between
+                        whiles they nit and spin a little.<lb/> they bring provisions and cook for
+                        themselves;<lb/> we shew'd them our way to make indian bread <lb/>
+                        <pb n="29" facs="SW_RC1805_Page_29"/> and they say they like it much the
+                        best-<lb/> if way opens we mean to teach them to<lb/> spell-- The plan
+                        appeared to be well re-<lb/> ceiv'd by both sexes-one of the chiefs
+                        said<lb/> “That was the very thing” -- If half a do-<lb/> zen of our <add
+                            place="above">girls</add> in their native dress should un-<lb/>
+                        expectedly pass thro’ the entry at <placeName>West Town</placeName><lb/>
+                        what an admiration it would raise- for the<lb/> contrast is great.- and
+                        their is a satisfaction<lb/> in trying to instruct them- notwithstand-<lb/>
+                        ing their great ignorance- their souls also<lb/> are equally as precious in
+                        the sight of the<lb/> Supreme Being as ours. -- At unexpect-<lb/> edly
+                        receiving a packet of letters she says<lb/> Well dear sister I have been
+                        endeavour-<lb/> ing in all things to be instructed whether<lb/> to be full
+                        or empty, to abound or suffer<lb/> want - I find you have entertain'd
+                        an<lb/> idea that I have enjoy'd some comfot-<lb/> able hours since my
+                        residence in this<lb/> solatery abode, which has truly been<lb/> the case:
+                        but alass! an uninterrupted <lb/>
+                        <pb n="30" facs="SW_RC1805_Page_30"/> sunshine is not always best for
+                        us.<lb/> The time of the arival of the last pack-<lb/> et, and the preceding
+                        week was a proving<lb/> season-- here I was, no change of society,<lb/> no
+                        neighbouring meeting where perhaps<lb/> I might receive a crum - Well it
+                        will<lb/> cause me to get deeper and to know<lb/> that my dependance must
+                        alone be on<lb/> Divine help. -- I trust it was a season<lb/> of renew'd
+                        instruction to me.</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-03-22">3 Month 22nd</date>
+                    <placeName key="tunes"/></dateline>
+                <p>
+                    <q>Dear cousin, Previous to the<lb/> reception of thy letter, the tidings
+                        of<lb/> the decease of your precious sister had<lb/> reached us- and I
+                        feelingly sympathiz'd<lb/> with you. Truly it must be a great con-<lb/>
+                        solation in believing she was prepar'd<lb/> for her awful change, which I
+                        have no<lb/> doubt was the case. Oh that it may<lb/> have an awakening
+                        tendency on those of<lb/> her contemporaries who attended the<lb/> solemn
+                        scene. Tryals of this sort and<lb/> many others frequently occur during <lb/>
+                        <pb n="31" facs="SW_RC1805_Page_31"/> our pilgrimage thro’ life; but it
+                        is<lb/> written all things will work together<lb/> for good to them who love
+                        and fear the<lb/> Lord.</q> --</p>
+                <p>
+                    <q>The Indians are increasing in in-<lb/> dustreous habits. At a late council<lb/>
+                        <del>they</del> held among themselves they agreed<lb/> and information was
+                        sent to the absent<lb/> tees - that at a certain stated time<lb/> each one
+                        mut relinquesh their hunting<lb/> and be in readiness to attend to the<lb/>
+                        labors of the field, being sensible that<lb/> last spring a loss was
+                        sustained by<lb/> not earlier applying themselves to it</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-05-11">5 Month 11</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To me <q>Thou requested an infor-<lb/> matory letter respecting both ourselves
+                        &amp;<lb/> the improvements of the natives: as to<lb/> the latter but little
+                        advancement is yet<lb/> made among the females-not owing I<lb/> think to our
+                        neglect- the charge we are<lb/> intrusted with by our society and
+                        expect<lb/> ed to give samples of its concern we often <lb/>
+                        <pb n="32" facs="SW_RC1805_Page_32"/> feel weighty and important - and
+                        have<lb/> set times to confer together with a<lb/> view, to keep the subject
+                        lively, and to<lb/> seek after a plan, that may be most<lb/> conducive to
+                        their improvement.- and<lb/> often among ourselves express a concern<lb/>
+                        that we do so little.- yet when we reflect<lb/> that we are endeavouring to
+                        do the best<lb/> we can, labouring to keep in the patience,<lb/> improving
+                        every favourable opportunity<lb/> that may offer - way may yet open for<lb/>
+                        our encouragement -- The children<lb/> of Israel in their journey thro’ the
+                        wil-<lb/> derness were directed when they saw<lb/> no way to go forward to
+                        stand still.<lb/> and way open'd beyond their expectation.</q></p>
+                <p>
+                    <q>I have had for some time past hum-<lb/> bly to crave for patience both
+                        inwardly<lb/> and outwardly, and have laboured to<lb/> seek after that
+                        wisdom that is able to<lb/> direct-- Thou knowest there are sea-<lb/> sons
+                        when discouragements will assails us in <lb/>
+                        <pb n="33" facs="SW_RC1805_Page_33"/> all weighty undertakings but if we
+                        en-<lb/>deavor to dwell near to the fountain<lb/> of life, light may be
+                        permitted to<lb/> shine as our of a dark place -- and to<lb/> own the
+                        necessity of those proving sea-<lb/>sons and not to glory in any act of<lb/>
+                        our own—</q></p>
+                <p>
+                    <q>I do not mean to convey discourage-<lb/>ments relative to the concern-- for I
+                        think<lb/> the work is progressing-- but great matters<lb/> all at once must
+                        not be looked for.<lb/> Many of the men this spring appear in<lb/> good
+                        earnest to have more cleared land<lb/> and enclosed fields, but they long
+                        esta<lb/>blished custom of having the women in<lb/> their cornfield is not
+                        easily relinquish'd.<lb/> With respect to ourselves we enjoy good
+                        health,<lb/> live agreeably, have a comfortable hose &amp;c.<lb/> the
+                        prospect of a good crop of grain (but<lb/> a barn to receive it will have to
+                        be built)<lb/> the improvements that are gradually<lb/> making on our farm
+                        looks pleasant which <lb/>
+                        <pb n="34" facs="SW_RC1805_Page_34"/> added to the returning spring, feels
+                        animat-<lb/> ing-- The sawmill has steadily been<lb/> kept going and many
+                        thousand feet of<lb/> boards set in rafts down the river to
+                                <unclear><placeName ref="pitts"
+                        >Pitt[sburgh]</placeName></unclear></q>-</p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-05-25">5 mo 25th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To her Uncle <persName>WS</persName>. <q>We have lately<lb/> had a visit from
+                        the <persName ref="ichap1">Agent</persName> placed by gov-<lb/> ernment of
+                        the six nations.- he resides at<lb/>
+                        <placeName ref="buffa">Buffoloe</placeName> about 80 miles from this
+                        place-<lb/> The Indians on this <geogName ref="alleg">river</geogName> had
+                        not receiv'd<lb/> a visit from him since he was intrusted<lb/> with his
+                        office- and we being entire strain-<lb/> gers to him and his sentiments,
+                        respecting<lb/> our being here on the errent we are- we were<lb/> anxious to
+                        have an interview with him.<lb/> The next day after his arival at <placeName
+                            ref="colds">Cold spring</placeName><lb/> he had the Indians collected
+                        (our men at-<lb/> tended). He communicated many pertinent<lb/> remarks to
+                        them, suitably adapted to their<lb/> capacities; endeavouring to impress on
+                        their<lb/> minds, the advantage of industry and<lb/> sobriety, and the
+                        cultivation of their land.<lb/> Requesting them to be careful to bring <lb/>
+                        <pb n="35" facs="SW_RC1805_Page_35"/> up their children to labor;
+                        endeavouring<lb/> to convince them of the advantage it<lb/> is to farmers to
+                        live seperate from each<lb/> other and not in little towns. -- A sil-<lb/>
+                        versmith had made many exertions<lb/> to settle among the Indians,
+                        which<lb/> we entirely disapproved - - The <persName ref="ichap1"
+                            >Agent</persName><lb/> desired them not to suffer him to come<lb/> on
+                        their land, for we would get their<lb/> money for broaches and bobs
+                        that<lb/> would be of no use to them. for when<lb/> they wanted a yoke of
+                        oxen, if they<lb/> had money they could go among the<lb/> white people and
+                        get them, but if<lb/> you take a basketfull of these broach-<lb/> es they
+                        will not take them.- he also descanted<lb/> on the great benifit of having
+                        the Qua-<lb/> kers among them, and the advantages<lb/> of the mills;
+                        signifying there were no<lb/> people who had done more for them<lb/> than
+                        they had-- He came home with<lb/> our young men, and the eve was spent <lb/>
+                        <pb n="36" facs="SW_RC1805_Page_36"/> in agreeable conversation. he
+                        intimated<lb/> that the experiment of civilizing a na-<lb/> tion of Indians
+                        he had not seen ful-<lb/> ly tryed - but could discouver no more<lb/> of a
+                        wild nature in them <space/> than pre-<lb/> vaild among the whites. provide
+                        the oppor-<lb/> tunity of education was the same.<lb/> He said it was a
+                        great undertaking for<lb/> us to leave our near connections and fri<add
+                            place="above">[en]ds</add><lb/> but necesity call'd loudly for some<lb/>
+                        attention to be given them- signifying<lb/> he had heard of our society
+                        giving them<lb/> some assistance, but had no idea so much<lb/> was done-- On
+                        parting with him we<lb/> had his good will and wishes for our<lb/>
+                        success</q>--</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1806-06-20">6 mo 20</date>
+                    <placeName key="tunes"/></dateline>
+                <p> from her diary <q>A fine refreshing<lb/> rain after a week of warm dry
+                        weather<lb/> all kinds of vegitation is revived<lb/> but my poor mind feels
+                        dull and lan-<lb/> guid, and the necessity of having faith<lb/> and patience
+                        under every dispensation <lb/>
+                        <pb n="37" facs="SW_RC1805_Page_37"/> that may be alloted me. that thro’
+                        heights<lb/> and depths I may at seasons, be favour'd<lb/> to partake, if
+                        but a crumb of that bread,<lb/> that nourishes and strengthens the
+                        soul;<lb/> is what my spirit earnestly breaths for</q>-</p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-06-26">6 mo 26th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To her sister <persName ref="eshar1">ES</persName> -- <q>The recital of thy<lb/>
+                        short excersion in the country revived a<lb/> recent visit made by me to
+                            <placeName ref="colds">Cold Spring</placeName><lb/> an Indian town- and
+                        I was led to<lb/> view the contrast- As true a picture of<lb/> mine cannot
+                        be formed in <add place="above">thy</add> ideas, as<lb/> thine can in mine--
+                        however to make<lb/> a begining -- As the cornfields have lately<lb/> call'd
+                        the attention of the women from<lb/> their spining it afforded us some
+                        leisure;<lb/> and I seized the opportunity to visit<lb/>
+                        <space/> them in their own houses- <persName ref="jtayl1">Jacob
+                            Taylor</persName><lb/> going on business to the town, and offer'd<lb/>
+                        to escort me there-- when we came to the<lb/>
+                        <geogName ref="alleg">river</geogName> an Indian with a canoe being
+                        there<lb/> who cheerfully took us across- I had a<lb/> pleasant walk up the
+                            <geogName ref="alleg">river</geogName>, viewing the <lb/>
+                        <pb n="38" facs="SW_RC1805_Page_38"/>
+                        <geogName ref="allmo">mountains</geogName> on the opposite side
+                        intermix'd<lb/> with narrow vallies clothed with spontaness<lb/> herbage for
+                        the nourishment of the dumb<lb/> beasts-- when we arived in the
+                        subburbs<lb/> of the town we were haild by some of the<lb/> inhabitants to
+                        know where we were bound<lb/> to- <persName ref="jtayl1">Jacob</persName>
+                        inform'd them that I purposed<lb/> spending the day among them, and by
+                        and<lb/> by would call on <hi rend="underline">them</hi>- as his business
+                        did<lb/> not lead him far thro’ the town, he shew me the house I was<lb/>
+                        bound too then left me- Mockensons I<lb/> have found to be a pleasant
+                        covering for<lb/> the feet in dry weather and my last sum-<lb/> mers pair
+                        being worn out, I call'd on this<lb/> woman who made them, to be speak
+                        an-<lb/> other pair-- when I came to the door, I<lb/> saluted her in their
+                        way. <hi rend="underline">schano</hi> ah schano<lb/> she reply'd- looking
+                        pleasantly- her five<lb/> little folks being aroud- I invited my<lb/> self
+                        in, also to a seat which I took on<lb/> the end of a long bench- the day
+                        was<lb/> warm yet she was churning close by the <lb/>
+                        <pb n="39" facs="SW_RC1805_Page_39"/> fire-- I regreted the want of their
+                        lan-<lb/> guage to instruct her how to manage it.<lb/> I cannot converse
+                        with them tho’ make<lb/> some awkward attempts-- when she was<lb/>
+                        <add>done</add> she took her seat by me admiring my knit-<lb/> ting which I
+                        had in my hand- I also<lb/> (on purpose for them to try) had provided<lb/>
+                        an other stocking which I then handed<lb/> her, using my utmost endeavours
+                        to instruct<lb/> her. she was, tho’ intent in learning very<lb/> awkward-
+                        one of her neighbours coming in<lb/> tryed it also - but to return - after
+                        churn-<lb/> ing was done she washed a bowl, and with<lb/> the assistance of
+                        a ladle collected and<lb/> slightly worked the butter- then pour'd<lb/> it
+                        (for it was like oil) into a pail of<lb/> water, where it remained a few
+                        minutes<lb/> then she again worked it with her ladle<lb/> and salting it she
+                        sat it by me on the<lb/> end of the bench (there being perhaps 4lb)<lb/>
+                        with a piece of unleavened corn bread<lb/> and an old knife, and invited me
+                        to dine <lb/>
+                        <pb n="40" facs="SW_RC1805_Page_40"/> giving me for drink- buttermilk (how
+                        differ<lb/> ent from thy dinner at Aunts) in the mean<lb/> time two girls
+                        (perhaps 10 and 12 years of age)<lb/> who had frequently been at <placeName
+                            ref="tunes">Tunesassah</placeName> came<lb/> inviting me to their house.
+                        they ran before<lb/> and prepared a seat for me by their mo-<lb/> ther who
+                        was sitting at the door weaving<lb/> a belt curiously decorated with
+                        beads.<lb/> The eldest impatient to try <hi rend="underline">her</hi> hand
+                        at<lb/> knitting-and her sister <del>clost by</del> on her knees<lb/> clost
+                        by gazing with pleasing attention to<lb/> to see the dexterity of her
+                        fingers- in a few<lb/> minutes she performed much better than<lb/> the woman
+                        did in half an hour-- when<lb/> she got in the way of it I left it with
+                        her<lb/> and made several visits in the upper<lb/> part of the town. When I
+                        return'd she<lb/> told me by her fingers that she had knit<lb/> six needles-
+                        and that 30 stitches were on a<lb/> needle-- she reluctantly parted with
+                        it<lb/> but time urged me homewards, having<lb/> on my way several calls yet
+                        to make</q></p>
+
+                <pb n="41" facs="SW_RC1805_Page_41"/>
+
+                <p>
+                    <q>I had victuals at another place set for me<lb/> which my paper, as I have in
+                        view some other<lb/> thing to mention to thee, will give me no<lb/> room to
+                        describe. I got thro’ and to the<lb/> fording place about six- where 2
+                        families<lb/> live who in turn were to share of my visit<lb/> and who I
+                        expected to take me across the<lb/>
+                        <geogName rend="alleg">river</geogName> - but my expectations were
+                        erroneous<lb/> for the houses were shut and no one to take<lb/> me over--
+                        here alone, I took my seat and bun-<lb/> dle of shingles waiting for some
+                        favour-<lb/> able event -- with which in ½ an hour I was finish-<lb/> ed,
+                        for an Indian coming to the opposite<lb/> side got a canoe and took me over-
+                        and<lb/> I returned much pleased with my visits--<lb/> ------ We had the
+                        assistance of 10 or more<lb/> Indians for 2 day in raising a barn - the<lb/>
+                        day of the eclipse proved to be one- the<lb/> Indians had been told some
+                        time before<lb/> that on this day the sun would grow<lb/> dark- but some
+                        said “they were sure white<lb/> people could tell no such things,” however <lb/>
+                        <pb n="42" facs="SW_RC1805_Page_42"/> when the obscuration began it
+                        continued<lb/> growing darker and darker untill for a<lb/> few minutes it
+                        became total the atmos-<lb/> phere resembled dark twilight and a<lb/> number
+                        of stars made their appearances.<lb/> well says one of the Indians the
+                        white<lb/> folks <hi rend="underline">does</hi> know more than us--
+                        another<lb/> said he expected a great many of the<lb/> women were a crying,
+                        and he had a mind<lb/> to cry too for it look so strange.</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806"/><placeName key="tunes"/></dateline>
+                <p> Copied<lb/>
+                    <del><date when="1806-06-30">6 Month 30th</date> To her brother <persName
+                            ref="nshar1">NS</persName>.<lb/></del>
+                    <q>After passing thru a long winter &amp; part of the spring with<lb/>
+                        <del>We were favored after passing, with</del><lb/> but little intercourse,
+                        we were favoured to<lb/>
+                        <del>but little intercourse (thro’ a long win-</del><lb/>
+                        <del><del>ter and part of the spring)</del> to receive<lb/> a number of
+                            letters and <del>was</del> were much<lb/> pleased with finding <space/>
+                            among<lb/> them one from thee. - and may tell thee and dear sister, tho’ we<lb/>
+                            <hi rend="underline">are</hi> far seperated from the bosom<lb/> of
+                            society, partaking of many hours<lb/> of retirement that formerly
+                            we</del>
+                        <lb/>
+                        <pb n="43" facs="SW_RC1805_Page_43"/>
+                        <del>were in a degree straingers to. yet<lb/> I am thankful that mostly I
+                            en-<lb/> joy a quiet resigned mind, and have<lb/> not in the most trying
+                            dispensations<lb/> I have experienced since being here,<lb/> thought my
+                            lot hard, nor dare indulge<lb/> one murmering thought. -- my relish<lb/>
+                            for reading and meditation is much<lb/> increased, and can truly say
+                            that ma<lb/> ny comfortable hours have been sacri-<lb/> ficed to these
+                            desires-- Altho I<lb/> often feel poor and striped yet as<lb/> patience
+                            is abode in the comfort-<lb/> able belief, <del>will</del> prevails that
+                            the streams of Divine<lb/> love are extended, to all the sincere
+                            hearted<lb/> wherever scatter'd or how ever <del>far</del> remote
+                            from<lb/> the bosom of society. <del>will prevail.</del><lb/> The query
+                            the yong man put to his Lord<lb/> has of late affectingly accompanied
+                            my<lb/> mind. “Good Master what good thing shall<lb/> I do to inherit
+                            eternal life-” after enumerat-<lb/> ing several things he added “go sell
+                            that thou<lb/> hast and come &amp; follow me.” this was a hard</del>
+                        <lb/>
+                        <pb n="44" facs="SW_RC1805_Page_44"/>
+                        <del>saying to the natural part.- Oh that we<lb/> may have our minds so
+                            disengaged from<lb/> the encumbering things of this world that<lb/> the
+                            growth of the pure seed may not in the<lb/> least be retarded. -- The
+                            station of parents<lb/> are very important. -- children <add
+                                place="above">are</add> often improperly<lb/> desiring
+                                <del>wanting</del> those things they see on others<lb/> when they
+                            are young is the time to guard against future dif-<lb/> ficulties by
+                            nipping things in the bud, and endeavouring<lb/> to instill useful
+                            instruction into their tender minds. You<lb/> feel the charge then why
+                            should I thus write.</del></q>
+                </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1806-01-29">1806 <add>1 mo</add> 29th</date><placeName
+                        key="tunes"/></dateline>
+
+                <p>
+                    <del>From her diary -- <q>Letters were receiv'd<lb/> to day informing of the
+                            death of dear cousin<lb/>
+                            <persName ref="hjack2">Hannah Jacksons</persName> mother-- she is now
+                            no<lb/> doubt reaping the benefit of a wellspent<lb/> life-- may we who
+                            are left behind so fol-<lb/> low her footsteps that when our final<lb/>
+                            change comes, we may be prepared; -<lb/> time to us all is uncertain,
+                            and the<lb/> period when we shall be call'd hence<lb/> we know
+                        not.</q></del>
+                    <add>turn back 9 leaves</add></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-09-18">9 mo 18th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To <persName ref="jshar1">me</persName>
+                    <q>I dwell but little on the<lb/> subject of receiving visits from my friends or
+                        when I shall <lb/>
+                        <pb n="45" facs="SW_RC1805_Page_45"/> again be with you-- In regard to
+                        thy<lb/> debilitated situation and want of health<lb/> or whether we shall
+                        again meet in muta-<lb/> bility, I hope submission and fortitude<lb/> will
+                        be my companions and not only<lb/> in <hi rend="underline">that</hi>, but
+                        thro’ the varied dispensations<lb/> that may be my lot to encounter.
+                        but<lb/> dear father pleas to accept of the feeble<lb/> breathings of thy
+                        daughter, that as thy<lb/> natural abilities fail, and infirmities<lb/> with
+                        age come on thou mayest be<lb/> preserved a live in that that will
+                        endure<lb/> beyond time. -- I was pleased to hear<lb/> from my dear aged
+                            <persName ref="mmend1">grandmother</persName> and<lb/> wish to be
+                        affectionately remembred to<lb/> her. I have often reverted to sensa-<lb/>
+                        tions impressed on my mind when<lb/> in company with some dear friends<lb/>
+                        near their close of time here, also on<lb/> visiting some infirm ones who
+                        were<lb/> confin'd and for these I often feel a<lb/> lively
+                    sympathy.</q></p>
+            </div>
+            <div type="entry">
+                <pb n="46" facs="SW_RC1805_Page_46"/>
+                <dateline><date when="1806-09-27">27th</date>
+                    <placeName key="tunes"/></dateline>
+
+
+
+                <p> From her diary <space/>
+                    <q>This eve my dear<lb/> brother <persName ref="jshar1">JS</persName>. arived.
+                        it was a joyful meet-<lb/> ing to us both. -- he brought me a num-<lb/> ber
+                        of letters from my dear connexions<lb/> Oh how many blessing do I
+                        receive.<lb/> may I ever walk worthy thereof and<lb/> quietly acquies in the
+                        way cast up<lb/> for me - with a heart devoted to love<lb/> fear and obey my
+                        Heavenly Father, is<lb/> the frequent breathing of my spirit.</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-09-28">28th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To her sister <persName ref="pshar1">P.S.</persName> -- <q>If our school
+                        house<lb/> could be fill'd with girls learning to spin<lb/> knit &amp;c the
+                        days would pass pleasantly away.<lb/> A number when their corn is gathered
+                        gives<lb/> us to expect their company. -- The man’s<lb/> wife who has the
+                        sawmill is a weaver- and<lb/> could we have a piece of the Indians
+                        spin-<lb/> ing for her this winter to weave, it would<lb/> prove a strong
+                        incitement for more of<lb/> them next spring to sow flax. The com-<lb/>
+                        mittee who has lately been among us <lb/>
+                        <pb n="47" facs="SW_RC1805_Page_47"/> say they are much improved in
+                        cleanli-<lb/> ness- and in many little matters <hi rend="underline"
+                        >I</hi><lb/> think they have gaind instruction, which<lb/> will open the way
+                        for greater. It is<lb/> no small task - to begin with girls 13,<lb/> 14 and
+                        15 years of age - who are ignorant<lb/> of all most every thing but howing
+                        corn<lb/> and chipping wood-- the wheel runs<lb/> back - the yarn tangles -
+                        it twists into<lb/> curls, the end runs down, and such<lb/> like-- which
+                        requires patience both for<lb/> the teacher and learner -- Our know-<lb/>
+                        ledge of their language is still very<lb/> limited - so that we have shew
+                        them<lb/> by signs - we have to keep up a plea-<lb/> sant countenance- and
+                        repeating the<lb/> words by and by you will get in the<lb/> way of it -
+                        considerable improvement<lb/> in different branches is already made<lb/> by
+                        some</q> --</p>
+                <note resp="undetermined"> Not in <persName ref="jshar1">Joshua's</persName></note>
+            </div>
+            <div type="letter">
+                <dateline><date when="1806-09-30">30th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To a near relation. -- <q>Not without<lb/> casting a longing desire for a free <lb/>
+                        <pb n="48" facs="SW_RC1805_Page_48"/> access to those hidden treasures in
+                        store<lb/> for the faithful.” is a sentiment<lb/> express'd in closing a
+                        subject in thy last-<lb/> and feeling the energy and sincerity<lb/> in which
+                        it was penn'd-that my spi-<lb/> rit said amen -- Well knowing if faith-<lb/>
+                        fulness is adhered to what this desire<lb/> will produce-- Thou hast pass'd
+                        thro’<lb/> some close proving seasons all intended<lb/> for the trial of thy
+                        faith and to<lb/> fit thee for further usefulness in thy<lb/> day-- then let
+                        not the cross stand in<lb/> the way but give up and the enjoy-<lb/> ment of
+                        sweet peace will be thy reward.<lb/> I speak from a small degree of
+                        expe<lb/> rience, for after I was given up to this<lb/> service some little
+                        prospects opened upon<lb/> my mind accompaned with the belief<lb/> that it
+                        was my duty to perform previous<lb/> to leaving my native home-- but
+                        alas<lb/> they were like mountains to the natural<lb/> will. In thankfulness
+                        I may acknow- <lb/>
+                        <pb n="49" facs="SW_RC1805_Page_49"/> ledge that as I laboured to get into
+                        the<lb/> quiet, and <del>faith</del> have a resigned mind- I was<lb/>
+                        strengthened far beyond my expectation<lb/> to do the little that presented
+                        -- my con-<lb/> solation at times has been great, feeling<lb/> that the
+                        Divine presence was near when<lb/> the glimmer of light was small. I<lb/>
+                        feel cautious of dwelling long on this<lb/> subject lest I squander the
+                        little good<lb/> that I conceive has encreas since I be-<lb/> gan to
+                        write</q> -</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1806-10-06">10 mo 3rd in the other 6th</date>
+                    <placeName key="tunes"/></dateline>
+                <p>
+                    <q>About two weeks ago the com-<lb/> mittee left us, and three days since
+                        my<lb/> dear <persName ref="jshar2">brother</persName>. I sensibly feel the
+                        strip,<lb/> the sweets that are to be derived from<lb/> society, and in the
+                        company of our near<lb/> relations assumed their native force,<lb/> and so
+                        powerfully prevailed that had I<lb/> indulged those impressions they
+                        would<lb/> soon have made me discontented and<lb/> unhappy in my present
+                        retired situati-<lb/> on, and for a season they did unsettle <lb/>
+                        <pb n="50" facs="SW_RC1805_Page_50"/> my mind; but as I endeavoured to
+                        cast<lb/> them of and seek for that resignation<lb/> which had heretofore
+                        not only proved as a<lb/> consolation but at seasons as a healing<lb/>
+                        cordial to my relaxed mind, I was<lb/> led to view the motive and cause why
+                        I<lb/> was thus sepperated and a comfortable<lb/> submission ensued. I was
+                        favour'd to<lb/> experience the precious overshadowing of<lb/> Divine love,
+                        my mind was humbled<lb/> under the Heavenly canopy, and for a few<lb/> days
+                        I seldom have experienc'd so quiet a<lb/> repose. Oh may I be enabled to
+                        render<lb/> the gratitude that is due to my great and<lb/> good Benefactor
+                        for the many favours<lb/> dispens'd to me a poor unworthy creature.</q></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1806-10-19">19th</date>
+                    <placeName key="tunes"/></dateline>
+                <p>
+                    <q>For near two weeks past I have<lb/> had a painful gathering in my thumb.<lb/>
+                        I have had in this slight affliction re-<lb/>
+                        <unclear>newedly</unclear> to seek for patience <lb/>
+                        <pb n="51" facs="SW_RC1805_Page_51"/> and to crave thro’ all trials I may
+                        be<lb/> preserved from the least shadow of mur-<lb/> muring - and a ray of
+                        hope reviv'd with<lb/> a renewal of strength.</q></p>
+            </div>
+            <div type="letter">
+                <dateline>1807<lb/>
+                    <date when="1807-02-21">2 Month 21st</date>
+                    <placeName key="tunes"/></dateline>
+                <p>
+                    <q>To a niece who had lately lost her<lb/> companion. -- The perusal of thy
+                        val-<lb/> uable letter was truly satisfactory. It<lb/> was comfortable to
+                        find that thou was<lb/> favoured with so much fortitude and<lb/>
+                        resignation. It is enough my dear to<lb/> experience a Physician near to
+                        heal all<lb/> our maladies; may we in our varied<lb/> allotments daily
+                        endeavour so to walk,<lb/> as to witness our minds more and more<lb/>
+                        redeemed from the perishing enjoyments<lb/> of this world. For what is self
+                        with all its<lb/> acquired arts or what is there here that<lb/> is worth
+                        placing our dependance on.</q></p>
+                <p>
+                    <q>The winter thus far with us has been<lb/> very severe -- The ground these
+                        three months<lb/> past been covered with snow. - but we have <lb/>
+                        <pb n="52" facs="SW_RC1805_Page_52"/> a good warm house to shelter us from
+                        the<lb/> northern blasts.</q></p>
+                <p>
+                    <q>A number of Indian girls has this<lb/> winter given us their company -
+                        some<lb/> of whom has made an incouraging prog-<lb/> ress - a short piece is
+                        now in the loom<lb/> principally the industry of two girls.<lb/> - another
+                        piece is on the way - and a con-<lb/> siderable quantity of very good
+                        thread<lb/> has been manufacter'd and distributed<lb/> among them generally.
+                        - Those two<lb/> girls are desirous of having wheels of<lb/> their own, and
+                        spin at home - and<lb/> their request we mean to grant.</q></p>
+                <p>
+                    <q>Altho’ the disposition among the<lb/> men to relieve their women in the<lb/>
+                        labour of the field, has greatly en-<lb/> creas'd; yet when the time for
+                        plant-<lb/> ing corn comes, the females have to<lb/> give their assistance
+                        more or less, thro’<lb/> the summer. still there are intervals<lb/> if they
+                        were so disposed, that might <lb/>
+                        <pb n="53" facs="SW_RC1805_Page_53"/> be devoted to spinning knitting
+                        &amp;c<lb/> an increas of exertion on their part<lb/> would <space/> be
+                        satisfactory, but pati-<lb/> ence on ours is necessary.</q></p>
+                <note resp="undetermined"> Not in the other</note>
+            </div>
+            <div type="letter">
+                <dateline><date when="1807-05-24">5 mo 24th</date>
+                    <placeName key="tunes"/></dateline>
+                <p> To her parents. -- <q>I have<lb/> been thinkin whether in my situa-<lb/> tion,
+                        it would not be advisable to<lb/> request of our kind friend <persName
+                            ref="fking1">Francis King</persName><lb/> the liberty of making his
+                        house my<lb/> home, for a part of this summer,<lb/> where I could have the
+                        company of<lb/> my own sort of people. but upon<lb/> weighing the prospect
+                        the preponder-<lb/> ating scale was in favour of remain<lb/> ing in my
+                        present place. I hope<lb/> you will not be uneasy about me. my<lb/> health
+                        is mostly good, and my<lb/> mind resign'd, for which favours<lb/> I am truly
+                        thankful. The pro-<lb/> posed visit from some of you cre<lb/> ates pleasant
+                        sensations, but when<lb/> I view the distance, the roughness of <lb/>
+                        <pb n="54" facs="SW_RC1805_Page_54"/> of the road, and how unaccustom'd you
+                        have<lb/> latterly been of riding on horseback, I<lb/> feel unworthy of such
+                        attention.<lb/> yet I do count on having sister <persName ref="eshar1"
+                            >Edith</persName>’s<lb/> company, and as for thine my dear-<lb/> ly
+                        belov'd <persName ref="jshar1">father</persName> thou knowest thy abil-<lb/>
+                        ity to encounter such a journey better<lb/> than I do. I hope prudence will
+                        dictate<lb/> rightly. and tho’ it will be a close trial<lb/> to my dear
+                            <persName ref="atrim1">mother</persName> to give the up yet<lb/> if it
+                        is right <del><unclear>I Hope</unclear></del> she will receive<lb/> strength
+                        so to do. and if we are favour'd<lb/> to <add place="above">meet</add> my
+                        desire for myself is to be in a<lb/> compos'd state of mind.</q></p>
+            </div>
+            <div type="letter">
+                <dateline><date when="1807-07-03">7 mo 3</date>. <placeName key="tunes"/></dateline>
+                <p> To her <persName ref="atrim1">mother</persName> -- <q>I anticipate<lb/> in about
+                        two weeks the arival of some<lb/> of our near relations. To know
+                        whether<lb/> they are coming and the time of setting off<lb/> would be
+                        gratifying to me. A fear<lb/> at times assails me mind least I shall<lb/>
+                        lack of that patience and fortitude my<lb/> present situation demands. Tho’
+                        of <lb/>
+                        <pb n="55" facs="SW_RC1805_Page_55"/> late time has pass'd comfortably
+                        along<lb/> feeling my <space/> faith a little strengthen'd<lb/> and my trust
+                        in the alone source of<lb/> preservation renew'd</q>.</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1807-07-22">7 mo 22nd</date>
+                    <placeName key="tunes"/></dateline>
+                <p> From her diary -- <q>A number<lb/> of circumstances has latterly accured<lb/>
+                        that has felt trying yet thro’ all I have<lb/> endeavour'd to keep quiet,
+                        believing a<lb/> way will be made for that which is<lb/> right; and to be
+                        resign'd to the event<lb/> be it as it may is what I ardently<lb/>
+                    wish.</q></p>
+                <lb/>
+                <p> This is the last account kept by<lb/> her self or we have from any of her<lb/>
+                    letters. Believing her situation claimd<lb/> the company of some of her
+                    relations<lb/> my daughter <persName ref="eshar1">Edith</persName> and myself
+                    pre-<lb/> par'd and the <date when="1807-07-12">12 of the 7 mo 1807</date>
+                    left<lb/> home and in 13 days ariv'd at <placeName ref="tunes">Tunasas-<lb/>
+                        sah</placeName>. The family received us with express-<lb/> ions of joy in
+                    their countenances. particular- <lb/>
+                    <pb n="56" facs="SW_RC1805_Page_56"/> -ly gratifying was our arival to <persName
+                        ref="rcoop1">Rachel</persName><lb/> for her mind was sinking under
+                    discou-<lb/> ragements and at the point of desparing<lb/> of our <del>not</del>
+                    geting there. She with the<lb/> rest of the family were in the enjoyment<lb/> of
+                    health. Eleven day were agreeably spent<lb/> in free conversation, mutually glad
+                    after<lb/> a sepparation of more than two years<lb/> to be in each other’s
+                    society</p>
+            </div>
+            <div type="narrative">
+                <dateline><date when="1807-08-05">The 5th of the 8 mo</date>. <placeName key="tunes"
+                    /></dateline>
+                <p> She was taken un-<lb/> well, and in two days <del>in</del> the <del>day
+                        was</del><lb/>
+                    <del><unclear/></del> prospect of her recovery look'd<lb/> gloomy. She was given
+                    over by the Dr.<lb/> at this moving period. I thought it<lb/> best to make her
+                    acquainted with her<lb/> critical situation, that the probability<lb/> of her
+                    being raised was small.<lb/> after a<lb/> short pause she reply'd - <q>I would
+                        have<lb/> been willing to have continued a while<lb/> longer with my dear
+                        husband assisted<lb/> in the concern we came here about, and<lb/> to have
+                        return'd with him to our friends; <lb/>
+                        <pb n="57" facs="SW_RC1805_Page_57"/> but if it is not to be so I feel
+                        resign'd.<lb/> I said my dear child I hope and believe<lb/> thou art
+                        prepared to leave this world.<lb/></q> with much composure and a solid
+                    coun-<lb/> tenance she answered, <q>I have been en-<lb/> deavouring to stand
+                        resign'd and have<lb/> my mind prepared if such a change<lb/> should take
+                        place- and I now feel quite<lb/> easy under a full belief that there is
+                        a<lb/> place of rest prepared for me.</q> A while<lb/> after she looked very
+                    affectionately at me<lb/> and said <q>My dear father, I am glad<lb/> thou art
+                        here. I heard of thy being poor-<lb/> ly, and was fearful thou wouldst
+                        not<lb/> be able to encounter so ardious a journey<lb/> therefore could
+                        never urge thy coming<lb/> but I am glad thou art here, and I<lb/> hope thou
+                        will get safely home.</q></p>
+                <p> Notwithstanding her very tryed situation<lb/> her mind seem'd carried above it
+                    compos'd<lb/> and resign'd with no dejection in her<lb/> countenance. -- The
+                    advice of another <lb/>
+                    <pb n="58" facs="SW_RC1805_Page_58"/> Physician being needful and one
+                    living<lb/> within 30 miles, tho' thro' a wilderness<lb/> mountainous country,
+                    he was sent for.<lb/> The Doctors on confering together, believ'd<lb/> it not in
+                    their power to give her relief.<lb/> After they had come to this conclusion<lb/>
+                    I took my seat by her bedside. she<lb/> look'd a few minutes at me then,<lb/>
+                    with her natural voice and much sim-<lb/> plicity asked me what the doctors
+                    thought<lb/> of her. I told her, her situation was<lb/> so difficult they
+                    apprehended they could<lb/> administer no relief. she reply'd<lb/> why do they
+                    think so? - then pausing<lb/> awhile said <q>I must be content</q> and<lb/> in a
+                    short time adding, <q>I feel resign'd.</q></p>
+                <p> She delivered herself with much ease and<lb/> freedom, not appearing to be
+                    distress'd<lb/> or cast down, no heaviness in her<lb/> countenance or fear in
+                    her eyes. Shortly<lb/> after her first Physician came to<lb/> take leave of her,
+                    and taking her <lb/>
+                    <pb n="59" facs="SW_RC1805_Page_59"/> by the hand said, <q>Well Rachel I
+                        have<lb/> thought of going, are you willing?<lb/></q> She answered <q>I do
+                        not see any thing<lb/> more thou canst do for me, I believe<lb/> thou hast
+                        done the best thou couldst.<lb/></q> he then asked her if she felt
+                        <q>resign'd to<lb/> her fate.</q> she said she thought she did;<lb/>
+                    <q>but it is a trial to me to leave my<lb/> dear husband so far from his
+                        friends<lb/> yet we are poor dependant beings we<lb/> must submit.</q> Then
+                    pausing she added<lb/>
+                    <q>Doctor thou seest there is no age ex-<lb/> empt from death, the middle
+                        aged<lb/> are call'd away as well as those further<lb/> advanced. how
+                        necessary then for us always<lb/> to be prepar'd.</q> -- Being some
+                    reliev'd<lb/> the forepart of this (which was the third<lb/> of her sickness)
+                    she was cheerful tho’ very<lb/> sweet giving her sister directions about<lb/>
+                    some things, also saying to her sister<lb/>
+                    <q>it is my request that you will ever<lb/> remember my dear <persName
+                            ref="bcoop1">Benjamin</persName> as a <lb/>
+                        <pb n="60" facs="SW_RC1805_Page_60"/> brother for he has been a very kind
+                        hus-<lb/> band to me and I have often profited<lb/> by his instructive
+                        conversation.</q></p>
+                <p> On the fourth day of her illness a change<lb/> took place and for a few day the
+                    flattering<lb/> expectation that her life would be pre-<lb/> serv'd was
+                    indulged, but a fever with<lb/> some other unfavourable symptoms seiz'd<lb/> her
+                    which seemed to baffle all the efforts<lb/> that was given for her relief, and
+                    felt nature<lb/> not having strength to resist yielded to their<lb/> powerful
+                    assaults. -- she weaken'd fast<lb/> yet appear'd to lay with an easy mind.<lb/>
+                    her bodily pain was great and hav-<lb/> ing found some relief by being
+                    mov'd<lb/> often made the request. She would<lb/> look very affectionately at me
+                    at times<lb/> and say, <q>Well father I feel very un-<lb/> easy, I believe I
+                        must be mov'd a little,<lb/> I suppose thou wilt think me very<lb/>
+                        bothersome, but it gives me some relief.</q><lb/> Tho’ it was moving to see
+                    her so <lb/>
+                    <pb n="61" facs="SW_RC1805_Page_61"/> afflicted yet I was glad I was with<lb/>
+                    her, she appear'd so much in the inno-<lb/> cency, no anxiety manifested
+                    concern-<lb/> ing her situation, her mind much<lb/> resign'd and a willingness
+                    to comply<lb/> and act just as was thought best.</p>
+                <p> The day she deceas'd her pain much<lb/> abating, she lay more easy tho’ a
+                    high<lb/> fever was still her companion which<lb/> so affected her mind as to
+                    cause it to<lb/> be much affloat particularly when in<lb/> a doze. About three
+                    Oclock she appear'd<lb/> in fervent supplication tho’ not clearly<lb/>
+                    understood, and frequently in the few<lb/> remaining hours that she continued
+                    with<lb/> us her mind was similarly engag'd<lb/> not only interceding for
+                    herself but others<lb/> which fully evinced that her day would<lb/> close in
+                    peace. About this time her<lb/> hands and feet began to grow cold,<lb/> and her
+                    pulse to beat more feebly tho’<lb/> very quick. I ask'd her if she knew <lb/>
+                    <pb n="62" facs="SW_RC1805_Page_62"/> we were waiting to see her close. she<lb/>
+                    said where are you waiting? I answer’d<lb/> around her bed. She reply'd <q>I am
+                        very<lb/> low</q> -- About half an hour before her<lb/> departure I took
+                    hold of her hand to<lb/> feel if she had a pulse, apprehending<lb/> she was too
+                    far gone to notice it, but<lb/> she asked if she had any fever. I replied<lb/>
+                    not much -- I then ask'd if she felt<lb/> very sick she answer'd no. I think
+                    I<lb/> feel a little recruited, am pretty easy<lb/> and if I had a good place to
+                    lay I<lb/> could go to sleep - I said <q>my dear child,<lb/> thou wilt soon be
+                        in a sweet sleep.<lb/></q> she replied <q>I believe I shall</q> -- at<lb/>
+                    this time a cold sweat was pouring<lb/> from her - and shortly after she said<lb/>
+                    <q>I am in such a perspiration that<lb/> I cannot get my mind composed.<lb/> I
+                        want to have it settled</q>- having<lb/> frequently thro’ the course of the
+                    day<lb/> expressed the same desire -- she present- <lb/>
+                    <pb n="63" facs="SW_RC1805_Page_63"/> -ly call'd for a cup of tea - which
+                    was<lb/> brought to her - but she was in so great<lb/> a tremor that it was with
+                    much diffi-<lb/> culty she drank it, and being sensible of<lb/> her situation
+                    she said, <q>I am so discom-<lb/> posed that I can scarcely drink it.</q><lb/>
+                    then having a little more she said <q>that<lb/> is sufficient.</q> -- she then
+                    altered very<lb/> fast, - and in a few minutes without<lb/> struggle, sigh or
+                    groan quietly breath'd<lb/> her last. ---- Thus this hand-<lb/> maid of the
+                    Lord, in the meridian of<lb/> life, being in the 36th year of her age<lb/>
+                    closed her days and is now without a<lb/> doubt receiving the rewards of her
+                    faith-<lb/> fulness.</p>
+                <p> A number of the Indian women<lb/> from the first of her illness untill her<lb/>
+                    close manifested much concern for her<lb/> recovery, - bringing different kinds
+                    of<lb/> herbs and roots for her relief as well as<lb/> giving from time to time
+                    their best <lb/>
+                    <pb n="64" facs="SW_RC1805_Page_64"/> advice; and when they heard she was<lb/>
+                    no more, their countenances manifest-<lb/> ed much sorrow. ---- She departed<lb/>
+                    <date when="1807-08-16">16 of the 8mo 1807</date>, ---- the next<lb/> day being
+                    fixed on for her burial, invi-<lb/> tations were sent among the In-<lb/> dians,
+                    &amp; near 20 of the graver sort attend'd<lb/> principally women, a number
+                    coming<lb/> into the room, and after looking at the<lb/> corps in much
+                    brokenness quietly took<lb/> their seats untill it was closed, which<lb/> was
+                    not untill after a time of solemn<lb/> silence.- Several of the Indians who<lb/>
+                    did not come in sent their excuse<lb/> saying, They could not bear to see
+                    her<lb/> for the sight would overcome them and<lb/> they would weep aloud. They
+                    follow'd<lb/> to the grave in the same becoming<lb/> manner. -- They return’d
+                    into the room<lb/> and took their seats for I suppose<lb/> 15 minutes. They were
+                    then serv'd with<lb/> fresh bread and in a few minutes <lb/>
+                    <pb n="65" facs="SW_RC1805_Page_65"/> after individually shook ha<add
+                        place="above">n</add>ds with<lb/> us and bade us farewell, some of<lb/> them
+                    saying to us that they were very<lb/> sorry Rachel was taken away but en-<lb/>
+                    couraged us to bear the trial patiently<lb/> for such things must happen to
+                    the<lb/> white people as well as the Indians.</p>
+                <p>
+                    <persName ref="cornp2">Cornplanter</persName> lived down the <geogName
+                        ref="alleg">river</geogName><lb/> about 12 miles and he came in a few<lb/>
+                    days to see us. his countenance mani-<lb/> fested him to be a true
+                    sympathizer.<lb/> he said he was very sorry for what<lb/> had happened among us
+                    and hoped<lb/> we would not be discourage for this<lb/> was the first since the
+                    settlement<lb/> was made among them and that<lb/> such tryals would be the lot
+                    of white<lb/> folks as well as Indians. he took<lb/> leave of us with tears in
+                    his eyes.</p>
+
+
+            </div>
+        </body>
+
+
+    </text>
+</TEI>

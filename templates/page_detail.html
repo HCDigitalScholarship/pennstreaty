@@ -1,0 +1,113 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+
+{% include 'top-links.html' %}
+<title>Page Information</title>
+</head>
+
+<body>
+
+<div class='stufftoinclude'>
+
+    <!--<header>
+            <div class = "overlay-container">
+              <img src="{% static "img/qandi.png" %}" alt="Header img" />
+              <div class = "overlay1 show-for-large-up">
+            <strong>Beyond Penn's Treaty</strong>
+              </div>
+          </div>
+
+      </header>-->
+
+    {% include 'header.html' %}
+
+
+
+    <div id = "row1">
+    	{% include 'nav.html' %}
+    </div>
+
+</div>
+
+<div id="row2">
+<br>
+</div>
+
+
+
+    <div id = "about2">
+<div id="sidestuff">
+      <aside class = "canvas-meta">
+        <p> Metadata &nbsp; <i class="fa fa-chevron-right"></i>
+        </p>
+      </aside>
+      <aside class = "canvas-img">
+        <p> Image &nbsp; <i class="fa fa-chevron-right"></i>
+        </p>
+      </aside>
+      </aside>
+      <aside class="off-canvas-content-meta" style = "margin-left: -25%;"> </aside>
+      <aside class="off-canvas-content-img" style = "margin-left: -25%;">
+        <div class='original-image-wrapper'>
+            <aside class="forwards-arrow" style = "margin-left: -25%;">
+              <i class="fa fa-chevron-right"></i>
+              <i class="fa fa-chevron-left"></i>
+            </aside>
+        </div>
+      </aside>
+
+    <aside class="off-canvas" style = "margin-right: -25%;"></aside>
+      <i class="fa fa-times"></i>
+</div>
+
+<div class="stufftoinclude">
+        <div id = "main-content">
+
+            <div type= "letter" class = "newpanel">
+              <div id="main">
+
+
+        <h2>  <center>{{ manuscript.title }} </center></h2>
+
+        {{ page.fulltext|safe|escape }}
+
+<br>
+
+
+        <script>
+             var url = "/static/js/cornplanter.js";
+             $.getScript(url);
+         </script>
+
+</div>
+            </div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class='container'>
+<a href=/outputPagePT/{{page.id_tei}}>→ Download raw text of this page</a>
+</div>
+<!--end stuff-->
+  {% include 'footer.html' %}
+  {% include 'bottom-links.html' %}
+
+
+  <script type="text/javascript" >
+        var Manuscript_id = '{{ manuscript.id_tei }}';
+        var img_url = '{{ page.img_url }}';
+        var Page_id = '{{ Page_id }}';
+        var lastpage = '{{ lastpage }}';
+          </script>
+
+<script src="{% static "js/cornplanter.js" %}"> </script>
+
+
+
+  </body>
+  </html>

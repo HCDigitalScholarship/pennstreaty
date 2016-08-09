@@ -4,42 +4,95 @@
   <head>
   	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
     {% include 'top-links.html' %}
-   
+
 
     <title>Available Texts </title>
 
   </head>
 
   <body>
-
+<!--
    <header>
          <div class = "overlay-container">
             <img src="{% static "img/paradise.jpg" %}" alt="Header img" />
-              <div class = "overlay1 show-for-large-up">
-               <!--  <strong>Beyond Penn's Treaty</strong> -->
+              <div style="margin-bottom:-20px;" class = "overlay1 show-for-small-up">
+
+
+                <form action="/search" method='get'>
+                 <input style="float:right;" class='button' type="submit" value="Search">
+                  <input style="margin:0px; width:200px; height:30px; float:right;"  type="text" name="q">
+                </form>
+
+
+
               </div>
         </div>
-   
-    </header>
 
-     <div id = "trans1">
+    </header> -->
+
+      {% include 'header.html' %}
+
+     <div id = "row1">
     	{% include 'nav.html' %}
     </div>
 
     <div id = "trans2">
  <div class = "row">
-      <br /> 
+      <br />
       <h2> Available Texts and Transcriptions</h2>
 
-      <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-      <br />
-     
-  </div> 
+  </div>
 
-  
-</div> 
 
-<br /> 
+</div>
+
+<br />
+
+
+<div class = "row full-width">
+    <!-- there are many ways to make a datatable, but this worked best for django -->
+<table id="example" class="display" cellspacing="0" width="100%">
+                               <thead>
+                                       <tr>
+                                               <th>Title</th>
+                                               <th>Author</th>
+                                               <th>Date</th>
+                                               <th>Type</th>
+                                               <th>Call Number</th>
+
+                                       </tr>
+                               </thead>
+                               <tbody>
+                                       {% if textlist %}
+                                                       {% for text in textlist %}
+                                               <tr>
+
+                                                       <td> <a href=/manuscript/{{text.id_tei}}> {{text.title}}</a> </td>
+                                                       <td>{{text.person_id}} </td>
+                                                       <td> {{text.date}} </td>
+                                                       <td>{{text.type_of_Manuscript}}</td>
+                                                       <td>{{text.call_no}}</td>
+
+                                               </tr>
+                                                       {% endfor %}
+                               </tbody>
+</table>
+
+{% else %}
+                          <strong> There are no manuscripts available at this time in the db. </strong>
+               {% endif %}
+
+
+               <!--<div class=container>
+
+               <p><a href=/outputAll>→ Download raw text of all manuscripts</a></p>
+
+             </div> -->
+</div>
+
+
+
+<!--
 <div class = "row">
 	 <table id="" class="display" cellspacing="0" width="100%">
 	        <thead>
@@ -49,7 +102,7 @@
 	                        <th> Date </th>
 	                        <th> Type of Document</th>
 	                        <th> Call Number</th>
-	  
+
 	                </tr>
 	        </thead>
 	        <tbody>
@@ -86,7 +139,7 @@
 <br />
 <br />
 </div>
-
+-->
 
 
 <!-- <div class = "row" id = "metadatatrans">
@@ -107,18 +160,15 @@
   </div>
 </div>
   </div>
-  
+
 </div>
  -->
 
 
-
-	{% include 'footer.html' %}
-   
-  
+{% include 'footer.html' %}
 {% include 'bottom-links.html' %}
- <script src="{% static "js/api.js" %}"></script>
+<script src="{% static "js/api.js" %}"></script>
  <script src="{% static "js/imgtrans.js" %}"></script>
- <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script> 
+ <!--<script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script> -->
   </body>
 </html>

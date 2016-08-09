@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+{% load staticfiles %}
+
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+
+  <head>
+
+
+  {% include 'top-links.html' %}
+
+    <title>Using This Site</title>
+
+
+  </head>
+
+  <body>
+
+    {% include 'header.html' %}
+
+<div id = "row1">
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id='row2'>
+  <div class = "row">
+    <br />
+    <h1>Using This Site</h1>
+    <br />
+  </div>
+</div>
+
+<div id = "row3">
+<br>
+<div class='row'>
+
+
+<div class=well>
+
+    <h3>Explore</h3>
+
+  <p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+    Look through a <a href=/texts>variety of transcribed texts</a> detailing the journeys of
+    Quakers and their interactions with Native Americans during the eighteenth century.  These
+  texts include diaries of Quakers traveling to Native American villages, letters from various
+  Quaker families, and the papers of Philadelphia Yearly Meeting's Friendly Association for
+  Regaining and Preserving Peace with the Indians by Pacific Measures.</p>
+
+  <p> <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+    View manuscript metadata, the scanned image of a document, and instant information any mentioned person, place,
+    or group when looking at a page of a manuscript.
+  </p>
+
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+View profiles of all <a href=/profiles>people, places, and groups</a> mentioned in these texts and receive
+information about all documents
+that they appear in.
+</p>
+
+
+</div>
+
+<div class=well>
+
+    <h3>Journeys</h3>
+  <p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+View <a href=/storymap>travel routes</a> that various Quakers took during the eighteenth century
+by choosing a specific manuscipt and viewing what location is associated with each page in the manuscript.
+  </p>
+
+  <p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+See digitized maps that were found in the archive of these Philadelphia-area Quakers.
+  </p>
+
+  <p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+Explore <a href=/map/1>four different maps</a> that each give an overview of a different aspect of the collection of texts.
+View a map organized by <a href=/map/1>traveler</a>, <a href=/map/2>date</a>, or what type of <a href=/map/3>residence</a>
+a certain location was, or see a <a href=/map/4>map</a> displaying which locations were most popular.
+  </p>
+
+</div>
+
+<div class=well>
+
+    <h3>Transcribe</h3>
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+Help <a href=https://ds-omeka.haverford.edu/qi/collections/browse/>transcribe</a> quaker documents that have not been digitized yet!
+</p>
+
+
+</div>
+
+<div class=well>
+
+    <h3>Search</h3>
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+Searching any term, such as "Quaker," will return results grouped by type.  Types of results are person, place,
+group, page of a manuscript, or a manuscript itself.
+</p>
+
+
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+Find a person, place, or group by searching any term that may appear in their profile somewhere.  For example,
+if you search "Quaker," the search feature will return all people, places, and groups that have "Quaker" mentioned
+in their profile.
+</p>
+
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+  Similarly, find a manuscript or a page of a manuscipt by searching a term that appears anywhere in the
+  full text of these digitized collections.  </p>
+
+<p><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+After executing a general search, narrow your search by faceting.  Suggestions of what to facet by will appear
+on the left hand side of your search results.
+</p>
+
+</div>
+
+</div>
+</div>
+
+ {% include 'footer.html' %}
+
+ {% include 'bottom-links.html' %}
+
+  </body>
+</html>

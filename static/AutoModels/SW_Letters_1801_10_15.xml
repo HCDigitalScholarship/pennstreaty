@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css"?>
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei.css"?>
+<?xml-stylesheet type="text/css" href="global.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader>
+
+        <fileDesc>
+
+            <titleStmt>
+                <title>Letters to Elizabeth Townsend: Electronic
+                    Version</title>
+                <editor>Friends Historical Library of Swarthmore College</editor>
+                <respStmt>
+                    <resp>TEI Markup done by</resp>
+                    <name>Susanna Morikawa</name>
+                </respStmt>
+
+                <sponsor>Tri-Co Digital Humanities Initiative</sponsor>
+                <funder>Andrew W. Mellon Foundation</funder>
+            </titleStmt>
+            <extent>11 KB</extent>
+            <publicationStmt>
+                <publisher>Friends Historical Library of Swarthmore College</publisher>
+                <address>
+                    <street>500 College Avenue</street>
+                    <addrLine>Swarthmore, Pennsylvania</addrLine>
+                    <postCode>19081</postCode>
+                    <country>United States of America</country></address>
+                <availability status="free">
+                    <p>This work is the property of the Friends Historical Library of Swarthmore
+                        College. It may be copied freely by individuals for personal use, research,
+                        and teaching (including distribution to classes) as long as this statement
+                        of availability is included in the text. It may be linked to freely in
+                        Internet editions of all kinds, including for—profit works.</p>
+                    <p>Publishers, libraries, and other information providers interested in
+                        providing this text in a commercial or non—profit product or from an
+                        information server must contact Swarthmore College for licensing and cost
+                        information.</p>
+                    <p> Scholars interested in changing or adding to these texts by, for example,
+                        creating a new edition of the text (electronically or in print) with
+                        substantive editorial changes, may do so with the permission of Swarthmore
+                        College. This is the case whether the new publication will be made available
+                        at a cost or free of charge.</p>
+                </availability>
+                <date when="2015">2015</date>
+                <idno type="local">SW_Letters_1801_10_15</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="s" type="project">Native Americans and Quakers: An Electronic
+                    Collection</title>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <institution>Friends Historical Library of Swarthmore College</institution>
+                        <collection>Miscellaneous Manuscripts (selection)</collection>
+                        <idno>Mss_004_1801_10mo_15</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <p>2 pp.</p>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>This collection of miscellaneous correspondence is housed at Friends Historical
+                    Library, on the campus of Swarthmore College. In the fall semester of 2010,
+                    Swarthmore students enrolled in English 50A (“Reading Red, White, and In-Between
+                    in Early American Literature”) transcribed these manuscripts as part of a larger
+                    project to make the library’s rich store of Quaker Indian mission writings more
+                    accessible. The project was designed by Christopher Densmore, Curator of Friends
+                    Historical Library, and Keat Murray, Visiting Assistant Professor of English.
+                    Transcriptions were compiled and edited in the present form by Professor Murray.
+                </p>
+            </projectDesc>
+            <editorialDecl>
+                <p> The transcribers and editor attempted to render the author’s orthography and
+                    grammar as they appear on the page of his journal, even when the author’s own
+                    spelling and usage are inconsistent. Additionally, many questions remain about
+                    spelling the names of his Quaker acquaintances, individual Native Americans who
+                    populate his journal, and Indian villages and towns. The transcribers and editor
+                    attempted to remain faithful to the author’s Anglicized spellings in all cases. </p>
+
+            </editorialDecl>
+
+        </encodingDesc>
+        <profileDesc>
+            <creation>Original written in <date>1801</date></creation>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="#lcsh">
+                    <list>
+                        <item>Society of Friends - New York (State)</item>
+                        <item>Society of Friends -- Missions</item>
+                        <item>Indians of North America -- Missions</item>
+                        <item>Quakers -- Pennsylvania -- Correspondence</item>
+                        <item>Seneca Indians</item>
+                        <item>Philadelphia Yearly Meeting of the Relgious Society of Friends</item>
+
+                    </list>
+                </keywords>
+            </textClass>
+
+        </profileDesc>
+        <revisionDesc><change><date></date></change></revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+
+            <div type="letter">
+                <pb/>
+                
+                <opener><dateline><placeName key="stockbridge">New Stockbridge</placeName>
+                        <date when="1801-10-15">10th mo. 15th 1801</date></dateline>
+                    <lb/><salute>Friend and Sister</salute></opener>
+
+                <p> This is to let you know I am much<lb/> rejoiced to see friend <persName
+                        key="jclar1">Joseph Clark</persName>, come by the side of our<lb/> fire
+                    place, and bring our Girls home. I can not but<lb/> bless the great good Spirit
+                    for his great goodness in preserving<lb/> our long absented Girls from various
+                    dangers and that<lb/> they have found favour in the sight of such good Friends,
+                    as to<lb/> take them under their benevolent care and instruct them<lb/> in good
+                    things and ways; I acknowledge that you have done<lb/> a great deal for us, out
+                    of love to the Great good Spirit and<lb/> your fellow Creatures, that we poor
+                    Natives might as it were<lb/> rise up &amp; walk, and follow the good path which
+                    you follow, by which<lb/> I always feel thankful &amp; hope you will not lose
+                    your reward<lb/> in Heaven, I feel our obligations are increased as our
+                    advanta<lb/>-ges are increased to serve God in sincerity and in truth.</p>
+                    <p>The
+                    Religion is somewhat low amongst us, but Christians<lb/> seem to keep on still,
+                    there has been but a few careless ones<lb/> stir'd up for soul Concern, since
+                    your young Men left us, who<lb/> were at <placeName key="oneid"
+                        >Oneida</placeName>, but others seem still to remain in the bon<lb/>dage of
+                    Spiritual Pharaoh, but God is able to turn their hearts<lb/> and make them
+                    willing to walk towards Canaan.</p><p> I have no time to express as I feel, but to
+                    conclude with your<lb/> prayers that the Great good Spirit may pour down his
+                    bless<lb/>ings upon Us, that religion may again revive among us.</p>
+           
+                <closer><signed>
+                    <persName key="csolo1">Catharine Solomon</persName><lb/> To <persName
+                        key="etown1">Eliz'th Townsend</persName><lb/> Daughter of <persName
+                        key="jclar1">Joseph Clark</persName>.</signed></closer>
+            </div>
+            <div type="letter">
+                <pb/>
+                <head>From a Tuscaro Indian</head>
+                <opener><dateline><date type="unattested">1801</date></dateline><salute>Dear Friends,</salute></opener>
+
+                <p>We are all well and glad to see the three<lb/> Girls and our friend <persName
+                        key="jclar1">Joseph Clark</persName>, We often think of the<lb/> kindness
+                    you shew’d us.</p><p> Our Nation more plough their<lb/> Land, and raise more
+                    Cattle, and build some new houses.<lb/> Our Nation increase and raise more flax
+                    and we spin<lb/> a little, and we hope by the assistance of the Great good
+                    Spi<lb/>rit we grow in his favour so as to have plenty of Corn Cattle and<lb/>
+                    Flax; and become his Children and rest in his Kingdom.<lb/> I feel much love in
+                    mine heart but am not able to<lb/> express myself-</p>
+                <closer><signed><persName key="pokas1">Peter Okasantque</persName></signed></closer>
+            </div>
+            <div type="letter">
+                <head>From a young Indian Woman to <persName key="etown1">Eliz'th
+                    Townsend</persName>/daughter of <persName key="jclar1">Joseph
+                    Clark</persName></head>
+                <opener><dateline><date type="unattested">1801</date></dateline><salute>Dear Friend,</salute></opener>
+                <p>No doubt but thee will excuse a letter from me<lb/> who wishes thee, and all thy
+                    Society well, tho unknown to each<lb/> other as to our bodily persons, yet I
+                    sincerely hope that we sincerely fre<lb/>quently converse with the same Spirit
+                    -- My dear Friend, thank<lb/> thy father, and likewise thee for your kind care
+                    towards us the<lb/> Natives of America, for I believe that you will have your
+                    re<lb/>ward for God will reward you. I give my kind love to all <lb/>thy
+                    friends, and tell them that the Good Spirit is on its way to the<lb/> dark
+                    Corners of the Earth. When my dear Friend, when will that <lb/>happy day appear?
+                        <quote type="biblical">When the Nations will learn War no more.</quote><lb/>
+                    For then Lion will arise and travail, and bring forth--She will bring
+                    <lb/>forth. </p><closer><salute>So farewell from thy unknown friend</salute>
+                <signed>
+                    <persName key="gcros2">Gracy Crosby</persName></signed></closer>
+            </div>
+
+        </body>
+
+
+    </text>
+</TEI>

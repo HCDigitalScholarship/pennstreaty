@@ -1,0 +1,6 @@
+{{ object.id_tei }}
+{{ object.title }}
+{{ object.person_id }}
+{{ object.date }}
+{{ object.type_of_Manuscript }}
+{{ object.call_no }}
