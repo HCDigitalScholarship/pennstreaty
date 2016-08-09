@@ -55,6 +55,23 @@ def search(request):
 def map1(request):
 	return render(request, 'map1.html')
 
+def handler404(request):
+	response = render_to_response('detail.html', {}, context_instance = RequestContext(request))
+	response.status_code = 404
+	return response
+
+
+
+
+def handler500(request):
+    response = render_to_response('detail.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
+class Home(TemplateView):
+	template_name = 'index.html'
+
 def map2(request):
 	return render(request, 'map2.html')
 
