@@ -10205,3 +10205,7 @@ i.fa.fa-times:hover {
 	text-align: center;
 
 }
+
+#map {
+  position: relative;
+}

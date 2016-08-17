@@ -29,11 +29,6 @@ urlpatterns = [
     url(r'^cornp1/$', 'QI.views.cornp1', name = "Henry Cornplanter"),
     url(r'^places/$', 'QI.views.places', name = "Places page"),
     url(r'^organizations/$', 'QI.views.organizations', name = "Organizations page"),
-<<<<<<< HEAD
-   
-
-
-=======
     url(r'^admin/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
     url(r'^admin/QI/add_a_storymap/','QI.views.SMimport', name = "StoryMapImporter"),
     url(r'^person/(?P<id>\S+)/', 'QI.views.person_detail', name = "person_detail"),
@@ -61,7 +56,6 @@ urlpatterns = [
     url(r'^usingthesite/', 'QI.views.usingthesite', name = "usingthesite"),
     url(r'^bibliography/', 'QI.views.bibliography', name = "bibliography"),
     url(r'^credits/', 'QI.views.credits', name = "credits")
->>>>>>> d0802ee5a9cc0a09ea668ad87eeac3b4a6ffa24c
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'
