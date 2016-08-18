@@ -6,7 +6,9 @@ django-haystack==2.4.1
 django-import-export==0.4.2
 html5lib==0.9999999
 lxml==3.6.0
+Pillow==3.3.0
 pysolr==3.5.0
+reportlab==3.3.0
 requests==2.10.0
 six==1.10.0
 tablib==0.11.1
