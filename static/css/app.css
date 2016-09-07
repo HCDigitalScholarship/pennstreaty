@@ -10175,16 +10175,16 @@ i.fa.fa-times:hover {
 	width: 300px;
 	height: 380px;
 	padding: 4px;
-	border: 1px solid #0B5EA1;
+	border: 1px solid #454442;
 	border-radius: 30px;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
 	margin-left:10px;
 	margin-bottom:10px;
 	margin-right:10px;
-	background-color:#1173C2;
+	background-color:#626065;
 }
 #SMListitem:hover {
-	border: 3px solid #C4C82C;
+	border: 3px solid #FFFFFF;
 }
 
 #SMListitem img {
@@ -10209,3 +10209,4 @@ i.fa.fa-times:hover {
 #map {
   position: relative;
 }
+
