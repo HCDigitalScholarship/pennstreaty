@@ -1804,7 +1804,7 @@ select {
 [class*="block-grid-"] {
   display: block;
   padding: 0;
-  margin: 0 -0.625rem;
+  /*margin: 10 -0.625rem;*/
 }
 /* line 239, ../bower_components/foundation/scss/foundation/components/_global.scss */
 [class*="block-grid-"]:before, [class*="block-grid-"]:after {
@@ -10175,20 +10175,26 @@ i.fa.fa-times:hover {
 	width: 300px;
 	height: 380px;
 	padding: 4px;
-	border: 1px solid #454442;
+	/*border: 1px solid #454442;*/
 	border-radius: 30px;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
 	margin-left:10px;
 	margin-bottom:10px;
 	margin-right:10px;
-	background-color:#626065;
+	/*background-color:#626065;*/
+        border-style: solid;
+        border-width: 10px;
+  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
 }
 #SMListitem:hover {
 	border: 3px solid #FFFFFF;
 }
 
 #SMListitem img {
-	width: 50%;
+	width: 100%;
 	height: auto;
 }
 
@@ -10196,7 +10202,7 @@ i.fa.fa-times:hover {
 #SMLink  {
 	font-family: "Alegreya Sans SC";
 	font-weight: 400;
-	color: #FFF;
+	color: #040402;
 	font-size: 1.5rem;
 }
 
