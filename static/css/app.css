@@ -93,7 +93,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  position: relative;
+  position: absolute;
 }
 
 /* line 515, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -9859,6 +9859,16 @@ button, .button:visited {
   border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch;
 }
 
+
+#borderimg4 {
+  border-style: solid;
+  border-width: 10px;
+  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+}
+
 /* line 140, ../scss/_custom.scss */
 #row1 {
   background-color: #99a5b3;
@@ -10167,30 +10177,34 @@ i.fa.fa-times:hover {
 	max-width : 2000px;
 	vertical-align: middle;
 	text-align: center;
-	margin-right:10px;
-	margin-left:10px;
+	margin-right:0px;
+	margin-left:0px;
 }
+
+
 
 #SMListitem {
 	width: 300px;
 	height: 380px;
 	padding: 4px;
 	/*border: 1px solid #454442;*/
-	border-radius: 30px;
+	border-radius: 0px;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
 	margin-left:10px;
 	margin-bottom:10px;
 	margin-right:10px;
-	/*background-color:#626065;*/
+	background-color:#F0F8FF;
         border-style: solid;
         border-width: 10px;
+        
+
   -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
 }
 #SMListitem:hover {
-	border: 3px solid #FFFFFF;
+	border: 3px solid #000000;
 }
 
 #SMListitem img {
@@ -10216,3 +10230,15 @@ i.fa.fa-times:hover {
   position: relative;
 }
 
+#container {
+max-width: 1600px;
+margin: 0 auto;
+}
+
+.your-class-name {
+  @include bloack-grid(
+    $per-row: 3,
+    $spacing: $block-grid-default-spacing,
+    $base-style: true
+    );
+}
