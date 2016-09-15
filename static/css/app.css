@@ -1818,7 +1818,7 @@ select {
 /* line 51, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
 [class*="block-grid-"] > li {
   display: block;
-  float: left;
+  float:left;
   height: auto;
   padding: 0 0.625rem 1.25rem;
 }
@@ -10179,6 +10179,7 @@ i.fa.fa-times:hover {
 	text-align: center;
 	margin-right:0px;
 	margin-left:0px;
+        align-items: center;
 }
 
 
@@ -10231,8 +10232,14 @@ i.fa.fa-times:hover {
 }
 
 #container {
-max-width: 1600px;
-margin: 0 auto;
+  max-width: 1600px;
+  width:100%;
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-items: center;
+  text-align:center;
 }
 
 .your-class-name {
