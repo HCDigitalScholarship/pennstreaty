@@ -17,7 +17,7 @@ console.log(lastpage);
 //var imgurl = Manuscript_id + "_" + newPage_id
 //console.log(Page_id);
 //console.log(imgurl);
-//$('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".png></div>");
+//$('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".></div>");
 
 
 $.ajax({
@@ -60,7 +60,7 @@ function callback_3(data) {
  var imgurl = Manuscript_id + "_" + newPage_id
  console.log(Page_id);
  console.log(imgurl);
- $('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".png></div>");
+ $('.original-image-wrapper').append("<div><h3>Original Document</h3><img src =/static/img/"+imgurl+".jpg></div>");
 /////////// IMPORTANT
 
 // LINES 51 to 105 CAN MAYBE BE DELETED????????
@@ -386,7 +386,7 @@ $(".forwards-arrow i.fa.fa-chevron-right").click(function(){
     var newImgUrl = Manuscript_id + "_" + newstring;
     console.log(newImgUrl);
     $('.original-image-wrapper img').remove();
-    $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
+    $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".jpg/></div>");
     console.log('got here!!!');
 
   //  $("body").load("/page/"+newImgUrl); // this lets links work but closes the image tab & just is a problem
@@ -447,7 +447,7 @@ $(".forwards-arrow i.fa.fa-chevron-left").click(function(){
 
     var newImgUrl = Manuscript_id + "_" + newstring;
     $('.original-image-wrapper img').remove();
-    $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".png/></div>");
+    $('.original-image-wrapper div').append("<img src = /static/img/"+newImgUrl+".jpg/></div>");
 
     $("#main").load("/page/"+newImgUrl+" #main", function() {
       $.getScript("/static/js/cornplanter2.js");
