@@ -55,7 +55,7 @@ class Place(models.Model):
 			(PLACENAME, 'Place Name'),
 			(GEOGNAME, 'Geography Name'),
 	)
-   	place_type = models.CharField("Place Type", max_length=30, choices=PLACE_TYPE_CHOICES, default=PLACENAME, blank = True)
+   	place_type = models.CharField("Place Type", max_length=30, choices=PLACE_TYPE_CHOICES, default=PLACENAME, blank=True)
 	alternate = models.TextField("Alternate Names", blank = True)
 
 	#Some of the above will certainly get deleted, but for now, I just add
