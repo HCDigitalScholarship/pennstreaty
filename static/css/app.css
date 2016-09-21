@@ -9900,11 +9900,39 @@ button, .button:visited {
   font-family: "Special Elite";
   color: #6B737D;
   font-size: 2rem;
+  
 }
+
 /* line 174, ../scss/_custom.scss */
 #row3 button, #row3 .button {
   background-color: #6B737D;
 }
+
+
+#row4 {
+  padding-bottom: 30px;
+}
+
+#row4 h3 {
+  font-family: "Special Elite";
+  color: #6B737D;
+  font-size: 2rem;
+text-align: center;
+}
+
+
+#row4 h4 {
+  font-family: "Special Elite";
+  color: black;
+  font-size: 1.5rem;
+}
+
+
+#row4 button, #row4 .button {
+  background-color: #6B737D;
+}
+
+
 
 /* line 182, ../scss/_custom.scss */
 #about1 {
