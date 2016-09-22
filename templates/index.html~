@@ -23,7 +23,9 @@
   <div class = "row">
     <br />
     <h1> Beyond Penn's Treaty: Quaker and Indian Relations</h1>
-    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+    <p>William Penn’s original intention to treat American Indians fairly in land “sharing” was soon overridden by the land hunger of Europeans. Different notions of land “use” and “ownership” became ever more critical as the two groups struggled to find ways to co-exist. Nevertheless, part of Penn’s vision lived on in the memory and policies of a community of Quakers who maintained—and continuously updated—a commitment to American Indians.</p>
+    <p><i>Beyond Penn's Treaty</i>: Quakers and American Indians provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s. These documents, held in Quaker &amp; Special Collections at Haverford College and Friends Historical Library at Swarthmore College, are all from the Quaker perspective, and document their view of this unfolding relationship. </p>
+    <p>This site allows users to search for people, organizations, and places within a variety of documents; view maps of travel routes and common locations; and transcribe documents. The transcribed text versions of these documents and the metadata spreadsheets are available for download and reuse.</p>
     <br />
   </div>
 
@@ -71,6 +73,9 @@
 
   </div>
 </div>
+   </div>
+ </div>
+</div> 
 
  {% include 'footer.html' %}
     
