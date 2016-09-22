@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+{% load staticfiles %}
+
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+  <head>
+
+  {% include 'top-links.html' %}
+
+    <title>Mapgallery</title>
+
+  </head>
+
+  <body>
+
+    {% include 'header.html' %}
+
+<div id = "row1">
+
+<!--     Navigation Menu Below:  -->
+
+  {% include 'nav.html' %}
+
+</div>
+
+<div id='row2'>
+
+  <ul class="small-block-grid-3 medium-block-grid-3 large-block-grid-5 clearing-thumbs" data-clearing>
+
+     <li><a class="th" href="{% static "img/Map/A_Map_of_New_Jersey.jpeg" %}"><img data-caption="A Map of New Jersey<br>Drawn by Hannah Yarnall (1797-1876), ca. 1810<br>Ink and watercolor on paper<br>Gift of Frances Richardson, 1966" src="/static/img/MapGalleryPictures/editedmapofNewJersey.jpg" alt="New Jersey img" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/A_map_of_the_meetings_of_Friends_in_Ohio_Yearly_Meeting,_1827.jpg" %}"><img src="/static/img/MapGalleryPictures/editedmapofOhio.jpg" alt="Map of the meetings of Friends in Ohio" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_denoting_boundaries_of_Yearly_Meetings_of_Friends,_and_Indian_tribe_locations_Marsh.jpg" %}"><img src="/static/img/MapGalleryPictures/editedmapofboundarylocationsMarsh.jpg" alt="Map denoting boundariesof Yearly Meetings of Friends" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Connecticut_and_Rhode_Island.jpg" %}"><img src="/static/img/MapGalleryPictures/editedmapCTandRI.jpg" alt="Map of Connecticut and Rhode Island" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Friends_meetings_to_the_southward.jpg" %}"><img src="/static/img/MapGalleryPictures/editedmapFriendsmeetingssouthward.jpg"  alt="Map_of_Friends_meetings_to_the_southward" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Meetings_from_New_York_to_Boston_A.jpg" %}"><img src="{% static "img/Map/Map_of_Meetings_from_New_York_to_Boston_A.jpg" %}" alt="Map_of_Meetings_from_New_York_to_Boston_A" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Meetings_from_New_York_to_Boston_B.jpg" %}"><img src="{% static "img/Map/Map_of_Meetings_from_New_York_to_Boston_B.jpg" %}" alt="Map_of_Meetings_from_New_York_to_Boston_B" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_meetings_in_the_contiguous_parts_of_Pennsyl.jpg" %}"><img src="{% static "img/Map/Map_of_meetings_in_the_contiguous_parts_of_Pennsyl.jpg" %}" alt="Map_of_meetings_in_the_contiguous_parts_of_Pennsyl" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Rhode_Island_Yearly_Meeting_A.jpg" %}"><img src="{% static "img/Map/Map_of_Rhode_Island_Yearly_Meeting_A.jpg" %}" alt="Map_of_Rhode_Island_Yearly_Meeting_A" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Rhode_Island_Yearly_Meeting_B.jpg" %}"><img src="{% static "img/Map/Map_of_Rhode_Island_Yearly_Meeting_B.jpg" %}" alt="Map_of_Rhode_Island_Yearly_Meeting_B" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_Route_to_Lake_Ontario.jpg" %}"><img src="{% static "img/Map/Map_of_Route_to_Lake_Ontario.jpg" %}" alt="Map_of_Route_to_Lake_Ontario" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_the_colonies_of_Rhode_Island,_Connecticut,_and_parts_of_Massachusetts_and_New_York.jpg" %}"><img src="{% static "img/Map/Map_of_the_colonies_of_Rhode_Island,_Connecticut,_and_parts_of_Massachusetts_and_New_York.jpg" %}" alt="Map_of_the_colonies_of_Rhode_Island,_Connecticut,_and_parts_of_Massachusetts_and_New_York" /></a></li>
+
+     <li><a class="th" href="{% static "img/Map/Map_of_the_Country_Between_Burligton__and_Boston.jpg" %}"><img src="{% static "img/Map/Map_of_the_Country_Between_Burligton__and_Boston.jpg" %}" alt="Map_of_the_Country_Between_Burligton__and_Boston" /></a></li>
+
+    <li><a class="th" href="{% static "img/Map/Map_of_the_United_States_Newlin.jpg" %}"><img src="{% static "img/Map/Map_of_the_United_States_Newlin.jpg" %}" alt="Map_of_the_United_States_Newlin" /></a></li>
+
+</ul>
+
+<script>
+
+var cb = function() {
+
+var l = document.createElement('link'); l.rel = 'stylesheet';
+
+l.href = 'app.css';
+
+var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+
+};
+
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+
+if (raf) raf(cb);
+
+else window.addEventListener('load', cb);
+
+</script>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+ {% include 'footer.html' %}
+
+ {% include 'bottom-links.html' %}
+
+  </body>
+
+</html>
+
+

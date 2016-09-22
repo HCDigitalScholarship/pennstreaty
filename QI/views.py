@@ -20,6 +20,9 @@ import os
 def about(request):
 	return render(request, 'about.html')
 
+def mapgallery(request):
+	return render(request, 'mapgallery.html')
+
 def history(request):
 	return render(request, 'historicalcontext.html')
 
