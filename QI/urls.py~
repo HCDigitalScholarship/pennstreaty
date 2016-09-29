@@ -19,8 +19,8 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^storymap/$', 'QI.views.storymap_dir', name = "StoryMapJS"),
-    url(r'^storymap/', include('QI.inner')),
+    url(r'^travelRoutes/$', 'QI.views.travelRoutes', name = "TravelRoutes"),
+    url(r'^travelRoutes/', include('QI.inner')),
     url(r'^profiles/$', 'QI.views.profiles', name = "Person Profiles"),
 	url(r'^texts/$', 'QI.views.texts', name = "Available Texts"),
 	url(r'^about/$', 'QI.views.about', name = "About Page"),

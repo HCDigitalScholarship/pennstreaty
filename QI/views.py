@@ -356,8 +356,8 @@ def jsoninfo(request,id): #this is where the side tab gets its info on the page 
 def storymap(request, xml_id):
 	return render(request, 'story_maps/' + xml_id + '.html')
 
-def storymap_dir(request):
-	return render(request, 'storymap_dir.html')
+def travelRoutes(request):
+	return render(request, 'travelRoutes.html')
 def SMimport(request):
 	# if this is a POST request we need to process the form data
 	if request.method == 'POST':

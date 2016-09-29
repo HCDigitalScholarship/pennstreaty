@@ -9889,6 +9889,8 @@ button, .button:visited {
 /* line 156, ../scss/_custom.scss */
 #row2 p {
   color: black;
+  font-size:0.8rem;
+  text-align: center;  
 }
 
 /* line 164, ../scss/_custom.scss */
@@ -10246,7 +10248,7 @@ i.fa.fa-times:hover {
 	font-family: "Alegreya Sans SC";
 	font-weight: 400;
 	color: #040402;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 #storymapgird a {
