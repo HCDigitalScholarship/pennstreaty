@@ -3,3 +3,4 @@
 *.pyc
 settings.py
 .DS_STORE
+static/img
