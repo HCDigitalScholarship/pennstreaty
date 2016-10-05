@@ -23,8 +23,8 @@ def about(request):
 def mapgallery(request):
 	return render(request, 'mapgallery.html')
 
-def history(request):
-	return render(request, 'historicalcontext.html')
+def historicalbackground (request):
+	return render(request, 'historicalbackground.html')
 
 def texts(request):
 	textlist = Manuscript.objects.order_by('title')
