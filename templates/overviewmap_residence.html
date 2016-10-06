@@ -59,31 +59,33 @@
   <div id=row2>
     <br>
     <div class=container>
-  <p style="font-size:25px; font-family:Alegreya Sans SC"><b>View Map Organized By: </b>
+  <h1 style="font-size:25px; font-family:Alegreya Sans SC"><b>View Map Organized By: </b>
   <i>
-  <a href="/map/1"  style="color:#2d3135">Traveler</a>
+  <a href="/overviewmap_traveler"  style="color:#2d3135">Traveler</a>
   <b>/</b>
-  <a href="/map/2" style="color:#4c5259"><b>Date</b></a>
+  <a href="/overviewmap_date" style="color:#2d3135">Date</a>
   <b>/</b>
-   <a href="/map/3" style="color:#2d3135">Residence</a>
+   <a href="/overviewmap_residence" style="color:#4c5259"><b>Residence</b></a>
     <b>/</b>
-  <a href="/map/4" style="color:#2d3135">Popular Locations</a>
-</i> </p>
+  <a href="/overviewmap_popularlocations" style="color:#2d3135">Popular Locations</a>
+</i> </h1>
     <br>
   </div>
 </div>
 
 
 <div id = "row3" style="padding-bottom: 0px">
-<div class=container>
-  <br>
-  <div class=well>
-    <h3>Description:</h3>
-  <p>  This map shows the routes the Quakers traveled over time.
-    The date slider can be adjusted to see where travelers were on a specific date in time.
-     It is clear to see the routes the Quakers took.</p>
-  </div>
 
+  <div class=container>
+    <br>
+    <div class=well>
+      <h3>Description:</h3>
+      <p>
+        This map shows where Native Americans and Quakers resided.
+        Some of the locations are Quaker towns or Native American villages,
+        for example, while others are places where only one or two families lived.
+      </p>
+    </div>
 
         <div id="map"></div>
 
@@ -122,7 +124,7 @@
           }); */
 
           function main() {
-            cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/92a65124-578f-11e6-99e5-0e3ebc282e83/viz.json', {
+            cartodb.createVis('map', 'https://haverfordds.carto.com/api/v2/viz/227c725a-5791-11e6-b4c5-0e05a8b3e3d7/viz.json', {
               shareable: true,
               title: false,
               description: true,
@@ -154,6 +156,7 @@
           window.onload = main;
 
         </script>
+
 
 
 

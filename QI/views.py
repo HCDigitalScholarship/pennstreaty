@@ -26,10 +26,10 @@ def mapgallery(request):
 def historicalbackground (request):
 	return render(request, 'historicalbackground.html')
 
-def texts(request):
+def manuscripts(request):
 	textlist = Manuscript.objects.order_by('title')
 	pagelist = Page.objects.order_by('Manuscript_id')
-	return render(request, 'texts.html', {'textlist':textlist,'pagelist':pagelist})
+	return render(request, 'manuscripts.html', {'textlist':textlist,'pagelist':pagelist})
 
 def profiles(request):
 	person_list = Person.objects.order_by('last_name')
@@ -55,8 +55,8 @@ def testsearch2(request):
 def search(request):
 	return render(request, 'search/search.html')
 
-def map1(request):
-	return render(request, 'map1.html')
+def overviewmap_traveler(request):
+	return render(request, 'overviewmap_traveler.html')
 
 def handler404(request):
 	response = render_to_response('detail.html', {}, context_instance = RequestContext(request))
@@ -75,14 +75,14 @@ def handler500(request):
 class Home(TemplateView):
 	template_name = 'index.html'
 
-def map2(request):
-	return render(request, 'map2.html')
+def overviewmap_date(request):
+	return render(request, 'overviewmap_date.html')
 
-def map3(request):
-	return render(request, 'map3.html')
+def overviewmap_residence(request):
+	return render(request, 'overviewmap_residence.html')
 
-def map4(request):
-	return render(request, 'map4.html')
+def overviewmap_popularlocations(request):
+	return render(request, 'overviewmap_popularlocations.html')
 
 def usingthesite(request):
 	return render(request, 'usingthissite.html')
