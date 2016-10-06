@@ -10257,6 +10257,25 @@ i.fa.fa-times:hover {
 
 }
 
+.my-grid li {
+   display:block;
+   overflow:hidden;
+}
+
+.my-grid li > div {
+   height: 100%;
+   width: 100%;
+   background-size:cover;
+   background-position: center center;
+
+}
+
+.th {
+  @include thumb(
+     $border-width: 2px,
+     $box-shadow: 0 0 0 1px rgba(#000, .2),
+     $box-shadow-hover: 0 0 6px 1px rgba(#ccc. 0.5)
+   );
 #map {
   position: relative;
 }
@@ -10273,7 +10292,7 @@ i.fa.fa-times:hover {
 }
 
 .your-class-name {
-  @include bloack-grid(
+  @include block-grid(
     $per-row: 3,
     $spacing: $block-grid-default-spacing,
     $base-style: true

@@ -92,6 +92,9 @@ def bibliography(request):
 
 def credits(request):
 	return render(request, 'credits.html')
+
+def mapgallery(request):
+	return render(request, 'mapgallery.html')
 	
 def outputPagePDF(request,id):
 	PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!

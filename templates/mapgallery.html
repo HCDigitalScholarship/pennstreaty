@@ -71,43 +71,23 @@
     <li><a class="th" href="/static/img/MapGalleryPictures/editedMap_of_the_United_States_Newlin.jpg"><img data-caption = "A Map of the United States <br> Drawn by H.A. Newlin, June 4,1823<br> Ink and watercolor on paper" src="/static/img/MapGalleryPictures/thumbs/editedMap_of_the_United_States_Newlin.jpg" alt="Map_of_the_United_States_Newlin" /></a><br><p>A Map of the United States <br>1823</p></li>
 
 </ul>
-
 <script>
-
 var cb = function() {
-
 var l = document.createElement('link'); l.rel = 'stylesheet';
-
 l.href = 'app.css';
-
 var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-
 };
-
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-
 webkitRequestAnimationFrame || msRequestAnimationFrame;
-
 if (raf) raf(cb);
-
 else window.addEventListener('load', cb);
-
 </script>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
  {% include 'footer.html' %}
-
  {% include 'bottom-links.html' %}
-
   </body>
-
 </html>
-
 
