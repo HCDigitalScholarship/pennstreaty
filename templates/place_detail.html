@@ -70,7 +70,7 @@
 
   </div>
     <div class = "large-6 medium-6 small-12 columns">
-      <div id="borderimg2" class = "show-for-medium-up" style="height:320px">
+      <div id="borderimg2" class = "show-for-medium-up" style="min-height:320px">
         <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
 
           <h3> Related Documents </h3>
@@ -95,7 +95,7 @@
 
                   {% if page.Manuscript_id == manuscript %}
           <li class = "list-group-item">
-                        <a href ='/page/{{ page.id_tei }}'> {{ page.id_tei }} </a>
+                        <a href ='/page/{{ page.id_tei }}'> Page {{ page.id_tei|slice:"-3:" }} </a>
           </li>
                   {% endif %}
 
@@ -107,6 +107,11 @@
 
           {% endfor %}
 
+{% if allmanuscripts|length == 0 %}
+
+<p> No related documents found. </p>
+
+{% endif %}
 
         </ul>
     </div>
@@ -117,7 +122,6 @@
 
 
              <h3> Related Documents </h3>
-
 
 
              {% for manuscript in allmanuscripts %}
@@ -140,7 +144,7 @@
 
                      {% if page.Manuscript_id == manuscript %}
              <li class = "list-group-item">
-                           <a href ='/page/{{ page.id_tei }}'> {{ page.id_tei }} </a>
+                           <a href ='/page/{{ page.id_tei }}'> Page {{ page.id_tei|slice:"-3:" }} </a>
              </li>
                      {% endif %}
 
@@ -152,7 +156,11 @@
 
              {% endfor %}
 
+{% if allmanuscripts|length == 0 %}
 
+<p> No related documents found. </p>
+
+{% endif %}
 
         </ul>
     </div>

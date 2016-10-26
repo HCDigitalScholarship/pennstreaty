@@ -84,7 +84,7 @@
         {% if person.birth_place %}
 
         {% if MC == 'True' %}
-        <p class="text-left"><b>Birth Place:</b> Mud Creek, New York</p>  <!-- switch this one with the above 1 -->
+        <p class="text-left"><b>Birth Place:</b> Unknown</p>  <!-- switch this one with the above 1 -->
         {% else %}
         <p class="text-left"><b>Birth Place:</b> <a href="/place/{{ birthplace.id_tei}}">{{ birthplace.name }} </a></p>
         {% endif %}
@@ -109,7 +109,7 @@
       {% if person.death_place %}
 
         {% if MC1 == 'True' %}
-          <p class="text-left"><b>Death Place:</b> Mud Creek, New York </p>
+          <p class="text-left"><b>Death Place:</b> Unknown </p>
           {% else %}
           <p class="text-left"><b>Death Place:</b> <a href="/place/{{ deathplace.id_tei}}"> {{ deathplace.name }} </a></p> <!--switch this one with the above 1-->
             {% endif %}
@@ -139,10 +139,30 @@
 
   </div>
     <div class = "large-6 medium-6 small-12 columns">
-      <div id="borderimg2" class = "show-for-medium-up" style="height:500px">
+      <div id="borderimg2" class = "show-for-medium-up" style="min-height:600px">
         <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
 
           <h3> Related Documents </h3>
+
+
+<p style="text-align:left"><b>Author of:</b></p>
+
+{% if person.person_id_text.all|length > 0 %} 
+
+{% for i in person.person_id_text.all %}
+
+<p><a href=/manuscript/{{i.id_tei}}>  {{i.title}} </a> </p>  
+
+{% endfor %}
+
+{% else %}
+
+<p>No documents found.</p>
+
+{% endif %}
+
+
+<p style="text-align:left"><b>Mentioned in:</b></p>
 {% for manuscript in allmanuscripts %}
 
 <div class="panel-group">
@@ -162,7 +182,7 @@
     {% for page in allpages %}
     {% if page.Manuscript_id == manuscript %}
 <li class = "list-group-item">
-              <a href ='/page/{{ page.id_tei }}'> {{ page.id_tei }} </a>
+              <a href ='/page/{{ page.id_tei }}'> Page {{ page.id_tei|slice:"-3:" }} </a>
 </li>
 
   {% endif %}
@@ -177,7 +197,11 @@
 
 {% endfor %}
 
+{% if allmanuscripts|length == 0 %}
 
+<p> No documents found. </p>
+
+{% endif %}
 
         </ul>
     </div>
@@ -189,6 +213,29 @@
 
 
                     <h3> Related Documents </h3>
+
+
+
+
+
+<p style="text-align:left"><b>Author of:</b></p>
+
+{% if person.person_id_text.all|length > 0 %}
+
+{% for i in person.person_id_text.all %}
+
+<p><a href=/manuscript/{{i.id_tei}}>  {{i.title}} </a> </p>
+
+{% endfor %}
+
+{% else %}
+
+<p> No documents found. </p>
+
+{% endif %}
+
+<p style="text-align:left"><b>Mentioned in:</b></p>
+
 
 
           {% for manuscript in allmanuscripts %}
@@ -211,7 +258,7 @@
 
                   {% if page.Manuscript_id == manuscript %}
           <li class = "list-group-item">
-                        <a href ='/page/{{ page.id_tei }}'> {{ page.id_tei }} </a>
+                        <a href ='/page/{{ page.id_tei }}'> Page {{ page.id_tei|slice:"-3:" }} </a>
           </li>
                   {% endif %}
 
@@ -223,6 +270,11 @@
 
           {% endfor %}
 
+{% if allmanuscripts|length == 0 %}
+
+<p> No documents found. </p>
+
+{% endif %}
 
         </ul>
     </div>

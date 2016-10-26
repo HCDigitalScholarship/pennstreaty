@@ -207,7 +207,6 @@ def person_detail(request,id):
 		MC1 = 'True'
 	else:
 		MC1 = 'False'
-	#now, if birth place & death place aren't mud creek, let's get their id's!
 	if MC == 'False':
 		FirstSpace = newBP.index(' ') #find first space in birth place
 		newbirthplace = newBP[0:FirstSpace] #get the id_tei of the birth place
