@@ -86,14 +86,6 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
 -->
 
-{% with page.object_list as FR %} <!--Getting results prematurely to decide which facets to show-->
-{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
-
-
-{% for ct in GROUP %} 
-
-
-{% endfor %} 
 
 <p><b>Refine your results:</b></p>
 
@@ -455,8 +447,6 @@ the categories are also hard-coded in but i think that's just how it has to be w
 <!-- end -->
 
          </div>
-
-{% endwith %}
 
          <div class=col-sm-8>
 
