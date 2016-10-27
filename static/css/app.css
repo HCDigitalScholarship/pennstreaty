@@ -9984,7 +9984,7 @@ text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
-  background: #7EC6FA;
+  background: #f2f2f2;
   border-radius: 5px;
   box-shadow: -2px 0px 10px 0px #aaaaaa;
 }
@@ -10088,6 +10088,7 @@ text-align: center;
 .original-image-wrapper .forwards-arrow .fa-chevron-right {
   position: absolute;
   right: 3%;
+ /*vertical-align: center;*/
 }
 
 .original-image-wrapper .forwards-arrow .fa-chevron-left {
@@ -10096,6 +10097,42 @@ text-align: center;
 }
 
 .original-image-wrapper .forwards-arrow i:hover {
+  color: #2D2D2D;
+}
+
+
+
+.main-wrapper {
+  position: relative;
+}
+
+.main-wrapper:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.main-wrapper .forwards-arrow{
+  position: static;
+  right: 0;
+  top: 50%;
+  color: #949494;
+  font-size: 45px;
+}
+
+.main-wrapper .forwards-arrow .fa-chevron-right {
+  position: absolute;
+  right: 3%;
+}
+
+.main-wrapper .forwards-arrow .fa-chevron-left {
+  position: absolute;
+  left: 1%;
+}
+
+.main-wrapper .forwards-arrow i:hover {
   color: #2D2D2D;
 }
 
@@ -10109,14 +10146,14 @@ text-align: center;
 
 i.fa.fa-times {
     position: absolute;
-    color: white;
+    color: black;
     margin-top: 20px;
     right:0;
     top: 0;
     margin-right: -25%;
     padding-right: 10px;
     padding-top: 10px;
-    font-size: 45px;
+    font-size: 30px;
 
 }
 
