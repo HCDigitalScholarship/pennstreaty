@@ -10,7 +10,6 @@
 <body>
 
 <div class='stufftoinclude'>
-
     <!--<header>
             <div class = "overlay-container">
               <img src="{% static "img/qandi.png" %}" alt="Header img" />
@@ -18,27 +17,18 @@
             <strong>Beyond Penn's Treaty</strong>
               </div>
           </div>
-
       </header>-->
-
-    {% include 'header.html' %}
-
-
-
+        {% include 'header.html' %}
     <div id = "row1">
     	{% include 'nav.html' %}
     </div>
-
 </div>
 
 <div id="row2">
 <br>
 </div>
-
-
-
-    <div id = "about2">
-<div id="sidestuff">
+   <div id = "about2">
+     <div id="sidestuff">
       <aside class = "canvas-meta">
         <p> Metadata &nbsp; <i class="fa fa-chevron-right"></i>
         </p>
@@ -47,8 +37,8 @@
         <p> Image &nbsp; <i class="fa fa-chevron-right"></i>
         </p>
       </aside>
+      <aside class="off-canvas-content-meta" style = "margin-left: -25%;"> 
       </aside>
-      <aside class="off-canvas-content-meta" style = "margin-left: -25%;"> </aside>
       <aside class="off-canvas-content-img" style = "margin-left: -25%;">
         <div class='original-image-wrapper'>
             <aside class="forwards-arrow" style = "margin-left: -25%;">
@@ -58,68 +48,50 @@
         </div>
       </aside>
 
-    <aside class="off-canvas" style = "margin-right: -25%;"></aside>
+     <aside class="off-canvas" style = "margin-right: -25%;">
+     </aside>
       <i class="fa fa-times"></i>
-</div>
+    </div>
 
-<div class="stufftoinclude">
-        <div id = "main-content">
-
-<div class = main-wrapper>
- <aside class="forwards-arrow" ">
-              <i class="fa fa-chevron-left"></i>
-              <i class="fa fa-chevron-right"></i>
-              
-            </aside>
-
-
-            <div type= "letter" class = "newpanel">
-              <div id="main" style="min-height:600px">
-
-
-        <h2>  <center>{{ manuscript.title }} </center></h2>
-
+  <div class="stufftoinclude">
+<!--<div class = "small-block-grid-1 medium-block-grid-3 large-block-grid-3 clearing thumbs" data-clearing>-->
+    <div id = "main-content">
+      <aside id="open">
+        <div class = main-wrapper>
+          <aside class="forwards-arrow">
+            <i class="fa fa-chevron-left"></i>
+            <i class="fa fa-chevron-right"></i>
+           </aside>
+           <div type= "letter" class = "newpanel">
+             <div id="main" style="min-height:600px">
+             <h2>  <center>{{ manuscript.title }} </center></h2>          
         {{ page.fulltext|safe|escape }}
-
 <br>
-
-
         <script>
              var url = "/static/js/cornplanter.js";
              $.getScript(url);
-         </script>
- 
+        </script>
+           </div>
+        </div>
+      </div>
+    </aside>
+   </div>
+  </div>
 
-         
-     
-            </div>
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-<div class='container'>
-<a href=/outputPagePT/{{page.id_tei}}>→ Download raw text of this page</a>
-</div>
+ <div class='container'>
+   <a href=/outputPagePT/{{page.id_tei}}>→ Download raw text of this page</a>
+ </div>
 <!--end stuff-->
   {% include 'footer.html' %}
   {% include 'bottom-links.html' %}
-
-
-  <script type="text/javascript" >
+   <script type="text/javascript" >
         var Manuscript_id = '{{ manuscript.id_tei }}';
         var img_url = '{{ page.img_url }}';
         var Page_id = '{{ Page_id }}';
         var lastpage = '{{ lastpage }}';
-          </script>
-
-<script src="{% static "js/cornplanter.js" %}"> </script>
-
-
-
+   </script>
+   <script src="{% static "js/cornplanter.js" %}"> 
+   </script>
+</div>
   </body>
   </html>
