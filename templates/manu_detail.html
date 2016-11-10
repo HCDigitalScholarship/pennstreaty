@@ -53,11 +53,50 @@
 </div>
 <div class=col-sm-6>
   <div class=well>
-<p><b style>Title:</b> {{manu.title}}</p>
-<p><b>Author:</b><a href="/person/{{Author.id_tei}}"> {{Author.first_name}} {{Author.last_name}}</a></p>
-<p><b>Date:</b> {{manu.date}}</p>
-<p style="text-transform:capitalize"><b>Type of Manuscript:</b> {{manu.type_of_Manuscript}} </p>
-<p><b>Call Number:</b> {{manu.call_no}}</p>
+<p style='text-align:left'><b>Title:</b> {{manu.title}}</p>
+<p style='text-align:left'><b>Author:</b>
+
+{% if manu.person_id == None %}
+Unknown </p>
+
+{% else %}
+<a href="/person/{{manu.person_id.id_tei}}"> {{manu.person_id.first_name}} {{manu.person_id.last_name}}</a></p>
+
+{% endif %}
+
+<p style='text-align:left'><b>Date:</b> 
+
+{% if manu.date == "" %} 
+Unknown
+
+{% else %}
+{{manu.date}}
+
+{% endif %}
+</p>
+<p style="text-transform:capitalize;text-align:left"><b>Type of Manuscript:</b>
+
+{% if manu.type_of_Manuscript == "" %}
+
+Unknown
+
+{% else %}
+
+ {{manu.type_of_Manuscript}}
+
+{% endif %}
+
+ </p>
+<p style='text-align:left'><b>Call Number:</b> 
+
+{% if manu.call_no == "" %}
+None
+
+{% else %}
+{{manu.call_no}}
+
+{% endif %}
+</p>
 
 <div class="panel-group">
     <div class="panel panel-default">
@@ -89,7 +128,7 @@
 </div>
 </div>
 
-<p><a href=/outputManuPT/{{manu.id_tei}}>→ Download raw text of this manuscript</a></p>
+<p style='text-align:left'><a href=/outputManuPT/{{manu.id_tei}}>→ Download raw text of this manuscript</a></p>
 
 </div>
 
