@@ -177,11 +177,7 @@ def manu_detail(request,id):
 	except Manuscript.DoesNotExist:
 		raise Http404('this manuscript does not exist')
 	allpages = Page.objects.filter(id_tei__contains = manu.id_tei) #get all pages from this manuscript!
-	Space = str(manu.person_id).index(" ")
-	TrueAuthor = str(manu.person_id)[0:Space] #find the author ID of this person
-	Author = Person.objects.get(id_tei=TrueAuthor) #get the actual person
-	return render(request,'manu_detail.html', {'manu':manu,'allpages':allpages, 'Author':Author
-	})
+	return render(request,'manu_detail.html', {'manu':manu,'allpages':allpages})
 
 def person_detail(request,id):
 	try:
@@ -194,33 +190,6 @@ def person_detail(request,id):
 		manuscripttitles = manuscripttitles + [allpages[i].Manuscript_id]
 	allmanuscripts = Manuscript.objects.filter(title__in = manuscripttitles) #get list of these manuscripts from the title list
 	# ^ this should collect all relevant manuscripts
-	""" the following lines are about finding the correct birth place & death place """
-	#checking if the birth place is mud creek because right now mud creek doesn't have an ID_TEI
-	newBP = str(person.birth_place)
-	if 'Mud Creek' in newBP:
-		MC = 'True'
-	else:
-		MC = 'False'
-	#checking if the death place is mud creek because right now mud creek doesn't have an ID_TEI
-	newDP = str(person.death_place)
-	if 'Mud Creek' in newDP:
-		MC1 = 'True'
-	else:
-		MC1 = 'False'
-	if MC == 'False':
-		FirstSpace = newBP.index(' ') #find first space in birth place
-		newbirthplace = newBP[0:FirstSpace] #get the id_tei of the birth place
-		birthplace = Place.objects.get(id_tei = newbirthplace) #get the real birth place! (via model)
-	else:
-		birthplace = "Mud Creek"
-	#/////////////
-	if MC1 == 'False':
-		FirstSpace1 = newDP.index(' ')
-		newdeathplace = newDP[0:FirstSpace1] #get id_tei of death place
-		deathplace = Place.objects.get(id_tei = newdeathplace) #get real death place (via model)
-	else:
-		deathplace = "Mud Creek"
-	""" Done finding death place & birth place """
 	#Now, find proper names of all the affiliations!
 	newAffiliations = []
 	for i in range(0,len(person.affiliations.all())):
@@ -229,7 +198,7 @@ def person_detail(request,id):
 		newAff1 = Org.objects.get(id_tei = newAff) #find instance of group model!
 		newAffiliations = newAffiliations + [newAff1] #add to list of Affiliations!
 	return render(request,'person_detail.html',{
-	'person':person, 'allpages':allpages, 'allmanuscripts':allmanuscripts, 'MC':MC,'MC1':MC1,'birthplace':birthplace,'deathplace':deathplace, 'newAffiliations':newAffiliations
+	'person':person, 'allpages':allpages, 'allmanuscripts':allmanuscripts,'newAffiliations':newAffiliations
 	})
 
 def place_detail(request,id):

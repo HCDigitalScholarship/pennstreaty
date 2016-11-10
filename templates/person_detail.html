@@ -83,11 +83,12 @@
       <!-- BIRTH PLACE -->
         {% if person.birth_place %}
 
-        {% if MC == 'True' %}
-        <p class="text-left"><b>Birth Place:</b> Unknown</p>  <!-- switch this one with the above 1 -->
-        {% else %}
-        <p class="text-left"><b>Birth Place:</b> <a href="/place/{{ birthplace.id_tei}}">{{ birthplace.name }} </a></p>
-        {% endif %}
+	{% if person.birth_place.name == 'Mud Creek' %}
+	<p class="text-left"><b>Birth Place: </b> Unknown </p>
+
+	{% else %}
+	<p class="text-left"><b>Birth Place: </b><a href="/place/{{ person.birth_place.id_tei }}">{{person.birth_place.name}} </a></p>
+	{% endif %}
 
         {% else %}
         <p class="text-left"><b>Birth Place:</b> Unknown</p>
@@ -108,10 +109,10 @@
       <!-- DEATH PLACE -->
       {% if person.death_place %}
 
-        {% if MC1 == 'True' %}
+        {% if person.death_place.name == 'Mud Creek' %}
           <p class="text-left"><b>Death Place:</b> Unknown </p>
           {% else %}
-          <p class="text-left"><b>Death Place:</b> <a href="/place/{{ deathplace.id_tei}}"> {{ deathplace.name }} </a></p> <!--switch this one with the above 1-->
+          <p class="text-left"><b>Death Place:</b> <a href="/place/{{ person.death_place.id_tei}}"> {{ person.death_place.name }} </a></p> <!--switch this one with the above 1-->
             {% endif %}
       {% else %}
           <p class="text-left"><b>Death Place:</b> Unknown</p>
