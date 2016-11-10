@@ -10115,8 +10115,9 @@ text-align: center;
 }
 
 .main-wrapper .forwards-arrow{
-  position: static;
+  position: absolute;
   right: 0;
+  left: 0;
   top: 50%;
   color: #949494;
   font-size: 45px;
@@ -10124,12 +10125,12 @@ text-align: center;
 
 .main-wrapper .forwards-arrow .fa-chevron-right {
   position: absolute;
-  right: 3%;
+  right: -5%;
 }
 
 .main-wrapper .forwards-arrow .fa-chevron-left {
-  position: absolute;
-  left: 1%;
+ position: absolute;
+ left: 15%;
 }
 
 .main-wrapper .forwards-arrow i:hover {
