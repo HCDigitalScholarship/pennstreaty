@@ -37,15 +37,15 @@
         <p> Image &nbsp; <i class="fa fa-chevron-right"></i>
         </p>
       </aside>
-      <aside class="off-canvas-content-meta" style = "margin-left: -25%;"> 
+      <aside class="off-canvas-content-meta" style = "margin-left: -25%;">
       </aside>
       <aside class="off-canvas-content-img" style = "margin-left: -25%;">
-        <div class='original-image-wrapper'>
+      <div class='original-image-wrapper'>
             <aside class="forwards-arrow" style = "margin-left: -25%;">
-              <i class="fa fa-chevron-right"></i>
-              <i class="fa fa-chevron-left"></i>
+            <!--  <i class="fa fa-chevron-right"></i>
+              <i class="fa fa-chevron-left"></i> -->
             </aside>
-        </div>
+       </div>
       </aside>
 
      <aside class="off-canvas" style = "margin-right: -25%;">
@@ -64,7 +64,7 @@
            </aside>
            <div type= "letter" class = "newpanel">
              <div id="main" style="min-height:600px">
-             <h2>  <center>{{ manuscript.title }} </center></h2>          
+             <h2>  <center>{{ manuscript.title }} </center></h2>
         {{ page.fulltext|safe|escape }}
 <br>
         <script>
@@ -90,7 +90,7 @@
         var Page_id = '{{ Page_id }}';
         var lastpage = '{{ lastpage }}';
    </script>
-   <script src="{% static "js/cornplanter.js" %}"> 
+   <script src="{% static "js/cornplanter.js" %}">
    </script>
 </div>
   </body>

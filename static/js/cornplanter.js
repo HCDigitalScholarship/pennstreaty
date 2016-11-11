@@ -339,7 +339,7 @@ $(".canvas-img").click(function(){
   if (($('aside.off-canvas-content-img').attr("id")) == "open") {
     $('.canvas-img i').css("transform", "rotate(90deg)");
     $('.canvas-img p').animate({"margin-left": '-=25%'});
-    $('.forwards-arrow i').animate({"margin-left": '-=25%'});
+    //$('.forwards-arrow i').animate({"margin-left": '-=25%'});
     $('aside.off-canvas-content-img').attr("id", "");
     $('.off-canvas-content-img').animate({"margin-left": '-=25%'});
   }
@@ -347,7 +347,7 @@ $(".canvas-img").click(function(){
 
   $('.canvas-img i').css("transform", "rotate(270deg)");
   $('.canvas-img p').animate({"margin-left": '+=25%'});
-  $('.forwards-arrow i').animate({"margin-left": '+=25%'});
+//  $('.forwards-arrow i').animate({"margin-left": '+=25%'});
   $('aside.off-canvas-content-img').attr("id", "open");
   $('.off-canvas-content-img').animate({"margin-left": '+=25%'});
 
