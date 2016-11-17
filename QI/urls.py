@@ -58,7 +58,8 @@ urlpatterns = [
     url(r'^bibliography/', 'QI.views.bibliography', name = "bibliography"),
     url(r'^credits/', 'QI.views.credits', name = "credits"),
     url(r'^mapgallery/', 'QI.views.mapgallery', name = "mapgallery"),
-    url(r'^contact/', 'QI.views.contact', name="contact")
+    url(r'^contact/', 'QI.views.contact', name="contact"),
+    url(r'^contactSuccess/', 'QI.views.contactSuccess', name="contactSuccess")
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'

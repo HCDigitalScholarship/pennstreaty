@@ -40,11 +40,14 @@ def contact(request):
 			content = template.render(context)
 			#email = EmailMessage("New contact form submission",content,"Your website" +'',['rlytle@haverford.edu'],headers = {'Reply-To': contact_email })
 			#email.send()
-			send_mail("New contact form submission from "+contact_name,content,contact_email,['rlytle@haverford.edu'],fail_silently=False,)
-			return redirect('contact') #this redirects to contactpage , should go somewhere else?
+			send_mail("New contact form submission from "+contact_name,content,contact_email,['hcdigitalscholarship@gmail.com'],fail_silently=False,)
+			return redirect('contactSuccess') #this redirects to contactpage , should go somewhere else?
 	return render(request, 'contact.html', {
 	'form': form_class,
 	})
+
+def contactSuccess(request):
+	return render(request, 'contactSuccess.html')
 
 def about(request):
 	return render(request, 'about.html')
