@@ -56,13 +56,18 @@
 <p style='text-align:left'><b>Title:</b> {{manu.title}}</p>
 <p style='text-align:left'><b>Author:</b>
 
-{% if manu.person_id == None %}
-Unknown </p>
 
-{% else %}
-<a href="/person/{{manu.person_id.id_tei}}"> {{manu.person_id.first_name}} {{manu.person_id.last_name}}</a></p>
 
-{% endif %}
+{% if manu.person_name == "" and not manu.org_name == "" %}
+      <a href=/org/{{manu.org_id.id_tei}}> {{manu.org_name}}</a>
+{% elif manu.org_name == "" and not manu.person_name == "" %}
+      <a href=/person/{{manu.person_id.id_tei}}> {{manu.person_id.first_name}} {{manu.person_id.last_name}} </a> 
+                                                        {% else %}
+                                                <td> Unknown </td>
+                                                        {% endif %}
+
+
+
 
 <p style='text-align:left'><b>Date:</b> 
 
@@ -96,7 +101,28 @@ None
 {{manu.call_no}}
 
 {% endif %}
+
 </p>
+
+<p style='text-align:left'><b>Location:</b>
+{% if manu.location == 'SW' %}
+Swarthmore College
+{% else %}
+Haverford College
+{% endif %}
+</p>
+
+
+<p style='text-align:left'><b>Summary:</b>
+{% if manu.summary == "" %}
+None
+{% else %}
+{{manu.summary}}
+{% endif %}
+</p>
+
+
+
 
 <div class="panel-group">
     <div class="panel panel-default">

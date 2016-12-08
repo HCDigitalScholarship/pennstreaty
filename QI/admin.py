@@ -433,17 +433,27 @@ class ManuscriptResource(resources.ModelResource):
 		    skip=False
 		    field_name=self.get_field_name(field)
 		    if (field_name=='person_id' and 'person_id' in data):
-			new_data=Place.objects.all()
+			new_data=Person.objects.all()
 			match=False
 			index = 0
 			for i in new_data:
 				if str(i.id_tei) == str(data[field_name]):
 					match=True
 					data[field_name]= i.id
-
 				index = index + 1
 			if not match:
 				print "No matching TEI id for:",data[field_name],",:("
+                    elif (field_name=='org_id' and 'org_id' in data):
+                        new_data=Org.objects.all()
+			match=False
+			index = 0
+			for i in new_data:
+				if str(i.id_tei) == str(data[field_name]):
+					match=True
+					data[field_name]=i.id
+				index = index + 1
+			if not match:
+				print "No matching TEI id for:",data[field_name]
 		    #Leaving this framework in for this one, it could be useful eventually
 	  	    elif field_name=='affiliations' and 'affiliations' in data:
 			new_data=Org.objects.all()
@@ -474,9 +484,9 @@ class ManuscriptResource(resources.ModelResource):
 
 	class Meta:
 		model = Manuscript
-		fields = ['id', 'id_tei', 'title', 'person_id', 'date', 'type_of_Manuscript', 'call_no']
+		fields = ['id', 'id_tei', 'title', 'person_id', 'person_name', 'org_id', 'org_name', 'location', 'summary', 'date', 'type_of_Manuscript', 'call_no']
 class ManuscriptAdmin(ImportExportModelAdmin):
-	fields = ['id_tei', 'title', 'person_id', 'date', 'type_of_Manuscript', 'call_no']
+	fields = ['id_tei', 'title', 'person_id', 'person_name', 'org_id', 'org_name', 'location', 'summary', 'date', 'type_of_Manuscript', 'call_no']
 	resource_class = ManuscriptResource
 
 ############################## break between classes ##############################

@@ -68,8 +68,14 @@
                                                <tr>
 
                                                        <td> <a href=/manuscript/{{text.id_tei}}> {{text.title}}</a> </td>
-                                                       <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 							
-							 </td>
+
+							{% if text.person_name == "" and not text.org_name == "" %} 
+							<td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
+							{% elif text.org_name == "" and not text.person_name == "" %}
+                                                       <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 	</td>
+							{% else %}
+						<td> Unknown </td>		
+							{% endif %}
                                                        <td> {{text.date}} </td>
                                                        <td>{{text.type_of_Manuscript}}</td>
                                                        <td>{{text.call_no}}</td>
