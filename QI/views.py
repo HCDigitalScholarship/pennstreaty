@@ -21,15 +21,8 @@ from django.shortcuts import redirect
 from django.template import Context
 from django.template.loader import get_template
 from django.core.mail import send_mail
-from django.shortcuts import render_to_response
-from django.template import RequestContext
 
 import os
-def handler404(request):
-    response = render_to_response('404.html', {},
-                                   context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
 
 def contact(request):
 	form_class = ContactForm
@@ -477,3 +470,14 @@ def XMLimport(request):
 		return render(request, '../templates/admin/XMLimport/index.html')
 class Home(TemplateView):
 	template_name = 'index.html'
+
+
+
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+def handler404(request):
+    response = render_to_response('404.html', {},
+                                   context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
