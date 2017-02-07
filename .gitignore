@@ -4,3 +4,4 @@
 settings.py
 .DS_STORE
 static/img
+*.swp
