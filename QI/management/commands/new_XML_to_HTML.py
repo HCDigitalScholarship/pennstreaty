@@ -383,11 +383,11 @@ def xml_to_html(xml_file):
 	      # start after the first one, which is always(?) just a newline
 	      for html in html_list[1:]:
 		if index<10:
-			sindex='_00'+str(index-1)
+			sindex='_00'+str(index)
 		elif index<100:
-			sindex='_0'+str(index-1)
+			sindex='_0'+str(index)
 		elif index<1000:
-			sindex='_'+str(index-1)
+			sindex='_'+str(index)
 		else:
 			print "index got too high (over 999)! Naming convention off"
 			sindex=str(index)
