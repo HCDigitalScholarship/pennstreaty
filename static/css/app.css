@@ -9989,6 +9989,10 @@ text-align: center;
   box-shadow: -2px 0px 10px 0px #aaaaaa;
 }
 
+.canvas-meta{
+  position:relative;
+}
+
 .canvas-meta p {
   position: absolute;
   transform: rotate(-90deg);

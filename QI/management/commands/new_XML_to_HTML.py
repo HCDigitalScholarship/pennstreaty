@@ -272,7 +272,9 @@ def xml_to_html(xml_file):
 		elif saved == '<p' and char == 'b':
 			#print "got it"
 			found_pb=True
-			html_list=html_list+[html]
+			# Switched to append, other where terribly inefficient
+			# html_list=html_list+[html]
+			html_list.append(html)
 			html=""
 			saved = ""
 		else:
@@ -376,8 +378,10 @@ def xml_to_html(xml_file):
 	print "this is going to be an error" #Might want to update this. It would be SICK if it would catch it and then throw something up on the page
 	id_manuscript=None
       print id_manuscript, "man id"
+      print html_list, "oh hey there"
       with open('sample.txt', "w") as f:
-	      for html in html_list:
+	      # start after the first one, which is always(?) just a newline
+	      for html in html_list[1:]:
 		if index<10:
 			sindex='_00'+str(index-1)
 		elif index<100:
