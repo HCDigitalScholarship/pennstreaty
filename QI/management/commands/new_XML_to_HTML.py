@@ -231,8 +231,10 @@ def xml_to_html(xml_file):
 	      closed = 0
 	      closed_div = 0
 	      #print wholetext
+              i=0
 	      for char in wholetext:
-		if found_pb and closed <> 2:
+		i+=1
+                if found_pb and closed <> 2:
 			if char == '>':
 				closed = closed + 1
 				continue
@@ -277,11 +279,12 @@ def xml_to_html(xml_file):
 			html_list.append(html)
 			html=""
 			saved = ""
-		else:
+                else:
 			html = html + saved + char
 			saved = ""
-     # print html
-     # print html_list
+      print "HTML: " ,html
+      html_list.append(html)
+      #print html_list
 		
       """
       '''
