@@ -217,6 +217,10 @@ def manu_detail(request,id):
 	except Manuscript.DoesNotExist:
 		raise Http404('this manuscript does not exist')
 	allpages = Page.objects.filter(id_tei__contains = manu.id_tei) #get all pages from this manuscript!
+	newpages = []
+	for page in allpages:
+		newpages += [page]
+	allpages = sorted(newpages,key=lambda x: x.id_tei)
 	return render(request,'manu_detail.html', {'manu':manu,'allpages':allpages})
 
 def person_detail(request,id):
