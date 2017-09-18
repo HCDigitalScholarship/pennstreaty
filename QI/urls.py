@@ -39,6 +39,7 @@ urlpatterns = [
     #url(r'^page/(?P<id>\S+)/', 'QI.views.pageinfo', name="pageinfo"),
     url(r'^page/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pageinfo', name="page"),
     url(r'^pageinfo/(?P<id>\S+_[0-9]{3})/$', 'QI.views.newpageinfo', name="pageinfo"),
+    url(r'^pagetranscription/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pagetranscription', name="pagetranscription"),
     url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
     url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
     url(r'^admin/XML_to_HTML','QI.views.XMLimport', name = "XMLImporter"),
@@ -60,6 +61,7 @@ urlpatterns = [
     url(r'^mapgallery/', 'QI.views.mapgallery', name = "mapgallery"),
     url(r'^contact/', 'QI.views.contact', name="contact"),
     url(r'^contactSuccess/', 'QI.views.contactSuccess', name="contactSuccess")
+    
 ]
 
 admin.site.site_header = 'Beyond Penns Treaty'
