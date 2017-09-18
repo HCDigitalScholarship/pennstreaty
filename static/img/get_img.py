@@ -43,5 +43,4 @@ for item in json_list:
     filename += ('0'  + str(num) + '.jpg')
   else:
     filename += (str(num) + '.jpg')
-
   urllib.urlretrieve(jpg_url, filename)

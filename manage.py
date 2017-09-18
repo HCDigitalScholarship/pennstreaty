@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/srv/QI_env/bin/python
 import os
 import sys
 

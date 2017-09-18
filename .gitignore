@@ -1,7 +1,6 @@
-#Files to ignore #
 *~
 *.pyc
-settings.py
-.DS_STORE
+settings_secret.py
+.DS_Store
 static/img
 *.swp

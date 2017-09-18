@@ -21,7 +21,7 @@ def xml_to_html(xml_file):
 
       root = etree.fromstring(new_xml_string)
       #print etree.tostring(root)
-
+      print 'here 1'
       for persName in root.iter("persName"):
             if  len(persName.items()) != 0:
                   persName.attrib["key"] = "#"+persName.items()[0][1]
@@ -86,7 +86,7 @@ def xml_to_html(xml_file):
             if tag not in HTMLSanitizerMixin.acceptable_elements and tag != "body" and tag != "pb" :
                   etree.strip_tags(root, tag) #takes out tags that are not html tags from xml (changing to html) file
 
-
+      print 'here 2'
       
       #print etree.tostring(root)
       html_string = etree.tostring(root)
@@ -112,7 +112,7 @@ def xml_to_html(xml_file):
             new_pb_list.append(ele)
 
       for_csv = ''.join(html_string)
-
+      print 'here 3'
       #don't want this
       '''     
       with open("csv_for_"+os.path.basename(xml_file)+".csv", 'wb') as f:
@@ -147,7 +147,7 @@ def xml_to_html(xml_file):
 		print "DAMN IT, this has the problem"
 		has_annoying_problem=True
 
-
+      print 'here 4'
       #a=soup.div.unwrap()
       #print a
       #return a
@@ -282,10 +282,10 @@ def xml_to_html(xml_file):
                 else:
 			html = html + saved + char
 			saved = ""
-      print "HTML: " ,html
+      #print "HTML: " ,html
       html_list.append(html)
       #print html_list
-		
+      print 'here 5' 		
       """
       '''
       print "here is my soup"
