@@ -360,7 +360,7 @@ def pagetranscription(request,id):
                 lastpage = i-1
     #now lastpage should be the page number of the last page in the manuscript!
     Page_id = id[len(id)-3:] # this should be the page #
-    return HttpResponse('<h2><center>' + manuscript.title + '</center></h2>' + page.fulltext)
+    return HttpResponse(page.fulltext)
 
 def pagejsoninfo(request,id):
 	try:
