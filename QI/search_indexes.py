@@ -1,13 +1,10 @@
 import datetime
 from haystack import indexes
-from QI.models import Person #for the sake of this example
-from QI.models import Place
-from QI.models import Org
-from QI.models import Page
-from QI.models import Manuscript
+from QI.models import Person, Place, Org, Page, Manuscript
+
 
 class PersonIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True) #i think you use this for all indexes?
+    text = indexes.CharField(document=True, use_template=True) # I think you use this for all indexes?
     uniqueID = indexes.CharField(model_attr='id_tei')
     firstname = indexes.CharField(model_attr='first_name', null=True, faceted=True) #Testing Faceting w/ This
     lastname = indexes.CharField(model_attr='last_name', null=True, faceted=True)
@@ -21,23 +18,29 @@ class PersonIndex(indexes.SearchIndex, indexes.Indexable):
     gender = indexes.CharField(model_attr='gender', null=True)
     bionotes = indexes.CharField(model_attr='bio_notes', null=True)
     modeltype = indexes.CharField(model_attr='get_type', null=True)
+
     def get_model(self):
         return Person
+
     def get_type(self):
         return 'Person'
 
+
 class PlaceIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True) #i think you use this for all indexes?
+    text = indexes.CharField(document=True, use_template=True) # I think you use this for all indexes?
     uniqueID = indexes.CharField(model_attr='id_tei')
     name = indexes.CharField(model_attr='name', null=True)
     county = indexes.CharField(model_attr='county', null=True, faceted=True)
     state = indexes.CharField(model_attr='state', null=True, faceted=True)
     notes = indexes.CharField(model_attr='notes', null=True)
     modeltype = indexes.CharField(model_attr='get_type', null=True)
+
     def get_model(self):
         return Place
+
     def get_type(self):
         return 'Place'
+
 
 class OrgIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
@@ -52,8 +55,10 @@ class OrgIndex(indexes.SearchIndex, indexes.Indexable):
     org_type = indexes.CharField(model_attr='org_type', null=True, faceted=True)
     bio_notes = indexes.CharField(model_attr='bio_notes', null=True)
     modeltype = indexes.CharField(model_attr='get_type', null=True)
+
     def get_model(self):
         return Org
+
     def get_type(self):
         return 'Organization'
 
@@ -65,8 +70,10 @@ class PageIndex(indexes.SearchIndex, indexes.Indexable):
     fulltext = indexes.CharField(model_attr='fulltext')
     modeltype = indexes.CharField(model_attr='get_type', null=True)
     # add more attributes here! (comment them out if data not in database yet)
+
     def get_model(self):
         return Page
+
     def get_type(self):
         return 'Page'
 
@@ -81,12 +88,9 @@ class ManuscriptIndex(indexes.SearchIndex, indexes.Indexable):
     call_no = indexes.CharField(model_attr='call_no', null=True)
     modeltype = indexes.CharField(model_attr='get_type', null=True)
     # add more attributes here! (comment them out if data not in database yet)
+
     def get_model(self):
         return Manuscript
+
     def get_type(self):
         return 'Manuscript'
-
-
-#    def index_queryset(self, using=None):
-#        """Used when the entire index for model is updated.""" #I don't know what this does?
-#        return self.get_model().objects.filter(pub_date__lte=datetime.datetime.now())
