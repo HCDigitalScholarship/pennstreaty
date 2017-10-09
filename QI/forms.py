@@ -11,3 +11,7 @@ class ContactForm(forms.Form):
         self.fields['contact_name'].label = "Your name:"
         self.fields['contact_email'].label = "Your email:"
         self.fields['content'].label = "Any concerns, comments, or questions you may have"
+
+
+class ImportXMLForm(forms.Form):
+    xml_file = forms.FileField(label='')

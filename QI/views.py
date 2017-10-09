@@ -11,15 +11,18 @@ from HTMLParser import HTMLParser
 import zipfile as z
 import StringIO as cs
 from tempfile import *
-from forms import ContactForm
+from forms import ContactForm, ImportXMLForm
 from django.core.mail import EmailMessage, send_mail
+
+from xml_import import import_xml_from_file
 
 import os
 
+
 def handler404(request):
-	response = render_to_response('404.html', {}, context_instance=RequestContext(request))
-	response.status_code = 404
-    	return response
+    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
 
 def contact(request):
     form_class = ContactForm
@@ -427,6 +430,18 @@ def SMimport(request):
         return render(request, '../templates/admin/SMimport/index.html',{"success" : True})
     else:
         return render(request, '../templates/admin/SMimport/index.html')
+
+
+def new_xml_import(request):
+    if request.method == 'POST':
+        form = ImportXMLForm(request.POST, request.FILES)
+        if form.is_valid():
+            import_xml_from_file(request.FILES['xml_file'])
+        return render(request, '../templates/admin/XMLimport/index.html', {"success": True})
+    else:
+        form = ImportXMLForm()
+    return render(request, '../templates/admin/XMLimport/index.html', {'form': form})
+
 
 def XMLimport(request):
     # if this is a POST request we need to process the form data

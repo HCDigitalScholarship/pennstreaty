@@ -40,8 +40,8 @@ urlpatterns = [
     url(r'^pageinfo/(?P<id>\S+_[0-9]{3})/$', 'QI.views.newpageinfo', name="pageinfo"),
     url(r'^pagetranscription/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pagetranscription', name="pagetranscription"),
     url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
-    url(r'^admin/QI/XML_to_HTML','QI.views.XMLimport', name="XMLImporter"),
-    url(r'^admin/XML_to_HTML','QI.views.XMLimport', name="XMLImporter"),
+    url(r'^admin/QI/XML_to_HTML','QI.views.new_xml_import', name="XMLImporter"),
+    url(r'^admin/XML_to_HTML','QI.views.new_xml_import', name="XMLImporter"),
     url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'), #maybe irrelevant
     url(r'^search/', include('haystack.urls')),
     url(r'^manuscript/(?P<id>\S+)/', 'QI.views.manu_detail', name="manu_detail"),
