@@ -4,7 +4,7 @@ import sys
 
 from lxml import etree, sax
 
-from .models import Page
+from .models import Page, Manuscript
 
 
 XSLT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -14,10 +14,14 @@ def import_xml_from_file(fsock):
     manuscript_id = os.path.splitext(fsock.name)[0]
     data = fsock.read()
     html_tree = xml_to_html(etree.XML(data))
+    manuscript = Manuscript.objects.get(id_tei=manuscript_id)
+    # Delete preexisting pages associated with the manuscript.
+    Page.objects.filter(Manuscript_id=manuscript).delete()
     for i, page in enumerate(html_tree.getroot()):
         transcription = etree.tostring(page, encoding='unicode', method='html')
-        page_id = manuscript_id+str(i)
-        Page(id_tei=page_id, fulltext=transcription, Manuscript_id=manuscript_id).save()
+        page_id = manuscript_id + '_' + str(i+1).rjust(3, '0')
+        #Page(id_tei=page_id, fulltext=transcription, Manuscript_id=manuscript_id).save()
+        Page.objects.create(id_tei=page_id, fulltext=transcription, Manuscript_id=manuscript)
 
 
 class AugmentedContentHandler(sax.ElementTreeContentHandler):
@@ -80,10 +84,15 @@ class TEIPager(AugmentedContentHandler):
 
     def handlePageBreak(self):
         self.page += 1
-        self.closeAllTags()
-        self.endElement('div')
-        self.startNewPageDiv()
-        self.reopenAllTags()
+        # In this project, TEI files have an initial page break that does not actually correspond
+        # to a new page, so the actions for creating a new page should only be taken after the
+        # first page break has been seen so that a spurious blank first page is not created for
+        # every manuscript.
+        if self.page > 1:
+            self.closeAllTags()
+            self.endElement('div')
+            self.startNewPageDiv()
+            self.reopenAllTags()
 
     def startNewPageDiv(self):
         self.startElement('div', {'class': 'tei-page'})

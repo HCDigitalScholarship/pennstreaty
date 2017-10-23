@@ -437,7 +437,8 @@ def new_xml_import(request):
         form = ImportXMLForm(request.POST, request.FILES)
         if form.is_valid():
             import_xml_from_file(request.FILES['xml_file'])
-        return render(request, '../templates/admin/XMLimport/index.html', {"success": True})
+        context = {'success': True, 'form': ImportXMLForm()}
+        return render(request, '../templates/admin/XMLimport/index.html', context)
     else:
         form = ImportXMLForm()
     return render(request, '../templates/admin/XMLimport/index.html', {'form': form})
