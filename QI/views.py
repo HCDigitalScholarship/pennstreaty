@@ -1,23 +1,32 @@
+
+from django.shortcuts import get_object_or_404
+from django.db.models import Q
+from django.contrib import messages
 from django.views.generic.base import TemplateView
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import RequestContext, loader, Context
 from django.template.loader import get_template
 from django.shortcuts import render, render_to_response, redirect
 from django.core import management, serializers
 from reportlab.pdfgen import canvas
 from io import BytesIO
-from models import Person, Place, Org, Relationship, Page, Manuscript
-from HTMLParser import HTMLParser
+from .models import Person, Place, Org, Relationship, Page, Manuscript, PendingTranscription
+from html.parser import HTMLParser
 import zipfile as z
-import StringIO as cs
+
+from io import StringIO as cs
+
 from tempfile import *
-from forms import ContactForm, ImportXMLForm
+from .forms import ContactForm, ImportXMLForm, TranscribeForm
 from django.core.mail import EmailMessage, send_mail
+from django.views.generic import ListView, DetailView
+from .xml_import import import_xml_from_file
 
-from xml_import import import_xml_from_file
+from django.urls import reverse
 
+import difflib
 import os
-
+import cgi
 
 def handler404(request):
     response = render_to_response('404.html', {}, context_instance=RequestContext(request))
@@ -56,10 +65,13 @@ def historicalbackground (request):
     return render(request, 'historicalbackground.html')
 
 def manuscripts(request):
-    textlist = Manuscript.objects.order_by('title')
+    textlist = Manuscript.objects.filter(transcribed=True).order_by('title')
     pagelist = Page.objects.order_by('Manuscript_id')
     return render(request, 'manuscripts.html', {'textlist':textlist,'pagelist':pagelist})
-
+def transcribe(request):
+    textlist = Manuscript.objects.filter(transcribed=False).order_by('title')
+    pagelist = Page.objects.order_by('Manuscript_id')
+    return render(request, 'transcribe.html', {'textlist':textlist,'pagelist':pagelist})
 def profiles(request):
     person_list = Person.objects.order_by('last_name')
     place_list = Place.objects.order_by('name')
@@ -144,6 +156,7 @@ def outputPagePDF(request,id):
 
 class MLStripper(HTMLParser): #This Class is used in the following view, outputPagePT, to get txt file of a page
     def __init__(self):
+        super().__init__()
         self.reset()
         self.fed = []
 
@@ -199,6 +212,8 @@ def outputAll(request):
     return response
 
 def manu_detail(request,id):
+    search_term=""
+
     try:
         manu = Manuscript.objects.get(id_tei = id) #get this manuscript!
     except Manuscript.DoesNotExist:
@@ -208,7 +223,15 @@ def manu_detail(request,id):
     for page in allpages:
         newpages += [page]
     allpages = sorted(newpages,key=lambda x: x.id_tei)
-    return render(request,'manu_detail.html', {'manu':manu,'allpages':allpages})
+
+    return render(request,'manu_nav.html', {'manu':manu,'allpages':allpages, 'search_term':search_term})
+
+"""
+    if 'search' in request.GET:
+       search_term = request.GET['search']
+       page=page.filter(fulltext__icontains=search_term)
+"""
+
 
 def person_detail(request,id):
     try:
@@ -263,11 +286,87 @@ def org_detail(request,id):
     'org':org, 'allpages':allpages, 'allmanuscripts':allmanuscripts,
     #'place':place
     })
+def review_transcription(request, id):
+    obj = get_object_or_404(PendingTranscription, doc__id_tei=id)
+    if request.method == 'POST':
+        if 'deletebutton' in request.POST:
+            obj.delete()
+            messages.success(request, 'The transcription was successfully deleted.')
+        else:
+            obj.doc.fulltext = obj.transcription
+            obj.doc.transcribed = True
+            obj.doc.save()
+            obj.delete()
+            messages.success(request, 'The transcription was successfully approved.')
+        return HttpResponseRedirect('/admin')
+    else:
+        old_lines = split_html_lines(obj.doc.fulltext)
+        new_lines = split_html_lines(obj.transcription)
+        d = difflib.Differ()
+        diff_lines = list(d.compare(old_lines, new_lines))
+        for i, line in enumerate(diff_lines):
+            if line.startswith('  '):
+               diff_lines[i] = '<span class="diff-both">' + line[2:] + '</span>'
+            elif line.startswith('- '):
+               diff_lines[i] = '<span class="diff-first">' + line[2:] + '</span>'
+            elif line.startswith('+ '):
+               diff_lines[i] = '<span class="diff-second">' + line[2:] + '</span>'
+            elif line.startswith('? '):
+                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
+        context = {
 
+            'object': obj,
+            'diff_table': '<br>'.join(diff_lines)
+        }
+        Page_id = id[len(id)-3:]
+        return render(request, 'review_transcription.html', {'Page_id':Page_id, 'object': obj, 'diff_table':'<br>'.join(diff_lines)})
+
+
+class ReviewTranscriptionList(ListView):
+    model = PendingTranscription
+    template_name = 'review_transcription_list.html'
+def split_html_lines(html_str):
+    # New transcriptions will always insert '<br>', but some of the old transcriptions have variant
+    # spellings of the tag.
+    html_str = html_str.replace('<br/>', '<br>').replace('<br />', '<br>')
+    return html_str.split('<br>')
+def transcribe_info(request,id):
+    try:
+       page = Page.objects.get(id_tei = id)
+       manuscript = Manuscript.objects.get(title = page.Manuscript_id)
+    except Page.DoesNotExist:
+       raise Http404('this page does not exist')
+    j = 0
+    for i in range(1,1000): # i made this range bc page # is in 000 format so 999 should b highest # page possible
+        # page_id will be manuscript_id + _ + i
+        try:
+            if i < 10:
+                pageid = manuscript.id_tei + "_00" + str(i)
+            elif i < 100:
+                pageid = manuscript.id_tei + "_0" + str(i)
+            else:
+                pageid = manuscript.id_tei + "_" + str(i)
+            testpage = Page.objects.get(id_tei = pageid)
+        except:
+            if j==0:
+                j=j+1 #make sure this only happens the first time that the "except" is reached
+                lastpage = i-1
+    	#now lastpage should be the page number of the last page in the manuscript!
+    Page_id = id[len(id)-3:] # this should be the page #
+    if request.method == 'POST':
+        form = TranscribeForm(request.POST)
+        if form.is_valid():
+            # Replace newlines with <br> tags and escape all HTML tags.
+           clean_text = '<br>'.join(cgi.escape(form.cleaned_data['text']).splitlines())
+           clean_author = cgi.escape(form.cleaned_data['name'])
+           page.pendingtranscription_set.create(transcription=clean_text, author=clean_author)
+    else:
+        form = TranscribeForm()	
+    return render(request,'transcribe_detail.html', {'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'form':form})
 def pageinfo(request,id):
     try:
-        page = Page.objects.get(id_tei = id)
-        manuscript = Manuscript.objects.get(title = page.Manuscript_id)
+        current_page = Page.objects.get(id_tei = id)
+        manuscript = Manuscript.objects.get(title = current_page.Manuscript_id)
     except Page.DoesNotExist:
         raise Http404('this page does not exist')
     # need to go through manuscript pages and determine which is the last page
@@ -287,12 +386,36 @@ def pageinfo(request,id):
                 j=j+1 #make sure this only happens the first time that the "except" is reached
                 lastpage = i-1
     #now lastpage should be the page number of the last page in the manuscript!
+    
     Page_id = id[len(id)-3:] # this should be the page #
-    return render(request,'page_detail.html', {
-    'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id
-    })
+
+    pagenumber = int(Page_id)
+    
+    Manuscript_key = current_page.Manuscript_id
+    possible_pages = Page.objects.filter(Manuscript_id = Manuscript_key)
+    pages_list=[]
+    for index, page in enumerate(possible_pages):
+        pages_list.append(page)
+
+        if page == current_page:
+                print('current=', index)
+                current = int(index)
+    previous = pages_list[current-1]
+    try:
+        next_one = pages_list[current+1]
+    except:
+        next_one = pages_list[0]
+
+    total = len(possible_pages)
+    
+    template_name='viewpage2.html'   
+    return render(request,template_name, {'current_page':current_page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'total':total, 'previous':previous, 'next_one':next_one,'pagenumber':pagenumber})
 
 	#gotta include info as to whether or not it's the first or last pg in a manuscript!
+
+def page_Redirect(request,page):
+    args=['page',page]
+    return HttpsResponseRedirect(reverse('QI:viewpage2',args=args))
 
 def newpageinfo(request,id): #for when cornplanter.js tries to get info of a new page
     try:
@@ -318,6 +441,7 @@ def newpageinfo(request,id): #for when cornplanter.js tries to get info of a new
                 lastpage = i-1
     #now lastpage should be the page number of the last page in the manuscript!
     Page_id = id[len(id)-3:] # this should be the page #
+
     return render(request,'page_detail_2.html', {
     'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id
     })
@@ -383,7 +507,48 @@ def storymap(request, xml_id):
 
 def travelRoutes(request):
     return render(request, 'travelRoutes.html')
+"""
+def review_transcription(request, pk):
+    obj = get_object_or_404(PendingTranscription, pk=pk)
+    if request.method == 'POST':
+        if 'deletebutton' in request.POST:
+            obj.delete()
+            messages.success(request, 'The transcription was successfully deleted.')
+        else:
+            if obj.doc.transcription:
+                obj.doc.backup_transcription = obj.doc.transcription
+            obj.doc.transcription = obj.transcription
+            obj.doc.save()
+            obj.delete()
+            messages.success(request, 'The transcription was successfully approved.')
+        return HttpResponseRedirect('/admin')
+    else:
+        # The transcription is line-delineated by <br> tags instead of newlines, but difflib can
+        # only generate diffs for newline-delineated strings.
+        old_lines = split_html_lines(obj.doc.transcription)
+        new_lines = split_html_lines(obj.transcription)
+        d = difflib.Differ()
+        diff_lines = list(d.compare(old_lines, new_lines))
+        for i, line in enumerate(diff_lines):
+            if line.startswith('  '):
+                diff_lines[i] = '<span class="diff-both">' + line[2:] + '</span>'
+            elif line.startswith('- '):
+                diff_lines[i] = '<span class="diff-first">' + line[2:] + '</span>'
+            elif line.startswith('+ '):
+                diff_lines[i] = '<span class="diff-second">' + line[2:] + '</span>'
+            elif line.startswith('? '):
+                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
+        context = {
+            'object': obj,
+            'diff_table': '<br>'.join(diff_lines)
+        }
+        return render(request, 'review_transcription.html', context)
 
+
+class ReviewTranscriptionList(ListView):
+    model = PendingTranscription
+    template_name = 'handwritten_texts/review_transcription_list.html'
+"""
 def SMimport(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -400,28 +565,28 @@ def SMimport(request):
             if afterdot:
                 fileType=fileType+char
                 continue
-            if char <> '.':
+            if char != '.':
                 trunc_fileName=trunc_fileName+char
             else:
                 afterdot=True
                 continue
-        if fileType <> "xml":
-            print "Needs to be a .xml file"
+        if fileType != "xml":
+            print ("Needs to be a .xml file")
             #it would be sick if a had an error message or page
             return render(request, '../templates/admin/SMimport/index.html',{'failed' : True})
-        print fileType
-        print trunc_fileName
-        print fileName
-        print '/static/xml/'+fileName
+        print (fileType)
+        print (trunc_fileName)
+        print (fileName)
+        print ('/static/xml/'+fileName)
         #This is pretttty hacky and may have some problems
         #I am changing the working directory so that python writes it into the spot I want it to
         #Is there a better way to do this? Probably. Can probably do it where you open the file, but that wasn't working for me
         current_directory=os.getcwd()
-        print current_directory, type(current_directory)
+        print (current_directory, type(current_directory))
         os.chdir(current_directory+"/static/xml")
-        print os.getcwd()
+        print (os.getcwd())
         with open(fileName,'w') as f:
-            print "we did it"
+            print ("we did it")
             a=the_file.read()
             #print a
             f.write(a)
@@ -466,25 +631,25 @@ def XMLimport(request):
             if afterdot:
                 fileType=fileType+char
                 continue
-            if char <> '.':
+            if char != '.':
                 trunc_fileName=trunc_fileName+char
             else:
                 afterdot=True
                 continue
-        if fileType <> "xml":
-            print "Needs to be a .xml file"
+        if fileType != "xml":
+            print ("Needs to be a .xml file")
             #it would be sick if a had an error message or page
             return render(request, '../templates/admin/XMLimport/index.html',{'failed' : True})
-        print fileType
-        print trunc_fileName
-        print fileName
-        print '/static/xml/'+fileName
+        print (fileType)
+        print (trunc_fileName)
+        print (fileName)
+        print ('/static/xml/'+fileName)
 
         #This is pretttty hacky and may have some problems
         #I am changing the working directory so that python writes it into the spot I want it to
         #Is there a better way to do this? Probably. Can probably do it where you open the file, but that wasn't working for me
         current_directory=os.getcwd()
-        print current_directory, type(current_directory)
+        print (current_directory, type(current_directory))
         os.chdir(current_directory+"/static/AutoModels")
         filepath = os.getcwd()
         with open(fileName,'w') as f:
@@ -505,5 +670,24 @@ def XMLimport(request):
     else:
         return render(request, '../templates/admin/XMLimport/index.html')
 
+def inText_search(request):
+   return render(request,'search/inText_search.html')
+
+
+"""
+class inText_search(SearchView):
+    template_name='search/inText_search.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(inText_search, self).get_context_data(*args, **kwargs)
+        pages = []
+        for result in context['object_list']:
+            if hasattr(result.object, 'id_tei'):
+                pages.append(result)
+        context['pages'] = pages
+        return context
+"""
 class Home(TemplateView):
     template_name = 'index.html'
+
+

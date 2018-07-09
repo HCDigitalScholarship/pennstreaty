@@ -2,8 +2,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-     <!--   this is the css styling for datatables (it is a foundation library/datatable compatible thing) -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
+     <!-- this is the css styling for datatables (it is a foundation library/datatable compatible thing) --> <link rel="stylesheet" type="text/css" 
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
     {% include 'top-links.html' %}
 
 
@@ -14,19 +14,6 @@
   </head>
 
   <body>
-    <!--
-	<header>
-          <div class = "overlay-container">
-            <img src="{% static "img/qandi.png" %}" alt="Header img" />
-              <div  class = "overlay1 show-for-large-up">
-
-
-
-                <strong>People, Places, &amp; Groups</strong>
-              </div>
-        </div>
-
-    </header>-->
 
         {% include 'header.html' %}
 
@@ -35,9 +22,9 @@
     </div>
 
 
-     <div id = "profiles1">
+     <div id = "profiles1" style="margin-top:0px">
 
-      <ul class="tabs" data-tab>
+      <ul class="tabs" data-tab  style="margin-top:0px">
         <li class="tab-title active"><a href="#panel1">Persons</a></li>
         <li class="tab-title"><a href="#panel2">Places </a></li>
         <li class="tab-title"><a href="#panel3">Organizations</a></li>
@@ -172,11 +159,11 @@
 
  {% include 'bottom-links.html' %}
 <!-- this is the script necesssary for datatables.  you also need css styling for the datatable -->
-  <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
   <script>
     $(document).ready(function() {
       $('table.display').DataTable( {
-        dom: 'Bfrtip',
+        dom: 'Blftip',
                buttons: [
                 {
                     extend: 'copyHtml5',
@@ -204,10 +191,8 @@
                 }
             ],
        "aLengthMenu": [[20, 50, 100, -1], [20, 50, 100]]
-
         } );
     } );
-
    </script>
 
   </body>

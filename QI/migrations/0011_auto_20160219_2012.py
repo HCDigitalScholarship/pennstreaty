@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='book',
             name='author',
-            field=models.ForeignKey(blank=True, to='QI.Person', null=True),
+            field=models.ForeignKey(blank=True, to='QI.Person', null=True, on_delete=models.CASCADE),
         ),
     ]

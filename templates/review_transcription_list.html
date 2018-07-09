@@ -1,0 +1,33 @@
+
+{% extends 'admin/base_site.html' %}
+
+{% load staticfiles %}
+
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'admin/css/forms.css' %}">
+<link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+  <h1>All Unapproved Transcriptions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Manuscript</th>
+        <th>Date Transcribed</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for transcription in object_list %}
+    <tr>
+      <td><a href="/admin/review_transcriptions/{{ transcription.doc.id_tei }}">{{ transcription.doc.id_tei }}</a></td>
+      <td>{{ transcription.uploaded }}</td>
+      <td>{{ transcription.name }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

@@ -74,26 +74,26 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='person',
             name='birth_place',
-            field=models.ForeignKey(related_name='birthplace', blank=True, to='QI.Place', null=True),
+            field=models.ForeignKey(related_name='birthplace', blank=True, to='QI.Place', null=True, on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='person',
             name='death_place',
-            field=models.ForeignKey(related_name='deathplace', blank=True, to='QI.Place', null=True),
+            field=models.ForeignKey(related_name='deathplace', blank=True, to='QI.Place', null=True,on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='person',
             name='role',
-            field=models.ForeignKey(related_name='person_Role_1', blank=True, to='QI.RoleType', null=True),
+            field=models.ForeignKey(related_name='person_Role_1', blank=True, to='QI.RoleType', null=True,on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='person',
             name='role2',
-            field=models.ForeignKey(related_name='person_Role_2', blank=True, to='QI.RoleType', null=True),
+            field=models.ForeignKey(related_name='person_Role_2', blank=True, to='QI.RoleType', null=True,on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='person',
             name='role3',
-            field=models.ForeignKey(related_name='person_Role_3', blank=True, to='QI.RoleType', null=True),
+            field=models.ForeignKey(related_name='person_Role_3', blank=True, to='QI.RoleType', null=True,on_delete=models.CASCADE),
         ),
     ]

@@ -378,7 +378,7 @@ def xml_to_html(xml_file):
       	id_manuscript=(Manuscript.objects.filter(id_tei=trunc_filename))[0]
       except IndexError:
 	print "It looks like the id of the manuscript did not exist"
-	print "this is going to be an error" #Might want to update this. It would be SICK if it would catch it and then throw something up on the page
+	print "this is going to be an error" 
 	id_manuscript=None
       print id_manuscript, "man id"
       print html_list, "oh hey there"

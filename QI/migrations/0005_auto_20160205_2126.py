@@ -32,11 +32,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='location',
             name='loc_type_id',
-            field=models.ForeignKey(related_name='LocationType', blank=True, to='QI.LocType', null=True),
+            field=models.ForeignKey(related_name='LocationType', blank=True, to='QI.LocType', null=True,on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='place',
             name='location_id',
-            field=models.ForeignKey(related_name='Location', blank=True, to='QI.Location', null=True),
+            field=models.ForeignKey(related_name='Location', blank=True, to='QI.Location', null=True,on_delete=models.CASCADE),
         ),
     ]

@@ -497,7 +497,7 @@ the categories are also hard-coded in but i think that's just how it has to be w
     <div id="collapse5" class="panel-collapse collapse">
       <div class="panel-body">
 
-<!--        <div class="col-sm-6">
+        <div class="col-sm-6">
                 <div>
                     <dl>
                         {% if facets.fields.person_id %}
@@ -511,7 +511,8 @@ the categories are also hard-coded in but i think that's just how it has to be w
                         {% endif %}
                     </dl>
                 </div>
-              </div> -->
+              </div> 
+
 
 {% if facets.fields.date %}
 {% if facets.fields.date.0.1 > 0 or facets.fields.date.1.1 > 0 or facets.fields.date.2.1 > 0 or facets.fields.date.3.1 > 0 or facets.fields.date.4.1 > 0 %}
@@ -661,10 +662,9 @@ the categories are also hard-coded in but i think that's just how it has to be w
        {% endwith %}
 
 
-       <!--
 
 
-            {% for result in page.object_list %}
+<!--            {% for result in page.object_list %}
                 <p>
 
                     {% if result.object.get_type == 'Person' %}
@@ -693,9 +693,8 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
             {% empty %}
                 <p>No results found.</p>
-            {% endfor %}
+            {% endfor %}-->
 
--->
 
 
         {% if page.has_previous or page.has_next %}

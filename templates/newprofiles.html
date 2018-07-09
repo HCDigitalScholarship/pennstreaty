@@ -1,0 +1,110 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8" https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js></script>
+  <script type="text/javascript" charset="utf8" https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js></script>
+   {% include 'top-links.html' %}
+ </head>
+  
+<body>
+        {% include 'header.html' %}
+
+    <div id = "row1">
+    	{% include 'nav.html' %}
+    </div>
+
+
+     <div id = "profiles1">
+
+      <ul class="tabs" data-tab>
+        <li class="tab-title active"><a href="#panel1">Persons</a></li>
+        <li class="tab-title"><a href="#panel2">Places </a></li>
+        <li class="tab-title"><a href="#panel3">Organizations</a></li>
+      </ul>
+
+      <div class="tabs-content">
+        <div class="content active" id="panel1">
+         <div class = "row">
+           <table id="example" class="display" style="width:100%">
+                                        <thead>
+                                                <tr>
+                                                        <th>Name</th>
+                                                        <th>Other Names</th>
+                                                        <th> Affiliation </th>
+                                                        <th> Birth Date</th>
+                                                        <th> Death Date </th>
+                                                        <th>  Notes </th>
+                                                        <th> URI LCNAF  </th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                {% if persons %}
+                                                                {% for person in persons %}
+                                                        <tr>
+
+                                                                <td>
+                                                                  <a href="/person/{{person.id_tei}}">  {{person.first_name}}  {{person.last_name}} </a>
+                                                                </td>
+                                                                <td> {{person.other_names}} </td>
+
+                                                                <td>{{person.affiliation}} </td>
+                                                                <td> {{person.birth_date}} </td>
+                                                                <td>{{person.death_date}} </td>
+                                                                <td>{{person.notes}} </td>
+                                                                <td><a href = "{{person.uri_lcnaf}}"> {{person.uri_lcnaf}} </a></td>
+
+                                                        </tr>
+                                                                {% endfor %}
+                                        </tbody>
+          </table>
+
+           {% else %}
+                <strong> There are no persons available at this time in the db. </strong>
+           {% endif %}
+      </div>
+
+
+<script>
+$(document).ready(function() {
+    var buttonCommon = {
+        exportOptions: {
+            format: {
+                body: function ( data, row, column, node ) {
+                    // Strip $ from salary column to make it numeric
+                    return column === 5 ?
+                        data.replace( /[$,]/g, '' ) :
+                        data;
+                }
+            }
+        }
+    };
+ 
+    $('#example').DataTable( {
+        ajax: '../../../../examples/ajax/data/objects.txt',
+        columns: [
+            { data: 'name' },
+            { data: 'position' },
+            { data: 'office' },
+            { data: 'extn' },
+            { data: 'start_date' },
+            { data: 'salary' }
+        ],
+        dom: 'Bfrtip',
+        buttons: [
+            $.extend( true, {}, buttonCommon, {
+                extend: 'copyHtml5'
+            } ),
+            $.extend( true, {}, buttonCommon, {
+                extend: 'excelHtml5'
+            } ),
+            $.extend( true, {}, buttonCommon, {
+                extend: 'pdfHtml5'
+            } )
+        ]
+    } );
+} );
+</script>
+</body>

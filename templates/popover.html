@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<div>
+<a href="#"  data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right">Popover Example</a>
+
+<div id="a1" class="hidden">
+  <div class="popover-heading">Title <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span></div>
+  <div class="popover-body">
+    <table style="width:100%">
+      <tr>
+        <td>Jill</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>80</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script>
+
+$(function() {
+  $("[data-toggle=popover]").popover({
+    html: true,
+    content: function() {
+      var content = $(this).attr("data-popover-content");
+      return $(content).children(".popover-body").html();
+    },
+    title: function() {
+      var title = $(this).attr("data-popover-content");
+      return $(title).children(".popover-heading").html();
+    }
+  });
+});
+
+</script>
+</body>
+</html>
+

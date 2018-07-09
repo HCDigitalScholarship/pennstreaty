@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('date', models.CharField(max_length=20, verbose_name=b'Date', blank=True)),
                 ('type_of_Manuscript', models.CharField(max_length=100, verbose_name=b'Type', blank=True)),
                 ('call_no', models.CharField(max_length=100, verbose_name=b'call_no', blank=True)),
-                ('person_id', models.ForeignKey(related_name='person_id_text', blank=True, to='QI.Person', null=True)),
+                ('person_id', models.ForeignKey(related_name='person_id_text', blank=True, to='QI.Person', null=True,on_delete=models.CASCADE)),
             ],
         ),
         migrations.RemoveField(
@@ -37,6 +37,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='page',
             name='Manuscript_id',
-            field=models.ForeignKey(related_name='Manuscript_id', blank=True, to='QI.Manuscript', null=True),
+            field=models.ForeignKey(related_name='Manuscript_id', blank=True, to='QI.Manuscript', null=True,on_delete=models.CASCADE),
         ),
     ]

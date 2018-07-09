@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('imported', models.BooleanField(default=False)),
                 ('published', models.DateField(null=True, verbose_name=b'Published', blank=True)),
                 ('price', models.DecimalField(null=True, max_digits=10, decimal_places=2, blank=True)),
-                ('author', models.ForeignKey(blank=True, to='QI.Author', null=True)),
+                ('author', models.ForeignKey(blank=True, to='QI.Author', null=True, on_delete=models.CASCADE)),
             ],
         ),
         migrations.CreateModel(

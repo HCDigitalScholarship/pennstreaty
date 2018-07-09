@@ -3,8 +3,7 @@ from import_export.admin import ImportExportModelAdmin
 from import_export import resources, fields
 from import_export.fields import Field
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
-from QI.models import (Person, Place, RoleType, Relationship, RelationshipType, Location, LocType,
-                       Org, Affiliation, Manuscript, Page)
+from QI.models import *
 from django.forms import *
 from django.db import models
 
@@ -28,8 +27,8 @@ class PersonResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
-                    print "This is related to",field_name,'for person:',data['id_tei'],"\n"
+                    print ("No matching TEI id for:",data[field_name],",:(")
+                    print ("This is related to",field_name,'for person:',data['id_tei'],"\n")
                     continue
             elif field_name=='affiliations' and 'affiliations' in data:
                 new_data = Org.objects.all()
@@ -41,7 +40,7 @@ class PersonResource(resources.ModelResource):
                     data[field_name] = None
                     continue
                 for item in str(data[field_name]):
-                    if item <> ";":
+                    if item != ";":
                         mystr = mystr+item
                     else:
                         mylist = mylist+[mystr.lower()]
@@ -53,16 +52,16 @@ class PersonResource(resources.ModelResource):
                         newlist= newlist + [i.id]
                         del mylist[mylist.index(str(i.id_tei))]
                     index = index + 1
-                if mylist <> list():
-                    print 'Did not find a match for some affiliations:',mylist
-                    print "This is for", data['id_tei'],"\n"
+                if mylist != list():
+                    print ('Did not find a match for some affiliations:',mylist)
+                    print ("This is for", data['id_tei'],"\n")
                 if not match:
-                    print "NO matching TEI id for:",data[field_name]," in many-to-many import",mylist
-                    print 'This item will have NO affiliations'
-                    print "This is for", data['id_tei'],'\n\n'
+                    print ("NO matching TEI id for:",data[field_name]," in many-to-many import",mylist)
+                    print ('This item will have NO affiliations')
+                    print ("This is for", data['id_tei'],'\n\n')
                     data[field_name] = None
                     continue
-            if field_name<>'affiliations':
+            if field_name !='affiliations':
                 self.import_field(field, obj, data)
             else:
                 data['affiliations'] = str(newlist)[1:-1]
@@ -114,7 +113,7 @@ class PlaceResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
                     continue
             self.import_field(field, obj, data)
 
@@ -160,7 +159,7 @@ class RelationshipResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
             self.import_field(field, obj, data)
 
     class Meta:
@@ -201,7 +200,7 @@ class LocationResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
             self.import_field(field, obj, data)
 
     class Meta:
@@ -243,7 +242,7 @@ class OrgResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
                     continue
             self.import_field(field, obj, data)
 
@@ -280,7 +279,7 @@ class AffiliationResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
             self.import_field(field, obj, data)
 
     class Meta:
@@ -309,7 +308,7 @@ class ManuscriptResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
             elif (field_name=='org_id' and 'org_id' in data):
                 new_data = Org.objects.all()
                 match = False
@@ -320,7 +319,7 @@ class ManuscriptResource(resources.ModelResource):
                         data[field_name] = i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name]
+                    print ("No matching TEI id for:",data[field_name])
             #Leaving this framework in for this one, it could be useful eventually
             elif field_name=='affiliations' and 'affiliations' in data:
                 new_data = Org.objects.all()
@@ -329,21 +328,21 @@ class ManuscriptResource(resources.ModelResource):
                 mylist = []
                 mystr = ""
                 for item in str(data[field_name]):
-                    if item <> ";":
+                    if item != ";":
                         mystr = mystr+item
                     else:
                         mylist = mylist+[mystr.lower()]
                         mystr = ""
                 mylist = mylist+[mystr.lower()]
                 for i in new_data:
-                    print i.id_tei,i.id
+                    print (i.id_tei,i.id)
                     if str(i.id_tei) in mylist:
                         match = True
                         newlist= newlist + [i.id]
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name]," in many-to-many import,:("
-            if field_name<>'affiliations':
+                    print ("No matching TEI id for:",data[field_name]," in many-to-many import,:(")
+            if field_name != 'affiliations':
                 self.import_field(field, obj, data)
             else:
                 data['affiliations'] = str(newlist)[1:-1]
@@ -356,9 +355,9 @@ class ManuscriptResource(resources.ModelResource):
 
 class ManuscriptAdmin(ImportExportModelAdmin):
     fields = ['id_tei', 'title', 'person_id', 'person_name', 'org_id', 'org_name', 'location',
-              'summary', 'date', 'type_of_Manuscript', 'call_no']
+              'summary', 'date', 'type_of_Manuscript', 'call_no', 'transcribed']
     resource_class = ManuscriptResource
-
+    list_display=['id_tei','title']
 
 class PageResource(resources.ModelResource):
     def import_obj(self, obj, data, dry_run):
@@ -376,7 +375,7 @@ class PageResource(resources.ModelResource):
                         data[field_name]= i.id
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name],",:("
+                    print ("No matching TEI id for:",data[field_name],",:(")
             elif field_name=='affiliations' and 'affiliations' in data:
                 new_data = Org.objects.all()
                 match = False
@@ -384,32 +383,32 @@ class PageResource(resources.ModelResource):
                 mylist = []
                 mystr = ""
                 for item in str(data[field_name]):
-                    if item <> ";":
+                    if item != ";":
                         mystr = mystr+item
                     else:
                         mylist = mylist+[mystr.lower()]
                         mystr = ""
                 mylist = mylist+[mystr.lower()]
                 for i in new_data:
-                    print i.id_tei,i.id
+                    print (i.id_tei,i.id)
                     if str(i.id_tei) in mylist:
                         match = True
                         newlist= newlist + [i.id]
                     index = index + 1
                 if not match:
-                    print "No matching TEI id for:",data[field_name]," in many-to-many import,:("
-            if field_name<>'affiliations':
+                    print ("No matching TEI id for:",data[field_name]," in many-to-many import,:(")
+            if field_name!='affiliations':
                 self.import_field(field, obj, data)
             else:
                 data['affiliations'] = str(newlist)[1:-1]
 
     class Meta:
         model = Page
-        fields = ['id', 'id_tei', 'Manuscript_id', 'img_url', 'fulltext']
+        fields = ['id', 'id_tei', 'Manuscript_id', 'img_url', 'fulltext', 'transcribed']
 
 
 class PageAdmin(ImportExportModelAdmin):
-    fields = ['id_tei', 'Manuscript_id', 'img_url', 'fulltext']
+    fields = ('id_tei', 'Manuscript_id', 'img_url', 'fulltext', 'transcribed')
     resource_class = PageResource
     search_fields = (['id_tei','Manuscript_id__title'])
     list_display = (['id_tei','Manuscript_id'])
@@ -428,3 +427,4 @@ admin.site.register(Org,OrgAdmin)
 admin.site.register(Affiliation,AffiliationAdmin)
 admin.site.register(Manuscript,ManuscriptAdmin)
 admin.site.register(Page,PageAdmin)
+admin.site.register(PendingTranscription)

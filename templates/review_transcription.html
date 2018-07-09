@@ -1,0 +1,46 @@
+{% extends 'admin/base_site.html' %}
+
+{% load staticfiles %}
+{% block extrastyle %}
+<script language="JavaScript" type="text/javascript" src="{% static "js/jquery/dist/jquery.js" %}"></script>
+<script language="JavaScript" type="text/javascript" src="{% static "js/jquery/dist/jquery.min.js" %}"></script>
+<link rel="stylesheet" href="/static/css/review_transcription.css">
+<script src="//openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+<script id="call_the_dragon" type="text/javascript" src="{% static "js/call_the_dragon.js" %}" data-id="{{ object.doc.id_tei }}"></script>
+{% endblock %}
+
+
+{% block content %}
+<div id="content-main">
+  <h1>Review transcription of <a href="/transcribepage/{{ object.doc.id_tei }}">{{ object.doc.id_tei }}</a></h1>
+  <div class="block40">
+    <h2>Image</h2>
+  </div>
+  <div class="block40">
+    <h2>Transcription</h2>
+  </div>
+  <br>
+  <div id="openseadragon1" class="inline-div">
+    <div id="dropdown-placeholder"></div>
+  </div>
+  <!--<div class="inline-div">
+    <img src ="/static/img/{{ object.doc.id_tei }}.jpg" style="max-width:400px;"</div>
+        <div id="openseadragon-wrap" class="large-5 columns">
+            <div id="openseadragon1" style="height:600px">
+                <div id="dropdown-placeholder"></div>
+            </div>
+        </div>
+  </div>-->
+  <div class="inline-div">
+    {% autoescape off %}
+    {{ diff_table }}
+    {% endautoescape %}
+  </div>
+  <form method="post" action="">
+    {% csrf_token %}
+    <input type="submit" name="submitbutton" value="Approve" />
+    or
+    <input type="submit" name="deletebutton" value="Delete" id="delete-button" />
+  </form>
+</div>
+{% endblock %}

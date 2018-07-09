@@ -10,7 +10,16 @@
 {% block breadcrumbs %}{% endblock %}
 {% block content %}
 <div id="content-main">
-
+<div class="module">
+  <table>
+    <caption><a href="#" class="section">Common Tasks</a></caption>
+    <tbody>
+      <tr>
+        <th scope="row"><a class="addlink" href="{% url 'admin_review_transcription_lists' %}">Review unapproved transcriptions</a></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {% if app_list %}
     {% for app in app_list %}
 

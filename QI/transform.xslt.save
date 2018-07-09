@@ -1,0 +1,105 @@
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<xsl:import href="transform-js.xsl"/>
+  <xsl:output omit-xml-declaration="yes" method="xhtml" indent="yes"/>
+
+
+  <xsl:template match="/">
+    <body>
+      <xsl:apply-templates select="tei:TEI/tei:text" />
+    </body>
+  </xsl:template>
+
+
+  <!-- Transform <head>. -->
+  <xsl:template match="tei:head">
+    <h4>
+      <xsl:apply-templates/>
+    </h4>
+  </xsl:template>
+
+
+  <!-- Transform <p>. -->
+  <xsl:template match="tei:p">
+    <p>
+      <xsl:apply-templates/>
+    </p>
+  </xsl:template>
+
+
+  <!-- Transform <lb>. -->
+  <xsl:template match="tei:lb">
+    <br/>
+  </xsl:template>
+
+  <!-- Transform <persName>, <orgName>, <placeName> -->
+  <xsl:template match="tei:persName">
+    <a class="persName" tabindex="0" data-trigger="focus"  data-placement="top" id="popoverInfo">
+      <xsl:attribute name="href">
+        <xsl:text>#</xsl:text>
+        <xsl:value-of select="@key" />
+      </xsl:attribute>
+      <xsl:text>personname</xsl:text>
+    </a>
+       <div id="PopoverTitle" style="display:none">
+         <xsl:text> Person Information </xsl:text>
+       </div>
+       <div id="PopoverContent" style="display:none">
+         <xsl:text>Name</xsl:text>
+       </div>
+  <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match="tei:orgName">
+    <a class="orgName">
+      <xsl:attribute name="href">
+        <xsl:text>#</xsl:text>
+        <xsl:value-of select="@key" />
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
+  
+  <xsl:template match="tei:placeName">
+    <a class="placeName">
+      <xsl:attribute name="href">
+        <xsl:text>#</xsl:text>
+        <xsl:value-of select="@key" />
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
+
+
+  <!-- Preserve these (without the TEI namespace). -->
+  <xsl:template match="tei:pb|tei:div">
+    <xsl:element name="{local-name()}">
+      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
+
+  <!-- The namespace on xml:id has to be eliminated. -->
+  <xsl:template match="tei:div[@xml:id]">
+    <div>
+      <xsl:attribute name="id">
+        <xsl:value-of select="@xml:id" />
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+
+
+  <!-- Ignore these but copy their contents. -->
+  <xsl:template match="tei:pc|tei:i|tei:fw|tei:emph|tei:u|tei:hi|tei:gap|tei:text|tei:choice|tei:ref|tei:front|tei:body|tei:back|tei:g|tei:c|tei:add|tei:foreign">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+
+  <!-- Catch unmatched nodes (courtesy of stackoverflow.com/questions/3360017/). -->
+  <xsl:template match="*">
+    <xsl:message>STYLESHEET WARNING: unmatched element <xsl:value-of select="name()"/></xsl:message>
+    <xsl:apply-templates/>
+  </xsl:template>
+</xsl:stylesheet>

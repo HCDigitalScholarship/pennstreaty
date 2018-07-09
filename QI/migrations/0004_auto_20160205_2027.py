@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Relationship',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('object_id', models.ForeignKey(related_name='objectid', blank=True, to='QI.Person', null=True)),
+                ('object_id', models.ForeignKey(related_name='objectid', blank=True, to='QI.Person', null=True,on_delete=models.CASCADE,)),
             ],
         ),
         migrations.CreateModel(
@@ -33,11 +33,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='relationship',
             name='relationship_type_id',
-            field=models.ForeignKey(related_name='relationshipType', blank=True, to='QI.RelationshipType', null=True),
+            field=models.ForeignKey(related_name='relationshipType', blank=True, to='QI.RelationshipType', null=True,on_delete=models.CASCADE,),
         ),
         migrations.AddField(
             model_name='relationship',
             name='subject_id',
-            field=models.ForeignKey(related_name='subjectid', blank=True, to='QI.Person', null=True),
+            field=models.ForeignKey(related_name='subjectid', blank=True, to='QI.Person', null=True,on_delete=models.CASCADE,),
         ),
     ]

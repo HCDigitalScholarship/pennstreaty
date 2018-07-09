@@ -1,8 +1,11 @@
-$("a").click(function(){
-  console.log('you clicked on something');
+$(document).ready(function(){
+$("a").one('click',function(){
+    console.log('you clicked on something');
     var href = $(this).attr('href');
     var newhref = href.slice(1, href.length);
-    // alert(newhref);
+    var popover_id=$(this).attr('id');
+    console.log(popover_id);
+   // alert(newhref);
     $.ajax({
         //url: '/static/json/'+newhref+'.json',  //right now, i have made unique jsons with the same id name (they are stored in Django's static/json folder)
         url: '/something/'+newhref,
@@ -10,10 +13,8 @@ $("a").click(function(){
         dataType: 'json',
         cache: true,
         success: callback_2,
-        error: function(data) { console.log("not quite");}
-
-})
-
+        error: function(data) { console.log("not quite");},
+       });
 
 //all the conditions for when someone either clicks a name, or the close button, or another name without closing the first slideout
 function callback_2(data) {
@@ -43,134 +44,126 @@ function callback_2(data) {
       }
 
       //start (#1)
-    if (($('.off-canvas div').attr('id')) == undefined) {
-      console.log("its happening!");
-      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth Date </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death Date</span> <p> " + data[0]["fields"].death_date + "</p> <span> Notes </span><p> " + data[0]["fields"].bio_notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></span><p> </div>");
-      $('.off-canvas').animate({"margin-right": '+=25%'});
-      $('i.fa.fa-times').animate({"margin-right": '+=25%'});
+
+       var popoverbody_id="Per-popover-body-"+popover_id.slice(12);
+       console.log(popoverbody_id);
+       var information = "<div> Name: " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</div><div> Birth Date: " + data[0]["fields"].birth_date + "</div> <div> Death Date: " + data[0]["fields"].death_date + "</div> <div> Notes: " + data[0]["fields"].bio_notes.substr(0,120) + "</div> <div><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View more information</a><div>"
+       console.log(information);
+      $('#'+popoverbody_id).append(information);
+
+       $("[data-toggle=popover-1]").popover({
+         html: true,
+         content: function() {
+         var content = $(this).attr("data-popover-content-1");
+         return $(content).children("#"+popoverbody_id).html();
+        },
+         title: function() {
+         var title = $(this).attr("data-popover-content-1");
+         return $(title).children(".popover-heading1").html();
+        }
+
+      });
+
 
     }
-    else if (newhref == ($('.off-canvas div').attr('id'))) {
-        $('.off-canvas').animate({"margin-right": '-=25%'});
-        $('i.fa.fa-times').animate({"margin-right": '-=25%'});
-        $('.off-canvas div').remove();
-    }
-     else {
-        //this is the case when you click on another (different) a href right after clicking a first one
-      $('.off-canvas').animate({"margin-right": '-=25%'});
-      $('i.fa.fa-times').animate({"margin-right": '-=25%'});
-      $('.off-canvas div').remove();
-      $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Person Information</h3><span> Name </span><p> " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</p><span> Birth Date </span> <p>" + data[0]["fields"].birth_date + "</p> <span> Death Date</span> <p> " + data[0]["fields"].death_date + "</p> <span> Notes </span><p> " + data[0]["fields"].bio_notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></span><p> </div>");
-      $('.off-canvas').animate({"margin-right": '+=25%'});
-      $('i.fa.fa-times').animate({"margin-right": '+=25%'});
 
-    }
-  }
          //end of big if statement !
 
-  else if (data[0]["model"] == "QI.place")  {
 
-    if (data[0]["fields"].county == ""){
-      data[0]["fields"].county = 'Unknown';
-    }
+    else if (data[0]["model"] == "QI.place")  {
 
-    if (data[0]["fields"].state == ""){
-      data[0]["fields"].state = 'Unknown';
-    }
+      if (data[0]["fields"].county == ""){
+        data[0]["fields"].county = 'Unknown';
+      }
 
-    if (data[0]["fields"].latitude == "") {
-      data[0]["fields"].latitude = 'Unknown';
-    }
+      if (data[0]["fields"].state == ""){
+        data[0]["fields"].state = 'Unknown';
+      }
+
+      if (data[0]["fields"].latitude == "") {
+        data[0]["fields"].latitude = 'Unknown';
+      }
+      else {
+        data[0]["fields"].latitude = data[0]["fields"].latitude + " N"
+        data[0]["fields"].longitude = data[0]["fields"].longitude + " W"
+      }
+
+      if (data[0]["fields"].notes == "") {
+        data[0]["fields"].notes = 'None';
+      }
+
+      if (data[0]["fields"].alternate == "")  {
+        data[0]["fields"].alternate = 'None';
+      }
+
+       var popoverbody_id="Pla-popover-body-"+popover_id.slice(12);
+       console.log(popoverbody_id);
+
+       var information = "<div> Name: " + data[0]["fields"].name + "</div><div> County: " + data[0]["fields"].county + "</div> <div> State: " + data[0]["fields"].state + "</div> <div> Location: " + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</div> <div> Notes: " + data[0]["fields"].notes.substr(0,120) + "</div> <div> Alternate Spellings: "+ data[0]["fields"].alternate + "</div> <div><a href=/place/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></div>"
+
+       $('#'+popoverbody_id).append(information);  
+
+
+       $("[data-toggle=popover-3]").popover({
+         html: true,
+         content: function() {
+         var content = $(this).attr("data-popover-content-3");
+         return $(content).children("#"+popoverbody_id).html();
+        },
+         title: function() {
+         var title = $(this).attr("data-popover-content-3");
+         return $(title).children(".popover-heading3").html();
+        }
+      });
+  }
+
     else {
-      data[0]["fields"].latitude = data[0]["fields"].latitude + " N"
-      data[0]["fields"].longitude = data[0]["fields"].longitude + " W"
-    }
 
-    if (data[0]["fields"].notes == "") {
-      data[0]["fields"].notes = 'None';
-    }
+      if (data[0]["fields"].date_founded == ""){
+        data[0]["fields"].date_founded = 'Unknown';
+      }
 
-    if (data[0]["fields"].alternate == "")  {
-      data[0]["fields"].alternate = 'None';
-    }
+      if (data[0]["fields"].date_dissolved == ""){
+        data[0]["fields"].date_dissolved = 'Unknown';
+      }
+ 
+      if (data[0]["fields"].notes == "") {
+        data[0]["fields"].notes = 'Unknown';
+      }
 
+      if (data[0]["fields"].associated_spellings == "") {
+        data[0]["fields"].associated_spellings = 'None';
+      }
 
-  if (($('.off-canvas div').attr('id')) == undefined) {
-    $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Place Information</h3><span> Name </span><p> " + data[0]["fields"].name + "</p><span> County </span> <p>" + data[0]["fields"].county + "</p> <span> State </span> <p> " + data[0]["fields"].state + "</p> <span> Location </span> <p>" + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].alternate + "</p> <span><a href=/place/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></span><p> </div>");
-    $('.off-canvas').animate({"margin-right": '+=25%'});
-    $('i.fa.fa-times').animate({"margin-right": '+=25%'});
+      if (data[0]["fields"].other_names == "")  {
+        data[0]["fields"].other_names = 'None';
+      }
 
-  }
-  else if (newhref == ($('.off-canvas div').attr('id'))) {
-      $('.off-canvas').animate({"margin-right": '-=25%'});
-      $('i.fa.fa-times').animate({"margin-right": '-=25%'});
-      $('.off-canvas div').remove();
-  }
-   else {
-      //this is the case when you click on another (different) a href right after clicking a first one
-    $('.off-canvas').animate({"margin-right": '-=25%'});
-    $('i.fa.fa-times').animate({"margin-right": '-=25%'});
-    $('.off-canvas div').remove();
-    $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Place Information</h3><span> Name </span><p> " + data[0]["fields"].name + "</p><span> County </span> <p>" + data[0]["fields"].county + "</p> <span> State </span> <p> " + data[0]["fields"].state + "</p> <span> Location </span> <p>" + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Alternate Spellings </span> <p>" + data[0]["fields"].alternate + "</p> <span><a href=/place/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></span><p> </div>");
-    $('.off-canvas').animate({"margin-right": '+=25%'});
-    $('i.fa.fa-times').animate({"margin-right": '+=25%'});
+      //start (#1)
 
-  }
-
-  }
-
-  else {
-
-    if (data[0]["fields"].date_founded == ""){
-      data[0]["fields"].date_founded = 'Unknown';
-    }
-
-    if (data[0]["fields"].date_dissolved == ""){
-      data[0]["fields"].date_dissolved = 'Unknown';
-    }
-
-    if (data[0]["fields"].notes == "") {
-      data[0]["fields"].notes = 'Unknown';
-    }
-
-    if (data[0]["fields"].associated_spellings == "") {
-      data[0]["fields"].associated_spellings = 'None';
-    }
-
-    if (data[0]["fields"].other_names == "")  {
-      data[0]["fields"].other_names = 'None';
-    }
-
-    //start (#1)
-  if (($('.off-canvas div').attr('id')) == undefined) {
-    $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Organization Information</h3><span> Name </span><p> " + data[0]["fields"].organization_name + "</p><span> Date Founded </span> <p>" + data[0]["fields"].date_founded + "</p> <span> Date Dissolved </span> <p> " + data[0]["fields"].date_dissolved +  "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Associated Spellings </span> <p>" + data[0]["fields"].associated_spellings + "</p> <span> Other Names </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/org/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></span><p> </div>");
-    $('i.fa.fa-times').animate({"margin-right": '+=25%'});
-    $('.off-canvas').animate({"margin-right": '+=25%'});
-
-  }
-  else if (newhref == ($('.off-canvas div').attr('id'))) {
-      $('.off-canvas').animate({"margin-right": '-=25%'});
-      $('i.fa.fa-times').animate({"margin-right": '-=25%'});
-      $('.off-canvas div').remove();
-  }
-   else {
-      //this is the case when you click on another (different) a href right after clicking a first one
-    $('.off-canvas').animate({"margin-right": '-=25%'});
-    $('i.fa.fa-times').animate({"margin-right": '-=25%'});
-    $('.off-canvas div').remove();
-    $('.off-canvas').append("<div id = "+newhref+"><br /><h3>Organization Information</h3><span> Name </span><p> " + data[0]["fields"].organization_name  + "</p><span> Date Founded </span> <p>" + data[0]["fields"].date_founded + "</p> <span> Date Dissolved </span> <p> " + data[0]["fields"].date_dissolved  + "</p> <span> Notes </span><p> " + data[0]["fields"].notes + "</p> <span> Associated Spellings </span> <p>" + data[0]["fields"].associated_spellings + "</p> <span> Other Names </span> <p>" + data[0]["fields"].other_names + "</p> <span><a href=/org/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></span><p> </div>");
-    $('.off-canvas').animate({"margin-right": '+=25%'});
-    $('i.fa.fa-times').animate({"margin-right": '+=25%'});
-
-  }
-
-  }
-
-
-
-
+       var popoverbody_id="Org-popover-body-"+popover_id.slice(12);
+       console.log(popoverbody_id);
+     
+        var information = "<div>Name: " + data[0]["fields"].organization_name + "</div><div> Date Founded: " + data[0]["fields"].date_founded + "</div><div> Date Disssolved: " + data[0]["fields"].date_dissolved +  "</div> <div> Notes: " + data[0]["fields"].notes.substr(0,120) + "...</div> <div> Associated Spellings: " + data[0]["fields"].associated_spellings + "</div><div> Other Names: " + data[0]["fields"].other_names + "</div><div><a href=/org/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></div>"
+        $('#'+ popoverbody_id).append(information);
+        
+        $("[data-toggle=popover-2]").popover({
+         html: true,
+         content: function() {
+         var content = $(this).attr("data-popover-content-2");
+         return $(content).children('#'+popoverbody_id).html();
+        },
+         title: function() {
+         var title = $(this).attr("data-popover-content-2");
+         return $(title).children('#popover-heading2').html();
+        }
+      });
 
 
 }
 
+}        
+
+
+});
 });

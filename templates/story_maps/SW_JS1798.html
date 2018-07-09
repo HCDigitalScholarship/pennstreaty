@@ -11,16 +11,7 @@
   </head>
 
   <body>
-	<header>
-          <div class = "overlay-container">
-            <img src="{% static "img/PennsTreaty-West.jpg" %}" alt="Header img" />
-              <div class = "overlay1 show-for-large-up">
-               <!--  <strong>Beyond Penn's Treaty</strong> -->
-              </div>
-        </div>
-   
-    </header>
-
+{% include 'header.html' %}
 
    <div id = "row1">
   <!--     Navigation Menu Below:  -->
@@ -30,14 +21,14 @@
   </div>
 
 	<div id = "story1" style = "background-color: #F0F8FF;">
-	   <div class = "row">
+	   <div>
 	      <br />
-	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: black"> Joshua Sharpless's Journal Into Indian Country, 1798</h2>
+	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: white"> StoryMap for SW_JS1798</h2>
 	        <!-- The StoryMap container can go anywhere on the page. Be sure to 
     specify a width and height.  The width can be absolute (in pixels) or 
     relative (in percentage), but the height must be an absolute value.  
     Of course, you can specify width and height with CSS instead -->
-    <div id="mapdiv" style="width: 100%; height: 600px;"></div> 
+    <div id="mapdiv" style="width: 90%; height: 600px; margin:auto"></div> 
 
     <br />
     <br />

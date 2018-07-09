@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='manuscript',
             name='org_id',
-            field=models.ForeignKey(related_name='org_id_text', blank=True, to='QI.Org', null=True),
+            field=models.ForeignKey(related_name='org_id_text', blank=True, to='QI.Org', null=True,on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='manuscript',

@@ -1,5 +1,5 @@
 from django import forms
-
+from django.utils.translation import ugettext_lazy
 
 class ContactForm(forms.Form):
     contact_name = forms.CharField(required=True)
@@ -15,3 +15,7 @@ class ContactForm(forms.Form):
 
 class ImportXMLForm(forms.Form):
     xml_file = forms.FileField(label='')
+
+class TranscribeForm(forms.Form):
+    text = forms.CharField(label='', widget=forms.Textarea(attrs={'placeholder': ugettext_lazy('Enter your transcription here.')}))
+    name = forms.CharField(label=ugettext_lazy('Name (optional)'), required=False, max_length=50)

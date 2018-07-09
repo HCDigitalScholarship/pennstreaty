@@ -33,21 +33,21 @@ INSTALLED_APPS = (
    'django.contrib.sessions',
    'django.contrib.messages',
    'django.contrib.staticfiles',
-   'haystack',
    'import_export',
-   'QI',
    'xml_tool',
+   'haystack',
+   'QI',
 )
 
-MIDDLEWARE_CLASSES = (
-   'django.contrib.sessions.middleware.SessionMiddleware',
-   'django.middleware.common.CommonMiddleware',
-   'django.middleware.csrf.CsrfViewMiddleware',
-   'django.contrib.auth.middleware.AuthenticationMiddleware',
-   'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-   'django.contrib.messages.middleware.MessageMiddleware',
-   'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   'django.middleware.security.SecurityMiddleware',
+MIDDLEWARE = (
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'QI.urls'
@@ -90,9 +90,10 @@ USE_TZ = True
 
 
 HAYSTACK_CONNECTIONS = {
-  'default': {
-      'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-      'URL': 'http://127.0.0.1:8080/solr'
-#      'PATH': os.path.join(os.path.dirname('lib/python2.7/site-packages/whoosh'), 'whoosh_index'),
-  },
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/QI'
+        # ...or for multicore...
+        # 'URL': 'http://127.0.0.1:8983/solr/mysite',
+    },
 }

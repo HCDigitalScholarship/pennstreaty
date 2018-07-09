@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='organization',
             name='place_id',
-            field=models.ForeignKey(related_name='place_id2', blank=True, to='QI.Place', null=True),
+            field=models.ForeignKey(related_name='place_id2', blank=True, to='QI.Place', null=True,on_delete=models.CASCADE),
         ),
     ]

@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+  	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
+    {% include 'top-links.html' %}
+
+
+    <title>Available Texts </title>
+
+  </head>
+
+  <body>
+<!--
+   <header>
+         <div class = "overlay-container">
+            <img src="{% static "img/paradise.jpg" %}" alt="Header img" />
+              <div style="margin-bottom:-20px;" class = "overlay1 show-for-small-up">
+                <form action="/search" method='get'>
+                 <input style="float:right;" class='button' type="submit" value="Search">
+                  <input style="margin:0px; width:200px; height:30px; float:right;"  type="text" name="q">
+                </form>
+              </div>
+        </div>
+    </header> -->
+
+      {% include 'header.html' %}
+
+     <div id = "row1">
+    	{% include 'nav.html' %}
+    </div>
+
+    <div id = "trans2">
+ <div class = "row">
+      <br />
+      <h2> Manuscripts</h2>
+
+  </div>
+
+
+</div>
+
+<br />
+
+
+<div class = "row full-width">
+    <!-- there are many ways to make a datatable, but this worked best for django -->
+<table id="example" class="display" cellspacing="0" width="100%">
+                               <thead>
+                                       <tr>
+                                               <th>Title</th>
+                                               <th>Author</th>
+                                               <th>Date</th>
+                                               <th>Type</th>
+                                               <th>Call Number</th>
+
+                                       </tr>
+                               </thead>
+                               <tbody>
+                                       {% if textlist %}
+                                                       {% for text in textlist %}
+                                               <tr>
+
+                                                       <td> <a href="/transcribepage/{{text.id_tei}}_001"> {{text.title}}</a> </td>
+
+							{% if text.person_name == "" and not text.org_name == "" %} 
+							<td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
+							{% elif text.org_name == "" and not text.person_name == "" %}
+                                                       <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 	</td>
+							{% else %}
+						<td> Unknown </td>		
+							{% endif %}
+                                                       <td> {{text.date}} </td>
+                                                       <td>{{text.type_of_Manuscript}}</td>
+                                                       <td>{{text.call_no}}</td>
+
+                                               </tr>
+                                                       {% endfor %}
+                               </tbody>
+</table>
+
+{% else %}
+                          <strong> There are no manuscripts available at this time in the db. </strong>
+               {% endif %}
+{% include 'footer.html' %}
+{% include 'bottom-links.html' %}
+<script src="{% static "js/api.js" %}"></script>
+ <script src="{% static "js/imgtrans.js" %}"></script>
+ <!--<script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script> -->
+  </body>
+</html>

@@ -13,54 +13,55 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url, patterns
+from django.conf.urls import *
 from django.contrib import admin
-
+from django.contrib.admin.views.decorators import staff_member_required
 from . import views
+from django.urls import path,re_path,reverse,include
+
+app_name="QI"
 
 urlpatterns = [
-    url(r'^travelRoutes/$', 'QI.views.travelRoutes', name="TravelRoutes"),
-    url(r'^travelRoutes/', include('QI.inner')),
-    url(r'^profiles/$', 'QI.views.profiles', name="Person Profiles"),
-    url(r'^manuscripts/$', 'QI.views.manuscripts', name="Manuscripts"),
-    url(r'^about/$', 'QI.views.about', name="About Page"),
-    url(r'^$', views.Home.as_view(), name='home'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^cornp1/$', 'QI.views.cornp1', name="Henry Cornplanter"),
-    url(r'^places/$', 'QI.views.places', name="Places page"),
-    url(r'^organizations/$', 'QI.views.organizations', name="Organizations page"),
-    url(r'^admin/add_a_storymap/','QI.views.SMimport', name="StoryMapImporter"),
-    url(r'^admin/QI/add_a_storymap/','QI.views.SMimport', name="StoryMapImporter"),
-    url(r'^person/(?P<id>\S+)/', 'QI.views.person_detail', name="person_detail"),
-    url(r'^place/(?P<id>\S+)/', 'QI.views.place_detail', name="place_detail"),
-    url(r'^org/(?P<id>\S+)/', 'QI.views.org_detail', name="org_detail"),
-    url(r'^alltheinfo', 'QI.views.htmlinfo', name="testinfo"), #maybe irrelevant
-    url(r'^something/(?P<id>\S+)/', 'QI.views.jsoninfo', name="testinfo2"),
-    url(r'^page/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pageinfo', name="page"),
-    url(r'^pageinfo/(?P<id>\S+_[0-9]{3})/$', 'QI.views.newpageinfo', name="pageinfo"),
-    url(r'^pagetranscription/(?P<id>\S+_[0-9]{3})/$', 'QI.views.pagetranscription', name="pagetranscription"),
-    url(r'^manuscriptinfo/(?P<id>\S+)/', 'QI.views.pagejsoninfo', name="pagejsoninfo"),
-    url(r'^admin/QI/XML_to_HTML','QI.views.new_xml_import', name="XMLImporter"),
-    url(r'^admin/XML_to_HTML','QI.views.new_xml_import', name="XMLImporter"),
-    url(r'^testsearch/$', 'QI.views.testsearch', name='testsearch'), #maybe irrelevant
-    url(r'^search/', include('haystack.urls')),
-    url(r'^manuscript/(?P<id>\S+)/', 'QI.views.manu_detail', name="manu_detail"),
-    url(r'^overviewmap_traveler', 'QI.views.overviewmap_traveler', name='traveler'),
-    url(r'^overviewmap_date', 'QI.views.overviewmap_date', name='date'),
-    url(r'^overviewmap_residence', 'QI.views.overviewmap_residence', name='residence'),
-    url(r'^overviewmap_popularlocations', 'QI.views.overviewmap_popularlocations', name='overviewmap_popularlocations'),
-    url(r'^outputPagePDF/(?P<id>\S+)/', 'QI.views.outputPagePDF', name="outputPagePDF"),
-    url(r'^outputPagePT/(?P<id>\S+)/', 'QI.views.outputPagePT', name="outputPagePT"),
-    url(r'^outputManuPT/(?P<id>\S+)/', 'QI.views.outputManuPT', name="outputManuPT"),
-    url(r'^outputAll/', 'QI.views.outputAll', name="outputAll"),
-    url(r'^historicalbackground/', 'QI.views.historicalbackground', name="historicalbackground"),
-    url(r'^usingthesite/', 'QI.views.usingthesite', name="usingthesite"),
-    url(r'^bibliography/', 'QI.views.bibliography', name="bibliography"),
-    url(r'^credits/', 'QI.views.credits', name="credits"),
-    url(r'^mapgallery/', 'QI.views.mapgallery', name="mapgallery"),
-    url(r'^contact/', 'QI.views.contact', name="contact"),
-    url(r'^contactSuccess/', 'QI.views.contactSuccess', name="contactSuccess"),
+    path('admin/', admin.site.urls),
+    path('', views.Home.as_view(),name='home'),
+    path('profiles', views.profiles, name="Person Profiles"),
+    path('about', views.about, name="About Page"),
+    path('cornp1', views.cornp1, name="Henry Cornplanter"),
+    path('places', views.places, name="Places page"),
+    path('organizations', views.organizations, name="Organizations page"),
+    path('manuscripts/', views.manuscripts, name="Manuscripts"),
+    re_path(r'^page/(?P<id>\S+_[0-9]{3})', views.pageinfo, name="page"),
+    re_path(r'^pageinfo/(?P<id>\S+_[0-9]{3})', views.newpageinfo, name="pageinfo"),
+    re_path(r'^pagetranscription/(?P<id>\S+_[0-9]{3})', views.pagetranscription, name="pagetranscription"),
+    path('travelRoutes/', views.travelRoutes, name="TravelRoutes"),
+    path('travelRoutes/', include('QI.inner')),
+    path('overviewmap_traveler', views.overviewmap_traveler, name='traveler'),
+    path('overviewmap_date', views.overviewmap_date, name='date'),
+    path('overviewmap_residence', views.overviewmap_residence, name='residence'),
+    path('overviewmap_popularlocations', views.overviewmap_popularlocations, name='overviewmap_popularlocations'),
+    path('historicalbackground', views.historicalbackground, name="historicalbackground"),
+    path('usingthesite', views.usingthesite, name="usingthesite"),
+    path('bibliography', views.bibliography, name="bibliography"),
+    path('credits', views.credits, name="credits"),
+    path('mapgallery', views.mapgallery, name="mapgallery"),
+    path('contact', views.contact, name="contact"),
+    path('contactSuccess', views.contactSuccess, name="contactSuccess"),
+    path('admin/add_a_storymap',views.SMimport, name="StoryMapImporter"),
+    #path('admin/QI/add_a_storymap',views.SMimport, name="StoryMapImporter"),
+    path('admin/QI/XML_to_HTML',views.new_xml_import, name="XMLImporter"),
+    #path('admin/XML_to_HTML',views.new_xml_import, name="XMLImporter"),
+    re_path(r'^person/(?P<id>\S+)/', views.person_detail, name="person_detail"),
+    re_path(r'^place/(?P<id>\S+)/', views.place_detail, name="place_detail"),
+    re_path(r'^org/(?P<id>\S+)/', views.org_detail, name="org_detail"),
+    re_path(r'^something/(?P<id>\S+)', views.jsoninfo, name="testinfo2"),
+    re_path(r'^manuscriptinfo/(?P<id>\S+)/', views.pagejsoninfo, name="pagejsoninfo"),
+    re_path(r'^outputPagePT/(?P<id>\S+)/', views.outputPagePT, name="outputPagePT"),
+    re_path(r'^outputManuPT/(?P<id>\S+)/', views.outputManuPT, name="outputManuPT"),
+    re_path(r'^outputPagePDF/(?P<id>\S+)/', views.outputPagePDF, name="outputPagePDF"),
+    path('outputAll', views.outputAll, name="outputAll"),
+    path('search/',include('haystack.urls')), 
 ]
+
 
 admin.site.site_header = 'Beyond Penns Treaty'
 admin.site.index_title = 'Beyond Penns Treaty Administration'

@@ -1,0 +1,196 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Page information</title>
+   
+   {% include 'top-links.html' %}
+</head>
+
+
+<body>
+
+  <div class='stufftoinclude'>
+    {% include 'header.html' %}
+    <div id = "row1">
+      {% include 'nav.html' %}
+      <h3 style="text-align:center;"> {{manuscript.title}} </h3>
+    </div>
+  </div>
+
+
+  <div class="detail-view-tools" style="width: 70%; margin:auto;" id="SGASharedCanvasViewer" ;data-manifest="{{page.manifest}}">
+    <fieldset class="detail-view-controls" style="width: 100%; text-align:left; margin-bottom:-8px;">
+       <ul class="meta-data-group controls col-md-4 col-sm-12">
+
+       <li class="meta-data-item"> <label class="meta-label" id="meta-Manutitle">TITLE:
+         </label><span>
+           {{manuscript.title}}
+         </span></li>
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workCreator">CREATOR:
+         </label><span>
+            {% if manuscript.person_name == "" and not manuscript.org_name == "" %}
+              {{manuuscript.org_name}}
+            {% elif manuscript.org_name == "" and not manuscript.person_name == "" %}
+              {{manuscript.person_id.first_name}} {{manuscript.person_id.last_name}} </a>
+            {% else %}
+              <td> Unknown </td>
+            {% endif %}
+         </span></li>
+       </ul>
+
+
+       <ul class="meta-data-group controls col-md-4 col-sm-12">
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workDate">DATE:
+         </label><span>
+          {% if manuscript.date == "" %}
+            Unknown          {% else %}
+            {{manuscript.date}}
+          {% endif %}
+         </span></li>
+
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workState">TYPE of MANUSCRIPT:
+         </label><span>
+           {% if manuscript.type_of_Manuscript == "" %}
+             Unknown
+           {% else %}
+             {{manuscript.type_of_Manuscript}}
+           {% endif %}
+         </span></li>
+       </ul>
+
+       <ul class="meta-data-group controls col-md-4 col-sm-12">
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workInstitution">CALL NUMBER:
+         </label><span>
+           {% if manuscript.call_no == "" %}
+             None
+           {% else %}
+
+             {{manuscript.call_no}}
+           {% endif %}
+         </span></li>
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workInstitution">LOCATION:
+         </label><span>
+           {% if manuscript.location in "SWATHMORE" or "Swathmore" %}
+             Swarthmore College
+           {% else %}
+             Haverford College
+           {% endif %}
+         </span></li>
+     </ul>
+    </fieldset>
+  </div>
+
+ </div>
+ 
+<div class="detail-view-tools" style="width:70%; margin:auto; border:3px solid #8597af">
+  <div class="detail-view-controls well well-sm clearfix" style="display:flex; width:100%; height:60px; align:center; background-color:#ededed;">
+        <div class="col-sm-12" style="flex:33%">
+           Page <input type="text" 
+                       id="page#" 
+                       value= {{pagenumber}} style="width:50px; display:inline-block" 
+                       onkeydown = "if (event.keyCode == 13) getDirection()"> out of {{total}}
+           <input id="btnTurn" type="button" class="btn btn-outline-success" onclick="getDirection()" value="Go" style="display:inline-block; border-radius:7px; background-color:#8c0404; color:white;">
+           <script>
+               function getDirection(){
+               var input = document.getElementById("page#").value;
+               var new_id ="{{HTTP_HOST}}/page/{{current_page.id_tei}}" ;
+                   new_id = new_id.slice(0,-3);
+                 if (input.length == 1){
+                     new_id = new_id+"00"+input;
+                     console.log(new_id);
+                     window.location=new_id;
+                }
+                 else{
+                     new_id = new_id+"0"+input;
+                     console.log(new_id);
+                     window.location=new_id;
+
+                }
+              }
+
+           </script> 
+           
+         </div>
+
+          <div class="btn-group pull-right" role="group" style="xaria-label="..." flex:33%; margin:auto">
+             <a  href="/page/{{manuscript.id_tei}}_001"  class="btn btn-primary" title="First">
+                <span class="fa fa-step-backward"></span>
+             </a>
+
+             <a href="/page/{{next_one.id_tei}}" class="btn btn-primary" title="Previous">
+                <span class="fa fa-chevron-left"></span>
+             </a>
+
+             <a href="/outputPagePT/{{current_page.id_tei}}" target="_blank" class="btn btn-primary" title="Download">
+                <span class="fa fa-download"></span>
+             </a>
+             <a href="/page/{{previous.id_tei}}" class="btn btn-primary title="Next">
+                <span class="fa fa-chevron-right"></span>
+             </a>
+             <a href="/page/{{manuscript.id_tei}}_0{{total}}" class="btn btn-primary" title="Last">
+                <span class="fa fa-step-forward"></span></a>
+          </div>
+<!--previous and next_one are switched, but they work fine on the web in this way-->
+            <div class="input-group-btn btn-group input-group-sm col-sm-12" style="flex:33%; margin-left:55px;">
+              <form method="get" action="/searchtext">
+                <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search within this manuscript..." style="display:inline-block; width:220px">
+                <button class="btn btn-success" type="submit" style="display:inline-block; background-color:#8c0404; color:white;">Search<button>       
+              </form>
+           </div>
+
+   </div>
+  <div class= "detail-view-result">
+   <div  style="display:flex;">
+        <div class="sharedcanvas col-md-6 col-sm-12" style="display:inline-block; flex:50%;">
+
+          <div style="overflow:scroll; margin-top:auto;">
+
+            <img id="image" src="/static/img/{{current_page.id_tei}}.jpg" width"100%" style="overflow:scroll" >
+ 
+          </div>
+        </div>
+        <div class="sharedcanvas col-md-6 col-sm-12 style="margin:20px; width:100%; display: inline-block; flex:50%;">
+          <div class="text-content" style="padding:20px; border:0.7px solid grey; overflow: scroll; height:600px; margin:auto;">
+            {% if 'o' not in current_page.fulltext %}
+              <h1 style="font-size:15px; color:#b3b5b7;">No text on this page</h1>
+                 
+            {% else %}
+               {{ current_page.fulltext|safe }}
+
+            {% endif %}
+          </div>
+        </div>
+
+   </div>
+  </div>
+</div>
+
+
+{% include 'footer.html' %}
+<script type="text/javascript">
+
+</script>
+
+
+<script type="text/javascript" >
+        var Manuscript_id = '{{ manuscript.id_tei }}';
+        var img_url = '{{ page.img_url }}';
+        var Page_id = '{{ Page_id }}';
+        var lastpage = '{{ lastpage }}';
+</script>
+
+</body>
+</html>
+

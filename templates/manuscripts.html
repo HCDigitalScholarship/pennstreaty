@@ -38,9 +38,7 @@
 
     <div id = "trans2">
  <div class = "row">
-      <br />
-      <h2> Manuscripts</h2>
-
+   <h2> Manuscripts</h2>
   </div>
 
 
@@ -50,7 +48,7 @@
 
 
 <div class = "row full-width">
-    <!-- there are many ways to make a datatable, but this worked best for django -->
+<!-- there are many ways to make a datatable, but this worked best for django -->
 <table id="example" class="display" cellspacing="0" width="100%">
                                <thead>
                                        <tr>
@@ -67,7 +65,7 @@
                                                        {% for text in textlist %}
                                                <tr>
 
-                                                       <td> <a href=/manuscript/{{text.id_tei}}> {{text.title}}</a> </td>
+                                                       <td> <a href="/page/{{text.id_tei}}_001"> {{text.title}}</a> </td>
 
 							{% if text.person_name == "" and not text.org_name == "" %} 
 							<td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
@@ -98,78 +96,6 @@
 </div>
 
 
-
-<!--
-<div class = "row">
-	 <table id="" class="display" cellspacing="0" width="100%">
-	        <thead>
-	                <tr>
-	                        <th>Name of Document</th>
-	                        <th> Creator </th>
-	                        <th> Date </th>
-	                        <th> Type of Document</th>
-	                        <th> Call Number</th>
-
-	                </tr>
-	        </thead>
-	        <tbody>
-	        </tbody>
-	</table>
-<br />
-<br />
-</div>
-
-<br />
-
-<div id = "trans2">
-  <div class = "row">
-    <br />
-    <h2>Example</h2>
-  <div class = "large-6 medium-6 small-6 columns">
-    <div id = "transimg"> </div>
-  </div>
-  <div class = "large-6 medium-6 small-6 columns">
-    <ul class="tabs" data-tab>
-      <li class="tab-title active"><a href="#panel1">Metadata</a></li>
-      <li class="tab-title"><a href="#panel2">Transcription</a></li>
-    </ul>
-    <div class="tabs-content">
-      <div class="content active" id="panel1">
-        <div id = "metastuffdata"> </div>
-      </div>
-      <div class="content" id="panel2">
-       <div id = "transcription"></div>
-      </div>
-  </div>
-</div>
-</div>
-<br />
-<br />
-</div>
--->
-
-
-<!-- <div class = "row" id = "metadatatrans">
-  <div class = "large-6 medium-6 small-6 columns">
-    <div id = "imgmeta"></div>
-</div>
-  <div class = "large-6 medium-6 small-6 columns">
-    <ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1">Transcription</a></li>
-  <li class="tab-title"><a href="#panel2">Metadata</a></li>
-</ul>
-<div class="tabs-content">
-  <div class="content active" id="panel1">
-    <div id = "metastuff"></div>
-  </div>
-  <div class="content" id="panel2">
-   <div id = "trans"></div>
-  </div>
-</div>
-  </div>
-
-</div>
- -->
 
 
 {% include 'footer.html' %}

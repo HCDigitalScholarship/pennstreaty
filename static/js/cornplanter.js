@@ -17,19 +17,58 @@ function initPage(newPageID) {
         // Load the image and the transcription
         $('#imgDiv img').remove();
         $('#imgDiv').append("<img src =/static/img/" + newImgUrl + ".jpg></div>");
-        $.get("/pagetranscription/" + newImgUrl, function (data) {
+/*        $.get("/pagetranscription/" + newImgUrl, function (data) {
             $("#transcriptionDiv").html(data).promise().done(initLinks);
-        });
+        });*/
         window.history.pushState("Page Information", "Page Information", "/page/" + newImgUrl + "/");
     } else {
         alert("Page out of range.");
     }
 }
 
-
+function inPage(newID){
+    if(pageID >= 1 && pageID <= lastpage){
+        pageID = newID;
+        if (pageID < 10) {
+            var newstring = "00" + pageID.toString(); // turn this into string
+        } else if (pageID < 100) {
+            var newstring = "0" + pageID.toString();
+        } else {
+            var newstring = pageID.toString();
+        }
+        var newImgUrl = Manuscript_id + "_" + newstring;
+    }
+    return newImgUrl;
+}
 $(document).ready(function() {
-    initPage(pageID);
+    //initPage(pageID);
     // This controls what happens when someone uses the close button.
+    if (pageID < 1 && pageID > lastpage) {
+        alert("Page out of range.");
+    } else {
+	$.get("/pagetranscription/" + inPage(pageID), function (data) {
+            $("#transcriptionDiv").html(data).promise().done(initLinks);
+        });
+        window.history.pushState("Page Information", "Page Information", "/page/" + inPage(pageID) + "/");
+        $("#openseadragon1").html("");
+        var viewer = OpenSeadragon({
+            id: "openseadragon1",
+            prefixUrl: "//openseadragon.github.io/openseadragon/images/",
+//          tileSources: "/srv/QI/static/img/Misc_mss_1791_06_02_001.dzi",
+//            tileSources: "http://104.131.45.60/img/Misc_mss_1791_06_02_001.dzi"
+            tileSources: "http://159.203.172.178/img/"+ inPage(pageID)+ ".dzi"
+//          tileSources: duomo
+/*            showNavigator: true,
+            navigatorPosition: "ABSOLUTE",
+            navigatorTop: "40px",
+            navigatorLeft: "4px",
+            navigatorHeight: "110px",
+            navigatorWidth: "90px",
+            sequenceMode: true,
+            showReferenceStrip: true,
+            referenceStripScroll: 'horizontal',*/
+        });
+    }
     $("i.fa.fa-times").click(function() {
         $('.off-canvas').animate({
             "margin-right": '-=25%'
@@ -42,10 +81,12 @@ $(document).ready(function() {
     // Go forward in the image viewer.
     $(".forwards-arrow i.fa.fa-chevron-right").click(function() {
         initPage(pageID + 1);
+	location.reload();
     });
     // Go backward in the image viewer.
     $(".forwards-arrow i.fa.fa-chevron-left").click(function() {
         initPage(pageID - 1);
+	location.reload();
     });
 });
 
