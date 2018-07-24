@@ -1,98 +1,196 @@
 {% load staticfiles %}
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    {% include 'top-links.html' %}
-    <title>Page Information</title>
-  </head>
-  <body>
-    <div class='stufftoinclude'>
-      {% include 'header.html' %}
-      <div id = "row1">
-        {% include 'nav.html' %}
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <title>Page information</title>
+   
+   {% include 'top-links.html' %}
+</head>
+
+
+<body>
+
+  <div class='stufftoinclude'>
+    {% include 'header.html' %}
+    <div id = "row1">
+      {% include 'nav.html' %}
+      <h3 style="text-align:center;"> {{manuscript.title}} </h3>
     </div>
-    <div id="row2">
-    <br>
-    </div>
-    <div id="about2">
-      <aside class="off-canvas" style="margin-right: -25%;"></aside>
-      <i class="fa fa-times"></i>
-      <div class="row">
-        <h2 style="text-align:center;">Metadata</h2>
-        <div class="large-2 columns">
-          <h4>Name of Document</h4>
-          <p>{{ manuscript.title }}</p>
+  </div>
+
+
+  <div class="detail-view-tools" style="width: 70%; margin:auto;" id="SGASharedCanvasViewer" ;data-manifest="{{page.manifest}}">
+    <fieldset class="detail-view-controls" style="width: 100%; text-align:left; margin-bottom:-8px;">
+       <ul class="meta-data-group controls col-md-4 col-sm-12">
+
+       <li class="meta-data-item"> <label class="meta-label" id="meta-Manutitle">TITLE:
+         </label><span>
+           {{manuscript.title}}
+         </span></li>
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workCreator">CREATOR:
+         </label><span>
+            {% if manuscript.person_name == "" and not manuscript.org_name == "" %}
+              {{manuuscript.org_name}}
+            {% elif manuscript.org_name == "" and not manuscript.person_name == "" %}
+              {{manuscript.person_id.first_name}} {{manuscript.person_id.last_name}} </a>
+            {% else %}
+              <td> Unknown </td>
+            {% endif %}
+         </span></li>
+       </ul>
+
+
+       <ul class="meta-data-group controls col-md-4 col-sm-12">
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workDate">DATE:
+         </label><span>
+          {% if manuscript.date == "" %}
+            Unknown          {% else %}
+            {{manuscript.date}}
+          {% endif %}
+         </span></li>
+
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workState">TYPE of MANUSCRIPT:
+         </label><span>
+           {% if manuscript.type_of_Manuscript == "" %}
+             Unknown
+           {% else %}
+             {{manuscript.type_of_Manuscript}}
+           {% endif %}
+         </span></li>
+       </ul>
+
+       <ul class="meta-data-group controls col-md-4 col-sm-12">
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workInstitution">CALL NUMBER:
+         </label><span>
+           {% if manuscript.call_no == "" %}
+             None
+           {% else %}
+
+             {{manuscript.call_no}}
+           {% endif %}
+         </span></li>
+       <li class="meta-data-item">
+         <label class="meta-label" id="meta-workInstitution">LOCATION:
+         </label><span>
+           {% if manuscript.location in "SWATHMORE" or "Swathmore" %}
+             Swarthmore College
+           {% else %}
+             Haverford College
+           {% endif %}
+         </span></li>
+     </ul>
+    </fieldset>
+  </div>
+
+ </div>
+ 
+ <div class="position:relative;" style="width:70%; margin:auto;">
+            <h2 style="text-align:center;">Instructions for transcribing</h2>
+              Transcribe the words exactly as you see them in the PDF, even if they are spelled differently today.
+              Write the page number if it appears in the PDF.
+              If you are not sure about a word, put it in parentheses with a question mark: (word?)
+              Write out abbreviations using square brackets: p[eso]s
+</div>
+
+<div class="detail-view-tools" style="width:70%; margin:auto; border:3px solid #8597af">
+  <div class="detail-view-controls well well-sm clearfix" style="display:flex; width:100%; height:60px; align:center; background-color:#ededed;">
+        <div class="col-sm-12" style="flex:50%">
+           Page <input type="text" id="page#" value= {{pagenumber}} style="width:50px; display:inline-block" onkeydown = "if (event.keyCode == 13) getDirection()"> out of {{total}}
+           <input id="btnTurn" type="button" class="btn btn-outline-success" onclick="getDirection()" value="Go" style="display:inline-block; border-radius:7px; background-color:#8c0404; color:white;">
+           <script>
+               function getDirection(){
+               var input = document.getElementById("page#").value;
+               var id ="{{HTTP_HOST}}/transcribepage/{{current_page.id_tei}}" ;
+                   new_id = id.slice(0,-3);
+                 if (input.length == 1){
+                     new_id = new_id+"00"+input;
+                     console.log(new_id);
+                     window.location=new_id;
+                }
+                 else{
+                     new_id = new_id+"0"+input;
+                     console.log(new_id);
+                     window.location=new_id;
+                }
+              }
+           </script> 
+           
+         </div>
+
+          <div class="btn-group pull-right" role="group" style="xaria-label="..." flex:50%; margin:auto">
+             <a  href="/page/{{manuscript.id_tei}}_001"  class="btn btn-primary" title="First">
+                <span class="fa fa-step-backward"></span>
+             </a>
+
+             <a href="/transcribepage/{{next_one.id_tei}}" class="btn btn-primary" title="Previous">
+                <span class="fa fa-chevron-left"></span>
+             </a>
+
+             <a href="/transcribepage/{{previous.id_tei}}" class="btn btn-primary title="Next">
+                <span class="fa fa-chevron-right"></span>
+             </a>
+             <a href="/page/{{manuscript.id_tei}}_0{{total}}" class="btn btn-primary" title="Last">
+                <span class="fa fa-step-forward"></span></a>
+          </div>
+<!--previous and next_one are switched, but they work fine on the web in this way-->
+   </div>
+   <div style="height:600px; display:flex;">
+        <div class="sharedcanvas col-md-6 col-sm-12" style="display:inline-block; flex:50%;">
+          <div id="seadragon-viewer" style="width:100%; height:100%"></div>
         </div>
-        <div class="large-2 columns">
-          <h4>Creator</h4>
-          <p>{{ manuscript.person_name }}</p>
+        <div class="sharedcanvas col-md-6 col-sm-12 style="margin:20px; width:100%; display: inline-block; flex:50%;">
+           <div id="transcriptionDiv">
+           {% if form %}
+              <form method="post" action="">
+                {% csrf_token %}
+                <table>
+                  {{ form.as_table }}
+                </table>
+                <input type="submit" onclick="confirm()" value="Submit"/>
+              </form>
+           {% endif %}
+           </div>
         </div>
-        <div class="large-2 columns">
-          <h4>Date</h4>
-          <p>{{ manuscript.date }}</p>
-        </div>
-        <div class="large-2 columns">
-          <h4>Type of Document</h4>
-          <p>{{ manuscript.type_of_Manuscript }}</p>
-        </div>
-        <div class="large-2 columns end">
-          <h4>Call Number</h4>
-          <p>{{ manuscript.call_no }}</p>
-        </div>
-	</div>
-	<div class="position:relative;">
-	    <h2 style="text-align:center;">Instructions for transcribing</h2>
-            <ul style="text-align:center;">
-              <li>Transcribe the words exactly as you see them in the PDF, even if they are spelled differently today.</li>
-              <li>Write the page number if it appears in the PDF.</li>
-              <li>If you are not sure about a word, put it in parentheses with a question mark: (word?)</li>
-              <li>Write out abbreviations using square brackets: p[eso]s</li>
-            </ul>
-        </div>
-      <div class="stufftoinclude row main-wrapper">
-        <aside class="forwards-arrow" style="margin-left: -25%;">
-          <i class="fa fa-chevron-left"></i>
-          <i class="fa fa-chevron-right"></i>
-        </aside>
-        <!--<div id="imgDiv" class="large-5 columns">-->
-	<!--<div id="openseadragon-wrap" class="large-5 columns">
-"col-xs-12 col-sm-7 col-md-7">
-            <div id="openseadragon1">
-        	<div id="dropdown-placeholder"></div>
-	    </div>
-	</div>-->
-        <!--</div>-->
-        <div id="openseadragon-wrap" class="large-5 columns">
-            <div id="openseadragon1" style="height:400px">
-                <div id="dropdown-placeholder"></div>
-            </div>
-        </div>
-	<div id="transcriptionDiv" class="large-5 columns end">
-            <form method="post" action="">
-              {% csrf_token %}
-              <table>
-                {{ form.as_table }}
-              </table>
-              <input type="submit" value="Submit"/>
-            </form>
-        </div>
-      </div>
-      <div class='container'>
-        <a href=/outputPagePT/{{page.id_tei}}>→ Download raw text of this page</a>
-      </div>
-      {% include 'footer.html' %}
-      {% include 'bottom-links.html' %}
-      <script type="text/javascript" >
+   </div>
+</div>
+
+<script type="text/javascript">
+function confirm() {
+    alert("{{ message }}");
+}
+</script>
+
+<script src="//openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+
+<script>
+var viewer = OpenSeadragon({
+  id: "seadragon-viewer",
+  prefixUrl: "//openseadragon.github.io/openseadragon/images/",
+  tileSources: "/static/img/{{current_page.id_tei}}.dzi" 
+});
+</script>
+
+{% include 'footer.html' %}
+
+<script type="text/javascript" >
         var Manuscript_id = '{{ manuscript.id_tei }}';
-        var img_url = '{{ page.img_url }}';
+        var img_url = '{{ current_page.img_url }}';
         var Page_id = '{{ Page_id }}';
         var lastpage = '{{ lastpage }}';
-      </script>
-	<script src="//openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
-<!--      <script src="{% static "js/node_modules/openseadragon/build/openseadragon/openseadragon.min.js" %}"></script>-->
-      <script src="{% static "js/cornplanter3.js" %}"></script>
-    </div>
-  </body>
-</html>
+</script>
+
+
+<script src="{% static "js/cornplanter3.js" %}"></script>
+
 
