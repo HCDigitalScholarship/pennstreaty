@@ -1,42 +1,31 @@
 {% load staticfiles %}
-<!doctype html>
+			<!doctype html>
 <html class="no-js" lang="en">
   <head>
     {% include 'top-links.html' %}
-
     <title>SW_JS1798 StoryMapJS </title>
     <link rel="stylesheet" href="https://cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
     
-
   </head>
-
   <body>
-{% include 'header.html' %}
-
+	{% include 'header.html' %}
    <div id = "row1">
   <!--     Navigation Menu Below:  -->
-
     {% include 'nav.html' %}
-
   </div>
-
 	<div id = "story1" style = "background-color: #F0F8FF;">
 	   <div>
 	      <br />
-	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: white"> StoryMap for SW_JS1798</h2>
+	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: black"> StoryMap for SW_JS1798</h2>
 	        <!-- The StoryMap container can go anywhere on the page. Be sure to 
     specify a width and height.  The width can be absolute (in pixels) or 
     relative (in percentage), but the height must be an absolute value.  
     Of course, you can specify width and height with CSS instead -->
     <div id="mapdiv" style="width: 90%; height: 600px; margin:auto"></div> 
-
     <br />
     <br />
-
 	  </div>  
 	</div>
-
-
   	{% include 'footer.html' %}
     
  {% include 'bottom-links.html' %}
@@ -45,13 +34,11 @@
      <script>
   // storymap_data can be an URL or a Javascript object
  
-
       //var storymap_data = "{% static "json/StoryMapData.json" %}"; 
       var storymap_data = "{% static "json/SW_JS1798.json" %}"; 
       
       // certain settings must be passed within a separate options object
       var storymap_options = {};
-
       var storymap = new VCO.StoryMap('mapdiv', storymap_data, storymap_options);
       window.onresize = function(event) {
           storymap.updateDisplay(); // this isn't automatic
@@ -59,6 +46,5 @@
   </script>
   
   
-
   </body>
 </html>
