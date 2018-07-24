@@ -47,9 +47,7 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('contactSuccess', views.contactSuccess, name="contactSuccess"),
     path('admin/add_a_storymap',views.SMimport, name="StoryMapImporter"),
-    #path('admin/QI/add_a_storymap',views.SMimport, name="StoryMapImporter"),
-    path('admin/QI/XML_to_HTML',views.new_xml_import, name="XMLImporter"),
-    #path('admin/XML_to_HTML',views.new_xml_import, name="XMLImporter"),
+    path('admin/XML_to_HTML',views.new_xml_import, name="XMLImporter"),
     re_path(r'^person/(?P<id>\S+)/', views.person_detail, name="person_detail"),
     re_path(r'^place/(?P<id>\S+)/', views.place_detail, name="place_detail"),
     re_path(r'^org/(?P<id>\S+)/', views.org_detail, name="org_detail"),
@@ -60,6 +58,11 @@ urlpatterns = [
     re_path(r'^outputPagePDF/(?P<id>\S+)/', views.outputPagePDF, name="outputPagePDF"),
     path('outputAll', views.outputAll, name="outputAll"),
     path('search/',include('haystack.urls')), 
+    path('transcribe', views.transcribe, name="Transcribe"),
+    path('transcribepage/<id>', views.transcribe_info, name="transcribepage"),
+    path('admin/review_transcriptions/',staff_member_required(views.ReviewTranscriptionList.as_view()),name='admin_review_transcription_lists'),
+    path('admin/review_transcriptions/<int:pk>/', views.review_transcription,name='admin_review_transcriptions'),
+    path('review_transcriptions', views.testing, name="testing"),
 ]
 
 
