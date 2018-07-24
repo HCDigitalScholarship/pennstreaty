@@ -33,6 +33,12 @@ def handler404(request):
     response.status_code = 404
     return response
 
+class Home(TemplateView):
+    template_name = 'index.html'
+
+def testing(request):
+    return render(request, 'review_transcription.html')
+
 def contact(request):
     form_class = ContactForm
     # new logic!
@@ -138,13 +144,13 @@ def outputPagePDF(request,id):
     FullText = PageToOutput.fulltext #get the text that you want to put in the PDF
     # Create the HttpResponse object with the appropriate PDF headers.
     response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="somefilename.pdf"'
+    response['Content-Disposition'] = 'attachment; filename="%s.pdf"'% PageToOutput.id_tei
     buffer = BytesIO()
     # Create the PDF object, using the BytesIO object as its "file."
     p = canvas.Canvas(buffer)
     # Draw things on the PDF. Here's where the PDF generation happens.
     # See the ReportLab documentation for the full list of functionality.
-    p.drawString(100, 100, "Hello world.")
+    p.drawString(30, 750, "Hello World")
     # Close the PDF object cleanly.
     p.showPage()
     p.save()
@@ -286,54 +292,13 @@ def org_detail(request,id):
     'org':org, 'allpages':allpages, 'allmanuscripts':allmanuscripts,
     #'place':place
     })
-def review_transcription(request, id):
-    obj = get_object_or_404(PendingTranscription, doc__id_tei=id)
-    if request.method == 'POST':
-        if 'deletebutton' in request.POST:
-            obj.delete()
-            messages.success(request, 'The transcription was successfully deleted.')
-        else:
-            obj.doc.fulltext = obj.transcription
-            obj.doc.transcribed = True
-            obj.doc.save()
-            obj.delete()
-            messages.success(request, 'The transcription was successfully approved.')
-        return HttpResponseRedirect('/admin')
-    else:
-        old_lines = split_html_lines(obj.doc.fulltext)
-        new_lines = split_html_lines(obj.transcription)
-        d = difflib.Differ()
-        diff_lines = list(d.compare(old_lines, new_lines))
-        for i, line in enumerate(diff_lines):
-            if line.startswith('  '):
-               diff_lines[i] = '<span class="diff-both">' + line[2:] + '</span>'
-            elif line.startswith('- '):
-               diff_lines[i] = '<span class="diff-first">' + line[2:] + '</span>'
-            elif line.startswith('+ '):
-               diff_lines[i] = '<span class="diff-second">' + line[2:] + '</span>'
-            elif line.startswith('? '):
-                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
-        context = {
-
-            'object': obj,
-            'diff_table': '<br>'.join(diff_lines)
-        }
-        Page_id = id[len(id)-3:]
-        return render(request, 'review_transcription.html', {'Page_id':Page_id, 'object': obj, 'diff_table':'<br>'.join(diff_lines)})
 
 
-class ReviewTranscriptionList(ListView):
-    model = PendingTranscription
-    template_name = 'review_transcription_list.html'
-def split_html_lines(html_str):
-    # New transcriptions will always insert '<br>', but some of the old transcriptions have variant
-    # spellings of the tag.
-    html_str = html_str.replace('<br/>', '<br>').replace('<br />', '<br>')
-    return html_str.split('<br>')
+
 def transcribe_info(request,id):
     try:
-       page = Page.objects.get(id_tei = id)
-       manuscript = Manuscript.objects.get(title = page.Manuscript_id)
+       current_page = Page.objects.get(id_tei = id)
+       manuscript = Manuscript.objects.get(title = current_page.Manuscript_id)
     except Page.DoesNotExist:
        raise Http404('this page does not exist')
     j = 0
@@ -353,16 +318,39 @@ def transcribe_info(request,id):
                 lastpage = i-1
     	#now lastpage should be the page number of the last page in the manuscript!
     Page_id = id[len(id)-3:] # this should be the page #
+    pagenumber = int(Page_id)
+    
+    Manuscript_key = current_page.Manuscript_id
+    possible_pages = Page.objects.filter(Manuscript_id = Manuscript_key)
+    pages_list=[]
+    for index, page in enumerate(possible_pages):
+        pages_list.append(page)
+
+        if page == current_page:
+                print('current=', index)
+                current = int(index)
+    previous = pages_list[current-1]
+    try:
+        next_one = pages_list[current+1]
+    except:
+        next_one = pages_list[0]
+
+    total = len(possible_pages)
+    #message = 'Your submission encountered errors, please contact us'
+    message = 'Your transcription has already been successfully submitted for approval!'
     if request.method == 'POST':
         form = TranscribeForm(request.POST)
         if form.is_valid():
             # Replace newlines with <br> tags and escape all HTML tags.
            clean_text = '<br>'.join(cgi.escape(form.cleaned_data['text']).splitlines())
            clean_author = cgi.escape(form.cleaned_data['name'])
-           page.pendingtranscription_set.create(transcription=clean_text, author=clean_author)
+           current_page.pendingtranscription_set.create(transcription=clean_text, author=clean_author)
+           #message = 'Your transcription has already been successfully submitted for approval!'
     else:
-        form = TranscribeForm()	
-    return render(request,'transcribe_detail.html', {'page':page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'form':form})
+       form = TranscribeForm(initial={'text': current_page.fulltext, 'name':''})
+    return render(request,'transcribe_detail.html', {'message':message, 'current_page':current_page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'form':form, 'previous':previous, 'next_one':next_one, 'total':total, 'Page_id':Page_id, 'pagenumber': pagenumber})
+
+
 def pageinfo(request,id):
     try:
         current_page = Page.objects.get(id_tei = id)
@@ -408,7 +396,7 @@ def pageinfo(request,id):
 
     total = len(possible_pages)
     
-    template_name='viewpage2.html'   
+    template_name='viewpage.html'   
     return render(request,template_name, {'current_page':current_page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'total':total, 'previous':previous, 'next_one':next_one,'pagenumber':pagenumber})
 
 	#gotta include info as to whether or not it's the first or last pg in a manuscript!
@@ -507,48 +495,7 @@ def storymap(request, xml_id):
 
 def travelRoutes(request):
     return render(request, 'travelRoutes.html')
-"""
-def review_transcription(request, pk):
-    obj = get_object_or_404(PendingTranscription, pk=pk)
-    if request.method == 'POST':
-        if 'deletebutton' in request.POST:
-            obj.delete()
-            messages.success(request, 'The transcription was successfully deleted.')
-        else:
-            if obj.doc.transcription:
-                obj.doc.backup_transcription = obj.doc.transcription
-            obj.doc.transcription = obj.transcription
-            obj.doc.save()
-            obj.delete()
-            messages.success(request, 'The transcription was successfully approved.')
-        return HttpResponseRedirect('/admin')
-    else:
-        # The transcription is line-delineated by <br> tags instead of newlines, but difflib can
-        # only generate diffs for newline-delineated strings.
-        old_lines = split_html_lines(obj.doc.transcription)
-        new_lines = split_html_lines(obj.transcription)
-        d = difflib.Differ()
-        diff_lines = list(d.compare(old_lines, new_lines))
-        for i, line in enumerate(diff_lines):
-            if line.startswith('  '):
-                diff_lines[i] = '<span class="diff-both">' + line[2:] + '</span>'
-            elif line.startswith('- '):
-                diff_lines[i] = '<span class="diff-first">' + line[2:] + '</span>'
-            elif line.startswith('+ '):
-                diff_lines[i] = '<span class="diff-second">' + line[2:] + '</span>'
-            elif line.startswith('? '):
-                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
-        context = {
-            'object': obj,
-            'diff_table': '<br>'.join(diff_lines)
-        }
-        return render(request, 'review_transcription.html', context)
 
-
-class ReviewTranscriptionList(ListView):
-    model = PendingTranscription
-    template_name = 'handwritten_texts/review_transcription_list.html'
-"""
 def SMimport(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -674,20 +621,63 @@ def inText_search(request):
    return render(request,'search/inText_search.html')
 
 
-"""
-class inText_search(SearchView):
-    template_name='search/inText_search.html'
 
-    def get_context_data(self, *args, **kwargs):
-        context = super(inText_search, self).get_context_data(*args, **kwargs)
-        pages = []
-        for result in context['object_list']:
-            if hasattr(result.object, 'id_tei'):
-                pages.append(result)
-        context['pages'] = pages
-        return context
-"""
-class Home(TemplateView):
-    template_name = 'index.html'
+#class inText_search(SearchView):
+    #template_name='search/inText_search.html'
+
+    #def get_context_data(self, *args, **kwargs):
+        #context = super(inText_search, self).get_context_data(*args, **kwargs)
+        #pages = []
+        #for result in context['object_list']:
+            #if hasattr(result.object, 'id_tei'):
+                #pages.append(result)
+        #context['pages'] = pages
+        #return context
+
+def review_transcription(request, pk):
+    obj = PendingTranscription.objects.get(pk=pk)
+    #looking for primary key
+    if request.method == 'POST':
+        if 'deletebutton' in request.POST:
+            obj.delete()
+            messages.success(request, 'The transcription was successfully deleted.')
+        else:
+            obj.doc.fulltext = obj.transcription
+            obj.doc_transcribed = False
+            obj.doc.Manuscript_id.transcribed = True 
+            obj.doc.save()
+            obj.delete()
+            messages.success(request, 'The transcription was successfully approved.')
+        return HttpResponseRedirect('/admin')
+    else:
+        old_lines = split_html_lines(obj.doc.fulltext)
+        new_lines = split_html_lines(obj.transcription)
+        d = difflib.Differ()
+        diff_lines = list(d.compare(old_lines, new_lines))
+        for i, line in enumerate(diff_lines):
+            if line.startswith('  '):
+               diff_lines[i] = '<span class="diff-both">' + line[2:] + '</span>'
+            elif line.startswith('- '):
+               diff_lines[i] = '<span class="diff-first">' + line[2:] + '</span>'
+            elif line.startswith('+ '):
+               diff_lines[i] = '<span class="diff-second">' + line[2:] + '</span>'
+            elif line.startswith('? '):
+                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
+        context = {
+            'object': obj,
+            'diff_table': '<br>'.join(diff_lines)
+        }
+        #Page_id = id[len(id)-3:]
+        return render(request, 'review_transcription.html', context)
+
+def split_html_lines(html_str):
+    # New transcriptions will always insert '<br>', but some of the old transcriptions have variant
+    # spellings of the tag.
+    html_str = html_str.replace('<br/>', '<br>').replace('<br />', '<br>')
+    return html_str.split('<br>')
+
+class ReviewTranscriptionList(ListView):
+    model = PendingTranscription
+    template_name = 'review_transcription_list.html'
 
 

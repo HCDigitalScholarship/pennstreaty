@@ -413,6 +413,9 @@ class PageAdmin(ImportExportModelAdmin):
     search_fields = (['id_tei','Manuscript_id__title'])
     list_display = (['id_tei','Manuscript_id'])
 
+#class PendingTranscriptionAdmin(ImportExportModelAdmin):
+    #fields= ('doc','author','uploaded', 'transcription')
+    #list_display=(['doc', 'author', 'uploaded'])
 
 admin.site.register(Person,PersonAdmin)
 admin.site.register(Place,PlaceAdmin)
