@@ -1,6 +1,6 @@
 # Beyond Penn's Treaty Project
 
-This peoject  by the Haverford DS Team that will serve as the adjunct, and then final site for all digital research and transcription done on Beyond Penn's Treaty. It  provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s.This application makes it possible to search across our Quaker-related projects for people, organizations and places. 
+This peoject by the Haverford DS Team that will serve as the adjunct, and then final site for all digital research and transcription done on Beyond Penn's Treaty. It  provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s.This application makes it possible to search across our Quaker-related projects for people, organizations and places. 
 
 
 The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/).
@@ -22,7 +22,10 @@ To learn more  about how to get started with Django, QI site and functionalities
 https://github.com/HCDigitalScholarship/QI/wiki
 
 ### For Users:
+#### Site map -- navigation of QI project:
+[This page](https://github.com/HCDigitalScholarship/QI/wiki/Site-Map-Explanation) from our Wiki provides a detailed explanation for each feature of the project
 #### import manscripts, Storymap:
+
 #### Review unapproved Transcription:
 
 ### For Developers:
