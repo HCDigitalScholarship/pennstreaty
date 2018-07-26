@@ -1,5 +1,8 @@
 # Beyond Penn's Treaty Project
 
+This peoject  by the Haverford DS Team that will serve as the adjunct, and then final site for all digital research and transcription done on Beyond Penn's Treaty. It  provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s.This application makes it possible to search across our Quaker-related projects for people, organizations and places. 
+
+
 The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/).
 
 The frontend of this site uses Foundation5 (the complete download). The documentation for Foundation can be found at http://foundation.zurb.com/develop/download.html.
@@ -9,8 +12,11 @@ The features/visualizations on this site were made using the following libraries
 - [JQuery](http://jquery.com/)
 - [DataTables](https://www.datatables.net/)
 - [StoryMapJS](https://storymap.knightlab.com/advanced/)
-
-To learn more about how I got started with Django, Foundation, and creating the QMH site, please visit my wiki page on github here: https://github.com/HCDigitalScholarship/FriendsAsylum/wiki/Welcome-and-Introduction-to-QMH-and-Django
+- [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html)
+- [CartoLocation for Overviewmaps](https://carto.com/)
+ 
+To learn more about how I got started with Django, Foundation, and creating the QMH site, please visit my wiki page on github here: 
+https://github.com/HCDigitalScholarship/FriendsAsylum/wiki/Welcome-and-Introduction-to-QMH-and-Django
 
 ### Excel Docs for Future Research on QI:
 
@@ -28,3 +34,7 @@ Please ask Mike and/or Andy, and I'm sure they will be able to help you find the
 - All spreadsheets need to have `id` as there first column and that column should be empty of data
 - For places, categories should be `id,id_tei,name,county,state,latitude,longitude,notes,place_type,alternate,date`
 - Need to do place,organization and then people, that order
+
+### For users:
+
+### For Developers:
