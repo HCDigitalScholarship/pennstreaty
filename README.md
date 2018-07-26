@@ -18,6 +18,16 @@ The features/visualizations on this site were made using the following libraries
 To learn more about how I got started with Django, Foundation, and creating the QMH site, please visit my wiki page on github here: 
 https://github.com/HCDigitalScholarship/FriendsAsylum/wiki/Welcome-and-Introduction-to-QMH-and-Django
 
+To learn more  about how to get started with Django, QI site and functionalities on this app please visit wiki page here:
+https://github.com/HCDigitalScholarship/QI/wiki
+
+### For Users:
+#### import manscripts, Storymap:
+#### Review unapproved Transcription:
+
+### For Developers:
+
+
 ### Excel Docs for Future Research on QI:
 
 There is a shared google folder called quakers-and-indians which has the following types of information:
@@ -35,6 +45,4 @@ Please ask Mike and/or Andy, and I'm sure they will be able to help you find the
 - For places, categories should be `id,id_tei,name,county,state,latitude,longitude,notes,place_type,alternate,date`
 - Need to do place,organization and then people, that order
 
-### For users:
 
-### For Developers:
