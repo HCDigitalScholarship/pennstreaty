@@ -6,6 +6,9 @@ This peoject by the Haverford DS Team that will serve as the adjunct, and then f
 The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/).
 
 The frontend of this site uses Foundation5 (the complete download). The documentation for Foundation can be found at http://foundation.zurb.com/develop/download.html.
+Some other frontend features use Bootstrap. Documentation for Bootstrap can be found at https://getbootstrap.com/docs/4.1/getting-started/introduction/
+
+Some templates of this site are borrowed from The Shelley - Godwin Archive project http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2
 
 The features/visualizations on this site were made using the following libraries:
 
@@ -15,10 +18,8 @@ The features/visualizations on this site were made using the following libraries
 - [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html)
 - [CartoLocation for Overviewmaps](https://carto.com/)
  
-To learn more about how I got started with Django, Foundation, and creating the QMH site, please visit my wiki page on github here: 
-https://github.com/HCDigitalScholarship/FriendsAsylum/wiki/Welcome-and-Introduction-to-QMH-and-Django
-
-To learn more  about how to get started with Django, QI site and functionalities on this app please visit wiki page here:
+ 
+To learn more  about how to get started with Django visit [Django website](https://docs.djangoproject.com/en/2.0/) and [Haverford Digital Scholarship CookBook Entry on Django](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/Djangology101.md), for details about how to use and build this site and some functionalities, please visit wiki page here:
 https://github.com/HCDigitalScholarship/QI/wiki
 
 ### For Users:
