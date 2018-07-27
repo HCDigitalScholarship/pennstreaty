@@ -8,7 +8,6 @@ The backend of this site uses the Django framework (documentation can be found a
 The frontend of this site uses Foundation5 (the complete download). The documentation for Foundation can be found at http://foundation.zurb.com/develop/download.html.
 Some other frontend features use Bootstrap. Documentation for Bootstrap can be found at https://getbootstrap.com/docs/4.1/getting-started/introduction/
 
-Some templates of this site are borrowed from The Shelley - Godwin Archive project http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2
 
 The features/visualizations on this site were made using the following libraries:
 
@@ -18,19 +17,24 @@ The features/visualizations on this site were made using the following libraries
 - [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html)
 - [CartoLocation for Overviewmaps](https://carto.com/)
  
- 
-To learn more  about how to get started with Django visit [Django website](https://docs.djangoproject.com/en/2.0/) and [Haverford Digital Scholarship CookBook Entry on Django](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/Djangology101.md), for details about how to use and build this site and some functionalities, please visit wiki page here:
+Template for manuscript page view of this site are borrowed from [The Shelley - Godwin Archive project](http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2)
+
+## Read before you start
+To learn more about how to get started with Django visit [Django website](https://docs.djangoproject.com/en/2.0/) and [Haverford Digital Scholarship CookBook Entry on Django](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/Djangology101.md),
+
+for details about how to use and build this site and some functionalities, please visit wiki page here:
 https://github.com/HCDigitalScholarship/QI/wiki
 
 ### For Users:
 #### Site map -- navigation of QI project:
 [This page](https://github.com/HCDigitalScholarship/QI/wiki/Site-Map-Explanation) from our Wiki provides a detailed explanation for each feature of the project
-#### import manscripts, Storymap:
+#### Import manuscripts, StoryMap:
 
-#### Review unapproved Transcription:
+#### Review Unapproved Transcription:
 
 ### For Developers:
-
+#### 9
+#### **For future developers of this project: Please read wiki for [existing issues]() of this project and explanations on how we did this project**
 
 ### Excel Docs for Future Research on QI:
 
@@ -39,7 +43,7 @@ There is a shared google folder called quakers-and-indians which has the followi
 - Features/Website Functionality Spreadsheet
 - TEI guidelines from SWAT
 - TEI/XML files from SWAT
-- Excel Docs on People, Places, Organizations (I've made jsons of these, and they are available in this repo's `static/json` folder)
+- Excel Docs on People, Places, Organizations (I've made jsons of these, and they are available in this`static/json folder)
 
 Please ask Mike and/or Andy, and I'm sure they will be able to help you find the information/materials you need!
 
