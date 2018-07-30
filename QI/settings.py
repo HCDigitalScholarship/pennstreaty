@@ -33,6 +33,7 @@ INSTALLED_APPS = (
    'django.contrib.sessions',
    'django.contrib.messages',
    'django.contrib.staticfiles',
+   'django.contrib.postgres',
    'import_export',
    'xml_tool',
    'haystack',
@@ -92,8 +93,9 @@ USE_TZ = True
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://127.0.0.1:8983/solr/QI'
+        'URL': "http://127.0.0.1:8984/solr/QIcore",
+        'ADMIN_URL': 'http://127.0.0.1:8984/solr/admin/cores',
         # ...or for multicore...
-        # 'URL': 'http://127.0.0.1:8983/solr/mysite',
+        # 'URL': 'http://127.0.0.1:8984/solr/mysite',
     },
 }
