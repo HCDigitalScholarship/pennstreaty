@@ -396,8 +396,14 @@ def pageinfo(request,id):
 
     total = len(possible_pages)
     
+    query = request.GET.get("q")
+
+    search_result=[]
+    if query:
+       search_result = possible_pages.filter(fulltext__icontains=query)
+
     template_name='viewpage.html'   
-    return render(request,template_name, {'current_page':current_page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'total':total, 'previous':previous, 'next_one':next_one,'pagenumber':pagenumber})
+    return render(request,template_name, {'search_result': search_result, 'current_page':current_page,'manuscript':manuscript, 'lastpage':lastpage, 'Page_id':Page_id, 'total':total, 'previous':previous, 'next_one':next_one,'pagenumber':pagenumber})
 
 	#gotta include info as to whether or not it's the first or last pg in a manuscript!
 
@@ -617,22 +623,6 @@ def XMLimport(request):
     else:
         return render(request, '../templates/admin/XMLimport/index.html')
 
-def inText_search(request):
-   return render(request,'search/inText_search.html')
-
-
-
-#class inText_search(SearchView):
-    #template_name='search/inText_search.html'
-
-    #def get_context_data(self, *args, **kwargs):
-        #context = super(inText_search, self).get_context_data(*args, **kwargs)
-        #pages = []
-        #for result in context['object_list']:
-            #if hasattr(result.object, 'id_tei'):
-                #pages.append(result)
-        #context['pages'] = pages
-        #return context
 
 def review_transcription(request, pk):
     obj = PendingTranscription.objects.get(pk=pk)
@@ -680,4 +670,8 @@ class ReviewTranscriptionList(ListView):
     model = PendingTranscription
     template_name = 'review_transcription_list.html'
 
+
+def inText_search(request):
+    query = request.GET.get("q")
+    return render(request, "search/inText_search.html")
 

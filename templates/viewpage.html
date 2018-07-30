@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel='stylesheet' href="{% static "css/inText_Search.css" %}" />
     <title>Page information</title>
    
    {% include 'top-links.html' %}
@@ -111,13 +111,15 @@
                      new_id = new_id+"00"+input;
                      console.log(new_id);
                      window.location=new_id;
-                }
-                 else{
-                     new_id = new_id+"0"+input;
+                  } else if (input.length == 2){
+                          new_id = new_id +"0"+input;
+                           console.log(new_id);
+                           window.location = new_id;
+                  } else{
+                     new_id = new_id+input;
                      console.log(new_id);
                      window.location=new_id;
-
-                }
+                  }
               }
 
            </script> 
@@ -133,9 +135,10 @@
                 <span class="fa fa-chevron-left"></span>
              </a>
 
-             <a href="/outputPagePT/{{current_page.id_tei}}" target="_blank" class="btn btn-primary" title="Download">
+            <!--<a href="/outputPagePT/{{current_page.id_tei}}" target="_blank" class="btn btn-primary" title="Download">
                 <span class="fa fa-download"></span>
-             </a>
+             </a>-->
+
              <a href="/page/{{previous.id_tei}}" class="btn btn-primary title="Next">
                 <span class="fa fa-chevron-right"></span>
              </a>
@@ -144,13 +147,42 @@
           </div>
 <!--previous and next_one are switched, but they work fine on the web in this way-->
             <div class="input-group-btn btn-group input-group-sm col-sm-12" style="flex:33%; margin-left:55px;">
-              <form method="get" action="/searchtext">
-                <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search within this manuscript..." style="display:inline-block; width:220px">
-                <button class="btn btn-success" type="submit" style="display:inline-block; background-color:#8c0404; color:white;">Search<button>       
+             <form  method="GET" action="">
+               <input type="text" value = '{{ request.GET.q }}' name ='q' placeholder="Search within this manuscript..." style="display:inline-block; width:55%">
+                <button class="btn btn-success" type="submit" style="display:inline-block; background-color:#8c0404; color:white;">Search</button>     
+                <button id="myBtn" class="btn" style="background-color: white; color: #8c0404">Result</button>
               </form>
            </div>
 
    </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p><font color = 'red'>{{ request.GET.q }}</font> found on:
+         <ul>
+          {% for found_page in search_result %}
+             <script type=text/javascript>
+                     var found_page_number='{{found_page.id_tei}}'
+                     var found_page_number = found_page_number.slice(-3)
+                     console.log('found on');
+                     console.log(found_page_number);
+
+             </script>
+             <li>
+                <a href="/page/{{found_page.id_tei}}">
+                  Page
+                  <script type='text/javascript'>
+                     document.write(found_page_number)
+                  </script>
+                </a>
+              </li>
+          {% endfor %}
+         </ul>
+       </p>
+    </div>
+  </div>
+
+
   <div class= "detail-view-result">
    <div  style="display:flex;">
         <div class="sharedcanvas col-md-6 col-sm-12" style="display:inline-block; flex:50%;">
@@ -158,7 +190,7 @@
           <div style="overflow:scroll; margin-top:auto;">
 
             <img id="image" src="/static/img/{{current_page.id_tei}}.jpg" width"100%" style="overflow:scroll" >
- 
+            <!--<div id="seadragon-viewer" style="width:100%; height:100%"></div>-->
           </div>
         </div>
         <div class="sharedcanvas col-md-6 col-sm-12 style="margin:20px; width:100%; display: inline-block; flex:50%;">
@@ -178,6 +210,9 @@
 </div>
 
 
+
+</div>
+
 {% include 'footer.html' %}
 <script type="text/javascript">
 
@@ -189,6 +224,34 @@
         var img_url = '{{ page.img_url }}';
         var Page_id = '{{ Page_id }}';
         var lastpage = '{{ lastpage }}';
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
 
 </body>
