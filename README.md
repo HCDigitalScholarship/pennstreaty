@@ -33,8 +33,8 @@ https://github.com/HCDigitalScholarship/QI/wiki
 #### Review Unapproved Transcription:
 
 ### For Developers:
-#### 
-#### **For future developers of this project: Please read wiki for [existing issues]() of this project and explanations on existing features**
+#### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
+#### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
 
 ### Excel Docs for Future Research on QI:
 
@@ -55,4 +55,4 @@ Please ask Mike and/or Andy, and I'm sure they will be able to help you find the
 
 
 ### Notes on this README and Wiki:
-I have not got the time to explore every feature and detail of this project; therefore, a lot of documentaions are missing. 
+**I have not gotten the time to explore every feature and detail of this project; therefore, a lot of documentaions are missing. <br/> To future developers, please update them.**
