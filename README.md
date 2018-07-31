@@ -14,7 +14,7 @@ The features/visualizations on this site were made using the following libraries
 - [JQuery](http://jquery.com/)
 - [DataTables](https://www.datatables.net/)
 - [StoryMapJS](https://storymap.knightlab.com/advanced/)
-- [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html)
+- [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html) & [Solr, Search Engine](http://django-haystack.readthedocs.io/en/master/installing_search_engines.html)
 - [CartoLocation for Overviewmaps](https://carto.com/)
  
 Template for manuscript page view of this site are borrowed from [The Shelley - Godwin Archive project](http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2)
@@ -22,8 +22,13 @@ Template for manuscript page view of this site are borrowed from [The Shelley - 
 ## Read before you start
 To learn more about how to get started with Django visit [Django website](https://docs.djangoproject.com/en/2.0/) and [Haverford Digital Scholarship CookBook Entry on Django](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/Djangology101.md),
 
-for details about how to use and build this site and some functionalities, please visit wiki page here:
+for details about how to use and build this site and some features, please visit wiki page here:
 https://github.com/HCDigitalScholarship/QI/wiki
+
+### For Developers:
+#### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
+#### If you want to make modifications on templates, [this page](https://github.com/HCDigitalScholarship/QI/wiki/Templates-Explanation) in Wiki should be helpful to give you some directions.
+#### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
 
 ### For Users:
 #### Site map -- navigation of QI project:
@@ -32,9 +37,7 @@ https://github.com/HCDigitalScholarship/QI/wiki
 
 #### Review Unapproved Transcription:
 
-### For Developers:
-#### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
-#### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
+
 
 ### Excel Docs for Future Research on QI:
 
