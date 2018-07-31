@@ -22,7 +22,7 @@ Template for manuscript page view of this site are borrowed from [The Shelley - 
 ## Read before you start
 To learn more about how to get started with Django visit [Django website](https://docs.djangoproject.com/en/2.0/) and [Haverford Digital Scholarship CookBook Entry on Django](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/Djangology101.md),
 
-for details about how to use and build this site and some functionalities, please visit wiki page here:
+for details about how to use and build this site and some features, please visit wiki page here:
 https://github.com/HCDigitalScholarship/QI/wiki
 
 ### For Developers:
