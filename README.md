@@ -25,6 +25,10 @@ To learn more about how to get started with Django visit [Django website](https:
 for details about how to use and build this site and some functionalities, please visit wiki page here:
 https://github.com/HCDigitalScholarship/QI/wiki
 
+### For Developers:
+#### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
+#### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
+
 ### For Users:
 #### Site map -- navigation of QI project:
 [This page](https://github.com/HCDigitalScholarship/QI/wiki/Site-Map-Explanation) from our Wiki provides a detailed explanation for each feature of the project
@@ -32,9 +36,7 @@ https://github.com/HCDigitalScholarship/QI/wiki
 
 #### Review Unapproved Transcription:
 
-### For Developers:
-#### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
-#### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
+
 
 ### Excel Docs for Future Research on QI:
 
