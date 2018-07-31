@@ -27,6 +27,7 @@ https://github.com/HCDigitalScholarship/QI/wiki
 
 ### For Developers:
 #### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
+#### If you want to make modifications on templates, [this page](https://github.com/HCDigitalScholarship/QI/wiki/Templates-Explanation) in Wiki should be helpful to give you some directions.
 #### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
 
 ### For Users:
