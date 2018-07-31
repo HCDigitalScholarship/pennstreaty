@@ -14,7 +14,7 @@ The features/visualizations on this site were made using the following libraries
 - [JQuery](http://jquery.com/)
 - [DataTables](https://www.datatables.net/)
 - [StoryMapJS](https://storymap.knightlab.com/advanced/)
-- [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html)
+- [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html) & [Solr, Search Engine](http://django-haystack.readthedocs.io/en/master/installing_search_engines.html)
 - [CartoLocation for Overviewmaps](https://carto.com/)
  
 Template for manuscript page view of this site are borrowed from [The Shelley - Godwin Archive project](http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2)
