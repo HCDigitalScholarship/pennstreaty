@@ -6,7 +6,7 @@ This peoject by the Haverford DS Team that will serve as the adjunct, and then f
 The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/).
 
 The frontend of this site uses Foundation5 (the complete download). The documentation for Foundation can be found at http://foundation.zurb.com/develop/download.html.
-Some other frontend features use Bootstrap. Documentation for Bootstrap can be found at https://getbootstrap.com/docs/4.1/getting-started/introduction/
+Some other frontend features use Bootstrap4. Documentation for Bootstrap can be found at https://getbootstrap.com/docs/4.1/getting-started/introduction/
 
 
 The features/visualizations on this site were made using the following libraries:
@@ -33,8 +33,8 @@ https://github.com/HCDigitalScholarship/QI/wiki
 #### Review Unapproved Transcription:
 
 ### For Developers:
-#### 9
-#### **For future developers of this project: Please read wiki for [existing issues]() of this project and explanations on how we did this project**
+#### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
+#### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
 
 ### Excel Docs for Future Research on QI:
 
@@ -54,3 +54,5 @@ Please ask Mike and/or Andy, and I'm sure they will be able to help you find the
 - Need to do place,organization and then people, that order
 
 
+### Notes on this README and Wiki:
+**I have not gotten the time to explore every feature and detail of this project; therefore, a lot of documentaions are missing. <br/> To future developers, please update them.**
