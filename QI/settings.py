@@ -99,3 +99,6 @@ HAYSTACK_CONNECTIONS = {
         # 'URL': 'http://127.0.0.1:8984/solr/mysite',
     },
 }
+
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 100
+
