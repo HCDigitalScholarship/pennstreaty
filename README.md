@@ -3,11 +3,10 @@
 This peoject by the Haverford DS Team that will serve as the adjunct, and then final site for all digital research and transcription done on Beyond Penn's Treaty. It  provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s.This application makes it possible to search across our Quaker-related projects for people, organizations and places. 
 
 
-The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/), and PostgreSQL for database
+The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/), and PostgreSQL for database.
 
 The frontend of this site uses Foundation5 (the complete download). The documentation for Foundation can be found at http://foundation.zurb.com/develop/download.html.
 Some other frontend features use Bootstrap4. Documentation for Bootstrap can be found at https://getbootstrap.com/docs/4.1/getting-started/introduction/
-
 
 The features/visualizations on this site were made using the following libraries:
 
@@ -16,8 +15,8 @@ The features/visualizations on this site were made using the following libraries
 - [StoryMapJS](https://storymap.knightlab.com/advanced/)
 - [Haystack Search](https://django-haystack.readthedocs.io/en/v2.8.1/tutorial.html) & [Solr, Search Engine](http://django-haystack.readthedocs.io/en/master/installing_search_engines.html)
 - [CartoLocation for Overviewmaps](https://carto.com/)
- 
-Template for manuscript page view of this site are borrowed from [The Shelley - Godwin Archive project](http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2)
+
+The template for manuscript page view of this site are borrowed from [The Shelley - Godwin Archive project](http://shelleygodwinarchive.org/sc/bl/hymn_to_intellectual_beauty/#/p2)
 
 ## Read before you start
 To learn more about how to get started with Django visit [Django website](https://docs.djangoproject.com/en/2.0/) and [Haverford Digital Scholarship CookBook Entry on Django](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/Djangology101.md),
