@@ -6,9 +6,10 @@ This peoject by the Haverford DS Team that will serve as the adjunct, and then f
 The backend of this site uses the Django framework (documentation can be found at https://www.djangoproject.com/), and PostgreSQL for database.
 
 The frontend of this site uses Foundation5 (the complete download). The documentation for Foundation can be found at http://foundation.zurb.com/develop/download.html.
+
 Some other frontend features use Bootstrap4. Documentation for Bootstrap can be found at https://getbootstrap.com/docs/4.1/getting-started/introduction/
 
-Mansucripts in this project are mapped based on TEI rules to XML files. We then use Python and [XSLT](https://www.w3.org/standards/xml/transformation) languages to transform them for the Django site.
+Mansucripts in this project are mapped based on [TEI](http://www.tei-c.org/) rules to XML files. We then use Python and [XSLT](https://www.w3.org/standards/xml/transformation) languages to transform them for the Django site.
 
 The features/visualizations on this site were made using the following libraries:
 
