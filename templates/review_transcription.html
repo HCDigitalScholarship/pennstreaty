@@ -11,7 +11,7 @@
 
 
 {% block content %}
-<div id="content-main">
+<div id="content-main" style="margin:auto">
   <h1>Review transcription of <a href="/transcribepage/{{ object.doc.id_tei }}">{{ object.doc.id_tei }}</a></h1>
   <div class="block40">
     <h2>Image</h2>
@@ -31,7 +31,7 @@
             </div>
         </div>
   </div>-->
-  <div class="inline-div">
+  <div class="inline-div" style="height:600px; overflow-y:scroll">
     {% autoescape off %}
     {{ diff_table }}
     {% endautoescape %}

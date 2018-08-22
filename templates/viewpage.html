@@ -121,7 +121,6 @@
                      window.location=new_id;
                   }
               }
-
            </script> 
            
          </div>
@@ -153,6 +152,7 @@
                 <button id="myBtn" class="btn" style="background-color: white; color: #8c0404">Result</button>
               </form>
            </div>-->
+<!-- Search within manuscript is commented out because it needs to be modified, read Issues in Wiki on Gihub-->
 
    </div>
   <div id="myModal" class="modal">
@@ -166,7 +166,6 @@
                      var found_page_number = found_page_number.slice(-3)
                      console.log('found on');
                      console.log(found_page_number);
-
              </script>
              <li>
                 <a href="/page/{{found_page.id_tei}}">
@@ -214,13 +213,17 @@
 </div>
 
 {% include 'footer.html' %}
+
 <script type="text/javascript">
 
 </script>
 
 
+
 <script type="text/javascript" >
+
         var Manuscript_id = '{{ manuscript.id_tei }}';
+
         var img_url = '{{ page.img_url }}';
         var Page_id = '{{ Page_id }}';
         var lastpage = '{{ lastpage }}';
@@ -229,23 +232,18 @@
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
-
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -257,3 +255,16 @@ window.onclick = function(event) {
 </body>
 </html>
 
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.

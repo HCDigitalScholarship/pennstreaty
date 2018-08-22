@@ -38,7 +38,7 @@
         <xsl:text>#</xsl:text>
         <xsl:value-of select="@key" />
       </xsl:attribute>
-      <xsl:apply-templates/>
+        <xsl:apply-templates/>
     </a>
      <div id="a{position()}" class="hidden">
       <div id="Per-popover-header" class="hide">Person Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
@@ -46,6 +46,7 @@
       <div id="Per-popover-body-{position()}" class="hide">
       </div>
     </div>
+      <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match="tei:orgName">

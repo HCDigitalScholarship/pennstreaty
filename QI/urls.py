@@ -63,6 +63,7 @@ urlpatterns = [
     path('admin/review_transcriptions/',staff_member_required(views.ReviewTranscriptionList.as_view()),name='admin_review_transcription_lists'),
     path('admin/review_transcriptions/<int:pk>/', views.review_transcription,name='admin_review_transcriptions'),
     path('review_transcriptions', views.testing, name="testing"),
+    path('inText_search', views.inText_search, name='searchInText'),
 ]
 
 

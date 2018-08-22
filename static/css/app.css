@@ -1,3 +1,18 @@
+
+
+.buttons-pdf{
+    background-color: #e3e8ef;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .popover{
    width:500px;
    overflow-y:scroll;

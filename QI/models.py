@@ -198,11 +198,18 @@ class PendingTranscription(models.Model):
     uploaded = models.DateTimeField(auto_now_add=True)
     doc = models.ForeignKey("Page", on_delete=models.CASCADE)
 
-    def get_absolute_url(self):
-        return reverse('admin_review_transcription', args=[self.id])
+   #def get_absolute_url(self):
+        #return "admin_review_transcription/%i/" % self.id
+ 
+    #def get_absolute_url(self):  
+        #return reverse('admin_review_transcription', )
 
     def __str__(self):
         if self.author:
-            return 'Pending Transcription of {0.doc.id_tei} by {0.author}'.format(self)
+            return 'Pending Transcription of {0.doc} by {0.author} at {0.uploaded}'.format(self)
         else:
-            return 'Pending Transcription of {0.doc.id_tei}'.format(self)
+            return 'Pending Transcription of {0.doc.id_tei} at {0.uploaded}'.format(self)
+
+    def get_type(self):
+        return 'PendingTranscription'
+

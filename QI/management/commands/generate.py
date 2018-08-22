@@ -197,7 +197,7 @@ class Command(BaseCommand): #2
 	<div id = "story1" style = "background-color: #F0F8FF;">
 	   <div>
 	      <br />
-	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: black"> StoryMap for """+ xml_file + """</h2>
+	      <h2 class = "text-center" style = "font-family: 'Alegreya Sans SC'; font-weight: 400; color: black"> Storymap for"""+title_fin+ """</h2>
 	        <!-- The StoryMap container can go anywhere on the page. Be sure to 
     specify a width and height.  The width can be absolute (in pixels) or 
     relative (in percentage), but the height must be an absolute value.  
@@ -250,7 +250,7 @@ class Command(BaseCommand): #2
 				tree.write('static/xml/xml_file_names.xml')
 				new_file = True
 			#to check if this storymap has already existed	
-			#new_file = "True"#delete this when I am done with storymap!!!!
+			new_file = "True"#delete this when I am done with storymap!!!!
 
 			if new_file:
 				#if it is a new file, we need to make a link to it on 'list_of_storymap.html'.

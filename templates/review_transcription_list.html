@@ -23,9 +23,9 @@
     <tbody>
     {% for transcription in object_list %}
     <tr>
-      <td><a href="/admin/review_transcriptions/{{ transcription.doc.id_tei }}">{{ transcription.doc.id_tei }}</a></td>
+      <td><a href="/admin/review_transcriptions/{{ transcription.pk }}">{{ transcription.doc }}</a></td>
       <td>{{ transcription.uploaded }}</td>
-      <td>{{ transcription.name }}</td>
+      <td>{{ transcription.author }}</td>
     </tr>
     {% endfor %}
   </table>
