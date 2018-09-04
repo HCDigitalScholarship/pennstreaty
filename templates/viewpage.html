@@ -82,11 +82,7 @@
        <li class="meta-data-item">
          <label class="meta-label" id="meta-workInstitution">LOCATION:
          </label><span>
-           {% if manuscript.location in "SWATHMORE" or "Swathmore" %}
-             Swarthmore College
-           {% else %}
-             Haverford College
-           {% endif %}
+         {{manuscript.location}}
          </span></li>
      </ul>
     </fieldset>
