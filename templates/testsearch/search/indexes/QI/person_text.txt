@@ -1,0 +1,12 @@
+{{ object.id_tei }}
+{{ object.first_name }}
+{{ object.last_name }}
+{{ object.other_names }}
+{{ object.middle_name }}
+{{ object.display_name }}
+{{ object.birth_date }}
+{{ object.death_date }}
+{{ object.birth_place }}
+{{ object.death_place }}
+{{ object.gender }}
+{{ object.bio_notes }}

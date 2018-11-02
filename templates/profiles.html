@@ -11,6 +11,18 @@
 .button{
       background-color:#99a5b3 !important;
 }
+
+.button:hover {
+           background-color:#becad8 !important;
+}
+
+.button:active {
+  background-color: #becad8 !important;
+  box-shadow: 0 5px #666 !important;
+  transform: translateY(4px) !important;
+
+}
+
 </style>
 
 
@@ -40,7 +52,7 @@
         <div class="content active" id="panel1">
          <div class = "row full-width">
              <!-- there are many ways to make a datatable, but this worked best for django -->
- <table id="example" class="display" cellspacing="0" width="100%">
+ <table id="example1" class="display" cellspacing="0" width="100%">
                                         <thead>
                                                 <tr>
                                                         <th>Name</th>
@@ -80,7 +92,7 @@
       </div>
         <div class="content" id="panel2">
           <div class = "row full-width">
-          <table id="example" class="display" cellspacing="0" width="100%">
+          <table id="example2" class="display" cellspacing="0" width="100%">
                                         <thead>
                                                 <tr>
                                                         <th>Name</th>
@@ -119,7 +131,7 @@
       </div>
         <div class="content" id="panel3">
           <div class = "row full-width">
-          <table id="example" class="display" cellspacing="0" width="100%">
+          <table id="example3" class="display" cellspacing="0" width="100%">
                                         <thead>
                                                 <tr>
                                                         <th>Name</th>
@@ -170,7 +182,7 @@
 
   <script>
     $(document).ready(function() {
-      $('#example').DataTable( {
+      $('#example1').DataTable( {
         dom: 'Bflrtip',
                buttons: [
                 {
@@ -202,6 +214,78 @@
         } );
     } );
    </script>
+
+  <script>
+    $(document).ready(function() {
+      $('#example2').DataTable( {
+        dom: 'Bflrtip',
+               buttons: [
+                {
+                    extend: 'copyHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+         }
+                },
+                {
+                    extend: 'excelHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'csvHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                }
+            ],
+       "aLengthMenu": [[20, 50, 100, -1], [20, 50, 100]]
+        } );
+    } );
+   </script>
+
+  <script>
+    $(document).ready(function() {
+      $('#example3').DataTable( {
+        dom: 'Bflrtip',
+               buttons: [
+                {
+                    extend: 'copyHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+         }
+                },
+                {
+                    extend: 'excelHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'csvHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                }
+            ],
+       "aLengthMenu": [[20, 50, 100, -1], [20, 50, 100]]
+        } );
+    } );
+   </script>
+
+
 
   </body>
 </html>

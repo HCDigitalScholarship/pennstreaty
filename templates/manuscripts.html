@@ -38,7 +38,13 @@
 
     <div id = "trans2">
  <div class = "row">
-   <h2> Manuscripts</h2>
+<h2>  Manuscripts  </h2>
+   <form method="GET" action="">
+   <input type="text" placeholder="Search" name='q'value='{{ request.GET.q }}' style="display:inline-block; width:20%">
+   <button type="submit" style="display:inline-block">Search</button>
+   </form>
+   </div>
+
   </div>
 
 
