@@ -24,14 +24,11 @@ from .xml_import import import_xml_from_file
 from django.urls import reverse
 
 from haystack.query import SearchQuerySet
-from haystack.generic_views import SearchView
-from haystack.inputs import AutoQuery, Clean
 
 import difflib
 import os
 import cgi
 
-from dal import autocomplete
 
 def handler404(request):
     response = render_to_response('404.html', {}, context_instance=RequestContext(request))
@@ -85,7 +82,11 @@ def manuscripts(request):
               Q(person_name__icontains=query)  |
               Q(org_name__icontains=query)
               )
-    return render(request, 'manuscripts.html', {'textlist':textlist,'pagelist':pagelist})
+    return render(request, 'manuscripts.html', {'textlist':textlist})
+
+
+
+
 def transcribe(request):
     textlist = Manuscript.objects.filter(transcribed=False).order_by('title')
     pagelist = Page.objects.order_by('Manuscript_id')
@@ -108,14 +109,6 @@ def organizations(request):
 def testsearch(request):
     return render(request, 'testsearch/testsearch.html')
 
-def testsearch2(request):
-    return render(request, 'testsearch2.html')
-
-"""def search(request):
-
-   # sqs = SearchQuerySet().models(Page, Manuscript)
-   
-    return render(request, 'search/search.html')"""
 class CustomSearchView(SearchView):
     """The view for the Haystack search."""
 
@@ -701,18 +694,4 @@ def split_html_lines(html_str):
 class ReviewTranscriptionList(ListView):
     model = PendingTranscription
     template_name = 'review_transcription_list.html'
-"""
-class ManuscriptAutocomplete(autocomplete.Select2ListView):
-    def create(self,text):
-        return text
 
-    def get_list(self):
-        if not self.request.user.is_authenticated():
-            return []
-        list=[object.title for object.Manuscript.objects.all()]
-       
-        if self.q:
-            filter_result= Manuscript.object.all().filter(title__icontains=self.q)
-            list=[object.title for object in filter_result]
-        return list
-"""
