@@ -57,7 +57,7 @@
       <xsl:apply-templates/>
     </a>
     <div id="b{position()}" class="hidden">
-      <div id="Org-popover-header">Orgnization Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
+      <div id="Org-popover-header">Organization Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
       </div>
       <div id="Org-popover-body-{position()}">
       </div>
