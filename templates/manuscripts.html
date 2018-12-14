@@ -1,12 +1,14 @@
+
 {% load staticfiles %}
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
-<meta charset="utf-8" />
+<!--<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="{% static 'css/app.css' %}" />
-<link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" />
+<link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" />-->
+{% include 'top-links.html' %}
     <title>Available Texts </title>
 
   </head>
@@ -47,7 +49,7 @@
                                                <th>Date</th>
                                                <th>Type</th>
                                                <th>Call Number</th>
-
+                                               <th> PDF </th>
                                        </tr>
                                </thead>
                                <tbody>
@@ -67,7 +69,7 @@
                                                        <td> {{text.date}} </td>
                                                        <td>{{text.type_of_Manuscript}}</td>
                                                        <td>{{text.call_no}}</td>
-
+                                                       <td><a href="{{text.id_tei}}.pdf"> PDF </a></td>
                                                </tr>
                                                        {% endfor %}
                                </tbody>
@@ -86,7 +88,9 @@
 <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
 <script>
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+      "pageLength": 50
+    });
 } );
 </script>
 </div>
