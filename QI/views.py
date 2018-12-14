@@ -13,7 +13,6 @@ from .models import Person, Place, Org, Relationship, Page, Manuscript, PendingT
 from html.parser import HTMLParser
 import zipfile as z
 
-from io import StringIO as cs
 
 from tempfile import *
 from .forms import ContactForm, ImportXMLForm, TranscribeForm
@@ -24,6 +23,7 @@ from .xml_import import import_xml_from_file
 from django.urls import reverse
 
 from haystack.query import SearchQuerySet
+from haystack.generic_views import SearchView
 
 import difflib
 import os
@@ -67,7 +67,7 @@ def about(request):
     return render(request, 'about.html')
 
 def mapgallery(request):
-    return render(request, 'mapgallery2.html')
+    return render(request, 'mapgallery.html')
 
 def historicalbackground (request):
     return render(request, 'historicalbackground.html')
@@ -163,40 +163,8 @@ def credits(request):
     return render(request, 'credits.html')
 
 def mapgallery(request):
-    return render(request, 'mapgallery2.html')
+    return render(request, 'mapgallery.html')
 
-def outputPagePDF(request,id):
-    PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
-    FullText = PageToOutput.fulltext #get the text that you want to put in the PDF
-    # Create the HttpResponse object with the appropriate PDF headers.
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="%s.pdf"'% PageToOutput.id_tei
-    buffer = BytesIO()
-    # Create the PDF object, using the BytesIO object as its "file."
-    p = canvas.Canvas(buffer)
-    # Draw things on the PDF. Here's where the PDF generation happens.
-    # See the ReportLab documentation for the full list of functionality.
-    p.drawString(30, 750, "Hello World")
-    # Close the PDF object cleanly.
-    p.showPage()
-    p.save()
-    # Get the value of the BytesIO buffer and write it to the response.
-    pdf = buffer.getvalue()
-    buffer.close()
-    response.write(pdf)
-    return response
-
-class MLStripper(HTMLParser): #This Class is used in the following view, outputPagePT, to get txt file of a page
-    def __init__(self):
-        super().__init__()
-        self.reset()
-        self.fed = []
-
-    def handle_data(self, d):
-        self.fed.append(d)
-
-    def get_data(self):
-        return ''.join(self.fed)
 
 def outputPagePT(request,id):
     PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
@@ -406,7 +374,7 @@ def pageinfo(request,id):
     pagenumber = int(Page_id)
     
     Manuscript_key = current_page.Manuscript_id
-    possible_pages = Page.objects.filter(Manuscript_id = Manuscript_key)
+    possible_pages = Page.objects.filter(Manuscript_id = Manuscript_key).order_by("id_tei")
     pages_list=[]
     for index, page in enumerate(possible_pages):
         pages_list.append(page)
@@ -414,6 +382,7 @@ def pageinfo(request,id):
         if page == current_page:
                 print('current=', index)
                 current = int(index)
+    
     previous = pages_list[current-1]
     try:
         next_one = pages_list[current+1]
@@ -695,3 +664,10 @@ class ReviewTranscriptionList(ListView):
     model = PendingTranscription
     template_name = 'review_transcription_list.html'
 
+def pdf(request,id):
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="%s.pdf"' % id
+    management.call_command('pdf_builder',id)
+    with open('/tmp/%s.pdf' % id,'rb') as fh:
+        response.write(fh.read())
+    return response

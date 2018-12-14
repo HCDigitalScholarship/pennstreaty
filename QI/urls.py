@@ -58,7 +58,6 @@ urlpatterns = [
     re_path(r'^manuscriptinfo/(?P<id>\S+)/', views.pagejsoninfo, name="pagejsoninfo"),
     re_path(r'^outputPagePT/(?P<id>\S+)/', views.outputPagePT, name="outputPagePT"),
     re_path(r'^outputManuPT/(?P<id>\S+)/', views.outputManuPT, name="outputManuPT"),
-    re_path(r'^outputPagePDF/(?P<id>\S+)/', views.outputPagePDF, name="outputPagePDF"),
     path('outputAll', views.outputAll, name="outputAll"),
     path('search/', views.CustomSearchView.as_view(), name="search"),
     path('transcribe', views.transcribe, name="Transcribe"),
@@ -66,8 +65,10 @@ urlpatterns = [
     path('admin/review_transcriptions/',staff_member_required(views.ReviewTranscriptionList.as_view()),name='admin_review_transcription_lists'),
     path('admin/review_transcriptions/<int:pk>/', views.review_transcription,name='admin_review_transcriptions'),
     path('review_transcriptions', views.testing, name="testing"),
+    re_path(r'^manuscripts/(?P<id>\S+).pdf/',views.pdf, name="pdf")
 ]
 
 
 admin.site.site_header = 'Beyond Penns Treaty'
 admin.site.index_title = 'Beyond Penns Treaty Administration'
+
