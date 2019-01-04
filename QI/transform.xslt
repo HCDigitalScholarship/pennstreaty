@@ -15,11 +15,12 @@
       <xsl:apply-templates/>
     </h4>
   </xsl:template>
+<!-- transform <div type="xxx">-->
 
 
   <!-- Transform <p>. -->
   <xsl:template match="tei:p">
-    <p>
+    <p class="tei-text">
       <xsl:apply-templates/>
     </p>
   </xsl:template>
@@ -34,7 +35,6 @@
   <xsl:template match="tei:persName">
     <a class="persName" id="Per-popover-{position()}" data-toggle="Person-popover-{position()}" data-trigger="fcours" data-popover-content="#a{position()}" data-placement="right">
       <xsl:attribute name="href">
-
         <xsl:text>#</xsl:text>
         <xsl:value-of select="@key" />
       </xsl:attribute>
@@ -46,11 +46,10 @@
       <div id="Per-popover-body-{position()}" class="hide">
       </div>
     </div>
-      <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match="tei:orgName">
-    <a class="orgName" id="Org-popover-{position()}" data-toggle="Orgnization-popover-{position()}" data-trigger="fcours" data-popover-content="#b{position()}" data-placement="right">
+    <a class="orgName" id="Org-popover-{position()}" data-toggle="Organization-popover-{position()}" data-trigger="fcours" data-popover-content="#b{position()}" data-placement="right">
       <xsl:attribute name="href">
         <xsl:text>#</xsl:text>
         <xsl:value-of select="@key" />
@@ -58,7 +57,7 @@
       <xsl:apply-templates/>
     </a>
     <div id="b{position()}" class="hidden">
-      <div id="Org-popover-header">Orgnization Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
+      <div id="Org-popover-header">Organization Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
       </div>
       <div id="Org-popover-body-{position()}">
       </div>
@@ -75,7 +74,7 @@
       <xsl:apply-templates/>
     </a>
     <div id="c{position()}" class="hidden">
-      <div id="Pla-popover-header">Place Inoformation <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
+      <div id="Pla-popover-header">Place Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
       </div>
       <div id="Pla-popover-body-{position()}">
       </div>
