@@ -7,6 +7,7 @@ from django.template import RequestContext, loader, Context
 from django.template.loader import get_template
 from django.shortcuts import render, render_to_response, redirect
 from django.core import management, serializers
+from django.core.paginator import Paginator
 from reportlab.pdfgen import canvas
 from io import BytesIO
 from .models import Person, Place, Org, Relationship, Page, Manuscript, PendingTranscription
@@ -18,12 +19,12 @@ from tempfile import *
 from .forms import ContactForm, ImportXMLForm, TranscribeForm
 from django.core.mail import EmailMessage, send_mail
 from django.views.generic import ListView, DetailView
-from .xml_import import import_xml_from_file
+from .xml_import import import_xml_from_file, if_already_exists
 
 from django.urls import reverse
 
 from haystack.query import SearchQuerySet
-from haystack.generic_views import SearchView
+from haystack.inputs import AutoQuery
 
 import difflib
 import os
@@ -108,25 +109,6 @@ def organizations(request):
 
 def testsearch(request):
     return render(request, 'testsearch/testsearch.html')
-
-class CustomSearchView(SearchView):
-    """The view for the Haystack search."""
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(CustomSearchView, self).get_context_data(*args, **kwargs)
-        print("result passed to view.py")
-        print(context)
-        manuscripts = []
-        pages = []
-        for result in context['object_list']:
-            if hasattr(result.object, 'title'):
-                manuscripts.append(result)
-            if hasattr(result.object, 'fulltext'):
-                pages.append(result)
-        context['manuscripts'] = manuscripts
-        context['pages'] = pages
-        return context
-
 
 def overviewmap_traveler(request):
     return render(request, 'overviewmap_traveler.html')
@@ -226,11 +208,6 @@ def manu_detail(request,id):
 
     return render(request,'manu_nav.html', {'manu':manu,'allpages':allpages, 'search_term':search_term})
 
-"""
-    if 'search' in request.GET:
-       search_term = request.GET['search']
-       page=page.filter(fulltext__icontains=search_term)
-"""
 
 
 def person_detail(request,id):
@@ -549,14 +526,16 @@ def new_xml_import(request):
     if request.method == 'POST':
         form = ImportXMLForm(request.POST, request.FILES)
         if form.is_valid():
+            exist = if_already_exists(request.FILES['xml_file'])
             import_xml_from_file(request.FILES['xml_file'])
-        context = {'success': True, 'form': ImportXMLForm()}
+        context = {'success': True, 'form': ImportXMLForm(),'exist':exist}
         return render(request, '../templates/admin/XMLimport/index.html', context)
     else:
         form = ImportXMLForm()
     return render(request, '../templates/admin/XMLimport/index.html', {'form': form})
 
 
+"""
 def XMLimport(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -617,7 +596,7 @@ def XMLimport(request):
         return render(request, '../templates/admin/XMLimport/index.html',{"success" : True})
     else:
         return render(request, '../templates/admin/XMLimport/index.html')
-
+"""
 
 def review_transcription(request, pk):
     obj = PendingTranscription.objects.get(pk=pk)
@@ -671,3 +650,19 @@ def pdf(request,id):
     with open('/tmp/%s.pdf' % id,'rb') as fh:
         response.write(fh.read())
     return response
+
+def search(request):
+    if request.method == "GET":
+        query = request.GET.get("q")
+        sqs = SearchQuerySet().filter(content=AutoQuery(request.GET['q'])).models(Page, Manuscript)
+        manuscript_results=[]
+        page_results=[]
+        for result in sqs:
+            if hasattr(result.object, "title"):
+                manuscript_results.append(result)
+            else:
+                page_results.append(result)
+                paginator = Paginator(page_results,15)
+                page = request.GET.get('page')
+                all_page_results = paginator.get_page(page)                                   
+    return render(request, "search/search.html", {"query":query, "manuscript_results": manuscript_results, "all_page_results": all_page_results})

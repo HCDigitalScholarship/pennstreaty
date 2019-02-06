@@ -1,3 +1,4 @@
+11
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -6,6 +7,7 @@
 {% load highlight %}
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
   {% include 'top-links.html' %}
   <title>Penn's Treaty | Search </title>
@@ -15,6 +17,7 @@
     background-color: yellow;
 }
 </style>
+
 </head>
 
 
@@ -48,6 +51,15 @@
        <form method="get" action=".">
      <p><label for="id_q" style="text-align:left">Search:</label>
         <input id="id_q" name="q" value = '{{ request.GET.q }}' type="search" placeholder="search"></p>
+        <!--<table>
+            {{ form.as_table }}
+            <tr>
+                <td>&nbsp;</td>
+                <form method="get" action=".">
+                    <input type="submit" value="Search">
+                </form>
+            </tr>
+        </table>-->
 
     <!-- <div class="col-sm-3">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
      <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.People"> People</label> </div>
@@ -61,57 +73,57 @@
 </div>
 
 <div style="margin:auto">
-{%if manuscript_results or page_results %}
-{% if not all_page_results.has_previous %}
-{% if manuscript_results %}
+{% if query %}
+{%if manuscripts or pages %}
+<h4><b>Search Result for "{{query}}":<!--</b> Results {{ page.start_index }} - {{ page.end_index }} of {{ page.paginator.count }}</h4>-->
+{% endif%}
+<div id="result">
+<!--<h5 style="color: #960707"><b>Results {{ page.start_index }} - {{ page.end_index }} of {{ page.paginator.count }}</b></h5>-->
+
+{% if manuscripts %}
 <ul> <h5 style="color: #960707"><b>From titles of manuscripts:</b></h5>
-{% for result in manuscript_results %}
-    <li>
-       <b><a href="/page/{{result.object.id_tei}}_001"> {{ result.object.title}}</a></b> 
-    </li>
-{% endfor %}
-</ul>
 {% endif %}
-{% endif %}
-
-{% if all_page_results %}
-<ul> <h5 style="color: #960707"><b>From fulltext of manuscript pages:&emsp;</b>{{ all_page_results.start_index }} - {{ all_page_results.end_index }} of {{ all_page_results.paginator.count }} results</h5>
-{% for result in all_page_results %}
+{% for result in manuscripts %}
    <li>
-      <b>Found on <a href="/page/{{result.object.id_tei}}">page {{ result.object.id_tei|slice:"-3:" }}</a> of {{ result.object.Manuscript_id }}</b>:<br>&emsp;&emsp;&emsp;&emsp;&emsp;<span style="color: #8a8b8e"> {% highlight result.fulltext with query%} </span>
+      <b>Found in <a href="/page/{{result.object.id_tei}}_001"> {{ result.object.title}}</b></a>
    </li>
-{% endfor %}
+{% endfor %}</ul>
+
+<br>
+
+{% if pages %}
+<ul> <h5 style="color: #960707"><b>From fulltext of manuscript pages:</b></h5>
+{% endif %}
+{% for result in pages %}
+   <li>
+      <b>Found on <a href="/page/{{result.object.id_tei}}">page {{ result.object.id_tei|slice:"-3:" }}</a> of {{ result.object.Manuscript_id }}</b>:<br>&emsp;&emsp;&emsp;&emsp;&emsp;<span style="color: #8a8b8e"> {% highlight result.object.fulltext with query%} </span>
+   </li>
+ {% endfor %}
 </ul>
-{% endif %}
 
-<div class="pagination">
-    <span class="step-links">
-        {% if all_page_results.has_previous %}
-            <a href="?q={{ query }}&amp;page=1">&laquo; first</a>
-            <a href="?q={{ query }}&amp;page={{ all_page_results.previous_page_number }}">previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ all_page_results.number }} of {{ all_page_results.paginator.num_pages }}.
-        </span>
-
-        {% if all_page_results.has_next %}
-            <a href="?q={{ query }}&amp;page={{ all_page_results.next_page_number }}">next</a>
-            <a href="?q={{ query }}&amp;page={{ all_page_results.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-    </span>
-</div>
-
-{% endif %}
-
-{% if not all_page_results and not manuscript_results %}
-<p>Sorry, no results found for "{{ query }}".</p>
+   {% if not manuscripts and not pages %}
+   <p>No results found for "{{ query }}".</p>
 {% endif %} 
+  </div>
+  <div>
+
+{% if page.has_previous or page.has_next %}
+<div style="color: #960707">
+{% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+|
+{% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+</div>
+{% endif %}
+{% endif %}
+
 <script>
+console.log("results of '{{ request.GET.q }}' from Page: '{{pages}}'");
+console.log("results of '{{ request.GET.q }}' from manuscripts: '{{manuscripts}}'");
 console.log("results of '{{ request.GET.q }}' from '{{sqs}}'");
-console.log("Manuscripts result: '{{manuscripts}}'");
-console.log("Pages result: '{{pages}}'");
 </script>
+
+</script>
+
 
 </div>
 </body>
