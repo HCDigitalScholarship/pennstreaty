@@ -78,7 +78,7 @@
 <ul> <h5 style="color: #960707"><b>From fulltext of manuscript pages:&emsp;</b>{{ all_page_results.start_index }} - {{ all_page_results.end_index }} of {{ all_page_results.paginator.count }} results</h5>
 {% for result in all_page_results %}
    <li>
-      <b>Found on <a href="/page/{{result.object.id_tei}}">page {{ result.object.id_tei|slice:"-3:" }}</a> of {{ result.object.Manuscript_id }}</b>:<br>&emsp;&emsp;&emsp;&emsp;&emsp;<span style="color: #8a8b8e"> {% highlight result.fulltext with query%} </span>
+      <b>Found on <a href="/page/{{result.object.id_tei}}">page {{ result.object.id_tei|slice:"-3:" }}</a> of {{ result.object.Manuscript_id }}</b>:&emsp;&emsp;<span style="color: #8a8b8e"> {% highlight result.fulltext with query%} </span>
    </li>
 {% endfor %}
 </ul>

@@ -657,6 +657,7 @@ def search(request):
         sqs = SearchQuerySet().filter(content=AutoQuery(request.GET['q'])).models(Page, Manuscript)
         manuscript_results=[]
         page_results=[]
+        all_page_results=[]
         for result in sqs:
             if hasattr(result.object, "title"):
                 manuscript_results.append(result)
