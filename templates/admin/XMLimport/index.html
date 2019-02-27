@@ -3,7 +3,13 @@
 {% block content %}
 {% if success %}
 <div>
-  <h1>Success!</h1>
+  <h1>
+{% if exist %}
+This manuscript already exists in the database, and the new XML has been imported Successfully!! </h1>
+{% else %}
+<h1>Success!! A new manuscript has been created in the database, you can fill in its metadata now.
+</h1>
+{% endif %}
 </div>
 {% else %}
 <h1>Import an XML file and make it HTML</h1>
@@ -27,3 +33,6 @@
   <input type="submit" value="Submit" />
 </form>
 {% endblock %}
+<script>
+console.log('{{exist}}');
+</script>
