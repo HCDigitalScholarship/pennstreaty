@@ -32,7 +32,7 @@ urlpatterns = [
     path('cornp1', views.cornp1, name="Henry Cornplanter"),
     path('places', views.places, name="Places page"),
     path('organizations', views.organizations, name="Organizations page"),
-    path('manuscripts/', views.manuscripts, name="Manuscripts"),
+    path('manuscripts/', views.manuscripts,name="Manuscripts"),
     re_path(r'^page/(?P<id>\S+_[0-9]{3})', views.pageinfo, name="page"),
     re_path(r'^pageinfo/(?P<id>\S+_[0-9]{3})', views.newpageinfo, name="pageinfo"),
     re_path(r'^pagetranscription/(?P<id>\S+_[0-9]{3})', views.pagetranscription, name="pagetranscription"),
@@ -65,7 +65,8 @@ urlpatterns = [
     path('admin/review_transcriptions/',staff_member_required(views.ReviewTranscriptionList.as_view()),name='admin_review_transcription_lists'),
     path('admin/review_transcriptions/<int:pk>/', views.review_transcription,name='admin_review_transcriptions'),
     path('review_transcriptions', views.testing, name="testing"),
-    re_path(r'^manuscripts/(?P<id>\S+).pdf/',views.pdf, name="pdf")
+    re_path(r'^manuscripts/(?P<id>\S+).pdf/',views.pdf, name="pdf"),
+    path('captcha/',include('captcha.urls'))
 ]
 
 
