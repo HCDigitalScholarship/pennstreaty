@@ -67,6 +67,7 @@ function callback_2(data,popover_id){
        var id="Per-popover-"+popover_id.slice(12);
        var information = "<div> Name: " + data[0]["fields"].first_name + " " + data[0]["fields"].last_name + "</div><div> Birth Date: " + data[0]["fields"].birth_date + "</div> <div> Death Date: " + data[0]["fields"].death_date + "</div> <div> Notes: " + data[0]["fields"].bio_notes.substr(0,120) + "...</div> <div><a href=/person/"+data[0]["fields"].id_tei +"> &rarr; View more information</a><div>";
        console.log(id);
+       console.log(information);
        document.getElementById(id).setAttribute("data-content", information);  
   }
 
@@ -100,6 +101,7 @@ function callback_2(data,popover_id){
        var id="Pla-popover-"+popover_id.slice(12);
        console.log(id);
        var information = "<div> Name: " + data[0]["fields"].name + "</div><div> County: " + data[0]["fields"].county + "</div> <div> State: " + data[0]["fields"].state + "</div> <div> Location: " + data[0]["fields"].latitude + " " + data[0]["fields"].longitude + "</div> <div> Notes: " + data[0]["fields"].notes.substr(0,120) + "</div> <div> Alternate Spellings: "+ data[0]["fields"].alternate + "</div> <div><a href=/place/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></div>";
+       console.log(information);
        document.getElementById(id).setAttribute("data-content", information);
 
   }
@@ -131,6 +133,7 @@ function callback_2(data,popover_id){
        var id="Org-popover-"+popover_id.slice(12);
        console.log(id);
        var information = "<div>Name: " + data[0]["fields"].organization_name + "</div><div> Date Founded: " + data[0]["fields"].date_founded + "</div><div> Date Disssolved: " + data[0]["fields"].date_dissolved +  "</div> <div> Notes: " + data[0]["fields"].notes.substr(0,120) + "...</div> <div> Associated Spellings: " + data[0]["fields"].associated_spellings + "</div><div> Other Names: " + data[0]["fields"].other_names + "</div><div><a href=/org/"+data[0]["fields"].id_tei +"> &rarr; View more information</a></div>"
+       console.log(information);
        document.getElementById(id).setAttribute("data-content", information); 
 
   }        

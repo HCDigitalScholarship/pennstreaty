@@ -16,7 +16,7 @@ import zipfile as z
 
 
 from tempfile import *
-from .forms import ContactForm, ImportXMLForm, TranscribeForm
+from .forms import ContactForm, ImportXMLForm, TranscribeForm, CaptchaForm
 from django.core.mail import EmailMessage, send_mail
 from django.views.generic import ListView, DetailView
 from .xml_import import import_xml_from_file, if_already_exists
@@ -75,15 +75,17 @@ def historicalbackground (request):
 
 def manuscripts(request):
     textlist = Manuscript.objects.filter(transcribed=True).order_by('title')
-    pagelist = Page.objects.order_by('Manuscript_id')
-    query = request.GET.get("q")
-    if query:
-        textlist=textlist.filter(#title__icontains=query)
-              Q(title__icontains=query) |
-              Q(person_name__icontains=query)  |
-              Q(org_name__icontains=query)
-              )
-    return render(request, 'manuscripts.html', {'textlist':textlist})
+    if request.POST:
+        form = CaptchaForm(request.POST)
+
+        if form.is_valid():
+            human = True
+            #return HttpResponseRedirect('//')
+
+    else:
+        form = CaptchaForm()
+
+    return render(request, 'manuscripts.html', {'textlist':textlist,"form":form})
 
 
 
@@ -667,3 +669,15 @@ def search(request):
                 page = request.GET.get('page')
                 all_page_results = paginator.get_page(page)                                   
     return render(request, "search/search.html", {"query":query, "manuscript_results": manuscript_results, "all_page_results": all_page_results})
+
+def pdf_captcha(request,id):
+    if request.POST:
+        form = CaptchaForm(request.POST)
+
+        if form.is_valid():
+            human = True
+            return HttpResponseRedirect('//')
+
+    else:
+        form = CaptchaForm()
+    return render_to_response('captcha.html',locals())

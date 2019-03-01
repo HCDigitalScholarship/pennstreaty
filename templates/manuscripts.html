@@ -1,90 +1,88 @@
-
-{% load staticfiles %}
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
-<!--<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="{% static 'css/app.css' %}" />
-<link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" />-->
+<link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" />
+<script src="{% static 'js/vendor/jquery.js' %}"></script>
+<script src="{% static 'js/js/vendor/foundation.min.js' %}"></script>
+<script src="{% static 'js/js/vendor/foundation.js' %}"></script>
 {% include 'top-links.html' %}
-    <title>Available Texts </title>
+<title>Available Texts </title>
 
-  </head>
+</head>
 
-  <body>
-      {% include 'header.html' %}
+<body>
+{% include 'header.html' %}
 
-     <div id = "row1">
-    	{% include 'nav.html' %}
-    </div>
+<div id = "row1">
+  {% include 'nav.html' %}
+</div>
 
-    <div id = "trans2">
- <div class = "row">
-<h2>  Manuscripts  </h2>
-
-
-<!--   <form method="GET" action="">
-   <input type="text" placeholder="Search" name='q'value='{{ request.GET.q }}' style="display:inline-block; width:20%">
-   <button type="submit" style="display:inline-block">Search</button>
-   </form>-->
-   </div>
-
+<div id = "trans2">
+  <div class = "row">
+    <h2>  Manuscripts  </h2>
   </div>
-
-
 </div>
 
 <br />
 
 
 <div class = "row full-width">
-<!-- there are many ways to make a datatable, but this worked best for django -->
-<table id="example" class="display" cellspacing="0" width="100%">
-                               <thead>
-                                       <tr>
-                                               <th>Title</th>
-                                               <th>Author</th>
-                                               <th>Date</th>
-                                               <th>Type</th>
-                                               <th>Call Number</th>
-                                               <th> PDF </th>
-                                       </tr>
-                               </thead>
-                               <tbody>
-                                       {% if textlist %}
-                                                       {% for text in textlist %}
-                                               <tr>
+  <!-- there are many ways to make a datatable, but this worked best for django -->
+  <table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Call Number</th>
+        <th> PDF </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if textlist %}
+        {% for text in textlist %}
+          <tr>
+            <td> <a href="/page/{{text.id_tei}}_001"> {{text.title}}</a> </td>
 
-                                                       <td> <a href="/page/{{text.id_tei}}_001"> {{text.title}}</a> </td>
+            {% if text.person_name == "" and not text.org_name == "" %} 
+            <td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
+            {% elif text.org_name == "" and not text.person_name == "" %}
+            <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 	</td>
+            {% else %}
+            <td> Unknown </td>		
+            {% endif %}
+            <td> {{text.date}} </td>
+            <td>{{text.type_of_Manuscript}}</td>
+            <td>{{text.call_no}}</td>
+            <td><a href="#" data-reveal-id="myModal"> PDF </a> 
+            <!-- Modal -->
 
-							{% if text.person_name == "" and not text.org_name == "" %} 
-							<td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
-							{% elif text.org_name == "" and not text.person_name == "" %}
-                                                       <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 	</td>
-							{% else %}
-						<td> Unknown </td>		
-							{% endif %}
-                                                       <td> {{text.date}} </td>
-                                                       <td>{{text.type_of_Manuscript}}</td>
-                                                       <td>{{text.call_no}}</td>
-                                                       <td><a href="{{text.id_tei}}.pdf"> PDF </a></td>
-                                               </tr>
-                                                       {% endfor %}
-                               </tbody>
-</table>
+            <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+              <form action='{{text.id_tei}}.pdf/' method='POST'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" />
+                <button class='js-captcha-refresh'></button>
+              </form>
 
-{% else %}
-                          <strong> There are no manuscripts available at this time in the db. </strong>
-               {% endif %}
+              <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+            </div>
 
+            <!-- end of Modal -->
 
-               <!--<div class=container>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+      <strong> There are no manuscripts available at this time in the db. </strong>
+    {% endif %}
 
-               <p><a href=/outputAll>→ Download raw text of all manuscripts</a></p>
-
-             </div> -->
+</div>
 <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -92,9 +90,21 @@ $(document).ready(function() {
       "pageLength": 50
     });
 } );
+
+$('.js-captcha-refresh').click(function(){
+    $form = $(this).parents('form');
+
+    $.getJSON($(this).data('url'), {}, function(json) {
+        // This should update your captcha image src and captcha hidden input
+    });
+
+    return false;
+});
+
+$(document).foundation();
 </script>
-</div>
+
 
 {% include 'footer.html' %}
-  </body>
+</body>
 </html>
