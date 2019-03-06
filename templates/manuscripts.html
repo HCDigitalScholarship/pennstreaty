@@ -61,11 +61,12 @@
             <!-- Modal -->
 
             <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-              <form action='{{text.id_tei}}.pdf/' method='POST'>
+              <!--<form action='{{text.id_tei}}.pdf/' method='POST'>-->
+              <form action="." method='POST'>
                 {% csrf_token %}
                 {{ form.as_p }}
                 <input type="submit" />
-                <button class='js-captcha-refresh'></button>
+                <input type="hidden" id="manuscript_id" name="manuscript_ID" value="{{text.id_tei}}">
               </form>
 
               <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -91,15 +92,6 @@ $(document).ready(function() {
     });
 } );
 
-$('.js-captcha-refresh').click(function(){
-    $form = $(this).parents('form');
-
-    $.getJSON($(this).data('url'), {}, function(json) {
-        // This should update your captcha image src and captcha hidden input
-    });
-
-    return false;
-});
 
 $(document).foundation();
 </script>

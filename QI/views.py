@@ -8,6 +8,10 @@ from django.template.loader import get_template
 from django.shortcuts import render, render_to_response, redirect
 from django.core import management, serializers
 from django.core.paginator import Paginator
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
+
+
 from reportlab.pdfgen import canvas
 from io import BytesIO
 from .models import Person, Place, Org, Relationship, Page, Manuscript, PendingTranscription
@@ -77,14 +81,17 @@ def manuscripts(request):
     textlist = Manuscript.objects.filter(transcribed=True).order_by('title')
     if request.POST:
         form = CaptchaForm(request.POST)
-
+        print(dict(request.POST))
         if form.is_valid():
             human = True
-            #return HttpResponseRedirect('//')
+            id=request.POST['manuscript_ID']
+            url=id+'.pdf'
+            return redirect(url)
 
+        else:
+            raise ValidationError( _('Opps, wrong captcha key'))
     else:
         form = CaptchaForm()
-
     return render(request, 'manuscripts.html', {'textlist':textlist,"form":form})
 
 
