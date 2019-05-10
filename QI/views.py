@@ -84,6 +84,12 @@ def profiles(request):
     org_list = Org.objects.order_by('organization_name')
     return render(request, 'profiles.html', {'persons': person_list, 'places': place_list, 'orgs': org_list})
 
+def base(request): 
+	return render(request, 'base.html')
+	
+def base_explicit(request): 
+	return render(request, 'base_explicit.html')
+	
 def cornp1(request):
     return render(request, 'cornp1.html')
 

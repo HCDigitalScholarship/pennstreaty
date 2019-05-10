@@ -1,4 +1,8 @@
 {% load staticfiles %}
+<!-- to center the @#@#@! grid entries-->
+<link rel="stylesheet" href="{{ STATIC_URL }}css/travelroutes.css" />
+
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -14,12 +18,6 @@
     
     {% include 'header.html' %}
 
-<div id = "row1">
-<!--     Navigation Menu Below:  -->
-
-  {% include 'nav.html' %}
-
-</div>
 
 <div id = "row2">
   <div class = "row">
@@ -45,11 +43,12 @@ This is now done - Dylan -->
   			document.write("<li><a href = " + x[i] + ">" + x[i] + "</a></li>");
   		} 
   	</script>
-
-
+</div>
  {% include 'footer.html' %}
     
  {% include 'bottom-links.html' %}
+
+ <script src="{{ STATIC_URL }}js/travelroutes.js"></script>
 
   </body>
 </html>

@@ -1,25 +1,18 @@
 {% load staticfiles %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/header.css" />
+<div id="toprectangle">
+<div id="headtitle">Beyond Penn's Treaty </div>
+</div>
+<div class="spacer">
+    &nbsp;
+</div>
 
  <header>
-          <div class = "overlay-container">
-            <img src="{% static "img/PennsTreaty-Westcrop3.jpg" %}" alt="Header img" />
-	   <div style="color: white; position: absolute; bottom: 9px;left: 16px; font-family: Alegreya Sans SC; font-size: 60px;" class="bottom-left">Beyond Penn's Treaty</div>
-              <div style="margin-bottom:-20px;" class = "overlay1 show-for-small-up">
-
-
-                                    <form action="/search" method='get'>
-                                     <input style="float:right;" class='button' type="submit" value="Search">
-                                      <input style="margin:0px; width:200px; height:30px; float:right;"  type="text" name="q">
-                                    </form>
-
-
-
-                <strong>
-                </strong>
-              </div>
-        </div>
-
-
-
+   	<div style="display:block; position:relative; max-width:100%; width:device-width, initial-scale=1;"> 
+        <img src="{% static "img/headermapNew.jpg" %}" alt="Part of a map of the Province of Pennsylvania, 1756" />
+	</div>
+	<div class = "overlay-container">
+		 {% include 'sidebar.html' %}
+	</div>
 
  </header>

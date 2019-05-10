@@ -9,8 +9,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel='stylesheet' href="{% static 'css/inText_Search.css' %}" />
     <title>Page information</title>
-   
    {% include 'top-links.html' %}
+   
 </head>
 
 
@@ -18,10 +18,6 @@
 
   <div class='stufftoinclude'>
     {% include 'header.html' %}
-    <div id = "row1">
-      {% include 'nav.html' %}
-      <h3 style="text-align:center;"> {{manuscript.title}} </h3>
-    </div>
   </div>
 
 
@@ -90,7 +86,7 @@
 
  </div>
  
-<div class="detail-view-tools" style="width:70%; margin:auto; border:3px solid #8597af">
+<div class="detail-view-tools" style="width:70%; margin:auto; margin-bottom:15px !important; border:3px solid #8597af">
   <div class="detail-view-controls well well-sm clearfix" style="display:flex; width:100%; height:60px; align:center; background-color:#ededed;">
         <div class="col-sm-12" style="flex:33%">
            Page <input type="text" 
@@ -250,17 +246,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
-Press h to open a hovercard with more details.
