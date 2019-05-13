@@ -1,0 +1,2025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css"?>
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei.css"?>
+<?xml-stylesheet type="text/css" href="global.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Some Account of our Journey to Cannandaigue: An Electronic Collection</title>
+                <editor>Friends Historical Library of Swarthmore College</editor>
+                <respStmt>
+                    <resp>TEI Markup done by</resp>
+                    <name>Julian Turner</name>
+                </respStmt>
+            </titleStmt>
+            <extent>ca.141 KB</extent>
+            <publicationStmt>
+                <publisher>Friends Historical Library of Swarthmore College</publisher>
+                <address>
+                    <street>500 College Avenue</street>
+                    <addrLine>Swarthmore, Pennsylvania</addrLine>
+                    <postCode>19081</postCode>
+                    <country>United States of America</country>
+                </address>
+                <availability status="free">
+                    <p>This work is the property of the Friends Historical Library of Swarthmore
+                        College. It may be copied freely by individuals for personal use, research,
+                        and teaching (including distribution to classes) as long as this statement
+                        of availability is included in the text. It may be linked to freely in
+                        Internet editions of all kinds, including for—profit works.</p>
+                    <p>Publishers, libraries, and other information providers interested in
+                        providing this text in a commercial or non—profit product or from an
+                        information server must contact Swarthmore College for licensing and cost
+                        information.</p>
+                    <p> Scholars interested in changing or adding to these texts by, for example,
+                        creating a new edition of the text (electronically or in print) with
+                        substantive editorial changes, may do so with the permission of Swarthmore
+                        College. This is the case whether the new publication will be made available
+                        at a cost or free of charge.</p>
+                </availability>
+                <date when="2014">2016</date>
+                <idno type="local">HV_DB_1794</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="s" type="project">Native Americans and Quakers</title>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <institution>Special Collections, Haverford College</institution>
+                        <collection/>
+                        <idno>MC.975.01.003</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <p>pp.</p>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>This manuscript is housed in Special Collections, Haverford College. </p>
+            </projectDesc>
+            <editorialDecl>
+                <p> The transcribers and editor attempted to render the author’s orthography and
+                    grammar as they appear on the page of his journal, even when the author’s own
+                    spelling and usage are inconsistent. Additionally, many questions remain about
+                    spelling the names of his Quaker acquaintances, individual Native Americans who
+                    populate his journal, and Indian villages and towns. The transcribers and editor
+                    attempted to remain faithful to the author’s Anglicized spellings in all cases.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <creation>Original written in 1794<date/></creation>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="#lcsh">
+                    <list>
+
+                        <item>Six Nations -- History</item>
+                        <item>Society of Friends -- New York (State)</item>
+                        <item>Society of Friends -- Missions</item>
+                        <item>Indians of North America -- Missions</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+
+    </teiHeader>
+    <text>
+        <body>
+            <div type="entry">
+                <pb n="1"/>
+                <head>Some account of our journey to Cannandaigue</head>
+
+                <dateline><date when="1794-07-15">15 of the 7 month 1794</date><placeName
+                        key="checkPlace"/></dateline>
+
+                <p> Believing it Right to Attend a Treaty to be Held with <lb/>the <orgName
+                        key="sxntns">Six Nation Indians</orgName>, <persName key="cpic">Timothy
+                        Pickerin</persName> Being Commisoner <lb/><persName key="jparr1">John
+                        Parrish</persName>
+                    <persName key="wsave1">William Savery</persName>
+                    <persName key="jemle1">James Emlen</persName> and myself <lb/> set of on our
+                    journey the 15 of the 7 month 1794<lb/> we staid at <persName key="chain1"
+                        >Casper Hainses</persName>. <placeName key="germa">Germantown</placeName>
+                    Refreshed our selves<lb/> the weather Being very warm then rode 14 m to
+                        <persName key="jpott2">Joseph Pottses</persName><lb/>. Dined there, from
+                    were we Rode to <persName key="trutt1">Thomas Rutters</persName> 16 miles</p>
+                <lb/>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-16">the 16</date><placeName key="readi"/></dateline>
+                <p> Lodged there the 16 we Left <persName key="trutt1">T:R</persName> Rode to
+                        <placeName key="readi">Reding</placeName> 19 miles<lb/> staid there all
+                    night - at <persName key="sjack1">Samuel Jackson</persName>'s </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-17">17</date><placeName key="checkPlace"/></dateline>
+                <p> we Rode to <persName key="mlee1">Mordica Lee</persName> 10 miles, got Breakfast
+                    Rode to <placeName key="carte">Carters Town</placeName><lb/> 9 miles, dined then
+                    to <persName key="rstev1">Stevenses</persName> 8 miles from thence to the
+                        <persName key="widdho">Widdow Hollow</persName>,<lb/> 9 miles lodges there
+                    were well entertained. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-18">18th</date><placeName key="catta"/></dateline>
+                <p> we set out early <lb/>rode 6 miles to <unclear>Devout Thrathes</unclear> got our
+                    breakfast of venson.<lb/> Rode a 11 miles to <placeName key="laden"
+                        >Ladenburg</placeName> as got dinner on fryed poork.<lb/> Then to <placeName
+                        key="catta">Catewising</placeName> 13 miles. Lodged at <persName
+                        key="jmyer1">John Myers</persName>
+                </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-19">19</date><placeName key="mcalv"/></dateline>
+                <p> we crossed <placeName key="susqueh">Susquehanna</placeName> Rode 11 miles to
+                        <persName key="hwats1">Hugh<lb/> Watson</persName>s, dined on bread and
+                    butter then rode 9 miles to Mc <lb/>Calvery, got some fryed Mutton the to
+                        <persName key="welli1">William Ellis</persName>es, 5 miles.<lb/> stayed with
+                    his wife and children all night he being in <placeName key="phila"
+                        >Philad</placeName>. </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-20">20</date><placeName key="allun"/></dateline>
+                <p> went to <persName key="swall1">Samuel Wallise</persName>, at <placeName
+                        key="muncy">Muncy</placeName> from thence to <persName key="wharr1">Mary
+                        Harris</persName>'s<lb/> 9 miles with <persName key="wsave1"
+                        >savery</persName> being poorly we stayed there all night </p>
+
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-21">21</date><placeName key="block"/></dateline>
+                <p> we left there Rhode to <persName key="jkyle1">Kiyles</persName> 16 miles got
+                    dinner then to <lb/> the <placeName key="block">Block House</placeName> 22 miles
+                    moved a bad rode which occasioned<lb/> us to be within night. Before we got
+                    there, we crossed <lb/><placeName key="lycom3">Moccomming</placeName> 9 Time
+                    &amp; Trout Run 32, in the way <lb/>there <lb/><pb n="2"/> the hearing a dog
+                    bark was the most pleasing I had ever known.<lb/> Before when we got there
+                        <unclear>J.</unclear> inquired of the woman of the house<lb/> what she had
+                    to eat. She informed us they had no bread nor<lb/> meat milk nor butter nor
+                    sugar but she had some meal &amp; Elks<lb/> fat of which she made some cakes,
+                    which with some<lb/> weak coffee we maid a good supper Tyed our horses to<lb/>
+                    the trough, for there was no Stable nor Hay, Laid down on the floor.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-22">22</date><placeName key="checkPlace"/></dateline>
+                <p> Got up before day fed our horses with oats set off as soon as<lb/> we could see
+                    to travel through a very bad rode with mud homes<lb/> &amp; roots for all miles
+                    arrived at <placeName key="tioga">Tyoage</placeName> a pretty wide stream.<lb/>
+                    Stopt &amp; Tied our horses Eat some Breakfast then rode; 12 miles<lb/> to
+                        <persName key="wcart1">William Carter</persName>s that being the First House
+                    since we left<lb/> the <placeName key="block">Block House</placeName>. Dineed
+                    there, then to <persName key="probe2">Peter Robertses</persName>'s 8 miles<lb/>
+                    lodged there all night had nothing for supper but some of my Elk<lb/> cake which
+                    I got at the <placeName key="block">Block House</placeName> &amp; Milk.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-23">23</date><placeName key="bath"/></dateline>
+                <p>we left there early<lb/> rode 14 miles to <persName key="dcook1">David
+                        Cook</persName>, <persName key="ncook2">Nan Cook's</persName> nephew got
+                    dinner<lb/> then to the <placeName key="ppost">painted post</placeName> 8 miles
+                    then to <placeName key="bath">Bath</placeName> 17 miles lodged<lb/> there at
+                        <persName key="dunn1">Dunn</persName>'s.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-24">24</date><placeName key="canla"/></dateline>
+                <p>Setout in the morning had 23 miles to the first<lb/> house, where we got dinner,
+                    the man's name as I remember<lb/> is <persName key="wbeve1">Wm Beven</persName>.
+                    From there we rode 6 miles to <persName key="jmadc1">Matcalf</persName>s,
+                    the<lb/> head of <placeName key="canla">Cannandaigue Lake</placeName> Lodged
+                    there was well entertained.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-25">25</date><placeName key="canan"/></dateline>
+                <p> Left there in the morning rose to <persName key="egilb2">Elias
+                        Gilberts</persName> 12 miles Dineed<lb/> there then rode to <placeName
+                        key="canan">Cannandaigue</placeName> 10 miles, we rode up the<lb/> town met
+                    with Genl <persName key="ichap2">Israel Chapins</persName> &amp; he informed
+                    us<lb/> had provided lodgings for us which we found was <lb/> a great Servis to
+                    us the man and his wife were kind &amp; entertained<lb/> us well for that county
+                    his name was <persName key="jfris1">James D Fish</persName>
+                    <gap/></p>
+                <pb n="3"/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-26">26</date><placeName key="canan"/></dateline>
+                <p>Ive spent the day with <persName key="cpic">Coll Pickrin</persName> &amp; in
+                    conversation with<lb/> the <orgName key="oneida">onida Indians</orgName>= that
+                    tribe haveing got there, the other tribes<lb/></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-27">27</date><placeName key="canan"/></dateline>
+                <p> not come we were informed that 2 runners we arived who Brought<lb/> word that
+                    the Other Tribese of Indians were Expected in 5 or 6<lb/> Days which looked a
+                    long time to weight, the morning being<lb/> Raney we spent the most of the day
+                    at our lodging were informed <lb/>there was abought 160 of the <orgName
+                        key="oneida">onida</orgName> tribe there </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-28">28</date><placeName key="canan"/></dateline>
+                <p> Being first day we had 2 Meetings with the inhabitance which<lb/> we solled the
+                    people behaved in a very becomeing Manner<lb/> &amp; the Meetings were larger
+                    than we Expected being abought<lb/> 100 People there. </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-29">29</date><placeName key="canan"/></dateline>
+                <p> we Visited the indians in there camps &amp; spent the remainder<lb/> of the Day
+                    at our Lodgings</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-07-30">30</date><placeName key="canan"/></dateline>
+                <p> we went to see <persName key="alaph1">Abraham Laphams</persName> &amp; his
+                    family who lives<lb/> 5 miles from <placeName key="canan">Candorgue</placeName>
+                    whose wife and children are Members<lb/> of <orgName key="meethoosi">Husick
+                        Monthly Meeting</orgName> abought 220 miles from hence<lb/> hath 7 children.
+                    Both <persName key="alaph1">Abraham</persName> &amp; his wife were sober &amp;
+                    kind<lb/> were glad to see us we had a meeting in the evening with<lb/>the
+                    family and the neighbours being abought 20 present they were<lb/> pleased with
+                    the opportunity we were informed <persName key="alaph1">abraham</persName> was
+                    disowned<lb/> for removing their on which account he appeared Concerned
+                    <lb/></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-01">10 o/m 1</date><placeName key="canan"/></dateline>
+                <p> went to See <persName key="ncoms1">Nathan Comstock</persName> &amp; wife 2 miles
+                    from <persName key="alaph1">Abrahams<lb/> Nathan</persName> &amp; wife &amp;
+                    several children are members of the same <lb/> meeting as <persName key="alaph1"
+                        >Abrahams</persName>, is a sober &amp; kind friend we spent some<lb/> time
+                    with them then returned to our lodging the Land we<lb/> rode over was very good
+                    but wanted streams of water</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-02">2</date><placeName key="canan"/></dateline>
+                <p> visited <persName key="wingl1">william Engles</persName> &amp; family 2 miles
+                    from <placeName key="canan">Candoigue</placeName><lb/> His wife &amp; children
+                    we understand belongs to <orgName key="meethorsh">Horsham</orgName><lb/> Mly
+                    meeting She is <persName key="ethom1">Evan Thomas</persName>es Brothers Daughter
+                    &amp;<lb/> we drank tea with them. Returned to <placeName key="canan"
+                        >Cannadoique</placeName>
+                </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n="4"/>
+                <dateline><date when="1794-10-03">3</date><placeName key="canan"/></dateline>
+                <p> Went a Fishing in the morning caught but Few Fish<lb/> Visited <persName
+                        key="ichap2">General Chapin</persName> then went to the <persName
+                        key="tmorr1">Morris</persName> es to see<lb/>
+                    <persName key="cpic">Coll Pickering</persName> drank tea with them, spent the
+                    evening there. </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-04">4</date><placeName key="canan"/></dateline>
+                <p> Snowed this morning until near noon <persName key="rtaft1">Rubin Taft</persName>
+                    who<lb/> when at home lives at Unbridg in New England 400 miles<lb/> from this
+                    place. Set of for his home with <persName key="charf1">Charles
+                        Harford</persName><lb/> Purposed to go as far as <placeName key="genev"
+                        >Genave</placeName> 15 miles <persName key="charf1">Charles </persName> is
+                    an English<lb/> man lately from <placeName key="liver">Liverpool</placeName>
+                    <persName key="rtaft1">Rubin</persName> our Landladys father &amp;<lb/> appeared
+                    very friendly invited us kindly to his house if we<lb/> should come near him Ive
+                    dined at the <persName key="tmorr1">Morris</persName>es with <persName
+                        key="cpic">Coll <lb/> Pickering</persName>
+                    <persName key="ichap2">Gentl Chapin</persName> &amp; <persName key="haupa1">Capt
+                        Hendricks</persName> an Indian spent<lb/> the afternoon there, the 1 of the
+                    week the Grown in many places</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-05">5</date><placeName key="canan"/></dateline>
+                <p> covered with snow which made it appear Heavey to be<lb/> detained the Indians
+                    not like to be here for 5 or 6 Days<lb/> was some tryal of Patience, we had a
+                    Meeting to which<lb/> several Friends from the Country came &amp; some people of
+                    <lb/> the the Town which was a Setisfactory Meeting.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-06">6</date><placeName key="canan"/></dateline>
+                <p> i spent this day mostly at my lodging my companions<lb/> went to see a family
+                    who lived 2 miles from town <lb/>whose name was <persName key="whitec1"
+                        >Whitecar</persName> descended from Friends</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-07">7</date><placeName key="canan"/></dateline>
+                <p> set out this morning for <persName key="jwilk1">Jemimah Wilkinson</persName>
+                    Settlement<lb/> 23 miles from our Lodging. Rode to <persName key="egilb2">Elias
+                        Gilbert</persName>s 10 miles.<lb/> Dined ther then rode to <persName
+                        key="wpott1">William Potter</persName>s 10 miles lodged <lb/> there was very
+                    kindly entertained by him &amp; his children</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-08">8</date><placeName key="canan"/></dateline>
+                <p> Stayed for brakefast then rode to <persName key="jwilk1">Jeminmas</persName>
+                    Stayed abought<lb/> 2 hours, had Some conversation with her &amp; <persName
+                        key="rmell1">Rachel Mellon</persName><lb/>to But Little Satisfaction.
+                    Returned to our kind Friend<lb/>
+                    <persName key="wpott1">Potter</persName>s got dinner then returned to our lodgings.<lb/>
+                    <persName key="wpott1">Potter</persName> hath Separated from <persName
+                        key="jwilk1">Jemima</persName> thinks her Scheam was<lb/> that of Interest
+                    She appears to Loose Credit with the People. </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n="5"/>
+                <dateline><date when="1794-10-09">9</date><placeName key="canan"/></dateline>
+                <p><del>I Stayed Mostly at my Lodgings my Companions Rode out <lb/>2 miles to See a
+                        Family of the Name of Whitecur who Descended <lb/>from Friends</del></p>
+            </div>
+
+            <div type="entry">
+                <dateline><date when="1794-10-09">9</date><placeName key="canan"/></dateline>
+                <p>
+                    <persName key="jparr1">John Parish</persName> &amp; <persName key="jemle1">James
+                        Emlen</persName> rode out to meet the Indians who are<lb/> thought to Be
+                    Near &amp; <persName key="wsave1">william Savery</persName> &amp; my self stayed
+                    at our<lb/> Lodging now near night &amp; no Indians com nor our Companions.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-10">10</date><placeName key="canan"/></dateline>
+                <p> Rained last night &amp; this morning our Companions not come<lb/> nor the
+                    Indians the Thoughts of being so far from home and <lb/>the Rodes groing worse
+                    the days Shorter made it feel very<lb/> heavy &amp; called for an inetees of
+                    Patience which I hope we<lb/> were Favoured with. we went to see <persName
+                        key="cpic">Coll Pickerin</persName> &amp; <persName key="tmorr1">Thos<lb/>
+                        Morris</persName> in the afternoon &amp; <persName key="jwags1">James
+                        Wagstaff</persName>, who lives in this <lb/>Town appears to be much like his
+                    father of an unsettled<lb/> disposition. Returned to our lodging no Indians nor
+                    our Friends.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-11">11</date><placeName key="canan"/></dateline>
+                <p> The <persName key="cpic">Coll</persName> Calld on <persName key="wsave1">Wm
+                        Savery</persName> &amp; my self to go with him to a<lb/> conference with the
+                        <orgName key="oneida">onida Indians</orgName>. Respecting some<lb/>
+                    uneaseness amongst themselves &amp; when they were<lb/> met together he
+                    Requested they would inform him <lb/>How the Dispute arose Expressing a hope he
+                    Could<lb/> Be helpfull in restoring Tranquilty amongst them.<lb/>
+                    <persName key="haupa1">Capt John</persName> after they had Consulted together
+                    Delivered<lb/> a very Intelagible speech after him. <persName key="poney1"
+                        >Peter</persName> a Waryer<lb/> spake, it appeared by them. Both they had
+                    been by <lb/>under influence prevailed upon by <persName key="psmit1">Peter
+                        Smith</persName><lb/> to leece him a large percel of land for a very<lb/>
+                    Small consideration I think 4 miles one way &amp;<lb/> 24 mile an other for 200
+                    dollars the year for 21 years<lb/> &amp; th land very good we were informed the
+                    whole<lb/> of there land is worth 4 dollars the acer it appeared<lb/> they had
+                    deffered abought this leece some being<lb/> for &amp; some against it which had
+                    like to<lb/> have brought them to Blose </p>
+                <pb n="6"/>
+
+                <p>the <persName key="cpic">Collo</persName> Took what they had to say into
+                    consideration<lb/> &amp; proposed to speak to them in 2 Days. we Returned to our
+                    Lodgings<lb/> I was Pleased with the <persName key="cpic">Coll.</persName>
+                    advice to them Reminding them<lb/> that the Good Spirit who Made &amp; Placed us
+                    here, it was in<lb/> order that we Should Be Happy &amp; Live in Love one
+                    with<lb/> another which was the way to obtain it &amp;c.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-12">12</date><placeName key="canan"/></dateline>
+                <p> the week we were Informed late in the Morning that<lb/> the Schoolhous which we
+                    had to hold our Meeting in the<lb/> 2 firsts Days Before was taken up By a
+                        <orgName key="presby">Prisbyteren</orgName> Preacher<lb/> who some Times
+                    Visets that Place we Agreed if our<lb/> Landlord was willing we would set Down
+                    togather in his<lb/> House which he Readily agreed to &amp; We informed as
+                    Many<lb/> as we well could of the Meeting &amp; we had the Company<lb/> of
+                    aBought 50 &amp; it was a good Meeting &amp; I &amp; <persName key="wsave1">Wm.
+                        Savery</persName><lb/> Both Spoke, the People Behaved Soberly we informed the<lb/>
+                    <orgName key="oneida">Onida Indians</orgName> Several Being at the Meeting that
+                    we Intended<lb/> to go in after noon to there Camp &amp; Set with them if
+                    they<lb/> would inform there People which they Did &amp; we Sat<lb/> Down on
+                    Some Logs togather with I Believe 50 White<lb/> People who had got By Some Means
+                    to Know of the Meetig<lb/> after a Short Silence the Indians By there
+                    Interpreter Desird<lb/> to Sing an Hymn which we did not forbid thinking it
+                    best<lb/> to leave them at Liberty then abought 12 of Began &amp; Sang<lb/> in
+                    there own Language which I thought Exceeded any<lb/> thing of the Sort I had
+                    Ever Heard Before Both on account<lb/> of there Superior Voice &amp; the
+                    Solidity of the Manner of<lb/> there Doing it after they had Done <persName
+                        key="wsave1">Wm S</persName> &amp; <persName key="jparr1">J P</persName>
+                    Spake<lb/> in which Labor I thought they were Favoured<lb/> the People Behaved
+                    Very Soberly we parted from our<lb/> Indian Brethethren in Love &amp; Returned
+                    to our lodgings.<lb/> the Indians Sung an other hymn before we Parted with like
+                    Solidity </p>
+                <pb n="7"/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-13">13</date><placeName key="canan"/></dateline>
+                <p> the Comissinor calld on us to go again to the <orgName key="oneida">onidas
+                    </orgName> with him<lb/> when they were assembled he gave them some good
+                    advice<lb/> pointing out to them how they should conduct in the sale of
+                    there<lb/> Land &amp;. <persName key="psmit1">Peter Smith</persName>s Leace was
+                    not according to the general<lb/> government law, &amp; would have them Dissonul
+                    it after he had spoken to<lb/> them they requested we would withdraw with we did
+                    and<lb/> in a short time we were called; they haveing consulted amongst
+                    them<lb/> selves the answer to make, they mentioned several matters<lb/> of
+                    Dificulty wherein they Desired his assistance particularly in<lb/> Getting there
+                    Land again which he agreed to Do, we Returned, home<lb/> to our Lodging went to
+                    see <persName key="ichap2">general Chapin</persName> Drank tea with him<lb/> the
+                    Indians not yet come in only the <orgName key="oneida">onidas</orgName> &amp; a
+                    few scattering ones</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-14">14</date><placeName key="canan"/></dateline>
+                <p> this Morning <persName key="jparr1">J.P.</persName> &amp; <persName
+                        key="jemele1">J.E.</persName> set out to meet the Indians who we
+                    expectd<lb/> were near in the after noon the <placeName key="farme1">Farmers
+                        Brother</placeName> &amp; his company<lb/> marched in to the Town Being in
+                    all 470 men women &amp; children<lb/> they came in great order <persName
+                        key="cbran1">Capt Brant</persName> Rode in to give information<lb/> &amp;
+                    Rode Back to meet them he appeard to think him self as important<lb/> as a
+                    general at the head of a great army they Drew up at <persName key="ichap2"
+                        >general<lb/> Chapin</persName>s Dore &amp; soluted the Comissinors &amp;
+                    Genal with 3 Rounds of fire,<lb/> with there guns which they were well Acquipt
+                    with<lb/> the <persName key="farme1">Farmers Brother</persName> made an apology
+                    for not coming sooner, to<lb/> which the Comnd made answer he was glad to see
+                    them safe arived<lb/> I would have them make there minds Easey &amp; when they
+                    were<lb/> Redady he should be willing to proceed to buiseness &amp; that
+                    Every<lb/> thing Necessary should be Provided for there accomidations: <persName
+                        key="cornp2">obeal</persName><lb/> not yet come in</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-15">15</date><placeName key="canan"/></dateline>
+                <p> Stayed mostly at our lodgings was visited by <persName key="richa2">John
+                        Richardson</persName><lb/> who lives abought 40 miles from here &amp; one
+                    grant from <placeName key="north1">Northumberland</placeName><lb/> who gave us
+                    an acc.t that if yallow Fever had taken of several<lb/> in <placeName
+                        key="phila">Philad.</placeName> &amp; more in <placeName key="charl2"
+                        >Charles Town</placeName> &amp; <placeName key="balti"
+                    >Baltimore</placeName>, <persName key="cornp2">obeal</persName> not come </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n="8"/>
+                <dateline><date when="1794-10-16">16.</date><placeName key="canan"/></dateline>
+                <p><persName key="jfish2">Josiah Fish</persName> set out for his own home near
+                        <placeName key="boston">Boston</placeName> he hath Been<lb/> with us for
+                    several Days &amp; was very friendly appears to be a man<lb/> of understanding
+                    &amp; information is calld colonal he hath Bought land<lb/> abought 20 miles
+                    from this place, <persName key="cornp2">obeal</persName> &amp; his company came
+                    in met<lb/> the comissoner with the same marks of respect firing 3 round
+                    with<lb/> there guns after which they welcomed Each other to the council
+                    Fire<lb/> which I fear will not Burn so Bright as I could wish. we rote
+                    home<lb/> by <persName key="mshep2"><unclear>Maget Shepherd</unclear></persName>
+                    who is going to <placeName key="phila">Philad.</placeName>
+                    <persName key="smars1">Silas Marsh</persName> a young <lb/>Lawyer from
+                        <placeName key="pough">Pokipsey</placeName> on the <placeName key="nrive"
+                        >North River</placeName> spent some time with us<lb/> hath thoughts of
+                    settleing her as we spent the afternoon in Rideing over<lb/> to <persName
+                        key="wingl1">Wm Engles</persName>es he nor his wife not being at home we
+                    spent some<lb/> time there in Eating Nuts of which there is great plenty Returnd
+                    to<lb/> our lodgings, <persName key="jpott1">Wm Potter</persName> &amp; 2 of his
+                    sons came to us in the evening the<lb/> Father stayed with us all Night More
+                    Indians Came in today no<lb/> Buiseness Done yet Very Trying as its likely the
+                    Trety will not End<lb/> this several wekks &amp; we near or Quight 320 miles
+                    from home and<lb/> a Very Bad Rode the Days growing shorter &amp; the water
+                    likely to Rise<lb/> of which there is a great many &amp; some wide &amp; deep to
+                    foard </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-17">17.</date><placeName key="canan"/></dateline>
+                <p> Honaiyowns or the <persName key="farme1">Farmers Brother</persName> with
+                        <persName key="cornp2">obeal</persName> or Corn Planter and<lb/> Several
+                    others as <persName key="redja1">Red Jacket</persName>
+                    <persName key="lbeard1">Little Beard</persName> &amp;c. called to see us
+                    with<lb/> whome we had conversation Respecting the <placeName key="hopw"
+                        >Hopewell</placeName> Lands which business was <gap/></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-18">18.</date><placeName key="canan"/></dateline>
+                <p> the Indians Meet of the Deferent Tribes &amp; condoled Each other<lb/> agreable
+                    to there custom on account of the logs of some of there<lb/> chiefs on both
+                    sides that is the <orgName key="seneca">Senecas</orgName> &amp; <orgName
+                        key="oneida">Onidas</orgName> they liveing far from<lb/> Each other, &amp;
+                    had Lost several of note of Both Nations</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-19">19.</date><placeName key="canan"/></dateline>
+                <p> we Rode out to <persName key="alaph1">Abraham Laphams</persName> 5 miles we
+                    haveing appointed<lb/> a Meeting a <persName key="jsmit3">Jonathan
+                        Smith</persName> 2 1/2 miles from <placeName key="alaph1"
+                        >Abrahams</placeName> to Be that<lb/> Day which we had accordingly there was
+                    I Believe 50 or more <lb/>
+                    <pb n="9"/> People there &amp; Behaved soberly &amp; the Meeting was to good
+                    satisfaction,<lb/> we Returned to <persName key="alaph1">Abrm Laphams</persName>
+                    stayed there all Night was Entertained with<lb/> Marks of Gladnys by those
+                        <unclear>(P?)</unclear> who are scattered here in the wildernys<lb/> we were
+                    informed there is 28 members of our society here mostly.<lb/> women &amp;
+                    childre, the first that came was I understand 3 years since<lb/> or near it they
+                    had never But one Meeting I Believe before we<lb/> were there &amp; that was
+                    with <persName key="hbarn1">Hannah Barnet</persName> from <placeName key="huds"
+                        >Hudson</placeName> on the<lb/>
+                    <placeName key="nrive">North River</placeName>. there was a suitable Number of
+                    frds. there to hold<lb/> a Meeting <del>there</del> I could have But Little
+                    objection to there coming<lb/> the land Being so very Good &amp; likely in a
+                    short time to have Many inhabitants</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-20">20.</date><placeName key="canan"/></dateline>
+                <p> Returned to <placeName key="canan"/>Cannandouque <persName key="alaph1">A
+                        Lapham</persName> with us we had a Conferince<lb/> in the afternoon with the
+                    Indians the Commnd Performed the<lb/> Seremony of Burying an Indian who had Been
+                    Killed a bought<lb/> a year Since by a white man; covering the grave with
+                    leaves<lb/> so as Never to be Seen More Placeing a String of wampum<lb/> with
+                    the Ralitives in his Room.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-21">21.</date><placeName key="canan"/></dateline>
+                <p> This was a Pleasent Morning But the wind geting Northwest<lb/> grew cold &amp;
+                    snowed fast good part of the Day there was aother<lb/> conference with the
+                    Indians they Exprest there satisfaction<lb/> with what the Commnd said to them
+                    yesterday &amp; covered all the<lb/> Blood &amp; opened the Road to the council
+                    fire so that we<lb/> May Do some Busenys we had our Epistle Read &amp;
+                    Interprated<lb/> to the Indians which they appeared Pleased with after that
+                        <lb/><persName key="jwilk1">Jemima Wilksonson</persName> Made a Prety long
+                    Prayer <persName key="dwagn1"/>David Wagnor<lb/>
+                    <persName key="rmell1">Rachel Mellon</persName> &amp; <persName key="emell1"
+                        >Enoch Mellon</persName> Being there all kneeled with<lb/> her the
+                    Purformance was very Disagreable to me I left<lb/> the Place but she had
+                    something to say By way of Advice<lb/> to the Indians which did not prove
+                    agreable to <persName key="cpic">coll Pickrin</persName><lb/> Nor the Indians I
+                    Believe. </p>
+                <pb n="10"/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-22">22.</date><placeName key="canan"/></dateline>
+                <p> we had a visset by <persName key="jwilk1">Jemima Wilksonson</persName>
+                    <persName key="dwagn1">David Wagnor</persName><lb/>
+                    <persName key="rmell1">Rachel Mellon</persName> Elijah &amp; <persName
+                        key="emell1">Enoch Mellon</persName>
+                    <persName key="wsave1">Wm Savery</persName> adresed <persName key="jwilk1"
+                        >Jemma</persName><lb/> By here Name which appead to strike her &amp; her
+                    Followers with<lb/> concern however we Entered into some close conversation
+                    with<lb/> them Respecting her wild Notions &amp; Conduct which she<lb/>
+                    indeavoured to ward of by her artful way of Evations<lb/> But we were very Plain
+                    with them all which went Down heavily<lb/> Especily with <persName key="rmell1"
+                        >Rachel Mellon</persName> I was glad of the opportunity<lb/> to cleare my
+                    Selfe of them Letting them know I Believed they were<lb/> under Delutions
+                    &amp;c. we parted friendly to apperence our Landlord<lb/> who was Present
+                    exprest that he was more convinced she was<lb/> Rong than Ever tho he had But a
+                    Light opinion of he Before<lb/> no Publick Meeting with the Indians to Day the
+                        <persName key="cpic">Commr</persName> had a Privit<lb/> Conferrence with the
+                    Chiefs the Purport of which we have not yet <lb/>Learnt </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-23">23</date><placeName key="canan"/></dateline>
+                <p> In a conferrence with <persName key="cjohn1">Capt John</persName> one of the
+                        <orgName key="oneida">Onidas</orgName> he said<lb/> the white People in
+                    Buying land of them took the advantage<lb/> which maid there Mind very much
+                    Troubled &amp; if they complaned<lb/> they the white people smoothed it over
+                    with Fair words &amp; a present<lb/> which Did not make there minds Easey </p>
+                <p>we were at a conferrence with the <persName key="cpic">Comm.d</persName> &amp;
+                    Indians Chiefs at<lb/>
+                    <persName key="tmorr">Thos Morrises</persName> House the <persName key="farme1"
+                        >Farmers Brother</persName> observed to &amp; <persName key="cpic"
+                        >Comm.d</persName><lb/> as he had a woman at the Council when they last
+                    met<lb/> meaning <persName key="jwilk1">Jemima</persName>, he Requested there
+                    women might say<lb/> something Before they went upon Buisenys which was<lb/>
+                    agreed to after some time 3 women came in &amp; <persName key="redja1">Red
+                        <lb/>Jacket</persName> spoke for them to this import that as the<lb/> woman
+                    advised us to Repent we now Advise you <lb/><pb n="11"/> to Repent for the White
+                    People were in the Fault for they<lb/> took away there Land by which they took
+                    them by the<lb/> Heart &amp; squeased them together that the waryers &amp;
+                    Chief<lb/> had told us where the Chain had gathered Rust and <lb/> they joyned
+                    with them in what they said and if the <persName key="cpic"
+                    >Commd</persName><lb/> or Presedent would do what they Desired it would
+                    Releave<lb/> them, and they thought they had a Right to Speake as<lb/> they Made
+                    the Men Both Sachims &amp; warriers.<lb/>
+                    <persName key="cpic">Pickring</persName> informed them he had not asked the
+                    woman to<lb/> the Council not Did he approve of what She Said and <lb/>that She
+                    was not one of the People Calld Quakers the women<lb/> Withdrew after Takeing a
+                    Glays of Wine in a Becomeing manner<lb/> after the Long Conferrence Respecting
+                    the Boundaryes of there lands<lb/> &amp; Telling the Indians he thought the
+                    Chain was not so<lb/> Rusty as they apprehended howevr they must Put on
+                    some<lb/> Oyl &amp; Rub it of by goyning together 5 o Clock when the<lb/>
+                    Conferrence Ended <persName key="jparr1">JP</persName> &amp; <persName
+                        key="wsave1">WS</persName> stayd &amp; Dineed with the <persName key="cpic"
+                        >Comr</persName>
+                    <persName key="jemle1">JE</persName><lb/> &amp; my self Returned to our lodgings
+                    Being near Dark </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-24">24</date><placeName key="canan"/></dateline>
+                <p>Snowed near all Day lay 4 Inches or more Deep on the ground<lb/> Made it Look
+                    Trying to Be more than 300 miles from<lb/> Home &amp; know not when we should Be
+                    at liberty to go<lb/> no Buiseness Done to Day 2 <orgName key="oneida"
+                        >Oneida</orgName> Chiefs to be Buryed<lb/> we Stayed Mostly at our lodging
+                    with a good Degree of Patience<lb/> Believeing we were in the way of our Duty
+                    tho we Could<lb/> See But little fruits of our Labour</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-25">25</date><placeName key="canan"/></dateline>
+                <p>the Snow 7 or 8 inches Deep this Morning<lb/> the <persName key="cpic"
+                        >Commi</persName> Informed us last Evening that an Interpreter<lb/> had Come
+                    here from the British by the Desire of the Indian<lb/> which Much Displeased him
+                    Desired we would Be with<lb/> him to Day we accordingly attended with him
+                    where<lb/> he gave the Indians his Reasons for not <unclear>ac</unclear><lb/><pb
+                        n="12"/> Which Were Many &amp; Such as I Believe Both Displeased and<lb/>
+                    Frighten the Poor Fellow Some of which were that the British<lb/> had prevented
+                    there Treating with them had keep the Posts on<lb/> the Lake &amp; Taken our
+                    Vessels Had Treated the People at Great<lb/> Sodas who were abought to settle
+                    there very Ill &amp; had also<lb/> Behaved to the Comisone las year in like
+                    manner when they<lb/> went to treat with Them &amp;c &amp;c &amp;c that if the
+                    United States<lb/> should send a Spye amongst them like this Fellow they<lb/>
+                    would Kick him out of Dores &amp; as the Presedent had ordered<lb/> him not to
+                    Treat with them if any British agent was<lb/> there, therefore left it to them
+                    Either to open the Council fire<lb/> without him or Cover it up, then we
+                    withdrew for them<lb/> to Consult what to Do, we were in Little time Calld
+                    in<lb/> &amp; <persName key="cornp2">Corn Plant</persName> Rose up &amp; Said he
+                    was Sorrey they had Been<lb/> Deceived that they were Told at <placeName
+                        key="fstan">Fort Stanwix</placeName> that the<lb/> Americans &amp; British
+                    had Kindlied a Council Fire &amp; made<lb/> a Lasting Peace in the Presents of
+                    the Great Spirit &amp; that<lb/> he approved of it, &amp; that in time to Come
+                    they might all<lb/> Sett togather in Council, But he found it was a Lie,
+                    and<lb/> he Thanked the Comm for letting them know it &amp; that it<lb/> was the
+                    White Peoples Fault that the Interpreter was there<lb/> that they had agreed to
+                    Push him a way &amp; go on with the<lb/> Treaty &amp; Desired they would Give
+                    the man Some Vittles to take<lb/> home </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n="13"/>
+                <dateline><date when="1794-10-26">26 &amp; 1 of the week </date><placeName
+                        key="canan"/></dateline>
+                <p>no Meeting for Worship nor But little Buisenys<lb/> Done as to the Treaty, only
+                    explaineing a letter the Indians got<lb/> Rote to <persName key="cbran1">Capt
+                        Brant</persName> in answer to a message he had sent them<lb/> By the man who
+                    Came as an Interpreter But Said the man<lb/> Could inform Brant of what was Done
+                    as they thought he<lb/> had his stomack full<lb/> this man Brought a message
+                    from the Westeren Indians, To<lb/> the <orgName key="sxntns">Six
+                        nations</orgName> wherein they mentioned they had a Great Deal<lb/> of
+                    Trouble of Late &amp; that the British Stoodby &amp; Did not help them<lb/>
+                    meaning as I Suppose the battle they had with <persName key="gwayne1">Gen
+                        Wayn</persName> and wishd<lb/> they had Taken there Advice last year But it
+                    was not ther<lb/> fault that Did not, I Suppose they Blamed the British, &amp;
+                    that if<lb/> the United States would agree to the line made last year<lb/> when
+                    they were together there would be Peace &amp; wished them<lb/> to Return as Soon
+                    as they Could &amp; that they Proposed to hold a<lb/> Treaty next Spring </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-27">27</date><placeName key="canan"/></dateline>
+                <p>
+                    <persName key="sacca1">Sagorecy</persName> a <orgName key="tuscarora"
+                        >Tuscarora</orgName> Chief Calld to See us at our Lodgings<lb/> &amp; in
+                    Conversation mentioned as other Indians Did that the White<lb/> People wanted to
+                    Push them Quight of the Land I Gave him<lb/> a Knife which which he appeard much
+                    pleasd <persName key="tgree1">Thomas Green</persName><lb/> a white man who hath
+                    an Indian wife &amp; lives amongst them<lb/> Interpreted for us</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-28">28</date><placeName key="canan"/></dateline>
+                <p>had a Publick Council in which the Commisinor Informed<lb/> the Indians the
+                    Conditions the Chain of Friendship is to be<lb/> Brightened. which is that the
+                    line Between the United<lb/> States &amp; the <orgName key="seneca">Seneca
+                        Indians</orgName> Shall be Extended as far as<lb/> the State of Pennsylvania
+                    Westword &amp; Southward <gap/><lb/> which we understood would Take in 800000
+                    acres <lb/><pb n="14"/> Land which had Been at a former Treaty Seeded to
+                    the<lb/> United States &amp; Give them Yearly forever whilst they<lb/> were
+                    friends to the United States 45000 Dollars &amp; that he<lb/> Had Ten Thousand
+                    Dollers worth of Good, he would give<lb/> them to Cloath there wifes &amp;
+                    Children</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-29">29</date><placeName key="canan"/></dateline>
+                <p>no Buiseness we Dined with <persName key="cpic">Call Pickring</persName>
+                    <persName key="smars1">Silas<lb/> Marsh</persName> a young Lawyer Lives on the
+                        <placeName key="nrive">North River</placeName> at <placeName key="pough"
+                        >Pokipsey</placeName><lb/> who lodged with us was with us at Dinner talks of
+                    Comeing<lb/> here to live</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-30">30</date><placeName key="canan"/></dateline>
+                <p> no Buisenss the Indians are Deliberating on the <persName key="cpic"
+                        >Coll</persName> Proposals<lb/> we went to See the Indian Camp it is
+                    Admirable to See how<lb/> soon those People can Build a Toun so as for them to
+                    live in<lb/> Comfortably in there way I Believe in one Day and a half<lb/> or 2
+                    Day they had near 300 of there houses Built, &amp; we found<lb/> the women at
+                    worke at Several Branches of Buiseniss Some<lb/> Makeing Mogasons others Betts
+                    &amp; Shifts &amp; Baskets &amp; Coocking<lb/> Venson Plenty the men mostly gone
+                    to Council, Deerskins stretched to Dry</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-31">31</date><placeName key="canan"/></dateline>
+                <p> no Publick Council, <persName key="redja1">Red Jacket</persName>, <placeName
+                        key="sacca1">Sagorecy</placeName>
+                    <persName key="clear1">Clear Sky</persName> &amp; one more<lb/> whose name not
+                    none Calld on us for some Advice after<lb/> Makeing Some appoligy for theres not
+                    Paying more<lb/> attention to us Sooner are let them know we would take<lb/>
+                    into Consideration whawt they had said to us &amp; give them<lb/> an answer,
+                    they Introduced what they had to say by<lb/>
+                    <unclear>ag</unclear>reeing we were in the Presents of the Great Spirit &amp; that<lb/>
+                    <unclear>b</unclear>elieved we were honest men &amp; there friends <lb/><pb
+                        n="15"/> &amp; if they were now Deceived they Should never More Put<lb/>
+                    Confidence in men &amp; wished what they had to Say might be<lb/> Kept Secret.
+                        <persName key="hjame1">Horatis Jones</persName> was our Interpreter</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-01">11m 1th</date><placeName key="canan"/></dateline>
+                <p>the above named Indians Calld on us for our answer<lb/> which we gave them as
+                    hereafter mentioned</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-02">2 of 11 m</date><placeName key="canan"
+                    /></dateline>
+                <p>1 of the week had Meeting for Worship in the Schoolhouse<lb/> after which was a
+                    Council with the Indians they informed the<lb/> Comissoner they Desired to have
+                    the land from <placeName key="joland">Johnsons Landing</placeName> to
+                        <lb/><placeName key="buffc1">Buffelo Crick</placeName> Being abought 4 miles
+                    wide and 22 miles in length<lb/> a long <placeName key="lakee">lake Ery
+                    </placeName>the Com Expressed a Desire to Retain that Piece<lb/> of land to
+                    Build Houses on &amp; for Vessels <unclear>&amp;</unclear> But they Informed
+                    him<lb/> they could not Do well without it as there fishing was there<lb/> so
+                    the matter was left for that Day &amp; the Indians were to Consider of it</p>
+                <lb/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-03">3</date><placeName key="canan"/></dateline>
+                <p>Rained this morning we Stayd at home untill noon <persName key="redja1">Red
+                        Jacket</persName>
+                    <persName key="cjohn1">Capt<lb/> John</persName> &amp; Some more were to See us
+                    Beged for Run which we Refused them<lb/> Several Sober <orgName key="oneida"
+                        >Onides</orgName> we to see us also<lb/> abought half Past one O Clock there
+                    there Rose avery heavy Cloud <lb/>&amp; Blew &amp; Rained very heavily after
+                    which we went to <persName key="tmorr1">Thomas<lb/> Morris</persName>es &amp;
+                    Dined no Buisiness Done to Day the Indians Being Drunk<lb/> which was Trying we
+                    Being very Desirous to be Returning homewards<lb/> But the only Remedy was
+                    Patience or leave the Treaty unfinished<lb/> which we were not free &amp; Easey
+                    to do</p>
+                <lb/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-04">4</date><placeName key="canan"/></dateline>
+                <p>the Council was Opened &amp; <persName key="redja1">Red Jacke</persName> Spoke to
+                    the Buiseness<lb/> left under there Consideration on the 2 Inst insisting to
+                    Retain<lb/> the land from <placeName key="buffc1">Buffelow Creek</placeName> to
+                        ><placeName key="joland">Johnsons Landing</placeName> which after<lb/> some
+                    Debate the Comm agreed to I think was to have Privelidg<lb/> of a Rode through
+                    it so the Treaty was agreed to on Both<lb/> Sides as we thought Escept Some
+                    littele matters Relative to the goods, <lb/><gap/>. </p>
+                <lb/>
+
+
+            </div>
+            <div type="entry">
+                <pb n="16"/>
+                <dateline><date when="1794-11-05">5</date><placeName key="canan"/></dateline>
+                <p> no Council Several Indians Calld to See us <persName key="jsken1"
+                        >Seanidoe</persName> &amp; others<lb/> in the afternoon we Rode out to
+                        <persName key="cornp2">Cornplants</persName> Camp where we Saw<lb/>
+                    <persName key="gwagu1">Graney Wagus</persName> an old Indian woman it was Said
+                    She is above<lb/> one Hundred years old lives 100 miles from here which She
+                    Traveld<lb/> I Believe on foot, <persName key="jsken1">Skenidors</persName>
+                    Daughter was to See us with a Child<lb/> 2 years old which Sucks we were
+                    informed by the old man that<lb/> they sucked there Children Some times untill
+                    they are 4 years of age<lb/> this man saith he is 80 years old is very active
+                    &amp; healthy our<lb/> landlord informed us he keeps a good Tavern in the
+                        <orgName key="oneida">Onida</orgName> Settlement<lb/> Can furnish Travelers
+                    with a good Dish of Tea &amp; other wist But Can<lb/> Speake hardly any
+                    English</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-06">6</date><placeName key="canan"/></dateline>
+                <p>the <persName key="cpic">Comm</persName> &amp; Indians in Dispute a bought a
+                    matter we thought had<lb/> Been settled which Makes the Time appear long as we
+                    hoped<lb/> to Set homewards tomorrow But now we may be Detained Several<lb/>
+                    Days, which makes it more Trying the weather Being very good to<lb/> Loose the
+                    time</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-07">7</date><placeName key="canan"/></dateline>
+                <p>to Day Spent Doing no Buiseness the Indians Chief Being too Drunk<lb/> the
+                        <persName key="cpic">Comm</persName> Calld to See us this After noon Drank
+                    Tea with us<lb/> we had Conversation with him Respecting there Dispute it<lb/>
+                    appeard they were not willing to Conferm all there former Sails<lb/> of Lands to
+                    the westward of the lands now Ceceted Back to<lb/> them which we thought they
+                    had Done on 4 Day last</p>
+                <lb/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-08">8</date><placeName key="canan"/></dateline>
+                <p>Rained the Comm &amp; Indians in Council Trying to Settle the<lb/> Articles of
+                    the Treaty &amp; we waiting with anctious Desires to Set<lb/> of home the Rodes
+                    Being very Bad when we Came &amp; Expect<lb/> them worse when we Return But it
+                    appears Best to Stay untill<lb/> the Buiseness is finished </p>
+                <pb n="17"/>
+
+                <p> we were informed they had killed 160 Cattle for the Indians<lb/> on an average
+                    wayed 700lb Ea</p>
+                <p> this afternoon we had a Conference with the Chiefs of the several<lb/> Nations
+                    when it was agreed the <orgName key="tuscarora">Tuscororas</orgName> were the
+                    original<lb/> owners of the land abought <placeName key="hopw"
+                        >Hopewell</placeName> they are a Tribe of abought<lb/> 300 poses no Land are
+                    Mixed with the <orgName key="seneca">Senicas</orgName></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-09">9</date><placeName key="canan"/></dateline>
+                <p>1st of the week had a Meeting in the Schoolhouse with several friendly<lb/>
+                    People &amp; many Indians to good satisfactions in the after noon had<lb/> a
+                    Council in order to finally finnish the Treaty &amp; have the Articles<lb/>
+                    signed, But, <persName key="cornp2">Cornplant</persName> rose up &amp; said that
+                    the United States had<lb/> Deceived the warers if they should deceive the
+                    Sachims it would be<lb/> Bad for the United States had Told them at <placeName
+                        key="fstan">Fort Stanwix</placeName> at New<lb/> York that all the Indians
+                    land was forfitied to them which had<lb/> ocationed much Blood to be Spilt,
+                    &amp; now the <persName key="cpic">Comm.</persName> had told<lb/> them that it
+                    was not the United States &amp; wished they had known<lb/> it sooner which would
+                    have prevented the sheding of Blood.<lb/> &amp; Concluded the Warriors would not
+                    sign the Trety But the Sachims<lb/> might &amp; they would abide by it as long
+                    as the sachims Did<lb/> Right the Comm. let the Indians know he could not agree
+                    to such<lb/> a pertial Settlement that he would have the warers &amp;
+                    Sachims<lb/> sign the Articles of leave matters as they were Before this<lb/>
+                    was heavy work however so it was the Indians left to consider<lb/> of the
+                    matter</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-10">10</date><placeName key="canan"/></dateline>
+                <p>no Buiseness, <persName key="sacca1">Sagorsey</persName> &amp; <persName
+                        key="cpran1">Capt Drankup</persName> Call on us to know whether<lb/> they
+                    should Receive any thing for there land at <placeName key="hopw"
+                        >hopewell</placeName> as they thought<lb/> it now appeard they were the
+                    original oners we let the know<lb/> we would do what we could for them in the
+                    Buiseness<lb/> the <persName key="farme1">Farmers Brother</persName> &amp;
+                        <persName key="redja1">Red Jacket</persName> calld to see us<lb/> But
+                    Several of the Chiefs Drunk <lb/><pb n="18"/>very Trying indeed to be Detained
+                    here by there sloathfull &amp; slow <lb/> way of Doing Buiseness &amp; Being so
+                    often Drunk But they are not to be<lb/> Hurryed</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-11">11</date><placeName key="canan"/></dateline>
+                <p>the Council Meet and agreed on the Articles &amp; they were signed<lb/> by the
+                    Indians Both Sachims &amp; waryers <persName key="cornp2">Cornplant</persName>
+                    amongst the Rest of them<lb/> after which we Invited the Chiefs to our Lodgings
+                    and where we had<lb/> a Seasonable oppertunity with them &amp; Deliverd the
+                    goods we took for<lb/> them and Proposed to Call in the Morning &amp; Speak to
+                    us again</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-12">12</date><placeName key="canan"/></dateline>
+                <p> which was accordingly Done &amp; they Deliverd a Speech as Incerted<lb/>
+                    hereafter<lb/> we the Prepared for home &amp; set forward abought 2 oClock
+                    pm<lb/> Rode 10 m to <persName key="egilb2">Ellis Gilberts</persName> stayed all
+                    night there</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-13">13</date><placeName key="checkPlace"/></dateline>
+                <p> left <persName key="egilb2">Gilberts</persName> at 5 oClock the weather Cold
+                    &amp; the ground frose got to<lb/>
+                    <persName key="jmadc1">Matcalfs</persName> to Brakefast 13 miles, from thence we
+                    Rose to <persName key="jbeve1">Joseph Bevens</persName><lb/> 6 or 7 miles
+                    arrived there near one oClock got our Dinners &amp; it Being<lb/> 23 miles to
+                    the next house &amp; the Rode Bad we were afraid to<lb/> set our that Evening so
+                    staid all night there <persName key="jparr1">John Parrish</persName> &amp;
+                    my<lb/> Self Lodged at <persName key="rhook1">Richard Hookere</persName> being
+                    Close by <persName key="jbeve1">Bevins</persName> fared<lb/> Pretty well tho our
+                    Companions had But Poor Lodgings </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-14">14</date><placeName key="bath"/></dateline>
+                <p> Set of Early Rode 10 miles to a Brush Cabbin Got our Brakefast<lb/> &amp; fed
+                    our horses in the woods it Began to snow &amp; some already<lb/> on the ground
+                    we set of for <placeName key="bath">Bath</placeName> Being 13 or 14 miles
+                    there<lb/> to which Place we Got a bought 3 oClock it Continued Snowing<lb/> we
+                    Concluded to Stay there all night &amp; <persName key="cwill1">Capt
+                        Williamson</persName><lb/> Invited us to Lodg with him which kind offer we
+                    Imbraced</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-15">15</date><placeName key="checkPlace"/></dateline>
+                <p> Set of Early the Snow 8 inches Deep Rode to <persName key="corbi"
+                        >Corbits</persName> 6 miles<lb/> got Brakefast Continued Snowing Set out for
+                    the <placeName key="ppost">Painted Post</placeName>,<lb/> 11 miles the horses
+                    Balded very Badly which made it Bad Rideing<lb/> Hoped there &amp; Baited our
+                    horses </p>
+            </div>
+            <div type="entry">
+                <pb n="19"/>
+                <dateline><date when="1794-10-31">31st 10 mo 1794</date><placeName key="canan"
+                    /></dateline>
+                <p>Four of the Sachems viz. <persName key="clear1">ClearSky</persName>, <persName
+                        key="redja1">Red Jacket</persName><persName key="sagua1"
+                        >Saguaresy</persName> &amp;<lb/> another (whose name we were not acquainted
+                    with being a<lb/> deputation from the general Council of Indians who for
+                    several<lb/> Days past have been deliberating on the proposals made to<lb/> them
+                    by <persName key="cpic">Col. Pickering</persName>, waiting on us at our Lodgings
+                    with <lb/>
+                    <persName key="hjone1">Horatio Jones</persName> Interpreter. they desired that
+                    as they had some<lb/> thing of a secret nature to communicate we would retire
+                    with<lb/> them to some private place, which being complyd with <persName
+                        key="redja1">Red <lb/> Jacket</persName> addressed us nearly as follows</p>
+                <floatingText type="entry" xml:id="redja1">
+                    <body>
+                        <dateline><date when="1794-10-31"/><placeName key="canan"/></dateline>
+
+                        <p>Brothers You see here four of use of the <orgName key="sxntns">six
+                                Nations</orgName>; who are assem-<lb/>bled at this place in the will
+                            of the great Spirit to transact<lb/> the business of the treaty, you
+                            have been waiting here a long<lb/> time and visited by our chiefs and as
+                            yet no marks of respect have<lb/> been shewn you. We understand you told
+                                <persName key="sagua1">Saguaresy</persName> that<lb/> you should not
+                            have come but at our request &amp; that you stand<lb/> ready to afford
+                            us any assistance which lay in your power. --</p>
+                        <p>Brothers we hope you will make your minds easy, as we who<lb/> are now
+                            here are but Children, the Anscients being diceased;<lb/> we know that
+                            you &amp; our forefathers transacted business together <lb/><pb n="20"/>
+                            that you look to the great Spirit for his directions &amp; assistance
+                            &amp;<lb/> take no part in war. -- </p>
+                        <p>Brothers you all know the proposals<lb/> made by us to <persName
+                                key="cpic">Col. Pickering</persName> as well as the offers made by
+                            him to us<lb/> we are now all in the presence of the great spirit and we
+                            place more<lb/> confidence in you than heretofore, as you escpressed
+                            your desire for<lb/> peace we now desire youre help &amp; assistance we
+                            hope you will<lb/> not deceive us. if you should do so, we shall no more
+                            place any <lb/> confidence in makind; we wish that if you know the<lb/>
+                            will of Congress or the extent of the commissioner's power<lb/> that you
+                            will candidly inform us. </p>
+                        <p>Brothers, We<lb/> Wish that what we are now communicating may be
+                            kept<lb/> secret. We are will to give up the four mile path from
+                                <placeName key="joland">Johnsons<lb/> Landsling</placeName> place to
+                                <placeName key="cayuc">Caynga Creek</placeName>, the other part of
+                            it from<lb/> thence to <placeName key="buffc1">Buffaloe
+                                Creek</placeName> we with to reserve on account of<lb/> of the
+                            fisheries &amp; which would correspond with the treaty<lb/> held with
+                            Sir <persName key="wjohn3">Wm. Johnson</persName>. We desire to know if
+                            you<lb/> can inform us why the triangle on <placeName key="lakee">lake
+                                Erie</placeName> can not be<lb/> given up -- <persName key="cornp2"
+                                >Cornplanter</persName> &amp; <persName key="cbran1">Capt.
+                                Brant</persName> who where only<lb/> Warrior Chiefs were the persons
+                            who attended the treaty<lb/> at <placeName key="fstan">Fort
+                                Stanwix</placeName> &amp; they were to have sent forward the
+                            proposals<lb/> for our more general consideration at that time <persName
+                                key="oldsmo1">old smoke</persName><lb/> was alive who was a Man of
+                            great Understanding; but they<lb/> were threatened into a compliance in
+                            consequence of which<lb/>
+                            <persName key="cbran1">Capt. Wm. Brant</persName> went to <placeName
+                                key="canad">Canada</placeName> disireing <persName key="cornp2"
+                                >Cornplanter</persName> to do <lb/>the best he could.</p>
+
+
+                    </body>
+                </floatingText>
+                <p>They then presented seven strings of wampum &amp; with<lb/> drew &amp; agreed to
+                    return to hear our answer at the 3rd hour this afternoon <lb/><pb n="21"/> The
+                    time allowed to Consider &amp; digest an answer being too Short<lb/> and the
+                    Indians returning rather earlier than the time appointed<lb/> they cheerfully
+                    proposed to leave it under our consideration<lb/> till tomorrow earnestly
+                    desireing we should be serious in delibera-<lb/>ting on it. </p>
+            </div>
+            <div type="entry">
+
+                <dateline><date when="1794-11-01">1st 11Mo 1794</date><placeName key="canan"
+                    /></dateline>
+                <p> This morning the same Chiefs with the Interpreter attended<lb/> according to our
+                    agreement of Yesterday, the following answer<lb/> as agreed on was communicated
+                    to them</p>
+                <floatingText type="speech">
+                    <body>
+                        <dateline><date when="1794-11-01"/><placeName key="canan"/></dateline>
+                        <p> Brothers. </p>
+                        <p>We have considered what you said to us yesterday and<lb/> shall answer
+                            you in a few words. We are thankful to the the<lb/> great Spirit that he
+                            has preserved us in health to see each<lb/> others faces at this council
+                            fire; we and our Brethren at home<lb/> have the same good will towards
+                            you as our forefathers had<lb/> and are desirous to afford you any
+                            service in our power, &amp;<lb/> that you may cherish peace with one
+                            another and with all<lb/> men believing this will greatly contribute to
+                            your happiness<lb/> we sympathize with you in your sufferings &amp;
+                            distress, &amp; wish<lb/> strict Justice to be done you respecting your
+                            Lands, you<lb/> have been informed we can take no part in war, which
+                            is<lb/> one great reason why we cannot be active in civil
+                            Govern-<lb/>ment and therefore are not capable of Judging all of
+                            your<lb/> grievences, especially as the transactions at Indian Treaties
+                            of<lb/> late years have not fully come to our knowledge; you have<lb/>
+                            spoken to us respecting the piece of Land between <placeName
+                                key="cayug1">Caynga</placeName> &amp;<lb/>
+                            <placeName key="buffc1">Buffaloe Creeks</placeName>, as we are
+                            unacquainted with the Comissi-<lb/>oners power we can give you no
+                            satisfactory answer on that<lb/> subject. if it appears to be a matter
+                            of great importance to you<lb/> it would be proper to lay it before him;
+                            the Land you mentioned <lb/><pb n="22"/> along <placeName key="lakee"
+                                >Lake Erie</placeName> you have been already acquainted that
+                            Congress<lb/> has sold it to Pennsylvania &amp; we do not suppose the
+                            Commisioner's<lb/> has power to relinquish it; it is true that the
+                            President and his<lb/> Counsellors have impowered a Commissioner to
+                            treat with you<lb/> but we thing the Government had no design to compel
+                            you,<lb/> you have Men amongst you of Good Understanding &amp;<lb/>
+                            sufficient penetration to discover what you Just rights<lb/> are &amp;
+                            if you minds are not easy with the proposals<lb/> that have been made,
+                            we make no doubt but the Ears<lb/> of the president &amp; the great
+                            Counsil of the united states<lb/> will be open to hear you &amp; to them
+                            we conceive you have<lb/> a right to appeal. We desire wisdom may
+                            conduce<lb/> your Councils that whatever is done may tend to
+                            promote<lb/> harmony &amp; peace. </p>
+                    </body>
+                </floatingText>
+                <p> We then returned the strings of Wampum. </p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-12">11 Mo 12th 1794</date><placeName key="canan"
+                    /></dateline>
+                <p> According to the agreements of last evening about 30 or 40 of the<lb/> Sachems
+                    &amp; Chief warriors met at our Lodgings &amp; delivered<lb/> the following
+                    speech by <persName key="farme1">Farmers Brother</persName> the chief Sachem </p>
+                <floatingText type="entry">
+                    <body>
+                        <dateline><date when="1794-11-12"/><placeName key="canan"/></dateline>
+
+                       
+                                <p>Brothers the people called Quakers. <lb/>I wish you would attend
+                                    to what we who<lb/> are now present are about to say we speak as
+                                    one. ---</p>
+                                <p>Yesterday after receiving your invitation to come and<lb/>
+                                    partake of your presents, we agreed to meet here this
+                                    morning<lb/> to communicate a few words which we will now do.
+                                    --</p>
+                                <p>Brothers I am glad you have lengthened our your patience<lb/> to
+                                    see the end of the business which is now brought to a close<lb/>
+                                    &amp; thank the Great spirit that he preserved you in
+                                    health<lb/> from the time you left you seat till you arrived
+                                    here, &amp; has<lb/> Continued so to preserve you to this time;
+                                    we put you under<lb/> the protection of the same Great Spirit on
+                                    your return, <lb/><pb n="23"/> hoping he may conduct you home in
+                                    safety &amp; that you may<lb/> find your friends &amp; families
+                                    well. on your return we<lb/> should be very happy to have that
+                                    you got safe home<lb/> &amp; it would be very acceptable to the
+                                    chief Now present to<lb/> be informed of it by letter. <lb/> We
+                                    give hearty thanks to the desendance of <persName key="wpenn1"
+                                        >Onas</persName> that<lb/> you so willingly arose from your
+                                    seats to attend this<lb/> Counsil fire according to our request.
+                                    Here are the<lb/> articles of the Treaty for you to look over in
+                                    order to<lb/> impress you minds that you may tell them to
+                                    your<lb/> Brethren who are sitting on their seats at home.
+                                    ---</p>
+                                <p>Brothers You have attended this treaty a long time the<lb/>
+                                    articles which we have now signed. I hope you fully
+                                    under<lb/>stand now as we have shewn them to you we would
+                                    wish<lb/> to know you opinion whether we have made a good
+                                    Peace<lb/> or not as we cannot read. we are liable to be
+                                    deceived, as<lb/> you have no doubt considered them we wish to
+                                    know your<lb/> minds whether their be any flaw or catch in
+                                    them<lb/> which might hereafter occation uneasiness <lb/> If you
+                                    think that peace is now established on a good<lb/> foundation,
+                                    we wish you would come forward &amp; sign<lb/> the articles, as
+                                    you are a people who are desirous of<lb/> promoting peace &amp;
+                                    these writings are for that purpose<lb/> we hope you will have
+                                    no objection but all come forward &amp; put your names to them
+                                    &amp; this would be a great<lb/> Satisfaction.</p>
+                    </body>
+                </floatingText>
+
+		<pb n="24"/>
+                <p>from the <placeName key="ppost">Painted Post</placeName> we Rode to <persName
+                        key="wlind1">Mary Lindley</persName>, a widdow 13 mile <lb/> woman who
+                    Entertained us all night very kindly as Did her<lb/> son our Horses, we
+                    Brakefasted with her</p>
+            </div>
+
+            <div type="entry">
+                <dateline><date when="1794-11-16">16</date><placeName key="checkPlace"/></dateline>
+                <p> set our Rode to <persName key="rdani1">Richard Daniels</persName> 5 m Baited our
+                    horses &amp; Rode<lb/> to <persName key="probe2">Peter Roberts</persName> 5 m
+                    then to <persName key="wcart1">William Carters</persName> 6 m Lodged there<lb/>
+                    our next Days Ride was Trying it Being a Bought 25 miles to<lb/> the <placeName
+                        key="block">Block house</placeName> which was the next the Rodes very Bad
+                    &amp; the<lb/> Snow 7 or 8 in Deep Boalded the horses very much no Remedy
+                    But<lb/> to go forward &amp; Do worse</p>
+                <p> I Spread by Blanket on a Bark flore lay Down slept untill<lb/> near 12 oClock
+                    then got up Smoaked my Pipe lay Down a short<lb/> time Slept but little more
+                    that night Rose a bought 2 Prepaired<lb/> 7 for going forward</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-17"/><placeName key="block"/></dateline>
+                <p>started of half past 3 Snow 7 in on the ground &amp; Cold<lb/> got we arived at
+                        <placeName key="tioga">Tyoage</placeName> near 9 Being 13 miles or more Cold
+                    &amp;<lb/> hungry we Struck fire warmed our Selves Eat some Breakfast<lb/> fed
+                    our horses &amp; set out for the <placeName key="block">Block house</placeName>
+                    10 or 12 miles the<lb/> worst Rode that Ever I Saw Being to the horses knees in
+                    mud<lb/> &amp; Some Places Deeper Roots &amp; Stones however we arived Safe<lb/>
+                    there a bought 10 oClock when I was very much worn Down<lb/> my Companions were
+                    for Trying to get to the next house that<lb/> evening But I was too Tyreed to
+                    Venture it being 20 miles at<lb/> Least &amp; the Rose for 5 or 6 m very Bad for
+                    we Concluded to Stay<lb/> all night there a Dismal Place indeed the house if it
+                    may be<lb/> called one open on the Top for yards of weather Cold &amp; one
+                    might<lb/> Put there arm Between the logs no Stable for our Tyred horses<lb/>
+                    nor Hay no milks Butter or Sugar we got some fryed Vanson<lb/> &amp; Fowl Boyld
+                    &amp; fryed in Elks fat Eat our Supers </p>
+                <pb n="25"/>
+
+                <p> Layd Down on the flores we had Something the Calld a Bed <lb/> where I had the
+                    Satisfaction of Seeing the Stars which was<lb/> Pleasing as we had snow for 3 or
+                    4 Days Past Since we left <placeName key="canan">Cannandoque</placeName><lb/> I
+                    Slept very well &amp; was Much Refreshed</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-18">18</date><placeName key="checkPlace"/></dateline>
+                <p> we willingly left the <placeName key="block">Block house</placeName> &amp; Rode
+                    10 miles in of woods saw<lb/> one Bare which I Came Close to Before he saw me we
+                    then fed our<lb/> Horses &amp; Eat Something our Selves from thence we Rode to
+                        <persName key="jkyle1">James Kiles</persName>es 10 miles<lb/> or more, in
+                    which from the <placeName key="block">Block house</placeName> we had Crosed
+                        <placeName key="trout">Trout Run</placeName> 32 times &amp;<lb/>
+                    <placeName key="lycom3">Laycomin</placeName> 9 times our Road mended after we
+                    left the <placeName key="allem">Allegany<lb/> Mountain</placeName> &amp; But
+                    little Snow &amp; it appeared like an other world when<lb/> we got to the widdow
+                        <persName key="wharr1">Mary Harris</persName>es where we arrived that
+                    Evening<lb/> Being 15 miles from <persName key="jkyle1">Kiles</persName>es &amp;
+                    were Kindly Entertained with a Bountyfull<lb/> Table &amp; a warm house where we
+                    Stayed all night</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-19">19th</date><placeName key="checkPlace"
+                    /></dateline>
+                <p> This Morning we went to <persName key="swall1">Samuel Wallis</persName>es 6 m
+                    Stayed there that Day<lb/> to Rest our Selves &amp; horses here <persName
+                        key="jparr1">John Parrish</persName> &amp; <persName key="jemle2">James
+                        Emler</persName> left<lb/>
+                    <persName key="wsave1">Wm. Savery</persName> &amp; my self they Purposeing to go
+                    by <placeName key="catta">Caterwising</placeName> &amp; we by<lb/>
+                    <placeName key="sunb">Sunberry</placeName> &amp; <placeName key="north1"
+                        >Northumberland</placeName></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-20">20</date><placeName key="muncy"/></dateline>
+                <p>this Day was very Rainey we stayed &amp; went to <orgName key="muncym">Muncy<lb/>
+                        Meeting</orgName> which was Sotted &amp; a Good one we Returned to <persName
+                        key="swall1">Samuel<lb/> Wallis</persName>es Continued Raining very fast
+                    stayd all night</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-21">21</date><placeName key="checkPlace"/></dateline>
+                <p> This morning found <persName key="swall1">Samuels</persName> Mill dam washed
+                    away and<lb/> the <placeName key="susqu">Suquahanna River</placeName> it was
+                    said Rose 10 feet &amp; we were<lb/> informed we Could not Cross the waters
+                    which was Trying<lb/> But Patience was necessary we Endeavoured after it &amp;
+                    Stayd<lb/> another night here thinking it a Favour we had got to such<lb/> good
+                    quarters &amp; kind frds </p>
+                <pb n="26"/>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-22">22</date><placeName key="checkPlace"/></dateline>
+                <p> Set out for <placeName key="north1">Northumberland</placeName>
+                    <persName key="swall1">Samuel Wallis</persName> &amp; his son John with us<lb/>
+                    got there a bought Dark after some Deficulty Pasing the over the waters<lb/>
+                    Staying all night at a Tavern 30 miles there</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-23">23</date><placeName key="checkPlace"/></dateline>
+                <p>Left there &amp; Crsed the west Branch of <placeName key="susqueh"
+                        >Sucohannah</placeName> to <placeName key="sunb">Sunbury</placeName>
+                    Stopt<lb/> at <persName key="jwall1">Joseph Walles</persName>es got Brakefast
+                    there then Rode to <persName key="jyarn2">Jesse Yarnalls</persName><lb/> stayed
+                    all night it Being 27 miles from <placeName key="sunb">Sunbury</placeName> 17
+                    People lodged there</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-24">24</date><placeName key="carte"/></dateline>
+                <p>Set of Early Crosed <placeName key="shamo">Shemokin</placeName> a Rapid Stream
+                    Rode to <placeName key="carte">Carters town</placeName><lb/> it Being 33 miles
+                    where we loded</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-25">25</date><placeName key="exete"/></dateline>
+                <p> left there Early to <persName key="mlee1">Mordecai Lees</persName> got Brakefast
+                    9 miles<lb/> from there to <placeName key="readi">Redding</placeName> 9 miles
+                    got our Dinner at <placeName key="sjack1">Samuel Jackson</placeName><lb/> the
+                    went to <persName key="shugh1">Samuel Hews</persName>es 8 miles Stayd with him
+                    all night</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-26">26</date><placeName key="checkPlace"/></dateline>
+                <p> left there &amp; Rose to <persName key="trutt1">Thomas Rutters</persName>
+                    Refreshed our Selves &amp; Set<lb/> out Rode to <persName key="jpott2">Joseph
+                        Potters</persName> Being a bought 34 miles Stayd there<lb/> all night</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-27">27</date><placeName key="phila"/></dateline>
+                <p> we arived Safe home to <placeName key="phila">Phila</placeName> with Glad harts
+                    &amp; I hope<lb/> Thankfull for the favours of healthy Preservation<lb/> Through
+                    a Trying &amp; long journey </p>
+
+
+            </div>
+        </body>
+        <back>
+            <div type="entry">
+                <dateline><date when="1794-10-27">27</date></dateline>
+                <pb n=""/>
+                <p> for us, he is a white man tho he saith his Mother was<lb/> Half Indian I gave
+                    him a knife which he was much pleased<lb/> with <unclear>Viz</unclear> the
+                    Indian Chief</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-28"/>28</dateline>
+                <p> had a Council in Publick the <persName key="cpic">Coll.</persName> Informed
+                    the<lb/> Indians the Condition on which the Chaine is to be<lb/> Brightened
+                    which is that the line Between the<lb/> United States &amp; the <orgName
+                        key="sxntns">Six nations</orgName> shall Be Extended<lb/> to the
+                    Pennsylvania Line west<lb/> as there Chiefs knew that all there lands had
+                    been<lb/> sold at Different times to the United States and<lb/> the State of
+                    Pensylvania so far westward to the<lb/> satisfaction of Both sides as <persName
+                        key="muski">Muskinggam</persName><lb/> from the upperend of <placeName
+                        key="lakee">Lake Erey</placeName> Runing due South<lb/> to the Pennsylvania
+                    Line runing East to West<lb/> But would give Back all the land to them which
+                    Lies<lb/> Between the Line Last discribed &amp; west line of Penn.<lb/>
+                    containing abought or near 800000 Acres &amp; a Privelidg<lb/> to hunt on the
+                    western lands &amp; that the Unted<lb/> States would give them yearly 45000
+                    Dollars yearly<lb/><unclear>[?]</unclear> while they were peaceable &amp; if
+                    they agreed<lb/> to the Conditions he had Ten Thousand Dollars worth of<lb/>
+                    goods he would Give them to Cloth there wives<lb/>
+                    <gap/> Children</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-29"/>29</dateline>
+                <p> no business we dinned at <persName key="cpic">Coll Pickerings</persName><lb/>
+                    with a young lawyer <persName key="smars1">Silas Marsh</persName> who
+                    Boarded<lb/> with us &amp; lives on the <placeName key="nrive">North
+                        River</placeName> near <placeName key="pough">Pokipsy</placeName></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-30">30</date></dateline>
+                <p> no Business we went to the Indian Camp it is<lb/> admirable to see how soon
+                    those Peopel can<lb/> Build a Town so as <unclear>[?]</unclear> them to <gap/>
+                </p>
+
+
+            </div>
+            <div type="entry">
+		<pb n=""/>
+                <dateline><date when="1794-10-26">26</date><placeName key="canan"/></dateline>
+                <p><gap/> of the week no meeting for worship <gap/><lb/> Done with the Treaty only
+                    Explaining a letter<lb/> which the Indians got Rote to <persName key="cbran1"
+                        >Capt Brant</persName><lb/> a <orgName key="mohawk">Mohawok</orgName> Chief
+                    in answer to what he had<lb/> sent them in his message &amp; one <persName
+                        key="cpic">Pickoring</persName><lb/> had Rote him, these Indians mentioned
+                    to <persName key="cbran1">Brant</persName><lb/> that they thought if man that
+                    brought it<lb/> could let him know what was said<lb/> as they thought he had his
+                    stomach full<lb/> This man brought a message from <persName key="cbran1">
+                        Brant</persName> to the <orgName key="sxntns">Six nation</orgName>
+                    Indian<lb/> mentioning he had been among the westren tribes<lb/> that they had
+                    of late a great Dele of Troubles<lb/> that the British stood by &amp; would not
+                    help the[m]<lb/> I wished they had taken their advice but i[t]<lb/> was not
+                    their fault they did not, that if [the]<lb/> United States would agree to the
+                    line they [had]<lb/> made when they were to gather there woul[d be]<lb/> peace
+                    &amp; desired there might be a Treaty next<lb/> Spring at <placeName
+                        key="buffc1">Buffelon Crick</placeName>, wish them to <gap/><lb/> as soon as
+                    they could, I expect they blamed the <lb/>British for not takeing the
+                    advice</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-27">27</date><placeName key="canan"/></dateline>
+
+                <p>Saguorecy or <persName key="sagua1">Saguorisey</persName> an Indian
+                        Chi<unclear>ef</unclear><lb/> of the <orgName key="tuscarora"
+                        >Tuscororah</orgName> Nation was to see us at <unclear>our</unclear><lb/>
+                    Lodging with whome we had some convers<unclear>ation</unclear><lb/> he expressed
+                    as other of the Indians did that the<lb/> White people wanted to <gap/>
+                </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-11-07">7</date><placeName key=""/></dateline>
+                <p>today spent in Doing no Bussness <gap/><lb/> Indian Chiefs Being too Drunk the
+                        <persName key="cpic">Coll</persName><lb/> called to see us this afternoon
+                    Drank Tea with<lb/> us had Conversation with him on the Dificulties<lb/> the
+                    Indians started yesterday &amp; the Day before<lb/> they were not willing to
+                    Confirm all the<lb/> Sails of Agreement they heretofore made<lb/> of Lands to
+                    the westward of the Lands which<lb/> was now Ceded Back to them which we
+                    thought<lb/> they had agreed to on <unclear>[4?]</unclear> Day last</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-08">8</date></dateline>
+
+                <p> Rained, understand if <persName key="cpic">Coll</persName> &amp; Indian Chiefs
+                    are in<lb/> Council Trying to Settle the Articles of the Trety &amp; we<lb/>
+                    waiting with Anctious Desires to Set of home<lb/> the Roade Being very Bad when
+                    we Came &amp; Expect<lb/> it to be much worse when we Return, But it
+                    appears<lb/> Best to Stay until the Business is finnished<lb/> we are informed
+                    to Day they have killed 160 Cattle<lb/> for the Indians Mostly larg oxen on an
+                    Average<lb/> 700 <unclear>[?]</unclear> this afternoon we had a conference
+                    with<lb/> Several of the Nations Chiefs &amp; waryers of Indians who<lb/> agreed
+                    that the <orgName key="tuscarora">Tuscororas</orgName> were the original<lb/>
+                    owners of the land a bought <placeName key="hopw">Hopewell</placeName> they are
+                    a<lb/> Trible of abought 300. Poses no land are mixed wi[th]<lb/> the <orgName
+                        key="seneca">Senecas</orgName></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-09">9th</date></dateline>
+
+                <p> first of the week had a meeting in the Schoolhouse<lb/> with several friendly
+                    people &amp; many Indians<lb/> to good Satisfaction in the afternoon had a
+                    Council<lb/> in order to have the Treaty finally Concluded<lb/> &amp; the
+                    articles Signed But <persName key="cornp2">Cornplant</persName> started
+                        <unclear>ab[out?] ons</unclear>
+                    <lb/>to the waryers signing of it <gap/>
+                </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-10-30"/><placeName key="canan"/></dateline>
+                <p>the Men were Mostly gone to Council and<lb/> other ways the women were Busey Some
+                    a Cooking<lb/> others Sewing &amp; Makeing Baskets &amp; Mogasons<lb/> &amp;
+                    Venson Plenty abought there Cabins &amp; Deer<lb/> Skins Stretched to
+                    Dry</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-10-31">31</date><placeName key="canan"/></dateline>
+                <p>no- Council <persName key="redja1">Read Jacket</persName>
+                    <persName key="clear1">Clearsky</persName>
+                    <persName key="cobea2">obeal</persName><lb/> and <persName key="saugua1"
+                        >Saguersey</persName> Calld on us to Day for Some a advice<lb/> after
+                    Makeing an Apoligy for there not<lb/> Paying more Attention to us Sooned<lb/>
+                    which we took into Consideration let them<lb/> know we would Give them an
+                    Answer<lb/> they Introducd what they had to say By observeing<lb/> we were in
+                    the Presence of the Great Spirit<lb/> that they Believed we were honest men<lb/>
+                    &amp; there Friends, if they were now Deceived<lb/> they should never More Put
+                    Confidence<lb/> in Men, they wished what they had to Say<lb/> Might be kept
+                    Privet, <persName key="hjone1">horatio Jones</persName> was<lb/> there
+                    interpretor</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-01">11mo 1th</date><placeName key="canan"/></dateline>
+                <p>Rained we Staid at home <persName key="redja1">Read Jackett</persName><lb/>
+                    <persName key="clear1">Clarsky</persName> the name of one not none <orgName
+                        key="seneca">Senecas</orgName> Chiefe and<lb/>
+                    <persName key="sagua1">Saguorsey</persName> or Sword Bearer Chiefs of the
+                        <orgName key="tuscarora">Tuscororeus</orgName><lb/> Calld at our house for
+                    an answer to what they<lb/> said to us yesterday which we gave them in<lb/>
+                    Substance as follows</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-02">2 mo</date><placeName key="canan"/></dateline>
+                <p>&amp; 1th of the week had a Meeting in the Schoolhouse<lb/> after which was a
+                    Council with the Indians<lb/> they Informed <persName key="cpic"
+                        >Pickring</persName> they Desired to have<lb/> the land from <placeName
+                        key="joland">Johnsons Landing</placeName> to <placeName key="buffc1"
+                        >Buffalow Crick</placeName><lb/> Being a bought 4 miles wide &amp; 22 long
+                    of lake<lb/> the <persName key="cpic">Coll</persName> Purposed to give them
+                        <unclear>suprevliege</unclear> to fish<lb/> &amp; <gap/> the Land for of
+                    united states <lb/><unclear>Left</unclear> under the
+                        <unclear>Constitution</unclear>
+                </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-11-02"/></dateline>
+                <p>Indian Tribes <lb/>
+                    <orgName key="seneca">Senecas</orgName> 1900 the land they Posses 4000000 acers<lb/>
+                    <orgName key="cayugaind">Cayugas</orgName> Posses 400 ---- 64000<lb/>
+                    <orgName key="onondaga">Onandagas</orgName> - 500 ---- 70400<lb/>
+                    <orgName key="oneida">Oneidas</orgName> 500 Posses ---- 256000 1600 at this Treaty<lb/>
+                    <orgName key="tuscarora">Tuscaroras</orgName> 300 Mixt with the <orgName
+                        key="seneca">Senecas</orgName> hold no land<lb/>
+                    <orgName key="mohawk">Mowhawks</orgName> Removed over the Lake abought the<lb/>
+                    grand River &amp; of <orgName key="cantb">Bay of Kanty</orgName> abought
+                    300<lb/> the <orgName key="stockbridge">Stockbridg Indians</orgName> are the
+                    Remain of the Tribes<lb/> Formerly liveing in New England now Settled near<lb/>
+                    the <orgName key="oneida">Oneides</orgName> abought 250 of them or 300 acers 23040<lb/>
+                    <placeName key="broth">Brother Town</placeName> Indians 150 Poses land
+                    73940</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-03">3</date></dateline>
+
+                <p> Rained this morning we Staid at home untill noon<lb/> Several Intians Calld to
+                    See us Beged hard for them<lb/>
+                    <persName key="cjohn1">Capt John</persName>
+                    <persName key="redja1">Read Jacket</persName> &amp; 2 other Chiefs &amp; Several Sober<lb/>
+                    <orgName key="oneida">Onides</orgName> a Bought half Past one there Came up<lb/>
+                    a viry heavy Storme of wind &amp; Rane after which<lb/> we went to <persName
+                        key="tmorr1">Thomas Morris</persName>es &amp; Dineed Before<lb/> we Sat of
+                    we Read our letters from <placeName key="phila">Phila</placeName> which<lb/> was
+                    Very Pleasant to here from home not have<lb/>ing heard anything Before since we
+                    left them<lb/> no Business Done to Day so many Chiefs Being<lb/> Drunk which was
+                    Trying we Being Very Desirous<lb/> of Returning homewards, But the only
+                    Remedy<lb/> was Patience of to leave the Treaty undone<lb/> which we were not
+                    free to Do</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-04">4</date></dateline>
+
+                <p> this Day had a Councel <persName key="redja1">Read Jacket</persName><lb/> Spoke
+                    to what had Been Said to them on 12th Day<lb/> letting the Com know thy were
+                    Desirous<lb/> to keep the land a long the lake from<lb/>
+                    <placeName key="buffc1">Buffolow Crick</placeName> to <placeName key="joland"
+                        >Johnsons landing</placeName>,<lb/> which the Com agreed to with only<lb/>
+                    the use of a Rode through </p>
+
+
+            </div>
+            <div type="draft">
+                <pb n=""/>
+                <dateline><date when="1794-11-04"/></dateline>
+                <p>So the Treaty was agreed too Except Some matters<lb/> Respecting Inguries Done on
+                    Either Side which<lb/> the Com Told them might be Done Better Between<lb/> him
+                    &amp; Some of there Chiefs at his lodging Before<lb/> they Come in open Councal
+                    &amp; also how the money<lb/> &amp; Goods Should Be Distributed</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-05">5</date></dateline>
+                <p>no Councel to Day we had Several Indians Calld<lb/> to See us <persName
+                        key="jsken1">Seanidore</persName> &amp; others in the after noon we<lb/>
+                    Rode our to <persName key="cornp2">Cornplants</persName> Camp where we Saw<lb/>
+                    <persName key="gwagu1">Graney Wagus</persName> an old woman it is Said
+                    above<lb/> 100 years old who live one hundred miles from<lb/> here <persName
+                        key="jsken1">Seanidore</persName> Daughter was here with a Child<lb/> 2
+                    years old or more which She Gives Suck to &amp; the<lb/> old man Informed us the
+                    Indian women Some<lb/> times Suckeled them untill they were 4 years<lb/> old
+                    this man saith he is 80 years old of years very <lb/>active &amp; hearty keeps a
+                    good Tavern in the<lb/>
+                    <orgName key="oneida">Onida</orgName> Settlement &amp; we were Informed by
+                    our<lb/> Landlord one may Get a Good Dish of Tea and<lb/> otherwise well
+                    Entertained there tho he can Speak<lb/> Scarce no English</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-06">6</date></dateline>
+                <p>the Indian &amp; <persName key="cpic">Coll</persName> in Dispute a bought
+                    some<lb/> Little Matters Respecting which we thought<lb/> had Been Settled which
+                    makes the time Appear<lb/> longer as we hoped to Set of home tomorrow<lb/> But
+                    now we may be Detaind Several Days<lb/> the weather Being Very Good makes it
+                    Trying<lb/> to loose such faverable Day </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-11-09"/></dateline>
+                <p>the Treaty being finnished this Day<lb/>
+                    <persName key="cornp2">Cornplant</persName> Complained that the united<lb/>
+                    states had Deceived the waryers &amp; if they<lb/> should Deceive the Sachims it
+                    would<lb/> Be Bad he had Repetance to the Treaty<lb/> at <placeName key="fstan"
+                        >forte Stanwise</placeName> when they held up to<lb/> the Indians that all
+                    there Lands were<lb/> Forfited to the United states &amp; a large
+                        <unclear>[pesel?]</unclear><lb/> of there land was ceded to them which
+                    was<lb/> he said the Ocation of much Blood<lb/> Being Spilt</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-10"/></dateline>
+                <p>10 no Council to Day <persName key="sagua1">Sagorey</persName>
+                    <persName key="cpran1">Capt Prantup</persName><lb/> Calld on us to know then it
+                    would be likely<lb/> they should Receive any thing for there lands<lb/> at
+                        <placeName key="hopw">Hopewell</placeName> as they thought it now
+                    appears<lb/> they were the original owners we Informed<lb/> them we would
+                    Indeavour to Do what<lb/> we Could for them in that Buiseness<lb/> they are of
+                    the <orgName key="tuscarora">Tuscorora</orgName> Tribe 3 or 400 of them<lb/> the
+                        <persName key="farme1">Farmers Brother</persName> &amp; <persName
+                        key="redja1">Red Jacket</persName> also calld to<lb/> See us, in of
+                    Afternoon WS &amp; my Self went to<lb/> see <persName key="cpic">Coll
+                        Pickring</persName> Several of the Sachim Drunk<lb/> very Trying indeed to
+                    be Detained here by there<lb/> Sloathfull &amp; Slow way of Doing Buiseness
+                    But<lb/> they are not to be Hurried</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-11"/></dateline>
+                <p> 11 the Council meet &amp; agreed on the articles &amp; they were<lb/> SInced By
+                    the Indians after which the Indians Chiefs Calld<lb/> at our lodging we had a
+                    seasonable opportunity<lb/> with them &amp; Delivered the goods we Took for
+                    Them</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-12"/></dateline>
+                <p> 12 we had an other Conferrence with the Chiefs at<lb/> there Request last night
+                    after which we got<lb/> Ready &amp; Set of towards home Rose as fast as<lb/>
+                    <persName key="egilb2">Elias Gilbert</persName> 10 miles from <placeName
+                        key="canan">Condarqua</placeName></p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-11-13"/></dateline>
+                <p>13 Left <persName key="egilb2">Elias Gilberts</persName> a Bought 5 oClock in the
+                    Morning<lb/> Came To <persName key="jmadc1">Metcalfe</persName> 13 miles Got
+                    Breakfast Set <unclear>[?]</unclear> &amp;<lb/> Came to <persName key="jbeve1"
+                        >/Joseph Bivins</persName> 6 miles got there Before one oClock<lb/> Being 22
+                    miles &amp; 1/2 to Both &amp; no house we agreed to Stay <lb/>all night,
+                        <persName key="jparr1">John Parish</persName> &amp; my Self lodg at
+                        <persName key="rhook1">Rich Hookers</persName></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-14"/></dateline>
+                <p>14 Left <persName key="jbeve1">Bivins</persName> Rode abought 10 miles to a
+                    Brush<lb/> Cabin in the woods Baited our Horses Eat a little<lb/> Breakfast it
+                    Began to Snow &amp; Some allready on<lb/> the Ground we Set of for <placeName
+                        key="bath">Bath</placeName> Being 13 miles<lb/> Got there abought 3 oClock
+                    Continued Snowing<lb/> are Concluded to Stay all night there <persName
+                        key="cwill1">Capt<lb/> Williamson</persName> Kindly Invited us to Lodg<lb/>
+                    with him which we Imbraced.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-15"/></dateline>
+                <p>15th Left <placeName key="bath">Bath</placeName> Early in of Morning Rode to
+                        <persName key="corbi">Corbits</persName><lb/> 6 miles, Got Brakefast Snowed
+                    all the way Being<lb/> abought 8 in Deep &amp; the horses Balded Badly
+                    continued<lb/> Snowing Set out for the <placeName key="ppost">Painted
+                        Post</placeName> 11 miles<lb/> Stopt there &amp; Baited from thence we Rode
+                    to<lb/> the <persName key="wlind1">Mary Widow Lindleys</persName> 13 miles
+                    Lodged there left<lb/> our Horses at her Sons liveing near her house</p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-16"/></dateline>
+                <p>&amp; Brakefasted with her set our again in the Snow<lb/> Rode to <persName
+                        key="rdani1">Rich Daniels</persName> 5 m Bated then Rode to<lb/>
+                    <persName key="probe2">Peter Roberts</persName> 5 m there to <persName
+                        key="wcart1">William Carters</persName> 6 miles<lb/> Lodged there the
+                    Prospect of going to the <placeName key="block">Block house</placeName></p>
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-17">17</date></dateline>
+                <p> next Day was very Trying however we had a poor old<lb/> Bed Laid on a Bark flore
+                    which served 3 of us <lb/>I took a blanket Spread it a Side the Bed<lb/> Laid
+                    Down Slept untill 12 o Clock then got<lb/> up Smoaked my Pipe &amp; lay Down a
+                    short time<lb/> slept but a little more that night Rose up<lb/> abought half
+                    past 2 set of for the <placeName key="block">Block <lb/> house</placeName>
+                    between 3 &amp; 4 in the morning Cold &amp; the<lb/> Snow abought 6 or 7 inches
+                    Deep </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-11-16"/></dateline>
+                <p> were present when the Articles were agreed on &amp;<lb/> made no objection to
+                    them. - He says they will<lb/> agree to &amp; abide by what the Sachems do, if
+                    they do<lb/> right. - tomorrow they may think what the Sa-<lb/>chems done was
+                    wrong, will they then abide by it<lb/> no longer than they may think it right?
+                    If this<lb/> be their meaning we may as well let things re-<lb/>main where they
+                    are. Your Cheif Warrior says<lb/> the U- States &amp; the Sachems are now making
+                    a <lb/>firm peace, but I can not consider it so unless<lb/> the Sachems &amp;
+                    Warriors both sign the Articles, as it<lb/> may create divisions in your
+                    Councils &amp; dissention<lb/> among yourselves. this might be attended with
+                    <lb/> dangerous consequences.-<lb/> He speaks of the United<lb/> States
+                    deceiving the Sachems.- It is unnecessary<lb/> for me to repeat the
+                    protestations of sincerity. - As<lb/> I represent the U.- States, I have told
+                    you that I<lb/> will not deceive you.- I can not consent to close<lb/> the
+                    Business in this manner, after so much care<lb/> &amp; pains has been taking to
+                    make every thing agree-<lb/>able &amp; satisfactory, I wish you to consider of
+                    it<lb/> calmly &amp; deliberately and give me an answer <lb/>tomorrow.- If the
+                    Warriors wish to live in peace<lb/> with the U.- States, if they wish to make
+                    the Chain<lb/> of friendship bright they will sign the Articles of the
+                    Treaty.</p>
+                <p>
+                    <persName key="cornp2">Cornplanter</persName> then addressed the Warriors in a <lb/>
+                    <pb n=""/> short Speech desiring they would be firm &amp;<lb/> steady in their
+                    conclusion.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-17"/></dateline>
+                <p>Council fire 1 covered<lb/>
+                    <gap/> our horses Balld very Badly made it<lb/> Dangerous however we arived
+                    abought<lb/> 7 oClock at <placeName key="tioga">Tyoge</placeName> 13 miles
+                    Struck fire<lb/> to warm our Selves Eat Brakefast on<lb/> on Beefs Tong &amp;
+                    Bread &amp; Chees Started<lb/> for the <placeName key="block">Block
+                        house</placeName> Through the worst<lb/> Rode that Ever I Rode Being most
+                    of<lb/> the way to the horses knees in mud &amp;<lb/> Roots &amp; Stones 11
+                    miles which we Rode<lb/> By one oClock when I was very much<lb/> worn Down my
+                    Companions were for<lb/> Trying to Get to the next house But<lb/> I was too
+                    Tyred to Venter the Rode<lb/> for 4 or 5 miles not much Better &amp; it<lb/> was
+                    abought 20 m to the the Next house<lb/> So we Concluded to stay all night
+                    there<lb/> a most Dismal Plase &amp; the weather<lb/> Cold the house if it may
+                    Be Calld<lb/> one open for yards on the Roofe &amp; Plenty<lb/> of Cracks
+                    Between the logs no Stable<lb/> for our Tyred horses nor hay <lb/><pb n=""/> no
+                    Milk nor Butter nor Sugar we got some<lb/> &amp; we fryed Venson Laid Down on
+                    the flore<lb/> with something like a bed But I had the<lb/> Satisfaction of
+                    seeing the stars which<lb/> Shined Bright which was Pleasing as<lb/> we had Snow
+                    for 3 or 4 Days since we<lb/> Left <placeName key="canan"
+                        >Candooquague</placeName> we Rose in the morning</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-18"/></dateline>
+                <p> 18 Set of Rode 10 miles fed our horses in the<lb/> woods Eat some Dryed Beef Set
+                    out for<lb/>
+                    <persName key="jkyle1">James Kiles</persName> 10m more got Dinner then<lb/> Rode
+                    to <persName key="wharr1">Mary Harris</persName>es 15 miles where<lb/> It
+                    appeard like an other world Being<lb/> very Kindly Entertained with a
+                    Bounty<lb/> full Table &amp; a warm house where<lb/> we stayd all night</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-19"/></dateline>
+                <p> 19 Got our Brakefast Rode to <persName key="swall1">Samuel
+                        <lb/>Wallis</persName>es Spent the Remainder of the<lb/> Day there to Rest
+                    my mare Being lame<lb/> here <unclear>[JF &amp;JE?]</unclear> left <persName
+                        key="wsave1">William Savery</persName> &amp;<lb/> my self they Intending to
+                    Go by <placeName key="catta">Catewis<lb/>ing</placeName>
+                    <persName key="wsave1">Wm</persName> &amp; J by <placeName key="north1"
+                        >Northomberland</placeName></p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-20"/></dateline>
+                <p> 20 Stayed all night this Day was very Rainey<lb/> we staid &amp; went to
+                        <orgName key="muncym">Muncy Meeting</orgName> which<lb/> was [solled?] &amp;
+                    a good one Returned to <persName key="swall1">Sam'l<lb/> Wallis</persName>es
+                    continued Raining very fast<lb/> Stayed all night nex Day found Samuels</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-21"/></dateline>
+                <p> 21 Mill Dam Broke &amp; the waters so high that<lb/> we were Informed we could
+                    not cross <lb/><pb n=""/> them &amp; the <placeName key="susqueh"
+                        >Suscohannah</placeName> Rose this<lb/> Day &amp; last night abought a foot
+                    it was<lb/> Trying to Stay But there was nothing<lb/> to Be Done But to Exercise
+                    Patience<lb/> &amp; we thought it a favour we got to<lb/> such good Quarters the
+                    family Being very<lb/> Kind Stayed all night</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-22"/></dateline>
+                <p> 22 Set of for <placeName key="north1">Northomberland</placeName>
+                    <persName key="swall1">Samuel <lb/> Wallis</persName> &amp; his son John with us
+                    Got there <lb/>abought Dark after some Deficulty<lb/> getting over the waters
+                    Stayed all<lb/> night at a Tavern 30 miles</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-23"/></dateline>
+                <p> 23 set of next morning Crossed the<lb/> West Branch of <placeName key="susqueh"
+                        >Suscohannah</placeName> went<lb/> to <persName key="jwall1">Joseph
+                        Wallis</persName>es in <placeName key="sunb">Sunberry</placeName> Got<lb/>
+                    our Brakefast there Left there and<lb/> Rode to <persName key="jyarn2">Jesse
+                        Yarnall</persName>s 27 miles 17 people there</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-24"/></dateline>
+                <p> 24 Left there as soon as we could<lb/> See to Travel Crossed <placeName
+                        key="shamo">Theomokin<lb/> Creek</placeName> a Deep water Rode to <placeName
+                        key="carte">Carters Tavern</placeName><lb/> 33 miles </p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-25"/></dateline>
+                <p> 25 Rose Early in the Morning Rode to<lb/>
+                    <placeName key="mlee1">Mordica Lees</placeName> 9 miles Got Brakefast <lb/> then
+                    to <placeName key="readi">Reding</placeName> 9 miles got Dinner at<lb/>
+                    <persName key="sjack1">Samuel Jacsons</persName> then to <persName key="shugh1"
+                        >Samuel Hewes</persName> 8m<lb/> Stayed all Night there set out
+                    Early</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-26"/></dateline>
+                <p> 26 in the Morning Rode to <persName key="trutt1">Tho. Rutters</persName><lb/>
+                    got Brakefast then to <placeName key="perki">Perkeomen</placeName> 10
+                    miles</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-27"/></dateline>
+                <p> 27 got Dinner then to <persName key="jpott2">Joseph Potts</persName>es 14
+                    miles<lb/> stayed all night came home in morning </p>
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-10-31"/></dateline>
+                <p>The time allowed to consider &amp; digest an answer being too short, &amp; the
+                    Indians return<lb/>ing rather earlier than the time appointed, they chearfully
+                    proposed to leave it under<lb/> our Consideration till tomorrow, earnestly
+                    desiring we should be serious in deliber<lb/>ating on it.</p>
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-01"/></dateline>
+                <p> 11th Month 1st This Morning the same Chiefs with the Inter<lb/>preter attending
+                    according to our agreement of yesterday, the following answer as<lb/> agreed on
+                    was communicated to them </p>
+                <floatingText type="speech">
+                    <body>
+                        <p> Brothers, We have considered what you said to us yesterday &amp; shall
+                            answer you<lb/> in a few words; We are thankful to the great Spirit that
+                            he has preserved us in<lb/> health to see each others faces at this
+                            Council fire; we &amp; our Brethren at home have<lb/> the same good will
+                            towards you as our forefathers had, &amp; are desirous to afford you
+                            any<lb/> service in our power, &amp; that you may cherish peace with one
+                            another &amp; with all<lb/> Men, believing this will greatly contribute
+                            to your happiness; we sympathize<lb/> with you in your sufferings &amp;
+                            distress, &amp; wish strict justice to be done you respect<lb/>ing your
+                            Lands, you have been informed we can take no part in war, which is
+                            one<lb/> great reason why we cannot be active in civil Government &amp;
+                            therefore are not capable<lb/> of judging of all your grievances,
+                            especially as the transactions at Indian Treaties of<lb/> late years
+                            have not fully come to our knowledge; you have spoken to us respecting
+                            the<lb/> piece of Land between <placeName key="cayuc">Caynga</placeName>
+                            &amp; <placeName key="buffc1">Buffaloe Creeks</placeName>, as we are
+                            unacquainted with the<lb/> Commissioner's power we can give you no
+                            satisfactory answer on that subject, <unclear>[which?]</unclear><lb/>
+                            appears to be a matter of importance to you, it would be proper to lay
+                            it before him; the<lb/> Land you mention along <placeName key="lakee"
+                                >Lake Erie</placeName> you have been already acquainted that
+                            Congress<lb/> has sold it to <placeName key="penns"
+                                >Pennsylvania</placeName>, &amp; we do not suppose the Commissioner
+                            has power to<lb/> relinquish it; It is true the President &amp; his
+                            Counsellors have impowered a Commis<lb/>sioner to treat with you, but we
+                            think the Government has no design to compel<lb/> you, you have Men
+                            amongst you of good Understanding &amp; sufficient penetration<lb/> to
+                            discover what your just rights are, &amp; if your minds are not easy
+                            with the proposals that<lb/> have been made, we make no doubt but the
+                            Ear of the President &amp; the great Council<lb/> of the United States
+                            will be open to hear you, &amp; to them we conceive you have a
+                            right<lb/> to appeal; we desire Wisdom may conduct your Councils that
+                            whatever is done may<lb/> tend to promote harmony &amp; peace. We then
+                            returned the Strings of Wampum.</p>
+                    </body>
+                </floatingText>
+
+
+
+            </div>
+            <div type="entry">
+                <dateline><date when="1794-11-12"/>11th Mo: 12th 1794</dateline>
+                <p> According to the agreement of last evening about thirty or<lb/> forty of the
+                    Sachems &amp; Chief Warriors met at our Lodgings &amp; delivered the
+                    follow<lb/>ing Speech by <persName key="farme1">Farmer's Brother</persName> the
+                    Chief Sachem.</p>
+                <floatingText type="speech">
+                    <body>
+                        <p> Brothers of he people call'd Quakers, I wish you would attend to
+                            what<lb/> we who are now present are about to say, we speak as one.
+                            yesterday after<lb/> receiving your invitation to come and partake of
+                            your presents, we agreed to meet<lb/> here this Morning, to communicate
+                            a few words, which we will now do. </p>
+                    </body>
+                </floatingText>
+
+
+
+
+            </div>
+            <div type="entry">
+                <pb n=""/>
+                <dateline><date when="1794-10-31"/>10th Month 31st 1794:</dateline>
+                <p> Four of the Sachems viz <persName key="clear1">Clear Sky</persName>, <persName
+                        key="redja1">Red Jacket</persName>,<lb/>
+                    <persName key="sagua1">Sagnaresy</persName> and another (whose name we were not
+                    acquainted with) being a<lb/> deputation from the general Counsil for Indians
+                    who for several Days past<lb/> have been deliberating on the proposals made to
+                    them by <persName key="cpic">Col: Pickering</persName>, waited<lb/> on us at our
+                    Lodgings with <persName key="hjone1">Horatio Jones</persName> Interpreter, they
+                    desired that as they<lb/> had something of a secret nature to communicate we
+                    would retire with them<lb/> to some private place, which being complyed with,
+                        <persName key="redja1">Red Jacket</persName> addressed us<lb/> nearly as
+                    follows.</p>
+                <floatingText type="speech">
+                    <body>
+                        <p> Brothers, you see here four of us of the <orgName key="sxntns">six
+                                Nations</orgName>, who are assembled at this<lb/> place in the will
+                            of the great Spirit to transact the Business of the Treaty, you<lb/>
+                            have been waiting here a long time &amp; visited by our Chiefs &amp; as
+                            yet no marks of res<lb/>pect have been shown you. We understand you told
+                                <persName key="sagua1">Sagnaresy</persName> that you should<lb/> not
+                            have come but at our request &amp; that you stood ready to afford us any
+                            assistance<lb/> which lay in your power. Brothers we hope you will make
+                            you minds easy,<lb/> as we who are now here are but Children, the
+                            Antients being deceased; we know<lb/> that your &amp; our forefathers
+                            transacted business together, that you look to the great Spirit<lb/> for
+                            his direction &amp; assistance, &amp; take no part in war. Brothers you
+                            all know the<lb/> proposals made by us to <persName key="cpic">Col:
+                                Pickering</persName> as well as the offers made by him to us, we
+                            are<lb/> now all in the presence of the great Spirit &amp; we place more
+                            confidence in you than<lb/> heretofore, as you expressed you desire for
+                            peace we now desire your help &amp; assistance,<lb/> we hope you will
+                            not deceive us, if you should do so, we shall no more place any
+                            con<lb/>fidence in Mankind; we wish that if you know the will of
+                            Congress or the extent<lb/> of the Commissioner's powers that you will
+                            candidly inform us. Brothers, we<lb/> wish that what we are now
+                            communicating may be kept secret; we are willing to<lb/> give up the
+                            four Mile path from <placeName key="joland">Johnson's
+                                Landing</placeName> place to <placeName key="cayuc">Caynga
+                                Creek</placeName>, the <lb/>other part of it from thence to
+                                <placeName key="buffc1">Buffaloe Creek</placeName> we wish to
+                            reserve on account of the<lb/> Fisheries &amp;c, which would correspond
+                            with the Treaty held with Sir <persName key="wjohn1">Wm.
+                                Johnson</persName>.</p>
+
+                        <p> We desire to know if you can inform us why the Triangles on <placeName
+                                key="lakee">Lake Erie</placeName> cannot be given<lb/> up. <persName
+                                key="cornp2">Cornplanter</persName> &amp; <persName key="cbran1"
+                                >Captain Brant</persName> who were only Warrior Chiefs were the
+                            persons<lb/> who attended the Treaty at <placeName key="fstan">Fort
+                                Stanwix</placeName>, &amp; they were to have sent forward the
+                            proposals<lb/> for our more general consideration, at that time Old
+                            Sonoke was alive who was a<lb/> Man of great Understanding; but they
+                            were threatned into a compliance in con<lb/>sequence of which <persName
+                                key="cbran1">Capt. Brant</persName> went of to <placeName
+                                key="canad">Canada</placeName>, desiring <persName key="cornp2"
+                                >Cornplanter</persName> to<lb/> do the best he could. They then
+                            presented seven strings of wampum &amp;<lb/> withdrew, &amp; agreed to
+                            return to hear our answer at the 3rd hour this afternoon </p>
+                    </body>
+                </floatingText>
+
+
+
+
+            </div>
+            <div type="draft">
+                <pb n=""/>
+                <floatingText type="speech">
+                    <body>
+                        <p>Brothers, I am very glad you have lengthened out your patience to see the
+                            end of<lb/> the business which is now brought to a close: I thank the
+                            great Spirit that he pre<lb/>served you in Health from the time you left
+                            your seats till you arrived here, &amp; has<lb/> continued to preserve
+                            you to this time; we put you under the protection of the<lb/> same great
+                            Spirit on your return, hoping he may conduct your home in safety<lb/>
+                            &amp; that you may find you Friends &amp; Families well. On you return
+                            we should<lb/> be very happy to hear that you got safe home, &amp; it
+                            would be very acceptable to the <lb/> Chiefs now present to be informed
+                            of it by Letter. We give hearty thanks to<lb/> the descendants of
+                                <placeName key="onas">Onas</placeName>, that you so willingly rose
+                            from your seats to attind this<lb/> Council fire according to our
+                            request. Here are the Articles of the Treaty for<lb/> you to look over
+                            in order to impress your Minds that you may tell them to your<lb/>
+                            Brethren who are sitting on their seats at home. Brothers, you have<lb/>
+                            attended this Treaty a long time the Articles which we have now signed,
+                            I hope<lb/> you fully understand now as we have shown them to you we
+                            would with to know your<lb/> opinion whether we have made a good peace
+                            or not; as we cannot read we are liable<lb/> to be deceived, as you have
+                            no doubt considered them we wish to know your minds<lb/> whether there
+                            being any flaw or catch in them which might hereafter occasion<lb/>
+                            uneasiness. If you think that peace is now established on a good
+                            foundation,<lb/> we wish you would come forward &amp; sign the Articles,
+                            as you are a people who are<lb/> desirous of promoting peace &amp; these
+                            writings are for that purpose, we hope you<lb/> will have no objection
+                            but all come forward &amp; put your Names to them, &amp; this<lb/> would
+                            be great satisfaction to us.</p>
+                    </body>
+                </floatingText>
+
+
+                <p> Our answer to the Indians was in substance as follows</p>
+                <floatingText type="speech">
+                    <body>
+                        <p>Brothers, We left our homes at your request &amp; have freely come to see
+                            you &amp; sat<lb/> patiently with you during the transactions of the
+                            Treaty, we are glad to see the Treaty<lb/> Business brought to a close,
+                            we hope the chain is brightened &amp; that the peace will<lb/> be
+                            lasting; we have compared the Articles of the Treaty given to the
+                            Indians<lb/> with those retained by the United States &amp; find them to
+                            be true Copies of<lb/> each other, with respect to our signing we hope
+                            you will excuse us, for altho'<lb/> we believe no deception is intended
+                            by the Commissioner, yet there was a num<lb/>ber of other people
+                            present, &amp; we wish not to be held up to public view, as we<lb/>
+                            informed you before that we do not interfere with Government as we can
+                            take no<lb/> part in war; neither do we apprehend ourselves competent
+                            judges, as the transac<lb/>tions at Treaties held since the war have not
+                            fully been made public.</p>
+
+                        <p> We hope you will abide by the agreement which you have signed &amp; be
+                            at peace, &amp;<lb/> it is our earnest desire that you might more &amp;
+                            more be redeemed from the Spirit<lb/> of war &amp; cherish the number of
+                            your Friends: We wish that when you apprehend<lb/> yourselves agrieved
+                            you would make your Grievances know &amp; not seek to revenge<lb/> them,
+                            as a Society we have had experience of the benifits arising from these
+                                <lb/><pb n=""/> peaceable principles for the space of near 150
+                            years, &amp; find we can do better with<lb/>out fighting then with it.
+                            We still continue to feel the same good will towards<lb/> our Brothers
+                            the Indians as formerly &amp; are willing in every strait &amp;
+                            difficulty to<lb/> afford you any assistance in our power. We fervently
+                            wish you may live<lb/> in Love one with another.</p>
+                    </body>
+                </floatingText>
+
+
+                <p> The <persName key="farme1">Farmer's Brother</persName> then made the following
+                    conclusive speech</p>
+                <floatingText>
+                    <body>
+                        <p>Brothers, We are very glad to see you; when we sent for you, our desire
+                            was that<lb/> you might sit by our sides &amp; afford your assistance to
+                            make a good peace.<lb/> Last year we invited you to come to <placeName
+                                key="sand">Sandusky</placeName>, you willingly rose from your
+                            seats<lb/> &amp; came forward, you know how things turned out, it was
+                            not the will of the great<lb/> Spirit that a Treaty should take place,
+                            yet we thank you because you came<lb/> so readily; we have many times
+                            heard the voice of <placeName key="onas">Onas</placeName>, it as always
+                            good to us<lb/> we have now heard it again &amp; what you have said is
+                            good, you have seen the writ<lb/>ings by which we are bound, you say you
+                            are not concerned in public affairs, and<lb/> no hard thoughts
+                            concerning you, on account of your not putting your names<lb/> to it.
+                            Brothers, the great Spirit give this Island to us the White People have
+                            in<lb/>creased greatly, there is no difference between the Red People
+                            &amp; the White they are all<lb/> one &amp; ought to be Brothers &amp;
+                            live in Peace one with another. </p>
+                    </body>
+                </floatingText>
+
+
+
+            </div>
+            <div type="letter">
+                <pb n=""/>
+                <dateline><date when="1798-02-23">2 mo 23th 1798</date>
+                    <placeName key="phila">Philad.</placeName></dateline>
+                <p> At a conferrence held with 5 of the <orgName key="tuscarora"
+                        >Tuscaroras</orgName> Nation<lb/> who were authorised by there Nation to
+                    Inquire Respecting<lb/> there Right to the lands at <placeName key="hopw"
+                        >Hopewell</placeName> &amp; on Inquiring<lb/> Into the Matter it Doth not
+                    appear that they were<lb/> Ever the owners of that Part of <placeName
+                        key="virgi">Vergeina</placeName> But we find<lb/> By a Treaty held with the
+                        <orgName key="sxntns">Six Nations</orgName> of Indians in<lb/> the year 1744
+                    and the <orgName key="tuscarora">Tuscarorars</orgName> were Part of those<lb/>
+                    Nations that they sold all those Lands to the government<lb/> of <placeName
+                        key="virgi">Verginna</placeName> &amp; Recd pay for the same<lb/> But as we
+                    love our Read Brothers &amp; Desire to make<lb/> there Minds Easey we have
+                    agreed to give them<lb/> 1000 Dollars which was done<lb/> There Names are<lb/>
+                    <persName key="sagua1">Sagoresey</persName><lb/>
+                    <persName key="ncusi1">Nicholas Cusick</persName>
+                </p>
+
+            </div>
+        </back>
+
+    </text>
+</TEI>

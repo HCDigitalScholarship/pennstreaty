@@ -8,26 +8,15 @@ from .models import Page, Manuscript
 
 
 XSLT_DIR = os.path.dirname(os.path.realpath(__file__))
-def if_already_exists(fsock):
-    manuscript_id = os.path.splitext(fsock.name)[0]
-    try:
-        exist = True
-        manuscipt= Manuscript.objects.get(id_tei=manuscript_id)
-    except:
-        exist = False
-    return exist
+
 
 def import_xml_from_file(fsock):
     manuscript_id = os.path.splitext(fsock.name)[0]
     data = fsock.read()
     html_tree = xml_to_html(etree.XML(data))
-    try:
-        manuscript = Manuscript.objects.get(id_tei=manuscript_id)
+    manuscript = Manuscript.objects.get(id_tei=manuscript_id)
     # Delete preexisting pages associated with the manuscript.
-        Page.objects.filter(Manuscript_id=manuscript).delete()
-    except:
-        manuscript= Manuscript.objects.create(id_tei=manuscript_id)
-
+    Page.objects.filter(Manuscript_id=manuscript).delete()
     for i, page in enumerate(html_tree.getroot()):
         transcription = etree.tostring(page, encoding='unicode', method='html')
         page_id = manuscript_id + '_' + str(i+1).rjust(3, '0')

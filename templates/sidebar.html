@@ -1,0 +1,76 @@
+<!doctype html>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/sidebar.css" />
+</head>
+
+<body>
+<div id="main">
+<div id="mySidenav" class="sidenav">
+  <div class="rectangle"></div>
+  <span href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&#xD7;</span>
+  <ul>
+  <!-- search function -->
+		<form action="/search" method='get'>
+        <!--    <input class='button1' type="submit" value="Search"> -->
+            <button class="button1" <a="" href="/?q=">Search </button>
+            <input style="float:right; margin:10px; width:150px; height:30px" type="text" name="q">
+		</form>
+		
+		
+	<!-- nav bar -->
+	<div>
+		<button class="dropdown-btn"><a href="/">Home</a>
+		</button>
+		
+		<button class="dropdown-btn"><a href="/usingthesite">Using This Site</a>
+		</button>		
+		
+		<button class="dropdown-btn">About
+			<i class="fa fa-caret-down"></i>
+		</button>
+			<div class="dropdown-container">
+              <a href="/historicalbackground">Historical Background</a>
+              <a href="/bibliography">Bibliography</a>
+              <a href="/credits">Credits</a>
+              <a href="/contact">Contact Us</a>
+			</div>
+			
+		<button class="dropdown-btn">Journeys
+			<i class="fa fa-caret-down"></i>
+		</button>		
+			<div class="dropdown-container">
+				<a href="/travelRoutes">Travel Routes</a>
+				<a href="/mapgallery">Map Gallery</a>
+				<a href="/overviewmap_traveler">Overview Maps</a>
+			</div>
+			
+		<button class="dropdown-btn">Explore
+			<i class="fa fa-caret-down"></i>
+		</button>
+			<div class="dropdown-container">
+			  <a href="/manuscripts"> Manuscripts </a>
+              <a href="/profiles"> People, Places, and Groups </a>
+			</div>
+			
+		<button class="dropdown-btn"><a href="/transcribe">Transcribe</a>
+		</button>		
+	</div>
+
+		
+  </ul>
+</div>
+</div>
+
+<div id="overlay">
+<span onclick="openSidebar()">&#9776;</span>
+</div>
+
+<script src="{{ STATIC_URL }}js/sidebar.js"></script>
+
+     
+</body>
+</html> 

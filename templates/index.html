@@ -1,35 +1,23 @@
 {% load staticfiles %}
 <!doctype html>
+
 <html class="no-js" lang="en">
   <head>
     {% include 'top-links.html' %}
-
     <title>Penn's Treaty | Welcome </title>
-
   </head>
 
   <body>
-    
-    {% include 'indexheader.html' %}
-
-<div id = "row1">
-<!--     Navigation Menu Below:  -->
-
-  {% include 'nav.html' %}
-
-</div>
-
+    {% include 'header.html' %}
 <div id = "row2">
   <div class = "row">
     <br />
     <h1> Beyond Penn's Treaty: Quaker and American Indian Relations</h1>
-    <p><font size="3">William Penn’s original intention to treat American Indians fairly in land “sharing” was soon overridden by the land hunger of Europeans. Different notions of land “use” and “ownership” became ever more critical as the two groups struggled to find ways to co-exist. Nevertheless, part of Penn’s vision lived on in the memory and policies of a community of Quakers who maintained—and continuously updated—a commitment to American Indians.</p>
-    <p><font size="3"><i>Beyond Penn's Treaty</i>: Quakers and American Indian Relations provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s. These documents, held in Quaker &amp; Special Collections at Haverford College and Friends Historical Library at Swarthmore College, are all from the Quaker perspective, and document their view of this unfolding relationship. </p>
-    <p><font size="3">This site allows users to search for people, organizations, and places within a variety of documents; view maps of travel routes and common locations; and transcribe documents. The transcribed text versions of these documents and the metadata spreadsheets are available for download and reuse.</p>
+    <p style="text-align:left;"><font size="3">William Penn’s original intention to treat American Indians fairly in land “sharing” was soon overridden by the land hunger of Europeans. Different notions of land “use” and “ownership” became ever more critical as the two groups struggled to find ways to co-exist. Nevertheless, part of Penn’s vision lived on in the memory and policies of a community of Quakers who maintained—and continuously updated—a commitment to American Indians.</p>
+    <p style="text-align:left;"><font size="3"><i>Beyond Penn's Treaty</i>: Quakers and American Indian Relations provides access to linked and annotated versions of Quaker diaries, letters, and meeting records which record contact with American Indians, particularly the Seneca, beginning in the 1740s. These documents, held in Quaker &amp; Special Collections at Haverford College and Friends Historical Library at Swarthmore College, are all from the Quaker perspective, and document their view of this unfolding relationship. </p>
+    <p style="text-align:left;"><font size="3">This site allows users to search for people, organizations, and places within a variety of documents; view maps of travel routes and common locations; and transcribe documents. The transcribed text versions of these documents and the metadata spreadsheets are available for download and reuse.</p>
     <br />
-  
    </div>
-
 </div>
 
 <div id = "row3">
@@ -38,18 +26,17 @@
 
     <div class = "large-6 medium-6 small-12 columns">  
       
-        <h3 class="text-left"> TRANSCRIPTIONS</h3>
+        <h3 class="text-left" style="color: #000000;"> TRANSCRIPTIONS</h3>
         <br>
         <p  class = "text-left">The first step of this project was to transcribe the handwritten documents into typed text. This allowed us to encode people, places, and organizations; to create the maps; and to trace the connections among the documents. There are still many documents related to Quaker and American Indian affairs in the late 18th to 19th century that are not transcribed. Help in the efforts to transcribe and add to the information available on this website. Click on the button below to go to the transcription portion of our website and start transcribing today!</p>
         <a id= "butt" href="/qi/collections/browse/" class="button medium radius">Start Transcribing!</a>
         <br />
     <br />
+   </div>
 
-  </div>
+  
     <div class = "large-6 medium-6 small-12 columns">
-      <div id="borderimg2" class = "show-for-medium-up">
-      
-               <h3 class="text-left"><a href="/travelRoutes">MAPS</a><h3>
+               <h3 class="text-left"><a href="/travelRoutes" style="font-family:'PT Serif', serif !important;">MAPS</a><h3>
                 <p class="text-left">Trace the journeys of various travelers, and see common places mentioned in the documents. </p>
               
         <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2">
@@ -58,16 +45,15 @@
           
         </ul>
     </div>
-  </div>
+	
+	
+	</div>
     <br />
-
   </div>
 </div>
  
-
+ 
  {% include 'footer.html' %}
-    
  {% include 'bottom-links.html' %}
-
   </body>
 </html>

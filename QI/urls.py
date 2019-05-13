@@ -1,10 +1,8 @@
-
 """QI URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
 Examples:
-19
 Function views
     1. Add an import:  from my_app import views
     2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
@@ -18,7 +16,6 @@ Including another URLconf
 from django.conf.urls import *
 from django.contrib import admin
 from django.contrib.admin.views.decorators import staff_member_required
-
 from . import views
 from django.urls import path,re_path,reverse,include
 
@@ -29,10 +26,12 @@ urlpatterns = [
     path('', views.Home.as_view(),name='home'),
     path('profiles', views.profiles, name="Person Profiles"),
     path('about', views.about, name="About Page"),
+	path('base_explicit/', views.base_explicit, name='base explicit'), 
+	path('base/', views.base, name='base non explicit'), 
     path('cornp1', views.cornp1, name="Henry Cornplanter"),
     path('places', views.places, name="Places page"),
     path('organizations', views.organizations, name="Organizations page"),
-    path('manuscripts/', views.manuscripts,name="Manuscripts"),
+    path('manuscripts/', views.manuscripts, name="Manuscripts"),
     re_path(r'^page/(?P<id>\S+_[0-9]{3})', views.pageinfo, name="page"),
     re_path(r'^pageinfo/(?P<id>\S+_[0-9]{3})', views.newpageinfo, name="pageinfo"),
     re_path(r'^pagetranscription/(?P<id>\S+_[0-9]{3})', views.pagetranscription, name="pagetranscription"),
@@ -58,18 +57,17 @@ urlpatterns = [
     re_path(r'^manuscriptinfo/(?P<id>\S+)/', views.pagejsoninfo, name="pagejsoninfo"),
     re_path(r'^outputPagePT/(?P<id>\S+)/', views.outputPagePT, name="outputPagePT"),
     re_path(r'^outputManuPT/(?P<id>\S+)/', views.outputManuPT, name="outputManuPT"),
+    re_path(r'^outputPagePDF/(?P<id>\S+)/', views.outputPagePDF, name="outputPagePDF"),
     path('outputAll', views.outputAll, name="outputAll"),
-    path('search/', views.search, name="search"), 
+    path('search/',include('haystack.urls')), 
     path('transcribe', views.transcribe, name="Transcribe"),
     path('transcribepage/<id>', views.transcribe_info, name="transcribepage"),
     path('admin/review_transcriptions/',staff_member_required(views.ReviewTranscriptionList.as_view()),name='admin_review_transcription_lists'),
     path('admin/review_transcriptions/<int:pk>/', views.review_transcription,name='admin_review_transcriptions'),
     path('review_transcriptions', views.testing, name="testing"),
-    re_path(r'^manuscripts/(?P<id>\S+).pdf/',views.pdf, name="pdf"),
-    path('captcha/',include('captcha.urls'))
+    path('inText_search', views.inText_search, name='searchInText'),
 ]
 
 
 admin.site.site_header = 'Beyond Penns Treaty'
 admin.site.index_title = 'Beyond Penns Treaty Administration'
-

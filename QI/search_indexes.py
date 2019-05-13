@@ -1,10 +1,7 @@
 import datetime
 from haystack import indexes
 from QI.models import Person, Place, Org, Page, Manuscript
-from haystack.generic_views import FacetedSearchView as BaseFacetedSearchView
-from haystack.query import SearchQuerySet
 
-SearchQuerySet().filter(content='foo').models(Page)
 
 class PersonIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True) # I think you use this for all indexes?
@@ -97,4 +94,3 @@ class ManuscriptIndex(indexes.SearchIndex, indexes.Indexable):
 
     def get_type(self):
         return 'Manuscript'
-

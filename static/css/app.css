@@ -1,8 +1,3 @@
-div.tei-page{
-    font-family:"Open Sans" !important;
-    font-weight: 300 !important;
-}
-
 .buttons-pdf{
     background-color: #e3e8ef;
     border: none;
@@ -204,7 +199,7 @@ body {
   background: #fff;
   color: #222;
   cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -2544,18 +2539,18 @@ button, .button {
   display: inline-block;
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
-  background-color: #008CBA;
-  border-color: #007095;
-  color: #FFFFFF;
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+  color: #222222;
   transition: background-color 300ms ease-out;
 }
 /* line 163, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #007095;
+  background-color: #bcbcbc;
 }
 /* line 169, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  color: #FFFFFF;
+  color: #222222;
 }
 /* line 225, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.secondary, .button.secondary {
@@ -4420,7 +4415,7 @@ select.radius {
 /* line 359, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 select:focus {
   background-color: #f3f3f3;
-  border-color: #999999;
+  border-color: #222222;
 }
 /* line 364, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 select:disabled {
@@ -5580,7 +5575,7 @@ kbd {
 }
 /* line 332, ../bower_components/foundation/scss/foundation/components/_orbit.scss */
 .orbit-bullets li.active {
-  background: #999999;
+  background: #222222;
 }
 /* line 336, ../bower_components/foundation/scss/foundation/components/_orbit.scss */
 .orbit-bullets li:last-child {
@@ -5657,7 +5652,7 @@ ul.pagination li a, ul.pagination li button {
   border-radius: 3px;
   transition: background-color 300ms ease-out;
   background: none;
-  color: #999999;
+  color: #222222;
   display: block;
   font-size: 1em;
   font-weight: normal;
@@ -5673,7 +5668,7 @@ ul.pagination li button:focus {
 /* line 51, ../bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.unavailable a, ul.pagination li.unavailable button {
   cursor: default;
-  color: #999999;
+  color: #222222;
   pointer-events: none;
 }
 /* line 56, ../bower_components/foundation/scss/foundation/components/_pagination.scss */
@@ -6433,7 +6428,7 @@ ul.pagination li {
 .sub-nav dt,
 .sub-nav dd,
 .sub-nav li {
-  color: #999999;
+  color: #222222;
   float: left;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.875rem;
@@ -6445,7 +6440,7 @@ ul.pagination li {
 .sub-nav dt a,
 .sub-nav dd a,
 .sub-nav li a {
-  color: #999999;
+  color: #222222;
   padding: 0.1875rem 1rem;
   text-decoration: none;
 }
@@ -8004,17 +7999,19 @@ td {
   margin: 0;
   padding: 0;
 }
-
 /* Default Link Styles */
 /* line 220, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #008CBA;
+  color: #000000;
   line-height: inherit;
   text-decoration: none;
-}
+  font-family: "Open Sans";
+  }
+  
+  
 /* line 225, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #0078a0;
+  color: #222222;
 }
 /* line 233, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -8057,7 +8054,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* line 265, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  color: #6f6f6f;
+  color: #222222;
   font-size: 60%;
   line-height: 0;
 }
@@ -8115,6 +8112,7 @@ hr {
 em,
 i {
   font-style: italic;
+  font-weight: normal;
   line-height: inherit;
 }
 
@@ -8123,6 +8121,7 @@ strong,
 b {
   font-weight: bold;
   line-height: inherit;
+  font-family: 'PT Serif', serif;
 }
 
 /* line 302, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -8148,7 +8147,7 @@ code {
 ul,
 ol,
 dl {
-  font-family: inherit;
+  font-family: 'PT Serif', serif;
   font-size: 1rem;
   line-height: 1.6;
   list-style-position: outside;
@@ -8312,12 +8311,12 @@ blockquote p {
 
   /* line 462, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h1 {
-    font-size: 2.75rem;
+    font-size: 1.9rem;
   }
 
   /* line 463, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h2 {
-    font-size: 2.3125rem;
+    font-size: 1.9rem;
   }
 
   /* line 464, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -9181,7 +9180,7 @@ ul.off-canvas-list li a:active {
   background: #444;
   border-bottom: none;
   border-top: 1px solid #5e5e5e;
-  color: #999999;
+  color: #222222;
   font-weight: bold;
   padding: 0.3rem 0.9375rem;
   text-transform: uppercase;
@@ -9239,7 +9238,7 @@ ul.off-canvas-list li a:active {
   background: #444;
   border-bottom: none;
   border-top: 1px solid #5e5e5e;
-  color: #999999;
+  color: #222222;
   font-weight: bold;
   padding: 0.3rem 0.9375rem;
   text-transform: uppercase;
@@ -9859,8 +9858,7 @@ header {
   left: 30px;
   right: 0px;
   color: white;
-  /* pretty color of blue#7082A6 */
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
   font-size: 3rem;
   margin-bottom: 0px;
@@ -9879,7 +9877,7 @@ button, .button {
   margin: 0;
   padding: 10px;
   border-style: none;
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
 }
 
@@ -9908,9 +9906,9 @@ button, .button:visited {
 
 /* line 72, ../scss/_custom.scss */
 .f-dropdown li a {
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
-  color: #6B737D;
+  color: #222222;
   background-color: transparent;
   margin: 0;
 }
@@ -9922,7 +9920,7 @@ button, .button:visited {
 
 /* line 84, ../scss/_custom.scss */
 .top-bar-section ul li > a {
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
 }
 
@@ -9942,31 +9940,31 @@ button, .button:visited {
   border-style: solid;
   border-width: 5px;
   margin: 0;
-  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+/*  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
-  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch; */
 }
 
 /* line 111, ../scss/_custom.scss */
 #borderimg1 {
   border-style: solid;
   border-width: 10px;
-  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+/*  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
-  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch; */
 }
 
 /* line 120, ../scss/_custom.scss */
 #borderimg2 {
   border-style: solid;
   padding-left: 25px;
-  border-width: 0 0 0 20px;
-  -moz-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+  border-width: 0 0 0 3px;
+/*  -moz-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
   -webkit-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
   -o-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
-  border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch;
+  border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch; */
 }
 
 /* line 130, ../scss/_custom.scss */
@@ -9974,44 +9972,45 @@ button, .button:visited {
   border-style: solid;
   padding-top: 20px;
   border-width: 17px 0 0 0;
-  -moz-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
+/*  -moz-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
   -webkit-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
   -o-border-image: url("../img/bluebox.png") 53 59 61 47 stretch;
-  border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch;
+  border-image: url("../img/bluebox.png") 53 59 61 47 fill stretch; */
 }
 
 
 #borderimg4 {
   border-style: solid;
   border-width: 10px;
-  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
+/*  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
   -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
-  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch; */
 }
 
 /* line 140, ../scss/_custom.scss */
 #row1 {
-  background-color: #99a5b3;
+  background-color: #d2d2d2d2;
 }
 
 /* line 144, ../scss/_custom.scss */
 #row2 {
-  background-color: #99a5b3;
+  background-color: #d2d2d2d2;
 }
 
 /* line 150, ../scss/_custom.scss */
 #row2 h1 {
-  font-family: "Alegreya Sans SC";
-  font-weight: 400;
+  font-family: 'PT Serif', serif;
+  font-weight: normal;
   color: black;
   text-align: center;
+  margin-left:-20px;
 }
 /* line 156, ../scss/_custom.scss */
 #row2 p {
   color: black;
   font-size:0.8rem;
-  text-align: center;  
+
 }
 
 
@@ -10021,21 +10020,22 @@ button, .button:visited {
 }
 /* line 167, ../scss/_custom.scss */
 #row3 h3 {
-  font-family: "Alegreya Sans SC";
-  color: #6B737D;
-  font-size: 2rem;
+  font-family: 'PT Serif', serif;
+  color: #222222;
+  font-size: 1.6rem;
   
 }
 
 /* line 174, ../scss/_custom.scss */
 #row3 button, #row3 .button {
-  background-color: #6B737D;
+  background-color: #222222;
+  color: white;
 }
 
 #row3 p {
   color: black;
   font-size:1rem;
-  text-align: center;  
+  text-align: left;  
 }
 
 
@@ -10045,9 +10045,9 @@ button, .button:visited {
 
 #row4 h3 {
   font-family: "Special Elite";
-  color: #6B737D;
+  color: #222222;
   font-size: 2rem;
-text-align: center;
+  text-align: center;
 }
 
 
@@ -10059,7 +10059,7 @@ text-align: center;
 
 
 #row4 button, #row4 .button {
-  background-color: #6B737D;
+  background-color: #222222;
 }
 
 
@@ -10081,8 +10081,8 @@ text-align: center;
 
 /* line 190, ../scss/_custom.scss */
 #about2 h2 {
-  font-family: "Alegreya Sans SC";
-  font-weight: 400;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
   color: #02326B;
 }
 /* line 196, ../scss/_custom.scss */
@@ -10130,7 +10130,7 @@ text-align: center;
 }
 
 .canvas-meta p:hover {
-  background-color:#99a5b3;
+  background-color:#d2d2d2d2;
   cursor:pointer;
 }
 
@@ -10154,7 +10154,7 @@ text-align: center;
 }
 
 .canvas-img p:hover {
-  background-color: #99a5b3;
+  background-color: #d2d2d2d2;
   cursor:pointer;
 }
 
@@ -10296,11 +10296,11 @@ i.fa.fa-times:hover {
 
 /* line 204, ../scss/_custom.scss */
 #about3 {
-  background-color: #99a5b3;
+  background-color: #d2d2d2d2;
 }
 /* line 207, ../scss/_custom.scss */
 #about3 h2 {
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
   color: #fff;
 }
@@ -10313,12 +10313,12 @@ i.fa.fa-times:hover {
 
 /* line 221, ../scss/_custom.scss */
 #trans1, #trans2 {
-  background-color: #99a5b3;
+  background-color: #d2d2d2d2;
 }
 
 /* line 226, ../scss/_custom.scss */
 #trans2 h2 {
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
   color: #000;
 }
@@ -10333,19 +10333,23 @@ i.fa.fa-times:hover {
 #profiles1 ul.tabs {
   padding-top: 80px;
   padding-left: 10%;
-  background-color: #99a5b3;
+  background-color: #d2d2d2;
 }
 /* line 270, ../scss/_custom.scss */
 #profiles1 ul.tabs li.tab-title.active a {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
 }
 /* line 275, ../scss/_custom.scss */
 #profiles1 ul.tabs li.tab-title a {
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
   color: #fff;
-  background-color: #6B737D;
+  background-color: #222222;
+  border-style: solid;
+  border-color: #222222;
+  border-bottom-color: transparent;
+  border-width: 1px;
   margin-left: 13px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -10355,33 +10359,35 @@ i.fa.fa-times:hover {
 .footer {
   padding-top: 30px;
   text-align: center;
-  font-family: "Alegreya Sans SC";
+  font-family: 'PT Serif', serif;
   font-weight: 400;
-  color: #fff;
-  background-color: #D9D2CA;
+  color: #222222;
+  background-color: #d2d2d2;
 }
 /* line 248, ../scss/_custom.scss */
 .footer li a {
-  color: #fff;
+  color: #222222;
 }
 /* line 252, ../scss/_custom.scss */
 .footer a, .footer p {
-  color: #99a5b3;
-  font-family: "Alegreya Sans SC";
+  color: #222222;
+  font-family: 'PT Serif', serif;
   font-weight: 400;
 }
 
 
 #storymapgrid {
+	display: flex;
 	width : 100%;
+	max-width: 100%;
 	max-width : 2000px;
-	vertical-align: middle;
-	text-align: center;
-	margin-right:0px;
-	margin-left:0px;
-/*padding-left: 7%;*/
-        align-items: center;
-        position: relative;
+	align-items: center;
+	align-content: stretch;
+	text-align: left;
+	align-items: center;
+	align-content: space-around;
+	padding-left: 4%;
+
 }
 
 
@@ -10389,45 +10395,53 @@ i.fa.fa-times:hover {
 #SMListitem {
 	width: 300px;
 	height: 380px;
-	padding: 4px;
-	/*border: 1px solid #454442;*/
+	padding: 10px;
+	max-width: 100%;
+	border: 1px solid #222222;
 	border-radius: 0px;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
-	margin-left:50px;
-/* originally left margin at 10 but having trouble centering container*/
-	margin-bottom:10px;
-	margin-right:5px;
+	margin-bottom:20px;
+	margin-left: 20px;
 	background-color:#F0F8FF;
-        border-style: solid;
-        border-width: 10px;
-        
-
-  -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
-  -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
-  -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch;
-  border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch;
+    border-style: solid;
+    border-width: 1px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+ /* -moz-border-image: url("../img/whitebox.png") 50 49 42 33 stretch; */
+ /* -webkit-border-image: url("../img/whitebox.png") 50 49 42 33 stretch; */
+ /* -o-border-image: url("../img/whitebox.png") 50 49 42 33 stretch; */
+ /* border-image: url("../img/whitebox.png") 50 49 42 33 fill stretch; */
 }
 #SMListitem:hover {
-	border: 3px solid #000000;
+	border: 3px solid #222222;
 }
 
 #SMListitem img {
+	display: flex;
+	align-items: center;
+	align-content: space-around;
 	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
 
 #SMLink  {
-	font-family: "Alegreya Sans SC";
+	font-family: "Open Serif";
 	font-weight: 400;
 	color: #040402;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+	
 }
 
-#storymapgird a {
-	list-style-type: none;
+#storymapgrid a {
+	list-style-type: none; 
 	text-align: center;
-
+	display: -webkit-flex;
+    display: flex;
 }
 
 .my-grid li {
@@ -10443,31 +10457,55 @@ i.fa.fa-times:hover {
 
 }
 
-.th {
-  @include thumb(
-     $border-width: 2px,
-     $box-shadow: 0 0 0 1px rgba(#000, .2),
-     $box-shadow-hover: 0 0 6px 1px rgba(#ccc. 0.5)
-   );
+
 #map {
   position: relative;
 }
 
-#container {
-  max-width: 1600px;
-  width:100%;
-  display: center;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  align-items: center;
-  text-align:center;
+
+#storymapcontainer {
+	display: flex;
+	max-width: 1600px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align:center;
+
 }
 
-.your-class-name {
-  @include block-grid(
-    $per-row: 3,
-    $spacing: $block-grid-default-spacing,
-    $base-style: true
-    );
+
+element.style {
+    display: inline-block;
+    flex: 50%;
 }
+@media (min-width: 992px)
+.col-md-6 {
+    width: 50%;
+}
+@media (min-width: 992px)
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+@media (min-width: 768px)
+.col-sm-12 {
+    width: 100%;
+}
+@media (min-width: 768px)
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+    float: left;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, 
+.col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, 
+.col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, 
+.col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, 
+.col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, 
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, 
+.col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, 
+.col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, 
+.col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, 
+.col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	padding-bottom: 32px;
+}
+
+

@@ -26,10 +26,6 @@
 
       {% include 'header.html' %}
 
-     <div id = "row1">
-    	{% include 'nav.html' %}
-    </div>
-
     <div id = "trans2">
  <div class = "row">
       <br />
@@ -82,10 +78,11 @@
 {% else %}
                           <strong> There are no manuscripts available at this time in the db. </strong>
                {% endif %}
-{% include 'footer.html' %}
-{% include 'bottom-links.html' %}
+</div>
 <script src="{% static "js/api.js" %}"></script>
  <script src="{% static "js/imgtrans.js" %}"></script>
  <!--<script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script> -->
-  </body>
+{% include 'footer.html' %}
+{% include 'bottom-links.html' %}
+ </body>
 </html>

@@ -7,33 +7,25 @@ from django.template import RequestContext, loader, Context
 from django.template.loader import get_template
 from django.shortcuts import render, render_to_response, redirect
 from django.core import management, serializers
-from django.core.paginator import Paginator
-from django.core.exceptions import ValidationError
-from django.utils.translation import gettext_lazy as _
-
-
 from reportlab.pdfgen import canvas
 from io import BytesIO
 from .models import Person, Place, Org, Relationship, Page, Manuscript, PendingTranscription
 from html.parser import HTMLParser
 import zipfile as z
 
+from io import StringIO as cs
 
 from tempfile import *
-from .forms import ContactForm, ImportXMLForm, TranscribeForm, CaptchaForm
+from .forms import ContactForm, ImportXMLForm, TranscribeForm
 from django.core.mail import EmailMessage, send_mail
 from django.views.generic import ListView, DetailView
-from .xml_import import import_xml_from_file, if_already_exists
+from .xml_import import import_xml_from_file
 
 from django.urls import reverse
-
-from haystack.query import SearchQuerySet
-from haystack.inputs import AutoQuery
 
 import difflib
 import os
 import cgi
-
 
 def handler404(request):
     response = render_to_response('404.html', {}, context_instance=RequestContext(request))
@@ -79,24 +71,8 @@ def historicalbackground (request):
 
 def manuscripts(request):
     textlist = Manuscript.objects.filter(transcribed=True).order_by('title')
-    if request.POST:
-        form = CaptchaForm(request.POST)
-        print(dict(request.POST))
-        if form.is_valid():
-            human = True
-            id=request.POST['manuscript_ID']
-            url=id+'.pdf'
-            return redirect(url)
-
-        else:
-            raise ValidationError( _('Opps, wrong captcha key'))
-    else:
-        form = CaptchaForm()
-    return render(request, 'manuscripts.html', {'textlist':textlist,"form":form})
-
-
-
-
+    pagelist = Page.objects.order_by('Manuscript_id')
+    return render(request, 'manuscripts.html', {'textlist':textlist,'pagelist':pagelist})
 def transcribe(request):
     textlist = Manuscript.objects.filter(transcribed=False).order_by('title')
     pagelist = Page.objects.order_by('Manuscript_id')
@@ -107,6 +83,12 @@ def profiles(request):
     org_list = Org.objects.order_by('organization_name')
     return render(request, 'profiles.html', {'persons': person_list, 'places': place_list, 'orgs': org_list})
 
+def base(request): 
+	return render(request, 'base.html')
+	
+def base_explicit(request): 
+	return render(request, 'base_explicit.html')
+	
 def cornp1(request):
     return render(request, 'cornp1.html')
 
@@ -117,7 +99,13 @@ def organizations(request):
     return render(request, 'organizations.html')
 
 def testsearch(request):
-    return render(request, 'testsearch/testsearch.html')
+    return render(request, 'testsearch.html')
+
+def testsearch2(request):
+    return render(request, 'testsearch2.html')
+
+def search(request):
+    return render(request, 'search/search.html')
 
 def overviewmap_traveler(request):
     return render(request, 'overviewmap_traveler.html')
@@ -156,6 +144,38 @@ def credits(request):
 def mapgallery(request):
     return render(request, 'mapgallery.html')
 
+def outputPagePDF(request,id):
+    PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
+    FullText = PageToOutput.fulltext #get the text that you want to put in the PDF
+    # Create the HttpResponse object with the appropriate PDF headers.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="%s.pdf"'% PageToOutput.id_tei
+    buffer = BytesIO()
+    # Create the PDF object, using the BytesIO object as its "file."
+    p = canvas.Canvas(buffer)
+    # Draw things on the PDF. Here's where the PDF generation happens.
+    # See the ReportLab documentation for the full list of functionality.
+    p.drawString(30, 750, "Hello World")
+    # Close the PDF object cleanly.
+    p.showPage()
+    p.save()
+    # Get the value of the BytesIO buffer and write it to the response.
+    pdf = buffer.getvalue()
+    buffer.close()
+    response.write(pdf)
+    return response
+
+class MLStripper(HTMLParser): #This Class is used in the following view, outputPagePT, to get txt file of a page
+    def __init__(self):
+        super().__init__()
+        self.reset()
+        self.fed = []
+
+    def handle_data(self, d):
+        self.fed.append(d)
+
+    def get_data(self):
+        return ''.join(self.fed)
 
 def outputPagePT(request,id):
     PageToOutput = Page.objects.get(id_tei = id) #get the Page that you want to output!
@@ -217,6 +237,11 @@ def manu_detail(request,id):
 
     return render(request,'manu_nav.html', {'manu':manu,'allpages':allpages, 'search_term':search_term})
 
+"""
+    if 'search' in request.GET:
+       search_term = request.GET['search']
+       page=page.filter(fulltext__icontains=search_term)
+"""
 
 
 def person_detail(request,id):
@@ -360,7 +385,7 @@ def pageinfo(request,id):
     pagenumber = int(Page_id)
     
     Manuscript_key = current_page.Manuscript_id
-    possible_pages = Page.objects.filter(Manuscript_id = Manuscript_key).order_by("id_tei")
+    possible_pages = Page.objects.filter(Manuscript_id = Manuscript_key)
     pages_list=[]
     for index, page in enumerate(possible_pages):
         pages_list.append(page)
@@ -368,7 +393,6 @@ def pageinfo(request,id):
         if page == current_page:
                 print('current=', index)
                 current = int(index)
-    
     previous = pages_list[current-1]
     try:
         next_one = pages_list[current+1]
@@ -535,16 +559,14 @@ def new_xml_import(request):
     if request.method == 'POST':
         form = ImportXMLForm(request.POST, request.FILES)
         if form.is_valid():
-            exist = if_already_exists(request.FILES['xml_file'])
             import_xml_from_file(request.FILES['xml_file'])
-        context = {'success': True, 'form': ImportXMLForm(),'exist':exist}
+        context = {'success': True, 'form': ImportXMLForm()}
         return render(request, '../templates/admin/XMLimport/index.html', context)
     else:
         form = ImportXMLForm()
     return render(request, '../templates/admin/XMLimport/index.html', {'form': form})
 
 
-"""
 def XMLimport(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -605,7 +627,7 @@ def XMLimport(request):
         return render(request, '../templates/admin/XMLimport/index.html',{"success" : True})
     else:
         return render(request, '../templates/admin/XMLimport/index.html')
-"""
+
 
 def review_transcription(request, pk):
     obj = PendingTranscription.objects.get(pk=pk)
@@ -634,7 +656,8 @@ def review_transcription(request, pk):
                diff_lines[i] = '<span class="diff-first">' + line[2:] + '</span>'
             elif line.startswith('+ '):
                diff_lines[i] = '<span class="diff-second">' + line[2:] + '</span>'
-            elif line.startswith('? '):                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
+            elif line.startswith('? '):
+                diff_lines[i] = '<span class="diff-neither">' + line[2:] + '</span>'
         context = {
             'object': obj,
             'diff_table': '<br>'.join(diff_lines)
@@ -652,39 +675,8 @@ class ReviewTranscriptionList(ListView):
     model = PendingTranscription
     template_name = 'review_transcription_list.html'
 
-def pdf(request,id):
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'filename="%s.pdf"' % id
-    management.call_command('pdf_builder',id)
-    with open('/tmp/%s.pdf' % id,'rb') as fh:
-        response.write(fh.read())
-    return response
 
-def search(request):
-    if request.method == "GET":
-        query = request.GET.get("q")
-        sqs = SearchQuerySet().filter(content=AutoQuery(request.GET['q'])).models(Page, Manuscript)
-        manuscript_results=[]
-        page_results=[]
-        all_page_results=[]
-        for result in sqs:
-            if hasattr(result.object, "title"):
-                manuscript_results.append(result)
-            else:
-                page_results.append(result)
-                paginator = Paginator(page_results,15)
-                page = request.GET.get('page')
-                all_page_results = paginator.get_page(page)                                   
-    return render(request, "search/search.html", {"query":query, "manuscript_results": manuscript_results, "all_page_results": all_page_results})
+def inText_search(request):
+    query = request.GET.get("q")
+    return render(request, "search/inText_search.html")
 
-def pdf_captcha(request,id):
-    if request.POST:
-        form = CaptchaForm(request.POST)
-
-        if form.is_valid():
-            human = True
-            return HttpResponseRedirect('//')
-
-    else:
-        form = CaptchaForm()
-    return render_to_response('captcha.html',locals())
