@@ -18,9 +18,12 @@ from .settings_secret import *
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/html/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+STATICFILES_DIRS = [
+  #  os.path.join(BASE_DIR, ''),
+    os.path.join(BASE_DIR, 'static'),
+]      
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -38,7 +41,8 @@ INSTALLED_APPS = (
    'xml_tool',
    'haystack',
    'QI',
-)
+   'captcha'
+   )
 
 MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
@@ -100,5 +104,14 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-HAYSTACK_SEARCH_RESULTS_PER_PAGE = 100
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
 
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "media/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_CONFIGS = {
+ "default": {
+   "removePlugins": "stylesheetparser",
+   'allowedContent' : True,
+  }
+ }

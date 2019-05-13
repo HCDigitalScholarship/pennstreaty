@@ -1,4 +1,7 @@
-
+div.tei-page{
+    font-family:"Open Sans" !important;
+    font-weight: 300 !important;
+}
 
 .buttons-pdf{
     background-color: #e3e8ef;

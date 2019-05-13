@@ -1,0 +1,16 @@
+#id_models {
+	list-style-type: none;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.quoted-segment {
+  margin-left: 20px;
+  background-color: #e3e5e8
+}
+
+#results {
+  font-size: 1.2em;
+}

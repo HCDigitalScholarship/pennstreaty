@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -46,17 +45,17 @@
           <!--    {{ form.as_p }}-->
 
 
-      <p><label for="id_q">Search:</label>
+      <p><label for="id_q" style="text-align:left">Search:</label>
         <input id="id_q" name="q" type="search" placeholder="search"></p>
 
 
 
-      <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
+     <!-- <div class="col-sm-2">  <label for="id_models_0"><b>Narrow Your Search:</b></label></div>
       <div class="col-sm-2">  <label for="id_models_3"><input id="id_models_3" name="models" type="checkbox" value="QI.People"> People</label> </div>
       <div class="col-sm-2">  <label for="id_models_4"><input id="id_models_4" name="models" type="checkbox" value="QI.Places"> Places</label> </div>
       <div class="col-sm-2">  <label for="id_models_1"><input id="id_models_1" name="models" type="checkbox" value="QI.Groups"> Groups</label> </div>
       <div class="col-sm-2">  <label for="id_models_0"><input id="id_models_0" name="models" type="checkbox" value="QI.Manuscripts"> Manuscripts</label> </div>
-      <div class="col-sm-2">  <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.Pages"> Pages of Manuscripts</label> </div>
+      <div class="col-sm-2">  <label for="id_models_2"><input id="id_models_2" name="models" type="checkbox" value="QI.Pages"> Pages of Manuscripts</label> </div>-->
 
 
               <!--<tr>-->
@@ -78,12 +77,9 @@
 <!-- begin faceting feature -->
 
 <!-- note about the Faceted Search code:
-
 the 'if statements' are hard-coded in based on what things are being faceted by.
 if what is being faceted by is ever changed, these statements would have to change.
-
 the categories are also hard-coded in but i think that's just how it has to be w/ faceting!
-
 -->
 
 
@@ -99,6 +95,12 @@ the categories are also hard-coded in but i think that's just how it has to be w
 {% if not 'models=' in request.get_full_path or 'models=QI.People' in request.get_full_path  %}
 
 <!--BEGIN PERSON TAB-->
+
+{% with page.object_list as FR %}
+{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
+{% for ct in GROUP %}
+{% if ct.grouper == 'People' and ct.list|length > 0 %}
+
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
@@ -112,6 +114,9 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
      <!-- Begin faceting for person -->
 
+    {% if facets.fields.firstname %}
+{% if facets.fields.firstname.0.1 > 0 or facets.fields.firstname.1.1 > 0 or facets.fields.firstname.2.1 > 0 or facets.fields.firstname.3.1 > 0 or facets.fields.firstname.4.1 > 0 %}
+
 <div class="col-sm-6">
         <div>
             <dl>
@@ -120,9 +125,9 @@ the categories are also hard-coded in but i think that's just how it has to be w
                     {# Provide only the top 5 authors #}
                     {% for firstname in facets.fields.firstname %}
 
-			<!--{% if not firstname.1 == 0 %} -->
+			{% if firstname.1 > 0 %} 
                         <dd><a href="{{ request.get_full_path }}&amp;selected_facets=firstname_exact:{{ firstname.0|urlencode }}">{{ firstname.0 }}</a> ({{ firstname.1 }})</dd>
-			<!--{% endif %} -->
+			{% endif %} 
 
                     {% endfor %}
 
@@ -132,6 +137,11 @@ the categories are also hard-coded in but i think that's just how it has to be w
             </dl>
         </div>
       </div>
+{% endif %} {% endif %}
+
+
+{% if facets.fields.lastname %}
+{% if facets.fields.lastname.0.1 > 0 or facets.fields.lastname.1.1 > 0 or facets.fields.lastname.2.1 > 0 or facets.fields.lastname.3.1 > 0 or facets.fields.lastname.4.1 > 0 %}
 
 <div class="col-sm-6">
 
@@ -141,8 +151,10 @@ the categories are also hard-coded in but i think that's just how it has to be w
                     <dt>Last Name</dt>
                     {# Provide only the top 5 authors #}
                     {% for lastname in facets.fields.lastname %}
+			{% if lastname.1 > 0 %}
                         <dd><a href="{{ request.get_full_path }}&amp;selected_facets=lastname_exact:{{ lastname.0|urlencode }}">{{ lastname.0 }}</a> ({{ lastname.1 }})</dd>
-                    {% endfor %}
+                {% endif %}    
+		{% endfor %}
                 {% else %}
                     <p></p>
                 {% endif %}
@@ -150,6 +162,10 @@ the categories are also hard-coded in but i think that's just how it has to be w
         </div>
 
 </div>
+{% endif %} {% endif %}
+
+{% if facets.fields.birthdate %}
+{% if facets.fields.birthdate.0.1 > 0 or facets.fields.birthdate.1.1 > 0 or facets.fields.birthdate.2.1 > 0 or facets.fields.birthdate.3.1 > 0 or facets.fields.birthdate.4.1 > 0 %}
 
 <div class="col-sm-6">
         <div>
@@ -158,14 +174,23 @@ the categories are also hard-coded in but i think that's just how it has to be w
                     <dt>Birth Date</dt>
                     {# Provide only the top 5 authors #}
                     {% for birthdate in facets.fields.birthdate %}
-                        <dd><a href="{{ request.get_full_path }}&amp;selected_facets=birthdate_exact:{{ birthdate.0|urlencode }}">{{ birthdate.0 }}</a> ({{ birthdate.1 }})</dd>
-                    {% endfor %}
+	                        
+			{% if birthdate.1 > 0 %}
+<dd><a href="{{ request.get_full_path }}&amp;selected_facets=birthdate_exact:{{ birthdate.0|urlencode }}">{{ birthdate.0 }}</a> ({{ birthdate.1 }})</dd>
+                {% endif %}    
+		{% endfor %}
                 {% else %}
                     <p></p>
                 {% endif %}
             </dl>
         </div>
       </div>
+
+{% endif %} {% endif %}
+
+
+{% if facets.fields.deathdate %}
+{% if facets.fields.deathdate.0.1 > 0 or facets.fields.deathdate.1.1 > 0 or facets.fields.deathdate.2.1 > 0 or facets.fields.deathdate.3.1 > 0 or facets.fields.deathdate.4.1 > 0 %}
 
       <div class="col-sm-6">
               <div>
@@ -174,14 +199,18 @@ the categories are also hard-coded in but i think that's just how it has to be w
                           <dt>Death Date</dt>
                           {# Provide only the top 5 authors #}
                           {% for deathdate in facets.fields.deathdate %}
-                              <dd><a href="{{ request.get_full_path }}&amp;selected_facets=deathdate_exact:{{ deathdate.0|urlencode }}">{{ deathdate.0 }}</a> ({{ deathdate.1 }})</dd>
-                          {% endfor %}
+                        	{% if deathdate.1 > 0 %}   
+			   <dd><a href="{{ request.get_full_path }}&amp;selected_facets=deathdate_exact:{{ deathdate.0|urlencode }}">{{ deathdate.0 }}</a> ({{ deathdate.1 }})</dd>
+                        {% endif %}  
+			{% endfor %}
                       {% else %}
                           <p></p>
                       {% endif %}
                   </dl>
               </div>
             </div>
+
+{% endif %} {% endif %}
 
         <!-- End faceting for person -->
 
@@ -190,14 +219,24 @@ the categories are also hard-coded in but i think that's just how it has to be w
   </div>
 
   <!--END PERSON TAB-->
-  {% endif %}
+{% endif %}
+  {% endfor %}
+  {% endwith %} 
+
+ {% endif %}
 {% endif %}
 
 
 
 {% if not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
 {% if not 'models=' in request.get_full_path or 'models=QI.Places' in request.get_full_path  %}
-  <!--BEGIN PLACE TAB-->
+  
+{% with page.object_list as FR %}
+{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
+{% for ct in GROUP %}
+{% if ct.grouper == 'Places' and ct.list|length > 0 %}
+
+<!--BEGIN PLACE TAB-->
 
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -212,6 +251,10 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
 <!-- begin faceting for place -->
 
+{% if facets.fields.county %}
+{% if facets.fields.county.0.1 > 0 or facets.fields.county.1.1 > 0 or facets.fields.county.2.1 > 0 or facets.fields.county.3.1 > 0 or facets.fields.county.4.1 > 0 %}
+
+
         <div class="col-sm-6">
                 <div>
                     <dl>
@@ -219,14 +262,21 @@ the categories are also hard-coded in but i think that's just how it has to be w
                             <dt>County</dt>
                             {# Provide only the top 5 authors #}
                             {% for county in facets.fields.county %}
+				{% if county.1 > 0 %}
                                 <dd><a href="{{ request.get_full_path }}&amp;selected_facets=county_exact:{{ county.0|urlencode }}">{{ county.0 }}</a> ({{ county.1 }})</dd>
-                            {% endfor %}
+                        {% endif %}    
+			{% endfor %}
                         {% else %}
                             <p></p>
                         {% endif %}
                     </dl>
                 </div>
               </div>
+
+{% endif %} {% endif %}
+
+{% if facets.fields.state %}
+{% if facets.fields.state.0.1 > 0 or facets.fields.state.1.1 > 0 or facets.fields.state.2.1 > 0 or facets.fields.state.3.1 > 0 or facets.fields.state.4.1 > 0 %}
 
               <div class="col-sm-6">
                       <div>
@@ -235,14 +285,17 @@ the categories are also hard-coded in but i think that's just how it has to be w
                                   <dt>State</dt>
                                   {# Provide only the top 5 authors #}
                                   {% for state in facets.fields.state %}
-                                      <dd><a href="{{ request.get_full_path }}&amp;selected_facets=state_exact:{{ state.0|urlencode }}">{{ state.0 }}</a> ({{ state.1 }})</dd>
-                                  {% endfor %}
+        			{% if state.1 > 0 %}                           
+	   <dd><a href="{{ request.get_full_path }}&amp;selected_facets=state_exact:{{ state.0|urlencode }}">{{ state.0 }}</a> ({{ state.1 }})</dd>
+                                {% endif %}  {% endfor %}
                               {% else %}
                                   <p></p>
                               {% endif %}
                           </dl>
                       </div>
                     </div>
+
+{% endif %} {% endif %}
 
                 <!-- End faceting for place -->
 
@@ -251,6 +304,11 @@ the categories are also hard-coded in but i think that's just how it has to be w
     </div>
   </div>
   <!--END PLACE TAB-->
+
+{% endif %}
+  {% endfor %}
+  {% endwith %}
+
   {% endif %}
 {% endif %}
 
@@ -258,6 +316,12 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
 {% if not 'state' in request.get_full_path and not 'county' in request.get_full_path and not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
 {% if not 'models=' in request.get_full_path or 'models=QI.Groups' in request.get_full_path  %}
+
+
+{% with page.object_list as FR %}
+{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
+{% for ct in GROUP %}
+{% if ct.grouper == 'Groups' and ct.list|length > 0 %}
 
   <!--BEGIN GROUP TAB-->
 
@@ -274,15 +338,22 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
         <!-- begin faceting for group -->
 
+
+{% if facets.fields.date_founded %}
+{% if facets.fields.date_founded.0.1 > 0 or facets.fields.date_founded.1.1 > 0 or facets.fields.date_founded.2.1 > 0 or facets.fields.date_founded.3.1 > 0 or facets.fields.date_founded.4.1 > 0 %}
+
+
                 <div class="col-sm-6">
                         <div>
                             <dl>
                                 {% if facets.fields.date_founded %}
-                                    <dt>date_founded</dt>
+                                    <dt>Date Founded</dt>
                                     {# Provide only the top 5 authors #}
                                     {% for date_founded in facets.fields.date_founded %}
+
+					{% if date_founded.1 > 0 %}
                                         <dd><a href="{{ request.get_full_path }}&amp;selected_facets=date_founded_exact:{{ date_founded.0|urlencode }}">{{ date_founded.0 }}</a> ({{ date_founded.1 }})</dd>
-                                    {% endfor %}
+                                  {% endif %}  {% endfor %}
                                 {% else %}
                                     <p></p>
                                 {% endif %}
@@ -290,21 +361,33 @@ the categories are also hard-coded in but i think that's just how it has to be w
                         </div>
                       </div>
 
+{% endif %} {% endif %}
+
+{% if facets.fields.date_dissolved %}
+{% if facets.fields.date_dissolved.0.1 > 0 or facets.fields.date_dissolved.1.1 > 0 or facets.fields.date_dissolved.2.1 > 0 or facets.fields.date_dissolved.3.1 > 0 or facets.fields.date_dissolved.4.1 > 0 %}
+
+
                       <div class="col-sm-6">
                               <div>
                                   <dl>
                                       {% if facets.fields.date_dissolved %}
-                                          <dt>date_dissolved</dt>
+                                          <dt>Date Dissolved</dt>
                                           {# Provide only the top 5 authors #}
                                           {% for date_dissolved in facets.fields.date_dissolved %}
-                                              <dd><a href="{{ request.get_full_path }}&amp;selected_facets=date_dissolved_exact:{{ date_dissolved.0|urlencode }}">{{ date_dissolved.0 }}</a> ({{ date_dissolved.1 }})</dd>
-                                          {% endfor %}
+                                             {% if date_dissolved.1 > 0 %} <dd><a href="{{ request.get_full_path }}&amp;selected_facets=date_dissolved_exact:{{ date_dissolved.0|urlencode }}">{{ date_dissolved.0 }}</a> ({{ date_dissolved.1 }})</dd>
+                                        {% endif %}  {% endfor %}
                                       {% else %}
 
                                       {% endif %}
                                   </dl>
                               </div>
                             </div>
+
+{% endif %} {% endif %}
+
+{% if facets.fields.org_type %}
+{% if facets.fields.org_type.0.1 > 0 or facets.fields.org_type.1.1 > 0 or facets.fields.org_type.2.1 > 0 or facets.fields.org_type.3.1 > 0 or facets.fields.org_type.4.1 > 0 %}
+
 
                             <div class="col-sm-6">
                                     <div>
@@ -313,27 +396,38 @@ the categories are also hard-coded in but i think that's just how it has to be w
                                                 <dt>Type of Group</dt>
                                                 {# Provide only the top 5 authors #}
                                                 {% for org_type in facets.fields.org_type %}
-                                                    <dd><a href="{{ request.get_full_path }}&amp;selected_facets=org_type_exact:{{ org_type.0|urlencode }}">{{ org_type.0 }}</a> ({{ org_type.1 }})</dd>
-                                                {% endfor %}
+                                                 {% if org_type.1 > 0 %}   <dd><a href="{{ request.get_full_path }}&amp;selected_facets=org_type_exact:{{ org_type.0|urlencode }}">{{ org_type.0 }}</a> ({{ org_type.1 }})</dd>
+                                              {% endif %}  {% endfor %}
                                             {% else %}
                                                 <p></p>
                                             {% endif %}
                                         </dl>
                                     </div>
                                   </div>
-
+{% endif %} {% endif %}
                         <!-- End faceting for group-->
 
       </div>
     </div>
   </div>
   <!--END GROUP TAB-->
+
+{% endif %}
+  {% endfor %}
+  {% endwith %}
+
   {% endif %}
 {% endif %}
 
 
 {% if not 'state' in request.get_full_path and not 'county' in request.get_full_path and not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=person_id_exact' in request.get_full_path and not 'selected_facets=date_exact' in request.get_full_path and not 'selected_facets=type_of_Manuscript_exact' in request.get_full_path %}
 {% if not 'models=' in request.get_full_path or 'models=QI.Pages' in request.get_full_path  %}
+
+
+{% with page.object_list as FR %}
+{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
+{% for ct in GROUP %}
+{% if ct.grouper == 'Pages' and ct.list|length > 0 %}
 
   <!--BEGIN PAGE TAB-->
   <div class="panel panel-default">
@@ -346,6 +440,8 @@ the categories are also hard-coded in but i think that's just how it has to be w
 
     <div id="collapse4" class="panel-collapse collapse">
       <div class="panel-body">
+{% if facets.fields.manuscript %}
+{% if facets.fields.manuscript.0.1 > 0 or facets.fields.manuscript.1.1 > 0 or facets.fields.manuscript.2.1 > 0 or facets.fields.manuscript.3.1 > 0 or facets.fields.manuscript.4.1 > 0 %}
 
         <div class="col-sm-6">
                 <div>
@@ -354,26 +450,36 @@ the categories are also hard-coded in but i think that's just how it has to be w
                             <dt>Manuscript</dt>
                             {# Provide only the top 5 authors #}
                             {% for manuscript in facets.fields.manuscript %}
-                                <dd><a href="{{ request.get_full_path }}&amp;selected_facets=manuscript_exact:{{ manuscript.0|urlencode }}">{{ manuscript.0 }}</a> ({{ manuscript.1 }})</dd>
-                            {% endfor %}
+                              {% if manuscript.1 > 0 %}  <dd><a href="{{ request.get_full_path }}&amp;selected_facets=manuscript_exact:{{ manuscript.0|urlencode }}">{{ manuscript.0 }}</a> ({{ manuscript.1 }})</dd>
+                          {% endif %}  {% endfor %}
                         {% else %}
                             <p></p>
                         {% endif %}
                     </dl>
                 </div>
               </div>
-
+{% endif %} {% endif %}
 
         </div>
     </div>
   </div>
   <!--END PAGE TAB-->
+
+{% endif %}
+  {% endfor %}
+  {% endwith %}
+
   {% endif %}
 {% endif %}
 
 
 {% if not 'state' in request.get_full_path and not 'county' in request.get_full_path and not 'deathplace' in request.get_full_path and not 'birthplace' in request.get_full_path and not 'deathdate' in request.get_full_path and not 'birthdate' in request.get_full_path and not 'firstname' in request.get_full_path and not 'lastname' in request.get_full_path and not 'selected_facets=place_id_exact' in request.get_full_path and not 'selected_facets=date_founded_exact' in request.get_full_path and not 'selected_facets=date_dissolved_exact' in request.get_full_path and not 'selected_facets=org_type_exact' in request.get_full_path and not 'selected_facets=manuscript_exact' in request.get_full_path %}
 {% if not 'models=' in request.get_full_path or 'models=QI.Manuscripts' in request.get_full_path  %}
+
+{% with page.object_list as FR %}
+{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
+{% for ct in GROUP %}
+{% if ct.grouper == 'Manuscripts' and ct.list|length > 0 %}
 
   <!--BEGIN MANUSCRIPT TAB-->
   <div class="panel panel-default">
@@ -394,14 +500,19 @@ the categories are also hard-coded in but i think that's just how it has to be w
                             <dt>Author</dt>
                             {# Provide only the top 5 authors #}
                             {% for person_id in facets.fields.person_id %}
-                                <dd><a href="{{ request.get_full_path }}&amp;selected_facets=person_id_exact:{{ person_id.0|urlencode }}">{{ person_id.0 }}</a> ({{ person_id.1 }})</dd>
-                            {% endfor %}
+                              {% if person_id.1 > 0 %}  <dd><a href="{{ request.get_full_path }}&amp;selected_facets=person_id_exact:{{ person_id.0|urlencode }}">{{ person_id.0 }}</a> ({{ person_id.1 }})</dd>
+                          {% endif %}  {% endfor %}
                         {% else %}
                             <p></p>
                         {% endif %}
                     </dl>
                 </div>
-              </div>
+              </div> 
+
+
+{% if facets.fields.date %}
+{% if facets.fields.date.0.1 > 0 or facets.fields.date.1.1 > 0 or facets.fields.date.2.1 > 0 or facets.fields.date.3.1 > 0 or facets.fields.date.4.1 > 0 %}
+
 
               <div class="col-sm-6">
                       <div>
@@ -410,14 +521,18 @@ the categories are also hard-coded in but i think that's just how it has to be w
                                   <dt>Date</dt>
                                   {# Provide only the top 5 authors #}
                                   {% for date in facets.fields.date %}
-                                      <dd><a href="{{ request.get_full_path }}&amp;selected_facets=date_exact:{{ date.0|urlencode }}">{{ date.0 }}</a> ({{ date.1 }})</dd>
-                                  {% endfor %}
+                                     {% if date.1 > 0 %} <dd><a href="{{ request.get_full_path }}&amp;selected_facets=date_exact:{{ date.0|urlencode }}">{{ date.0 }}</a> ({{ date.1 }})</dd>
+                                {% endif %}  {% endfor %}
                               {% else %}
                                   <p></p>
                               {% endif %}
                           </dl>
                       </div>
                     </div>
+{% endif %} {% endif %}
+
+{% if facets.fields.type_of_Manuscript %}
+{% if facets.fields.type_of_Manuscript.0.1 > 0 or facets.fields.type_of_Manuscript.1.1 > 0 or facets.fields.type_of_Manuscript.2.1 > 0 or facets.fields.type_of_Manuscript.3.1 > 0 or facets.fields.type_of_Manuscript.4.1 > 0 %}
 
                     <div class="col-sm-6">
                             <div>
@@ -426,27 +541,49 @@ the categories are also hard-coded in but i think that's just how it has to be w
                                         <dt>Type of Manuscript</dt>
                                         {# Provide only the top 5 authors #}
                                         {% for type_of_Manuscript in facets.fields.type_of_Manuscript %}
-                                            <dd><a href="{{ request.get_full_path }}&amp;selected_facets=type_of_Manuscript_exact:{{ type_of_Manuscript.0|urlencode }}">{{ type_of_Manuscript.0 }}</a> ({{ type_of_Manuscript.1 }})</dd>
-                                        {% endfor %}
+                                        {% if type_of_Manuscript.1 > 0 %}    <dd><a href="{{ request.get_full_path }}&amp;selected_facets=type_of_Manuscript_exact:{{ type_of_Manuscript.0|urlencode }}">{{ type_of_Manuscript.0 }}</a> ({{ type_of_Manuscript.1 }})</dd>
+                                      {% endif %}  {% endfor %}
                                     {% else %}
                                         <p></p>
                                     {% endif %}
                                 </dl>
                             </div>
                           </div>
-
+{% endif %} {% endif %}
 
       </div>
     </div>
   </div>
   <!--END MANUSCRIPT TAB-->
+
+  {% endif %}
+{% endfor %}
+{% endwith %}
+
   {% endif %}
 {% endif %}
+
+
+
+{% with page.object_list as FR %}
+{% regroup FR|dictsort:"modeltype" by modeltype as GROUP %}
+{% for ct in GROUP %}
+
+{% empty %}
+<p> No Results Found. </p>
+
+{% endfor %}
+{% endwith %}
+
+
+
+
 </div>
 
 <!-- end -->
 
          </div>
+
 
          <div class=col-sm-8>
 
@@ -521,41 +658,26 @@ the categories are also hard-coded in but i think that's just how it has to be w
        {% endwith %}
 
 
-       <!--
 
 
-            {% for result in page.object_list %}
+<!--            {% for result in page.object_list %}
                 <p>
-
                     {% if result.object.get_type == 'Person' %}
-
                     <a href="/person/{{ result.object.id_tei }}">{{ result.object.first_name }} {{ result.object.last_name}}</a>
-
                     {% elif result.object.get_type == 'Place' %}
-
                     <a href="/place/{{ result.object.id_tei }}">{{ result.object.name }}</a>
-
                     {% elif result.object.get_type == 'Org' %}
-
                     <a href="/org/{{ result.object.id_tei }}">{{ result.object.organization_name }}</a>
-
                     {% elif result.object.get_type == 'Page' %}
-
                     <a href="/page/{{ result.object.id_tei }}">{{ result.object.id_tei }}</a>
-
                     {% elif result.object.get_type == 'Manuscript' %}
-
                     <a href="/page/{{ result.object.id_tei }}_001">{{ result.object.title }}</a>
-
                     {% endif %}
-
                 </p>
-
             {% empty %}
                 <p>No results found.</p>
-            {% endfor %}
+            {% endfor %}-->
 
--->
 
 
         {% if page.has_previous or page.has_next %}
