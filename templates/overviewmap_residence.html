@@ -22,6 +22,12 @@
      bottom: 80px;
      left: 40px;
    }
+   
+    .cartodb-zoom a, .cartodb-logo, .leaflet-control-attribution.leaflet-control, .leaflet-control-attribution.leaflet-control a, 
+   .leaflet-bottom.leaflet-right, .leaflet-bottom.leaflet-right a {
+    z-index: 1 !important;
+    }
+   
    </style>
 
 
@@ -46,13 +52,6 @@
   <body>
 
     {% include 'header.html' %}
-
-<div id = "row1">
-<!--     Navigation Menu Below:  -->
-
-  {% include 'nav.html' %}
-
-</div>
 
 
 

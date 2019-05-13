@@ -4,4 +4,4 @@
 {{ object.date }}
 {{ object.type_of_Manuscript }}
 {{ object.call_no }}
-{{ object.page_id}}
+

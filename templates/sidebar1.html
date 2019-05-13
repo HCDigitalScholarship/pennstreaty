@@ -1,0 +1,64 @@
+<!doctype html>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/sidebar.css" />
+</head>
+
+<body>
+<div id="main">
+<div id="mySidenav" class="sidenav">
+  <div class="rectangle"></div>
+  <span href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&#xD7;</span>
+  <ul>
+  <!-- search function -->
+		<form action="/search" method='get'>
+        <!--    <input class='button1' type="submit" value="Search"> -->
+            <button class="button1" <a="" href="/?q=">Search </button>
+            <input style="float:right; margin:10px; width:150px; height:30px" type="text" name="q">
+		</form>
+<div class="row">
+  <div class="columns">
+    <ul class="vertical menu" data-accordion-menu style="max-width: 250px">
+      <li>
+        <a href="#">Item 1</a>
+        <ul class="menu vertical nested">
+          <li>
+            <a href="#">Item 1A</a>
+            <ul class="menu vertical nested">
+              <li><a href="#">Item 1Ai</a></li>
+              <li><a href="#">Item 1Aii</a></li>
+              <li><a href="#">Item 1Aiii</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Item 1B</a></li>
+          <li><a href="#">Item 1C</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Item 2</a>
+        <ul class="menu vertical nested">
+          <li><a href="#">Item 2A</a></li>
+          <li><a href="#">Item 2B</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item 3</a></li>
+    </ul>
+  </div>
+</div>
+		
+  </ul>
+</div>
+</div>
+
+<div id="overlay">
+<span onclick="openSidebar()">&#9776;</span>
+</div>
+
+<script src="{{ STATIC_URL }}js/sidebar.js"></script>
+
+     
+</body>
+</html> 

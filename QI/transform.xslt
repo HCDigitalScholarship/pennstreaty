@@ -15,12 +15,11 @@
       <xsl:apply-templates/>
     </h4>
   </xsl:template>
-<!-- transform <div type="xxx">-->
 
 
   <!-- Transform <p>. -->
   <xsl:template match="tei:p">
-    <p class="tei-text">
+    <p>
       <xsl:apply-templates/>
     </p>
   </xsl:template>
@@ -33,34 +32,54 @@
 
   <!-- Transform <persName>, <orgName>, <placeName> -->
   <xsl:template match="tei:persName">
-    <a class="persName" id="Per-popover-{position()}" data-toggle="popover" data-trigger="focus" data-html="true" title="Person Information" data-content="No information">
+    <a class="persName" id="Per-popover-{position()}" data-toggle="Person-popover-{position()}" data-trigger="fcours" data-popover-content="#a{position()}" data-placement="right">
       <xsl:attribute name="href">
+
         <xsl:text>#</xsl:text>
         <xsl:value-of select="@key" />
       </xsl:attribute>
         <xsl:apply-templates/>
     </a>
+     <div id="a{position()}" class="hidden">
+      <div id="Per-popover-header" class="hide">Person Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
+      </div>
+      <div id="Per-popover-body-{position()}" class="hide">
+      </div>
+    </div>
+      <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match="tei:orgName">
-    <a class="orgName" id="Org-popover-{position()}" data-toggle="popover" data-trigger="fcours" data-html="true" title="Orgnization Information" data-content="Oops" data-placement="right">
+    <a class="orgName" id="Org-popover-{position()}" data-toggle="Orgnization-popover-{position()}" data-trigger="fcours" data-popover-content="#b{position()}" data-placement="right">
       <xsl:attribute name="href">
         <xsl:text>#</xsl:text>
         <xsl:value-of select="@key" />
       </xsl:attribute>
       <xsl:apply-templates/>
     </a>
+    <div id="b{position()}" class="hidden">
+      <div id="Org-popover-header">Orgnization Information <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
+      </div>
+      <div id="Org-popover-body-{position()}">
+      </div>
+    </div>
   </xsl:template>
  
   
   <xsl:template match="tei:placeName">
-    <a class="placeName"  id="Pla-popover-{position()}" data-html= "true" data-toggle="popover" data-trigger="fcours" title="Place Information" data-content="Oops" data-placement="right">
+    <a class="placeName"  id="Pla-popover-{position()}" data-toggle="Place-popover-{position()}" data-trigger="fcours" data-popover-content="#c{position()}" data-placement="right">
       <xsl:attribute name="href">
         <xsl:text>#</xsl:text>
         <xsl:value-of select="@key" />
       </xsl:attribute>
       <xsl:apply-templates/>
     </a>
+    <div id="c{position()}" class="hidden">
+      <div id="Pla-popover-header">Place Inoformation <span style="float:right;cursor:pointer;" class="fa fa-times" data-toggle="popover"></span>
+      </div>
+      <div id="Pla-popover-body-{position()}">
+      </div>
+    </div>
   </xsl:template>
 
 

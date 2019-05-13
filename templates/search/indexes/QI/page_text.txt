@@ -1,3 +1,4 @@
 {{ object.id_tei }}
-
+{{ object.Manuscript_id }}
 {{ object.fulltext }}
+

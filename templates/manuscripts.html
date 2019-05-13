@@ -1,102 +1,104 @@
-{% load static %}
+{% load staticfiles %}
 <!doctype html>
 <html class="no-js" lang="en">
-<head>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
-<link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" />
-<script src="{% static 'js/vendor/jquery.js' %}"></script>
-<script src="{% static 'js/js/vendor/foundation.min.js' %}"></script>
-<script src="{% static 'js/js/vendor/foundation.js' %}"></script>
-{% include 'top-links.html' %}
-<title>Available Texts </title>
+  <head>
+  	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.css"/>
+    {% include 'top-links.html' %}
 
-</head>
 
-<body>
-{% include 'header.html' %}
+    <title>Available Texts </title>
 
-<div id = "row1">
-  {% include 'nav.html' %}
-</div>
+  </head>
 
-<div id = "trans2">
-  <div class = "row">
-    <h2>  Manuscripts  </h2>
+  <body>
+<!--
+   <header>
+         <div class = "overlay-container">
+            <img src="{% static "img/paradise.jpg" %}" alt="Header img" />
+              <div style="margin-bottom:-20px;" class = "overlay1 show-for-small-up">
+
+
+                <form action="/search" method='get'>
+                 <input style="float:right;" class='button' type="submit" value="Search">
+                  <input style="margin:0px; width:200px; height:30px; float:right;"  type="text" name="q">
+                </form>
+
+
+
+              </div>
+        </div>
+
+    </header> -->
+
+      {% include 'header.html' %}
+
+
+    <div id = "trans2">
+ <div class = "row">
+   <h2> Manuscripts</h2>
   </div>
+
+
 </div>
 
 <br />
 
 
 <div class = "row full-width">
-  <!-- there are many ways to make a datatable, but this worked best for django -->
-  <table id="example" class="display" cellspacing="0" width="100%">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Call Number</th>
-        <th> PDF </th>
-      </tr>
-    </thead>
-    <tbody>
-      {% if textlist %}
-        {% for text in textlist %}
-          <tr>
-            <td> <a href="/page/{{text.id_tei}}_001"> {{text.title}}</a> </td>
+<!-- there are many ways to make a datatable, but this worked best for django -->
+<table id="example" class="display" cellspacing="0" width="100%">
+                               <thead>
+                                       <tr>
+                                               <th>Title</th>
+                                               <th>Author</th>
+                                               <th>Date</th>
+                                               <th>Type</th>
+                                               <th>Call Number</th>
 
-            {% if text.person_name == "" and not text.org_name == "" %} 
-            <td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
-            {% elif text.org_name == "" and not text.person_name == "" %}
-            <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 	</td>
-            {% else %}
-            <td> Unknown </td>		
-            {% endif %}
-            <td> {{text.date}} </td>
-            <td>{{text.type_of_Manuscript}}</td>
-            <td>{{text.call_no}}</td>
-            <td><a href="#" data-reveal-id="myModal"> PDF </a> 
-            <!-- Modal -->
+                                       </tr>
+                               </thead>
+                               <tbody>
+                                       {% if textlist %}
+                                                       {% for text in textlist %}
+                                               <tr>
 
-            <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-              <!--<form action='{{text.id_tei}}.pdf/' method='POST'>-->
-              <form action="." method='POST'>
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" />
-                <input type="hidden" id="manuscript_id" name="manuscript_ID" value="{{text.id_tei}}">
-              </form>
+                                                       <td> <a href="/page/{{text.id_tei}}_001"> {{text.title}}</a> </td>
 
-              <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-            </div>
+							{% if text.person_name == "" and not text.org_name == "" %} 
+							<td><a href=/org/{{text.org_id.id_tei}}> {{text.org_name}}</a></td>
+							{% elif text.org_name == "" and not text.person_name == "" %}
+                                                       <td><a href=/person/{{text.person_id.id_tei}}> {{text.person_id.first_name}} {{text.person_id.last_name}} </a> 	</td>
+							{% else %}
+						<td> Unknown </td>		
+							{% endif %}
+                                                       <td> {{text.date}} </td>
+                                                       <td>{{text.type_of_Manuscript}}</td>
+                                                       <td>{{text.call_no}}</td>
 
-            <!-- end of Modal -->
+                                               </tr>
+                                                       {% endfor %}
+                               </tbody>
+</table>
 
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% else %}
-      <strong> There are no manuscripts available at this time in the db. </strong>
-    {% endif %}
+{% else %}
+                          <strong> There are no manuscripts available at this time in the db. </strong>
+               {% endif %}
 
+
+               <!--<div class=container>
+
+               <p><a href=/outputAll>→ Download raw text of all manuscripts</a></p>
+
+             </div> -->
 </div>
-<script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-colvis-1.0.3,b-flash-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#example').DataTable({
-      "pageLength": 50
-    });
-} );
 
 
-$(document).foundation();
-</script>
 
 
 {% include 'footer.html' %}
-</body>
+{% include 'bottom-links.html' %}
+<script src="{% static "js/api.js" %}"></script>
+ <script src="{% static "js/imgtrans.js" %}"></script>
+ <!--<script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,b-1.0.3,b-flash-1.0.3,b-html5-1.0.3,r-1.0.7,se-1.0.1/datatables.min.js"></script> -->
+  </body>
 </html>

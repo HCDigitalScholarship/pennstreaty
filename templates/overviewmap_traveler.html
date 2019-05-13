@@ -13,7 +13,7 @@
        margin: 0;
      }
 
-     #slider {
+    #slider {
      position: absolute;
      bottom: 40px;
      right: 40px;
@@ -26,6 +26,11 @@
      bottom: 80px;
      left: 40px;
    }
+
+    .cartodb-zoom a, .cartodb-logo, .leaflet-control-attribution.leaflet-control, .leaflet-control-attribution.leaflet-control a, 
+   .leaflet-bottom.leaflet-right, .leaflet-bottom.leaflet-right a {
+    z-index: 1 !important;
+    }
    </style>
 
 
@@ -51,22 +56,14 @@
 
     {% include 'header.html' %}
 
-<div id = "row1">
-<!--     Navigation Menu Below:  -->
-
-  {% include 'nav.html' %}
-
-</div>
-
 
 
   <div id=row2>
     <br>
     <div class=container>
-  <h1 style="font-size:25px; font-family:Alegreya Sans SC"><b>View Map Organized By: </b>
+  <h1 style="font-size:25px; font-family: 'PT Serif', serif;"><b>View Map Organized By: </b>
   <i>
-
-  <a href="/overviewmap_traveler"  style="color:#4c5259"><b>Traveler</b></a>
+  <a href="/overviewmap_traveler" style="color:#2d3135">Traveler</a>
   <b>/</b>
   <a href="/overviewmap_date" style="color:#2d3135">Date</a>
  <!--  <b>/</b>
@@ -95,8 +92,8 @@
         <div id="map">
 
 <!--    <div>
-        <div id="show-all" style="position:absolute; top:10px; right:369px; z-index:20; background-color:#FFFFFF; border-radius:50px;padding:5px; color:#222; box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;border: 1px solid #999;font-family: Helvetica,Arial;">SHOW ALL</div>
-        <div class="mapcontrols" style="position:absolute; top:10px; right:10px; z-index:20; background-color:#FFFFFF; border-radius:50px;padding:5px; color:#222; box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;border: 1px solid #999;font-family: Helvetica,Arial;"><span id="thestartdate">1791-02</span> <div id="yearslider"></div><span id="theenddate">1826-07</span></div>
+        <div id="show-all" style="position:absolute; top:10px; right:369px; z-index:9; background-color:#FFFFFF; border-radius:50px;padding:5px; color:#222; box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;border: 1px solid #999;font-family: Helvetica,Arial;">SHOW ALL</div>
+        <div class="mapcontrols" style="position:absolute; top:10px; right:10px; z-index:9; background-color:#FFFFFF; border-radius:50px;padding:5px; color:#222; box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;border: 1px solid #999;font-family: Helvetica,Arial;"><span id="thestartdate">1791-02</span> <div id="yearslider"></div><span id="theenddate">1826-07</span></div>
 
 
     </div> -->

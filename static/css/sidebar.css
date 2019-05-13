@@ -1,0 +1,132 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #d2d2d2;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a, .sidenav li, .dropdown-btn, .dropdown-container a {
+	color:#222222; 
+	background-color:#d2d2d2; 
+	font-family: 'PT Serif', serif;
+/*	font-family: Alegreya Sans SC; */
+/*	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; */
+	font-size: 20px;
+    text-decoration: none;
+	position: relative;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+	font-weight: normal;
+
+}
+
+.dropdown-container a {
+	font-size: 18px;
+	
+}
+
+.button1 {
+	 /* this is for the search button because one of the pages relies on a styling that overwrites the button color and messes with the search button*/
+	float: left;
+    color: black;
+    background-color: d2d2d2;
+    font-family: 'PT Serif', serif;
+/*    font-family: "Alegreya Sans SC"; */
+/*	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; */
+/* font-family: 'Alegreya', serif; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #222222;
+	background-color: #bcbcbc;
+	font-weight: normal;
+	
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+	font-size:26px;
+	cursor:pointer;
+	color:#222222;
+	z-index:1000;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Dropdown container (hidden by default). */
+.dropdown-container {
+  display: none;
+  background-color: #d2d2d2;
+
+}
+
+.dropdown-container a {
+	 padding-left: 16px;
+}
+
+/* Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+	background-color: #d2d2d2;
+}
+
+#overlay {
+	font-size:25px;
+	cursor:pointer;
+	color:#222222;
+	position:fixed;
+	top:0px;
+    display: inline;
+    width: 0%; 
+    height: 0%;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.sidenav .rectangle {
+  z-index: 1000;
+  position: absolute;
+  top:0px;
+  height: 38px;
+  width: 250px;
+  background-color: #a9a9a9;
+}
+

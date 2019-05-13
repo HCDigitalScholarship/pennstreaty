@@ -4,30 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href="{% static 'css/inText_Search.css' %}" />
     <title>Page information</title>
-     {% include 'top-links.html' %}
-    <script src="{% static "js/newcornplanter2.js" %}"></script>
-    <script src="{% static "js/popover.min.js" %}"></script>
+   {% include 'top-links.html' %}
 </head>
-
-
 <body>
   <div class='stufftoinclude'>
     {% include 'header.html' %}
-    <div id = "row1" >
-      {% include 'nav.html' %}
-      <h3 id="name" style="text-align:center;"> {{manuscript.title}} </h3>
-    </div>
   </div>
-
-
   <div class="detail-view-tools" style="width: 70%; margin:auto;" id="SGASharedCanvasViewer" ;data-manifest="{{page.manifest}}">
     <fieldset class="detail-view-controls" style="width: 100%; text-align:left; margin-bottom:-8px;">
        <ul class="meta-data-group controls col-md-4 col-sm-12">
-
        <li class="meta-data-item"> <label class="meta-label" id="meta-Manutitle">TITLE:
          </label><span>
            {{manuscript.title}}
@@ -44,8 +34,6 @@
             {% endif %}
          </span></li>
        </ul>
-
-
        <ul class="meta-data-group controls col-md-4 col-sm-12">
        <li class="meta-data-item">
          <label class="meta-label" id="meta-workDate">DATE:
@@ -55,7 +43,6 @@
             {{manuscript.date}}
           {% endif %}
          </span></li>
-
        <li class="meta-data-item">
          <label class="meta-label" id="meta-workState">TYPE of MANUSCRIPT:
          </label><span>
@@ -66,7 +53,6 @@
            {% endif %}
          </span></li>
        </ul>
-
        <ul class="meta-data-group controls col-md-4 col-sm-12">
        <li class="meta-data-item">
          <label class="meta-label" id="meta-workInstitution">CALL NUMBER:
@@ -74,7 +60,6 @@
            {% if manuscript.call_no == "" %}
              None
            {% else %}
-
              {{manuscript.call_no}}
            {% endif %}
          </span></li>
@@ -88,7 +73,8 @@
   </div>
 
  </div>
-<div class="detail-view-tools" style="width:70%; margin:auto; border:3px solid #8597af">
+ 
+<div class="detail-view-tools" style="width:70%; margin:auto; margin-bottom:15px !important; border:3px solid #8597af">
   <div class="detail-view-controls well well-sm clearfix" style="display:flex; width:100%; height:60px; align:center; background-color:#ededed;">
         <div class="col-sm-12" style="flex:33%">
            Page <input type="text" 
@@ -118,63 +104,35 @@
            </script> 
            
          </div>
-
           <div class="btn-group pull-right" role="group" style="xaria-label="..." flex:33%; margin:auto">
              <a  href="/page/{{manuscript.id_tei}}_001"  class="btn btn-primary" title="First">
                 <span class="fa fa-step-backward"></span>
              </a>
-
-             <a href="/page/{{previous.id_tei}}" class="btn btn-primary" title="Previous">
+             <a href="/page/{{next_one.id_tei}}" class="btn btn-primary" title="Previous">
                 <span class="fa fa-chevron-left"></span>
              </a>
-
-             <a href="/page/{{next_one.id_tei}}" class="btn btn-primary title="Next">
+            <!--<a href="/outputPagePT/{{current_page.id_tei}}" target="_blank" class="btn btn-primary" title="Download">
+                <span class="fa fa-download"></span>
+             </a>-->
+             <a href="/page/{{previous.id_tei}}" class="btn btn-primary title="Next">
                 <span class="fa fa-chevron-right"></span>
              </a>
              <a href="/page/{{manuscript.id_tei}}_0{{total}}" class="btn btn-primary" title="Last">
                 <span class="fa fa-step-forward"></span></a>
           </div>
-
-<!--           <div class="btn-group col-sm-12" style="flex:33%; margin-left:150px;">
+<!--previous and next_one are switched, but they work fine on the web in this way-->
+         <!--   <div class="input-group-btn btn-group input-group-sm col-sm-12" style="flex:33%; margin-left:55px;">
              <form  method="GET" action="">
-               <input type="text" value = '{{ request.GET.q }}' name ='q' placeholder="Search within this manuscript..." style="display:inline-block; width:45%">
-                <button class="btn btn-success" type="submit" style="display:inline-block; background-color:#8c0404; color:white;" data-toggle="modal" data-toggle="modal" onclick="getModalContent()"><i class="fa fa-search"></i></button>
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getModalContent()"  style="display:inline-block; background-color:#8c0404; color:white;">
-                show
-              </button>
-            </form>
-	</div>-->
-           <!-- Search within manuscript is commented out because it needs to be modified, read Issues in Wiki on Gihub-->
-
+               <input type="text" value = '{{ request.GET.q }}' name ='q' placeholder="Search within this manuscript..." style="display:inline-block; width:55%">
+                <button class="btn btn-success" type="submit" style="display:inline-block; background-color:#8c0404; color:white;">Search</button>
+                <button id="myBtn" class="btn" style="background-color: white; color: #8c0404">Result</button>
+              </form>
+           </div>-->
+<!-- Search within manuscript is commented out because it needs to be modified, read Issues in Wiki on Gihub-->
    </div>
-      
-  <div class= "detail-view-result">
-   <div  style="display:flex;">
-        <div class="sharedcanvas col-md-6 col-sm-12" style="display:inline-block; flex:50%;">
-
-          <div style="overflow:scroll; margin-top:auto;">
-
-            <img id="image" src="/static/img/{{current_page.id_tei}}.jpg" width"100%" style="overflow:scroll" >
-            <!--<div id="seadragon-viewer" style="width:100%; height:100%"></div>-->
-          </div>
-        </div>
-        <div class="sharedcanvas col-md-6 col-sm-12 style="margin:20px; width:100%; display: inline-block; flex:50%;">
-          <div class="text-content" style="padding:20px; border:0.7px solid grey; overflow: scroll; height:600px; margin:auto; font-style:normal;">
-            {% if 'o' not in current_page.fulltext %}
-              <h1 style="font-size:15px; color:#b3b5b7;">No text on this page</h1>
-                 
-            {% else %}
-               {{ current_page.fulltext|safe }}
-
-            {% endif %}
-          </div>
-        </div>
-
-   </div>
-  </div>
-</div>
-
-    <div id="search-result" style="visibility: hidden">
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
       <p><font color = 'red'>{{ request.GET.q }}</font> found on:
          <ul>
           {% for found_page in search_result %}
@@ -184,7 +142,6 @@
                      console.log('found on');
                      console.log(found_page_number);
              </script>
-
              <li>
                 <a href="/page/{{found_page.id_tei}}">
                   Page
@@ -196,40 +153,34 @@
           {% endfor %}
          </ul>
        </p>
-
-    </div>
-
-<!-- Modal -->
-<div class="modal" id="exampleModal" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Search Result</h4>
-       </div>
-      <div class="modal-body" id="result">
-      </div>
-      <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
     </div>
   </div>
 
-</div>
-</div>
+  <div class= "detail-view-result">
+   <div  style="display:flex;">
+        <div class="sharedcanvas col-md-6 col-sm-12" style="display:inline-block; flex:50%;">
+          <div style="overflow:scroll; margin-top:auto;">
 
+            <img id="image" src="/static/img/{{current_page.id_tei}}.jpg" width"100%" style="overflow:scroll" >
+            <!--<div id="seadragon-viewer" style="width:100%; height:100%"></div>-->
+          </div>
+        </div>
+        <div class="sharedcanvas col-md-6 col-sm-12 style="margin:20px; width:100%; display: inline-block; flex:50%;">
+          <div class="text-content" style="padding:20px; border:0.7px solid grey; overflow: scroll; height:600px; margin:auto;">
+            {% if 'o' not in current_page.fulltext %}
+              <h1 style="font-size:15px; color:#b3b5b7;">No text on this page</h1>
+            {% else %}
+               {{ current_page.fulltext|safe }}
+            {% endif %}
+          </div>
+        </div>
+   </div>
+  </div>
 </div>
-
+</div>
 {% include 'footer.html' %}
-
-<script>
-function getModalContent() {
-    var x = document.getElementById("search-result").innerHTML;
-    document.getElementById("result").innerHTML = x;
-}
-
+<script type="text/javascript">
 </script>
-
 <script type="text/javascript" >
         var Manuscript_id = '{{ manuscript.id_tei }}';
         var img_url = '{{ page.img_url }}';
@@ -237,12 +188,26 @@ function getModalContent() {
         var lastpage = '{{ lastpage }}';
 </script>
 <script>
-$(function () {
-  $('[data-toggle="popover"]').popover();
-  $('.popover-dismiss').popover({
-    trigger: 'focus'
-});
-})
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
 </body>
 </html>
