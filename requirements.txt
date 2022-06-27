@@ -19,7 +19,7 @@ psycopg2==2.7.5
 pysolr==3.7.0
 pytz==2018.4
 PyYAML==4.2b1
-reportlab==3.4.0
+reportlab==3.5.55
 requests==2.19.1
 six==1.11.0
 tablib==0.12.1
