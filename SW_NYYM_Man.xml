@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css"?>
+<?xml-stylesheet type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei.css"?>
+<?xml-stylesheet type="text/css" href="global.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader>
+
+        <fileDesc>
+
+            <titleStmt>
+                <title>Account of the Exercise and Experience of an Indian Man: Electronic
+                    Version</title>
+                <editor>Friends Historical Library of Swarthmore College</editor>
+                <respStmt>
+                    <resp>TEI Markup done by</resp>
+                    <name>NAME</name>
+                </respStmt>
+                
+                <sponsor>Tri-Co Digital Humanities Initiative</sponsor>
+                <funder>Andrew W. Mellon Foundation</funder>
+            </titleStmt>
+            <extent>ca. 24 KB</extent>
+            <publicationStmt>
+                <publisher>Friends Historical Library of Swarthmore College</publisher>
+                <address>
+                    <street>500 College Avenue</street>
+                    <addrLine>Swarthmore, Pennsylvania</addrLine>
+                    <postCode>19081</postCode>
+                    <country>United States of America</country>
+                </address>
+                <availability status="free">
+                    <p>This work is the property of the Friends Historical Library of Swarthmore
+                        College. It may be copied freely by individuals for personal use, research,
+                        and teaching (including distribution to classes) as long as this statement
+                        of availability is included in the text. It may be linked to freely in
+                        Internet editions of all kinds, including for—profit works.</p>
+                    <p>Publishers, libraries, and other information providers interested in
+                        providing this text in a commercial or non—profit product or from an
+                        information server must contact Swarthmore College for licensing and cost
+                        information.</p>
+                    <p> Scholars interested in changing or adding to these texts by, for example,
+                        creating a new edition of the text (electronically or in print) with
+                        substantive editorial changes, may do so only with the permission of Friends
+                        Historical Library of Swarthmore College. This is the case whether the new
+                        publication will be made available at a cost or free of charge.</p>
+                </availability>
+                <date when="2015">2015</date>
+                <idno type="local">Indian_man</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="s" type="project">Native Americans and Quakers: An Electronic
+                    Collection</title>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <institution>Friends Historical Library of Swarthmore College</institution>
+                        <collection>New York Yearly Meeting Records</collection>
+                        <idno>RG2/NYy/700</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <p>2 pp.</p>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>This manuscript account is housed at Friends Historical Library, on the campus of
+                    Swarthmore College. </p>
+            </projectDesc>
+            <editorialDecl>
+                <p> The transcribers and editor attempted to render the author’s orthography and
+                    grammar as they appear on the page of his journal, even when the author’s own
+                    spelling and usage are inconsistent. Additionally, many questions remain about
+                    spelling the names of his Quaker acquaintances, individual Native Americans who
+                    populate his journal, and Indian villages and towns. The transcribers and editor
+                    attempted to remain faithful to the author’s Anglicized spellings in all cases. </p>
+                <p>The author of the original journal does not include page numbers on his
+                    manuscript; the page numbers have been interpolated by the transcribers to
+                    correspond with the manuscript sheets.</p>
+            </editorialDecl>
+
+        </encodingDesc>
+        <profileDesc>
+            <creation>Original written in <date>n.d.</date></creation>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="#lcsh">
+                    <list>
+                        <item>Society of Friends</item>
+
+                        <item>Indians of North America</item>
+
+                    </list>
+                </keywords>
+            </textClass>
+
+        </profileDesc>
+        <revisionDesc>
+            <list>
+                <item>
+                    <date when="2015"/>POD, minor edits</item>
+
+            </list>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+
+        <body>
+            <div type="narrative"><pb n="1" facs="SW_NYYM_Man_Page_001"/>
+                <p>The Following is an account of the Exercise &amp; Experience of an Indian<lb/>
+                    Man as Related by him self to a Number of Friends, says I Dont often open<lb/>
+                    my mind to any, but I now feel the way is open. and more than a freedom to<lb/>
+                    Do it some years Past it was laid upon me to Encourage others to Do well;<lb/> I
+                    thought I was a Poore ignorant Indian, I could not Encourage others to Do<lb/>
+                    well, so I shoved it away (Puting his hand out as tho he had Put it from
+                    him,<lb/> then fetching his hand back again &amp; laying it on his breast, says
+                    it was brought back<lb/> again &amp; laid upon me, I then shoved it away again,
+                    &amp; so he Did a number of times<lb/> Implying the reasoning state of his Mind
+                    It was then opened to my view, that<lb/> the truth was a Very precious thing,
+                    very precious Indeed. Oh how Precious it Doth look<lb/> to me. He can say it is
+                    innocent, we can say it is Innocent, thats all we can say.<lb/> words cannot say
+                    half. I then said with Peter Depart from me O Lord, I am<lb/> a sinful man but
+                    it was brought back &amp; laid upon me again some<lb/> morning as I was going to
+                    a <orgName key="presby">Prespeterian</orgName> meeting I saw a flock of sheep
+                    along<lb/> before me Puting his hand to his Eyes, says I Did not see them with
+                    these Eyes.<lb/> they appeard to be traveling a long before me. the foremost
+                    ones was half grown<lb/> large, &amp; I heard them talking to one another.
+                    Puting his hand to his Ears says but<lb/> not with those Ears saying to one
+                    another God speed help you on the way, the<lb/> hindmost looked Poore, small,
+                    their heads hund Down seemed allmost ready to<lb/> give out I wondered what it
+                    should mean Then something come &amp; talked<lb/> with me Puting his hand to his
+                    Breast, says it talked to me here, and told<lb/> me, these are my sheep &amp;
+                    this Day you shall see them lift up their heads in<lb/> hope, &amp; feed on the
+                    bread of Life Then it said to me, them that are before are<lb/> the Priest &amp;
+                    Deacons, they are grown fat &amp; full, they can Encourage one an<lb/> others
+                    but they forget the Poore of the flock. I went on to the meeting, the<lb/>
+                    Priest Preached, Prayed, &amp; sung &amp; used the Very words, I heard the fat
+                    sheep<lb/> use one to another, And after he had Done, I thought it my Duty to
+                    tell them<lb/> what I see on the way; so I Did &amp; thought I saw my Vision
+                    fulfilled, the Poore<lb/> of the flock, lifted up their heads in hope &amp; fed
+                    on the bread of Life, the<lb/> Priest acknowledged in the Presence of the
+                    People, that what I said was True<lb/> and that the Truth, had been Declared
+                    among them by a Poore Ignorant <gap/><lb/> an; Then I went home Very
+                    comfortable, Oh, how comfortable I Did feel<lb/> Then sometimes I feel my mind
+                    Drawn in to simpathy with some, I want to<lb/> go &amp; see them, I was <gap/>
+                    yet would think it <gap/> other to Do well,<lb/> I Did not want folks to think
+                    so I feel such a simpathy for one poore family<lb/> I want to go see them, at I
+                    Did not no how to Do, so I thought I would take a<lb/> grist on my back &amp; go
+                    <gap/> beyond where they Live, so I Did, &amp; when I come<lb/> back I stop in,
+                    It was just night, there was a rich man lived on the other side<lb/> of the
+                    road, I suppose I would let me have bed to sleep in, but I thought I<lb/> had
+                    rather lay by the <gap/> mans fire, I felt their worth, I wanted to be with
+                    them,<lb/> In the morning when I <gap/> going away I asked the women to hand me
+                    a bowle<lb/> she was <unclear>unarilling</unclear> I <gap/> the most, she got
+                    one for <gap/> I took out Part of my<lb/> meal &amp; left it with her, felt the
+                    wants of the Poore Children, so that <gap/> are not<lb/> carry all my meal away
+                    <gap/> then I took leave of them &amp; went home Quietly.</p>
+                <pb n="2" facs="SW_NYYM_Man_Page_002"/>
+                <p>And <unclear>so</unclear> kept along when I feel my mind in simpathy with any, I
+                    try some<lb/> way to go &amp; see them, <gap/> began to think I was geting along
+                    Prety well, soone Day I was<lb/> thinking I should go to meeting 3 or 4 Days
+                    hence, I began to think what I should say<lb/> when I should come there, so I
+                    thought It over, I got something fixed in my mind, I<lb/> thought it would Do
+                    Prety well, I hung it up, &amp; by &amp; by I took it looked at it again<lb/> I
+                    thought it would Do very well, <del>I hung it up</del> so I Did good many times
+                    before meeting Day come<lb/> I went to meeting &amp; after the Priest got
+                    through, I stood up &amp; said it off as well as I could<lb/> and I thought I
+                    said it off Prety well, but Oh how I was Distress &amp; so I Passed along a
+                    long<lb/> time, Did not know what the matter was Then something come &amp;
+                    talked to me &amp; says, Did<lb/> you ever know a Great man if he want Great
+                    Business Done away to Congress, or to<lb/>
+                    <placeName>Philadelphia</placeName> to send a Poore ignorant unlerned man to Do
+                    it No I say I Did not,<lb/> No more wont Great Spirit take you well I thought
+                    sure Enough I have been mista<lb/>ken I never have known what good is, And Oh,
+                    how I was Distress, but Did not<lb/> know where to find good (This he supposed
+                    to be the bad spirit coming at a time<lb/> when he had mised it at the
+                    Endeavouring to Persuade him, that he never had kno<lb/>wn what good was, Then
+                    says somthing <unclear>&amp; he</unclear> come &amp; talked me, which he
+                    sup<lb/>posed was the good spirit, and says Great One knows all things, he can
+                    Do all<lb/> things, he knows what is Best, And if a King want great business
+                    Done, &amp; he has<lb/> servents under him, if he wants to send one to Do
+                    business for him, if he is a wise<lb/> Learned man, he ought to say what the
+                    King tell him to say, if he is an ignorant<lb/> unlerned man, if he can talk, he
+                    can say over after the King, just what the<lb/> King tell him to say, if it 2, 3
+                    or 4 words more or less just as the King says<lb/> just so he ought to say Then
+                    it says to one supose one of your neighbour<lb/> have a Piece of <gap/> to him,
+                    a very <unclear>got</unclear> when it was give<lb/> to him, he takes it, feels
+                    of it, looks at it; handles it; hangs it up, then by &amp; by<lb/> he takes it
+                    Down, he feels of it, handles it, looks at it; hangs it up, so he Do a<lb/>
+                    great many times, &amp; keep it 3 or 4 Days, til it begins to stink, then he
+                    take<lb/> it, cook it &amp; set before you, to Eat, would you Eat it no I say I
+                    would not<lb/> Eat it well it says just so your Preaching was the other Day The
+                    Great<lb/> spirit wont have it <unclear>folk</unclear> wont have it Then it came
+                    in to my<lb/> mind the Passage when there was a Piece of money brought to our
+                        <unclear>savious</unclear><lb/> I Don't remember he asked them whose Image
+                    &amp; Inscription was on it<lb/> They told him <gap/> well he told them to
+                    render to ceasars the things that<lb/> are cesars, &amp; to God things that are
+                    God <gap/> I see my Parking had<lb/> Cesar <unclear>inserption</unclear> on it
+                    Because it was something of any own Prepareing<lb/> it Did not come from the
+                    Great Spirit, therefore it had not his superscripti<lb/>on on it, &amp; he would
+                    not have it, &amp; that was the reason I was so troubled; I see<lb/> that Every
+                    thing of mans contrivance had cesar superscription on it<lb/> and only that,
+                    that comes Immediately from the Great Spirit, that would return<lb/> to him, or
+                    that would be food for his True sheep, my <gap/> says christ know any<lb/>
+                    <gap/> &amp; they follow but the Voice of a stranger they will not follow<lb/> I
+                    thought some time heard a strange Voice, Puting his hand to his Breast<lb/> says
+                    Did not feel <gap> </gap> I love to feel it here then</p><pb n="3" facs="SW_NYYM_Man_Page_003"/>
+                <p>Then it opened in my mind the Passage where the multitude followed our
+                        <unclear>savior</unclear><lb/> in to the <gap/>, the disciples seemed
+                    willing to send them away &amp; give them no<lb/>thing; but he knew their wants,
+                    he Did not want them to <gap/> by the way he<lb/> caled on the Disciples, &amp;
+                    asked them if they had any thing for them, they say we have<lb/> a few loves
+                    &amp; a few fishes, but what are they among so many, but he knew what<lb/> he
+                    was going to Do, he Directed that the multitude should all sit Down in
+                    compane<lb/> on the grass; then he caled on the Disciples &amp; they give all up
+                    to him that they<lb/> had, then he took &amp; broke it, &amp; Blessed it; then
+                    gave it to the Disciples, after all this<lb/> was Done, then he Commanded them
+                    to hand it to the Multitude, then it was food for<lb/> them, they had Enough to
+                    spare Just so I see it is now, when the Great spi<lb/>rit is Pleased to brake
+                    the bread of life, hand it to his Disciples, &amp; Command them to<lb/> hand it
+                    to the People, then it is food for them Now after this it was Laid upon<lb/> me
+                    again to Encourage othersto Do well, but the work looked to be so great, &amp;
+                    I<lb/> felt like such a Poore Ignorant Indian, that I thought I could not give
+                    up to it<lb/> And said to that that talked with one there is a great many that
+                    can do better<lb/> than I can, take some this one &amp; Excuse one, It asked me
+                    who; I said such a<lb/> one, it told one to fetch him up, I Did in any mind
+                    Putting his hand to his breast<lb/> as tho he brought it to the witness in him
+                    self, but he would not have him, but<lb/> shoved him away &amp; so in this way
+                    he said he broought up a number, but he<lb/> would not have them, &amp; told me
+                    I must give up Now I found the Great<lb/> Spirit condescended to <gap/> weak
+                    state &amp; opened things to my understanding in<lb/> a way to meet my capacity
+                    so I found it was necessary to wait upon him<lb/> to be instructed, what to say,
+                    how to say, &amp; when <gap/> and when I could say <gap/><lb/> the servents that
+                    was sent out to Invite in to the feast, It is Done Lord as those<lb/> commanded
+                    &amp; yet there is room, then I find there is yet room for more Exercise<lb/>
+                    more labour, more Invitation, the way is not shut up in any Heart<lb/>
+                </p>
+                <p>Then it opened in my mind the circumstance of Joseph, how he was sold by<lb/> his
+                    brethren, &amp; the reason why they sold him, he was Designd by the great<lb/>
+                    spirit to be greater then his brethren, he had some Dreams that seamed to<lb/>
+                    lead them to think so, some of them had a mind to kill him, others thought<lb/>
+                    best to sell him, &amp; see what would become of his Dreams, so they sold him,
+                    he<lb/> was carried <del>Down</del> of to Egypt, &amp; Put into Prison,
+                    wrongfully, but the Great spi<lb/>rit was with him there &amp; knew what he was
+                    a going to bring abought<lb/>
+                    <gap/> get along Pretty well for a while, there was some<lb/>body in Prison with
+                    Joseph, and he was released, &amp; Joseph told him when<lb/> he come in the
+                    Presence of the King to remember him, but he forgot Jo<lb/>seph till he was
+                    brought into a strait, the King had some Dreams<lb/> I cannot read much, I
+                    cannot tell just how it was, but I remember he<lb/> Dreamed something about some
+                    Ears of corn, Eating up some Ears of<lb/>corn, &amp; there nobody could
+                    Interpret his Dreams, then this man<lb/> remembered Joseph, he was sent for, the
+                    Great Spirit was with him &amp; knowed<lb/> all things, so he could tell the
+                    King the interpretation of his Dreams
+                </p><pb n="4" facs="SW_NYYM_Man_Page_004"/>
+                <p>So when he told him what was a going to <gap/> the King believed it<lb/> and
+                    thought it best to Prepare against the time of Famine, that Joseph<lb/> said was
+                    coming, &amp; he thought there was no one so suitable as Joseph<lb/> because the
+                    Great Spirit was with him, so he put all Power in to his hand<lb/> only the King
+                    was greater, so Joseph ordered store houses to be built &amp; laid<lb/> up Corn
+                    for the time of famine that was coming &amp; he had the Keys of the<lb/> stores,
+                    now the famine come, his brethren come to want, they had sold<lb/> Joseph, &amp;
+                    Did not intend to bow to him, but they heard there was corn in<lb/> Egypt, their
+                    father sent some of them Down to buy some, they applyed to Joseph<lb/> he knew
+                    them, they Did not know him, he asked if they had any brethren &amp;
+                    whe<lb/>ther they had a Father living, they told him about them, so after a
+                    while Joseph<lb/> sent for them, they all went Down &amp; bowed to Joseph, for
+                    there was no other way for<lb/> them to kept alive Now it looked Plain to me,
+                    that we have a measure of<lb/> the good spirit afforded to lead us to Instruct
+                    us &amp; it is greater then we are &amp; de<lb/>signed to Rule over us, or we
+                    may Do as that tells us, or we may mind the bad spirit<lb/> But if we Do, it
+                    will not yeald the Peaceable fruits of rightiousness, &amp; we may say<lb/> to
+                    the good spirit, we will not have this man to rule over us, we may Put it
+                    away<lb/> and sell it, &amp; it may be Put into Prison, yet a famine will
+                    overtake there, &amp; though<lb/> they may go into a far Country, far away from
+                    that, that is Right, &amp; and not Even<lb/> know Joseph or this good spirit,
+                    yet that will know them, &amp; it will there rise<lb/> up &amp; Plead with them,
+                    now there is no other way, but to go back again to that; that<lb/> is wright,
+                    &amp; acknowledge Joseph to be greatest he has all Power Commited to him<lb/> he
+                    has the Keys of <gap/>, &amp; they that will not <gap/> him, must Die.</p>
+                <p>The same Disposition, that was in Josephs Brethren, and in People in the<lb/>
+                    Days of the Apostles, is now in People, I have seen some folks, so simple, that
+                    they<lb/> got mad with a gun &amp; Broke it all to Pieces, because it had Done
+                    some Mischief,<lb/> as tho the Gun was to blame, if it had not been Charged,
+                    &amp; then fire Put to it,<lb/> it would not; Done any harm, so when the
+                    apostles were Charged with some<lb/>thing &amp; the Fire of Divine love operated
+                    on them, her they could Do Execution<lb/> but after it had Passed through them,
+                    they were like the Emty Gun, it was<lb/> not they that Did it; it was that flame
+                    of Divine love &amp; here the People<lb/> took the apostles, &amp; Put them to
+                    Death, as tho they Done it, &amp; thought to<lb/> stop it from spreading, but
+                    they could not, for <unclear>it operated</unclear> through
+                        <unclear>otherng</unclear><lb/> And it operates the <gap/> purpose
+                    <gap/><lb/> PL</p>
+
+            </div>
+        </body>
+
+
+    </text>
+</TEI>
