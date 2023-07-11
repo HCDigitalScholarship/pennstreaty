@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-from .settings_secret import *
+try:
+    from .settings_secret import *
+except:
+    pass
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

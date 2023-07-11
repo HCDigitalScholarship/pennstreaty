@@ -5,3 +5,4 @@ settings_secret.py
 static/img
 *.swp
 lib
+__pycache__
