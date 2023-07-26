@@ -12,4 +12,5 @@ COPY . /app
 EXPOSE 8000
 ENV PORT=8000
 
+RUN SECRET_KEY=1 python manage.py collectstatic --no-input
 CMD gunicorn --reload --bind 0.0.0.0:${PORT:-8000} QI.wsgi:application
