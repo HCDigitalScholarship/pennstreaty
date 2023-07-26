@@ -2,7 +2,6 @@
 *.pyc
 settings_secret.py
 .DS_Store
-static/img
 *.swp
 lib
 __pycache__
