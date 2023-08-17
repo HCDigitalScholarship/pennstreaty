@@ -89,20 +89,5 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
-
-
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': "http://127.0.0.1:8984/solr/QIcore",
-        'ADMIN_URL': 'http://127.0.0.1:8984/solr/admin/cores',
-        # ...or for multicore...
-        # 'URL': 'http://127.0.0.1:8984/solr/mysite',
-    },
-}
-
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 100
 

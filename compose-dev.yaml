@@ -9,3 +9,15 @@ services:
       - "8000:8000"
     environment:
       - SECRET_KEY=1
+      - SOLR_URL=http://solr:8983/solr/pennstreaty
+    depends_on:
+      - solr
+  solr:
+    image: solr:9.3
+    ports:
+     - "8983:8983"
+    volumes:
+      - data:/var/solr
+    command: solr-precreate pennstreaty
+volumes:
+  data:
