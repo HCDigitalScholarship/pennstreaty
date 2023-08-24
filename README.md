@@ -30,6 +30,7 @@ https://github.com/HCDigitalScholarship/QI/wiki
 ### For Developers:
 #### Read　[Wiki](https://github.com/HCDigitalScholarship/QI/wiki)
 #### If you want to make modifications on templates, [this page](https://github.com/HCDigitalScholarship/QI/wiki/Templates-Explanation) in Wiki should be helpful to give you some directions.
+#### For local development with Docker, please read [this page](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/docker/containerizing.md)
 #### **For future developers of this project: Please read wiki for [existing issues](https://github.com/HCDigitalScholarship/QI/wiki/Issues-and-Suggested-to-do-list) of this project and explanations on existing features**
 
 ### For Users:
@@ -49,8 +50,6 @@ There is a shared google folder called quakers-and-indians which has the followi
 - TEI guidelines from SWAT
 - TEI/XML files from SWAT
 - Excel Docs on People, Places, Organizations (I've made jsons of these, and they are available in this`static/json folder)
-
-Please ask Mike and/or Andy, and I'm sure they will be able to help you find the information/materials you need!
 
 
 ### Notes on using the importer:
