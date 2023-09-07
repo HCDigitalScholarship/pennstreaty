@@ -8,6 +8,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - DEBUG=1
       - SECRET_KEY=1
       - SOLR_URL=http://solr:8983/solr/pennstreaty
     depends_on:
