@@ -36,7 +36,7 @@ def get_all_pages(document):
     return all_pages
 
 def get_image_path(page):
-    prefix='/srv/QI/static/img/'
+    prefix='/app/media/img/'
     suffix='.jpg'
     image_path=prefix+page.id_tei+suffix
     print (image_path)
@@ -141,7 +141,7 @@ def build(TEI_ID):
     canv.setTitle(title)
     # Draw things on the PDF. Here's where the PDF generation happens.
     # See the ReportLab documentation for the full list of functionality.
-    canv.drawImage('/srv/QI/static/img/PennsTreaty-West2.jpg', 0.000001*inch, 8.9*inch, 8.6*inch, 2.6*inch)
+    canv.drawImage('/app/media/img/PennsTreaty-West2.jpg', 0.000001*inch, 8.9*inch, 8.6*inch, 2.6*inch)
     canv.setFillColorRGB(255,255,255)
     canv.setFont("Times-BoldItalic",35)
     canv.drawString(0.1*inch,9.1*inch,"Beyond Penn's Treaty")
