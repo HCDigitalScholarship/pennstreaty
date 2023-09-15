@@ -15,7 +15,9 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+from django.conf import settings
 from django.conf.urls import *
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.admin.views.decorators import staff_member_required
 
@@ -68,6 +70,7 @@ urlpatterns = [
     re_path(r'^manuscripts/(?P<id>\S+).pdf/',views.pdf, name="pdf")
 ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = 'Beyond Penns Treaty'
 admin.site.index_title = 'Beyond Penns Treaty Administration'
