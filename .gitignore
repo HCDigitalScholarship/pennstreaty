@@ -5,3 +5,4 @@ settings_secret.py
 *.swp
 lib
 __pycache__
+/media
