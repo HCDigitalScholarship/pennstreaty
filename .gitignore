@@ -6,3 +6,4 @@ settings_secret.py
 lib
 __pycache__
 /media
+/data
